@@ -1,0 +1,19 @@
+﻿sp mini settlement from span is the sp large
+to correct for it we should import large contract settlements at EOD.
+
+
+http://blogs.msdn.com/b/msgulfcommunity/archive/2014/04/22/creating-documentation-in-c-using-visual-studio-and-sandcastle.aspx
+
+
+INITIALIZE_OPTION_REALTIME_SYSTEM_config.cfg
+
+SERVERNAME=192.168.1.15,172.16.1.15,localhost,192.168.1.11,Azure
+INSTRUMENT_SPECIFIC_FIX_FIELDS=ADM,ICE_IPE,ICE_IPE,Cocoa,E,0,M1,LMA905
+INSTRUMENT_SPECIFIC_FIX_FIELDS=WEDBUSH,ICE_IPE,ICE_IPE,Cocoa,E,0,M1,LMA905
+FCM_FTP=njoice/pri00014,pri00014,wedbush
+FCM_FTP=njoice/pri00087,pri00087,wedbush
+FCM_FTP=njoice/pri00122,pri00122,wedbush
+FCM_FTP=njoice/pri00172,pri00172,wedbush
+
+FCM_FTP=/,969JN380_38818100,adm
+

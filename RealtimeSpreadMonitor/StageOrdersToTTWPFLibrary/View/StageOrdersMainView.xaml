@@ -1,0 +1,126 @@
+﻿<Window x:Class="StageOrdersToTTWPFLibrary.View.StageOrdersMainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="clr-namespace:StageOrdersToTTWPFLibrary.View"
+        Title="Stage Orders Through TTFIX Adapter" Height="312.121" Width="556.444" Icon="/StageOrdersToTTWPFLibrary;component/favicon.ico" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="ConnectionStatusStyle" TargetType="{x:Type Label}">
+            <Setter Property="Content" Value="No"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsOrderConnected}" Value="True">
+                    <Setter Property="Content" Value="Yes"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="347*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="107*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black" Margin="0,5,0,0" Padding="5" Background="#EEEEEE" HorizontalAlignment="Left" Width="347" VerticalAlignment="Top" Height="125">
+            <StackPanel x:Name="ConnectionView" Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style x:Key="EnableIfConnected" TargetType="FrameworkElement">
+                        <Setter Property="FrameworkElement.IsEnabled" Value="False"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsConnected}" Value="True">
+                                <Setter Property="FrameworkElement.IsEnabled" Value="True"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="EnableIfDisconnected" TargetType="FrameworkElement">
+                        <Setter Property="FrameworkElement.IsEnabled" Value="True"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsConnected}" Value="True">
+                                <Setter Property="FrameworkElement.IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" Margin="0
+                                ,0,0,0" Width="85">
+                        <Label Content="Order Session ID:" FontWeight="Bold" Margin="-76,0,0,0"/>
+
+                        <Label Content="Order Session Connected?" FontWeight="Bold" Margin="-76,0,0,0">
+                            <Label.BindingGroup>
+                                <BindingGroup/>
+                            </Label.BindingGroup>
+                        </Label>
+
+                        <Label Content="Price Session ID:" FontWeight="Bold" Margin="-76,0,0,0" Visibility="Collapsed"/>
+                        <Label Content="Price Session Connected?" FontWeight="Bold" Margin="-76,0,0,0" Visibility="Collapsed">
+                            <Label.BindingGroup>
+                                <BindingGroup/>
+                            </Label.BindingGroup>
+                        </Label>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Vertical">
+                        <!--<StackPanel.Resources>
+                            <Style x:Key="ConnectionStatusStyle" TargetType="Label">
+                                <Setter Property="Label.Content" Value="No"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsOrderConnected}" Value="True">
+                                        <Setter Property="Label.Content" Value="Yes"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Resources>-->
+
+                        <Label Content="{Binding SessionString}" Height="25"/>
+                        <Label Content="{Binding IsOrderConnected}" Height="25"/>
+
+                        <Label Content="{Binding PriceSessionString}" Height="25" Visibility="Collapsed"/>
+                        <Label Content="{Binding IsPriceConnected}" Height="25" Visibility="Collapsed"/>
+                    </StackPanel>
+                </Grid>
+
+                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="bttnConnect" Content="Connect" Width="80" Command="{Binding ConnectCommand}"
+                        Style="{StaticResource EnableIfDisconnected}" Click="bttnConnect_Click"/>
+                    <Button x:Name="bttnDisconnect" Content="Disconnect" Width="80" Command="{Binding DisconnectCommand}"
+                        Style="{StaticResource EnableIfConnected}"/>
+                </StackPanel>-->
+            </StackPanel>
+        </Border>
+
+        <TabControl Margin="0,135,0,0" Grid.ColumnSpan="3">
+
+
+            <TabItem Header="OrderView">
+                <v:OrderView x:Name="OrderView" Margin="0,0,0,0"/>
+            </TabItem>
+
+            <TabItem Header="MessageView">
+                <v:FIXMessageView x:Name="FIXMessageView" Margin="0,0,0,0"/>
+            </TabItem>
+
+            <TabItem Header="ExecutionView">
+                <v:ExecutionView x:Name="ExecutionView" Margin="0,0,0,0"/>
+            </TabItem>
+
+
+        </TabControl>
+
+
+        <Button x:Name="btnLogon1" Content="Logon" HorizontalAlignment="Left" Height="23" Margin="76,10,0,0" VerticalAlignment="Top" Width="55" Background="#FF4EF14E" Click="btnLogon_Click_1" Grid.ColumnSpan="2" Grid.Column="1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnLogoff" Content="Logoff" HorizontalAlignment="Left" Height="23" Margin="42,10,0,0" VerticalAlignment="Top" Width="55" Background="#FFEA1414" Click="btnLogoff_Click_1" Grid.Column="2">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
