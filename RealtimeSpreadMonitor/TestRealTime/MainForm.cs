@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FakeCQG;
 using FakeCQG.Models;
+using System.Threading.Tasks;
 
 namespace TestRealTime
 {
@@ -13,8 +14,8 @@ namespace TestRealTime
         public MainForm()
         {
             InitializeComponent();
+            FakeCQG.CQG.LogChange += CQG_LogChange;
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
-
         }
 
         private void AsyncTaskListener_Updated(string msg)
@@ -42,8 +43,7 @@ namespace TestRealTime
         private void MainForm_Load(object sender, EventArgs e)
         {
             //cqg = new FakeCQG.CQG();
-            cqgcel = new FakeCQG.CQGCELClass();
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Task.Run(() => { cqgcel = new FakeCQG.CQGCELClass(); });
         }
 
         private void CQG_LogChange(string message)
@@ -69,6 +69,7 @@ namespace TestRealTime
         private async void buttonCall_Click(object sender, EventArgs e)
         {
             //bool isStarted = cqgcel.IsStarted;
+            var testCQG = new FakeCQG.CQGCELClass();
             await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Property, "key", string.Empty, "name", null, null));
         }
     }

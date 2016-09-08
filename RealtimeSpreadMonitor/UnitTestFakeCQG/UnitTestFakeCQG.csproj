@@ -59,17 +59,6 @@
       <Name>CQGLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="CQG">
-      <Guid>{51F35562-AEB4-4AB3-99E8-AC9666344B64}</Guid>
-      <VersionMajor>4</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
