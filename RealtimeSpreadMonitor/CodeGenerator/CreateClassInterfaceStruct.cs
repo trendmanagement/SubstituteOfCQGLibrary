@@ -10,6 +10,8 @@ namespace CodeGenerator
     {
         static void CreateClassInterfaceStruct(Type type)
         {
+            bool eventsChecking = type.GetEvents().Length != 0 && (type.IsClass) ? true : false;
+
             // Add signature
             string keyword = null;
             if (type.IsInterface)
@@ -68,13 +70,17 @@ namespace CodeGenerator
 
             if (type.IsClass || type.IsValueType)
             {
-                File.WriteLine(Indent1 + "private string thisObjUnqKey;" + Environment.NewLine);
+                File.WriteLine(Indent1 + "private string thisObjUnqKey;" + Environment.NewLine);                
+            }
+            if (eventsChecking)
+            {
+                File.WriteLine(Indent1 + "private System.Timers.Timer eventCheckingTimer;" + Environment.NewLine);
             }
 
             // Add constructors
             foreach (ConstructorInfo cinfo in type.GetConstructors())
             {
-                CreateCtor(cinfo);
+                CreateCtor(cinfo, eventsChecking);
             }
 
             if (!type.IsInterface && !type.IsValueType)
@@ -96,6 +102,20 @@ namespace CodeGenerator
             foreach (MethodInfo minfo in FilterSortMethods(type.GetMethods()))
             {
                 CreateMethod(minfo, type.IsInterface, type.IsValueType);
+            }
+
+            if (eventsChecking)
+            {
+                UpdateRegion(RegionType.TimerTickHardler);
+                File.WriteLine(Indent1 + "private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)" +
+                    Environment.NewLine + Indent1 + "{");
+
+                foreach (EventInfo einfo in SortEvents(type.GetEvents()))
+                {
+                    EventChecking(einfo);
+                }
+
+                MemberEnd();
             }
 
             // Add nested types

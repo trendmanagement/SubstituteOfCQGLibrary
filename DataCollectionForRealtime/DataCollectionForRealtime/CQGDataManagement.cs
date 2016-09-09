@@ -13,7 +13,7 @@ namespace DataCollectionForRealtime
         internal CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
         {
             this.realtimeDataManagement = realtimeDataManagement;
-
+            
             ThreadPool.QueueUserWorkItem(new WaitCallback(initializeCQGAndCallbacks));
         }
 
@@ -79,7 +79,7 @@ namespace DataCollectionForRealtime
                 m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);
                 m_CEL.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
-
+                
                 //m_CEL.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(m_CEL_TimedBarResolved);
                 //m_CEL.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(m_CEL_TimedBarsAdded);
                 //m_CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(m_CEL_TimedBarsUpdated);

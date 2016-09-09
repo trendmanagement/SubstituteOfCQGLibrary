@@ -232,7 +232,6 @@ namespace DataCollectionForRealtime
                     MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                     Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
 
-
                     if (query.ArgValues[0] == "+")
                     {
                         // Subscribe our handler to CQG event
@@ -244,7 +243,11 @@ namespace DataCollectionForRealtime
                         // Unsubscribe our handler to CQG event
                         ei.RemoveEventHandler(qObj, d);
                         //qObj.GetType().InvokeMember("remove_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
-                    } 
+                    }
+
+                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
+                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                    LoadInAnswer(answer);
                     break;
             }
  
