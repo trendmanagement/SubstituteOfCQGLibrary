@@ -168,7 +168,7 @@ namespace UnitTestFakeCQG
             }).GetAwaiter().GetResult();
 
             // assert
-            Assert.AreEqual(removedAnswersInfo[keys.Length + 1], "Queries was cleared successful");
+            Assert.AreEqual(removedAnswersInfo[keys.Length + 1], "Queries list was cleared successfully");
         }
 
         [TestMethod]
