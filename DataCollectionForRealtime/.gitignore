@@ -1,8 +1,0 @@
-# Ignored folders
-bin
-obj
-packages
-TestResults
-
-# Ignored files
-*.suo

@@ -51,22 +51,20 @@ namespace FakeCQG
         public static void FillEventCheckingDictionary()
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assmPath = path.Replace("\\bin\\", "\\obj\\") + "\\Interop.CQG.dll";
+            string assmPath = Path.Combine(path, "Interop.CQG.dll");
             var assm = Assembly.LoadFrom(assmPath);
 
-            IEnumerable<Type> CQGTypes = assm.ExportedTypes;
-            foreach(var type in CQGTypes)
+            foreach (Type type in assm.ExportedTypes.Where(type => type.IsClass))
             {
-                if(type.IsClass)
+                IEnumerable<EventInfo> einfos = type.GetEvents();
+#if DEBUG
+                einfos = einfos.OrderBy(einfo => einfo.EventHandlerType.Name);
+#endif
+                foreach (EventInfo einfo in einfos)
                 {
-                    foreach (EventInfo ei in type.GetEvents().OrderBy(einfo => einfo.EventHandlerType.Name))
-                    {
-                        eventCheckingDictionary.Add(ei.Name, false);
-                        
-                    }
+                    eventCheckingDictionary[einfo.Name] = false;
                 }
             }
         }
-
     }
 }
