@@ -14528,7 +14528,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCELClass()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         #endregion
