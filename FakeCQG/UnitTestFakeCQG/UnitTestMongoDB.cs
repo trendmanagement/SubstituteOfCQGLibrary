@@ -1,10 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Timers;
-using FakeCQG;
 using FakeCQG.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestFakeCQG
 {

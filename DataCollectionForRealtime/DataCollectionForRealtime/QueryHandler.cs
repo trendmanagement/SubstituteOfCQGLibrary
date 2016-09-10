@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Threading.Tasks;
-using CQG;
 using FakeCQG;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
@@ -51,7 +48,7 @@ namespace DataCollectionForRealtime
         public void LoadCQGAssembly()
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assmPath = path.Replace("\\bin\\", "\\obj\\") + "\\Interop.CQG.dll";
+            string assmPath = Path.Combine(path, "Interop.CQG.dll");
             CQGAssm = Assembly.LoadFile(assmPath);
         }
 

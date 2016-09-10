@@ -20,7 +20,7 @@ namespace CodeGenerator
                 File.WriteLine(Indent2 + "eventCheckingTimer.Interval = 30;");
                 File.WriteLine(Indent2 + "eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;");
                 File.WriteLine(Indent2 + "eventCheckingTimer.AutoReset = true;");
-                File.WriteLine(Indent2 + "eventCheckingTimer.Enabled = true");
+                File.WriteLine(Indent2 + "eventCheckingTimer.Enabled = true;");
             }
 
             MemberEnd();
