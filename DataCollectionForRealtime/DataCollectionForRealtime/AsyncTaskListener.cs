@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DataCollectionForRealtime
+﻿namespace DataCollectionForRealtime
 {
     /// <summary>
     /// This helper class carries three roles for asynchronous tasks:

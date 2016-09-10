@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Windows.Forms;
-using FakeCQG;
-using FakeCQG.Models;
 using System.Threading.Tasks;
-using System.Threading;
-using System.Reflection;
+using System.Windows.Forms;
+using FakeCQG.Models;
 
 namespace TestRealTime
 {

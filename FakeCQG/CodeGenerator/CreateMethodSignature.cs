@@ -6,7 +6,14 @@ namespace CodeGenerator
 {
     partial class Program
     {
-        static void CreateMethodSignature(MethodBase mb, string retTypeName = null, string delegateName = null, bool isInterface = false, bool isStruct = false, bool isNew = false, Dictionary<int, string> nameSubstitutes = null)
+        static void CreateMethodSignature(
+            MethodBase mb,
+            string retTypeName = null,
+            string delegateName = null,
+            bool isInterface = false,
+            bool isStruct = false,
+            bool isNew = false,
+            Dictionary<int, string> nameSubstitutes = null)
         {
             string public_ = !isInterface ? "public " : string.Empty;
             File.Write(Indent1 + public_);

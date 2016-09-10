@@ -8,13 +8,12 @@ namespace CodeGenerator
     {
         static void CreateEventHandler(MethodInfo minfo, Type type)
         {
-
             Dictionary<int, string> nameSubstitutes = new Dictionary<int, string>();
             foreach (var param in minfo.GetParameters())
             {
                 if (param.Name == null || param.Name.Length == 0)
                 {
-                    nameSubstitutes.Add(param.Position, "p" + Guid.NewGuid().ToString("N"));
+                    nameSubstitutes.Add(param.Position, "arg" + (param.Position + 1));
                 }
             }
 

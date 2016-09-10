@@ -42,13 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateCtor.cs" />
+    <Compile Include="CreateCtors.cs" />
     <Compile Include="CreateDelegate.cs" />
     <Compile Include="CreateDtor.cs" />
     <Compile Include="CreateEnum.cs" />
     <Compile Include="CreateEvent.cs" />
     <Compile Include="CreateEventHandler.cs" />
-    <Compile Include="CreateMethod.cs" />
+    <Compile Include="CreateMethods.cs" />
     <Compile Include="CreateMethodSignature.cs" />
     <Compile Include="CreateProperties.cs" />
     <Compile Include="CreateClassInterfaceStruct.cs" />

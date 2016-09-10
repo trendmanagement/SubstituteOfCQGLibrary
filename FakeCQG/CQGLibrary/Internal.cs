@@ -11,7 +11,6 @@ namespace FakeCQG
 {
     public partial class CQG 
     {
-        //private string thisCQGObjUnqKey;
         private static System.Timers.Timer eventCheckingTimer;
         private static bool eventsCheckingON = false;
 
@@ -33,12 +32,11 @@ namespace FakeCQG
         public delegate void LogHandler(string message);
         public static event LogHandler LogChange;
         private static string _log;
-        private static int waitForRequestTime;
 
         public string Key { get; set; }
         const int index = 0;
-        const int maxRequestTime = 30000; //30s
-        const int WaitForBoolTime = 1000; //1s
+        const int maxRequestTime = 30000;       // 30s
+        const int QueryTemeout = int.MaxValue;  // Currently set to the max value for debugging
         const string IdName = "Key";
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
         static System.Timers.Timer timer;
@@ -138,7 +136,7 @@ namespace FakeCQG
         {
             AnswerInfo answer = default(AnswerInfo);
             Task task = Task.Run(() => { answer = GetAnswerData(key); });
-            bool success = task.Wait(WaitForBoolTime);
+            bool success = task.Wait(QueryTemeout);
             if (success)
             {
                 return answer;
@@ -392,7 +390,7 @@ namespace FakeCQG
                     var collection = mongo.GetCollection;
                     var filter = Builders<QueryInfo>.Filter.Empty;
                     collection.DeleteMany(filter);
-                    OnLogChange("Queries was cleared successful");
+                    OnLogChange("Queries list was cleared successfully");
                 }
                 catch (Exception exc)
                 {
@@ -411,7 +409,7 @@ namespace FakeCQG
                     var collection = mongo.GetCollection;
                     var filter = Builders<AnswerInfo>.Filter.Empty;
                     collection.DeleteMany(filter);
-                    OnLogChange("Answers was cleared successful");
+                    OnLogChange("Answers list was cleared successfully");
                 }
                 catch (Exception exc)
                 {

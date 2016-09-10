@@ -1,28 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 
 namespace CodeGenerator
 {
     partial class Program
     {
-        static HashSet<string> SkippedAncestors = new HashSet<string>() { "Object", "ValueType", "__ComObject" };
-
-        // The methods with the next name will be skipped always
-        static HashSet<string> SkippedMethodsNames = new HashSet<string>() { "get_Item" };
-
-        // The methods with the next name prefixes will be skipped always
-        static HashSet<string> SkippedMethodsPrefixes = new HashSet<string>() { "add_", "remove_", "Finalize" };
-
-        // The methods with the next name prefixes will be skipped if they have the specified number of input arguments
-        // (otherwise, only corresponding properties will be created)
-        static Tuple<string, int>[] SkippedMethodsPrefixesNumArgs = new Tuple<string, int>[] { Tuple.Create("get_", 0), Tuple.Create("set_", 1) };
-
-        static HashSet<string> ObjectMethods = new HashSet<string>() { "Equals", "GetHashCode", "GetType", "ToString" };
-
-        static HashSet<string> IEnumerableMethods = new HashSet<string>() { "GetEnumerator" };
-
         static StreamWriter File;
         static StreamWriter DCEvHndlrFile;
 

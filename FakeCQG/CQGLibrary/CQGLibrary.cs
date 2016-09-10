@@ -10281,6 +10281,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal _ICQGCELEvents_SinkHelper()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~_ICQGCELEvents_SinkHelper()
         {
@@ -10290,86 +10298,86 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void AccountChanged(eAccountChangeType p75307ea979624962a68eac209647723b, CQGAccount p8557b82b4ee34167bfda32f9dabbaa97, CQGPosition p9f0d475e66f742cdbf288730ac8d128e)
+        public virtual void AccountChanged(eAccountChangeType arg1, CQGAccount arg2, CQGPosition arg3)
         {
-            object[] args = new object[3] {p75307ea979624962a68eac209647723b, p8557b82b4ee34167bfda32f9dabbaa97, p9f0d475e66f742cdbf288730ac8d128e};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AccountChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyAdded(CQGAdvancedStudy pdc8d7188b0344af6991ac36ed548f587)
+        public virtual void AdvancedStudyAdded(CQGAdvancedStudy arg1)
         {
-            object[] args = new object[1] {pdc8d7188b0344af6991ac36ed548f587};
+            object[] args = new object[1] {arg1};
             string name = "AdvancedStudyAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions p7e45b37e1db74a9ea73a50fdd3e77530, CQGError pa150a762f8e542c795af0decf2da8d7f)
+        public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p7e45b37e1db74a9ea73a50fdd3e77530, pa150a762f8e542c795af0decf2da8d7f};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyInserted(CQGAdvancedStudy p7cbf07bbd0064fb8a1ca72a7fa1665cd, int p87233da6f8974519899a055b59418f86)
+        public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, int arg2)
         {
-            object[] args = new object[2] {p7cbf07bbd0064fb8a1ca72a7fa1665cd, p87233da6f8974519899a055b59418f86};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy p9f0a21988e594eaeb4dc7773be3e5654, int p87cf04768980431aa93f58c5e43e4588)
+        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, int arg2)
         {
-            object[] args = new object[2] {p9f0a21988e594eaeb4dc7773be3e5654, p87cf04768980431aa93f58c5e43e4588};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyResolved(CQGAdvancedStudy pa5c484e629f1448389dc4b8488418f87, CQGError p366516ceaa924b6090b76e72c5c54c79)
+        public virtual void AdvancedStudyResolved(CQGAdvancedStudy arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pa5c484e629f1448389dc4b8488418f87, p366516ceaa924b6090b76e72c5c54c79};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy p90401242498440f6a60e4f76832ddf9e, int paef7df67de4542e18cd29be80da5a207)
+        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, int arg2)
         {
-            object[] args = new object[2] {p90401242498440f6a60e4f76832ddf9e, paef7df67de4542e18cd29be80da5a207};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderPlaced(string p1a33ce455e91411eb56dedef4b3e3467, CQGAlgorithmicOrderParameters p45505644ba4442e18eb05950a1a5c3c5, CQGAlgorithmicOrderProperties pf0b439395b63440ea9ab292ec695efe6)
+        public virtual void AlgorithmicOrderPlaced(string arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
-            object[] args = new object[3] {p1a33ce455e91411eb56dedef4b3e3467, p45505644ba4442e18eb05950a1a5c3c5, pf0b439395b63440ea9ab292ec695efe6};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AlgorithmicOrderPlaced";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderRegistrationComplete(string pe06f25c0d6b147a69de7eca099ba9040, CQGError p86ac7c20b048449db8a8aa96927be6e8)
+        public virtual void AlgorithmicOrderRegistrationComplete(string arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pe06f25c0d6b147a69de7eca099ba9040, p86ac7c20b048449db8a8aa96927be6e8};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AlgorithmicOrderRegistrationComplete";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AllOrdersCanceled(eOrderSideFilter p387e4edfe38f4f39b6737d6c54c79bc0, CQGIntegerCollection p1eaa39dbec0c4beb8024d372a93aeb61, CQGStringCollection peb87b43bd80040d09c4e0a25bf7c7460)
+        public virtual void AllOrdersCanceled(eOrderSideFilter arg1, CQGIntegerCollection arg2, CQGStringCollection arg3)
         {
-            object[] args = new object[3] {p387e4edfe38f4f39b6737d6c54c79bc0, p1eaa39dbec0c4beb8024d372a93aeb61, peb87b43bd80040d09c4e0a25bf7c7460};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AllOrdersCanceled";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AuthenticationStatusChanged(eSessionStatus pbd62d6ff321c47aeb0872117b20ab2f6, CQGError pde168f5805004d82af7d1ad9d67e328b)
+        public virtual void AuthenticationStatusChanged(eSessionStatus arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pbd62d6ff321c47aeb0872117b20ab2f6, pde168f5805004d82af7d1ad9d67e328b};
+            object[] args = new object[2] {arg1, arg2};
             string name = "AuthenticationStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void BarsTimestampsResolved(CQGBarsTimestamps p89acf92115ad4ff8b6915bafd2a088ef, CQGError p4e6797db211240f08657dafe2759feec)
+        public virtual void BarsTimestampsResolved(CQGBarsTimestamps arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p89acf92115ad4ff8b6915bafd2a088ef, p4e6797db211240f08657dafe2759feec};
+            object[] args = new object[2] {arg1, arg2};
             string name = "BarsTimestampsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10380,170 +10388,170 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void CommodityInstrumentsResolved(string p05f4a24e732e4f3abb7b8825e3e08e61, eInstrumentType pfd20f74ad3914513b07fb11501f34847, CQGCommodityInstruments pd80eef391fa64b72bbdfafef2f867b9d)
+        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
-            object[] args = new object[3] {p05f4a24e732e4f3abb7b8825e3e08e61, pfd20f74ad3914513b07fb11501f34847, pd80eef391fa64b72bbdfafef2f867b9d};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionAdded(CQGCondition p50eeacca8eee4c1f96a7f70523841dda)
+        public virtual void ConditionAdded(CQGCondition arg1)
         {
-            object[] args = new object[1] {p50eeacca8eee4c1f96a7f70523841dda};
+            object[] args = new object[1] {arg1};
             string name = "ConditionAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions p76e5679d3b6b46f8aa1c0e5be623abd9, CQGError p9b3d7662f2a0493eb96e130242444f45)
+        public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p76e5679d3b6b46f8aa1c0e5be623abd9, p9b3d7662f2a0493eb96e130242444f45};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConditionDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionInserted(CQGCondition p72d616cb0a454ce9bbcf5def20718399, int p058c8ee7a1a14e44923d095fb540a3c4)
+        public virtual void ConditionInserted(CQGCondition arg1, int arg2)
         {
-            object[] args = new object[2] {p72d616cb0a454ce9bbcf5def20718399, p058c8ee7a1a14e44923d095fb540a3c4};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConditionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionRemoved(CQGCondition p51b6df1e23a944f9b8cd1984eff28c72, int pe81c772d3b4c4cc19135a7982cb1905f)
+        public virtual void ConditionRemoved(CQGCondition arg1, int arg2)
         {
-            object[] args = new object[2] {p51b6df1e23a944f9b8cd1984eff28c72, pe81c772d3b4c4cc19135a7982cb1905f};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConditionRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionResolved(CQGCondition pde665f46fc404aeaa79ede5360f30b9b, CQGError p6160b61b8c334a78afac392b8b5a2752)
+        public virtual void ConditionResolved(CQGCondition arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pde665f46fc404aeaa79ede5360f30b9b, p6160b61b8c334a78afac392b8b5a2752};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConditionResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionUpdated(CQGCondition p0366723d6f1149eab299e13068dde716, int p34499cbad63d4a278ebdc85de89f6d44)
+        public virtual void ConditionUpdated(CQGCondition arg1, int arg2)
         {
-            object[] args = new object[2] {p0366723d6f1149eab299e13068dde716, p34499cbad63d4a278ebdc85de89f6d44};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConditionUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars p626b594f2f8b442ca97c57221f571f8e)
+        public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars arg1)
         {
-            object[] args = new object[1] {p626b594f2f8b442ca97c57221f571f8e};
+            object[] args = new object[1] {arg1};
             string name = "ConstantVolumeBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars p1fa5cef942aa471899635b0ca0d46e4a, int pedbce73bcaee4979a32c320e3d54623d)
+        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, int arg2)
         {
-            object[] args = new object[2] {p1fa5cef942aa471899635b0ca0d46e4a, pedbce73bcaee4979a32c320e3d54623d};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars pdd5fb9b7c36740b49b19d1af94baa8c2, int pf9cfd0af681a4f2999589c9c3978e944)
+        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, int arg2)
         {
-            object[] args = new object[2] {pdd5fb9b7c36740b49b19d1af94baa8c2, pf9cfd0af681a4f2999589c9c3978e944};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars pe103c8434cd34ba282ca314d3e6e694c, CQGError pf3d02ea9bf2e4b47afa9c51fb22ca03a)
+        public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pe103c8434cd34ba282ca314d3e6e694c, pf3d02ea9bf2e4b47afa9c51fb22ca03a};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars pcbae565f4934430da69a5334ea6ac140, int pa10863da83a042bfb772a4c83cc594cd)
+        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, int arg2)
         {
-            object[] args = new object[2] {pcbae565f4934430da69a5334ea6ac140, pa10863da83a042bfb772a4c83cc594cd};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CurrencyRatesChanged(CQGCurrencyRates p63b2860df0714b2d969d057f8de36838)
+        public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
-            object[] args = new object[1] {p63b2860df0714b2d969d057f8de36838};
+            object[] args = new object[1] {arg1};
             string name = "CurrencyRatesChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomSessionsResolved(CQGSessionsCollection paf5d8241fa9047d094d5097588cbb989, CQGError p0149d7db85134bbaae5ebba2679c9251)
+        public virtual void CustomSessionsResolved(CQGSessionsCollection arg1, CQGError arg2)
         {
-            object[] args = new object[2] {paf5d8241fa9047d094d5097588cbb989, p0149d7db85134bbaae5ebba2679c9251};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomSessionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyAdded(CQGCustomStudy p82662daaa4bc434eb39eee7165774cd2)
+        public virtual void CustomStudyAdded(CQGCustomStudy arg1)
         {
-            object[] args = new object[1] {p82662daaa4bc434eb39eee7165774cd2};
+            object[] args = new object[1] {arg1};
             string name = "CustomStudyAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions pcf6cf198aab54d03a1b1bd8d4eb54537, CQGError p5a7367f65f044f39ba26e9b2b66883e5)
+        public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pcf6cf198aab54d03a1b1bd8d4eb54537, p5a7367f65f044f39ba26e9b2b66883e5};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyInserted(CQGCustomStudy p0baa5a2296e348729b1eb93bde96e761, int p9fe803da66c146dabfe3de7773348390)
+        public virtual void CustomStudyInserted(CQGCustomStudy arg1, int arg2)
         {
-            object[] args = new object[2] {p0baa5a2296e348729b1eb93bde96e761, p9fe803da66c146dabfe3de7773348390};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyRemoved(CQGCustomStudy pa3a8a658f5a045a0bfd29ce4bb660fd2, int pda74cf5a74e24c0a8ec5475e418c5c97)
+        public virtual void CustomStudyRemoved(CQGCustomStudy arg1, int arg2)
         {
-            object[] args = new object[2] {pa3a8a658f5a045a0bfd29ce4bb660fd2, pda74cf5a74e24c0a8ec5475e418c5c97};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyResolved(CQGCustomStudy p2525de2d820548d38c20ff6a256b7a2a, CQGError p5b0f1ac00d0a483baa19b3ccfc5f2fc7)
+        public virtual void CustomStudyResolved(CQGCustomStudy arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p2525de2d820548d38c20ff6a256b7a2a, p5b0f1ac00d0a483baa19b3ccfc5f2fc7};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyUpdated(CQGCustomStudy p97b8968408544fa190a0a62e17919f71, int p0412afa8c2cf4fa6b410440b3f9e13b2)
+        public virtual void CustomStudyUpdated(CQGCustomStudy arg1, int arg2)
         {
-            object[] args = new object[2] {p97b8968408544fa190a0a62e17919f71, p0412afa8c2cf4fa6b410440b3f9e13b2};
+            object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataConnectionStatusChanged(eConnectionStatus p8f1ec73d00a54367b2c104a7b77a166f)
+        public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
-            object[] args = new object[1] {p8f1ec73d00a54367b2c104a7b77a166f};
+            object[] args = new object[1] {arg1};
             string name = "DataConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(object p9ec4d8194da14e7096d4a339c9fe06ee, string p13f9f15e635e43c48b44e33983b3e3bf)
+        public virtual void DataError(object arg1, string arg2)
         {
-            object[] args = new object[2] {p9ec4d8194da14e7096d4a339c9fe06ee, p13f9f15e635e43c48b44e33983b3e3bf};
+            object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataSourcesResolved(CQGDataSources pcf6b75ee0c644fbbacd7472a2dc173ec, CQGError pc6ff4df43bd945e1995669b26d9986bb)
+        public virtual void DataSourcesResolved(CQGDataSources arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pcf6b75ee0c644fbbacd7472a2dc173ec, pc6ff4df43bd945e1995669b26d9986bb};
+            object[] args = new object[2] {arg1, arg2};
             string name = "DataSourcesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataSourceSymbolsResolved(string p6aa083e9634344f28c6c71293d0e0cad, CQGDataSourceSymbols p3cde1d06d70b4582bb2889dc9900f5dd, CQGError p3d487e56fd7e4fe384c002e759e2cb45)
+        public virtual void DataSourceSymbolsResolved(string arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
-            object[] args = new object[3] {p6aa083e9634344f28c6c71293d0e0cad, p3cde1d06d70b4582bb2889dc9900f5dd, p3d487e56fd7e4fe384c002e759e2cb45};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "DataSourceSymbolsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10556,37 +10564,37 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void ExpressionAdded(CQGExpression p627ff88523a644b6b52a86b2f2475056)
+        public virtual void ExpressionAdded(CQGExpression arg1)
         {
-            object[] args = new object[1] {p627ff88523a644b6b52a86b2f2475056};
+            object[] args = new object[1] {arg1};
             string name = "ExpressionAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionInserted(CQGExpression p8e368e850310422683fa6e23c5b31d56, int p84c4fdfc46d549f8a125b2e80d1635ad)
+        public virtual void ExpressionInserted(CQGExpression arg1, int arg2)
         {
-            object[] args = new object[2] {p8e368e850310422683fa6e23c5b31d56, p84c4fdfc46d549f8a125b2e80d1635ad};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionRemoved(CQGExpression p003476cff1dc47e3b74451ea3953e42d, int p5e87af8e0d394f66aa065cf4b23610b7)
+        public virtual void ExpressionRemoved(CQGExpression arg1, int arg2)
         {
-            object[] args = new object[2] {p003476cff1dc47e3b74451ea3953e42d, p5e87af8e0d394f66aa065cf4b23610b7};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionResolved(CQGExpression pa993fcebad8c46eba3e99764388d5fa3, CQGError pbcb93f4414a746389d960ac9bbbb411e)
+        public virtual void ExpressionResolved(CQGExpression arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pa993fcebad8c46eba3e99764388d5fa3, pbcb93f4414a746389d960ac9bbbb411e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionUpdated(CQGExpression pbbffb381b92b4522857ca3fc39f3eaa2, int pc316a9a67c654b6eb448d5bc6b7362d0)
+        public virtual void ExpressionUpdated(CQGExpression arg1, int arg2)
         {
-            object[] args = new object[2] {pbbffb381b92b4522857ca3fc39f3eaa2, pc316a9a67c654b6eb448d5bc6b7362d0};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10605,107 +10613,107 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void GWConnectionStatusChanged(eConnectionStatus p7e6ea1c9a9434787805195c7e90a797b)
+        public virtual void GWConnectionStatusChanged(eConnectionStatus arg1)
         {
-            object[] args = new object[1] {p7e6ea1c9a9434787805195c7e90a797b};
+            object[] args = new object[1] {arg1};
             string name = "GWConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void GWEnvironmentChanged(eGWEnvChangeCode pae2cc451eb5048e28c3f2faa17a9ee49, int p207bb57b17ed43d48d343fbda033bd94, int p2fd395396ff0428a9c309e932c98b406)
+        public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, int arg2, int arg3)
         {
-            object[] args = new object[3] {pae2cc451eb5048e28c3f2faa17a9ee49, p207bb57b17ed43d48d343fbda033bd94, p2fd395396ff0428a9c309e932c98b406};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "GWEnvironmentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void HistoricalSessionsResolved(CQGSessionsCollection p360b1b8cfda5448089983eebcbb76e14, CQGHistoricalSessionsRequest p01de6c34e2594426936adc29038bc3a6, CQGError pd094572bace14219941d3c6d594f197d)
+        public virtual void HistoricalSessionsResolved(CQGSessionsCollection arg1, CQGHistoricalSessionsRequest arg2, CQGError arg3)
         {
-            object[] args = new object[3] {p360b1b8cfda5448089983eebcbb76e14, p01de6c34e2594426936adc29038bc3a6, pd094572bace14219941d3c6d594f197d};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "HistoricalSessionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ICConnectionStatusChanged(eICConnectionStatus pd10d1f73f1b6403fb231affae433df7a)
+        public virtual void ICConnectionStatusChanged(eICConnectionStatus arg1)
         {
-            object[] args = new object[1] {pd10d1f73f1b6403fb231affae433df7a};
+            object[] args = new object[1] {arg1};
             string name = "ICConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IncorrectSymbol(string p58db907c0b47429597307e1e709d7bdf)
+        public virtual void IncorrectSymbol(string arg1)
         {
-            object[] args = new object[1] {p58db907c0b47429597307e1e709d7bdf};
+            object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentChanged(CQGInstrument p2a7623b0fb8949b68811e84e17440f03, CQGQuotes p185b524d58094613ba3cd836a0ea011d, CQGInstrumentProperties p4e144487eb634bdba4d5667eb865b8b8)
+        public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
-            object[] args = new object[3] {p2a7623b0fb8949b68811e84e17440f03, p185b524d58094613ba3cd836a0ea011d, p4e144487eb634bdba4d5667eb865b8b8};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentDOMChanged(CQGInstrument p6a36c5d59aa34a6a8d8ed9e50a797256, CQGDOMQuotes pe5dea1d031b042cfb68415deb4f58a0d, CQGDOMQuotes p1d499f914b7647c9a8b01ee4d542d569)
+        public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
-            object[] args = new object[3] {p6a36c5d59aa34a6a8d8ed9e50a797256, pe5dea1d031b042cfb68415deb4f58a0d, p1d499f914b7647c9a8b01ee4d542d569};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentDOMChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupChanged(eChangeType p4e08fe1c82ea4e9ab359ccf70a1d7b3e, CQGInstrumentsGroup pe8d851b80f664c78a4cc235e87811ad9, CQGStringCollection p0172642fe4014a358161595cfc889805)
+        public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
-            object[] args = new object[3] {p4e08fe1c82ea4e9ab359ccf70a1d7b3e, pe8d851b80f664c78a4cc235e87811ad9, p0172642fe4014a358161595cfc889805};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentsGroupChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup p7e576a4bc4db43bc8095bc7de8730784, CQGError pfc49d5b33d2348aaabb72110d74c4d6e)
+        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p7e576a4bc4db43bc8095bc7de8730784, pfc49d5b33d2348aaabb72110d74c4d6e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentsGroupResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string pd9f07ebc6b7f43e7a41787c1559e7948, CQGInstrument p320001635f564b90ba2e6b2d4cca332e)
+        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
         {
-            object[] args = new object[2] {pd9f07ebc6b7f43e7a41787c1559e7948, p320001635f564b90ba2e6b2d4cca332e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IsReady(ref eReadyStatus p87acbc5af3ea47ea975b8a6ffbc02af7)
+        public virtual void IsReady(ref eReadyStatus arg1)
         {
-            object[] args = new object[1] {p87acbc5af3ea47ea975b8a6ffbc02af7};
+            object[] args = new object[1] {arg1};
             string name = "IsReady";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void LineTimeChanged(DateTime pa2969a0718d94756a7868b46044b3397)
+        public virtual void LineTimeChanged(DateTime arg1)
         {
-            object[] args = new object[1] {pa2969a0718d94756a7868b46044b3397};
+            object[] args = new object[1] {arg1};
             string name = "LineTimeChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillChanged(CQGManualFill p8833a4cb8f544db0bd555aba1c96dbeb, eManualFillUpdateType pb2d245e2757b499b936e0755617beec8)
+        public virtual void ManualFillChanged(CQGManualFill arg1, eManualFillUpdateType arg2)
         {
-            object[] args = new object[2] {p8833a4cb8f544db0bd555aba1c96dbeb, pb2d245e2757b499b936e0755617beec8};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillsResolved(CQGManualFills p002afe5822f84e3fb1e1f264e8ed8812, CQGError p31062aa5c1b0474182ae5bf9528576a4)
+        public virtual void ManualFillsResolved(CQGManualFills arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p002afe5822f84e3fb1e1f264e8ed8812, p31062aa5c1b0474182ae5bf9528576a4};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillUpdateResolved(CQGManualFillRequest p2609d34bfc9a4067b943a40c2a5f9585, CQGError p52a040cc459543bf84f186f5b0eaa201)
+        public virtual void ManualFillUpdateResolved(CQGManualFillRequest arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p2609d34bfc9a4067b943a40c2a5f9585, p52a040cc459543bf84f186f5b0eaa201};
+            object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillUpdateResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10716,205 +10724,205 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void OnQueryProgress(CQGOrdersQuery p01f077ee666543f2a9910e3e8fc81279, CQGError p58a6bb1932b74b2bb24988732927b3bd)
+        public virtual void OnQueryProgress(CQGOrdersQuery arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p01f077ee666543f2a9910e3e8fc81279, p58a6bb1932b74b2bb24988732927b3bd};
+            object[] args = new object[2] {arg1, arg2};
             string name = "OnQueryProgress";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void OrderChanged(eChangeType p923c60239e2c4b23aea3d2bc05ff3b25, CQGOrder pea369361296749dea084bc48badb9a5f, CQGOrderProperties p2649f45876ff408ab9e09ff7d02f97a1, CQGFill p4e7668cd2dad461ca333acd6f3439f8a, CQGError p8307d8100f4443cbb1b518792d3c7350)
+        public virtual void OrderChanged(eChangeType arg1, CQGOrder arg2, CQGOrderProperties arg3, CQGFill arg4, CQGError arg5)
         {
-            object[] args = new object[5] {p923c60239e2c4b23aea3d2bc05ff3b25, pea369361296749dea084bc48badb9a5f, p2649f45876ff408ab9e09ff7d02f97a1, p4e7668cd2dad461ca333acd6f3439f8a, p8307d8100f4443cbb1b518792d3c7350};
+            object[] args = new object[5] {arg1, arg2, arg3, arg4, arg5};
             string name = "OrderChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PasswordChanged(eSessionStatus p71a2ba473d56413a893088f5f587b8e1, CQGError p06f4ecd1b8674ccdad94336bf595a183)
+        public virtual void PasswordChanged(eSessionStatus arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p71a2ba473d56413a893088f5f587b8e1, p06f4ecd1b8674ccdad94336bf595a183};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PasswordChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars pd32a133104eb4132a302954f73cf27bf)
+        public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars arg1)
         {
-            object[] args = new object[1] {pd32a133104eb4132a302954f73cf27bf};
+            object[] args = new object[1] {arg1};
             string name = "PointAndFigureBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars p9eb339cdbe9b4d2e8fbcf4f5d74c7e30, int pf8cdbbc6987241959f9c970b88c51b87)
+        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, int arg2)
         {
-            object[] args = new object[2] {p9eb339cdbe9b4d2e8fbcf4f5d74c7e30, pf8cdbbc6987241959f9c970b88c51b87};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars pfdfaadab23304c7e8a1abfa252ccaa51, int pff82745fd1ff423fbc8ed6dd6055485d)
+        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, int arg2)
         {
-            object[] args = new object[2] {pfdfaadab23304c7e8a1abfa252ccaa51, pff82745fd1ff423fbc8ed6dd6055485d};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars pc4c2b6b1736e43d28137c105d9855493, CQGError p7242b95c7787408bbb3b4326da85fef1)
+        public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pc4c2b6b1736e43d28137c105d9855493, p7242b95c7787408bbb3b4326da85fef1};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars p763d8ad757f94188a172fc2c56e261da, int p0dde00facaa14461961ade6b0a1e77d8)
+        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, int arg2)
         {
-            object[] args = new object[2] {p763d8ad757f94188a172fc2c56e261da, p0dde00facaa14461961ade6b0a1e77d8};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PositionsStatementResolved(CQGPositionsStatement pca6b4acc042149c5bd1fb8eabc5a0885, CQGError p79704fd342c04fc0bc97863dd93848a0)
+        public virtual void PositionsStatementResolved(CQGPositionsStatement arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pca6b4acc042149c5bd1fb8eabc5a0885, p79704fd342c04fc0bc97863dd93848a0};
+            object[] args = new object[2] {arg1, arg2};
             string name = "PositionsStatementResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions p3dbca6ebcc0047a484e9b183e22ea8e1, CQGError pdd8a960c9a9f40bf8df1c04f2ece9b20)
+        public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p3dbca6ebcc0047a484e9b183e22ea8e1, pdd8a960c9a9f40bf8df1c04f2ece9b20};
+            object[] args = new object[2] {arg1, arg2};
             string name = "QFormulaDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void StrategyDefinitionProgress(CQGStrategyDefinition p2383bc050e3c41d8a2e20b68ed4d1a00, CQGError pfc042bc653b249e5885156802d3af138)
+        public virtual void StrategyDefinitionProgress(CQGStrategyDefinition arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p2383bc050e3c41d8a2e20b68ed4d1a00, pfc042bc653b249e5885156802d3af138};
+            object[] args = new object[2] {arg1, arg2};
             string name = "StrategyDefinitionProgress";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsAdded(CQGSubMinuteBars pc5ece9050ec64773b736dea3f571ec3c)
+        public virtual void SubMinuteBarsAdded(CQGSubMinuteBars arg1)
         {
-            object[] args = new object[1] {pc5ece9050ec64773b736dea3f571ec3c};
+            object[] args = new object[1] {arg1};
             string name = "SubMinuteBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars p2979dcf1993041de842383826218590f, int p6e633c023c88421d86e5cc7cc95345bb)
+        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, int arg2)
         {
-            object[] args = new object[2] {p2979dcf1993041de842383826218590f, p6e633c023c88421d86e5cc7cc95345bb};
+            object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars p9c8669637cd94b99ae8cb846f6c19255, int pdd01817e3f494eb584c5c125208fa02e)
+        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, int arg2)
         {
-            object[] args = new object[2] {p9c8669637cd94b99ae8cb846f6c19255, pdd01817e3f494eb584c5c125208fa02e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsResolved(CQGSubMinuteBars p7a646e90a1e042d5bd32c9b0ad23a52a, CQGError pa72cb5b2667e444da8320d324dd2f8a8)
+        public virtual void SubMinuteBarsResolved(CQGSubMinuteBars arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p7a646e90a1e042d5bd32c9b0ad23a52a, pa72cb5b2667e444da8320d324dd2f8a8};
+            object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars p83518b4a21f14369a2a1bf42c85af5ba, int pb20cd5b5e8c74c168ce13b346a877a55)
+        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, int arg2)
         {
-            object[] args = new object[2] {p83518b4a21f14369a2a1bf42c85af5ba, pb20cd5b5e8c74c168ce13b346a877a55};
+            object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SummariesStatementResolved(CQGSummariesStatement p4e32e124486946c1bd0a673b3ba3e9c1, CQGError p8171adf51bff48c2b430e417883bc2ff)
+        public virtual void SummariesStatementResolved(CQGSummariesStatement arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p4e32e124486946c1bd0a673b3ba3e9c1, p8171adf51bff48c2b430e417883bc2ff};
+            object[] args = new object[2] {arg1, arg2};
             string name = "SummariesStatementResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsAdded(CQGTFlowBars p77f88efa315b413883626f52f1369da1)
+        public virtual void TFlowBarsAdded(CQGTFlowBars arg1)
         {
-            object[] args = new object[1] {p77f88efa315b413883626f52f1369da1};
+            object[] args = new object[1] {arg1};
             string name = "TFlowBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsInserted(CQGTFlowBars p4df204c0b7384fa8b63040d31159e1a4, int pb38bfac846384184931354fa7df75131)
+        public virtual void TFlowBarsInserted(CQGTFlowBars arg1, int arg2)
         {
-            object[] args = new object[2] {p4df204c0b7384fa8b63040d31159e1a4, pb38bfac846384184931354fa7df75131};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsRemoved(CQGTFlowBars p2712bbb04bf0421c8f689b61f13a0883, int pfe75053dad8443a3ad4609026af7141c)
+        public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, int arg2)
         {
-            object[] args = new object[2] {p2712bbb04bf0421c8f689b61f13a0883, pfe75053dad8443a3ad4609026af7141c};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsResolved(CQGTFlowBars p3bd2e3d12fbe4caa95484fe05cda85df, CQGError p7788fe16912744d4acd5ed8bf047fd43)
+        public virtual void TFlowBarsResolved(CQGTFlowBars arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p3bd2e3d12fbe4caa95484fe05cda85df, p7788fe16912744d4acd5ed8bf047fd43};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsUpdated(CQGTFlowBars p79436a1ed7c4407aae618c4b12037faf, int p07d9203c0da2476c97c1434877a239d5)
+        public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, int arg2)
         {
-            object[] args = new object[2] {p79436a1ed7c4407aae618c4b12037faf, p07d9203c0da2476c97c1434877a239d5};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TicksAdded(CQGTicks pa901693f34ca48c787a01bc6d89641c6, int p765cc9c2de474d389ff63d5b5a4ada6e)
+        public virtual void TicksAdded(CQGTicks arg1, int arg2)
         {
-            object[] args = new object[2] {pa901693f34ca48c787a01bc6d89641c6, p765cc9c2de474d389ff63d5b5a4ada6e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TicksAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TicksResolved(CQGTicks pea58c3ca6660437f85e259d30681a2d4, CQGError pbc5a4615adf0471089b66bca92904a7e)
+        public virtual void TicksResolved(CQGTicks arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pea58c3ca6660437f85e259d30681a2d4, pbc5a4615adf0471089b66bca92904a7e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TicksResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsAdded(CQGTimedBars pd117d2e5d45b430397b7343ff635ef23)
+        public virtual void TimedBarsAdded(CQGTimedBars arg1)
         {
-            object[] args = new object[1] {pd117d2e5d45b430397b7343ff635ef23};
+            object[] args = new object[1] {arg1};
             string name = "TimedBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsInserted(CQGTimedBars pc825ffa8be4044d3be585960bb961f84, int pc7d2dd142965423a932b9555f0da61d9)
+        public virtual void TimedBarsInserted(CQGTimedBars arg1, int arg2)
         {
-            object[] args = new object[2] {pc825ffa8be4044d3be585960bb961f84, pc7d2dd142965423a932b9555f0da61d9};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsRemoved(CQGTimedBars pc501673c220a4c118bd9cf2c989e8ee5, int pc6b163392d6a4cf3bc9f60b87b1ec2e4)
+        public virtual void TimedBarsRemoved(CQGTimedBars arg1, int arg2)
         {
-            object[] args = new object[2] {pc501673c220a4c118bd9cf2c989e8ee5, pc6b163392d6a4cf3bc9f60b87b1ec2e4};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsResolved(CQGTimedBars pbb4b637d6c9a435c8b6fc35e5af603cf, CQGError p392d54882c7f4890b5db91296acfd171)
+        public virtual void TimedBarsResolved(CQGTimedBars arg1, CQGError arg2)
         {
-            object[] args = new object[2] {pbb4b637d6c9a435c8b6fc35e5af603cf, p392d54882c7f4890b5db91296acfd171};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsUpdated(CQGTimedBars pf51e7b0e45de4dbbb717539bec583c45, int p13da8767465c41b7bd9cf058216a2c3a)
+        public virtual void TimedBarsUpdated(CQGTimedBars arg1, int arg2)
         {
-            object[] args = new object[2] {pf51e7b0e45de4dbbb717539bec583c45, p13da8767465c41b7bd9cf058216a2c3a};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10926,100 +10934,100 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void TradableCommoditiesResolved(int pe69885528d06413bba59e6f27afad2b1, CQGCommodities p29ed12186e244f0e8022d113617711df, CQGError p09b9d43dabd5456fa974e8c26a94fb17)
+        public virtual void TradableCommoditiesResolved(int arg1, CQGCommodities arg2, CQGError arg3)
         {
-            object[] args = new object[3] {pe69885528d06413bba59e6f27afad2b1, p29ed12186e244f0e8022d113617711df, p09b9d43dabd5456fa974e8c26a94fb17};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableCommoditiesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradableExchangesResolved(int p70d48336585b4a5594396518d0c722d4, CQGExchanges pc285ca2c1e55456d9edaf8a9fee8af6d, CQGError pd280b92dc2a5460da7b8bddc3e0c8d7c)
+        public virtual void TradableExchangesResolved(int arg1, CQGExchanges arg2, CQGError arg3)
         {
-            object[] args = new object[3] {p70d48336585b4a5594396518d0c722d4, pc285ca2c1e55456d9edaf8a9fee8af6d, pd280b92dc2a5460da7b8bddc3e0c8d7c};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableExchangesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemAddNotification(CQGTradingSystem pe22d8c8951b44505b1524ca14a3e57f3, CQGTradingSystemAddInfo p1c859bd2bc6c40b1aa1961a3b07b5e35)
+        public virtual void TradingSystemAddNotification(CQGTradingSystem arg1, CQGTradingSystemAddInfo arg2)
         {
-            object[] args = new object[2] {pe22d8c8951b44505b1524ca14a3e57f3, p1c859bd2bc6c40b1aa1961a3b07b5e35};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemAddNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions p0fd469d626a54c1ea7f0b1633a6108eb, CQGError p926a0fa9c921450b8b50cdac267ba23e)
+        public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p0fd469d626a54c1ea7f0b1633a6108eb, p926a0fa9c921450b8b50cdac267ba23e};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemInsertNotification(CQGTradingSystem p2dc3841a4bf04f77b66102730a9d72d4, CQGTradingSystemInsertInfo p0c832a4aa42d4b8bbb94de6e21bbd59b)
+        public virtual void TradingSystemInsertNotification(CQGTradingSystem arg1, CQGTradingSystemInsertInfo arg2)
         {
-            object[] args = new object[2] {p2dc3841a4bf04f77b66102730a9d72d4, p0c832a4aa42d4b8bbb94de6e21bbd59b};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemInsertNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemRemoveNotification(CQGTradingSystem p1cc1aff930d94eebaeabf8e9fa71a1fe, CQGTradingSystemRemoveInfo p48a5c12cfce44d668dfd9c156536a203)
+        public virtual void TradingSystemRemoveNotification(CQGTradingSystem arg1, CQGTradingSystemRemoveInfo arg2)
         {
-            object[] args = new object[2] {p1cc1aff930d94eebaeabf8e9fa71a1fe, p48a5c12cfce44d668dfd9c156536a203};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemRemoveNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemResolved(CQGTradingSystem p98f04bc11700411e836ff31e0a2221ad, CQGError p4a0bc0f7ad0640a5b4e0311a1e93bfa7)
+        public virtual void TradingSystemResolved(CQGTradingSystem arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p98f04bc11700411e836ff31e0a2221ad, p4a0bc0f7ad0640a5b4e0311a1e93bfa7};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem p1c1e0929912e4b05bd782c9b883c168a, CQGTradingSystemRelationAddInfo p0259e66292624c29bc38811b337c769b)
+        public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem arg1, CQGTradingSystemRelationAddInfo arg2)
         {
-            object[] args = new object[2] {p1c1e0929912e4b05bd782c9b883c168a, p0259e66292624c29bc38811b337c769b};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemTradeRelationAddNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemUpdateNotification(CQGTradingSystem p6f3aa4b09f62421faf996d63e20c1681, CQGTradingSystemUpdateInfo pfa62bebf915e45719ae51783cb3648ae)
+        public virtual void TradingSystemUpdateNotification(CQGTradingSystem arg1, CQGTradingSystemUpdateInfo arg2)
         {
-            object[] args = new object[2] {p6f3aa4b09f62421faf996d63e20c1681, pfa62bebf915e45719ae51783cb3648ae};
+            object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemUpdateNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsAdded(CQGYields p812b77dfbbdc43cfb02e98a0bd73cc6d)
+        public virtual void YieldsAdded(CQGYields arg1)
         {
-            object[] args = new object[1] {p812b77dfbbdc43cfb02e98a0bd73cc6d};
+            object[] args = new object[1] {arg1};
             string name = "YieldsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsInserted(CQGYields p97f760e4c2af49cc87a9f33370d4f0cf, int pe26837acff41473284d02d40ec9a87ab)
+        public virtual void YieldsInserted(CQGYields arg1, int arg2)
         {
-            object[] args = new object[2] {p97f760e4c2af49cc87a9f33370d4f0cf, pe26837acff41473284d02d40ec9a87ab};
+            object[] args = new object[2] {arg1, arg2};
             string name = "YieldsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsRemoved(CQGYields p57388f3af60744858378c066ca53f2f0, int pc821fc2ae0b24281a7510d37ee60231c)
+        public virtual void YieldsRemoved(CQGYields arg1, int arg2)
         {
-            object[] args = new object[2] {p57388f3af60744858378c066ca53f2f0, pc821fc2ae0b24281a7510d37ee60231c};
+            object[] args = new object[2] {arg1, arg2};
             string name = "YieldsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsResolved(CQGYields p28cb8620a0a3458da6fc22e5de7d3fd4, CQGError p310eb6c70ec04203b9f834c285b48fb3)
+        public virtual void YieldsResolved(CQGYields arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p28cb8620a0a3458da6fc22e5de7d3fd4, p310eb6c70ec04203b9f834c285b48fb3};
+            object[] args = new object[2] {arg1, arg2};
             string name = "YieldsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsUpdated(CQGYields p8184306c37ff45cbbd568cc2ea197c0c, int pc61eef2700734bb5894ab376485fbee8)
+        public virtual void YieldsUpdated(CQGYields arg1, int arg2)
         {
-            object[] args = new object[2] {p8184306c37ff45cbbd568cc2ea197c0c, pc61eef2700734bb5894ab376485fbee8};
+            object[] args = new object[2] {arg1, arg2};
             string name = "YieldsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11031,6 +11039,14 @@ namespace FakeCQG
     public class _ICQGCELGeneralEvents_SinkHelper : _ICQGCELGeneralEvents
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal _ICQGCELGeneralEvents_SinkHelper()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~_ICQGCELGeneralEvents_SinkHelper()
@@ -11047,23 +11063,23 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void CurrencyRatesChanged(CQGCurrencyRates p81e9f7af2d41455794ddc4908fcadfe6)
+        public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
-            object[] args = new object[1] {p81e9f7af2d41455794ddc4908fcadfe6};
+            object[] args = new object[1] {arg1};
             string name = "CurrencyRatesChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataConnectionStatusChanged(eConnectionStatus p3e28c82ebac349cab32f7d03216eeedd)
+        public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
-            object[] args = new object[1] {p3e28c82ebac349cab32f7d03216eeedd};
+            object[] args = new object[1] {arg1};
             string name = "DataConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(object pfbc909b1914f4404b524d72244c5af91, string p33d40908f3b145e1aad289dccc057851)
+        public virtual void DataError(object arg1, string arg2)
         {
-            object[] args = new object[2] {pfbc909b1914f4404b524d72244c5af91, p33d40908f3b145e1aad289dccc057851};
+            object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11090,23 +11106,23 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void GWConnectionStatusChanged(eConnectionStatus p2d93c2457fdb44809f0ce77a3f47d3ac)
+        public virtual void GWConnectionStatusChanged(eConnectionStatus arg1)
         {
-            object[] args = new object[1] {p2d93c2457fdb44809f0ce77a3f47d3ac};
+            object[] args = new object[1] {arg1};
             string name = "GWConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IsReady(ref eReadyStatus pb1ccd9b5261b457a90dc09255877810e)
+        public virtual void IsReady(ref eReadyStatus arg1)
         {
-            object[] args = new object[1] {pb1ccd9b5261b457a90dc09255877810e};
+            object[] args = new object[1] {arg1};
             string name = "IsReady";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void LineTimeChanged(DateTime pfff3833fb03a4d7d8244ccfcae8fb82b)
+        public virtual void LineTimeChanged(DateTime arg1)
         {
-            object[] args = new object[1] {pfff3833fb03a4d7d8244ccfcae8fb82b};
+            object[] args = new object[1] {arg1};
             string name = "LineTimeChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11132,6 +11148,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal _ICQGCELInstrumentEvents_SinkHelper()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~_ICQGCELInstrumentEvents_SinkHelper()
         {
@@ -11141,9 +11165,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void CommodityInstrumentsResolved(string p9652e91d9e6441948eb0d213d1eed06b, eInstrumentType pec41c6d94139400e966e29a921b36117, CQGCommodityInstruments pf6aa2b1c5668454c8dad8a73b99dadf8)
+        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
-            object[] args = new object[3] {p9652e91d9e6441948eb0d213d1eed06b, pec41c6d94139400e966e29a921b36117, pf6aa2b1c5668454c8dad8a73b99dadf8};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11170,44 +11194,44 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncorrectSymbol(string p83a6280a4fe24c86bc40553005518f41)
+        public virtual void IncorrectSymbol(string arg1)
         {
-            object[] args = new object[1] {p83a6280a4fe24c86bc40553005518f41};
+            object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentChanged(CQGInstrument p83b8bd1fb5c449b59ed7d2e8d7c7d73b, CQGQuotes pcea0a4f0b8bb47fd836e1c5b6fed7ff1, CQGInstrumentProperties p6485a9e2885e49fe8575157f7f1fee11)
+        public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
-            object[] args = new object[3] {p83b8bd1fb5c449b59ed7d2e8d7c7d73b, pcea0a4f0b8bb47fd836e1c5b6fed7ff1, p6485a9e2885e49fe8575157f7f1fee11};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentDOMChanged(CQGInstrument p85210bb116c140fe8d6c2202c54dbf27, CQGDOMQuotes p962dee4f245549a48dd983d4883f332e, CQGDOMQuotes p9006c27ee87f4848ae82d5ba001953d1)
+        public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
-            object[] args = new object[3] {p85210bb116c140fe8d6c2202c54dbf27, p962dee4f245549a48dd983d4883f332e, p9006c27ee87f4848ae82d5ba001953d1};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentDOMChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupChanged(eChangeType p9d29bdba24264f9dbfb27428a9b0da56, CQGInstrumentsGroup pdf863672853845839c7338b161d6b3ae, CQGStringCollection pe15d6876114a40db82b00fe46da188c5)
+        public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
-            object[] args = new object[3] {p9d29bdba24264f9dbfb27428a9b0da56, pdf863672853845839c7338b161d6b3ae, pe15d6876114a40db82b00fe46da188c5};
+            object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentsGroupChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup p5e94a90aec1b4bbf82809dd50716a51c, CQGError pa5aaa71a81914925866e2e3914e724bd)
+        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
-            object[] args = new object[2] {p5e94a90aec1b4bbf82809dd50716a51c, pa5aaa71a81914925866e2e3914e724bd};
+            object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentsGroupResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string pf458f3a6cfd742e29ec715eda9deb148, CQGInstrument pbd6c62fadedb46ac9cb3b3cb1d65e119)
+        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
         {
-            object[] args = new object[2] {pf458f3a6cfd742e29ec715eda9deb148, pbd6c62fadedb46ac9cb3b3cb1d65e119};
+            object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11226,6 +11250,14 @@ namespace FakeCQG
     public class CQGAccountClass : ICQGAccount, CQGAccount
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAccountClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAccountClass()
@@ -11555,6 +11587,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAccountsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAccountsClass()
         {
@@ -11689,6 +11729,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAccountSummariesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAccountSummariesClass()
         {
@@ -11788,6 +11836,14 @@ namespace FakeCQG
     public class CQGAccountSummaryClass : ICQGAccountSummary, CQGAccountSummary
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAccountSummaryClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAccountSummaryClass()
@@ -11973,6 +12029,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAdvancedStudiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAdvancedStudiesClass()
         {
@@ -12091,6 +12155,14 @@ namespace FakeCQG
     public class CQGAdvancedStudyClass : ICQGAdvancedStudy, IEnumerable, CQGAdvancedStudy
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAdvancedStudyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAdvancedStudyClass()
@@ -12319,6 +12391,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAdvancedStudyDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAdvancedStudyDefinitionClass()
         {
@@ -12433,6 +12513,14 @@ namespace FakeCQG
     public class CQGAdvancedStudyDefinitionsClass : ICQGAdvancedStudyDefinitions, IEnumerable, CQGAdvancedStudyDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAdvancedStudyDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAdvancedStudyDefinitionsClass()
@@ -12560,6 +12648,14 @@ namespace FakeCQG
     public class CQGAdvancedStudyRequestClass : ICQGAdvancedStudyRequest, CQGAdvancedStudyRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAdvancedStudyRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAdvancedStudyRequestClass()
@@ -12913,6 +13009,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAlgorithmicOrderDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAlgorithmicOrderDefinitionClass()
         {
@@ -13082,6 +13186,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAlgorithmicOrderDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAlgorithmicOrderDefinitionsClass()
         {
@@ -13195,6 +13307,14 @@ namespace FakeCQG
     public class CQGAlgorithmicOrderParametersClass : ICQGAlgorithmicOrderParameters, CQGAlgorithmicOrderParameters
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAlgorithmicOrderParametersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAlgorithmicOrderParametersClass()
@@ -13443,6 +13563,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAlgorithmicOrderPropertiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAlgorithmicOrderPropertiesClass()
         {
@@ -13543,6 +13671,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAlgorithmicOrderPropertyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAlgorithmicOrderPropertyClass()
         {
@@ -13636,6 +13772,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGAlgoSupplierClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGAlgoSupplierClass()
         {
@@ -13703,6 +13847,14 @@ namespace FakeCQG
     public class CQGAPIConfigClass : ICQGAPIConfig, CQGAPIConfig
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGAPIConfigClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGAPIConfigClass()
@@ -14375,6 +14527,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGBarsTimestampsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGBarsTimestampsClass()
         {
@@ -14528,7 +14688,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCELClass()
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -15857,6 +16017,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGChangedTradeEntriesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGChangedTradeEntriesClass()
         {
@@ -15968,6 +16136,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGChangedTradeEntryClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGChangedTradeEntryClass()
         {
@@ -16061,6 +16237,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGChangedTradeExitClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGChangedTradeExitClass()
         {
@@ -16153,6 +16337,14 @@ namespace FakeCQG
     public class CQGChangedTradeExitsClass : ICQGChangedTradeExits, IEnumerable, CQGChangedTradeExits
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGChangedTradeExitsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGChangedTradeExitsClass()
@@ -16265,6 +16457,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCommoditiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCommoditiesClass()
         {
@@ -16376,6 +16576,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCommodityInstrumentsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCommodityInstrumentsClass()
         {
@@ -16486,6 +16694,14 @@ namespace FakeCQG
     public class CQGConditionClass : ICQGCondition, IEnumerable, CQGCondition
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConditionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConditionClass()
@@ -16703,6 +16919,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGConditionDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGConditionDefinitionClass()
         {
@@ -16795,6 +17019,14 @@ namespace FakeCQG
     public class CQGConditionDefinitionsClass : ICQGConditionDefinitions, IEnumerable, CQGConditionDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConditionDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConditionDefinitionsClass()
@@ -16914,6 +17146,14 @@ namespace FakeCQG
     public class CQGConditionRequestClass : ICQGConditionRequest, CQGConditionRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConditionRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConditionRequestClass()
@@ -17252,6 +17492,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGConditionResultClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGConditionResultClass()
         {
@@ -17344,6 +17592,14 @@ namespace FakeCQG
     public class CQGConditionsClass : ICQGConditions, IEnumerable, CQGConditions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConditionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConditionsClass()
@@ -17463,6 +17719,14 @@ namespace FakeCQG
     public class CQGConstantVolumeBarClass : ICQGConstantVolumeBar, CQGConstantVolumeBar
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConstantVolumeBarClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConstantVolumeBarClass()
@@ -17722,6 +17986,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGConstantVolumeBarsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGConstantVolumeBarsClass()
         {
@@ -17919,6 +18191,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGConstantVolumeBarsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGConstantVolumeBarsCollectionClass()
         {
@@ -18037,6 +18317,14 @@ namespace FakeCQG
     public class CQGConstantVolumeBarsRequestClass : ICQGConstantVolumeBarsRequest, CQGConstantVolumeBarsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGConstantVolumeBarsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGConstantVolumeBarsRequestClass()
@@ -18349,6 +18637,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCurrencyRateClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCurrencyRateClass()
         {
@@ -18497,6 +18793,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCurrencyRatesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCurrencyRatesClass()
         {
@@ -18597,6 +18901,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCurveDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCurveDefinitionClass()
         {
@@ -18678,6 +18990,14 @@ namespace FakeCQG
     public class CQGCurveDefinitionsClass : ICQGCurveDefinitions, IEnumerable, CQGCurveDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGCurveDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGCurveDefinitionsClass()
@@ -18798,6 +19118,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCurveHeadersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCurveHeadersClass()
         {
@@ -18897,6 +19225,14 @@ namespace FakeCQG
     public class CQGCurvesClass : ICQGCurves, IEnumerable, CQGCurves
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGCurvesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGCurvesClass()
@@ -19020,6 +19356,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCustomStudiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCustomStudiesClass()
         {
@@ -19138,6 +19482,14 @@ namespace FakeCQG
     public class CQGCustomStudyClass : ICQGCustomStudy, IEnumerable, CQGCustomStudy
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGCustomStudyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGCustomStudyClass()
@@ -19366,6 +19718,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGCustomStudyDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGCustomStudyDefinitionClass()
         {
@@ -19480,6 +19840,14 @@ namespace FakeCQG
     public class CQGCustomStudyDefinitionsClass : ICQGCustomStudyDefinitions, IEnumerable, CQGCustomStudyDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGCustomStudyDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGCustomStudyDefinitionsClass()
@@ -19607,6 +19975,14 @@ namespace FakeCQG
     public class CQGCustomStudyRequestClass : ICQGCustomStudyRequest, CQGCustomStudyRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGCustomStudyRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGCustomStudyRequestClass()
@@ -19960,6 +20336,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGDataSourceClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGDataSourceClass()
         {
@@ -20074,6 +20458,14 @@ namespace FakeCQG
     public class CQGDataSourcesClass : ICQGDataSources, IEnumerable, CQGDataSources
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGDataSourcesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGDataSourcesClass()
@@ -20194,6 +20586,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGDataSourceSymbolClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGDataSourceSymbolClass()
         {
@@ -20297,6 +20697,14 @@ namespace FakeCQG
     public class CQGDataSourceSymbolsClass : ICQGDataSourceSymbols, IEnumerable, CQGDataSourceSymbols
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGDataSourceSymbolsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGDataSourceSymbolsClass()
@@ -20411,6 +20819,19 @@ namespace FakeCQG
 
         private System.Timers.Timer eventCheckingTimer;
 
+        #region Constructors
+        internal CQGDirectEventsAccessorClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+            eventCheckingTimer = new System.Timers.Timer();
+            eventCheckingTimer.Interval = 30;
+            eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;
+            eventCheckingTimer.AutoReset = true;
+            eventCheckingTimer.Enabled = true;
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGDirectEventsAccessorClass()
         {
@@ -20518,6 +20939,14 @@ namespace FakeCQG
     public class CQGDOMQuotesClass : ICQGDOMQuotes, IEnumerable, CQGDOMQuotes
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGDOMQuotesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGDOMQuotesClass()
@@ -20637,6 +21066,14 @@ namespace FakeCQG
     public class CQGEnvironmentClass : ICQGEnvironment, CQGEnvironment
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGEnvironmentClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGEnvironmentClass()
@@ -20852,6 +21289,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGErrorClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGErrorClass()
         {
@@ -20955,6 +21400,14 @@ namespace FakeCQG
     public class CQGExchangesClass : ICQGExchanges, IEnumerable, CQGExchanges
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGExchangesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGExchangesClass()
@@ -21067,6 +21520,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGExecutionPatternClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGExecutionPatternClass()
         {
@@ -21159,6 +21620,14 @@ namespace FakeCQG
     public class CQGExecutionPatternParameterClass : ICQGExecutionPatternParameter, CQGExecutionPatternParameter
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGExecutionPatternParameterClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGExecutionPatternParameterClass()
@@ -21280,6 +21749,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGExecutionPatternParametersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGExecutionPatternParametersClass()
         {
@@ -21394,6 +21871,14 @@ namespace FakeCQG
     public class CQGExpressionClass : ICQGExpression, IEnumerable, CQGExpression
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGExpressionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGExpressionClass()
@@ -21611,6 +22096,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGExpressionOutputHeadersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGExpressionOutputHeadersClass()
         {
@@ -21710,6 +22203,14 @@ namespace FakeCQG
     public class CQGExpressionOutputsClass : ICQGExpressionOutputs, IEnumerable, CQGExpressionOutputs
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGExpressionOutputsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGExpressionOutputsClass()
@@ -21832,6 +22333,14 @@ namespace FakeCQG
     public class CQGExpressionRequestClass : ICQGExpressionRequest, CQGExpressionRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGExpressionRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGExpressionRequestClass()
@@ -22157,6 +22666,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGExpressionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGExpressionsClass()
         {
@@ -22275,6 +22792,14 @@ namespace FakeCQG
     public class CQGFillClass : ICQGFill, CQGFill
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGFillClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGFillClass()
@@ -22531,6 +23056,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGFillsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGFillsClass()
         {
@@ -22649,6 +23182,14 @@ namespace FakeCQG
     public class CQGGWTradeClass : ICQGGWTrade, CQGGWTrade
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGGWTradeClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGGWTradeClass()
@@ -22853,6 +23394,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGGWTradesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGGWTradesClass()
         {
@@ -22971,6 +23520,14 @@ namespace FakeCQG
     public class CQGHistoricalSessionsRequestClass : ICQGHistoricalSessionsRequest, CQGHistoricalSessionsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGHistoricalSessionsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGHistoricalSessionsRequestClass()
@@ -23107,6 +23664,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGHolidayClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGHolidayClass()
         {
@@ -23210,6 +23775,14 @@ namespace FakeCQG
     public class CQGHolidaysClass : ICQGHolidays, IEnumerable, CQGHolidays
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGHolidaysClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGHolidaysClass()
@@ -23321,6 +23894,14 @@ namespace FakeCQG
     public class CQGInstrumentClass : ICQGInstrument, CQGInstrument
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGInstrumentClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGInstrumentClass()
@@ -24056,6 +24637,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGInstrumentPropertiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGInstrumentPropertiesClass()
         {
@@ -24155,6 +24744,14 @@ namespace FakeCQG
     public class CQGInstrumentPropertyClass : ICQGInstrumentProperty, CQGInstrumentProperty
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGInstrumentPropertyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGInstrumentPropertyClass()
@@ -24293,6 +24890,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGInstrumentsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGInstrumentsClass()
         {
@@ -24392,6 +24997,14 @@ namespace FakeCQG
     public class CQGInstrumentsGroupClass : ICQGInstrumentsGroup, CQGInstrumentsGroup
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGInstrumentsGroupClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGInstrumentsGroupClass()
@@ -24496,6 +25109,14 @@ namespace FakeCQG
     public class CQGInstrumentsGroupRequestClass : ICQGInstrumentsGroupRequest, CQGInstrumentsGroupRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGInstrumentsGroupRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGInstrumentsGroupRequestClass()
@@ -24648,6 +25269,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGInstrumentsGroupsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGInstrumentsGroupsClass()
         {
@@ -24747,6 +25376,14 @@ namespace FakeCQG
     public class CQGInstrumentSubscriptionRequestClass : ICQGInstrumentSubscriptionRequest, CQGInstrumentSubscriptionRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGInstrumentSubscriptionRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGInstrumentSubscriptionRequestClass()
@@ -24899,6 +25536,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGIntegerCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGIntegerCollectionClass()
         {
@@ -24999,6 +25644,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGLoggerClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGLoggerClass()
         {
@@ -25087,6 +25740,14 @@ namespace FakeCQG
     public class CQGManualFillClass : ICQGManualFill, CQGManualFill
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGManualFillClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGManualFillClass()
@@ -25268,6 +25929,14 @@ namespace FakeCQG
     public class CQGManualFillRequestClass : ICQGManualFillRequest, CQGManualFillRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGManualFillRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGManualFillRequestClass()
@@ -25484,6 +26153,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGManualFillsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGManualFillsClass()
         {
@@ -25614,6 +26291,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGManualFillsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGManualFillsCollectionClass()
         {
@@ -25721,6 +26406,14 @@ namespace FakeCQG
     public class CQGModifiedPropertiesClass : ICQGModifiedProperties, IEnumerable, CQGModifiedProperties
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGModifiedPropertiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGModifiedPropertiesClass()
@@ -25840,6 +26533,14 @@ namespace FakeCQG
     public class CQGModifiedPropertyClass : ICQGModifiedProperty, CQGModifiedProperty
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGModifiedPropertyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGModifiedPropertyClass()
@@ -25966,6 +26667,14 @@ namespace FakeCQG
     public class CQGOrderActionRequestClass : ICQGOrderActionRequest, CQGOrderActionRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrderActionRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrderActionRequestClass()
@@ -26150,6 +26859,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGOrderChainClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGOrderChainClass()
         {
@@ -26270,6 +26987,14 @@ namespace FakeCQG
     public class CQGOrderClass : ICQGOrder, CQGOrder
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrderClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrderClass()
@@ -26867,6 +27592,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGOrderModifyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGOrderModifyClass()
         {
@@ -26948,6 +27681,14 @@ namespace FakeCQG
     public class CQGOrderPropertiesClass : ICQGOrderProperties, IEnumerable, CQGOrderProperties
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrderPropertiesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrderPropertiesClass()
@@ -27048,6 +27789,14 @@ namespace FakeCQG
     public class CQGOrderPropertyClass : ICQGOrderProperty, CQGOrderProperty
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrderPropertyClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrderPropertyClass()
@@ -27201,6 +27950,14 @@ namespace FakeCQG
     public class CQGOrdersClass : ICQGOrders, IEnumerable, CQGOrders
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrdersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrdersClass()
@@ -27363,6 +28120,14 @@ namespace FakeCQG
     public class CQGOrdersQueryClass : ICQGOrdersQuery, CQGOrdersQuery
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGOrdersQueryClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGOrdersQueryClass()
@@ -27540,6 +28305,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGOrderStatisticsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGOrderStatisticsClass()
         {
@@ -27646,6 +28419,14 @@ namespace FakeCQG
     public class CQGParameterDefinitionClass : ICQGParameterDefinition, CQGParameterDefinition
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGParameterDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGParameterDefinitionClass()
@@ -27773,6 +28554,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGParameterDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGParameterDefinitionsClass()
         {
@@ -27891,6 +28680,14 @@ namespace FakeCQG
     public class CQGPointAndFigureBarClass : ICQGPointAndFigureBar, CQGPointAndFigureBar
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGPointAndFigureBarClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGPointAndFigureBarClass()
@@ -28050,6 +28847,14 @@ namespace FakeCQG
     public class CQGPointAndFigureBarsClass : ICQGPointAndFigureBars, IEnumerable, CQGPointAndFigureBars
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGPointAndFigureBarsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGPointAndFigureBarsClass()
@@ -28248,6 +29053,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGPointAndFigureBarsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGPointAndFigureBarsCollectionClass()
         {
@@ -28366,6 +29179,14 @@ namespace FakeCQG
     public class CQGPointAndFigureBarsRequestClass : ICQGPointAndFigureBarsRequest, CQGPointAndFigureBarsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGPointAndFigureBarsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGPointAndFigureBarsRequestClass()
@@ -28694,6 +29515,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGPositionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGPositionClass()
         {
@@ -28930,6 +29759,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGPositionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGPositionsClass()
         {
@@ -29049,6 +29886,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGPositionsStatementClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGPositionsStatementClass()
         {
@@ -29153,6 +29998,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGQFormulaDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGQFormulaDefinitionClass()
         {
@@ -29256,6 +30109,14 @@ namespace FakeCQG
     public class CQGQFormulaDefinitionsClass : ICQGQFormulaDefinitions, IEnumerable, CQGQFormulaDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGQFormulaDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGQFormulaDefinitionsClass()
@@ -29375,6 +30236,14 @@ namespace FakeCQG
     public class CQGQuoteClass : ICQGQuote, CQGQuote
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGQuoteClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGQuoteClass()
@@ -29546,6 +30415,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGQuotesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGQuotesClass()
         {
@@ -29645,6 +30522,14 @@ namespace FakeCQG
     public class CQGRemoteOpenAPISessionClass : ICQGRemoteOpenAPISession, CQGRemoteOpenAPISession
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGRemoteOpenAPISessionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGRemoteOpenAPISessionClass()
@@ -29749,6 +30634,14 @@ namespace FakeCQG
     public class CQGSessionClass : ICQGSession, CQGSession
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGSessionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGSessionClass()
@@ -29983,6 +30876,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGSessionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGSessionsClass()
         {
@@ -30157,6 +31058,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGSessionsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGSessionsCollectionClass()
         {
@@ -30256,6 +31165,14 @@ namespace FakeCQG
     public class CQGStrategyDefinitionClass : ICQGStrategyDefinition, CQGStrategyDefinition
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGStrategyDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGStrategyDefinitionClass()
@@ -30394,6 +31311,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGStrategyDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGStrategyDefinitionsClass()
         {
@@ -30513,6 +31438,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGStrategyLegFillClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGStrategyLegFillClass()
         {
@@ -30628,6 +31561,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGStrategyLegFillsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGStrategyLegFillsClass()
         {
@@ -30729,6 +31670,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGStringCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGStringCollectionClass()
         {
@@ -30828,6 +31777,14 @@ namespace FakeCQG
     public class CQGSubMinuteBarClass : ICQGSubMinuteBar, CQGSubMinuteBar
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGSubMinuteBarClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGSubMinuteBarClass()
@@ -31087,6 +32044,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGSubMinuteBarsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGSubMinuteBarsClass()
         {
@@ -31284,6 +32249,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGSubMinuteBarsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGSubMinuteBarsCollectionClass()
         {
@@ -31402,6 +32375,14 @@ namespace FakeCQG
     public class CQGSubMinuteBarsRequestClass : ICQGSubMinuteBarsRequest, CQGSubMinuteBarsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGSubMinuteBarsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGSubMinuteBarsRequestClass()
@@ -31714,6 +32695,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGSummariesStatementClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGSummariesStatementClass()
         {
@@ -31828,6 +32817,14 @@ namespace FakeCQG
     public class CQGTFlowBarClass : ICQGTFlowBar, CQGTFlowBar
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTFlowBarClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTFlowBarClass()
@@ -32103,6 +33100,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTFlowBarsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTFlowBarsClass()
         {
@@ -32300,6 +33305,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTFlowBarsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTFlowBarsCollectionClass()
         {
@@ -32418,6 +33431,14 @@ namespace FakeCQG
     public class CQGTFlowBarsRequestClass : ICQGTFlowBarsRequest, CQGTFlowBarsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTFlowBarsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTFlowBarsRequestClass()
@@ -32746,6 +33767,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTickClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTickClass()
         {
@@ -32926,6 +33955,14 @@ namespace FakeCQG
     public class CQGTicksClass : ICQGTicks, IEnumerable, CQGTicks
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTicksClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTicksClass()
@@ -33150,6 +34187,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTicksCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTicksCollectionClass()
         {
@@ -33268,6 +34313,14 @@ namespace FakeCQG
     public class CQGTicksRequestClass : ICQGTicksRequest, CQGTicksRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTicksRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTicksRequestClass()
@@ -33435,6 +34488,14 @@ namespace FakeCQG
     public class CQGTimedBarClass : ICQGTimedBar, CQGTimedBar
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTimedBarClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTimedBarClass()
@@ -33760,6 +34821,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTimedBarsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTimedBarsClass()
         {
@@ -33965,6 +35034,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTimedBarsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTimedBarsCollectionClass()
         {
@@ -34083,6 +35160,14 @@ namespace FakeCQG
     public class CQGTimedBarsRequestClass : ICQGTimedBarsRequest, CQGTimedBarsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTimedBarsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTimedBarsRequestClass()
@@ -34400,6 +35485,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradeClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradeClass()
         {
@@ -34548,6 +35641,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradeEntriesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradeEntriesClass()
         {
@@ -34647,6 +35748,14 @@ namespace FakeCQG
     public class CQGTradeEntryClass : ICQGTradeEntry, CQGTradeEntry
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradeEntryClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradeEntryClass()
@@ -34807,6 +35916,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradeEntryDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradeEntryDefinitionClass()
         {
@@ -34910,6 +36027,14 @@ namespace FakeCQG
     public class CQGTradeExitClass : ICQGTradeExit, CQGTradeExit
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradeExitClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradeExitClass()
@@ -35070,6 +36195,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradeExitDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradeExitDefinitionClass()
         {
@@ -35184,6 +36317,14 @@ namespace FakeCQG
     public class CQGTradeExitDefinitionsClass : ICQGTradeExitDefinitions, IEnumerable, CQGTradeExitDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradeExitDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradeExitDefinitionsClass()
@@ -35304,6 +36445,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradeExitsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradeExitsClass()
         {
@@ -35423,6 +36572,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradesClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradesClass()
         {
@@ -35523,6 +36680,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemAddInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemAddInfoClass()
         {
@@ -35590,6 +36755,14 @@ namespace FakeCQG
     public class CQGTradingSystemBaseBarParameterClass : ICQGTradingSystemBaseBarParameter, CQGTradingSystemBaseBarParameter
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemBaseBarParameterClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemBaseBarParameterClass()
@@ -35700,6 +36873,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemBaseBarParametersClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemBaseBarParametersClass()
         {
@@ -35799,6 +36980,14 @@ namespace FakeCQG
     public class CQGTradingSystemClass : ICQGTradingSystem, CQGTradingSystem
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemClass()
@@ -35979,6 +37168,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemDefinitionClass()
         {
@@ -36116,6 +37313,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemDefinitionsClass()
         {
@@ -36243,6 +37448,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemInsertInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemInsertInfoClass()
         {
@@ -36324,6 +37537,14 @@ namespace FakeCQG
     public class CQGTradingSystemRelationAddInfoClass : ICQGTradingSystemRelationAddInfo, CQGTradingSystemRelationAddInfo
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemRelationAddInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemRelationAddInfoClass()
@@ -36440,6 +37661,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemRemoveInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemRemoveInfoClass()
         {
@@ -36521,6 +37750,14 @@ namespace FakeCQG
     public class CQGTradingSystemRequestClass : ICQGTradingSystemRequest, CQGTradingSystemRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemRequestClass()
@@ -36891,6 +38128,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemsClass()
         {
@@ -37010,6 +38255,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemStatisticsChangeInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemStatisticsChangeInfoClass()
         {
@@ -37099,6 +38352,14 @@ namespace FakeCQG
     public class CQGTradingSystemStatisticsClass : ICQGTradingSystemStatistics, CQGTradingSystemStatistics
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemStatisticsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemStatisticsClass()
@@ -37498,6 +38759,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemStatisticsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemStatisticsCollectionClass()
         {
@@ -37612,6 +38881,14 @@ namespace FakeCQG
     public class CQGTradingSystemTradeClass : ICQGTradingSystemTrade, CQGTradingSystemTrade
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemTradeClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemTradeClass()
@@ -37761,6 +39038,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemTradeDefinitionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemTradeDefinitionClass()
         {
@@ -37875,6 +39160,14 @@ namespace FakeCQG
     public class CQGTradingSystemTradeDefinitionsClass : ICQGTradingSystemTradeDefinitions, IEnumerable, CQGTradingSystemTradeDefinitions
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemTradeDefinitionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemTradeDefinitionsClass()
@@ -37994,6 +39287,14 @@ namespace FakeCQG
     public class CQGTradingSystemTradesRowClass : ICQGTradingSystemTradesRow, IEnumerable, CQGTradingSystemTradesRow
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemTradesRowClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemTradesRowClass()
@@ -38136,6 +39437,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTradingSystemTradesRowsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTradingSystemTradesRowsClass()
         {
@@ -38235,6 +39544,14 @@ namespace FakeCQG
     public class CQGTradingSystemUpdateInfoClass : ICQGTradingSystemUpdateInfo, CQGTradingSystemUpdateInfo
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTradingSystemUpdateInfoClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTradingSystemUpdateInfoClass()
@@ -38344,6 +39661,14 @@ namespace FakeCQG
     public class CQGTransactionClass : ICQGTransaction, CQGTransaction
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGTransactionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGTransactionClass()
@@ -38548,6 +39873,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGTransactionsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGTransactionsClass()
         {
@@ -38666,6 +39999,14 @@ namespace FakeCQG
     public class CQGYieldClass : ICQGYield, CQGYield
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGYieldClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGYieldClass()
@@ -38869,6 +40210,14 @@ namespace FakeCQG
     public class CQGYieldsClass : ICQGYields, IEnumerable, CQGYields
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGYieldsClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGYieldsClass()
@@ -39075,6 +40424,14 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        #region Constructors
+        internal CQGYieldsCollectionClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
+
         #region Destructor
         ~CQGYieldsCollectionClass()
         {
@@ -39193,6 +40550,14 @@ namespace FakeCQG
     public class CQGYieldsRequestClass : ICQGYieldsRequest, CQGYieldsRequest
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        internal CQGYieldsRequestClass()
+        {
+            thisObjUnqKey = Guid.NewGuid().ToString("D");
+        }
+
+        #endregion
 
         #region Destructor
         ~CQGYieldsRequestClass()
@@ -39491,6 +40856,9 @@ namespace FakeCQG
     public struct CQGCELConfiguration
     {
         private string thisObjUnqKey;
+
+        #region Constructors
+        #endregion
 
         #region Methods
         public new bool Equals(object obj)
