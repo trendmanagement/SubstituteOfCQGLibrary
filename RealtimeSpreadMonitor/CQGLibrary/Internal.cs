@@ -27,10 +27,8 @@ namespace FakeCQG
 
         public string Key { get; set; }
         const int index = 0;
-        const int maxRequestTime = 30000; //30 s
-        const int firstWaitForRequestTime = 5000; //5s
-        const int nextWaitForRequestTime = 3000; //3s
-        const int firstWaitForBoolTime = 1000; //1s
+        const int maxRequestTime = 30000; //30s
+        const int WaitForBoolTime = 1000; //1s
         const string IdName = "Key";
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
         static System.Timers.Timer timer;
@@ -267,45 +265,31 @@ namespace FakeCQG
 
             Task.Run(() => LoadInQueryAsync(CreateQuery(qType, key, objKey, name, argKeys, argVals)));
 
-            AnswerInfo result = WaitingForAnAnswer(key).GetAwaiter().GetResult();
+            AnswerInfo result = WaitingForAnAnswer(key);
 
-            if (result != null)
+            if (result.Key == "value")
             {
-                if (result.Key == "value")
-                {
-                    return result.Value;
-                }
-                else
-                {
-                    return result.Key;
-                }
+                return result.Value;
+            }
+            else
+            {
+                return result.Key;
+            }
+        }
+        public static AnswerInfo WaitingForAnAnswer(string key)
+        {
+            AnswerInfo answer = default(AnswerInfo);
+            Task task = Task.Run(() => { answer = GetAnswerData(key); });
+            bool success = task.Wait(WaitForBoolTime);
+            if (success)
+            {
+                return answer;
             }
             else
             {
                 OnLogChange(NoAnswerMessage);
-                return result;
+                throw new TimeoutException();
             }
-        }
-        public static Task<AnswerInfo> WaitingForAnAnswer(string key)
-        {
-            return Task.Run( () => {
-                Thread.Sleep(firstWaitForRequestTime);
-                AnswerInfo answer = default(AnswerInfo);
-                bool isAnswer = false;
-                do
-                {
-                    answer = GetAnswerData(key, out isAnswer);
-                    if (!isAnswer)
-                    {
-                        Thread.Sleep(nextWaitForRequestTime);
-                    }
-                    else
-                    {
-                        return answer;
-                        }
-                    } while (!timerStoped);
-                return answer;
-            });
         }
         public static QueryInfo CreateQuery(QueryInfo.QueryType qType, string key, string objKey, string name,
             Dictionary<int, string> argKeys = null, Dictionary<int, object> argVals = null)
@@ -407,6 +391,25 @@ namespace FakeCQG
             {
                 OnLogChange(id, "null", false);
                 isAnswer = false;
+                return default(AnswerInfo);
+            }
+        }
+        public static AnswerInfo GetAnswerData(string id)
+        {
+            AnswerHelper mongo = new AnswerHelper();
+            var collAnswer = mongo.GetCollection;
+            var filter = Builders<AnswerInfo>.Filter.Eq("Key", id);
+            AnswerInfo answer = default(AnswerInfo);
+            try
+            {
+                answer = collAnswer.Find(filter).First();
+                OnLogChange(answer.Key, answer.ValueKey, false);
+                RemoveAnswerAsync(answer.Key);
+                return answer;
+            }
+            catch (Exception ex)
+            {
+                OnLogChange(id, "null", false);
                 return default(AnswerInfo);
             }
         }

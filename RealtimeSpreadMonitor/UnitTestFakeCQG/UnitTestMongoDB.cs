@@ -392,10 +392,7 @@ namespace UnitTestFakeCQG
                 await FakeCQG.CQG.LoadInAnswerAsync(answerInput);
             }).GetAwaiter().GetResult();
 
-            Task.Run(async () =>
-            {
-                answerOutput = await FakeCQG.CQG.WaitingForAnAnswer(id);
-            }).GetAwaiter().GetResult();
+            answerOutput = FakeCQG.CQG.WaitingForAnAnswer(id);
 
             // assert
             Assert.AreEqual(answerInput.Key, answerOutput.Key);
