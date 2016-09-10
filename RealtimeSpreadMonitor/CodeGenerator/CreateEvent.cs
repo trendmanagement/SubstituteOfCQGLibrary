@@ -11,6 +11,7 @@ namespace CodeGenerator
 
             string public_ = !isInterface ? "public " : string.Empty;
             File.WriteLine(Indent1 + public_ + "event " + einfo.EventHandlerType.Name + " " + einfo.Name + ";" + Environment.NewLine);
+
         }
     }
 }

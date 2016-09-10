@@ -15,7 +15,9 @@ namespace FakeCQG
 {
     public partial class CQG 
     {
-        private string thisCQGObjUnqKey;
+        //private string thisCQGObjUnqKey;
+        private static System.Timers.Timer eventCheckingTimer;
+        private static bool eventsCheckingON = false;
 
         #region Help objects
         public delegate void GetQueryInfosHandler(List<QueryInfo> queries);
@@ -88,108 +90,6 @@ namespace FakeCQG
             string dataErrorERS = "_ICQGCELEvents_DataErrorEventHandler";
             #endregion 
 
-            #region Internal CQGCEL methods
-            //private void Timer_Tick(Object source, System.Timers.ElapsedEventArgs e)
-            //{
-            //    if (DataConnectionStatusChanged == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_DataConnectionStatusChangedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        eConnectionStatus arg = (eConnectionStatus)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, dataConnectionStatusChangedERS);
-            //        DataConnectionStatusChanged.Invoke(arg);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_DataConnectionStatusChangedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (TimedBarsResolved == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_TimedBarsResolvedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        TimedBarsResolvedArgs args = (TimedBarsResolvedArgs)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, timedBarsResolvedERS);
-            //        TimedBarsResolved.Invoke(args.cqg_timed_bars, args.cqg_error);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_TimedBarsResolvedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (TimedBarsAdded == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_TimedBarsAddedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        CQGTimedBars arg = (CQGTimedBars)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, timedBarsAddedERS);
-            //        TimedBarsAdded.Invoke(arg);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_TimedBarsAddedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (TimedBarsUpdated == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_TimedBarsUpdatedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        TimedBarsUpdatedArgs args = (TimedBarsUpdatedArgs)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, timedBarsUpdatedERS);
-            //        TimedBarsUpdated.Invoke(args.cqg_TimedBarsIn, args.index);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_TimedBarsUpdatedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (InstrumentSubscribed == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_InstrumentSubscribedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        InstrumentSubscribedArgs args = (InstrumentSubscribedArgs)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, instrumentSubscribedERS);
-            //        InstrumentSubscribed.Invoke(args.symbol, args.cqgInstrument);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_InstrumentSubscribedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (InstrumentChanged == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_InstrumentChangedEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        InstrumentChangedArgs args = (InstrumentChangedArgs)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, instrumentChangedEventERS);
-            //        InstrumentChanged.Invoke(args.cqgInstrument, args.quotes, args.props);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_InstrumentChangedEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-
-            //    if (DataError == null)
-            //    {
-            //        //OnLogChange("Event \"_ICQGCELEvents_DataErrorEventHandler\" has 0 subscribers: ");
-            //    }
-            //    else
-            //    {
-            //        // Fire event 
-            //        DataErrorArgs args = (DataErrorArgs)ExecuteTheQuery(QueryInfo.QueryType.Event, thisCQGCELObjUnqKey, dataErrorERS);
-            //        DataError.Invoke(args.cqg_error, args.error_description);
-
-            //        //OnLogChange(string.Format("Event \"_ICQGCELEvents_DataErrorEventHandler\" has {0} subscribers: ", DataConnectionStatusChanged.GetInvocationList().Length));
-            //    }
-            //    //OnLogChange("----------");
-            //}
-            #endregion
         }
 
         #region Internal CQG methods
@@ -224,6 +124,13 @@ namespace FakeCQG
         }
         public static object ExecuteTheQuery(QueryInfo.QueryType qType, string objKey, string name, object[] args = null)
         {
+            if(!eventsCheckingON)
+            {
+                DataDictionaries.FillEventCheckingDictionary();
+
+                eventsCheckingON = true;
+            }
+
             Dictionary<int, string> argKeys = new Dictionary<int, string>();
             Dictionary<int, object> argVals = new Dictionary<int, object>();
 
@@ -323,6 +230,8 @@ namespace FakeCQG
                     }
                     break;
                 case QueryInfo.QueryType.Event:
+                    model = new QueryInfo(qType, key, objKey, name, argVals: argVals);
+                    OnLogChange(model.ToString());
                     break;
                 default:
                     break;
@@ -556,6 +465,7 @@ namespace FakeCQG
             timerStoped = true;
             //TODO: Clear query
         }
+
         #endregion
 
         #region Handlers

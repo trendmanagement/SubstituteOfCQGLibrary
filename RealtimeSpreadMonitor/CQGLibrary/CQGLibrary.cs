@@ -10290,86 +10290,86 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void AccountChanged(eAccountChangeType p1c4b802fd8134f2f9218b18edb129496, CQGAccount pb238ae0cee6546b88cb46612a0dc43b1, CQGPosition pcfbae0e067f6464ea977f9b7aa55d653)
+        public virtual void AccountChanged(eAccountChangeType pe4d9bd5768aa457eb9c8b187f11ab35f, CQGAccount p35ac039474b5447e91f3fc2dc962f97c, CQGPosition pf752fc6bbcbd480a92954cc30442aa7b)
         {
-            object[] args = new object[3] {p1c4b802fd8134f2f9218b18edb129496, pb238ae0cee6546b88cb46612a0dc43b1, pcfbae0e067f6464ea977f9b7aa55d653};
+            object[] args = new object[3] {pe4d9bd5768aa457eb9c8b187f11ab35f, p35ac039474b5447e91f3fc2dc962f97c, pf752fc6bbcbd480a92954cc30442aa7b};
             string name = "AccountChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyAdded(CQGAdvancedStudy p3d94ec157cb34b61b2b83ad230606529)
+        public virtual void AdvancedStudyAdded(CQGAdvancedStudy pa93bf9d998d6420eb43937a6a85edee5)
         {
-            object[] args = new object[1] {p3d94ec157cb34b61b2b83ad230606529};
+            object[] args = new object[1] {pa93bf9d998d6420eb43937a6a85edee5};
             string name = "AdvancedStudyAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions p4effc7b590944fc695503bb6b43555ae, CQGError p944a69ab98474aa2b4d05ad84287510b)
+        public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions p3861a4c16ebc46dbb9d399efba80243d, CQGError pf2ef70ec2ade4f56a2df407f179a2ed9)
         {
-            object[] args = new object[2] {p4effc7b590944fc695503bb6b43555ae, p944a69ab98474aa2b4d05ad84287510b};
+            object[] args = new object[2] {p3861a4c16ebc46dbb9d399efba80243d, pf2ef70ec2ade4f56a2df407f179a2ed9};
             string name = "AdvancedStudyDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyInserted(CQGAdvancedStudy p6e7b580acb7349a798901f47900e39c3, Int32 pba725c78120e454cb54dd2a6711a7fd9)
+        public virtual void AdvancedStudyInserted(CQGAdvancedStudy pcc2b9c92976b407483a122db9d4313f7, Int32 p7d032d28dfaa4958b45d732c0c1d709a)
         {
-            object[] args = new object[2] {p6e7b580acb7349a798901f47900e39c3, pba725c78120e454cb54dd2a6711a7fd9};
+            object[] args = new object[2] {pcc2b9c92976b407483a122db9d4313f7, p7d032d28dfaa4958b45d732c0c1d709a};
             string name = "AdvancedStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy p3e61e04204ec463f9b8492659cbc0272, Int32 pd6767a5c0861402296ae9ec21b45e19b)
+        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy p443c3f861d8d49229b64da8165a82c7c, Int32 p8eadffb02bea4c8a8fe21e54090ead3d)
         {
-            object[] args = new object[2] {p3e61e04204ec463f9b8492659cbc0272, pd6767a5c0861402296ae9ec21b45e19b};
+            object[] args = new object[2] {p443c3f861d8d49229b64da8165a82c7c, p8eadffb02bea4c8a8fe21e54090ead3d};
             string name = "AdvancedStudyRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyResolved(CQGAdvancedStudy p4b64349764e94439a8a8560c6a8ee210, CQGError p027973168b644b6c8d0aa15e310e3599)
+        public virtual void AdvancedStudyResolved(CQGAdvancedStudy p34ee71287810417c9ba72afa6b27431e, CQGError p9b07b02ace2e411fa7c6e4428388817c)
         {
-            object[] args = new object[2] {p4b64349764e94439a8a8560c6a8ee210, p027973168b644b6c8d0aa15e310e3599};
+            object[] args = new object[2] {p34ee71287810417c9ba72afa6b27431e, p9b07b02ace2e411fa7c6e4428388817c};
             string name = "AdvancedStudyResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy p8e847dfd8e204dd981df8b5ed5583a9e, Int32 p06e1d55a1fe04285963793d577e76b79)
+        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy pc026f92ce4594694a802f3870a5898ae, Int32 p12f4d7cbb5664738afa6fccb23ec36a2)
         {
-            object[] args = new object[2] {p8e847dfd8e204dd981df8b5ed5583a9e, p06e1d55a1fe04285963793d577e76b79};
+            object[] args = new object[2] {pc026f92ce4594694a802f3870a5898ae, p12f4d7cbb5664738afa6fccb23ec36a2};
             string name = "AdvancedStudyUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderPlaced(String p5f048544e9ef4b93b4e7bfce02bfa4ea, CQGAlgorithmicOrderParameters p523e9e7959084ad891db1858dd87a1f1, CQGAlgorithmicOrderProperties pee39a2016d5e4bef9cd6be7ca18edc61)
+        public virtual void AlgorithmicOrderPlaced(String pe887823f236443c5bc2dec0f778485d8, CQGAlgorithmicOrderParameters p4b5a71165e2545e0971748b6ddc0ee35, CQGAlgorithmicOrderProperties p7759a30c25134208b717ec72adb44707)
         {
-            object[] args = new object[3] {p5f048544e9ef4b93b4e7bfce02bfa4ea, p523e9e7959084ad891db1858dd87a1f1, pee39a2016d5e4bef9cd6be7ca18edc61};
+            object[] args = new object[3] {pe887823f236443c5bc2dec0f778485d8, p4b5a71165e2545e0971748b6ddc0ee35, p7759a30c25134208b717ec72adb44707};
             string name = "AlgorithmicOrderPlaced";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderRegistrationComplete(String pd1430ffa11bc4d0b82f1f1cd47f79575, CQGError p9291694d58904636875af7c4fff503ef)
+        public virtual void AlgorithmicOrderRegistrationComplete(String p14eb27c9acb644bc9512d846432bfa4f, CQGError p8163069ef06942478dc77574cc4d2bf3)
         {
-            object[] args = new object[2] {pd1430ffa11bc4d0b82f1f1cd47f79575, p9291694d58904636875af7c4fff503ef};
+            object[] args = new object[2] {p14eb27c9acb644bc9512d846432bfa4f, p8163069ef06942478dc77574cc4d2bf3};
             string name = "AlgorithmicOrderRegistrationComplete";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AllOrdersCanceled(eOrderSideFilter p4fff77212178475b82331b5c48796447, CQGIntegerCollection p1f9833acd5c8462e85639fb5197d390f, CQGStringCollection p13c9d2b3ca9449268af719703be04b3a)
+        public virtual void AllOrdersCanceled(eOrderSideFilter pdb82e5947cde42febfb25225a567a27a, CQGIntegerCollection p6c41326e067740b4a6834fc5446814f6, CQGStringCollection p1a278a44ed454bfa95e81bad15a2150e)
         {
-            object[] args = new object[3] {p4fff77212178475b82331b5c48796447, p1f9833acd5c8462e85639fb5197d390f, p13c9d2b3ca9449268af719703be04b3a};
+            object[] args = new object[3] {pdb82e5947cde42febfb25225a567a27a, p6c41326e067740b4a6834fc5446814f6, p1a278a44ed454bfa95e81bad15a2150e};
             string name = "AllOrdersCanceled";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AuthenticationStatusChanged(eSessionStatus p4d4fdcb361754cc4a52c8ecad02c9471, CQGError p6217b740887f4e83988e47b1934fd83a)
+        public virtual void AuthenticationStatusChanged(eSessionStatus p7c7ec14a6bed4f77a854cca1f3861be0, CQGError pc1dc91e8c5be45059f50711a2d07143b)
         {
-            object[] args = new object[2] {p4d4fdcb361754cc4a52c8ecad02c9471, p6217b740887f4e83988e47b1934fd83a};
+            object[] args = new object[2] {p7c7ec14a6bed4f77a854cca1f3861be0, pc1dc91e8c5be45059f50711a2d07143b};
             string name = "AuthenticationStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void BarsTimestampsResolved(CQGBarsTimestamps p30cc4b9782c740d8a109095f94ed5944, CQGError pc406fc90f90d43b3a5f3f2e56a237651)
+        public virtual void BarsTimestampsResolved(CQGBarsTimestamps p9216f0e215ae4e808ded6dd3c75b4770, CQGError pb39dcc4bbf3e49278ee7a093d4d1f5a6)
         {
-            object[] args = new object[2] {p30cc4b9782c740d8a109095f94ed5944, pc406fc90f90d43b3a5f3f2e56a237651};
+            object[] args = new object[2] {p9216f0e215ae4e808ded6dd3c75b4770, pb39dcc4bbf3e49278ee7a093d4d1f5a6};
             string name = "BarsTimestampsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10380,170 +10380,170 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void CommodityInstrumentsResolved(String p07c586bf333643a39868178fc6bc6318, eInstrumentType pd93267266796421bb94a08e0d3244598, CQGCommodityInstruments pef44ea29160f4ce1a359d754bc566560)
+        public virtual void CommodityInstrumentsResolved(String p8029da567ff34c9c8341a9aac9b84b82, eInstrumentType pf1118388f1304718907b4927a6d07771, CQGCommodityInstruments p844f5c4be01f4633a70d15627c12c213)
         {
-            object[] args = new object[3] {p07c586bf333643a39868178fc6bc6318, pd93267266796421bb94a08e0d3244598, pef44ea29160f4ce1a359d754bc566560};
+            object[] args = new object[3] {p8029da567ff34c9c8341a9aac9b84b82, pf1118388f1304718907b4927a6d07771, p844f5c4be01f4633a70d15627c12c213};
             string name = "CommodityInstrumentsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionAdded(CQGCondition pe4ff950bad9e43cd9176b6802f0abcc0)
+        public virtual void ConditionAdded(CQGCondition p288fd0249d5e47fb9e7ee6e05f095c09)
         {
-            object[] args = new object[1] {pe4ff950bad9e43cd9176b6802f0abcc0};
+            object[] args = new object[1] {p288fd0249d5e47fb9e7ee6e05f095c09};
             string name = "ConditionAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions pbffb5b35efd04fb483966acb4209a8ae, CQGError pa951df6411e84104bf86dca2f68225fa)
+        public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions p720bb17471aa4c60ae65c5a28113f339, CQGError pe37515133a0b4e27b8ba6420d3ba5345)
         {
-            object[] args = new object[2] {pbffb5b35efd04fb483966acb4209a8ae, pa951df6411e84104bf86dca2f68225fa};
+            object[] args = new object[2] {p720bb17471aa4c60ae65c5a28113f339, pe37515133a0b4e27b8ba6420d3ba5345};
             string name = "ConditionDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionInserted(CQGCondition p36ab1706f3a444f5a1be9a4a35069224, Int32 p9e5aaa47223a4ea69535e293b5a0d568)
+        public virtual void ConditionInserted(CQGCondition p868c274f3a63449f97e6172894fae488, Int32 p43e858f176fa4196986a4942fac10d9a)
         {
-            object[] args = new object[2] {p36ab1706f3a444f5a1be9a4a35069224, p9e5aaa47223a4ea69535e293b5a0d568};
+            object[] args = new object[2] {p868c274f3a63449f97e6172894fae488, p43e858f176fa4196986a4942fac10d9a};
             string name = "ConditionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionRemoved(CQGCondition p4fd4db1cb0dd4b709ef9c2f7ab49b81f, Int32 p9e24b85970334b2b8dd735b7183f15ab)
+        public virtual void ConditionRemoved(CQGCondition pdced6336197e4c1a87dd5a1a3f3fbc7c, Int32 pe56e268640b942ea99e443a9ff5e506b)
         {
-            object[] args = new object[2] {p4fd4db1cb0dd4b709ef9c2f7ab49b81f, p9e24b85970334b2b8dd735b7183f15ab};
+            object[] args = new object[2] {pdced6336197e4c1a87dd5a1a3f3fbc7c, pe56e268640b942ea99e443a9ff5e506b};
             string name = "ConditionRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionResolved(CQGCondition p276dca07b33647fda6350a70ffc2aea7, CQGError p46fe383419b74cba9e53902eb0149a95)
+        public virtual void ConditionResolved(CQGCondition pc3469673fb8c4dbd9517f4715447a72b, CQGError p669584a744f84595bf6c636b953200f9)
         {
-            object[] args = new object[2] {p276dca07b33647fda6350a70ffc2aea7, p46fe383419b74cba9e53902eb0149a95};
+            object[] args = new object[2] {pc3469673fb8c4dbd9517f4715447a72b, p669584a744f84595bf6c636b953200f9};
             string name = "ConditionResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionUpdated(CQGCondition pc6d639ab18d54f8488422c65e5b680f3, Int32 p967ca7afde114b2daab15ea506f921fc)
+        public virtual void ConditionUpdated(CQGCondition p5c6e3dcf60ff46e08198916b9abaffc7, Int32 pe48036cfdfd944c5b2029e4cfe3659af)
         {
-            object[] args = new object[2] {pc6d639ab18d54f8488422c65e5b680f3, p967ca7afde114b2daab15ea506f921fc};
+            object[] args = new object[2] {p5c6e3dcf60ff46e08198916b9abaffc7, pe48036cfdfd944c5b2029e4cfe3659af};
             string name = "ConditionUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars p775e4e34fecb4e65bce7427f27e9002f)
+        public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars p8b6e41c54a9946099e3220bf4f0d0414)
         {
-            object[] args = new object[1] {p775e4e34fecb4e65bce7427f27e9002f};
+            object[] args = new object[1] {p8b6e41c54a9946099e3220bf4f0d0414};
             string name = "ConstantVolumeBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars pf51d0a158f6d464d92ef2efe053f0973, Int32 pfd93c67ef60747a082e589dcca9ec9b2)
+        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars p5fea92889a64456390b14b2370d6d736, Int32 p0635b81d574541389a7eb3254cb41826)
         {
-            object[] args = new object[2] {pf51d0a158f6d464d92ef2efe053f0973, pfd93c67ef60747a082e589dcca9ec9b2};
+            object[] args = new object[2] {p5fea92889a64456390b14b2370d6d736, p0635b81d574541389a7eb3254cb41826};
             string name = "ConstantVolumeBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars p3df6873fa1454ff7a3c5da0b6f2abae5, Int32 p7d7b051dec3c40ce8044d47fe2690188)
+        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars p0bd898a6936c4dfc9882806ede660976, Int32 pd6b34a2bf0634f9c903498afb023f14b)
         {
-            object[] args = new object[2] {p3df6873fa1454ff7a3c5da0b6f2abae5, p7d7b051dec3c40ce8044d47fe2690188};
+            object[] args = new object[2] {p0bd898a6936c4dfc9882806ede660976, pd6b34a2bf0634f9c903498afb023f14b};
             string name = "ConstantVolumeBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars p5d779bee4c774d58a568aae681126030, CQGError pae85b9ec93e849cfa84fb498e50860b1)
+        public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars pd5631f1d42ca4efcb343aa5976acac46, CQGError p47a7409a7de143eab2459a5310e17b04)
         {
-            object[] args = new object[2] {p5d779bee4c774d58a568aae681126030, pae85b9ec93e849cfa84fb498e50860b1};
+            object[] args = new object[2] {pd5631f1d42ca4efcb343aa5976acac46, p47a7409a7de143eab2459a5310e17b04};
             string name = "ConstantVolumeBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars pe1c71ef50e494793bc57c0741271ef8c, Int32 p672343181c2b452094372b5db310f6aa)
+        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars pa61f48fcc0284eeca34301de60ea00cd, Int32 p1b1abd1a64184bafae74923893277cf3)
         {
-            object[] args = new object[2] {pe1c71ef50e494793bc57c0741271ef8c, p672343181c2b452094372b5db310f6aa};
+            object[] args = new object[2] {pa61f48fcc0284eeca34301de60ea00cd, p1b1abd1a64184bafae74923893277cf3};
             string name = "ConstantVolumeBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CurrencyRatesChanged(CQGCurrencyRates pe96eb5b228d34c34a9a4b003c13916d7)
+        public virtual void CurrencyRatesChanged(CQGCurrencyRates p2e69d1a81965484ba599504d2153f560)
         {
-            object[] args = new object[1] {pe96eb5b228d34c34a9a4b003c13916d7};
+            object[] args = new object[1] {p2e69d1a81965484ba599504d2153f560};
             string name = "CurrencyRatesChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomSessionsResolved(CQGSessionsCollection pbea24695fec64f1b9666c01676ac2246, CQGError pb33eb036028e4b7a90f9327e38758900)
+        public virtual void CustomSessionsResolved(CQGSessionsCollection pc0bea17a7ad44bae89d88a28e74fac6d, CQGError p63a60a299b6b42acbae0da1f59295268)
         {
-            object[] args = new object[2] {pbea24695fec64f1b9666c01676ac2246, pb33eb036028e4b7a90f9327e38758900};
+            object[] args = new object[2] {pc0bea17a7ad44bae89d88a28e74fac6d, p63a60a299b6b42acbae0da1f59295268};
             string name = "CustomSessionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyAdded(CQGCustomStudy p8df6b56cf8e34d2a8dc74f84d97b6ec1)
+        public virtual void CustomStudyAdded(CQGCustomStudy p113696fc3add4a4e86efc8d9469afd70)
         {
-            object[] args = new object[1] {p8df6b56cf8e34d2a8dc74f84d97b6ec1};
+            object[] args = new object[1] {p113696fc3add4a4e86efc8d9469afd70};
             string name = "CustomStudyAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions p793869d1c23342ad866476aff8e43849, CQGError p6a4e8e5bc04745798487046a03c525f0)
+        public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions pe133678051b841ef9163643f8df697a6, CQGError p45e6f10596224699b2e71accf4d2fe01)
         {
-            object[] args = new object[2] {p793869d1c23342ad866476aff8e43849, p6a4e8e5bc04745798487046a03c525f0};
+            object[] args = new object[2] {pe133678051b841ef9163643f8df697a6, p45e6f10596224699b2e71accf4d2fe01};
             string name = "CustomStudyDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyInserted(CQGCustomStudy p33bd765f08394784b7b22f33a5f7beec, Int32 pd32afe83f9ad4c148d3989059ca88f1f)
+        public virtual void CustomStudyInserted(CQGCustomStudy pe4d316d9e2a147e4a62357ce71c41a90, Int32 paf1992db9d7740429156f1ba26c8797d)
         {
-            object[] args = new object[2] {p33bd765f08394784b7b22f33a5f7beec, pd32afe83f9ad4c148d3989059ca88f1f};
+            object[] args = new object[2] {pe4d316d9e2a147e4a62357ce71c41a90, paf1992db9d7740429156f1ba26c8797d};
             string name = "CustomStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyRemoved(CQGCustomStudy p4a3f32d617a24f61be6373b4483b765a, Int32 pb861173259314bc4b469164feb9d9655)
+        public virtual void CustomStudyRemoved(CQGCustomStudy pe5801fad163c44bcbde0ccb84d2922dc, Int32 p6010ee71e3a348afa9b5452fea8ae2fe)
         {
-            object[] args = new object[2] {p4a3f32d617a24f61be6373b4483b765a, pb861173259314bc4b469164feb9d9655};
+            object[] args = new object[2] {pe5801fad163c44bcbde0ccb84d2922dc, p6010ee71e3a348afa9b5452fea8ae2fe};
             string name = "CustomStudyRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyResolved(CQGCustomStudy pe5f901b4d6ca4e1d928ec3e3ef534ed4, CQGError p7915b0f5071643eebf258676abefad0b)
+        public virtual void CustomStudyResolved(CQGCustomStudy p62dba68286ca4b8f820ad64c441ae446, CQGError pa25013a599bd490da5fa50ecd1955728)
         {
-            object[] args = new object[2] {pe5f901b4d6ca4e1d928ec3e3ef534ed4, p7915b0f5071643eebf258676abefad0b};
+            object[] args = new object[2] {p62dba68286ca4b8f820ad64c441ae446, pa25013a599bd490da5fa50ecd1955728};
             string name = "CustomStudyResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyUpdated(CQGCustomStudy pf675f3a1b8b8479ba8a91b842f605090, Int32 p163789d5797d47ebbef123d481836490)
+        public virtual void CustomStudyUpdated(CQGCustomStudy p990fed2dc4be4e7ea12fa1063dbda099, Int32 pe3ae6f1618c14f95b3a5c372dbf064ae)
         {
-            object[] args = new object[2] {pf675f3a1b8b8479ba8a91b842f605090, p163789d5797d47ebbef123d481836490};
+            object[] args = new object[2] {p990fed2dc4be4e7ea12fa1063dbda099, pe3ae6f1618c14f95b3a5c372dbf064ae};
             string name = "CustomStudyUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataConnectionStatusChanged(eConnectionStatus p5a3be117f85f4c4f8f2084a96df6f0a0)
+        public virtual void DataConnectionStatusChanged(eConnectionStatus pebc7eb021017481687127418a77576b3)
         {
-            object[] args = new object[1] {p5a3be117f85f4c4f8f2084a96df6f0a0};
+            object[] args = new object[1] {pebc7eb021017481687127418a77576b3};
             string name = "DataConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(Object p8833552fbd8d49d3b0c83f9a82b7e2d8, String p16323aaf6c364a8993241ecff9a4a373)
+        public virtual void DataError(Object p0240e31df39a4180b0b0e8270b7c9d50, String pdd71173289a84400b6e9158b63501609)
         {
-            object[] args = new object[2] {p8833552fbd8d49d3b0c83f9a82b7e2d8, p16323aaf6c364a8993241ecff9a4a373};
+            object[] args = new object[2] {p0240e31df39a4180b0b0e8270b7c9d50, pdd71173289a84400b6e9158b63501609};
             string name = "DataError";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataSourcesResolved(CQGDataSources p8af9274e91954db9a920aea38d9977f7, CQGError pec0843a3a89c4bc6866216dfa6405b60)
+        public virtual void DataSourcesResolved(CQGDataSources pef3242fe0ea943409d78cae1dd36cfbf, CQGError p9b687e29405347c1b3a89da547307e40)
         {
-            object[] args = new object[2] {p8af9274e91954db9a920aea38d9977f7, pec0843a3a89c4bc6866216dfa6405b60};
+            object[] args = new object[2] {pef3242fe0ea943409d78cae1dd36cfbf, p9b687e29405347c1b3a89da547307e40};
             string name = "DataSourcesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataSourceSymbolsResolved(String p545c1b7531bc480cb6ec960f7d0a07b3, CQGDataSourceSymbols p1a2e59cb94c24392bbd5a50add7d7e45, CQGError p8d22951d1ac84260a4248128404f6fe9)
+        public virtual void DataSourceSymbolsResolved(String p0ba3a14ba76e4e9484ddbdd9d3cc457a, CQGDataSourceSymbols p417f028ffd164cc6b13dacafa37e7c36, CQGError pd75504f16a124164b03cddd965ca319b)
         {
-            object[] args = new object[3] {p545c1b7531bc480cb6ec960f7d0a07b3, p1a2e59cb94c24392bbd5a50add7d7e45, p8d22951d1ac84260a4248128404f6fe9};
+            object[] args = new object[3] {p0ba3a14ba76e4e9484ddbdd9d3cc457a, p417f028ffd164cc6b13dacafa37e7c36, pd75504f16a124164b03cddd965ca319b};
             string name = "DataSourceSymbolsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10556,37 +10556,37 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void ExpressionAdded(CQGExpression pbc5544cb78ae45cf9349fb6070077450)
+        public virtual void ExpressionAdded(CQGExpression p61e3211c8ac442d497e47cad7ed28795)
         {
-            object[] args = new object[1] {pbc5544cb78ae45cf9349fb6070077450};
+            object[] args = new object[1] {p61e3211c8ac442d497e47cad7ed28795};
             string name = "ExpressionAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionInserted(CQGExpression pbf90f6f74f0b4f70a173ad234c955f6d, Int32 pa42fb4eb9f8644708266f45f211d668e)
+        public virtual void ExpressionInserted(CQGExpression pea4a7fa0aba14ebc9238ba444d2dbbd3, Int32 p1d777f8fbc1d41479af824410f4241a2)
         {
-            object[] args = new object[2] {pbf90f6f74f0b4f70a173ad234c955f6d, pa42fb4eb9f8644708266f45f211d668e};
+            object[] args = new object[2] {pea4a7fa0aba14ebc9238ba444d2dbbd3, p1d777f8fbc1d41479af824410f4241a2};
             string name = "ExpressionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionRemoved(CQGExpression p46555f2d3ddf4049b79fe06abcca6bb8, Int32 pf4887549102d421992510a5a70cfeba9)
+        public virtual void ExpressionRemoved(CQGExpression paabc10e37dec41ad826a7e4a5c287012, Int32 p3c25b45f5ff240f4b91b5bff6de7e11b)
         {
-            object[] args = new object[2] {p46555f2d3ddf4049b79fe06abcca6bb8, pf4887549102d421992510a5a70cfeba9};
+            object[] args = new object[2] {paabc10e37dec41ad826a7e4a5c287012, p3c25b45f5ff240f4b91b5bff6de7e11b};
             string name = "ExpressionRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionResolved(CQGExpression p1ea478136d064bd9930fee566bd76769, CQGError pf0d2d35472cd429b806d0c2807699c02)
+        public virtual void ExpressionResolved(CQGExpression p7deebd032c3a487291fefcabd3f73b1a, CQGError p0620f6fe96dd4b45a8538f67f5e49cdb)
         {
-            object[] args = new object[2] {p1ea478136d064bd9930fee566bd76769, pf0d2d35472cd429b806d0c2807699c02};
+            object[] args = new object[2] {p7deebd032c3a487291fefcabd3f73b1a, p0620f6fe96dd4b45a8538f67f5e49cdb};
             string name = "ExpressionResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionUpdated(CQGExpression p5b6fe5e657d94d7c8969792eaf34513f, Int32 p030e5027b4c746f19dcd5972bf25c9ed)
+        public virtual void ExpressionUpdated(CQGExpression p57cbb71659e843079092e4a3f7ede4b6, Int32 pc12c96aa3dbb49ab8edcec6052606977)
         {
-            object[] args = new object[2] {p5b6fe5e657d94d7c8969792eaf34513f, p030e5027b4c746f19dcd5972bf25c9ed};
+            object[] args = new object[2] {p57cbb71659e843079092e4a3f7ede4b6, pc12c96aa3dbb49ab8edcec6052606977};
             string name = "ExpressionUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10605,107 +10605,107 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void GWConnectionStatusChanged(eConnectionStatus p953fb74b59af434492f030341a6797f2)
+        public virtual void GWConnectionStatusChanged(eConnectionStatus p32f0bda60bcd4c7c9674185ee6068082)
         {
-            object[] args = new object[1] {p953fb74b59af434492f030341a6797f2};
+            object[] args = new object[1] {p32f0bda60bcd4c7c9674185ee6068082};
             string name = "GWConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void GWEnvironmentChanged(eGWEnvChangeCode p96e4ff7f27be4ac89dcb4995ce2ce442, Int32 pe27e5b51a0a04a0b8337c10fc6b967cd, Int32 pbc0fddb8118543f7857565dfc9f18b4d)
+        public virtual void GWEnvironmentChanged(eGWEnvChangeCode pe72a535b26394f898e42bd15727a8d4f, Int32 p322e833bdc804d8887b9aee5d9526fc5, Int32 pcd30eb0f428044338f5672d52c1b1747)
         {
-            object[] args = new object[3] {p96e4ff7f27be4ac89dcb4995ce2ce442, pe27e5b51a0a04a0b8337c10fc6b967cd, pbc0fddb8118543f7857565dfc9f18b4d};
+            object[] args = new object[3] {pe72a535b26394f898e42bd15727a8d4f, p322e833bdc804d8887b9aee5d9526fc5, pcd30eb0f428044338f5672d52c1b1747};
             string name = "GWEnvironmentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void HistoricalSessionsResolved(CQGSessionsCollection padc53a1427ae4c7f8e30fc00e7f61f07, CQGHistoricalSessionsRequest p08c95e2ef32842398e8114c43a510b61, CQGError p7624c5b153c642f6976ede8f84c48f3e)
+        public virtual void HistoricalSessionsResolved(CQGSessionsCollection p8a8048f7ad5440e7ae7af96259bc0def, CQGHistoricalSessionsRequest p956519b5e5af40dcb555e46e126e686b, CQGError p2ee47f84698045d2bff6cd9777d1e31c)
         {
-            object[] args = new object[3] {padc53a1427ae4c7f8e30fc00e7f61f07, p08c95e2ef32842398e8114c43a510b61, p7624c5b153c642f6976ede8f84c48f3e};
+            object[] args = new object[3] {p8a8048f7ad5440e7ae7af96259bc0def, p956519b5e5af40dcb555e46e126e686b, p2ee47f84698045d2bff6cd9777d1e31c};
             string name = "HistoricalSessionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ICConnectionStatusChanged(eICConnectionStatus p50ffe1a627304245a5d7b892555fc471)
+        public virtual void ICConnectionStatusChanged(eICConnectionStatus pcc65c3b7bfab493fbb06e9d2d977f01c)
         {
-            object[] args = new object[1] {p50ffe1a627304245a5d7b892555fc471};
+            object[] args = new object[1] {pcc65c3b7bfab493fbb06e9d2d977f01c};
             string name = "ICConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IncorrectSymbol(String pb634d6cf5d734eb1b2abacba809d170e)
+        public virtual void IncorrectSymbol(String pcc460145e07f488a8189dc7588375c54)
         {
-            object[] args = new object[1] {pb634d6cf5d734eb1b2abacba809d170e};
+            object[] args = new object[1] {pcc460145e07f488a8189dc7588375c54};
             string name = "IncorrectSymbol";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentChanged(CQGInstrument pb999427ef83943bc8fc136e12d92da5d, CQGQuotes pd03382ffe36b421385037f3ff8cfe426, CQGInstrumentProperties pb3647f01e5c54cf990b79c49a93fa99b)
+        public virtual void InstrumentChanged(CQGInstrument p12d10ffb11a64b7cae8ee4e792046d89, CQGQuotes p3a10a54df52d4003bb3318d19847b6cf, CQGInstrumentProperties p1ed8297709174420b1b9da4eda0b79d9)
         {
-            object[] args = new object[3] {pb999427ef83943bc8fc136e12d92da5d, pd03382ffe36b421385037f3ff8cfe426, pb3647f01e5c54cf990b79c49a93fa99b};
+            object[] args = new object[3] {p12d10ffb11a64b7cae8ee4e792046d89, p3a10a54df52d4003bb3318d19847b6cf, p1ed8297709174420b1b9da4eda0b79d9};
             string name = "InstrumentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentDOMChanged(CQGInstrument pc829152bc9654e0bacb414623a926d9a, CQGDOMQuotes pe9c6f8994c1a4414a270c5192c7babac, CQGDOMQuotes p234c9314f320450f8b89f6839d49aa86)
+        public virtual void InstrumentDOMChanged(CQGInstrument p92442fb949c54a6f822abe09f9d08660, CQGDOMQuotes p57e8a8c05bad43008759898347405a5f, CQGDOMQuotes pdd37f4a7c0784de18f23ec9ff4f8fc2d)
         {
-            object[] args = new object[3] {pc829152bc9654e0bacb414623a926d9a, pe9c6f8994c1a4414a270c5192c7babac, p234c9314f320450f8b89f6839d49aa86};
+            object[] args = new object[3] {p92442fb949c54a6f822abe09f9d08660, p57e8a8c05bad43008759898347405a5f, pdd37f4a7c0784de18f23ec9ff4f8fc2d};
             string name = "InstrumentDOMChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupChanged(eChangeType p77bd5029e5f046c6b77b820d94e1bf63, CQGInstrumentsGroup p6ec82652138146b1979344079e1b7767, CQGStringCollection p2327dd165a3f4b5a9416643db3f92fdd)
+        public virtual void InstrumentsGroupChanged(eChangeType pbf41bbccd3964222bdfe1551b7033f5c, CQGInstrumentsGroup pca5e532c43704748b1b321726fcd83ac, CQGStringCollection pbdfc399428a34e9b93feb02e10a98ab8)
         {
-            object[] args = new object[3] {p77bd5029e5f046c6b77b820d94e1bf63, p6ec82652138146b1979344079e1b7767, p2327dd165a3f4b5a9416643db3f92fdd};
+            object[] args = new object[3] {pbf41bbccd3964222bdfe1551b7033f5c, pca5e532c43704748b1b321726fcd83ac, pbdfc399428a34e9b93feb02e10a98ab8};
             string name = "InstrumentsGroupChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup pba697af5d7af40b1b79bdab081758266, CQGError p544d8159302e4c508c886b202264b52b)
+        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup p1673eb6d13c34cc5ae0bd9f5c4568aea, CQGError pc5d6ea41587542b0938d7948e8acc1cc)
         {
-            object[] args = new object[2] {pba697af5d7af40b1b79bdab081758266, p544d8159302e4c508c886b202264b52b};
+            object[] args = new object[2] {p1673eb6d13c34cc5ae0bd9f5c4568aea, pc5d6ea41587542b0938d7948e8acc1cc};
             string name = "InstrumentsGroupResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(String p5d4320911988483a8b4ed2b320b83f3d, CQGInstrument peff5da4043314d41a1761738942e6ad5)
+        public virtual void InstrumentSubscribed(String p05190004d6844bf0841fc13ba20ee4ea, CQGInstrument p187f323c4d0f462da0b5c5f3e472e8c2)
         {
-            object[] args = new object[2] {p5d4320911988483a8b4ed2b320b83f3d, peff5da4043314d41a1761738942e6ad5};
+            object[] args = new object[2] {p05190004d6844bf0841fc13ba20ee4ea, p187f323c4d0f462da0b5c5f3e472e8c2};
             string name = "InstrumentSubscribed";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IsReady(ref eReadyStatus pfd7ffc3f03c648fcb95b734cfd10fe03)
+        public virtual void IsReady(ref eReadyStatus pb2da19ec20094ce3bbcc2c977c8f756d)
         {
-            object[] args = new object[1] {pfd7ffc3f03c648fcb95b734cfd10fe03};
+            object[] args = new object[1] {pb2da19ec20094ce3bbcc2c977c8f756d};
             string name = "IsReady";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void LineTimeChanged(DateTime p3f2aa48d836c49b796b87d5ea85b0bcf)
+        public virtual void LineTimeChanged(DateTime p88e126950fb34d99bc72f7dbef4f6121)
         {
-            object[] args = new object[1] {p3f2aa48d836c49b796b87d5ea85b0bcf};
+            object[] args = new object[1] {p88e126950fb34d99bc72f7dbef4f6121};
             string name = "LineTimeChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillChanged(CQGManualFill p5aa6cc584d994453b184703ad046ccd5, eManualFillUpdateType p794a52acff284d45ab2a12e8d3fad229)
+        public virtual void ManualFillChanged(CQGManualFill p7994653a80f646e898cec8f748000168, eManualFillUpdateType p3559de58520a4eb6969c0e933ce9c5d0)
         {
-            object[] args = new object[2] {p5aa6cc584d994453b184703ad046ccd5, p794a52acff284d45ab2a12e8d3fad229};
+            object[] args = new object[2] {p7994653a80f646e898cec8f748000168, p3559de58520a4eb6969c0e933ce9c5d0};
             string name = "ManualFillChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillsResolved(CQGManualFills p6b4f8954826143468a205aa637812a18, CQGError pd1a8892c4f394c0a975ba35446d7348e)
+        public virtual void ManualFillsResolved(CQGManualFills pe2d7eb9b9b124172a0101a0c105e3cd3, CQGError p9bd3959f2cdf4d84bec94a5724a6c6b1)
         {
-            object[] args = new object[2] {p6b4f8954826143468a205aa637812a18, pd1a8892c4f394c0a975ba35446d7348e};
+            object[] args = new object[2] {pe2d7eb9b9b124172a0101a0c105e3cd3, p9bd3959f2cdf4d84bec94a5724a6c6b1};
             string name = "ManualFillsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ManualFillUpdateResolved(CQGManualFillRequest pb8d9449e7af24cfcb85ca5546e1b101f, CQGError p1cfd703098fd463595247adc101efe0e)
+        public virtual void ManualFillUpdateResolved(CQGManualFillRequest p358857f2ed7349ac9b7f2cbd608c5c37, CQGError pe143e61e80684633a89ccf2b736587aa)
         {
-            object[] args = new object[2] {pb8d9449e7af24cfcb85ca5546e1b101f, p1cfd703098fd463595247adc101efe0e};
+            object[] args = new object[2] {p358857f2ed7349ac9b7f2cbd608c5c37, pe143e61e80684633a89ccf2b736587aa};
             string name = "ManualFillUpdateResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10716,205 +10716,205 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void OnQueryProgress(CQGOrdersQuery p6977981f75c74ec6a1899aa68eb3510f, CQGError p1fdda22b0e3b448eb6a3d4eb7569c298)
+        public virtual void OnQueryProgress(CQGOrdersQuery p6227c5dbe61549e0a6e3d2555893ac0e, CQGError paa6368fa349244ae840b87d6f605e342)
         {
-            object[] args = new object[2] {p6977981f75c74ec6a1899aa68eb3510f, p1fdda22b0e3b448eb6a3d4eb7569c298};
+            object[] args = new object[2] {p6227c5dbe61549e0a6e3d2555893ac0e, paa6368fa349244ae840b87d6f605e342};
             string name = "OnQueryProgress";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void OrderChanged(eChangeType pa7de9954e00445ac9fb0f39b77c96d44, CQGOrder p3fb5ee5b311a4c119abe211a0b1b4f16, CQGOrderProperties pe81c98d4b00949a6b2e857ef99d46382, CQGFill pd13a9a852181485bb2ecb66d88416f27, CQGError pb56168cc01b74459bbe84347c78dc39b)
+        public virtual void OrderChanged(eChangeType p413e060a2a4f40028fe1a4e70fa6a3ee, CQGOrder pa3a568ecf06646dd8258734a4ab3821d, CQGOrderProperties p4430ec4aea85400f979047d518028d8d, CQGFill pf8dcd1615f6646799fb020ee930f1ba9, CQGError pbcbcb08436884551b728a96c456cd2eb)
         {
-            object[] args = new object[5] {pa7de9954e00445ac9fb0f39b77c96d44, p3fb5ee5b311a4c119abe211a0b1b4f16, pe81c98d4b00949a6b2e857ef99d46382, pd13a9a852181485bb2ecb66d88416f27, pb56168cc01b74459bbe84347c78dc39b};
+            object[] args = new object[5] {p413e060a2a4f40028fe1a4e70fa6a3ee, pa3a568ecf06646dd8258734a4ab3821d, p4430ec4aea85400f979047d518028d8d, pf8dcd1615f6646799fb020ee930f1ba9, pbcbcb08436884551b728a96c456cd2eb};
             string name = "OrderChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PasswordChanged(eSessionStatus p482d3dbe9c7c424080925c577be6507c, CQGError pc09cd8afbb05453f89c1062a571f3273)
+        public virtual void PasswordChanged(eSessionStatus p3bc0495aee7a452eb80ee9f2bf2764a8, CQGError p77a9920b075c49988015cf1c7fd5fd05)
         {
-            object[] args = new object[2] {p482d3dbe9c7c424080925c577be6507c, pc09cd8afbb05453f89c1062a571f3273};
+            object[] args = new object[2] {p3bc0495aee7a452eb80ee9f2bf2764a8, p77a9920b075c49988015cf1c7fd5fd05};
             string name = "PasswordChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars pa713c1c70f4f476a8fd6aba07d7ad740)
+        public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars pbf1e8c51f79d4b488999d77d4e0b435c)
         {
-            object[] args = new object[1] {pa713c1c70f4f476a8fd6aba07d7ad740};
+            object[] args = new object[1] {pbf1e8c51f79d4b488999d77d4e0b435c};
             string name = "PointAndFigureBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars p80cf00af209b477f8cfbbf92e120910a, Int32 p941934365042486c9987311d0623d264)
+        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars p11527f5813ef4974ae7e2951d5dcfbab, Int32 p6472cd2dcb094ebba611e8bd6c334916)
         {
-            object[] args = new object[2] {p80cf00af209b477f8cfbbf92e120910a, p941934365042486c9987311d0623d264};
+            object[] args = new object[2] {p11527f5813ef4974ae7e2951d5dcfbab, p6472cd2dcb094ebba611e8bd6c334916};
             string name = "PointAndFigureBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars p7ee3331efcce4798b5a8259c95e986cb, Int32 pdc7a8986f717413984433e2fb26c3fa9)
+        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars pd00e7878e9cf4102a94a71b58cc1266d, Int32 p7d082d6ad3714ca597802e3d47f161a4)
         {
-            object[] args = new object[2] {p7ee3331efcce4798b5a8259c95e986cb, pdc7a8986f717413984433e2fb26c3fa9};
+            object[] args = new object[2] {pd00e7878e9cf4102a94a71b58cc1266d, p7d082d6ad3714ca597802e3d47f161a4};
             string name = "PointAndFigureBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars p36b4c3dc25b844afa93e97efc175337d, CQGError peb29502f307e4e05a344e87a514f66b1)
+        public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars p0914e8193fc34093b08f95d7309effcd, CQGError pd0e201fb0653455a927f693c3097aaf3)
         {
-            object[] args = new object[2] {p36b4c3dc25b844afa93e97efc175337d, peb29502f307e4e05a344e87a514f66b1};
+            object[] args = new object[2] {p0914e8193fc34093b08f95d7309effcd, pd0e201fb0653455a927f693c3097aaf3};
             string name = "PointAndFigureBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars p1a6dc7d51ac441b2b01e18335dc1ad83, Int32 p3ae62dcd1fe342c4baa4e5f975577d2c)
+        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars p1370101bb44a40ad85cf2fa247f0b9ca, Int32 p5c110ba42c5f49ddb2571537e2647022)
         {
-            object[] args = new object[2] {p1a6dc7d51ac441b2b01e18335dc1ad83, p3ae62dcd1fe342c4baa4e5f975577d2c};
+            object[] args = new object[2] {p1370101bb44a40ad85cf2fa247f0b9ca, p5c110ba42c5f49ddb2571537e2647022};
             string name = "PointAndFigureBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PositionsStatementResolved(CQGPositionsStatement p3e1943d6acd649e4b312bcd77ef284e1, CQGError p86cac301199547d3b02a1ac588b395ed)
+        public virtual void PositionsStatementResolved(CQGPositionsStatement pd9cea5e1a5994d53b2de2a388be4e64e, CQGError p05a044375a374cd28d83c07402f64d82)
         {
-            object[] args = new object[2] {p3e1943d6acd649e4b312bcd77ef284e1, p86cac301199547d3b02a1ac588b395ed};
+            object[] args = new object[2] {pd9cea5e1a5994d53b2de2a388be4e64e, p05a044375a374cd28d83c07402f64d82};
             string name = "PositionsStatementResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions pa4b4254089b7490d97d29ac903fb73a6, CQGError pf8850a7dddcd4a4b97a869f75e15eadb)
+        public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions pe1e97018e7f2458096c03c4b11bd0c85, CQGError pb18f040f56324f1a9e0c594381a72fc6)
         {
-            object[] args = new object[2] {pa4b4254089b7490d97d29ac903fb73a6, pf8850a7dddcd4a4b97a869f75e15eadb};
+            object[] args = new object[2] {pe1e97018e7f2458096c03c4b11bd0c85, pb18f040f56324f1a9e0c594381a72fc6};
             string name = "QFormulaDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void StrategyDefinitionProgress(CQGStrategyDefinition p7bd8b3c01e784942a2256ac6fd4c509e, CQGError p5f006e61ac15409e8733758cdd5519a6)
+        public virtual void StrategyDefinitionProgress(CQGStrategyDefinition pb9eb6ad30a1b445cae7ab8d26b116c1e, CQGError p8766a79c9b8f4007a2ea0e7694575e6f)
         {
-            object[] args = new object[2] {p7bd8b3c01e784942a2256ac6fd4c509e, p5f006e61ac15409e8733758cdd5519a6};
+            object[] args = new object[2] {pb9eb6ad30a1b445cae7ab8d26b116c1e, p8766a79c9b8f4007a2ea0e7694575e6f};
             string name = "StrategyDefinitionProgress";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsAdded(CQGSubMinuteBars p1bda5952bfe04da680e3eb0885b0b574)
+        public virtual void SubMinuteBarsAdded(CQGSubMinuteBars pfc8ace6082b544debe15f1621a54f3d4)
         {
-            object[] args = new object[1] {p1bda5952bfe04da680e3eb0885b0b574};
+            object[] args = new object[1] {pfc8ace6082b544debe15f1621a54f3d4};
             string name = "SubMinuteBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars pc39f311343d3414d982234b22d5b2b22, Int32 p3296afea03c949fea8934e64b62a24bc)
+        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars peb47f95f23d245e493a7bc6d6df7cecc, Int32 pd4306637da0048d69a65f29cfa35655a)
         {
-            object[] args = new object[2] {pc39f311343d3414d982234b22d5b2b22, p3296afea03c949fea8934e64b62a24bc};
+            object[] args = new object[2] {peb47f95f23d245e493a7bc6d6df7cecc, pd4306637da0048d69a65f29cfa35655a};
             string name = "SubMinuteBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars p0ed45e9882f94d8dbe3f12e4766a5505, Int32 p9eca7d7f32bd4efcbc84ee210e0b8ed8)
+        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars pd57a55a088d246acbbee2ea52e241000, Int32 p0c5d619c51494f49a7be94d1730101b7)
         {
-            object[] args = new object[2] {p0ed45e9882f94d8dbe3f12e4766a5505, p9eca7d7f32bd4efcbc84ee210e0b8ed8};
+            object[] args = new object[2] {pd57a55a088d246acbbee2ea52e241000, p0c5d619c51494f49a7be94d1730101b7};
             string name = "SubMinuteBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsResolved(CQGSubMinuteBars pbdbff953b53148ac812551fba4d434e7, CQGError p8e5b9c7ef774438e9052ee17c80442ad)
+        public virtual void SubMinuteBarsResolved(CQGSubMinuteBars p39a2d80b97094dcbb40f26e18b25dd04, CQGError pfaba6dd334c443bf852bd09e97e3a1bd)
         {
-            object[] args = new object[2] {pbdbff953b53148ac812551fba4d434e7, p8e5b9c7ef774438e9052ee17c80442ad};
+            object[] args = new object[2] {p39a2d80b97094dcbb40f26e18b25dd04, pfaba6dd334c443bf852bd09e97e3a1bd};
             string name = "SubMinuteBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars p1a2c249e90c9419f9b26dbbc4a762265, Int32 pe4030648c7b54c7c84e635520718cb65)
+        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars pf1c78e1ebe694f24af89baefa7d985d6, Int32 pb131e0d87b51470b99f0b64201ed4d6f)
         {
-            object[] args = new object[2] {p1a2c249e90c9419f9b26dbbc4a762265, pe4030648c7b54c7c84e635520718cb65};
+            object[] args = new object[2] {pf1c78e1ebe694f24af89baefa7d985d6, pb131e0d87b51470b99f0b64201ed4d6f};
             string name = "SubMinuteBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SummariesStatementResolved(CQGSummariesStatement p66761ce57e9d423ba345405c465b9ae7, CQGError p756a99562cd243ff8c65b3f7ff50d70c)
+        public virtual void SummariesStatementResolved(CQGSummariesStatement p5febb871f0f74da994bdd365292ef8b5, CQGError p85e10230d9d348b8a0c7830b2ddcaedd)
         {
-            object[] args = new object[2] {p66761ce57e9d423ba345405c465b9ae7, p756a99562cd243ff8c65b3f7ff50d70c};
+            object[] args = new object[2] {p5febb871f0f74da994bdd365292ef8b5, p85e10230d9d348b8a0c7830b2ddcaedd};
             string name = "SummariesStatementResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsAdded(CQGTFlowBars p63ac289094374f7695363b3ec9b60efc)
+        public virtual void TFlowBarsAdded(CQGTFlowBars p2823d43d1b3644fe8fec094c7215082c)
         {
-            object[] args = new object[1] {p63ac289094374f7695363b3ec9b60efc};
+            object[] args = new object[1] {p2823d43d1b3644fe8fec094c7215082c};
             string name = "TFlowBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsInserted(CQGTFlowBars p60b13338b7454e6c850177576d553e36, Int32 p11babf1d71dc4e4ea1218cb79ebb4e94)
+        public virtual void TFlowBarsInserted(CQGTFlowBars p792daac2985543dfa47b055186730db5, Int32 pfc7bb21d4dca4fb0b00f0e5c04301a35)
         {
-            object[] args = new object[2] {p60b13338b7454e6c850177576d553e36, p11babf1d71dc4e4ea1218cb79ebb4e94};
+            object[] args = new object[2] {p792daac2985543dfa47b055186730db5, pfc7bb21d4dca4fb0b00f0e5c04301a35};
             string name = "TFlowBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsRemoved(CQGTFlowBars p2d64d70f1ef846b4be4e98dd5833d833, Int32 p8529e037328e4850aaf102eb5a1c9070)
+        public virtual void TFlowBarsRemoved(CQGTFlowBars p5ee10729a07343aba76473fd48cae0a0, Int32 pd50521c9fca449318c8a2c921285d8e4)
         {
-            object[] args = new object[2] {p2d64d70f1ef846b4be4e98dd5833d833, p8529e037328e4850aaf102eb5a1c9070};
+            object[] args = new object[2] {p5ee10729a07343aba76473fd48cae0a0, pd50521c9fca449318c8a2c921285d8e4};
             string name = "TFlowBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsResolved(CQGTFlowBars p4e226074652749219f942e396d8f1f26, CQGError pe40b541b8ecc4450896cb867ce85e201)
+        public virtual void TFlowBarsResolved(CQGTFlowBars p384533f8a7004de8aa1e77b163c1e6b2, CQGError pbce5aec46062400b9feca84a314e1170)
         {
-            object[] args = new object[2] {p4e226074652749219f942e396d8f1f26, pe40b541b8ecc4450896cb867ce85e201};
+            object[] args = new object[2] {p384533f8a7004de8aa1e77b163c1e6b2, pbce5aec46062400b9feca84a314e1170};
             string name = "TFlowBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsUpdated(CQGTFlowBars p110a6657117b496eb05ba36a965cbe52, Int32 p033d390de3264831a54c463b61663333)
+        public virtual void TFlowBarsUpdated(CQGTFlowBars p5c160986b6bf4c788450869ff7abe211, Int32 pab379be592244a0189e29759bdfd93e3)
         {
-            object[] args = new object[2] {p110a6657117b496eb05ba36a965cbe52, p033d390de3264831a54c463b61663333};
+            object[] args = new object[2] {p5c160986b6bf4c788450869ff7abe211, pab379be592244a0189e29759bdfd93e3};
             string name = "TFlowBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TicksAdded(CQGTicks pe97f1ebd9e8f48c693d3111e42b96055, Int32 p1cdf34f7c2d34e06a55cd518185a010b)
+        public virtual void TicksAdded(CQGTicks pf0d66fae0da944bdbe70f802c2e17258, Int32 p06a1e0a5bcf44b3fa90ba791159eb981)
         {
-            object[] args = new object[2] {pe97f1ebd9e8f48c693d3111e42b96055, p1cdf34f7c2d34e06a55cd518185a010b};
+            object[] args = new object[2] {pf0d66fae0da944bdbe70f802c2e17258, p06a1e0a5bcf44b3fa90ba791159eb981};
             string name = "TicksAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TicksResolved(CQGTicks p8453a0e2577f4a34813eb22aabf2e74e, CQGError pf1af3b1ad3f04a36971e25cfe14debb4)
+        public virtual void TicksResolved(CQGTicks p5f435031dde6402eb2aa13e1b73c6226, CQGError p8332a899ec7741b287a84fcc92e2ce35)
         {
-            object[] args = new object[2] {p8453a0e2577f4a34813eb22aabf2e74e, pf1af3b1ad3f04a36971e25cfe14debb4};
+            object[] args = new object[2] {p5f435031dde6402eb2aa13e1b73c6226, p8332a899ec7741b287a84fcc92e2ce35};
             string name = "TicksResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsAdded(CQGTimedBars p6055b087c8de40fbb1e5936b4673ef45)
+        public virtual void TimedBarsAdded(CQGTimedBars pa00feec69d27445692a62f84490ba77b)
         {
-            object[] args = new object[1] {p6055b087c8de40fbb1e5936b4673ef45};
+            object[] args = new object[1] {pa00feec69d27445692a62f84490ba77b};
             string name = "TimedBarsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsInserted(CQGTimedBars p435a8ace41ea406188f559d7a60f9af2, Int32 pb3750b73bb674eb79ba291d6ebac36ab)
+        public virtual void TimedBarsInserted(CQGTimedBars pa0e1a2a226f04c10ba6dbd63c266f003, Int32 pb317288e9c1f423f98ab3ae05c3cf6a3)
         {
-            object[] args = new object[2] {p435a8ace41ea406188f559d7a60f9af2, pb3750b73bb674eb79ba291d6ebac36ab};
+            object[] args = new object[2] {pa0e1a2a226f04c10ba6dbd63c266f003, pb317288e9c1f423f98ab3ae05c3cf6a3};
             string name = "TimedBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsRemoved(CQGTimedBars p2a6b20214f774616835cf577806674a4, Int32 p395e4116f5284b01bc82a91f4139dcfe)
+        public virtual void TimedBarsRemoved(CQGTimedBars p311cc0cc459d4b35bda57f4b26fe1c4f, Int32 pee88a9a8821342eda952559b64600f1f)
         {
-            object[] args = new object[2] {p2a6b20214f774616835cf577806674a4, p395e4116f5284b01bc82a91f4139dcfe};
+            object[] args = new object[2] {p311cc0cc459d4b35bda57f4b26fe1c4f, pee88a9a8821342eda952559b64600f1f};
             string name = "TimedBarsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsResolved(CQGTimedBars pee28096a253f425fbe16b0e59dfdc4b0, CQGError p013b142bd85d4bc68febdc90f700e4ab)
+        public virtual void TimedBarsResolved(CQGTimedBars pf141a6afc5674d46ac3b4eebc16c0bfd, CQGError p164f9a3925d245498dd453e91929ab7d)
         {
-            object[] args = new object[2] {pee28096a253f425fbe16b0e59dfdc4b0, p013b142bd85d4bc68febdc90f700e4ab};
+            object[] args = new object[2] {pf141a6afc5674d46ac3b4eebc16c0bfd, p164f9a3925d245498dd453e91929ab7d};
             string name = "TimedBarsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsUpdated(CQGTimedBars pd2113189ce384963ac398b22a5de85ae, Int32 p7517928339ee4e88b26272a97d1f8956)
+        public virtual void TimedBarsUpdated(CQGTimedBars pb0b8585eaba140d0ac31c526f06ee27a, Int32 p900946d0672e403abc4721f3003cc0b7)
         {
-            object[] args = new object[2] {pd2113189ce384963ac398b22a5de85ae, p7517928339ee4e88b26272a97d1f8956};
+            object[] args = new object[2] {pb0b8585eaba140d0ac31c526f06ee27a, p900946d0672e403abc4721f3003cc0b7};
             string name = "TimedBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -10926,100 +10926,100 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void TradableCommoditiesResolved(Int32 p21c8f2b0635f4e4689866f26e2f694e8, CQGCommodities p6855e26af9b34a7d85c984c42f756aec, CQGError pa3d04cd14f844e9f894a0b0c52bb6c6d)
+        public virtual void TradableCommoditiesResolved(Int32 p2dbd329dc2334f5cbe768ac3fe9f1977, CQGCommodities pc3919bab6ad843bbb35f8ac92626ab24, CQGError pd3ea88a6be2a47a796999da89d033270)
         {
-            object[] args = new object[3] {p21c8f2b0635f4e4689866f26e2f694e8, p6855e26af9b34a7d85c984c42f756aec, pa3d04cd14f844e9f894a0b0c52bb6c6d};
+            object[] args = new object[3] {p2dbd329dc2334f5cbe768ac3fe9f1977, pc3919bab6ad843bbb35f8ac92626ab24, pd3ea88a6be2a47a796999da89d033270};
             string name = "TradableCommoditiesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradableExchangesResolved(Int32 pb9709f031d5b42d7b933664d481aa283, CQGExchanges p5d8be0ae6d12422aa06ce5e6011675da, CQGError p365977713932460ab7bd420468b029e5)
+        public virtual void TradableExchangesResolved(Int32 p9f3a29c396da4fa8962806e6c34b4002, CQGExchanges p582146d6a4e14296929e3e720591afcf, CQGError pca7f4fd63fbb44ec98291b41f3326c8c)
         {
-            object[] args = new object[3] {pb9709f031d5b42d7b933664d481aa283, p5d8be0ae6d12422aa06ce5e6011675da, p365977713932460ab7bd420468b029e5};
+            object[] args = new object[3] {p9f3a29c396da4fa8962806e6c34b4002, p582146d6a4e14296929e3e720591afcf, pca7f4fd63fbb44ec98291b41f3326c8c};
             string name = "TradableExchangesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemAddNotification(CQGTradingSystem pb57c1c33ee1f441a8ba49a21f1a90853, CQGTradingSystemAddInfo pa93baf4697b9454c9651bcaea72843ed)
+        public virtual void TradingSystemAddNotification(CQGTradingSystem p2b4a2e591bc94b1a846756f4a584d935, CQGTradingSystemAddInfo pcf6d01e69910480b8e7061c62c7a2ddb)
         {
-            object[] args = new object[2] {pb57c1c33ee1f441a8ba49a21f1a90853, pa93baf4697b9454c9651bcaea72843ed};
+            object[] args = new object[2] {p2b4a2e591bc94b1a846756f4a584d935, pcf6d01e69910480b8e7061c62c7a2ddb};
             string name = "TradingSystemAddNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions pc93c1bfa2b3f4e0c97f71cb3e8b5016f, CQGError pa7ef8fd5c5ca4a84ac780c24ba5bd52f)
+        public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions pe3d42949008e4bb49c7e25c374e245d9, CQGError pe8290022d7d645abb924efbc5642e5a3)
         {
-            object[] args = new object[2] {pc93c1bfa2b3f4e0c97f71cb3e8b5016f, pa7ef8fd5c5ca4a84ac780c24ba5bd52f};
+            object[] args = new object[2] {pe3d42949008e4bb49c7e25c374e245d9, pe8290022d7d645abb924efbc5642e5a3};
             string name = "TradingSystemDefinitionsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemInsertNotification(CQGTradingSystem p95aa0cb6cd514c0e8df0e25c96a3d39f, CQGTradingSystemInsertInfo pc908e560fc8945d6af1de1e1fa7689cd)
+        public virtual void TradingSystemInsertNotification(CQGTradingSystem p79dd269d72d047cda4ca1428c401317e, CQGTradingSystemInsertInfo p7de79e54dbdc425d90fb107b2f10c8ef)
         {
-            object[] args = new object[2] {p95aa0cb6cd514c0e8df0e25c96a3d39f, pc908e560fc8945d6af1de1e1fa7689cd};
+            object[] args = new object[2] {p79dd269d72d047cda4ca1428c401317e, p7de79e54dbdc425d90fb107b2f10c8ef};
             string name = "TradingSystemInsertNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemRemoveNotification(CQGTradingSystem p7dfa23161311489e8229c08639f597b2, CQGTradingSystemRemoveInfo p21ce36e6fedf4879b2f23394d8e19fed)
+        public virtual void TradingSystemRemoveNotification(CQGTradingSystem p0ffc7ad7d57a4336937f123567cd77a2, CQGTradingSystemRemoveInfo p468eecf58e9848f39c15f8f4dd279d76)
         {
-            object[] args = new object[2] {p7dfa23161311489e8229c08639f597b2, p21ce36e6fedf4879b2f23394d8e19fed};
+            object[] args = new object[2] {p0ffc7ad7d57a4336937f123567cd77a2, p468eecf58e9848f39c15f8f4dd279d76};
             string name = "TradingSystemRemoveNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemResolved(CQGTradingSystem p7c9152af24464f0981fdac006e820391, CQGError pd46868387f834987a13f9a3af5b3c363)
+        public virtual void TradingSystemResolved(CQGTradingSystem p9b198444a26249caa9ae6c844ed8c109, CQGError pf3f9b604197a4fc19365280e4c382743)
         {
-            object[] args = new object[2] {p7c9152af24464f0981fdac006e820391, pd46868387f834987a13f9a3af5b3c363};
+            object[] args = new object[2] {p9b198444a26249caa9ae6c844ed8c109, pf3f9b604197a4fc19365280e4c382743};
             string name = "TradingSystemResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem p132cd476df054467bf6abdc5318f7022, CQGTradingSystemRelationAddInfo p56ebc54aa4f54630acbc8ad7cb299911)
+        public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem pfd34caf930bf4faabe861e70c95afe74, CQGTradingSystemRelationAddInfo p8c1ca37353544d808b2ceac21f390683)
         {
-            object[] args = new object[2] {p132cd476df054467bf6abdc5318f7022, p56ebc54aa4f54630acbc8ad7cb299911};
+            object[] args = new object[2] {pfd34caf930bf4faabe861e70c95afe74, p8c1ca37353544d808b2ceac21f390683};
             string name = "TradingSystemTradeRelationAddNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradingSystemUpdateNotification(CQGTradingSystem p6f011980725541c18f6d35ee8c154123, CQGTradingSystemUpdateInfo p587978eeb6954af399089788bb61867f)
+        public virtual void TradingSystemUpdateNotification(CQGTradingSystem pe8327ee239244ecea41dd872c5dea752, CQGTradingSystemUpdateInfo p947ddf0cd5f743cf8ebca8ac80abaf06)
         {
-            object[] args = new object[2] {p6f011980725541c18f6d35ee8c154123, p587978eeb6954af399089788bb61867f};
+            object[] args = new object[2] {pe8327ee239244ecea41dd872c5dea752, p947ddf0cd5f743cf8ebca8ac80abaf06};
             string name = "TradingSystemUpdateNotification";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsAdded(CQGYields p6664cd45914342cf9ca57f9b20b7c8f3)
+        public virtual void YieldsAdded(CQGYields p3431e32096674260b3b2a47dfcb4dc68)
         {
-            object[] args = new object[1] {p6664cd45914342cf9ca57f9b20b7c8f3};
+            object[] args = new object[1] {p3431e32096674260b3b2a47dfcb4dc68};
             string name = "YieldsAdded";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsInserted(CQGYields p2387eb9aeeda4a9789233fb9175f3c38, Int32 p6e13d657fac548ba83a1ed582b755dc8)
+        public virtual void YieldsInserted(CQGYields p0d0d214fa8294c5eb6ba7b5138ae2ab1, Int32 pad2a13001e3540a8a92ed0663b9b9b4f)
         {
-            object[] args = new object[2] {p2387eb9aeeda4a9789233fb9175f3c38, p6e13d657fac548ba83a1ed582b755dc8};
+            object[] args = new object[2] {p0d0d214fa8294c5eb6ba7b5138ae2ab1, pad2a13001e3540a8a92ed0663b9b9b4f};
             string name = "YieldsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsRemoved(CQGYields p72675edc9d4c4d56af7f995d1336bc1f, Int32 paed80577eaea49d1964b0e166df3e67a)
+        public virtual void YieldsRemoved(CQGYields pb4c3bea1b5854d26a2657ec0d7785924, Int32 p11ef8a1768094ba595595692601487c8)
         {
-            object[] args = new object[2] {p72675edc9d4c4d56af7f995d1336bc1f, paed80577eaea49d1964b0e166df3e67a};
+            object[] args = new object[2] {pb4c3bea1b5854d26a2657ec0d7785924, p11ef8a1768094ba595595692601487c8};
             string name = "YieldsRemoved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsResolved(CQGYields pde9e3a4d3d3b4b329060d7dc933d8535, CQGError pc7244460c31d4477a991ae301504ca33)
+        public virtual void YieldsResolved(CQGYields p3402d5005766476ab006c53ec1a844a0, CQGError pdff9ee2b973e4211b8f517125b6aa385)
         {
-            object[] args = new object[2] {pde9e3a4d3d3b4b329060d7dc933d8535, pc7244460c31d4477a991ae301504ca33};
+            object[] args = new object[2] {p3402d5005766476ab006c53ec1a844a0, pdff9ee2b973e4211b8f517125b6aa385};
             string name = "YieldsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsUpdated(CQGYields p787e3807192740edab1b6ebd3b4d35ee, Int32 p2fc3979974ec468eb148122a5e3c4e8f)
+        public virtual void YieldsUpdated(CQGYields pa1920ebd667c474692fb566e921a896e, Int32 p7fb1bf106b724b23be8118f13e4a0099)
         {
-            object[] args = new object[2] {p787e3807192740edab1b6ebd3b4d35ee, p2fc3979974ec468eb148122a5e3c4e8f};
+            object[] args = new object[2] {pa1920ebd667c474692fb566e921a896e, p7fb1bf106b724b23be8118f13e4a0099};
             string name = "YieldsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11047,23 +11047,23 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void CurrencyRatesChanged(CQGCurrencyRates pfe1a9dde58274c2a8166a148413b03ff)
+        public virtual void CurrencyRatesChanged(CQGCurrencyRates pa16cee06ae304f45824830033e9520c1)
         {
-            object[] args = new object[1] {pfe1a9dde58274c2a8166a148413b03ff};
+            object[] args = new object[1] {pa16cee06ae304f45824830033e9520c1};
             string name = "CurrencyRatesChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataConnectionStatusChanged(eConnectionStatus pbd170c0fe68a4ae5850529a0a02d9cab)
+        public virtual void DataConnectionStatusChanged(eConnectionStatus p301568c1957047eb898ef53b8618766b)
         {
-            object[] args = new object[1] {pbd170c0fe68a4ae5850529a0a02d9cab};
+            object[] args = new object[1] {p301568c1957047eb898ef53b8618766b};
             string name = "DataConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(Object p3638306d61e0490fbc2e986d037b94f2, String peb6a94950521441a9467c56dd21d84a8)
+        public virtual void DataError(Object p7462a05dd77c47a6a1771a09c0b3786d, String p0de231a466b6489bb6c522315e6b1270)
         {
-            object[] args = new object[2] {p3638306d61e0490fbc2e986d037b94f2, peb6a94950521441a9467c56dd21d84a8};
+            object[] args = new object[2] {p7462a05dd77c47a6a1771a09c0b3786d, p0de231a466b6489bb6c522315e6b1270};
             string name = "DataError";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11090,23 +11090,23 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void GWConnectionStatusChanged(eConnectionStatus p48615aa462184c5fb5422e05a33d6e16)
+        public virtual void GWConnectionStatusChanged(eConnectionStatus p6ef3b5abcdd641ab9abe703d39e0d91f)
         {
-            object[] args = new object[1] {p48615aa462184c5fb5422e05a33d6e16};
+            object[] args = new object[1] {p6ef3b5abcdd641ab9abe703d39e0d91f};
             string name = "GWConnectionStatusChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IsReady(ref eReadyStatus p8e83d89abae9419396628d8158229e22)
+        public virtual void IsReady(ref eReadyStatus pc88a6c89ab074dd98414f42ced9c785e)
         {
-            object[] args = new object[1] {p8e83d89abae9419396628d8158229e22};
+            object[] args = new object[1] {pc88a6c89ab074dd98414f42ced9c785e};
             string name = "IsReady";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void LineTimeChanged(DateTime pdbc411cdd65841e9abfffa4b9c844e52)
+        public virtual void LineTimeChanged(DateTime p44367f10bbf34cd9b40a2623caa0d3b4)
         {
-            object[] args = new object[1] {pdbc411cdd65841e9abfffa4b9c844e52};
+            object[] args = new object[1] {p44367f10bbf34cd9b40a2623caa0d3b4};
             string name = "LineTimeChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11141,9 +11141,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void CommodityInstrumentsResolved(String p0a930949f34f416695e953bb4695973e, eInstrumentType p9ba83ea7f2984b2e85cf9cbefafda66d, CQGCommodityInstruments pa8da7233365a40f69433ab066df4480d)
+        public virtual void CommodityInstrumentsResolved(String p2aca9c0fe11a48d3be41a8e2a440fa21, eInstrumentType pa390fa58b7284610bdca45a443992f3f, CQGCommodityInstruments p4625080ed6cf4593918be2521cc76113)
         {
-            object[] args = new object[3] {p0a930949f34f416695e953bb4695973e, p9ba83ea7f2984b2e85cf9cbefafda66d, pa8da7233365a40f69433ab066df4480d};
+            object[] args = new object[3] {p2aca9c0fe11a48d3be41a8e2a440fa21, pa390fa58b7284610bdca45a443992f3f, p4625080ed6cf4593918be2521cc76113};
             string name = "CommodityInstrumentsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -11170,44 +11170,44 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncorrectSymbol(String pb2b233556cfb43918a7df31b3d242c54)
+        public virtual void IncorrectSymbol(String pd13b0f57e82544e58e2fec9acab6eabc)
         {
-            object[] args = new object[1] {pb2b233556cfb43918a7df31b3d242c54};
+            object[] args = new object[1] {pd13b0f57e82544e58e2fec9acab6eabc};
             string name = "IncorrectSymbol";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentChanged(CQGInstrument p9c1864cc3b4a4883808a600afcaee225, CQGQuotes pb167c3a750fb4e8cb3efff7f80c60f29, CQGInstrumentProperties p8eb9f6226f9e40c4b4470ac07e624ca2)
+        public virtual void InstrumentChanged(CQGInstrument pf75d7159bf7545dcbfcf8a11eed091cd, CQGQuotes p11e7cfbda8e74159bccd5708bac866f3, CQGInstrumentProperties p79c10595c2fc4d528c51633d66a1216a)
         {
-            object[] args = new object[3] {p9c1864cc3b4a4883808a600afcaee225, pb167c3a750fb4e8cb3efff7f80c60f29, p8eb9f6226f9e40c4b4470ac07e624ca2};
+            object[] args = new object[3] {pf75d7159bf7545dcbfcf8a11eed091cd, p11e7cfbda8e74159bccd5708bac866f3, p79c10595c2fc4d528c51633d66a1216a};
             string name = "InstrumentChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentDOMChanged(CQGInstrument p822c957ce1e247c69c3178d9115b3b0b, CQGDOMQuotes pdee31c68f2524a3fa132afeae0c597e9, CQGDOMQuotes pd8b46840c1ac40a3a31155c5578999ba)
+        public virtual void InstrumentDOMChanged(CQGInstrument p55782998e23d4f93ba9d973d32c77dd9, CQGDOMQuotes p613587aa65ed4d169cdc1ed562bd1849, CQGDOMQuotes p4ea9ade169104dfe9b233672d9f4ea75)
         {
-            object[] args = new object[3] {p822c957ce1e247c69c3178d9115b3b0b, pdee31c68f2524a3fa132afeae0c597e9, pd8b46840c1ac40a3a31155c5578999ba};
+            object[] args = new object[3] {p55782998e23d4f93ba9d973d32c77dd9, p613587aa65ed4d169cdc1ed562bd1849, p4ea9ade169104dfe9b233672d9f4ea75};
             string name = "InstrumentDOMChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupChanged(eChangeType peaab25a0fa7d47e3a77685475669ef58, CQGInstrumentsGroup p0c1d6960c81d434da9cd4296251cd19b, CQGStringCollection p4acce3a0ffd840aa9ded44109f21dba7)
+        public virtual void InstrumentsGroupChanged(eChangeType p28e0e9b721ed45ffb9b3cb88f730ceeb, CQGInstrumentsGroup p8208cd1ceb934294b872b11dd4a2a0bd, CQGStringCollection pd183b2274612437b9ab4ac9f5e74444f)
         {
-            object[] args = new object[3] {peaab25a0fa7d47e3a77685475669ef58, p0c1d6960c81d434da9cd4296251cd19b, p4acce3a0ffd840aa9ded44109f21dba7};
+            object[] args = new object[3] {p28e0e9b721ed45ffb9b3cb88f730ceeb, p8208cd1ceb934294b872b11dd4a2a0bd, pd183b2274612437b9ab4ac9f5e74444f};
             string name = "InstrumentsGroupChanged";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup p772991b164d24ef48201ca02ab25addf, CQGError pb576139563ed4f419049d59c6a9ecc4a)
+        public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup p55522a35ad1a4818b8ddd1d49eb30a2e, CQGError pcd744d72853e4b809c2d0bf967298414)
         {
-            object[] args = new object[2] {p772991b164d24ef48201ca02ab25addf, pb576139563ed4f419049d59c6a9ecc4a};
+            object[] args = new object[2] {p55522a35ad1a4818b8ddd1d49eb30a2e, pcd744d72853e4b809c2d0bf967298414};
             string name = "InstrumentsGroupResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(String p8ae1755f65d446c4948ac0d6f1c5b815, CQGInstrument p10a575da56a8444faa6e30326e89b3c4)
+        public virtual void InstrumentSubscribed(String p089f0ba0369f45da85357b73703360bd, CQGInstrument pad0ac6e5a92d4d20b5c0cca6c73aa756)
         {
-            object[] args = new object[2] {p8ae1755f65d446c4948ac0d6f1c5b815, p10a575da56a8444faa6e30326e89b3c4};
+            object[] args = new object[2] {p089f0ba0369f45da85357b73703360bd, pad0ac6e5a92d4d20b5c0cca6c73aa756};
             string name = "InstrumentSubscribed";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
@@ -14508,12 +14508,19 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        private System.Timers.Timer eventCheckingTimer;
+
         #region Constructors
         public CQGCELClass()
         {
             thisObjUnqKey = Guid.NewGuid().ToString("D");
             string name = "CQG.CQGCELClass";
             string v = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Constructor, thisObjUnqKey, name);
+            eventCheckingTimer = new System.Timers.Timer();
+            eventCheckingTimer.Interval = 30;
+            eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;
+            eventCheckingTimer.AutoReset = true;
+            eventCheckingTimer.Enabled = true
         }
 
         #endregion
@@ -15833,6 +15840,1124 @@ namespace FakeCQG
             object[] args = new object[1] {guid_};
             string name = "UnregisterAlgorithmicOrder";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+        }
+
+        #endregion
+
+        #region TimerTickHardler
+        private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            if(AccountChanged== null && DataDictionaries.EventCheckingDictionary["AccountChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AccountChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AccountChanged"] = false;
+            }
+            else if(AccountChanged != null && !DataDictionaries.EventCheckingDictionary["AccountChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AccountChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AccountChanged"] = true;
+            }
+
+            if(AdvancedStudyAdded== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"] = false;
+            }
+            else if(AdvancedStudyAdded != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"] = true;
+            }
+
+            if(AdvancedStudyDefinitionsResolved== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyDefinitionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"] = false;
+            }
+            else if(AdvancedStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyDefinitionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"] = true;
+            }
+
+            if(AdvancedStudyInserted== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"] = false;
+            }
+            else if(AdvancedStudyInserted != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"] = true;
+            }
+
+            if(AdvancedStudyRemoved== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"] = false;
+            }
+            else if(AdvancedStudyRemoved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"] = true;
+            }
+
+            if(AdvancedStudyResolved== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"] = false;
+            }
+            else if(AdvancedStudyResolved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"] = true;
+            }
+
+            if(AdvancedStudyUpdated== null && DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"] = false;
+            }
+            else if(AdvancedStudyUpdated != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AdvancedStudyUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"] = true;
+            }
+
+            if(AlgorithmicOrderPlaced== null && DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AlgorithmicOrderPlaced", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"] = false;
+            }
+            else if(AlgorithmicOrderPlaced != null && !DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AlgorithmicOrderPlaced", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"] = true;
+            }
+
+            if(AlgorithmicOrderRegistrationComplete== null && DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AlgorithmicOrderRegistrationComplete", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"] = false;
+            }
+            else if(AlgorithmicOrderRegistrationComplete != null && !DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AlgorithmicOrderRegistrationComplete", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"] = true;
+            }
+
+            if(AllOrdersCanceled== null && DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AllOrdersCanceled", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"] = false;
+            }
+            else if(AllOrdersCanceled != null && !DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AllOrdersCanceled", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"] = true;
+            }
+
+            if(AuthenticationStatusChanged== null && DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AuthenticationStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"] = false;
+            }
+            else if(AuthenticationStatusChanged != null && !DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "AuthenticationStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"] = true;
+            }
+
+            if(BarsTimestampsResolved== null && DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "BarsTimestampsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"] = false;
+            }
+            else if(BarsTimestampsResolved != null && !DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "BarsTimestampsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"] = true;
+            }
+
+            if(CELStarted== null && DataDictionaries.EventCheckingDictionary["CELStarted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CELStarted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CELStarted"] = false;
+            }
+            else if(CELStarted != null && !DataDictionaries.EventCheckingDictionary["CELStarted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CELStarted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CELStarted"] = true;
+            }
+
+            if(CommodityInstrumentsResolved== null && DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CommodityInstrumentsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = false;
+            }
+            else if(CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CommodityInstrumentsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = true;
+            }
+
+            if(ConditionAdded== null && DataDictionaries.EventCheckingDictionary["ConditionAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionAdded"] = false;
+            }
+            else if(ConditionAdded != null && !DataDictionaries.EventCheckingDictionary["ConditionAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionAdded"] = true;
+            }
+
+            if(ConditionDefinitionsResolved== null && DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionDefinitionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"] = false;
+            }
+            else if(ConditionDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionDefinitionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"] = true;
+            }
+
+            if(ConditionInserted== null && DataDictionaries.EventCheckingDictionary["ConditionInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionInserted"] = false;
+            }
+            else if(ConditionInserted != null && !DataDictionaries.EventCheckingDictionary["ConditionInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionInserted"] = true;
+            }
+
+            if(ConditionRemoved== null && DataDictionaries.EventCheckingDictionary["ConditionRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionRemoved"] = false;
+            }
+            else if(ConditionRemoved != null && !DataDictionaries.EventCheckingDictionary["ConditionRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionRemoved"] = true;
+            }
+
+            if(ConditionResolved== null && DataDictionaries.EventCheckingDictionary["ConditionResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionResolved"] = false;
+            }
+            else if(ConditionResolved != null && !DataDictionaries.EventCheckingDictionary["ConditionResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionResolved"] = true;
+            }
+
+            if(ConditionUpdated== null && DataDictionaries.EventCheckingDictionary["ConditionUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConditionUpdated"] = false;
+            }
+            else if(ConditionUpdated != null && !DataDictionaries.EventCheckingDictionary["ConditionUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConditionUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConditionUpdated"] = true;
+            }
+
+            if(ConstantVolumeBarsAdded== null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"] = false;
+            }
+            else if(ConstantVolumeBarsAdded != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"] = true;
+            }
+
+            if(ConstantVolumeBarsInserted== null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"] = false;
+            }
+            else if(ConstantVolumeBarsInserted != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"] = true;
+            }
+
+            if(ConstantVolumeBarsRemoved== null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"] = false;
+            }
+            else if(ConstantVolumeBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"] = true;
+            }
+
+            if(ConstantVolumeBarsResolved== null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"] = false;
+            }
+            else if(ConstantVolumeBarsResolved != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"] = true;
+            }
+
+            if(ConstantVolumeBarsUpdated== null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"] = false;
+            }
+            else if(ConstantVolumeBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ConstantVolumeBarsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"] = true;
+            }
+
+            if(CurrencyRatesChanged== null && DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CurrencyRatesChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = false;
+            }
+            else if(CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CurrencyRatesChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = true;
+            }
+
+            if(CustomSessionsResolved== null && DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomSessionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"] = false;
+            }
+            else if(CustomSessionsResolved != null && !DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomSessionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"] = true;
+            }
+
+            if(CustomStudyAdded== null && DataDictionaries.EventCheckingDictionary["CustomStudyAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyAdded"] = false;
+            }
+            else if(CustomStudyAdded != null && !DataDictionaries.EventCheckingDictionary["CustomStudyAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyAdded"] = true;
+            }
+
+            if(CustomStudyDefinitionsResolved== null && DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyDefinitionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"] = false;
+            }
+            else if(CustomStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyDefinitionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"] = true;
+            }
+
+            if(CustomStudyInserted== null && DataDictionaries.EventCheckingDictionary["CustomStudyInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyInserted"] = false;
+            }
+            else if(CustomStudyInserted != null && !DataDictionaries.EventCheckingDictionary["CustomStudyInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyInserted"] = true;
+            }
+
+            if(CustomStudyRemoved== null && DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"] = false;
+            }
+            else if(CustomStudyRemoved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"] = true;
+            }
+
+            if(CustomStudyResolved== null && DataDictionaries.EventCheckingDictionary["CustomStudyResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyResolved"] = false;
+            }
+            else if(CustomStudyResolved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyResolved"] = true;
+            }
+
+            if(CustomStudyUpdated== null && DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"] = false;
+            }
+            else if(CustomStudyUpdated != null && !DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CustomStudyUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"] = true;
+            }
+
+            if(DataConnectionStatusChanged== null && DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataConnectionStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = false;
+            }
+            else if(DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataConnectionStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = true;
+            }
+
+            if(DataError== null && DataDictionaries.EventCheckingDictionary["DataError"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataError", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataError"] = false;
+            }
+            else if(DataError != null && !DataDictionaries.EventCheckingDictionary["DataError"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataError", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataError"] = true;
+            }
+
+            if(DataSourcesResolved== null && DataDictionaries.EventCheckingDictionary["DataSourcesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataSourcesResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataSourcesResolved"] = false;
+            }
+            else if(DataSourcesResolved != null && !DataDictionaries.EventCheckingDictionary["DataSourcesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataSourcesResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataSourcesResolved"] = true;
+            }
+
+            if(DataSourceSymbolsResolved== null && DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataSourceSymbolsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"] = false;
+            }
+            else if(DataSourceSymbolsResolved != null && !DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataSourceSymbolsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"] = true;
+            }
+
+            if(ExpressionAdded== null && DataDictionaries.EventCheckingDictionary["ExpressionAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionAdded"] = false;
+            }
+            else if(ExpressionAdded != null && !DataDictionaries.EventCheckingDictionary["ExpressionAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionAdded"] = true;
+            }
+
+            if(ExpressionInserted== null && DataDictionaries.EventCheckingDictionary["ExpressionInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionInserted"] = false;
+            }
+            else if(ExpressionInserted != null && !DataDictionaries.EventCheckingDictionary["ExpressionInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionInserted"] = true;
+            }
+
+            if(ExpressionRemoved== null && DataDictionaries.EventCheckingDictionary["ExpressionRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionRemoved"] = false;
+            }
+            else if(ExpressionRemoved != null && !DataDictionaries.EventCheckingDictionary["ExpressionRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionRemoved"] = true;
+            }
+
+            if(ExpressionResolved== null && DataDictionaries.EventCheckingDictionary["ExpressionResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionResolved"] = false;
+            }
+            else if(ExpressionResolved != null && !DataDictionaries.EventCheckingDictionary["ExpressionResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionResolved"] = true;
+            }
+
+            if(ExpressionUpdated== null && DataDictionaries.EventCheckingDictionary["ExpressionUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionUpdated"] = false;
+            }
+            else if(ExpressionUpdated != null && !DataDictionaries.EventCheckingDictionary["ExpressionUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ExpressionUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ExpressionUpdated"] = true;
+            }
+
+            if(GWConnectionStatusChanged== null && DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWConnectionStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = false;
+            }
+            else if(GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWConnectionStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = true;
+            }
+
+            if(GWEnvironmentChanged== null && DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWEnvironmentChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"] = false;
+            }
+            else if(GWEnvironmentChanged != null && !DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWEnvironmentChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"] = true;
+            }
+
+            if(HistoricalSessionsResolved== null && DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "HistoricalSessionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"] = false;
+            }
+            else if(HistoricalSessionsResolved != null && !DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "HistoricalSessionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"] = true;
+            }
+
+            if(ICConnectionStatusChanged== null && DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ICConnectionStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"] = false;
+            }
+            else if(ICConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ICConnectionStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"] = true;
+            }
+
+            if(IncorrectSymbol== null && DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IncorrectSymbol", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = false;
+            }
+            else if(IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IncorrectSymbol", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = true;
+            }
+
+            if(InstrumentChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = false;
+            }
+            else if(InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = true;
+            }
+
+            if(InstrumentDOMChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentDOMChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = false;
+            }
+            else if(InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentDOMChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = true;
+            }
+
+            if(InstrumentsGroupChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = false;
+            }
+            else if(InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = true;
+            }
+
+            if(InstrumentsGroupResolved== null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = false;
+            }
+            else if(InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = true;
+            }
+
+            if(InstrumentSubscribed== null && DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentSubscribed", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = false;
+            }
+            else if(InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentSubscribed", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = true;
+            }
+
+            if(IsReady== null && DataDictionaries.EventCheckingDictionary["IsReady"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IsReady", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["IsReady"] = false;
+            }
+            else if(IsReady != null && !DataDictionaries.EventCheckingDictionary["IsReady"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IsReady", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["IsReady"] = true;
+            }
+
+            if(LineTimeChanged== null && DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "LineTimeChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = false;
+            }
+            else if(LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "LineTimeChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = true;
+            }
+
+            if(ManualFillChanged== null && DataDictionaries.EventCheckingDictionary["ManualFillChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillChanged"] = false;
+            }
+            else if(ManualFillChanged != null && !DataDictionaries.EventCheckingDictionary["ManualFillChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillChanged"] = true;
+            }
+
+            if(ManualFillsResolved== null && DataDictionaries.EventCheckingDictionary["ManualFillsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillsResolved"] = false;
+            }
+            else if(ManualFillsResolved != null && !DataDictionaries.EventCheckingDictionary["ManualFillsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillsResolved"] = true;
+            }
+
+            if(ManualFillUpdateResolved== null && DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillUpdateResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"] = false;
+            }
+            else if(ManualFillUpdateResolved != null && !DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "ManualFillUpdateResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"] = true;
+            }
+
+            if(OnIdle== null && DataDictionaries.EventCheckingDictionary["OnIdle"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnIdle", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["OnIdle"] = false;
+            }
+            else if(OnIdle != null && !DataDictionaries.EventCheckingDictionary["OnIdle"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnIdle", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["OnIdle"] = true;
+            }
+
+            if(OnQueryProgress== null && DataDictionaries.EventCheckingDictionary["OnQueryProgress"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnQueryProgress", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["OnQueryProgress"] = false;
+            }
+            else if(OnQueryProgress != null && !DataDictionaries.EventCheckingDictionary["OnQueryProgress"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnQueryProgress", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["OnQueryProgress"] = true;
+            }
+
+            if(OrderChanged== null && DataDictionaries.EventCheckingDictionary["OrderChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OrderChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["OrderChanged"] = false;
+            }
+            else if(OrderChanged != null && !DataDictionaries.EventCheckingDictionary["OrderChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OrderChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["OrderChanged"] = true;
+            }
+
+            if(PasswordChanged== null && DataDictionaries.EventCheckingDictionary["PasswordChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PasswordChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PasswordChanged"] = false;
+            }
+            else if(PasswordChanged != null && !DataDictionaries.EventCheckingDictionary["PasswordChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PasswordChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PasswordChanged"] = true;
+            }
+
+            if(PointAndFigureBarsAdded== null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"] = false;
+            }
+            else if(PointAndFigureBarsAdded != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"] = true;
+            }
+
+            if(PointAndFigureBarsInserted== null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"] = false;
+            }
+            else if(PointAndFigureBarsInserted != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"] = true;
+            }
+
+            if(PointAndFigureBarsRemoved== null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"] = false;
+            }
+            else if(PointAndFigureBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"] = true;
+            }
+
+            if(PointAndFigureBarsResolved== null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"] = false;
+            }
+            else if(PointAndFigureBarsResolved != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"] = true;
+            }
+
+            if(PointAndFigureBarsUpdated== null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"] = false;
+            }
+            else if(PointAndFigureBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PointAndFigureBarsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"] = true;
+            }
+
+            if(PositionsStatementResolved== null && DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PositionsStatementResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"] = false;
+            }
+            else if(PositionsStatementResolved != null && !DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "PositionsStatementResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"] = true;
+            }
+
+            if(QFormulaDefinitionsResolved== null && DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "QFormulaDefinitionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"] = false;
+            }
+            else if(QFormulaDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "QFormulaDefinitionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"] = true;
+            }
+
+            if(StrategyDefinitionProgress== null && DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "StrategyDefinitionProgress", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"] = false;
+            }
+            else if(StrategyDefinitionProgress != null && !DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "StrategyDefinitionProgress", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"] = true;
+            }
+
+            if(SubMinuteBarsAdded== null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"] = false;
+            }
+            else if(SubMinuteBarsAdded != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"] = true;
+            }
+
+            if(SubMinuteBarsInserted== null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"] = false;
+            }
+            else if(SubMinuteBarsInserted != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"] = true;
+            }
+
+            if(SubMinuteBarsRemoved== null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"] = false;
+            }
+            else if(SubMinuteBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"] = true;
+            }
+
+            if(SubMinuteBarsResolved== null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"] = false;
+            }
+            else if(SubMinuteBarsResolved != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"] = true;
+            }
+
+            if(SubMinuteBarsUpdated== null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"] = false;
+            }
+            else if(SubMinuteBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SubMinuteBarsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"] = true;
+            }
+
+            if(SummariesStatementResolved== null && DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SummariesStatementResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"] = false;
+            }
+            else if(SummariesStatementResolved != null && !DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "SummariesStatementResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"] = true;
+            }
+
+            if(TFlowBarsAdded== null && DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"] = false;
+            }
+            else if(TFlowBarsAdded != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"] = true;
+            }
+
+            if(TFlowBarsInserted== null && DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"] = false;
+            }
+            else if(TFlowBarsInserted != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"] = true;
+            }
+
+            if(TFlowBarsRemoved== null && DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"] = false;
+            }
+            else if(TFlowBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"] = true;
+            }
+
+            if(TFlowBarsResolved== null && DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"] = false;
+            }
+            else if(TFlowBarsResolved != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"] = true;
+            }
+
+            if(TFlowBarsUpdated== null && DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"] = false;
+            }
+            else if(TFlowBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TFlowBarsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"] = true;
+            }
+
+            if(TicksAdded== null && DataDictionaries.EventCheckingDictionary["TicksAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TicksAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TicksAdded"] = false;
+            }
+            else if(TicksAdded != null && !DataDictionaries.EventCheckingDictionary["TicksAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TicksAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TicksAdded"] = true;
+            }
+
+            if(TicksResolved== null && DataDictionaries.EventCheckingDictionary["TicksResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TicksResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TicksResolved"] = false;
+            }
+            else if(TicksResolved != null && !DataDictionaries.EventCheckingDictionary["TicksResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TicksResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TicksResolved"] = true;
+            }
+
+            if(TimedBarsAdded== null && DataDictionaries.EventCheckingDictionary["TimedBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsAdded"] = false;
+            }
+            else if(TimedBarsAdded != null && !DataDictionaries.EventCheckingDictionary["TimedBarsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsAdded"] = true;
+            }
+
+            if(TimedBarsInserted== null && DataDictionaries.EventCheckingDictionary["TimedBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsInserted"] = false;
+            }
+            else if(TimedBarsInserted != null && !DataDictionaries.EventCheckingDictionary["TimedBarsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsInserted"] = true;
+            }
+
+            if(TimedBarsRemoved== null && DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"] = false;
+            }
+            else if(TimedBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"] = true;
+            }
+
+            if(TimedBarsResolved== null && DataDictionaries.EventCheckingDictionary["TimedBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsResolved"] = false;
+            }
+            else if(TimedBarsResolved != null && !DataDictionaries.EventCheckingDictionary["TimedBarsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsResolved"] = true;
+            }
+
+            if(TimedBarsUpdated== null && DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"] = false;
+            }
+            else if(TimedBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TimedBarsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"] = true;
+            }
+
+            if(TradableCommoditiesResolved== null && DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradableCommoditiesResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"] = false;
+            }
+            else if(TradableCommoditiesResolved != null && !DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradableCommoditiesResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"] = true;
+            }
+
+            if(TradableExchangesResolved== null && DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradableExchangesResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"] = false;
+            }
+            else if(TradableExchangesResolved != null && !DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradableExchangesResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"] = true;
+            }
+
+            if(TradingSystemAddNotification== null && DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemAddNotification", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"] = false;
+            }
+            else if(TradingSystemAddNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemAddNotification", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"] = true;
+            }
+
+            if(TradingSystemDefinitionsResolved== null && DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemDefinitionsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"] = false;
+            }
+            else if(TradingSystemDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemDefinitionsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"] = true;
+            }
+
+            if(TradingSystemInsertNotification== null && DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemInsertNotification", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"] = false;
+            }
+            else if(TradingSystemInsertNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemInsertNotification", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"] = true;
+            }
+
+            if(TradingSystemRemoveNotification== null && DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemRemoveNotification", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"] = false;
+            }
+            else if(TradingSystemRemoveNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemRemoveNotification", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"] = true;
+            }
+
+            if(TradingSystemResolved== null && DataDictionaries.EventCheckingDictionary["TradingSystemResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemResolved"] = false;
+            }
+            else if(TradingSystemResolved != null && !DataDictionaries.EventCheckingDictionary["TradingSystemResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemResolved"] = true;
+            }
+
+            if(TradingSystemTradeRelationAddNotification== null && DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemTradeRelationAddNotification", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"] = false;
+            }
+            else if(TradingSystemTradeRelationAddNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemTradeRelationAddNotification", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"] = true;
+            }
+
+            if(TradingSystemUpdateNotification== null && DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemUpdateNotification", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"] = false;
+            }
+            else if(TradingSystemUpdateNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "TradingSystemUpdateNotification", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"] = true;
+            }
+
+            if(YieldsAdded== null && DataDictionaries.EventCheckingDictionary["YieldsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsAdded", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["YieldsAdded"] = false;
+            }
+            else if(YieldsAdded != null && !DataDictionaries.EventCheckingDictionary["YieldsAdded"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsAdded", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["YieldsAdded"] = true;
+            }
+
+            if(YieldsInserted== null && DataDictionaries.EventCheckingDictionary["YieldsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsInserted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["YieldsInserted"] = false;
+            }
+            else if(YieldsInserted != null && !DataDictionaries.EventCheckingDictionary["YieldsInserted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsInserted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["YieldsInserted"] = true;
+            }
+
+            if(YieldsRemoved== null && DataDictionaries.EventCheckingDictionary["YieldsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsRemoved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["YieldsRemoved"] = false;
+            }
+            else if(YieldsRemoved != null && !DataDictionaries.EventCheckingDictionary["YieldsRemoved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsRemoved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["YieldsRemoved"] = true;
+            }
+
+            if(YieldsResolved== null && DataDictionaries.EventCheckingDictionary["YieldsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["YieldsResolved"] = false;
+            }
+            else if(YieldsResolved != null && !DataDictionaries.EventCheckingDictionary["YieldsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["YieldsResolved"] = true;
+            }
+
+            if(YieldsUpdated== null && DataDictionaries.EventCheckingDictionary["YieldsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsUpdated", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["YieldsUpdated"] = false;
+            }
+            else if(YieldsUpdated != null && !DataDictionaries.EventCheckingDictionary["YieldsUpdated"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "YieldsUpdated", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["YieldsUpdated"] = true;
+            }
+
         }
 
         #endregion
@@ -20395,6 +21520,8 @@ namespace FakeCQG
     {
         private string thisObjUnqKey;
 
+        private System.Timers.Timer eventCheckingTimer;
+
         #region Destructor
         ~CQGDirectEventsAccessorClass()
         {
@@ -20486,6 +21613,178 @@ namespace FakeCQG
             string name = "ToString";
             var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
+        }
+
+        #endregion
+
+        #region TimerTickHardler
+        private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            if(CELStarted== null && DataDictionaries.EventCheckingDictionary["CELStarted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CELStarted", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CELStarted"] = false;
+            }
+            else if(CELStarted != null && !DataDictionaries.EventCheckingDictionary["CELStarted"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CELStarted", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CELStarted"] = true;
+            }
+
+            if(CurrencyRatesChanged== null && DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CurrencyRatesChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = false;
+            }
+            else if(CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CurrencyRatesChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = true;
+            }
+
+            if(DataConnectionStatusChanged== null && DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataConnectionStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = false;
+            }
+            else if(DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataConnectionStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = true;
+            }
+
+            if(DataError== null && DataDictionaries.EventCheckingDictionary["DataError"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataError", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["DataError"] = false;
+            }
+            else if(DataError != null && !DataDictionaries.EventCheckingDictionary["DataError"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "DataError", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["DataError"] = true;
+            }
+
+            if(GWConnectionStatusChanged== null && DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWConnectionStatusChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = false;
+            }
+            else if(GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "GWConnectionStatusChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = true;
+            }
+
+            if(IsReady== null && DataDictionaries.EventCheckingDictionary["IsReady"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IsReady", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["IsReady"] = false;
+            }
+            else if(IsReady != null && !DataDictionaries.EventCheckingDictionary["IsReady"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IsReady", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["IsReady"] = true;
+            }
+
+            if(LineTimeChanged== null && DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "LineTimeChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = false;
+            }
+            else if(LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "LineTimeChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = true;
+            }
+
+            if(OnIdle== null && DataDictionaries.EventCheckingDictionary["OnIdle"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnIdle", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["OnIdle"] = false;
+            }
+            else if(OnIdle != null && !DataDictionaries.EventCheckingDictionary["OnIdle"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "OnIdle", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["OnIdle"] = true;
+            }
+
+            if(CommodityInstrumentsResolved== null && DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CommodityInstrumentsResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = false;
+            }
+            else if(CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "CommodityInstrumentsResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = true;
+            }
+
+            if(IncorrectSymbol== null && DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IncorrectSymbol", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = false;
+            }
+            else if(IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "IncorrectSymbol", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = true;
+            }
+
+            if(InstrumentChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = false;
+            }
+            else if(InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = true;
+            }
+
+            if(InstrumentDOMChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentDOMChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = false;
+            }
+            else if(InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentDOMChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = true;
+            }
+
+            if(InstrumentsGroupChanged== null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupChanged", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = false;
+            }
+            else if(InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupChanged", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = true;
+            }
+
+            if(InstrumentsGroupResolved== null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupResolved", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = false;
+            }
+            else if(InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentsGroupResolved", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = true;
+            }
+
+            if(InstrumentSubscribed== null && DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentSubscribed", new object[] {"-"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = false;
+            }
+            else if(InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
+            {
+                    bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, thisObjUnqKey, "InstrumentSubscribed", new object[] {"+"});
+                    DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = true;
+            }
+
         }
 
         #endregion
