@@ -64,9 +64,12 @@ namespace FakeCQG
             try
             {
                 answer = collAnswer.Find(filter).First();
-                answer.ArgValues[0] = "!";
-                answer.ArgValues[1] = args;
-
+                var argValues = new Dictionary<int, object>();
+                argValues.Add(0, "!");
+                argValues.Add(1, args);
+                var update = Builders<AnswerInfo>.Update.Set("ArgValues", argValues);
+                //TODO: deserialize argValues from dictionary to bson
+                //collAnswer.UpdateOne(filter, update);
             }
             catch (Exception ex)
             {
@@ -272,7 +275,8 @@ namespace FakeCQG
             catch (Exception ex)
             {
                 OnLogChange(id, "null", false);
-                return default(AnswerInfo);
+                //TODO: Create type of exception for  variant "no answer"
+                throw new Exception("No answer in MongoDB");
             }
         }
         public static Task<bool> CheckQueryAsync(string Id)
