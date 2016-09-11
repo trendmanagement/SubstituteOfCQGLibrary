@@ -401,6 +401,7 @@ namespace UnitTestFakeCQG
         }
 
         string NoAnswerMessage = string.Empty;
+        //TODO: uncomment if not - const int QueryTemeout = int.MaxValue
         [TestMethod]
         public void Method_ExecuteTheQuery_TimerElapsed()
         {
@@ -409,6 +410,7 @@ namespace UnitTestFakeCQG
             string name = "name";
             Timer timer = new Timer();
             bool isThrownException = false;
+            FakeCQG.CQG.QueryTemeout = 1000;
             FakeCQG.CQG.LogChange += CQG_LogChange_NoAnswer;
             Task.Run(async () =>
             {
@@ -425,7 +427,7 @@ namespace UnitTestFakeCQG
                 var answer = FakeCQG.CQG.ExecuteTheQuery(queryType, string.Empty, name, null);
                 Assert.Fail("An exception should have been thrown");
             }
-            catch(Exception ex)
+            catch(TimeoutException ex)
             {
                 isThrownException = (ex == null) ? false : true;
             }

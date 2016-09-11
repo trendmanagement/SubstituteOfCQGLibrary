@@ -36,7 +36,8 @@ namespace FakeCQG
         public string Key { get; set; }
         const int index = 0;
         const int maxRequestTime = 30000;       // 30s
-        const int QueryTemeout = int.MaxValue;  // Currently set to the max value for debugging
+        //Changed the access level of visibility for testing
+        public static int QueryTemeout = int.MaxValue;  // Currently set to the max value for debugging
         const string IdName = "Key";
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
         static System.Timers.Timer timer;
@@ -274,9 +275,10 @@ namespace FakeCQG
             }
             catch (Exception ex)
             {
-                OnLogChange(id, "null", false);
-                //TODO: Create type of exception for  variant "no answer"
-                throw new Exception("No answer in MongoDB");
+                //OnLogChange(id, "null", false);
+                return GetAnswerData(id);
+                ////TODO: Create type of exception for  variant "no answer"
+                //throw new Exception("No answer in MongoDB");
             }
         }
         public static Task<bool> CheckQueryAsync(string Id)
