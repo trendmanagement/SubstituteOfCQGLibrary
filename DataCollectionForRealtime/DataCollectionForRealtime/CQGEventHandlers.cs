@@ -42,7 +42,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_advanced_study, index_};
 
@@ -50,7 +50,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_advanced_study, index_};
 
@@ -66,7 +66,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_advanced_study, index_};
 
@@ -74,7 +74,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props)
+        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(String guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props)
         {
             object[] args = new object[4] {"!", guid_, main_params, custom_props};
 
@@ -82,7 +82,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(string guid_, CQGError cqg_error)
+        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(String guid_, CQGError cqg_error)
         {
             object[] args = new object[3] {"!", guid_, cqg_error};
 
@@ -120,7 +120,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
         {
             object[] args = new object[4] {"!", commodity_name, instrument_types, cqg_commodity_intruments};
 
@@ -144,7 +144,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQGCondition cqg_condition, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_condition, index_};
 
@@ -152,7 +152,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQGCondition cqg_condition, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_condition, index_};
 
@@ -168,7 +168,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQGCondition cqg_condition, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_condition, index_};
 
@@ -184,7 +184,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_constant_volume_bars, index_};
 
@@ -192,7 +192,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_constant_volume_bars, index_};
 
@@ -208,7 +208,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_constant_volume_bars, index_};
 
@@ -248,7 +248,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_custom_study, index_};
 
@@ -256,7 +256,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_custom_study, index_};
 
@@ -272,7 +272,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_custom_study, index_};
 
@@ -288,7 +288,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
+        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
             object[] args = new object[3] {"!", cqg_error, error_description};
 
@@ -304,7 +304,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error)
+        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(String data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error)
         {
             object[] args = new object[4] {"!", data_source_abbreviation, cqg_data_source_symbols, cqg_error};
 
@@ -320,7 +320,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQGExpression cqg_expression, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_expression, index_};
 
@@ -328,7 +328,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQGExpression cqg_expression, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_expression, index_};
 
@@ -344,7 +344,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQGExpression cqg_expression, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_expression, index_};
 
@@ -360,7 +360,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(eGWEnvChangeCode event_code, int account_id, int phase_)
+        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_)
         {
             object[] args = new object[4] {"!", event_code, account_id, phase_};
 
@@ -384,7 +384,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
+        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
             object[] args = new object[2] {"!", symbol_};
 
@@ -424,7 +424,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQGInstrument cqg_instrument)
+        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQGInstrument cqg_instrument)
         {
             object[] args = new object[3] {"!", symbol_, cqg_instrument};
 
@@ -510,7 +510,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_point_and_figure_bars, index_};
 
@@ -518,7 +518,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_point_and_figure_bars, index_};
 
@@ -534,7 +534,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_point_and_figure_bars, index_};
 
@@ -574,7 +574,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_subminute_bars, index_};
 
@@ -582,7 +582,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_subminute_bars, index_};
 
@@ -598,7 +598,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_subminute_bars, index_};
 
@@ -622,7 +622,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_tflow_bars, index_};
 
@@ -630,7 +630,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_tflow_bars, index_};
 
@@ -646,7 +646,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_tflow_bars, index_};
 
@@ -654,7 +654,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQGTicks cqg_ticks, int added_ticks_count)
+        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQGTicks cqg_ticks, Int32 added_ticks_count)
         {
             object[] args = new object[3] {"!", cqg_ticks, added_ticks_count};
 
@@ -678,7 +678,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_timed_bars, index_};
 
@@ -686,7 +686,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_timed_bars, index_};
 
@@ -702,7 +702,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_timed_bars, index_};
 
@@ -710,7 +710,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(Int32 gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error)
         {
             object[] args = new object[4] {"!", gw_account_id, cqg_commodities, cqg_error};
 
@@ -718,7 +718,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(Int32 gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error)
         {
             object[] args = new object[4] {"!", gw_account_id, cqg_exchanges, cqg_error};
 
@@ -790,7 +790,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQGYields cqg_yields, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_yields, index_};
 
@@ -798,7 +798,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQGYields cqg_yields, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_yields, index_};
 
@@ -814,7 +814,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQGYields cqg_yields, Int32 index_)
         {
             object[] args = new object[3] {"!", cqg_yields, index_};
 
@@ -844,7 +844,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
+        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
             object[] args = new object[3] {"!", cqg_error, error_description};
 
@@ -882,7 +882,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
         {
             object[] args = new object[4] {"!", commodity_name, instrument_types, cqg_commodity_intruments};
 
@@ -890,7 +890,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
+        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
             object[] args = new object[2] {"!", symbol_};
 
@@ -930,7 +930,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQGInstrument cqg_instrument)
+        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQGInstrument cqg_instrument)
         {
             object[] args = new object[3] {"!", symbol_, cqg_instrument};
 

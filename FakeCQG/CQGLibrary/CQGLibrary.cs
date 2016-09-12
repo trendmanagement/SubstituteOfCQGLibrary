@@ -904,17 +904,17 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler(CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_AdvancedStudyResolvedEventHandler(CQGAdvancedStudy cqg_advanced_study, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
+    public delegate void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(String guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
 
-    public delegate void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(string guid_, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(String guid_, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_AllOrdersCanceledEventHandler(eOrderSideFilter order_side, CQGIntegerCollection gw_account_ids, CQGStringCollection instrument_names);
 
@@ -924,29 +924,29 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_CELStartedEventHandler();
 
-    public delegate void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+    public delegate void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
     public delegate void _ICQGCELEvents_ConditionAddedEventHandler(CQGCondition cqg_condition);
 
     public delegate void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandler(CQGConditionDefinitions cqg_condition_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConditionInsertedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionInsertedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ConditionRemovedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionRemovedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConditionResolvedEventHandler(CQGCondition cqg_condition, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConditionUpdatedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionUpdatedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_CurrencyRatesChangedEventHandler(CQGCurrencyRates cqg_currency_rates);
 
@@ -956,41 +956,41 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler(CQGCustomStudyDefinitions cqg_custom_study_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_CustomStudyInsertedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyInsertedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_CustomStudyRemovedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyRemovedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_CustomStudyResolvedEventHandler(CQGCustomStudy cqg_custom_study, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_DataConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_DataErrorEventHandler(object cqg_error, string error_description);
+    public delegate void _ICQGCELEvents_DataErrorEventHandler(Object cqg_error, String error_description);
 
     public delegate void _ICQGCELEvents_DataSourcesResolvedEventHandler(CQGDataSources cqg_data_sources, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(String data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_ExpressionAddedEventHandler(CQGExpression cqg_expression);
 
-    public delegate void _ICQGCELEvents_ExpressionInsertedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionInsertedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ExpressionRemovedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionRemovedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
     public delegate void _ICQGCELEvents_ExpressionResolvedEventHandler(CQGExpression cqg_expression, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ExpressionUpdatedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionUpdatedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
     public delegate void _ICQGCELEvents_GWConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_GWEnvironmentChangedEventHandler(eGWEnvChangeCode event_code, int account_id, int phase_);
+    public delegate void _ICQGCELEvents_GWEnvironmentChangedEventHandler(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_);
 
     public delegate void _ICQGCELEvents_HistoricalSessionsResolvedEventHandler(CQGSessionsCollection cqg_historical_sessions, CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_ICConnectionStatusChangedEventHandler(eICConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_IncorrectSymbolEventHandler(string symbol_);
+    public delegate void _ICQGCELEvents_IncorrectSymbolEventHandler(String symbol_);
 
     public delegate void _ICQGCELEvents_InstrumentChangedEventHandler(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1000,7 +1000,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_InstrumentsGroupResolvedEventHandler(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_InstrumentSubscribedEventHandler(string symbol_, CQGInstrument cqg_instrument);
+    public delegate void _ICQGCELEvents_InstrumentSubscribedEventHandler(String symbol_, CQGInstrument cqg_instrument);
 
     public delegate void _ICQGCELEvents_IsReadyEventHandler(ref eReadyStatus ready_status);
 
@@ -1022,13 +1022,13 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_PointAndFigureBarsAddedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_PositionsStatementResolvedEventHandler(CQGPositionsStatement cqg_positions_statement, CQGError cqg_error);
 
@@ -1038,43 +1038,43 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_SubMinuteBarsAddedEventHandler(CQGSubMinuteBars cqg_submintue_bars);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_SubMinuteBarsResolvedEventHandler(CQGSubMinuteBars cqg_subminte_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_SummariesStatementResolvedEventHandler(CQGSummariesStatement cqg_summaries_statement, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TFlowBarsAddedEventHandler(CQGTFlowBars cqg_tflow_bars);
 
-    public delegate void _ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_TFlowBarsResolvedEventHandler(CQGTFlowBars cqg_tflow_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TicksAddedEventHandler(CQGTicks cqg_ticks, int added_ticks_count);
+    public delegate void _ICQGCELEvents_TicksAddedEventHandler(CQGTicks cqg_ticks, Int32 added_ticks_count);
 
     public delegate void _ICQGCELEvents_TicksResolvedEventHandler(CQGTicks cqg_ticks, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TimedBarsAddedEventHandler(CQGTimedBars cqg_timed_bars);
 
-    public delegate void _ICQGCELEvents_TimedBarsInsertedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsInsertedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TimedBarsRemovedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsRemovedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_TimedBarsResolvedEventHandler(CQGTimedBars cqg_timed_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TradableCommoditiesResolvedEventHandler(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_TradableCommoditiesResolvedEventHandler(Int32 gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TradableExchangesResolvedEventHandler(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_TradableExchangesResolvedEventHandler(Int32 gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TradingSystemAddNotificationEventHandler(CQGTradingSystem cqg_trading_system, CQGTradingSystemAddInfo cqg_trading_system_add_info);
 
@@ -1092,13 +1092,13 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_YieldsAddedEventHandler(CQGYields cqg_yields);
 
-    public delegate void _ICQGCELEvents_YieldsInsertedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsInsertedEventHandler(CQGYields cqg_yields, Int32 index_);
 
-    public delegate void _ICQGCELEvents_YieldsRemovedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsRemovedEventHandler(CQGYields cqg_yields, Int32 index_);
 
     public delegate void _ICQGCELEvents_YieldsResolvedEventHandler(CQGYields cqg_yields, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_YieldsUpdatedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsUpdatedEventHandler(CQGYields cqg_yields, Int32 index_);
 
     public delegate void _ICQGCELGeneralEvents_CELStartedEventHandler();
 
@@ -1106,7 +1106,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELGeneralEvents_DataErrorEventHandler(object cqg_error, string error_description);
+    public delegate void _ICQGCELGeneralEvents_DataErrorEventHandler(Object cqg_error, String error_description);
 
     public delegate void _ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
@@ -1116,9 +1116,9 @@ namespace FakeCQG
 
     public delegate void _ICQGCELGeneralEvents_OnIdleEventHandler();
 
-    public delegate void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+    public delegate void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
-    public delegate void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(string symbol_);
+    public delegate void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(String symbol_);
 
     public delegate void _ICQGCELInstrumentEvents_InstrumentChangedEventHandler(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1128,7 +1128,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-    public delegate void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(string symbol_, CQGInstrument cqg_instrument);
+    public delegate void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(String symbol_, CQGInstrument cqg_instrument);
 
     #endregion
 
@@ -1142,17 +1142,17 @@ namespace FakeCQG
 
         void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQGError cqg_error);
 
-        void AdvancedStudyInserted(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyInserted(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-        void AdvancedStudyRemoved(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyRemoved(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
         void AdvancedStudyResolved(CQGAdvancedStudy cqg_advanced_study, CQGError cqg_error);
 
-        void AdvancedStudyUpdated(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyUpdated(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-        void AlgorithmicOrderPlaced(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
+        void AlgorithmicOrderPlaced(String guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
 
-        void AlgorithmicOrderRegistrationComplete(string guid_, CQGError cqg_error);
+        void AlgorithmicOrderRegistrationComplete(String guid_, CQGError cqg_error);
 
         void AllOrdersCanceled(eOrderSideFilter order_side, CQGIntegerCollection gw_account_ids, CQGStringCollection instrument_names);
 
@@ -1162,29 +1162,29 @@ namespace FakeCQG
 
         void CELStarted();
 
-        void CommodityInstrumentsResolved(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+        void CommodityInstrumentsResolved(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
         void ConditionAdded(CQGCondition cqg_condition);
 
         void ConditionDefinitionsResolved(CQGConditionDefinitions cqg_condition_definitions, CQGError cqg_error);
 
-        void ConditionInserted(CQGCondition cqg_condition, int index_);
+        void ConditionInserted(CQGCondition cqg_condition, Int32 index_);
 
-        void ConditionRemoved(CQGCondition cqg_condition, int index_);
+        void ConditionRemoved(CQGCondition cqg_condition, Int32 index_);
 
         void ConditionResolved(CQGCondition cqg_condition, CQGError cqg_error);
 
-        void ConditionUpdated(CQGCondition cqg_condition, int index_);
+        void ConditionUpdated(CQGCondition cqg_condition, Int32 index_);
 
         void ConstantVolumeBarsAdded(CQGConstantVolumeBars cqg_constant_volume_bars);
 
-        void ConstantVolumeBarsInserted(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsInserted(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
-        void ConstantVolumeBarsRemoved(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsRemoved(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
         void ConstantVolumeBarsResolved(CQGConstantVolumeBars cqg_constant_volume_bars, CQGError cqg_error);
 
-        void ConstantVolumeBarsUpdated(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsUpdated(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
         void CurrencyRatesChanged(CQGCurrencyRates cqg_currency_rates);
 
@@ -1194,41 +1194,41 @@ namespace FakeCQG
 
         void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions cqg_custom_study_definitions, CQGError cqg_error);
 
-        void CustomStudyInserted(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyInserted(CQGCustomStudy cqg_custom_study, Int32 index_);
 
-        void CustomStudyRemoved(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyRemoved(CQGCustomStudy cqg_custom_study, Int32 index_);
 
         void CustomStudyResolved(CQGCustomStudy cqg_custom_study, CQGError cqg_error);
 
-        void CustomStudyUpdated(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyUpdated(CQGCustomStudy cqg_custom_study, Int32 index_);
 
         void DataConnectionStatusChanged(eConnectionStatus new_status);
 
-        void DataError(object cqg_error, string error_description);
+        void DataError(Object cqg_error, String error_description);
 
         void DataSourcesResolved(CQGDataSources cqg_data_sources, CQGError cqg_error);
 
-        void DataSourceSymbolsResolved(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
+        void DataSourceSymbolsResolved(String data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
 
         void ExpressionAdded(CQGExpression cqg_expression);
 
-        void ExpressionInserted(CQGExpression cqg_expression, int index_);
+        void ExpressionInserted(CQGExpression cqg_expression, Int32 index_);
 
-        void ExpressionRemoved(CQGExpression cqg_expression, int index_);
+        void ExpressionRemoved(CQGExpression cqg_expression, Int32 index_);
 
         void ExpressionResolved(CQGExpression cqg_expression, CQGError cqg_error);
 
-        void ExpressionUpdated(CQGExpression cqg_expression, int index_);
+        void ExpressionUpdated(CQGExpression cqg_expression, Int32 index_);
 
         void GWConnectionStatusChanged(eConnectionStatus new_status);
 
-        void GWEnvironmentChanged(eGWEnvChangeCode event_code, int account_id, int phase_);
+        void GWEnvironmentChanged(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_);
 
         void HistoricalSessionsResolved(CQGSessionsCollection cqg_historical_sessions, CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQGError cqg_error);
 
         void ICConnectionStatusChanged(eICConnectionStatus new_status);
 
-        void IncorrectSymbol(string symbol_);
+        void IncorrectSymbol(String symbol_);
 
         void InstrumentChanged(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1238,7 +1238,7 @@ namespace FakeCQG
 
         void InstrumentsGroupResolved(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-        void InstrumentSubscribed(string symbol_, CQGInstrument cqg_instrument);
+        void InstrumentSubscribed(String symbol_, CQGInstrument cqg_instrument);
 
         void IsReady(ref eReadyStatus ready_status);
 
@@ -1260,13 +1260,13 @@ namespace FakeCQG
 
         void PointAndFigureBarsAdded(CQGPointAndFigureBars cqg_point_and_figure_bars);
 
-        void PointAndFigureBarsInserted(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsInserted(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
-        void PointAndFigureBarsRemoved(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsRemoved(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
         void PointAndFigureBarsResolved(CQGPointAndFigureBars cqg_point_and_figure_bars, CQGError cqg_error);
 
-        void PointAndFigureBarsUpdated(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsUpdated(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
         void PositionsStatementResolved(CQGPositionsStatement cqg_positions_statement, CQGError cqg_error);
 
@@ -1276,43 +1276,43 @@ namespace FakeCQG
 
         void SubMinuteBarsAdded(CQGSubMinuteBars cqg_submintue_bars);
 
-        void SubMinuteBarsInserted(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsInserted(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
-        void SubMinuteBarsRemoved(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsRemoved(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
         void SubMinuteBarsResolved(CQGSubMinuteBars cqg_subminte_bars, CQGError cqg_error);
 
-        void SubMinuteBarsUpdated(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsUpdated(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
         void SummariesStatementResolved(CQGSummariesStatement cqg_summaries_statement, CQGError cqg_error);
 
         void TFlowBarsAdded(CQGTFlowBars cqg_tflow_bars);
 
-        void TFlowBarsInserted(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsInserted(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-        void TFlowBarsRemoved(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsRemoved(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
         void TFlowBarsResolved(CQGTFlowBars cqg_tflow_bars, CQGError cqg_error);
 
-        void TFlowBarsUpdated(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsUpdated(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-        void TicksAdded(CQGTicks cqg_ticks, int added_ticks_count);
+        void TicksAdded(CQGTicks cqg_ticks, Int32 added_ticks_count);
 
         void TicksResolved(CQGTicks cqg_ticks, CQGError cqg_error);
 
         void TimedBarsAdded(CQGTimedBars cqg_timed_bars);
 
-        void TimedBarsInserted(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsInserted(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-        void TimedBarsRemoved(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsRemoved(CQGTimedBars cqg_timed_bars, Int32 index_);
 
         void TimedBarsResolved(CQGTimedBars cqg_timed_bars, CQGError cqg_error);
 
-        void TimedBarsUpdated(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsUpdated(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-        void TradableCommoditiesResolved(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
+        void TradableCommoditiesResolved(Int32 gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
 
-        void TradableExchangesResolved(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
+        void TradableExchangesResolved(Int32 gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
 
         void TradingSystemAddNotification(CQGTradingSystem cqg_trading_system, CQGTradingSystemAddInfo cqg_trading_system_add_info);
 
@@ -1330,13 +1330,13 @@ namespace FakeCQG
 
         void YieldsAdded(CQGYields cqg_yields);
 
-        void YieldsInserted(CQGYields cqg_yields, int index_);
+        void YieldsInserted(CQGYields cqg_yields, Int32 index_);
 
-        void YieldsRemoved(CQGYields cqg_yields, int index_);
+        void YieldsRemoved(CQGYields cqg_yields, Int32 index_);
 
         void YieldsResolved(CQGYields cqg_yields, CQGError cqg_error);
 
-        void YieldsUpdated(CQGYields cqg_yields, int index_);
+        void YieldsUpdated(CQGYields cqg_yields, Int32 index_);
 
         #endregion
 
@@ -1560,7 +1560,7 @@ namespace FakeCQG
 
         void DataConnectionStatusChanged(eConnectionStatus new_status);
 
-        void DataError(object cqg_error, string error_description);
+        void DataError(Object cqg_error, String error_description);
 
         void GWConnectionStatusChanged(eConnectionStatus new_status);
 
@@ -1600,9 +1600,9 @@ namespace FakeCQG
     public interface _ICQGCELInstrumentEvents
     {
         #region Methods
-        void CommodityInstrumentsResolved(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+        void CommodityInstrumentsResolved(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
-        void IncorrectSymbol(string symbol_);
+        void IncorrectSymbol(String symbol_);
 
         void InstrumentChanged(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1612,7 +1612,7 @@ namespace FakeCQG
 
         void InstrumentsGroupResolved(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-        void InstrumentSubscribed(string symbol_, CQGInstrument cqg_instrument);
+        void InstrumentSubscribed(String symbol_, CQGInstrument cqg_instrument);
 
         #endregion
 
@@ -2325,7 +2325,7 @@ namespace FakeCQG
             get;
         }
 
-        bool AutoSubscribeInstruments
+        Boolean AutoSubscribeInstruments
         {
             get;
             set;
@@ -2346,7 +2346,7 @@ namespace FakeCQG
             get;
         }
 
-        string FcmAccountID
+        String FcmAccountID
         {
             get;
         }
@@ -2356,22 +2356,22 @@ namespace FakeCQG
             get;
         }
 
-        int FcmID
+        Int32 FcmID
         {
             get;
         }
 
-        string FcmName
+        String FcmName
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string GWAccountName
+        String GWAccountName
         {
             get;
         }
@@ -2397,7 +2397,7 @@ namespace FakeCQG
             set;
         }
 
-        string ReportingCurrency
+        String ReportingCurrency
         {
             get;
         }
@@ -2417,12 +2417,12 @@ namespace FakeCQG
             get;
         }
 
-        double TotalMarginValue
+        Double TotalMarginValue
         {
             get;
         }
 
-        double TotalPurchasingPower
+        Double TotalPurchasingPower
         {
             get;
         }
@@ -2434,17 +2434,17 @@ namespace FakeCQG
     public interface ICQGAccounts : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAccount this[int gw_account_id]
+        CQGAccount this[Int32 gw_account_id]
         {
             get;
         }
 
-        CQGAccount this[string fcm_account_id, int fcm_id]
+        CQGAccount this[String fcm_account_id, Int32 fcm_id]
         {
             get;
         }
@@ -2454,9 +2454,9 @@ namespace FakeCQG
         #region Methods
         void Add(CQGAccount cqg_account);
 
-        CQGAccount get_ItemByFCM(string fcm_account_id, int fcm_id);
+        CQGAccount get_ItemByFCM(String fcm_account_id, Int32 fcm_id);
 
-        CQGAccount get_ItemByIndex(int index_);
+        CQGAccount get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -2467,12 +2467,12 @@ namespace FakeCQG
     public interface ICQGAccountSummaries : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAccountSummary this[object index_]
+        CQGAccountSummary this[Object index_]
         {
             get;
         }
@@ -2494,12 +2494,12 @@ namespace FakeCQG
             get;
         }
 
-        string CurrencyName
+        String CurrencyName
         {
             get;
         }
 
-        bool ManualFillsInvolved
+        Boolean ManualFillsInvolved
         {
             get;
         }
@@ -2507,25 +2507,25 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        double Balance(int day_ = 0);
+        Double Balance(Int32 day_ = 0);
 
-        double CashExcess(int day_ = 1);
+        Double CashExcess(Int32 day_ = 1);
 
-        double Collaterals(int day_ = 1);
+        Double Collaterals(Int32 day_ = 1);
 
-        double InitialMargin(int day_ = 1);
+        Double InitialMargin(Int32 day_ = 1);
 
-        double MaintenanceMargin(int day_ = 1);
+        Double MaintenanceMargin(Int32 day_ = 1);
 
-        double MVO(int day_ = 0);
+        Double MVO(Int32 day_ = 0);
 
-        double NLV(int day_ = 0);
+        Double NLV(Int32 day_ = 0);
 
-        double OTE(int day_ = 0);
+        Double OTE(Int32 day_ = 0);
 
-        double ProfitLoss(int day_ = 1);
+        Double ProfitLoss(Int32 day_ = 1);
 
-        double UPL(int day_ = 0);
+        Double UPL(Int32 day_ = 0);
 
         #endregion
 
@@ -2534,17 +2534,17 @@ namespace FakeCQG
     public interface ICQGAdvancedStudies : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAdvancedStudy this[int index_]
+        CQGAdvancedStudy this[Int32 index_]
         {
             get;
         }
 
-        CQGAdvancedStudy this[string id_]
+        CQGAdvancedStudy this[String id_]
         {
             get;
         }
@@ -2552,7 +2552,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGAdvancedStudy get_ItemById(string id_);
+        CQGAdvancedStudy get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -2563,7 +2563,7 @@ namespace FakeCQG
     public interface ICQGAdvancedStudy : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -2583,12 +2583,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGCurves this[int index_]
+        CQGCurves this[Int32 index_]
         {
             get;
         }
@@ -2613,7 +2613,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -2622,13 +2622,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -2637,7 +2637,7 @@ namespace FakeCQG
     public interface ICQGAdvancedStudyDefinition
     {
         #region Properties
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
@@ -2647,7 +2647,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -2664,17 +2664,17 @@ namespace FakeCQG
     public interface ICQGAdvancedStudyDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAdvancedStudyDefinition this[int index_]
+        CQGAdvancedStudyDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGAdvancedStudyDefinition this[string advanced_study_abbreviation]
+        CQGAdvancedStudyDefinition this[String advanced_study_abbreviation]
         {
             get;
         }
@@ -2682,9 +2682,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGAdvancedStudyDefinition get_ItemByAbbreviation(string advanced_study_abbreviation);
+        CQGAdvancedStudyDefinition get_ItemByAbbreviation(String advanced_study_abbreviation);
 
-        CQGAdvancedStudyDefinition get_ItemByName(string advanced_study_name);
+        CQGAdvancedStudyDefinition get_ItemByName(String advanced_study_name);
 
         new IEnumerator GetEnumerator();
 
@@ -2695,7 +2695,7 @@ namespace FakeCQG
     public interface ICQGAdvancedStudyRequest
     {
         #region Properties
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -2707,7 +2707,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -2718,7 +2718,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -2730,37 +2730,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -2772,7 +2772,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -2784,7 +2784,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -2793,13 +2793,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void IncludeCurve(object curve_key);
+        void IncludeCurve(Object curve_key);
 
-        bool IsCurveIncluded(object curve_key);
+        Boolean IsCurveIncluded(Object curve_key);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -2808,19 +2808,19 @@ namespace FakeCQG
     public interface ICQGAlgorithmicOrderDefinition
     {
         #region Properties
-        object DefaultValue
+        Object DefaultValue
         {
             get;
             set;
         }
 
-        int DefaultValueIndex
+        Int32 DefaultValueIndex
         {
             get;
             set;
         }
 
-        string Name
+        String Name
         {
             get;
             set;
@@ -2832,7 +2832,7 @@ namespace FakeCQG
             set;
         }
 
-        string Unit
+        String Unit
         {
             get;
             set;
@@ -2846,7 +2846,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        void AddValue(string value_);
+        void AddValue(String value_);
 
         #endregion
 
@@ -2855,12 +2855,12 @@ namespace FakeCQG
     public interface ICQGAlgorithmicOrderDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAlgorithmicOrderDefinition this[int index_]
+        CQGAlgorithmicOrderDefinition this[Int32 index_]
         {
             get;
         }
@@ -2891,7 +2891,7 @@ namespace FakeCQG
             get;
         }
 
-        string ExecutionPattern
+        String ExecutionPattern
         {
             get;
         }
@@ -2901,17 +2901,17 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool Parked
+        Boolean Parked
         {
             get;
         }
@@ -2921,12 +2921,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -2936,17 +2936,17 @@ namespace FakeCQG
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
 
-        double TrailingOffset
+        Double TrailingOffset
         {
             get;
         }
 
-        int TriggerQuantity
+        Int32 TriggerQuantity
         {
             get;
         }
@@ -2956,7 +2956,7 @@ namespace FakeCQG
             get;
         }
 
-        int VisibleQuantity
+        Int32 VisibleQuantity
         {
             get;
         }
@@ -2968,12 +2968,12 @@ namespace FakeCQG
     public interface ICQGAlgorithmicOrderProperties : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAlgorithmicOrderProperty this[int index_]
+        CQGAlgorithmicOrderProperty this[Int32 index_]
         {
             get;
         }
@@ -2990,12 +2990,12 @@ namespace FakeCQG
     public interface ICQGAlgorithmicOrderProperty
     {
         #region Properties
-        string Name
+        String Name
         {
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
         }
@@ -3007,25 +3007,25 @@ namespace FakeCQG
     public interface ICQGAPIConfig
     {
         #region Properties
-        int AccountMarginAndPositionsThrottleInterval
+        Int32 AccountMarginAndPositionsThrottleInterval
         {
             get;
             set;
         }
 
-        int AgeToDeleteLogFileDays
+        Int32 AgeToDeleteLogFileDays
         {
             get;
             set;
         }
 
-        bool ApplyDaylightSavingChanges
+        Boolean ApplyDaylightSavingChanges
         {
             get;
             set;
         }
 
-        bool CollectionsThrowException
+        Boolean CollectionsThrowException
         {
             get;
             set;
@@ -3061,25 +3061,25 @@ namespace FakeCQG
             set;
         }
 
-        int DOMUpdatesPeriod
+        Int32 DOMUpdatesPeriod
         {
             get;
             set;
         }
 
-        bool FireEventOnChangedPrices
+        Boolean FireEventOnChangedPrices
         {
             get;
             set;
         }
 
-        bool GatewayEnabled
+        Boolean GatewayEnabled
         {
             get;
             set;
         }
 
-        bool IncludeOrderTransactions
+        Boolean IncludeOrderTransactions
         {
             get;
             set;
@@ -3091,7 +3091,7 @@ namespace FakeCQG
             set;
         }
 
-        int MaxLogFileCount
+        Int32 MaxLogFileCount
         {
             get;
             set;
@@ -3103,43 +3103,43 @@ namespace FakeCQG
             set;
         }
 
-        int MaxLogFileSize
+        Int32 MaxLogFileSize
         {
             get;
             set;
         }
 
-        int MessageProcessingTimeout
+        Int32 MessageProcessingTimeout
         {
             get;
             set;
         }
 
-        bool MetaDataEnabled
+        Boolean MetaDataEnabled
         {
             get;
             set;
         }
 
-        bool NewInstrumentChangeMode
+        Boolean NewInstrumentChangeMode
         {
             get;
             set;
         }
 
-        bool NewInstrumentMode
+        Boolean NewInstrumentMode
         {
             get;
             set;
         }
 
-        bool NonsynchronizedData
+        Boolean NonsynchronizedData
         {
             get;
             set;
         }
 
-        bool PendingOrderActionEnabled
+        Boolean PendingOrderActionEnabled
         {
             get;
             set;
@@ -3157,13 +3157,13 @@ namespace FakeCQG
             set;
         }
 
-        string ProviderPassword
+        String ProviderPassword
         {
             get;
             set;
         }
 
-        bool QueryAllAuthorizedTraders
+        Boolean QueryAllAuthorizedTraders
         {
             get;
             set;
@@ -3175,13 +3175,13 @@ namespace FakeCQG
             set;
         }
 
-        string RemoteOpenAPILoginService
+        String RemoteOpenAPILoginService
         {
             get;
             set;
         }
 
-        string RemoteOpenAPIServer
+        String RemoteOpenAPIServer
         {
             get;
             set;
@@ -3192,19 +3192,19 @@ namespace FakeCQG
             get;
         }
 
-        bool ReplaceLoginSession
+        Boolean ReplaceLoginSession
         {
             get;
             set;
         }
 
-        int SnapshotPeriod
+        Int32 SnapshotPeriod
         {
             get;
             set;
         }
 
-        bool StrategyManagerEnabled
+        Boolean StrategyManagerEnabled
         {
             get;
             set;
@@ -3216,13 +3216,13 @@ namespace FakeCQG
             set;
         }
 
-        bool UsedFromATLClient
+        Boolean UsedFromATLClient
         {
             get;
             set;
         }
 
-        bool UseOrderSide
+        Boolean UseOrderSide
         {
             get;
             set;
@@ -3231,7 +3231,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        void AddRemoteOpenAPIServer(string server_address);
+        void AddRemoteOpenAPIServer(String server_address);
 
         void ClearRemoteOpenAPIServers();
 
@@ -3242,17 +3242,17 @@ namespace FakeCQG
     public interface ICQGBarsTimestamps : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        DateTime this[int index_]
+        DateTime this[Int32 index_]
         {
             get;
         }
@@ -3401,7 +3401,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsStarted
+        Boolean IsStarted
         {
             get;
         }
@@ -3416,7 +3416,7 @@ namespace FakeCQG
             get;
         }
 
-        bool OTPRequired
+        Boolean OTPRequired
         {
             get;
         }
@@ -3424,29 +3424,29 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined);
+        void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined);
 
         void ActivateAllOrdersEx(CQGOrderActionRequest cqg_order_action_request);
 
-        void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, bool parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined);
+        void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined);
 
         void CancelAllOrdersEx(CQGOrderActionRequest cqg_order_action_request);
 
-        void ChangePassword(string username_, string old_password, string new_password);
+        void ChangePassword(String username_, String old_password, String new_password);
 
-        void ChangeRemoteOpenAPIServer(string server_address);
+        void ChangeRemoteOpenAPIServer(String server_address);
 
         CQGAccounts CreateAccountsCollection();
 
-        CQGAdvancedStudyRequest CreateAdvancedStudyRequest(string name_or_abbr);
+        CQGAdvancedStudyRequest CreateAdvancedStudyRequest(String name_or_abbr);
 
         CQGAlgorithmicOrderDefinitions CreateAlgorithmicOrderDefinitions();
 
-        CQGConditionRequest CreateConditionRequest(string condition_name);
+        CQGConditionRequest CreateConditionRequest(String condition_name);
 
         CQGConstantVolumeBarsRequest CreateConstantVolumeBarsRequest();
 
-        CQGCustomStudyRequest CreateCustomStudyRequest(string name_or_abbr);
+        CQGCustomStudyRequest CreateCustomStudyRequest(String name_or_abbr);
 
         CQGExecutionPattern CreateExecutionPattern(CQGStrategyDefinition cqg_definition = null, eOrderType order_type = eOrderType.otUndefined);
 
@@ -3460,19 +3460,19 @@ namespace FakeCQG
 
         CQGManualFillRequest CreateManualFillRequest(eManualFillUpdateType update_type, CQGManualFill manual_fill = null);
 
-        CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "");
+        CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "");
 
         CQGOrderActionRequest CreateOrderActionRequest();
 
-        CQGOrder CreateOrderByInstrumentName(eOrderType order_type, string instrument_name, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "");
+        CQGOrder CreateOrderByInstrumentName(eOrderType order_type, String instrument_name, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "");
 
         CQGOrderChain CreateOrderChain();
 
         CQGPointAndFigureBarsRequest CreatePointAndFigureBarsRequest();
 
-        CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "");
+        CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "");
 
-        CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, string expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "");
+        CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, String expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "");
 
         CQGSubMinuteBarsRequest CreateSubMinuteBarsRequest();
 
@@ -3482,35 +3482,35 @@ namespace FakeCQG
 
         CQGTimedBarsRequest CreateTimedBarsRequest();
 
-        CQGTradingSystemRequest CreateTradingSystemRequest(string name_or_abbr);
+        CQGTradingSystemRequest CreateTradingSystemRequest(String name_or_abbr);
 
         CQGYieldsRequest CreateYieldsRequest();
 
-        CQGStrategyDefinition DefineStrategy(string request_string_);
+        CQGStrategyDefinition DefineStrategy(String request_string_);
 
         void GWLogoff();
 
-        void GWLogon(string username_, string password_);
+        void GWLogon(String username_, String password_);
 
-        void GWOTPLogon(string username_, string password_, string otpassword_);
+        void GWOTPLogon(String username_, String password_, String otpassword_);
 
-        bool IsValid(object value_or_object);
+        Boolean IsValid(Object value_or_object);
 
-        void LogOn(string username_, string password_);
+        void LogOn(String username_, String password_);
 
-        void ModifyCompoundOrder(int compound_order_id, string compound_order_guid, CQGOrderChain order_chain);
+        void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain);
 
-        void NewInstrument(string symbol_);
+        void NewInstrument(String symbol_);
 
         void PlaceCompoundOrder(CQGOrderChain order_chain);
 
         CQGOrdersQuery QueryOrders(CQGAccount cqg_account, CQGInstrument cqg_instrument = null, eOrderStatusFilter status_filter = eOrderStatusFilter.osfAll, DateTime date_ = default(DateTime), eOrderSide order_side = eOrderSide.osdUndefined);
 
-        void QueryPositionsStatement(int gw_account_id, DateTime date_);
+        void QueryPositionsStatement(Int32 gw_account_id, DateTime date_);
 
-        void QuerySummariesStatement(int gw_account_id, DateTime date_);
+        void QuerySummariesStatement(Int32 gw_account_id, DateTime date_);
 
-        void RegisterAlgorithmicOrder(string guid_, string name_, string abbrv_, string description_, CQGAlgorithmicOrderDefinitions definitions_, int icon_index = 0);
+        void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0);
 
         void RemoveAdvancedStudy(CQGAdvancedStudy cqg_advanced_study);
 
@@ -3572,7 +3572,7 @@ namespace FakeCQG
 
         CQGBarsTimestamps RequestBarsTimestamps(CQGTimedBarsRequest cqg_timestamps_request);
 
-        void RequestCommodityInstruments(string commodity_name, eInstrumentType instrument_types, bool tradable_only = false);
+        void RequestCommodityInstruments(String commodity_name, eInstrumentType instrument_types, Boolean tradable_only = false);
 
         CQGCondition RequestCondition(CQGConditionRequest cqg_condition_request);
 
@@ -3588,15 +3588,15 @@ namespace FakeCQG
 
         void RequestDataSources();
 
-        void RequestDataSourceSymbols(string data_source_abbreviation);
+        void RequestDataSourceSymbols(String data_source_abbreviation);
 
         CQGExpression RequestExpression(CQGExpressionRequest cqg_expression_request);
 
         void RequestHistoricalSessions(CQGHistoricalSessionsRequest cqg_historical_sessions_request);
 
-        void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, bool trace_group_changes);
+        void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes);
 
-        void RequestManualFills(int gw_account_id, eManualFillsDataLevel update_level);
+        void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level);
 
         void RequestManualFillUpdate(CQGManualFillRequest cqg_manual_fill_request);
 
@@ -3612,9 +3612,9 @@ namespace FakeCQG
 
         CQGTimedBars RequestTimedBars(CQGTimedBarsRequest cqg_timed_bars_request);
 
-        void RequestTradableCommodities(int gw_account_id = 0);
+        void RequestTradableCommodities(Int32 gw_account_id = 0);
 
-        void RequestTradableExchanges(int gw_account_id = 0);
+        void RequestTradableExchanges(Int32 gw_account_id = 0);
 
         CQGTradingSystem RequestTradingSystem(CQGTradingSystemRequest cqg_trading_system_request);
 
@@ -3628,9 +3628,9 @@ namespace FakeCQG
 
         void SubscribeNewInstrument(CQGInstrumentSubscriptionRequest instrument_request);
 
-        void TerminateCQGIC(bool start_again = false);
+        void TerminateCQGIC(Boolean start_again = false);
 
-        void UnregisterAlgorithmicOrder(string guid_);
+        void UnregisterAlgorithmicOrder(String guid_);
 
         #endregion
 
@@ -3644,12 +3644,12 @@ namespace FakeCQG
             get;
         }
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGChangedTradeEntry this[int index_]
+        CQGChangedTradeEntry this[Int32 index_]
         {
             get;
         }
@@ -3705,12 +3705,12 @@ namespace FakeCQG
             get;
         }
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGChangedTradeExit this[int index_]
+        CQGChangedTradeExit this[Int32 index_]
         {
             get;
         }
@@ -3727,17 +3727,17 @@ namespace FakeCQG
     public interface ICQGCommodities : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -3754,17 +3754,17 @@ namespace FakeCQG
     public interface ICQGCommodityInstruments : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        bool IsTradableOnly
+        Boolean IsTradableOnly
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -3781,7 +3781,7 @@ namespace FakeCQG
     public interface ICQGCondition : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -3796,12 +3796,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGConditionResult this[int index_]
+        CQGConditionResult this[Int32 index_]
         {
             get;
         }
@@ -3826,7 +3826,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -3835,13 +3835,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -3850,7 +3850,7 @@ namespace FakeCQG
     public interface ICQGConditionDefinition
     {
         #region Properties
-        string Name
+        String Name
         {
             get;
         }
@@ -3867,17 +3867,17 @@ namespace FakeCQG
     public interface ICQGConditionDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGConditionDefinition this[int index_]
+        CQGConditionDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGConditionDefinition this[string condition_name]
+        CQGConditionDefinition this[String condition_name]
         {
             get;
         }
@@ -3885,7 +3885,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGConditionDefinition get_ItemByName(string condition_name);
+        CQGConditionDefinition get_ItemByName(String condition_name);
 
         new IEnumerator GetEnumerator();
 
@@ -3896,7 +3896,7 @@ namespace FakeCQG
     public interface ICQGConditionRequest
     {
         #region Properties
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -3908,7 +3908,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -3919,7 +3919,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -3931,37 +3931,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -3973,7 +3973,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -3985,7 +3985,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -3994,9 +3994,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -4010,7 +4010,7 @@ namespace FakeCQG
             get;
         }
 
-        bool Value
+        Boolean Value
         {
             get;
         }
@@ -4022,17 +4022,17 @@ namespace FakeCQG
     public interface ICQGConditions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCondition this[int index_]
+        CQGCondition this[Int32 index_]
         {
             get;
         }
 
-        CQGCondition this[string id_]
+        CQGCondition this[String id_]
         {
             get;
         }
@@ -4040,7 +4040,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGCondition get_ItemById(string id_);
+        CQGCondition get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -4051,62 +4051,62 @@ namespace FakeCQG
     public interface ICQGConstantVolumeBar
     {
         #region Properties
-        int ActualVolume
+        Int32 ActualVolume
         {
             get;
         }
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -4116,22 +4116,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -4143,7 +4143,7 @@ namespace FakeCQG
     public interface ICQGConstantVolumeBars : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -4153,12 +4153,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGConstantVolumeBar this[int index_]
+        CQGConstantVolumeBar this[Int32 index_]
         {
             get;
         }
@@ -4183,7 +4183,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -4192,11 +4192,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -4205,17 +4205,17 @@ namespace FakeCQG
     public interface ICQGConstantVolumeBarsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGConstantVolumeBars this[int index_]
+        CQGConstantVolumeBars this[Int32 index_]
         {
             get;
         }
 
-        CQGConstantVolumeBars this[string id_]
+        CQGConstantVolumeBars this[String id_]
         {
             get;
         }
@@ -4223,7 +4223,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGConstantVolumeBars get_ItemById(string id_);
+        CQGConstantVolumeBars get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -4240,43 +4240,43 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        bool IncludeFlatTicks
+        Boolean IncludeFlatTicks
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -4288,7 +4288,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -4300,19 +4300,19 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
         }
 
-        int VolumeLevel
+        Int32 VolumeLevel
         {
             get;
             set;
@@ -4331,7 +4331,7 @@ namespace FakeCQG
     public interface ICQGCurrencyRate
     {
         #region Properties
-        string BaseCurrencyName
+        String BaseCurrencyName
         {
             get;
         }
@@ -4341,17 +4341,17 @@ namespace FakeCQG
             get;
         }
 
-        string CurrencyName
+        String CurrencyName
         {
             get;
         }
 
-        int FcmID
+        Int32 FcmID
         {
             get;
         }
 
-        double Rate
+        Double Rate
         {
             get;
         }
@@ -4373,12 +4373,12 @@ namespace FakeCQG
     public interface ICQGCurrencyRates : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCurrencyRate this[int fcm_id, string currency_, string base_currency = ""]
+        CQGCurrencyRate this[Int32 fcm_id, String currency_, String base_currency = ""]
         {
             get;
         }
@@ -4395,7 +4395,7 @@ namespace FakeCQG
     public interface ICQGCurveDefinition
     {
         #region Properties
-        string Name
+        String Name
         {
             get;
         }
@@ -4407,17 +4407,17 @@ namespace FakeCQG
     public interface ICQGCurveDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCurveDefinition this[int index_]
+        CQGCurveDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGCurveDefinition this[string curve_name]
+        CQGCurveDefinition this[String curve_name]
         {
             get;
         }
@@ -4425,7 +4425,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGCurveDefinition get_ItemByName(string curve_name);
+        CQGCurveDefinition get_ItemByName(String curve_name);
 
         new IEnumerator GetEnumerator();
 
@@ -4436,12 +4436,12 @@ namespace FakeCQG
     public interface ICQGCurveHeaders : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -4458,12 +4458,12 @@ namespace FakeCQG
     public interface ICQGCurves : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        double this[object key_]
+        Double this[Object key_]
         {
             get;
         }
@@ -4473,7 +4473,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -4490,17 +4490,17 @@ namespace FakeCQG
     public interface ICQGCustomStudies : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCustomStudy this[int index_]
+        CQGCustomStudy this[Int32 index_]
         {
             get;
         }
 
-        CQGCustomStudy this[string id_]
+        CQGCustomStudy this[String id_]
         {
             get;
         }
@@ -4508,7 +4508,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGCustomStudy get_ItemById(string id_);
+        CQGCustomStudy get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -4519,7 +4519,7 @@ namespace FakeCQG
     public interface ICQGCustomStudy : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -4539,12 +4539,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGCurves this[int index_]
+        CQGCurves this[Int32 index_]
         {
             get;
         }
@@ -4569,7 +4569,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -4578,13 +4578,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -4593,7 +4593,7 @@ namespace FakeCQG
     public interface ICQGCustomStudyDefinition
     {
         #region Properties
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
@@ -4603,7 +4603,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -4620,17 +4620,17 @@ namespace FakeCQG
     public interface ICQGCustomStudyDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCustomStudyDefinition this[int index_]
+        CQGCustomStudyDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGCustomStudyDefinition this[string custom_study_abbreviation]
+        CQGCustomStudyDefinition this[String custom_study_abbreviation]
         {
             get;
         }
@@ -4638,9 +4638,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGCustomStudyDefinition get_ItemByAbbreviation(string custom_study_abbreviation);
+        CQGCustomStudyDefinition get_ItemByAbbreviation(String custom_study_abbreviation);
 
-        CQGCustomStudyDefinition get_ItemByName(string custom_study_name);
+        CQGCustomStudyDefinition get_ItemByName(String custom_study_name);
 
         new IEnumerator GetEnumerator();
 
@@ -4651,7 +4651,7 @@ namespace FakeCQG
     public interface ICQGCustomStudyRequest
     {
         #region Properties
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -4663,7 +4663,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -4674,7 +4674,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -4686,37 +4686,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -4728,7 +4728,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -4740,7 +4740,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -4749,13 +4749,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void IncludeCurve(object curve_key);
+        void IncludeCurve(Object curve_key);
 
-        bool IsCurveIncluded(object curve_key);
+        Boolean IsCurveIncluded(Object curve_key);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -4764,12 +4764,12 @@ namespace FakeCQG
     public interface ICQGDataSource
     {
         #region Properties
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -4791,17 +4791,17 @@ namespace FakeCQG
     public interface ICQGDataSources : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGDataSource this[int index_]
+        CQGDataSource this[Int32 index_]
         {
             get;
         }
 
-        CQGDataSource this[string data_source_abbreviation]
+        CQGDataSource this[String data_source_abbreviation]
         {
             get;
         }
@@ -4809,7 +4809,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGDataSource get_ItemByAbbreviation(string data_source_abbreviation);
+        CQGDataSource get_ItemByAbbreviation(String data_source_abbreviation);
 
         new IEnumerator GetEnumerator();
 
@@ -4820,12 +4820,12 @@ namespace FakeCQG
     public interface ICQGDataSourceSymbol
     {
         #region Properties
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
@@ -4842,17 +4842,17 @@ namespace FakeCQG
     public interface ICQGDataSourceSymbols : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string DataSourceAbbreviation
+        String DataSourceAbbreviation
         {
             get;
         }
 
-        CQGDataSourceSymbol this[int index_]
+        CQGDataSourceSymbol this[Int32 index_]
         {
             get;
         }
@@ -4873,17 +4873,17 @@ namespace FakeCQG
     public interface ICQGDOMQuotes : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGQuote this[int index_]
+        CQGQuote this[Int32 index_]
         {
             get;
         }
 
-        CQGQuote this[double price_, bool round_to_better = true]
+        CQGQuote this[Double price_, Boolean round_to_better = true]
         {
             get;
         }
@@ -4891,7 +4891,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGQuote get_ItemByPrice(double price_, bool round_to_better = true);
+        CQGQuote get_ItemByPrice(Double price_, Boolean round_to_better = true);
 
         new IEnumerator GetEnumerator();
 
@@ -4907,17 +4907,17 @@ namespace FakeCQG
             get;
         }
 
-        string CELVersion
+        String CELVersion
         {
             get;
         }
 
-        int CQGSerialNumber
+        Int32 CQGSerialNumber
         {
             get;
         }
 
-        string CQGVersion
+        String CQGVersion
         {
             get;
         }
@@ -4932,7 +4932,7 @@ namespace FakeCQG
             get;
         }
 
-        string GWLogonName
+        String GWLogonName
         {
             get;
         }
@@ -4952,12 +4952,12 @@ namespace FakeCQG
             get;
         }
 
-        int MessagesPending
+        Int32 MessagesPending
         {
             get;
         }
 
-        int OrdersPending
+        Int32 OrdersPending
         {
             get;
         }
@@ -4974,17 +4974,17 @@ namespace FakeCQG
     public interface ICQGError
     {
         #region Properties
-        int Code
+        Int32 Code
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
 
-        object Owner
+        Object Owner
         {
             get;
         }
@@ -4996,17 +4996,17 @@ namespace FakeCQG
     public interface ICQGExchanges : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -5028,7 +5028,7 @@ namespace FakeCQG
             get;
         }
 
-        string PatternString
+        String PatternString
         {
             get;
         }
@@ -5040,7 +5040,7 @@ namespace FakeCQG
     public interface ICQGExecutionPatternParameter
     {
         #region Properties
-        string Name
+        String Name
         {
             get;
         }
@@ -5055,7 +5055,7 @@ namespace FakeCQG
             get;
         }
 
-        string Value
+        String Value
         {
             get;
             set;
@@ -5068,12 +5068,12 @@ namespace FakeCQG
     public interface ICQGExecutionPatternParameters : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGExecutionPatternParameter this[object index_]
+        CQGExecutionPatternParameter this[Object index_]
         {
             get;
         }
@@ -5081,11 +5081,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGExecutionPatternParameter Add(string name_, eExecutionPatternParameterType type_, string value_ = "");
+        CQGExecutionPatternParameter Add(String name_, eExecutionPatternParameterType type_, String value_ = "");
 
         new IEnumerator GetEnumerator();
 
-        void Remove(object index_);
+        void Remove(Object index_);
 
         #endregion
 
@@ -5094,7 +5094,7 @@ namespace FakeCQG
     public interface ICQGExpression : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -5104,12 +5104,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGExpressionOutputs this[int index_]
+        CQGExpressionOutputs this[Int32 index_]
         {
             get;
         }
@@ -5139,7 +5139,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -5148,13 +5148,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -5163,12 +5163,12 @@ namespace FakeCQG
     public interface ICQGExpressionOutputHeaders : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -5185,12 +5185,12 @@ namespace FakeCQG
     public interface ICQGExpressionOutputs : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        double this[object key_]
+        Double this[Object key_]
         {
             get;
         }
@@ -5200,7 +5200,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -5223,13 +5223,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -5241,31 +5241,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -5277,18 +5277,18 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
 
-        int SubExpressionCount
+        Int32 SubExpressionCount
         {
             get;
         }
@@ -5299,7 +5299,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -5308,11 +5308,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        void AddSubExpression(string sub_expression, string alias_ = "");
+        void AddSubExpression(String sub_expression, String alias_ = "");
 
-        string get_SubExpression(int index_);
+        String get_SubExpression(Int32 index_);
 
-        string get_SubExpressionAlias(int index_);
+        String get_SubExpressionAlias(Int32 index_);
 
         #endregion
 
@@ -5321,17 +5321,17 @@ namespace FakeCQG
     public interface ICQGExpressions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGExpression this[int index_]
+        CQGExpression this[Int32 index_]
         {
             get;
         }
 
-        CQGExpression this[string id_]
+        CQGExpression this[String id_]
         {
             get;
         }
@@ -5339,7 +5339,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGExpression get_ItemById(string id_);
+        CQGExpression get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -5350,17 +5350,17 @@ namespace FakeCQG
     public interface ICQGFill
     {
         #region Properties
-        int this[int leg_]
+        Int32 this[Int32 leg_]
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        int LegCount
+        Int32 LegCount
         {
             get;
         }
@@ -5370,7 +5370,7 @@ namespace FakeCQG
             get;
         }
 
-        string RefFillId
+        String RefFillId
         {
             get;
         }
@@ -5393,29 +5393,29 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        bool get_Aggressive(int leg_ = 0);
+        Boolean get_Aggressive(Int32 leg_ = 0);
 
-        string get_Currency(int leg_ = 0);
+        String get_Currency(Int32 leg_ = 0);
 
-        string get_DisplayPrice(int leg_ = 0);
+        String get_DisplayPrice(Int32 leg_ = 0);
 
-        DateTime get_ExchangeTradeDate(int leg_ = 0);
+        DateTime get_ExchangeTradeDate(Int32 leg_ = 0);
 
-        string get_GWTradeId(int leg_ = 0);
+        String get_GWTradeId(Int32 leg_ = 0);
 
-        CQGGWTrades get_GWTrades(int leg_ = 0);
+        CQGGWTrades get_GWTrades(Int32 leg_ = 0);
 
-        int get_GWTradesCount(int leg_);
+        Int32 get_GWTradesCount(Int32 leg_);
 
-        string get_InstrumentName(int leg_ = 0);
+        String get_InstrumentName(Int32 leg_ = 0);
 
-        double get_Price(int leg_ = 0);
+        Double get_Price(Int32 leg_ = 0);
 
-        int get_Quantity(int leg_ = 0);
+        Int32 get_Quantity(Int32 leg_ = 0);
 
-        eOrderSide get_Side(int leg_ = 0);
+        eOrderSide get_Side(Int32 leg_ = 0);
 
-        DateTime get_StatementDate(int leg_ = 0);
+        DateTime get_StatementDate(Int32 leg_ = 0);
 
         #endregion
 
@@ -5424,17 +5424,17 @@ namespace FakeCQG
     public interface ICQGFills : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGFill this[string fill_id]
+        CQGFill this[String fill_id]
         {
             get;
         }
 
-        CQGFill this[int index_]
+        CQGFill this[Int32 index_]
         {
             get;
         }
@@ -5442,7 +5442,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGFill get_ItemByIndex(int index_);
+        CQGFill get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -5453,17 +5453,17 @@ namespace FakeCQG
     public interface ICQGGWTrade
     {
         #region Properties
-        bool Aggressive
+        Boolean Aggressive
         {
             get;
         }
 
-        string Currency
+        String Currency
         {
             get;
         }
 
-        string DisplayPrice
+        String DisplayPrice
         {
             get;
         }
@@ -5478,27 +5478,27 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        int Leg
+        Int32 Leg
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -5520,17 +5520,17 @@ namespace FakeCQG
     public interface ICQGGWTrades : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGGWTrade this[string trade_gw_id]
+        CQGGWTrade this[String trade_gw_id]
         {
             get;
         }
 
-        CQGGWTrade this[int index_]
+        CQGGWTrade this[Int32 index_]
         {
             get;
         }
@@ -5538,7 +5538,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGGWTrade get_ItemByIndex(int index_);
+        CQGGWTrade get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -5561,7 +5561,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -5585,7 +5585,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsDaily
+        Boolean IsDaily
         {
             get;
         }
@@ -5602,12 +5602,12 @@ namespace FakeCQG
     public interface ICQGHolidays : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGHoliday this[int index_]
+        CQGHoliday this[Int32 index_]
         {
             get;
         }
@@ -5650,17 +5650,17 @@ namespace FakeCQG
             get;
         }
 
-        string Commodity
+        String Commodity
         {
             get;
         }
 
-        string Country
+        String Country
         {
             get;
         }
 
-        string Currency
+        String Currency
         {
             get;
         }
@@ -5671,7 +5671,7 @@ namespace FakeCQG
             set;
         }
 
-        string Description
+        String Description
         {
             get;
         }
@@ -5686,29 +5686,29 @@ namespace FakeCQG
             get;
         }
 
-        int DOMBookLimit
+        Int32 DOMBookLimit
         {
             get;
             set;
         }
 
-        bool DOMStatus
+        Boolean DOMStatus
         {
             get;
             set;
         }
 
-        int DTE
+        Int32 DTE
         {
             get;
         }
 
-        string ExchangeAbbreviation
+        String ExchangeAbbreviation
         {
             get;
         }
 
-        int ExchangeID
+        Int32 ExchangeID
         {
             get;
         }
@@ -5718,17 +5718,17 @@ namespace FakeCQG
             get;
         }
 
-        string FullName
+        String FullName
         {
             get;
         }
 
-        double InitialMargin
+        Double InitialMargin
         {
             get;
         }
 
-        int InstrumentID
+        Int32 InstrumentID
         {
             get;
         }
@@ -5738,42 +5738,42 @@ namespace FakeCQG
             get;
         }
 
-        bool IsDownTick
+        Boolean IsDownTick
         {
             get;
         }
 
-        bool IsFastMarket
+        Boolean IsFastMarket
         {
             get;
         }
 
-        bool IsUpTick
+        Boolean IsUpTick
         {
             get;
         }
 
-        double MaintenanceMargin
+        Double MaintenanceMargin
         {
             get;
         }
 
-        int Month
+        Int32 Month
         {
             get;
         }
 
-        string MonthChar
+        String MonthChar
         {
             get;
         }
 
-        double NetChange
+        Double NetChange
         {
             get;
         }
 
-        string PreferredSessionsName
+        String PreferredSessionsName
         {
             get;
         }
@@ -5798,7 +5798,7 @@ namespace FakeCQG
             get;
         }
 
-        short Scale
+        Int16 Scale
         {
             get;
         }
@@ -5808,12 +5808,12 @@ namespace FakeCQG
             get;
         }
 
-        int SessionMask
+        Int32 SessionMask
         {
             get;
         }
 
-        int SessionNumber
+        Int32 SessionNumber
         {
             get;
         }
@@ -5823,33 +5823,33 @@ namespace FakeCQG
             get;
         }
 
-        int Strike
+        Int32 Strike
         {
             get;
         }
 
-        object this[string tagName]
+        Object this[String tagName]
         {
             get;
             set;
         }
 
-        double TickSize
+        Double TickSize
         {
             get;
         }
 
-        int TickSizeFractionDenominator
+        Int32 TickSizeFractionDenominator
         {
             get;
         }
 
-        int TickSizeFractionNumerator
+        Int32 TickSizeFractionNumerator
         {
             get;
         }
 
-        double TickValue
+        Double TickValue
         {
             get;
         }
@@ -5859,7 +5859,7 @@ namespace FakeCQG
             get;
         }
 
-        double TodayCTotalVolume
+        Double TodayCTotalVolume
         {
             get;
         }
@@ -5874,27 +5874,27 @@ namespace FakeCQG
             get;
         }
 
-        string UnderlyingInstrumentName
+        String UnderlyingInstrumentName
         {
             get;
         }
 
-        double YCOI
+        Double YCOI
         {
             get;
         }
 
-        int Year
+        Int32 Year
         {
             get;
         }
 
-        string YearString
+        String YearString
         {
             get;
         }
 
-        double YesterdayCTotalVolume
+        Double YesterdayCTotalVolume
         {
             get;
         }
@@ -5902,19 +5902,19 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        double FromDisplayPrice(string display_price);
+        Double FromDisplayPrice(String display_price);
 
-        object get_Tag(string tagName);
+        Object get_Tag(String tagName);
 
-        double GetNearestTradeablePrice(double price_);
+        Double GetNearestTradeablePrice(Double price_);
 
-        double GetTickSizeFor(double Price);
+        Double GetTickSizeFor(Double Price);
 
-        double GetTickValueFor(double Price);
+        Double GetTickValueFor(Double Price);
 
-        void set_Tag(string tagName, object pVal);
+        void set_Tag(String tagName, Object pVal);
 
-        string ToDisplayPrice(double correct_price);
+        String ToDisplayPrice(Double correct_price);
 
         #endregion
 
@@ -5923,7 +5923,7 @@ namespace FakeCQG
     public interface ICQGInstrumentProperties : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -5950,7 +5950,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -5970,7 +5970,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
         }
@@ -5982,12 +5982,12 @@ namespace FakeCQG
     public interface ICQGInstruments : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGInstrument this[object index_]
+        CQGInstrument this[Object index_]
         {
             get;
         }
@@ -6004,7 +6004,7 @@ namespace FakeCQG
     public interface ICQGInstrumentsGroup
     {
         #region Properties
-        string Id
+        String Id
         {
             get;
         }
@@ -6026,7 +6026,7 @@ namespace FakeCQG
     public interface ICQGInstrumentsGroupRequest
     {
         #region Properties
-        string Commodity
+        String Commodity
         {
             get;
             set;
@@ -6038,13 +6038,13 @@ namespace FakeCQG
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
@@ -6063,12 +6063,12 @@ namespace FakeCQG
     public interface ICQGInstrumentsGroups : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGInstrumentsGroup this[object index_]
+        CQGInstrumentsGroup this[Object index_]
         {
             get;
         }
@@ -6091,7 +6091,7 @@ namespace FakeCQG
             set;
         }
 
-        bool DOMStatus
+        Boolean DOMStatus
         {
             get;
             set;
@@ -6109,7 +6109,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -6122,12 +6122,12 @@ namespace FakeCQG
     public interface ICQGIntegerCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int this[int index_]
+        Int32 this[Int32 index_]
         {
             get;
         }
@@ -6152,7 +6152,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        void Log(string content_, eLogSeverity severity_ = eLogSeverity.lsInfo);
+        void Log(String content_, eLogSeverity severity_ = eLogSeverity.lsInfo);
 
         #endregion
 
@@ -6161,32 +6161,32 @@ namespace FakeCQG
     public interface ICQGManualFill
     {
         #region Properties
-        string DisplayPrice
+        String DisplayPrice
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        string Note
+        String Note
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -6201,7 +6201,7 @@ namespace FakeCQG
             get;
         }
 
-        int TradeId
+        Int32 TradeId
         {
             get;
         }
@@ -6218,31 +6218,31 @@ namespace FakeCQG
     public interface ICQGManualFillRequest
     {
         #region Properties
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
             set;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
             set;
         }
 
-        string Note
+        String Note
         {
             get;
             set;
         }
 
-        double Price
+        Double Price
         {
             get;
             set;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
             set;
@@ -6260,7 +6260,7 @@ namespace FakeCQG
             set;
         }
 
-        int TradeId
+        Int32 TradeId
         {
             get;
             set;
@@ -6279,7 +6279,7 @@ namespace FakeCQG
     public interface ICQGManualFills : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6289,12 +6289,12 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        CQGManualFill this[int trade_id]
+        CQGManualFill this[Int32 trade_id]
         {
             get;
         }
@@ -6302,7 +6302,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGManualFill get_ItemByIndex(int index_);
+        CQGManualFill get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -6313,12 +6313,12 @@ namespace FakeCQG
     public interface ICQGManualFillsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGManualFills this[int account_id]
+        CQGManualFills this[Int32 account_id]
         {
             get;
         }
@@ -6326,7 +6326,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGManualFills get_ItemByIndex(int index_);
+        CQGManualFills get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -6337,7 +6337,7 @@ namespace FakeCQG
     public interface ICQGModifiedProperties : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6347,7 +6347,7 @@ namespace FakeCQG
             get;
         }
 
-        CQGModifiedProperty this[int index_]
+        CQGModifiedProperty this[Int32 index_]
         {
             get;
         }
@@ -6355,7 +6355,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGModifiedProperty get_ItemByIndex(int index_);
+        CQGModifiedProperty get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -6366,22 +6366,22 @@ namespace FakeCQG
     public interface ICQGModifiedProperty
     {
         #region Properties
-        string Description
+        String Description
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        object NewValue
+        Object NewValue
         {
             get;
         }
 
-        object PreviousValue
+        Object PreviousValue
         {
             get;
         }
@@ -6404,29 +6404,29 @@ namespace FakeCQG
             set;
         }
 
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        bool CanBeCanceled
+        Boolean CanBeCanceled
         {
             get;
         }
 
-        bool CanBeModified
+        Boolean CanBeModified
         {
             get;
         }
 
-        bool CanBeReplaced
+        Boolean CanBeReplaced
         {
             get;
         }
@@ -6437,7 +6437,7 @@ namespace FakeCQG
             set;
         }
 
-        string Description
+        String Description
         {
             get;
             set;
@@ -6449,7 +6449,7 @@ namespace FakeCQG
             set;
         }
 
-        int FilledQuantity
+        Int32 FilledQuantity
         {
             get;
         }
@@ -6459,12 +6459,12 @@ namespace FakeCQG
             get;
         }
 
-        string GUID
+        String GUID
         {
             get;
         }
 
-        string GWOrderID
+        String GWOrderID
         {
             get;
         }
@@ -6480,17 +6480,17 @@ namespace FakeCQG
             set;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool IsExternal
+        Boolean IsExternal
         {
             get;
         }
 
-        bool IsFinal
+        Boolean IsFinal
         {
             get;
         }
@@ -6505,19 +6505,19 @@ namespace FakeCQG
             get;
         }
 
-        double LimitPrice
+        Double LimitPrice
         {
             get;
             set;
         }
 
-        bool OrderCheckMark
+        Boolean OrderCheckMark
         {
             get;
             set;
         }
 
-        string OriginalOrderID
+        String OriginalOrderID
         {
             get;
         }
@@ -6532,13 +6532,13 @@ namespace FakeCQG
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
             set;
         }
 
-        int RemainingQuantity
+        Int32 RemainingQuantity
         {
             get;
         }
@@ -6559,13 +6559,13 @@ namespace FakeCQG
             get;
         }
 
-        double StopPrice
+        Double StopPrice
         {
             get;
             set;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -6591,7 +6591,7 @@ namespace FakeCQG
             get;
         }
 
-        string UEName
+        String UEName
         {
             get;
         }
@@ -6603,7 +6603,7 @@ namespace FakeCQG
 
         void Cancel();
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         void Modify(CQGOrderModify cqg_order_modify);
 
@@ -6613,7 +6613,7 @@ namespace FakeCQG
 
         void SendCareOrderAck();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -6628,19 +6628,19 @@ namespace FakeCQG
             set;
         }
 
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        bool FromAllTraders
+        Boolean FromAllTraders
         {
             get;
             set;
@@ -6658,7 +6658,7 @@ namespace FakeCQG
             set;
         }
 
-        bool Parked
+        Boolean Parked
         {
             get;
             set;
@@ -6671,19 +6671,19 @@ namespace FakeCQG
     public interface ICQGOrderChain
     {
         #region Properties
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -6712,7 +6712,7 @@ namespace FakeCQG
     public interface ICQGOrderProperties : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6734,17 +6734,17 @@ namespace FakeCQG
     public interface ICQGOrderProperty
     {
         #region Properties
-        bool CanBeSet
+        Boolean CanBeSet
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -6764,7 +6764,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
             set;
@@ -6777,12 +6777,12 @@ namespace FakeCQG
     public interface ICQGOrders : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGOrder this[string order_id]
+        CQGOrder this[String order_id]
         {
             get;
         }
@@ -6792,21 +6792,21 @@ namespace FakeCQG
         #region Methods
         void AddToLiveOrders();
 
-        CQGOrder get_ItemByGuid(string order_guid);
+        CQGOrder get_ItemByGuid(String order_guid);
 
         new IEnumerator GetEnumerator();
 
-        CQGOrders SelectByInstrumentName(string instrument_name);
+        CQGOrders SelectByInstrumentName(String instrument_name);
 
         CQGOrders SelectByOrderStatus(eOrderStatus order_status);
 
         CQGOrders SelectByOrderType(eOrderType order_type);
 
-        CQGOrders SelectByProperty(eOrderProperty property_type, object property_value);
+        CQGOrders SelectByProperty(eOrderProperty property_type, Object property_value);
 
         CQGOrders SelectBySide(eOrderSide order_side);
 
-        CQGOrders SelectByTag(string tag_name, object tag_value = null);
+        CQGOrders SelectByTag(String tag_name, Object tag_value = null);
 
         #endregion
 
@@ -6840,7 +6840,7 @@ namespace FakeCQG
             get;
         }
 
-        int QueryID
+        Int32 QueryID
         {
             get;
         }
@@ -6872,12 +6872,12 @@ namespace FakeCQG
     public interface ICQGOrderStatistics
     {
         #region Properties
-        object this[string i_GUID]
+        Object this[String i_GUID]
         {
             get;
         }
 
-        bool Switch
+        Boolean Switch
         {
             set;
         }
@@ -6885,9 +6885,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_StatisticsOnReceive(string i_GUID);
+        Object get_StatisticsOnReceive(String i_GUID);
 
-        object get_StatisticsOnSend(string i_GUID);
+        Object get_StatisticsOnSend(String i_GUID);
 
         #endregion
 
@@ -6901,17 +6901,17 @@ namespace FakeCQG
             get;
         }
 
-        string Comment
+        String Comment
         {
             get;
         }
 
-        object DefaultValue
+        Object DefaultValue
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -6928,17 +6928,17 @@ namespace FakeCQG
     public interface ICQGParameterDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGParameterDefinition this[int index_]
+        CQGParameterDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGParameterDefinition this[string parameter_name]
+        CQGParameterDefinition this[String parameter_name]
         {
             get;
         }
@@ -6946,7 +6946,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGParameterDefinition get_ItemByName(string parameter_name);
+        CQGParameterDefinition get_ItemByName(String parameter_name);
 
         new IEnumerator GetEnumerator();
 
@@ -6957,27 +6957,27 @@ namespace FakeCQG
     public interface ICQGPointAndFigureBar
     {
         #region Properties
-        double High
+        Double High
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double PFHigh
+        Double PFHigh
         {
             get;
         }
 
-        double PFLow
+        Double PFLow
         {
             get;
         }
@@ -6987,12 +6987,12 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        bool Up
+        Boolean Up
         {
             get;
         }
@@ -7004,7 +7004,7 @@ namespace FakeCQG
     public interface ICQGPointAndFigureBars : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7014,12 +7014,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGPointAndFigureBar this[int index_]
+        CQGPointAndFigureBar this[Int32 index_]
         {
             get;
         }
@@ -7044,7 +7044,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -7053,11 +7053,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -7066,17 +7066,17 @@ namespace FakeCQG
     public interface ICQGPointAndFigureBarsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGPointAndFigureBars this[int index_]
+        CQGPointAndFigureBars this[Int32 index_]
         {
             get;
         }
 
-        CQGPointAndFigureBars this[string id_]
+        CQGPointAndFigureBars this[String id_]
         {
             get;
         }
@@ -7084,7 +7084,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGPointAndFigureBars get_ItemById(string id_);
+        CQGPointAndFigureBars get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -7095,7 +7095,7 @@ namespace FakeCQG
     public interface ICQGPointAndFigureBarsRequest
     {
         #region Properties
-        int BoxSize
+        Int32 BoxSize
         {
             get;
             set;
@@ -7119,43 +7119,43 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
         }
 
-        int Reversal
+        Int32 Reversal
         {
             get;
             set;
@@ -7167,7 +7167,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -7179,13 +7179,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -7203,7 +7203,7 @@ namespace FakeCQG
             get;
         }
 
-        double AveragePrice
+        Double AveragePrice
         {
             get;
         }
@@ -7213,12 +7213,12 @@ namespace FakeCQG
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool ManualFillsInvolved
+        Boolean ManualFillsInvolved
         {
             get;
         }
@@ -7228,7 +7228,7 @@ namespace FakeCQG
             get;
         }
 
-        double MVO
+        Double MVO
         {
             get;
         }
@@ -7238,17 +7238,17 @@ namespace FakeCQG
             get;
         }
 
-        double OTE
+        Double OTE
         {
             get;
         }
 
-        double ProfitLoss
+        Double ProfitLoss
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -7268,7 +7268,7 @@ namespace FakeCQG
             get;
         }
 
-        double UPL
+        Double UPL
         {
             get;
         }
@@ -7280,17 +7280,17 @@ namespace FakeCQG
     public interface ICQGPositions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGPosition this[string instrument_name]
+        CQGPosition this[String instrument_name]
         {
             get;
         }
 
-        CQGPosition this[int index_]
+        CQGPosition this[Int32 index_]
         {
             get;
         }
@@ -7298,7 +7298,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGPosition get_ItemByIndex(int index_);
+        CQGPosition get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -7309,7 +7309,7 @@ namespace FakeCQG
     public interface ICQGPositionsStatement
     {
         #region Properties
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -7331,17 +7331,17 @@ namespace FakeCQG
     public interface ICQGQFormulaDefinition
     {
         #region Properties
-        string Expression
+        String Expression
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        int Number
+        Int32 Number
         {
             get;
         }
@@ -7353,17 +7353,17 @@ namespace FakeCQG
     public interface ICQGQFormulaDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGQFormulaDefinition this[int index_]
+        CQGQFormulaDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGQFormulaDefinition this[string qformula_name]
+        CQGQFormulaDefinition this[String qformula_name]
         {
             get;
         }
@@ -7371,7 +7371,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGQFormulaDefinition get_ItemByName(string qformula_name);
+        CQGQFormulaDefinition get_ItemByName(String qformula_name);
 
         new IEnumerator GetEnumerator();
 
@@ -7382,7 +7382,7 @@ namespace FakeCQG
     public interface ICQGQuote
     {
         #region Properties
-        bool HasVolume
+        Boolean HasVolume
         {
             get;
         }
@@ -7392,17 +7392,17 @@ namespace FakeCQG
             get;
         }
 
-        bool IsValid
+        Boolean IsValid
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
@@ -7422,7 +7422,7 @@ namespace FakeCQG
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -7434,7 +7434,7 @@ namespace FakeCQG
     public interface ICQGQuotes : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7456,17 +7456,17 @@ namespace FakeCQG
     public interface ICQGRemoteOpenAPISession
     {
         #region Properties
-        string LogonName
+        String LogonName
         {
             get;
         }
 
-        int ROMNumber
+        Int32 ROMNumber
         {
             get;
         }
 
-        string ServerAddress
+        String ServerAddress
         {
             get;
         }
@@ -7483,17 +7483,17 @@ namespace FakeCQG
             get;
         }
 
-        sbyte DayCloseOffset
+        SByte DayCloseOffset
         {
             get;
         }
 
-        sbyte DayStartOffset
+        SByte DayStartOffset
         {
             get;
         }
 
-        bool DayStartsYesterday
+        Boolean DayStartsYesterday
         {
             get;
         }
@@ -7508,17 +7508,17 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        short Number
+        Int16 Number
         {
             get;
         }
 
-        bool PrimaryFlag
+        Boolean PrimaryFlag
         {
             get;
         }
@@ -7551,7 +7551,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false);
+        Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false);
 
         #endregion
 
@@ -7560,7 +7560,7 @@ namespace FakeCQG
     public interface ICQGSessions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7570,7 +7570,7 @@ namespace FakeCQG
             get;
         }
 
-        int DescriptionNumber
+        Int32 DescriptionNumber
         {
             get;
         }
@@ -7585,12 +7585,12 @@ namespace FakeCQG
             get;
         }
 
-        CQGSession this[object index_]
+        CQGSession this[Object index_]
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -7605,7 +7605,7 @@ namespace FakeCQG
         #region Methods
         new IEnumerator GetEnumerator();
 
-        bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false);
+        Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false);
 
         #endregion
 
@@ -7614,12 +7614,12 @@ namespace FakeCQG
     public interface ICQGSessionsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGSessions this[object index_]
+        CQGSessions this[Object index_]
         {
             get;
         }
@@ -7636,12 +7636,12 @@ namespace FakeCQG
     public interface ICQGStrategyDefinition
     {
         #region Properties
-        string ClientId
+        String ClientId
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -7651,7 +7651,7 @@ namespace FakeCQG
             get;
         }
 
-        string RequestString
+        String RequestString
         {
             get;
         }
@@ -7661,7 +7661,7 @@ namespace FakeCQG
             get;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
         }
@@ -7673,17 +7673,17 @@ namespace FakeCQG
     public interface ICQGStrategyDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGStrategyDefinition this[string id_]
+        CQGStrategyDefinition this[String id_]
         {
             get;
         }
 
-        CQGStrategyDefinition this[int index_]
+        CQGStrategyDefinition this[Int32 index_]
         {
             get;
         }
@@ -7691,7 +7691,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGStrategyDefinition get_ItemByIndex(int index_);
+        CQGStrategyDefinition get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -7702,7 +7702,7 @@ namespace FakeCQG
     public interface ICQGStrategyLegFill
     {
         #region Properties
-        string ExecutionId
+        String ExecutionId
         {
             get;
         }
@@ -7712,12 +7712,12 @@ namespace FakeCQG
             get;
         }
 
-        string OriginalOrderID
+        String OriginalOrderID
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -7729,12 +7729,12 @@ namespace FakeCQG
     public interface ICQGStrategyLegFills
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGStrategyLegFill this[int index_]
+        CQGStrategyLegFill this[Int32 index_]
         {
             get;
         }
@@ -7742,7 +7742,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGStrategyLegFill get_ItemByIndex(int index_);
+        CQGStrategyLegFill get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -7751,12 +7751,12 @@ namespace FakeCQG
     public interface ICQGStringCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -7773,57 +7773,57 @@ namespace FakeCQG
     public interface ICQGSubMinuteBar
     {
         #region Properties
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -7833,27 +7833,27 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -7865,7 +7865,7 @@ namespace FakeCQG
     public interface ICQGSubMinuteBars : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7875,12 +7875,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGSubMinuteBar this[int index_]
+        CQGSubMinuteBar this[Int32 index_]
         {
             get;
         }
@@ -7905,7 +7905,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -7914,11 +7914,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -7927,17 +7927,17 @@ namespace FakeCQG
     public interface ICQGSubMinuteBarsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGSubMinuteBars this[int index_]
+        CQGSubMinuteBars this[Int32 index_]
         {
             get;
         }
 
-        CQGSubMinuteBars this[string id_]
+        CQGSubMinuteBars this[String id_]
         {
             get;
         }
@@ -7945,7 +7945,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGSubMinuteBars get_ItemById(string id_);
+        CQGSubMinuteBars get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -7962,13 +7962,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -7980,31 +7980,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int Interval
+        Int32 Interval
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -8016,7 +8016,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -8028,7 +8028,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8040,7 +8040,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8058,7 +8058,7 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -8080,62 +8080,62 @@ namespace FakeCQG
     public interface ICQGTFlowBar
     {
         #region Properties
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double BestAskPrice
+        Double BestAskPrice
         {
             get;
         }
 
-        double BestBidPrice
+        Double BestBidPrice
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        int DomAskCount
+        Int32 DomAskCount
         {
             get;
         }
 
-        int this[int index_]
+        Int32 this[Int32 index_]
         {
             get;
         }
 
-        int DomBidCount
+        Int32 DomBidCount
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
@@ -8145,22 +8145,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueMid
+        Double TrueMid
         {
             get;
         }
@@ -8168,9 +8168,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        int get_DomAskVolume(int index_);
+        Int32 get_DomAskVolume(Int32 index_);
 
-        int get_DomBidVolume(int index_);
+        Int32 get_DomBidVolume(Int32 index_);
 
         #endregion
 
@@ -8179,7 +8179,7 @@ namespace FakeCQG
     public interface ICQGTFlowBars : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8189,12 +8189,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTFlowBar this[int index_]
+        CQGTFlowBar this[Int32 index_]
         {
             get;
         }
@@ -8219,7 +8219,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8228,11 +8228,11 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8241,17 +8241,17 @@ namespace FakeCQG
     public interface ICQGTFlowBarsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTFlowBars this[int index_]
+        CQGTFlowBars this[Int32 index_]
         {
             get;
         }
 
-        CQGTFlowBars this[string id_]
+        CQGTFlowBars this[String id_]
         {
             get;
         }
@@ -8259,7 +8259,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTFlowBars get_ItemById(string id_);
+        CQGTFlowBars get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -8276,7 +8276,7 @@ namespace FakeCQG
             set;
         }
 
-        int AggregationLevel
+        Int32 AggregationLevel
         {
             get;
             set;
@@ -8288,7 +8288,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -8306,31 +8306,31 @@ namespace FakeCQG
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -8342,7 +8342,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -8354,13 +8354,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8373,12 +8373,12 @@ namespace FakeCQG
     public interface ICQGTick
     {
         #region Properties
-        string ContributorId
+        String ContributorId
         {
             get;
         }
 
-        int ContributorIdCode
+        Int32 ContributorIdCode
         {
             get;
         }
@@ -8393,7 +8393,7 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
@@ -8403,12 +8403,12 @@ namespace FakeCQG
             get;
         }
 
-        int SalesConditionCode
+        Int32 SalesConditionCode
         {
             get;
         }
 
-        string SalesConditionLabel
+        String SalesConditionLabel
         {
             get;
         }
@@ -8418,7 +8418,7 @@ namespace FakeCQG
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -8430,7 +8430,7 @@ namespace FakeCQG
     public interface ICQGTicks : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8440,17 +8440,17 @@ namespace FakeCQG
             get;
         }
 
-        bool HasUpdates
+        Boolean HasUpdates
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTick this[int index_]
+        CQGTick this[Int32 index_]
         {
             get;
         }
@@ -8475,7 +8475,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8484,15 +8484,15 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
         void IndicesForDates(DateTime date_1, DateTime date_2, ref Int32 start_index, ref Int32 end_index);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8501,17 +8501,17 @@ namespace FakeCQG
     public interface ICQGTicksCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTicks this[int index_]
+        CQGTicks this[Int32 index_]
         {
             get;
         }
 
-        CQGTicks this[string id_]
+        CQGTicks this[String id_]
         {
             get;
         }
@@ -8519,7 +8519,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTicks get_ItemById(string id_);
+        CQGTicks get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -8542,13 +8542,13 @@ namespace FakeCQG
             set;
         }
 
-        int SessionsFilter
+        Int32 SessionsFilter
         {
             get;
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8573,97 +8573,97 @@ namespace FakeCQG
     public interface ICQGTimedBar
     {
         #region Properties
-        int ActualVolume
+        Int32 ActualVolume
         {
             get;
         }
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        int CommodityOpenInterest
+        Int32 CommodityOpenInterest
         {
             get;
         }
 
-        int CommodityTickVolume
+        Int32 CommodityTickVolume
         {
             get;
         }
 
-        int CommodityVolume
+        Int32 CommodityVolume
         {
             get;
         }
 
-        int ContractOpenInterest
+        Int32 ContractOpenInterest
         {
             get;
         }
 
-        int ContractTickVolume
+        Int32 ContractTickVolume
         {
             get;
         }
 
-        int ContractVolume
+        Int32 ContractVolume
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        int OpenInterest
+        Int32 OpenInterest
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -8673,17 +8673,17 @@ namespace FakeCQG
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -8695,7 +8695,7 @@ namespace FakeCQG
     public interface ICQGTimedBars : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8705,12 +8705,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTimedBar this[int index_]
+        CQGTimedBar this[Int32 index_]
         {
             get;
         }
@@ -8735,7 +8735,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8744,13 +8744,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8759,17 +8759,17 @@ namespace FakeCQG
     public interface ICQGTimedBarsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTimedBars this[int index_]
+        CQGTimedBars this[Int32 index_]
         {
             get;
         }
 
-        CQGTimedBars this[string id_]
+        CQGTimedBars this[String id_]
         {
             get;
         }
@@ -8777,7 +8777,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTimedBars get_ItemById(string id_);
+        CQGTimedBars get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -8794,13 +8794,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -8812,31 +8812,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IgnoreEventsOnHistoricalBars
+        Boolean IgnoreEventsOnHistoricalBars
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
@@ -8848,13 +8848,13 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8866,7 +8866,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8877,9 +8877,9 @@ namespace FakeCQG
         #region Methods
         void ExcludeAllOutputs();
 
-        void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, bool include_output);
+        void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, Boolean include_output);
 
-        bool IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output);
+        Boolean IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output);
 
         #endregion
 
@@ -8888,22 +8888,22 @@ namespace FakeCQG
     public interface ICQGTrade
     {
         #region Properties
-        int GroupID
+        Int32 GroupID
         {
             get;
         }
 
-        bool IsMatched
+        Boolean IsMatched
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -8930,12 +8930,12 @@ namespace FakeCQG
     public interface ICQGTradeEntries : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeEntry this[int index_]
+        CQGTradeEntry this[Int32 index_]
         {
             get;
         }
@@ -8952,7 +8952,7 @@ namespace FakeCQG
     public interface ICQGTradeEntry
     {
         #region Properties
-        bool CanPlaceOrderSignal
+        Boolean CanPlaceOrderSignal
         {
             get;
         }
@@ -8962,12 +8962,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -8977,12 +8977,12 @@ namespace FakeCQG
             get;
         }
 
-        bool Signal
+        Boolean Signal
         {
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
@@ -8999,12 +8999,12 @@ namespace FakeCQG
     public interface ICQGTradeEntryDefinition
     {
         #region Properties
-        bool AllowEntryOnExit
+        Boolean AllowEntryOnExit
         {
             get;
         }
 
-        bool AllowPyramids
+        Boolean AllowPyramids
         {
             get;
         }
@@ -9021,7 +9021,7 @@ namespace FakeCQG
     public interface ICQGTradeExit
     {
         #region Properties
-        bool CanPlaceOrderSignal
+        Boolean CanPlaceOrderSignal
         {
             get;
         }
@@ -9031,12 +9031,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -9046,12 +9046,12 @@ namespace FakeCQG
             get;
         }
 
-        bool Signal
+        Boolean Signal
         {
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
@@ -9068,17 +9068,17 @@ namespace FakeCQG
     public interface ICQGTradeExitDefinition
     {
         #region Properties
-        bool AllowExitOnEntry
+        Boolean AllowExitOnEntry
         {
             get;
         }
 
-        bool AllowMoreThanOnce
+        Boolean AllowMoreThanOnce
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9095,17 +9095,17 @@ namespace FakeCQG
     public interface ICQGTradeExitDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeExitDefinition this[int index_]
+        CQGTradeExitDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradeExitDefinition this[string exit_name]
+        CQGTradeExitDefinition this[String exit_name]
         {
             get;
         }
@@ -9113,7 +9113,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradeExitDefinition get_ItemByName(string exit_name);
+        CQGTradeExitDefinition get_ItemByName(String exit_name);
 
         new IEnumerator GetEnumerator();
 
@@ -9124,17 +9124,17 @@ namespace FakeCQG
     public interface ICQGTradeExits : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeExit this[int index_]
+        CQGTradeExit this[Int32 index_]
         {
             get;
         }
 
-        CQGTradeExit this[string exit_name]
+        CQGTradeExit this[String exit_name]
         {
             get;
         }
@@ -9142,7 +9142,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradeExit get_ItemByName(string exit_name);
+        CQGTradeExit get_ItemByName(String exit_name);
 
         new IEnumerator GetEnumerator();
 
@@ -9153,12 +9153,12 @@ namespace FakeCQG
     public interface ICQGTrades : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTrade this[int index_]
+        CQGTrade this[Int32 index_]
         {
             get;
         }
@@ -9180,7 +9180,7 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -9205,7 +9205,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -9219,9 +9219,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -9234,7 +9234,7 @@ namespace FakeCQG
     public interface ICQGTradingSystemBaseBarParameter
     {
         #region Properties
-        string Name
+        String Name
         {
             get;
         }
@@ -9244,7 +9244,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
             set;
@@ -9257,7 +9257,7 @@ namespace FakeCQG
     public interface ICQGTradingSystemBaseBarParameters : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -9279,12 +9279,12 @@ namespace FakeCQG
     public interface ICQGTradingSystemDefinition
     {
         #region Properties
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        double Commission
+        Double Commission
         {
             get;
         }
@@ -9294,7 +9294,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9316,17 +9316,17 @@ namespace FakeCQG
     public interface ICQGTradingSystemDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemDefinition this[int index_]
+        CQGTradingSystemDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemDefinition this[string trading_system_abbreviation]
+        CQGTradingSystemDefinition this[String trading_system_abbreviation]
         {
             get;
         }
@@ -9334,9 +9334,9 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradingSystemDefinition get_ItemByAbbreviation(string trading_system_abbreviation);
+        CQGTradingSystemDefinition get_ItemByAbbreviation(String trading_system_abbreviation);
 
-        CQGTradingSystemDefinition get_ItemByName(string trading_system_name);
+        CQGTradingSystemDefinition get_ItemByName(String trading_system_name);
 
         new IEnumerator GetEnumerator();
 
@@ -9347,7 +9347,7 @@ namespace FakeCQG
     public interface ICQGTradingSystemInsertInfo
     {
         #region Properties
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -9364,7 +9364,7 @@ namespace FakeCQG
             get;
         }
 
-        int EntryRowIndex
+        Int32 EntryRowIndex
         {
             get;
         }
@@ -9374,7 +9374,7 @@ namespace FakeCQG
             get;
         }
 
-        int ExitRowIndex
+        Int32 ExitRowIndex
         {
             get;
         }
@@ -9386,7 +9386,7 @@ namespace FakeCQG
     public interface ICQGTradingSystemRemoveInfo
     {
         #region Properties
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -9409,7 +9409,7 @@ namespace FakeCQG
             set;
         }
 
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -9421,7 +9421,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -9432,7 +9432,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -9444,37 +9444,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -9486,7 +9486,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -9503,13 +9503,13 @@ namespace FakeCQG
         #region Methods
         void ExcludeAllStatistics();
 
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
         void IncludeStatistic(eTradingSystemStatistic trading_system_statistic);
 
-        bool IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic);
+        Boolean IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -9518,17 +9518,17 @@ namespace FakeCQG
     public interface ICQGTradingSystems : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystem this[int index_]
+        CQGTradingSystem this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystem this[string id_]
+        CQGTradingSystem this[String id_]
         {
             get;
         }
@@ -9536,7 +9536,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradingSystem get_ItemById(string id_);
+        CQGTradingSystem get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -9547,122 +9547,122 @@ namespace FakeCQG
     public interface ICQGTradingSystemStatistics
     {
         #region Properties
-        double AverageDuration
+        Double AverageDuration
         {
             get;
         }
 
-        double AverageLoss
+        Double AverageLoss
         {
             get;
         }
 
-        double AverageProfit
+        Double AverageProfit
         {
             get;
         }
 
-        double AverageWin
+        Double AverageWin
         {
             get;
         }
 
-        double ClosedNetProfit
+        Double ClosedNetProfit
         {
             get;
         }
 
-        double CurConsecLosses
+        Double CurConsecLosses
         {
             get;
         }
 
-        double CurConsecWins
+        Double CurConsecWins
         {
             get;
         }
 
-        double CurDrawDown
+        Double CurDrawDown
         {
             get;
         }
 
-        double LinearRegression
+        Double LinearRegression
         {
             get;
         }
 
-        double MaxClosedDraw
+        Double MaxClosedDraw
         {
             get;
         }
 
-        double MaxConsecLosses
+        Double MaxConsecLosses
         {
             get;
         }
 
-        double MaxConsecWins
+        Double MaxConsecWins
         {
             get;
         }
 
-        double MaxDrawAmount
+        Double MaxDrawAmount
         {
             get;
         }
 
-        double MaxDrawDuration
+        Double MaxDrawDuration
         {
             get;
         }
 
-        double MaximumLoss
+        Double MaximumLoss
         {
             get;
         }
 
-        double MaximumWin
+        Double MaximumWin
         {
             get;
         }
 
-        double OpenPosition
+        Double OpenPosition
         {
             get;
         }
 
-        double PercentLong
+        Double PercentLong
         {
             get;
         }
 
-        double PercentWinners
+        Double PercentWinners
         {
             get;
         }
 
-        double ProfitLossRatio
+        Double ProfitLossRatio
         {
             get;
         }
 
-        double ProfitToMaxDraw
+        Double ProfitToMaxDraw
         {
             get;
         }
 
-        double RemoveToNeutral
+        Double RemoveToNeutral
         {
             get;
         }
 
-        double ReturnRetracement
+        Double ReturnRetracement
         {
             get;
         }
 
-        double TimePercentage
+        Double TimePercentage
         {
             get;
         }
@@ -9672,22 +9672,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TotalNetProfit
+        Double TotalNetProfit
         {
             get;
         }
 
-        double TotalTradeCount
+        Double TotalTradeCount
         {
             get;
         }
 
-        double this[eTradingSystemStatistic ts_statistic]
+        Double this[eTradingSystemStatistic ts_statistic]
         {
             get;
         }
@@ -9695,7 +9695,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        double get_Value(eTradingSystemStatistic ts_statistic);
+        Double get_Value(eTradingSystemStatistic ts_statistic);
 
         #endregion
 
@@ -9712,7 +9712,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        bool IsStatisticChanged(eTradingSystemStatistic trading_system_statistic);
+        Boolean IsStatisticChanged(eTradingSystemStatistic trading_system_statistic);
 
         #endregion
 
@@ -9721,12 +9721,12 @@ namespace FakeCQG
     public interface ICQGTradingSystemStatisticsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemStatistics this[int index_]
+        CQGTradingSystemStatistics this[Int32 index_]
         {
             get;
         }
@@ -9736,7 +9736,7 @@ namespace FakeCQG
         #region Methods
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
         void IndicesForDates(DateTime date_1, DateTime date_2, ref Int32 start_index, ref Int32 end_index);
 
@@ -9752,7 +9752,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsActive
+        Boolean IsActive
         {
             get;
         }
@@ -9762,7 +9762,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -9799,7 +9799,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9816,17 +9816,17 @@ namespace FakeCQG
     public interface ICQGTradingSystemTradeDefinitions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTradeDefinition this[int index_]
+        CQGTradingSystemTradeDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemTradeDefinition this[string trade_name]
+        CQGTradingSystemTradeDefinition this[String trade_name]
         {
             get;
         }
@@ -9834,7 +9834,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradingSystemTradeDefinition get_ItemByName(string trade_name);
+        CQGTradingSystemTradeDefinition get_ItemByName(String trade_name);
 
         new IEnumerator GetEnumerator();
 
@@ -9845,17 +9845,17 @@ namespace FakeCQG
     public interface ICQGTradingSystemTradesRow : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTrade this[int index_]
+        CQGTradingSystemTrade this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemTrade this[string trade_name]
+        CQGTradingSystemTrade this[String trade_name]
         {
             get;
         }
@@ -9865,7 +9865,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -9873,7 +9873,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTradingSystemTrade get_ItemByName(string trade_name);
+        CQGTradingSystemTrade get_ItemByName(String trade_name);
 
         new IEnumerator GetEnumerator();
 
@@ -9884,12 +9884,12 @@ namespace FakeCQG
     public interface ICQGTradingSystemTradesRows : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTradesRow this[int index_]
+        CQGTradingSystemTradesRow this[Int32 index_]
         {
             get;
         }
@@ -9906,7 +9906,7 @@ namespace FakeCQG
     public interface ICQGTradingSystemUpdateInfo
     {
         #region Properties
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -9930,7 +9930,7 @@ namespace FakeCQG
     public interface ICQGTransaction
     {
         #region Properties
-        string ExecutionId
+        String ExecutionId
         {
             get;
         }
@@ -9945,12 +9945,12 @@ namespace FakeCQG
             get;
         }
 
-        int HangQuantity
+        Int32 HangQuantity
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -9965,7 +9965,7 @@ namespace FakeCQG
             get;
         }
 
-        string RejectReason
+        String RejectReason
         {
             get;
         }
@@ -9997,17 +9997,17 @@ namespace FakeCQG
     public interface ICQGTransactions : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTransaction this[string id_]
+        CQGTransaction this[String id_]
         {
             get;
         }
 
-        CQGTransaction this[int index_]
+        CQGTransaction this[Int32 index_]
         {
             get;
         }
@@ -10015,7 +10015,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGTransaction get_ItemByIndex(int index_);
+        CQGTransaction get_ItemByIndex(Int32 index_);
 
         new IEnumerator GetEnumerator();
 
@@ -10026,42 +10026,42 @@ namespace FakeCQG
     public interface ICQGYield
     {
         #region Properties
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
@@ -10071,17 +10071,17 @@ namespace FakeCQG
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -10093,7 +10093,7 @@ namespace FakeCQG
     public interface ICQGYields : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -10103,12 +10103,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGYield this[int index_]
+        CQGYield this[Int32 index_]
         {
             get;
         }
@@ -10133,7 +10133,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -10142,13 +10142,13 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         new IEnumerator GetEnumerator();
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -10157,17 +10157,17 @@ namespace FakeCQG
     public interface ICQGYieldsCollection : IEnumerable
     {
         #region Properties
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGYields this[int index_]
+        CQGYields this[Int32 index_]
         {
             get;
         }
 
-        CQGYields this[string id_]
+        CQGYields this[String id_]
         {
             get;
         }
@@ -10175,7 +10175,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        CQGYields get_ItemById(string id_);
+        CQGYields get_ItemById(String id_);
 
         new IEnumerator GetEnumerator();
 
@@ -10198,19 +10198,19 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
@@ -10222,19 +10222,19 @@ namespace FakeCQG
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -10246,7 +10246,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -10258,13 +10258,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -10319,14 +10319,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyRemoved";
@@ -10340,21 +10340,21 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderPlaced(string arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
+        public virtual void AlgorithmicOrderPlaced(String arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AlgorithmicOrderPlaced";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderRegistrationComplete(string arg1, CQGError arg2)
+        public virtual void AlgorithmicOrderRegistrationComplete(String arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AlgorithmicOrderRegistrationComplete";
@@ -10388,7 +10388,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
+        public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
@@ -10409,14 +10409,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionInserted(CQGCondition arg1, int arg2)
+        public virtual void ConditionInserted(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionRemoved(CQGCondition arg1, int arg2)
+        public virtual void ConditionRemoved(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionRemoved";
@@ -10430,7 +10430,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConditionUpdated(CQGCondition arg1, int arg2)
+        public virtual void ConditionUpdated(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionUpdated";
@@ -10444,14 +10444,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsRemoved";
@@ -10465,7 +10465,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsUpdated";
@@ -10500,14 +10500,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyInserted(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyInserted(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyRemoved(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyRemoved(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyRemoved";
@@ -10521,7 +10521,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CustomStudyUpdated(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyUpdated(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyUpdated";
@@ -10535,7 +10535,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(object arg1, string arg2)
+        public virtual void DataError(Object arg1, String arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
@@ -10549,18 +10549,18 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataSourceSymbolsResolved(string arg1, CQGDataSourceSymbols arg2, CQGError arg3)
+        public virtual void DataSourceSymbolsResolved(String arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "DataSourceSymbolsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -10571,14 +10571,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionInserted(CQGExpression arg1, int arg2)
+        public virtual void ExpressionInserted(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionRemoved(CQGExpression arg1, int arg2)
+        public virtual void ExpressionRemoved(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionRemoved";
@@ -10592,17 +10592,17 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ExpressionUpdated(CQGExpression arg1, int arg2)
+        public virtual void ExpressionUpdated(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -10620,7 +10620,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, int arg2, int arg3)
+        public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, Int32 arg2, Int32 arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "GWEnvironmentChanged";
@@ -10641,7 +10641,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void IncorrectSymbol(string arg1)
+        public virtual void IncorrectSymbol(String arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
@@ -10676,7 +10676,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
+        public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
@@ -10752,14 +10752,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsRemoved";
@@ -10773,7 +10773,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsUpdated";
@@ -10808,14 +10808,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsRemoved";
@@ -10829,7 +10829,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsUpdated";
@@ -10850,14 +10850,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsInserted(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsInserted(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsRemoved";
@@ -10871,14 +10871,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TicksAdded(CQGTicks arg1, int arg2)
+        public virtual void TicksAdded(CQGTicks arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TicksAdded";
@@ -10899,14 +10899,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsInserted(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsInserted(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsRemoved(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsRemoved(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsRemoved";
@@ -10920,28 +10920,28 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TimedBarsUpdated(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsUpdated(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsUpdated";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void TradableCommoditiesResolved(int arg1, CQGCommodities arg2, CQGError arg3)
+        public virtual void TradableCommoditiesResolved(Int32 arg1, CQGCommodities arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableCommoditiesResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TradableExchangesResolved(int arg1, CQGExchanges arg2, CQGError arg3)
+        public virtual void TradableExchangesResolved(Int32 arg1, CQGExchanges arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableExchangesResolved";
@@ -11004,14 +11004,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsInserted(CQGYields arg1, int arg2)
+        public virtual void YieldsInserted(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsInserted";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsRemoved(CQGYields arg1, int arg2)
+        public virtual void YieldsRemoved(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsRemoved";
@@ -11025,7 +11025,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void YieldsUpdated(CQGYields arg1, int arg2)
+        public virtual void YieldsUpdated(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsUpdated";
@@ -11077,25 +11077,25 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void DataError(object arg1, string arg2)
+        public virtual void DataError(Object arg1, String arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11133,10 +11133,10 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11165,25 +11165,25 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
+        public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11194,7 +11194,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncorrectSymbol(string arg1)
+        public virtual void IncorrectSymbol(String arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
@@ -11229,17 +11229,17 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
+        public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11295,12 +11295,12 @@ namespace FakeCQG
 
         }
 
-        public bool AutoSubscribeInstruments
+        public Boolean AutoSubscribeInstruments
         {
             get
             {
                 string name = "AutoSubscribeInstruments";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11344,12 +11344,12 @@ namespace FakeCQG
 
         }
 
-        public string FcmAccountID
+        public String FcmAccountID
         {
             get
             {
                 string name = "FcmAccountID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11366,45 +11366,45 @@ namespace FakeCQG
 
         }
 
-        public int FcmID
+        public Int32 FcmID
         {
             get
             {
                 string name = "FcmID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string FcmName
+        public String FcmName
         {
             get
             {
                 string name = "FcmName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string GWAccountName
+        public String GWAccountName
         {
             get
             {
                 string name = "GWAccountName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11459,12 +11459,12 @@ namespace FakeCQG
             }
         }
 
-        public string ReportingCurrency
+        public String ReportingCurrency
         {
             get
             {
                 string name = "ReportingCurrency";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11503,23 +11503,23 @@ namespace FakeCQG
 
         }
 
-        public double TotalMarginValue
+        public Double TotalMarginValue
         {
             get
             {
                 string name = "TotalMarginValue";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TotalPurchasingPower
+        public Double TotalPurchasingPower
         {
             get
             {
                 string name = "TotalPurchasingPower";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11536,25 +11536,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11565,17 +11565,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11604,18 +11604,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAccount this[int gw_account_id]
+        public CQGAccount this[Int32 gw_account_id]
         {
             get
             {
@@ -11626,7 +11626,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAccount this[string fcm_account_id, int fcm_id]
+        public CQGAccount this[String fcm_account_id, Int32 fcm_id]
         {
             get
             {
@@ -11655,15 +11655,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGAccount get_ItemByFCM(string fcm_account_id, int fcm_id)
+        public virtual CQGAccount get_ItemByFCM(String fcm_account_id, Int32 fcm_id)
         {
             object[] args = new object[2] {fcm_account_id, fcm_id};
             string name = "get_ItemByFCM";
@@ -11671,7 +11671,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAccount get_ItemByIndex(int index_)
+        public virtual CQGAccount get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -11686,17 +11686,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11707,17 +11707,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11746,18 +11746,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAccountSummary this[object index_]
+        public CQGAccountSummary this[Object index_]
         {
             get
             {
@@ -11779,11 +11779,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -11794,17 +11794,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11815,17 +11815,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11865,23 +11865,23 @@ namespace FakeCQG
 
         }
 
-        public string CurrencyName
+        public String CurrencyName
         {
             get
             {
                 string name = "CurrencyName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool ManualFillsInvolved
+        public Boolean ManualFillsInvolved
         {
             get
             {
                 string name = "ManualFillsInvolved";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -11890,27 +11890,27 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual double Balance(int day_ = 0)
+        public virtual Double Balance(Int32 day_ = 0)
         {
             object[] args = new object[1] {day_};
             string name = "Balance";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double CashExcess(int day_ = 1)
+        public virtual Double CashExcess(Int32 day_ = 1)
         {
             object[] args = new object[1] {day_};
             string name = "CashExcess";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double Collaterals(int day_ = 1)
+        public virtual Double Collaterals(Int32 day_ = 1)
         {
             object[] args = new object[1] {day_};
             string name = "Collaterals";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -11922,25 +11922,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -11951,73 +11951,73 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual double InitialMargin(int day_ = 1)
+        public virtual Double InitialMargin(Int32 day_ = 1)
         {
             object[] args = new object[1] {day_};
             string name = "InitialMargin";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double MaintenanceMargin(int day_ = 1)
+        public virtual Double MaintenanceMargin(Int32 day_ = 1)
         {
             object[] args = new object[1] {day_};
             string name = "MaintenanceMargin";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double MVO(int day_ = 0)
+        public virtual Double MVO(Int32 day_ = 0)
         {
             object[] args = new object[1] {day_};
             string name = "MVO";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double NLV(int day_ = 0)
+        public virtual Double NLV(Int32 day_ = 0)
         {
             object[] args = new object[1] {day_};
             string name = "NLV";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double OTE(int day_ = 0)
+        public virtual Double OTE(Int32 day_ = 0)
         {
             object[] args = new object[1] {day_};
             string name = "OTE";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double ProfitLoss(int day_ = 1)
+        public virtual Double ProfitLoss(Int32 day_ = 1)
         {
             object[] args = new object[1] {day_};
             string name = "ProfitLoss";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual double UPL(int day_ = 0)
+        public virtual Double UPL(Int32 day_ = 0)
         {
             object[] args = new object[1] {day_};
             string name = "UPL";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -12046,18 +12046,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAdvancedStudy this[int index_]
+        public CQGAdvancedStudy this[Int32 index_]
         {
             get
             {
@@ -12068,7 +12068,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAdvancedStudy this[string id_]
+        public CQGAdvancedStudy this[String id_]
         {
             get
             {
@@ -12090,15 +12090,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGAdvancedStudy get_ItemById(string id_)
+        public virtual CQGAdvancedStudy get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -12113,17 +12113,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12134,17 +12134,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12173,12 +12173,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12217,18 +12217,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCurves this[int index_]
+        public CQGCurves this[Int32 index_]
         {
             get
             {
@@ -12283,12 +12283,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12310,19 +12310,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -12333,17 +12333,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12354,32 +12354,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12408,12 +12408,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12430,12 +12430,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12463,25 +12463,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12492,17 +12492,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12531,18 +12531,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAdvancedStudyDefinition this[int index_]
+        public CQGAdvancedStudyDefinition this[Int32 index_]
         {
             get
             {
@@ -12553,7 +12553,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAdvancedStudyDefinition this[string advanced_study_abbreviation]
+        public CQGAdvancedStudyDefinition this[String advanced_study_abbreviation]
         {
             get
             {
@@ -12575,15 +12575,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGAdvancedStudyDefinition get_ItemByAbbreviation(string advanced_study_abbreviation)
+        public virtual CQGAdvancedStudyDefinition get_ItemByAbbreviation(String advanced_study_abbreviation)
         {
             object[] args = new object[1] {advanced_study_abbreviation};
             string name = "get_ItemByAbbreviation";
@@ -12591,7 +12591,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAdvancedStudyDefinition get_ItemByName(string advanced_study_name)
+        public virtual CQGAdvancedStudyDefinition get_ItemByName(String advanced_study_name)
         {
             object[] args = new object[1] {advanced_study_name};
             string name = "get_ItemByName";
@@ -12606,17 +12606,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12627,17 +12627,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12666,12 +12666,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12698,12 +12698,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12725,12 +12725,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12757,12 +12757,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12773,12 +12773,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12789,12 +12789,12 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12805,12 +12805,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12821,12 +12821,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12837,12 +12837,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12869,12 +12869,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12901,12 +12901,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -12928,33 +12928,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             object[] args = new object[1] {key_};
             string name = "get_Parameter";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -12965,39 +12965,39 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncludeCurve(object curve_key)
+        public virtual void IncludeCurve(Object curve_key)
         {
             object[] args = new object[1] {curve_key};
             string name = "IncludeCurve";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsCurveIncluded(object curve_key)
+        public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             object[] args = new object[1] {curve_key};
             string name = "IsCurveIncluded";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13026,12 +13026,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public object DefaultValue
+        public Object DefaultValue
         {
             get
             {
                 string name = "DefaultValue";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13042,12 +13042,12 @@ namespace FakeCQG
             }
         }
 
-        public int DefaultValueIndex
+        public Int32 DefaultValueIndex
         {
             get
             {
                 string name = "DefaultValueIndex";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13058,12 +13058,12 @@ namespace FakeCQG
             }
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13090,12 +13090,12 @@ namespace FakeCQG
             }
         }
 
-        public string Unit
+        public String Unit
         {
             get
             {
                 string name = "Unit";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13120,7 +13120,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void AddValue(string value_)
+        public virtual void AddValue(String value_)
         {
             object[] args = new object[1] {value_};
             string name = "AddValue";
@@ -13135,25 +13135,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13164,17 +13164,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13203,18 +13203,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAlgorithmicOrderDefinition this[int index_]
+        public CQGAlgorithmicOrderDefinition this[Int32 index_]
         {
             get
             {
@@ -13250,11 +13250,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -13265,17 +13265,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13286,17 +13286,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13347,12 +13347,12 @@ namespace FakeCQG
 
         }
 
-        public string ExecutionPattern
+        public String ExecutionPattern
         {
             get
             {
                 string name = "ExecutionPattern";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13369,34 +13369,34 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool Parked
+        public Boolean Parked
         {
             get
             {
                 string name = "Parked";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13413,23 +13413,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13446,34 +13446,34 @@ namespace FakeCQG
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrailingOffset
+        public Double TrailingOffset
         {
             get
             {
                 string name = "TrailingOffset";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TriggerQuantity
+        public Int32 TriggerQuantity
         {
             get
             {
                 string name = "TriggerQuantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13490,12 +13490,12 @@ namespace FakeCQG
 
         }
 
-        public int VisibleQuantity
+        public Int32 VisibleQuantity
         {
             get
             {
                 string name = "VisibleQuantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13512,25 +13512,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13541,17 +13541,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13580,18 +13580,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGAlgorithmicOrderProperty this[int index_]
+        public CQGAlgorithmicOrderProperty this[Int32 index_]
         {
             get
             {
@@ -13613,11 +13613,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -13628,17 +13628,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13649,17 +13649,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13688,23 +13688,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13721,25 +13721,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13750,17 +13750,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13797,25 +13797,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13826,17 +13826,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -13865,12 +13865,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int AccountMarginAndPositionsThrottleInterval
+        public Int32 AccountMarginAndPositionsThrottleInterval
         {
             get
             {
                 string name = "AccountMarginAndPositionsThrottleInterval";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13881,12 +13881,12 @@ namespace FakeCQG
             }
         }
 
-        public int AgeToDeleteLogFileDays
+        public Int32 AgeToDeleteLogFileDays
         {
             get
             {
                 string name = "AgeToDeleteLogFileDays";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13897,12 +13897,12 @@ namespace FakeCQG
             }
         }
 
-        public bool ApplyDaylightSavingChanges
+        public Boolean ApplyDaylightSavingChanges
         {
             get
             {
                 string name = "ApplyDaylightSavingChanges";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -13913,12 +13913,12 @@ namespace FakeCQG
             }
         }
 
-        public bool CollectionsThrowException
+        public Boolean CollectionsThrowException
         {
             get
             {
                 string name = "CollectionsThrowException";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14009,12 +14009,12 @@ namespace FakeCQG
             }
         }
 
-        public int DOMUpdatesPeriod
+        public Int32 DOMUpdatesPeriod
         {
             get
             {
                 string name = "DOMUpdatesPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14025,12 +14025,12 @@ namespace FakeCQG
             }
         }
 
-        public bool FireEventOnChangedPrices
+        public Boolean FireEventOnChangedPrices
         {
             get
             {
                 string name = "FireEventOnChangedPrices";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14041,12 +14041,12 @@ namespace FakeCQG
             }
         }
 
-        public bool GatewayEnabled
+        public Boolean GatewayEnabled
         {
             get
             {
                 string name = "GatewayEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14057,12 +14057,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeOrderTransactions
+        public Boolean IncludeOrderTransactions
         {
             get
             {
                 string name = "IncludeOrderTransactions";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14089,12 +14089,12 @@ namespace FakeCQG
             }
         }
 
-        public int MaxLogFileCount
+        public Int32 MaxLogFileCount
         {
             get
             {
                 string name = "MaxLogFileCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14121,12 +14121,12 @@ namespace FakeCQG
             }
         }
 
-        public int MaxLogFileSize
+        public Int32 MaxLogFileSize
         {
             get
             {
                 string name = "MaxLogFileSize";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14137,12 +14137,12 @@ namespace FakeCQG
             }
         }
 
-        public int MessageProcessingTimeout
+        public Int32 MessageProcessingTimeout
         {
             get
             {
                 string name = "MessageProcessingTimeout";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14153,12 +14153,12 @@ namespace FakeCQG
             }
         }
 
-        public bool MetaDataEnabled
+        public Boolean MetaDataEnabled
         {
             get
             {
                 string name = "MetaDataEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14169,12 +14169,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NewInstrumentChangeMode
+        public Boolean NewInstrumentChangeMode
         {
             get
             {
                 string name = "NewInstrumentChangeMode";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14185,12 +14185,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NewInstrumentMode
+        public Boolean NewInstrumentMode
         {
             get
             {
                 string name = "NewInstrumentMode";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14201,12 +14201,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NonsynchronizedData
+        public Boolean NonsynchronizedData
         {
             get
             {
                 string name = "NonsynchronizedData";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14217,12 +14217,12 @@ namespace FakeCQG
             }
         }
 
-        public bool PendingOrderActionEnabled
+        public Boolean PendingOrderActionEnabled
         {
             get
             {
                 string name = "PendingOrderActionEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14265,12 +14265,12 @@ namespace FakeCQG
             }
         }
 
-        public string ProviderPassword
+        public String ProviderPassword
         {
             get
             {
                 string name = "ProviderPassword";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14281,12 +14281,12 @@ namespace FakeCQG
             }
         }
 
-        public bool QueryAllAuthorizedTraders
+        public Boolean QueryAllAuthorizedTraders
         {
             get
             {
                 string name = "QueryAllAuthorizedTraders";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14313,12 +14313,12 @@ namespace FakeCQG
             }
         }
 
-        public string RemoteOpenAPILoginService
+        public String RemoteOpenAPILoginService
         {
             get
             {
                 string name = "RemoteOpenAPILoginService";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14329,12 +14329,12 @@ namespace FakeCQG
             }
         }
 
-        public string RemoteOpenAPIServer
+        public String RemoteOpenAPIServer
         {
             get
             {
                 string name = "RemoteOpenAPIServer";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14356,12 +14356,12 @@ namespace FakeCQG
 
         }
 
-        public bool ReplaceLoginSession
+        public Boolean ReplaceLoginSession
         {
             get
             {
                 string name = "ReplaceLoginSession";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14372,12 +14372,12 @@ namespace FakeCQG
             }
         }
 
-        public int SnapshotPeriod
+        public Int32 SnapshotPeriod
         {
             get
             {
                 string name = "SnapshotPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14388,12 +14388,12 @@ namespace FakeCQG
             }
         }
 
-        public bool StrategyManagerEnabled
+        public Boolean StrategyManagerEnabled
         {
             get
             {
                 string name = "StrategyManagerEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14420,12 +14420,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UsedFromATLClient
+        public Boolean UsedFromATLClient
         {
             get
             {
                 string name = "UsedFromATLClient";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14436,12 +14436,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UseOrderSide
+        public Boolean UseOrderSide
         {
             get
             {
                 string name = "UseOrderSide";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -14455,7 +14455,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void AddRemoteOpenAPIServer(string server_address)
+        public virtual void AddRemoteOpenAPIServer(String server_address)
         {
             object[] args = new object[1] {server_address};
             string name = "AddRemoteOpenAPIServer";
@@ -14476,25 +14476,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -14505,17 +14505,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -14544,29 +14544,29 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public DateTime this[int index_]
+        public DateTime this[Int32 index_]
         {
             get
             {
@@ -14610,11 +14610,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -14625,17 +14625,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -14646,17 +14646,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -14968,12 +14968,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsStarted
+        public Boolean IsStarted
         {
             get
             {
                 string name = "IsStarted";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -15001,12 +15001,12 @@ namespace FakeCQG
 
         }
 
-        public bool OTPRequired
+        public Boolean OTPRequired
         {
             get
             {
                 string name = "OTPRequired";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -15220,7 +15220,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined)
+        public virtual void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             object[] args = new object[4] {cqg_account, cqg_instrument, from_all_traders, order_side};
             string name = "ActivateAllOrders";
@@ -15234,7 +15234,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, bool parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
+        public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             object[] args = new object[5] {cqg_account, cqg_instrument, from_all_traders, parked_, order_side};
             string name = "CancelAllOrders";
@@ -15248,14 +15248,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ChangePassword(string username_, string old_password, string new_password)
+        public virtual void ChangePassword(String username_, String old_password, String new_password)
         {
             object[] args = new object[3] {username_, old_password, new_password};
             string name = "ChangePassword";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ChangeRemoteOpenAPIServer(string server_address)
+        public virtual void ChangeRemoteOpenAPIServer(String server_address)
         {
             object[] args = new object[1] {server_address};
             string name = "ChangeRemoteOpenAPIServer";
@@ -15269,7 +15269,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAdvancedStudyRequest CreateAdvancedStudyRequest(string name_or_abbr)
+        public virtual CQGAdvancedStudyRequest CreateAdvancedStudyRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateAdvancedStudyRequest";
@@ -15284,7 +15284,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGConditionRequest CreateConditionRequest(string condition_name)
+        public virtual CQGConditionRequest CreateConditionRequest(String condition_name)
         {
             object[] args = new object[1] {condition_name};
             string name = "CreateConditionRequest";
@@ -15299,7 +15299,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGCustomStudyRequest CreateCustomStudyRequest(string name_or_abbr)
+        public virtual CQGCustomStudyRequest CreateCustomStudyRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateCustomStudyRequest";
@@ -15359,7 +15359,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
+        public virtual CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "")
         {
             object[] args = new object[8] {order_type, cqg_instrument, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateOrder";
@@ -15374,7 +15374,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, string instrument_name, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
+        public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, String instrument_name, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "")
         {
             object[] args = new object[8] {order_type, instrument_name, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateOrderByInstrumentName";
@@ -15396,7 +15396,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
+        public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             object[] args = new object[9] {order_type, cqg_definition, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateStrategyOrder";
@@ -15404,7 +15404,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, string expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
+        public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, String expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             object[] args = new object[9] {order_type, expression_string, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateStrategyOrderByExpression";
@@ -15440,7 +15440,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGTradingSystemRequest CreateTradingSystemRequest(string name_or_abbr)
+        public virtual CQGTradingSystemRequest CreateTradingSystemRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateTradingSystemRequest";
@@ -15455,7 +15455,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGStrategyDefinition DefineStrategy(string request_string_)
+        public virtual CQGStrategyDefinition DefineStrategy(String request_string_)
         {
             object[] args = new object[1] {request_string_};
             string name = "DefineStrategy";
@@ -15463,25 +15463,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -15498,50 +15498,50 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void GWLogon(string username_, string password_)
+        public virtual void GWLogon(String username_, String password_)
         {
             object[] args = new object[2] {username_, password_};
             string name = "GWLogon";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void GWOTPLogon(string username_, string password_, string otpassword_)
+        public virtual void GWOTPLogon(String username_, String password_, String otpassword_)
         {
             object[] args = new object[3] {username_, password_, otpassword_};
             string name = "GWOTPLogon";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsValid(object value_or_object)
+        public virtual Boolean IsValid(Object value_or_object)
         {
             object[] args = new object[1] {value_or_object};
             string name = "IsValid";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual void LogOn(string username_, string password_)
+        public virtual void LogOn(String username_, String password_)
         {
             object[] args = new object[2] {username_, password_};
             string name = "LogOn";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void ModifyCompoundOrder(int compound_order_id, string compound_order_guid, CQGOrderChain order_chain)
+        public virtual void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain)
         {
             object[] args = new object[3] {compound_order_id, compound_order_guid, order_chain};
             string name = "ModifyCompoundOrder";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void NewInstrument(string symbol_)
+        public virtual void NewInstrument(String symbol_)
         {
             object[] args = new object[1] {symbol_};
             string name = "NewInstrument";
@@ -15563,21 +15563,21 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void QueryPositionsStatement(int gw_account_id, DateTime date_)
+        public virtual void QueryPositionsStatement(Int32 gw_account_id, DateTime date_)
         {
             object[] args = new object[2] {gw_account_id, date_};
             string name = "QueryPositionsStatement";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void QuerySummariesStatement(int gw_account_id, DateTime date_)
+        public virtual void QuerySummariesStatement(Int32 gw_account_id, DateTime date_)
         {
             object[] args = new object[2] {gw_account_id, date_};
             string name = "QuerySummariesStatement";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void RegisterAlgorithmicOrder(string guid_, string name_, string abbrv_, string description_, CQGAlgorithmicOrderDefinitions definitions_, int icon_index = 0)
+        public virtual void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0)
         {
             object[] args = new object[6] {guid_, name_, abbrv_, description_, definitions_, icon_index};
             string name = "RegisterAlgorithmicOrder";
@@ -15782,7 +15782,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void RequestCommodityInstruments(string commodity_name, eInstrumentType instrument_types, bool tradable_only = false)
+        public virtual void RequestCommodityInstruments(String commodity_name, eInstrumentType instrument_types, Boolean tradable_only = false)
         {
             object[] args = new object[3] {commodity_name, instrument_types, tradable_only};
             string name = "RequestCommodityInstruments";
@@ -15837,7 +15837,7 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void RequestDataSourceSymbols(string data_source_abbreviation)
+        public virtual void RequestDataSourceSymbols(String data_source_abbreviation)
         {
             object[] args = new object[1] {data_source_abbreviation};
             string name = "RequestDataSourceSymbols";
@@ -15859,14 +15859,14 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, bool trace_group_changes)
+        public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes)
         {
             object[] args = new object[2] {group_request, trace_group_changes};
             string name = "RequestInstrumentsGroup";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void RequestManualFills(int gw_account_id, eManualFillsDataLevel update_level)
+        public virtual void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level)
         {
             object[] args = new object[2] {gw_account_id, update_level};
             string name = "RequestManualFills";
@@ -15926,14 +15926,14 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void RequestTradableCommodities(int gw_account_id = 0)
+        public virtual void RequestTradableCommodities(Int32 gw_account_id = 0)
         {
             object[] args = new object[1] {gw_account_id};
             string name = "RequestTradableCommodities";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void RequestTradableExchanges(int gw_account_id = 0)
+        public virtual void RequestTradableExchanges(Int32 gw_account_id = 0)
         {
             object[] args = new object[1] {gw_account_id};
             string name = "RequestTradableExchanges";
@@ -15981,21 +15981,21 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual void TerminateCQGIC(bool start_again = false)
+        public virtual void TerminateCQGIC(Boolean start_again = false)
         {
             object[] args = new object[1] {start_again};
             string name = "TerminateCQGIC";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void UnregisterAlgorithmicOrder(string guid_)
+        public virtual void UnregisterAlgorithmicOrder(String guid_)
         {
             object[] args = new object[1] {guid_};
             string name = "UnregisterAlgorithmicOrder";
@@ -16045,18 +16045,18 @@ namespace FakeCQG
 
         }
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGChangedTradeEntry this[int index_]
+        public CQGChangedTradeEntry this[Int32 index_]
         {
             get
             {
@@ -16078,11 +16078,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -16093,17 +16093,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16114,17 +16114,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16186,25 +16186,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16215,17 +16215,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16287,25 +16287,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16316,17 +16316,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16366,18 +16366,18 @@ namespace FakeCQG
 
         }
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGChangedTradeExit this[int index_]
+        public CQGChangedTradeExit this[Int32 index_]
         {
             get
             {
@@ -16399,11 +16399,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -16414,17 +16414,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16435,17 +16435,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16474,34 +16474,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -16518,11 +16518,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -16533,17 +16533,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16554,17 +16554,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16593,34 +16593,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsTradableOnly
+        public Boolean IsTradableOnly
         {
             get
             {
                 string name = "IsTradableOnly";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -16637,11 +16637,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -16652,17 +16652,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16673,17 +16673,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16712,12 +16712,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -16745,18 +16745,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGConditionResult this[int index_]
+        public CQGConditionResult this[Int32 index_]
         {
             get
             {
@@ -16811,12 +16811,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -16838,19 +16838,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -16861,17 +16861,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16882,32 +16882,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16936,12 +16936,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -16969,25 +16969,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -16998,17 +16998,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17037,18 +17037,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGConditionDefinition this[int index_]
+        public CQGConditionDefinition this[Int32 index_]
         {
             get
             {
@@ -17059,7 +17059,7 @@ namespace FakeCQG
 
         }
 
-        public CQGConditionDefinition this[string condition_name]
+        public CQGConditionDefinition this[String condition_name]
         {
             get
             {
@@ -17081,15 +17081,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGConditionDefinition get_ItemByName(string condition_name)
+        public virtual CQGConditionDefinition get_ItemByName(String condition_name)
         {
             object[] args = new object[1] {condition_name};
             string name = "get_ItemByName";
@@ -17104,17 +17104,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17125,17 +17125,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17164,12 +17164,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17196,12 +17196,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17223,12 +17223,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17255,12 +17255,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17271,12 +17271,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17287,12 +17287,12 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17303,12 +17303,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17319,12 +17319,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17335,12 +17335,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17367,12 +17367,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17399,12 +17399,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17426,33 +17426,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             object[] args = new object[1] {key_};
             string name = "get_Parameter";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17463,24 +17463,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17520,12 +17520,12 @@ namespace FakeCQG
 
         }
 
-        public bool Value
+        public Boolean Value
         {
             get
             {
                 string name = "Value";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17542,25 +17542,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17571,17 +17571,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17610,18 +17610,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCondition this[int index_]
+        public CQGCondition this[Int32 index_]
         {
             get
             {
@@ -17632,7 +17632,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCondition this[string id_]
+        public CQGCondition this[String id_]
         {
             get
             {
@@ -17654,15 +17654,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGCondition get_ItemById(string id_)
+        public virtual CQGCondition get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -17677,17 +17677,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17698,17 +17698,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17737,133 +17737,133 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int ActualVolume
+        public Int32 ActualVolume
         {
             get
             {
                 string name = "ActualVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17880,45 +17880,45 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -17935,25 +17935,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -17964,17 +17964,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18003,12 +18003,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18025,18 +18025,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGConstantVolumeBar this[int index_]
+        public CQGConstantVolumeBar this[Int32 index_]
         {
             get
             {
@@ -18091,12 +18091,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18118,19 +18118,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -18141,17 +18141,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18162,24 +18162,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18208,18 +18208,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGConstantVolumeBars this[int index_]
+        public CQGConstantVolumeBars this[Int32 index_]
         {
             get
             {
@@ -18230,7 +18230,7 @@ namespace FakeCQG
 
         }
 
-        public CQGConstantVolumeBars this[string id_]
+        public CQGConstantVolumeBars this[String id_]
         {
             get
             {
@@ -18252,15 +18252,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGConstantVolumeBars get_ItemById(string id_)
+        public virtual CQGConstantVolumeBars get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -18275,17 +18275,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18296,17 +18296,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18351,12 +18351,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18367,12 +18367,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18383,12 +18383,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18399,12 +18399,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeFlatTicks
+        public Boolean IncludeFlatTicks
         {
             get
             {
                 string name = "IncludeFlatTicks";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18415,12 +18415,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18431,12 +18431,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18447,12 +18447,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18479,12 +18479,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18511,12 +18511,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18527,12 +18527,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18543,12 +18543,12 @@ namespace FakeCQG
             }
         }
 
-        public int VolumeLevel
+        public Int32 VolumeLevel
         {
             get
             {
                 string name = "VolumeLevel";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18586,25 +18586,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18615,17 +18615,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18654,12 +18654,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string BaseCurrencyName
+        public String BaseCurrencyName
         {
             get
             {
                 string name = "BaseCurrencyName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18676,34 +18676,34 @@ namespace FakeCQG
 
         }
 
-        public string CurrencyName
+        public String CurrencyName
         {
             get
             {
                 string name = "CurrencyName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int FcmID
+        public Int32 FcmID
         {
             get
             {
                 string name = "FcmID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Rate
+        public Double Rate
         {
             get
             {
                 string name = "Rate";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18742,25 +18742,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18771,17 +18771,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18810,18 +18810,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCurrencyRate this[int fcm_id, string currency_, string base_currency = ""]
+        public CQGCurrencyRate this[Int32 fcm_id, String currency_, String base_currency = ""]
         {
             get
             {
@@ -18843,11 +18843,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -18858,17 +18858,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18879,17 +18879,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18918,12 +18918,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -18940,25 +18940,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -18969,17 +18969,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19008,18 +19008,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCurveDefinition this[int index_]
+        public CQGCurveDefinition this[Int32 index_]
         {
             get
             {
@@ -19030,7 +19030,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCurveDefinition this[string curve_name]
+        public CQGCurveDefinition this[String curve_name]
         {
             get
             {
@@ -19052,15 +19052,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGCurveDefinition get_ItemByName(string curve_name)
+        public virtual CQGCurveDefinition get_ItemByName(String curve_name)
         {
             object[] args = new object[1] {curve_name};
             string name = "get_ItemByName";
@@ -19075,17 +19075,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19096,17 +19096,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19135,23 +19135,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19168,11 +19168,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -19183,17 +19183,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19204,17 +19204,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19243,23 +19243,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double this[object key_]
+        public Double this[Object key_]
         {
             get
             {
                 string name = "Item";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19276,12 +19276,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19298,11 +19298,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -19313,17 +19313,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19334,17 +19334,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19373,18 +19373,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCustomStudy this[int index_]
+        public CQGCustomStudy this[Int32 index_]
         {
             get
             {
@@ -19395,7 +19395,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCustomStudy this[string id_]
+        public CQGCustomStudy this[String id_]
         {
             get
             {
@@ -19417,15 +19417,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGCustomStudy get_ItemById(string id_)
+        public virtual CQGCustomStudy get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -19440,17 +19440,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19461,17 +19461,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19500,12 +19500,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19544,18 +19544,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCurves this[int index_]
+        public CQGCurves this[Int32 index_]
         {
             get
             {
@@ -19610,12 +19610,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19637,19 +19637,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -19660,17 +19660,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19681,32 +19681,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19735,12 +19735,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19757,12 +19757,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -19790,25 +19790,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19819,17 +19819,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19858,18 +19858,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGCustomStudyDefinition this[int index_]
+        public CQGCustomStudyDefinition this[Int32 index_]
         {
             get
             {
@@ -19880,7 +19880,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCustomStudyDefinition this[string custom_study_abbreviation]
+        public CQGCustomStudyDefinition this[String custom_study_abbreviation]
         {
             get
             {
@@ -19902,15 +19902,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGCustomStudyDefinition get_ItemByAbbreviation(string custom_study_abbreviation)
+        public virtual CQGCustomStudyDefinition get_ItemByAbbreviation(String custom_study_abbreviation)
         {
             object[] args = new object[1] {custom_study_abbreviation};
             string name = "get_ItemByAbbreviation";
@@ -19918,7 +19918,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGCustomStudyDefinition get_ItemByName(string custom_study_name)
+        public virtual CQGCustomStudyDefinition get_ItemByName(String custom_study_name)
         {
             object[] args = new object[1] {custom_study_name};
             string name = "get_ItemByName";
@@ -19933,17 +19933,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19954,17 +19954,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -19993,12 +19993,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20025,12 +20025,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20052,12 +20052,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20084,12 +20084,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20100,12 +20100,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20116,12 +20116,12 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20132,12 +20132,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20148,12 +20148,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20164,12 +20164,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20196,12 +20196,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20228,12 +20228,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20255,33 +20255,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             object[] args = new object[1] {key_};
             string name = "get_Parameter";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20292,39 +20292,39 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncludeCurve(object curve_key)
+        public virtual void IncludeCurve(Object curve_key)
         {
             object[] args = new object[1] {curve_key};
             string name = "IncludeCurve";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsCurveIncluded(object curve_key)
+        public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             object[] args = new object[1] {curve_key};
             string name = "IsCurveIncluded";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20353,23 +20353,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20408,25 +20408,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20437,17 +20437,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20476,18 +20476,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGDataSource this[int index_]
+        public CQGDataSource this[Int32 index_]
         {
             get
             {
@@ -20498,7 +20498,7 @@ namespace FakeCQG
 
         }
 
-        public CQGDataSource this[string data_source_abbreviation]
+        public CQGDataSource this[String data_source_abbreviation]
         {
             get
             {
@@ -20520,15 +20520,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGDataSource get_ItemByAbbreviation(string data_source_abbreviation)
+        public virtual CQGDataSource get_ItemByAbbreviation(String data_source_abbreviation)
         {
             object[] args = new object[1] {data_source_abbreviation};
             string name = "get_ItemByAbbreviation";
@@ -20543,17 +20543,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20564,17 +20564,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20603,23 +20603,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -20647,25 +20647,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20676,17 +20676,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20715,29 +20715,29 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string DataSourceAbbreviation
+        public String DataSourceAbbreviation
         {
             get
             {
                 string name = "DataSourceAbbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGDataSourceSymbol this[int index_]
+        public CQGDataSourceSymbol this[Int32 index_]
         {
             get
             {
@@ -20759,11 +20759,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -20774,17 +20774,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20795,17 +20795,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20882,25 +20882,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20911,17 +20911,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -20957,18 +20957,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGQuote this[int index_]
+        public CQGQuote this[Int32 index_]
         {
             get
             {
@@ -20979,7 +20979,7 @@ namespace FakeCQG
 
         }
 
-        public CQGQuote this[double price_, bool round_to_better = true]
+        public CQGQuote this[Double price_, Boolean round_to_better = true]
         {
             get
             {
@@ -21001,15 +21001,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGQuote get_ItemByPrice(double price_, bool round_to_better = true)
+        public virtual CQGQuote get_ItemByPrice(Double price_, Boolean round_to_better = true)
         {
             object[] args = new object[2] {price_, round_to_better};
             string name = "get_ItemByPrice";
@@ -21024,17 +21024,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21045,17 +21045,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21095,34 +21095,34 @@ namespace FakeCQG
 
         }
 
-        public string CELVersion
+        public String CELVersion
         {
             get
             {
                 string name = "CELVersion";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int CQGSerialNumber
+        public Int32 CQGSerialNumber
         {
             get
             {
                 string name = "CQGSerialNumber";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string CQGVersion
+        public String CQGVersion
         {
             get
             {
                 string name = "CQGVersion";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21150,12 +21150,12 @@ namespace FakeCQG
 
         }
 
-        public string GWLogonName
+        public String GWLogonName
         {
             get
             {
                 string name = "GWLogonName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21194,23 +21194,23 @@ namespace FakeCQG
 
         }
 
-        public int MessagesPending
+        public Int32 MessagesPending
         {
             get
             {
                 string name = "MessagesPending";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int OrdersPending
+        public Int32 OrdersPending
         {
             get
             {
                 string name = "OrdersPending";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21238,25 +21238,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21267,17 +21267,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21306,34 +21306,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Code
+        public Int32 Code
         {
             get
             {
                 string name = "Code";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object Owner
+        public Object Owner
         {
             get
             {
                 string name = "Owner";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21350,25 +21350,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21379,17 +21379,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21418,34 +21418,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21462,11 +21462,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -21477,17 +21477,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21498,17 +21498,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21548,12 +21548,12 @@ namespace FakeCQG
 
         }
 
-        public string PatternString
+        public String PatternString
         {
             get
             {
                 string name = "PatternString";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21570,25 +21570,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21599,17 +21599,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21638,12 +21638,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21671,12 +21671,12 @@ namespace FakeCQG
 
         }
 
-        public string Value
+        public String Value
         {
             get
             {
                 string name = "Value";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21698,25 +21698,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21727,17 +21727,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21766,18 +21766,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGExecutionPatternParameter this[object index_]
+        public CQGExecutionPatternParameter this[Object index_]
         {
             get
             {
@@ -21791,7 +21791,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual CQGExecutionPatternParameter Add(string name_, eExecutionPatternParameterType type_, string value_ = "")
+        public virtual CQGExecutionPatternParameter Add(String name_, eExecutionPatternParameterType type_, String value_ = "")
         {
             object[] args = new object[3] {name_, type_, value_};
             string name = "Add";
@@ -21807,11 +21807,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -21822,17 +21822,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21843,24 +21843,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void Remove(object index_)
+        public virtual void Remove(Object index_)
         {
             object[] args = new object[1] {index_};
             string name = "Remove";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -21889,12 +21889,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -21911,18 +21911,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGExpressionOutputs this[int index_]
+        public CQGExpressionOutputs this[Int32 index_]
         {
             get
             {
@@ -21988,12 +21988,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22015,19 +22015,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -22038,17 +22038,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22059,32 +22059,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22113,23 +22113,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22146,11 +22146,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -22161,17 +22161,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22182,17 +22182,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22221,23 +22221,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double this[object key_]
+        public Double this[Object key_]
         {
             get
             {
                 string name = "Item";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22254,12 +22254,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22276,11 +22276,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -22291,17 +22291,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22312,17 +22312,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22367,12 +22367,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22383,12 +22383,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22415,12 +22415,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22431,12 +22431,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22447,12 +22447,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22463,12 +22463,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22479,12 +22479,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22511,12 +22511,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22527,23 +22527,23 @@ namespace FakeCQG
             }
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "SubExpression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int SubExpressionCount
+        public Int32 SubExpressionCount
         {
             get
             {
                 string name = "SubExpressionCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22565,12 +22565,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22584,7 +22584,7 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public virtual void AddSubExpression(string sub_expression, string alias_ = "")
+        public virtual void AddSubExpression(String sub_expression, String alias_ = "")
         {
             object[] args = new object[2] {sub_expression, alias_};
             string name = "AddSubExpression";
@@ -22599,41 +22599,41 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual string get_SubExpression(int index_)
+        public virtual String get_SubExpression(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_SubExpression";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual string get_SubExpressionAlias(int index_)
+        public virtual String get_SubExpressionAlias(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_SubExpressionAlias";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22644,17 +22644,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22683,18 +22683,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGExpression this[int index_]
+        public CQGExpression this[Int32 index_]
         {
             get
             {
@@ -22705,7 +22705,7 @@ namespace FakeCQG
 
         }
 
-        public CQGExpression this[string id_]
+        public CQGExpression this[String id_]
         {
             get
             {
@@ -22727,15 +22727,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGExpression get_ItemById(string id_)
+        public virtual CQGExpression get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -22750,17 +22750,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22771,17 +22771,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -22810,34 +22810,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int this[int leg_]
+        public Int32 this[Int32 leg_]
         {
             get
             {
                 string name = "GWTradesCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int LegCount
+        public Int32 LegCount
         {
             get
             {
                 string name = "LegCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22854,12 +22854,12 @@ namespace FakeCQG
 
         }
 
-        public string RefFillId
+        public String RefFillId
         {
             get
             {
                 string name = "RefFillId";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -22909,39 +22909,39 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual bool get_Aggressive(int leg_ = 0)
+        public virtual Boolean get_Aggressive(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_Aggressive";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual string get_Currency(int leg_ = 0)
+        public virtual String get_Currency(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_Currency";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual string get_DisplayPrice(int leg_ = 0)
+        public virtual String get_DisplayPrice(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_DisplayPrice";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual DateTime get_ExchangeTradeDate(int leg_ = 0)
+        public virtual DateTime get_ExchangeTradeDate(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_ExchangeTradeDate";
@@ -22949,15 +22949,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual string get_GWTradeId(int leg_ = 0)
+        public virtual String get_GWTradeId(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_GWTradeId";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGGWTrades get_GWTrades(int leg_ = 0)
+        public virtual CQGGWTrades get_GWTrades(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_GWTrades";
@@ -22965,39 +22965,39 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int get_GWTradesCount(int leg_)
+        public virtual Int32 get_GWTradesCount(Int32 leg_)
         {
             object[] args = new object[1] {leg_};
             string name = "get_GWTradesCount";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual string get_InstrumentName(int leg_ = 0)
+        public virtual String get_InstrumentName(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_InstrumentName";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double get_Price(int leg_ = 0)
+        public virtual Double get_Price(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_Price";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual int get_Quantity(int leg_ = 0)
+        public virtual Int32 get_Quantity(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_Quantity";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual eOrderSide get_Side(int leg_ = 0)
+        public virtual eOrderSide get_Side(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_Side";
@@ -23005,7 +23005,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual DateTime get_StatementDate(int leg_ = 0)
+        public virtual DateTime get_StatementDate(Int32 leg_ = 0)
         {
             object[] args = new object[1] {leg_};
             string name = "get_StatementDate";
@@ -23013,17 +23013,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23034,17 +23034,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23073,18 +23073,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGFill this[string fill_id]
+        public CQGFill this[String fill_id]
         {
             get
             {
@@ -23095,7 +23095,7 @@ namespace FakeCQG
 
         }
 
-        public CQGFill this[int index_]
+        public CQGFill this[Int32 index_]
         {
             get
             {
@@ -23117,15 +23117,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGFill get_ItemByIndex(int index_)
+        public virtual CQGFill get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -23140,17 +23140,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23161,17 +23161,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23200,34 +23200,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool Aggressive
+        public Boolean Aggressive
         {
             get
             {
                 string name = "Aggressive";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Currency
+        public String Currency
         {
             get
             {
                 string name = "Currency";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string DisplayPrice
+        public String DisplayPrice
         {
             get
             {
                 string name = "DisplayPrice";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -23255,56 +23255,56 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Leg
+        public Int32 Leg
         {
             get
             {
                 string name = "Leg";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -23343,25 +23343,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23372,17 +23372,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23411,18 +23411,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGGWTrade this[string trade_gw_id]
+        public CQGGWTrade this[String trade_gw_id]
         {
             get
             {
@@ -23433,7 +23433,7 @@ namespace FakeCQG
 
         }
 
-        public CQGGWTrade this[int index_]
+        public CQGGWTrade this[Int32 index_]
         {
             get
             {
@@ -23455,15 +23455,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGGWTrade get_ItemByIndex(int index_)
+        public virtual CQGGWTrade get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -23478,17 +23478,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23499,17 +23499,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23570,12 +23570,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -23613,25 +23613,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23642,17 +23642,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23692,12 +23692,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsDaily
+        public Boolean IsDaily
         {
             get
             {
                 string name = "IsDaily";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -23725,25 +23725,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23754,17 +23754,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23793,18 +23793,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGHoliday this[int index_]
+        public CQGHoliday this[Int32 index_]
         {
             get
             {
@@ -23837,11 +23837,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -23852,17 +23852,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23873,17 +23873,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -23961,34 +23961,34 @@ namespace FakeCQG
 
         }
 
-        public string Commodity
+        public String Commodity
         {
             get
             {
                 string name = "Commodity";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Country
+        public String Country
         {
             get
             {
                 string name = "Country";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Currency
+        public String Currency
         {
             get
             {
                 string name = "Currency";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24010,12 +24010,12 @@ namespace FakeCQG
             }
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24043,12 +24043,12 @@ namespace FakeCQG
 
         }
 
-        public int DOMBookLimit
+        public Int32 DOMBookLimit
         {
             get
             {
                 string name = "DOMBookLimit";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24059,12 +24059,12 @@ namespace FakeCQG
             }
         }
 
-        public bool DOMStatus
+        public Boolean DOMStatus
         {
             get
             {
                 string name = "DOMStatus";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24075,34 +24075,34 @@ namespace FakeCQG
             }
         }
 
-        public int DTE
+        public Int32 DTE
         {
             get
             {
                 string name = "DTE";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string ExchangeAbbreviation
+        public String ExchangeAbbreviation
         {
             get
             {
                 string name = "ExchangeAbbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ExchangeID
+        public Int32 ExchangeID
         {
             get
             {
                 string name = "ExchangeID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24119,34 +24119,34 @@ namespace FakeCQG
 
         }
 
-        public string FullName
+        public String FullName
         {
             get
             {
                 string name = "FullName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double InitialMargin
+        public Double InitialMargin
         {
             get
             {
                 string name = "InitialMargin";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int InstrumentID
+        public Int32 InstrumentID
         {
             get
             {
                 string name = "InstrumentID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24163,89 +24163,89 @@ namespace FakeCQG
 
         }
 
-        public bool IsDownTick
+        public Boolean IsDownTick
         {
             get
             {
                 string name = "IsDownTick";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsFastMarket
+        public Boolean IsFastMarket
         {
             get
             {
                 string name = "IsFastMarket";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsUpTick
+        public Boolean IsUpTick
         {
             get
             {
                 string name = "IsUpTick";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaintenanceMargin
+        public Double MaintenanceMargin
         {
             get
             {
                 string name = "MaintenanceMargin";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Month
+        public Int32 Month
         {
             get
             {
                 string name = "Month";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string MonthChar
+        public String MonthChar
         {
             get
             {
                 string name = "MonthChar";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double NetChange
+        public Double NetChange
         {
             get
             {
                 string name = "NetChange";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string PreferredSessionsName
+        public String PreferredSessionsName
         {
             get
             {
                 string name = "PreferredSessionsName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24295,12 +24295,12 @@ namespace FakeCQG
 
         }
 
-        public short Scale
+        public Int16 Scale
         {
             get
             {
                 string name = "Scale";
-                var result = (short)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int16)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24317,23 +24317,23 @@ namespace FakeCQG
 
         }
 
-        public int SessionMask
+        public Int32 SessionMask
         {
             get
             {
                 string name = "SessionMask";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int SessionNumber
+        public Int32 SessionNumber
         {
             get
             {
                 string name = "SessionNumber";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24350,23 +24350,23 @@ namespace FakeCQG
 
         }
 
-        public int Strike
+        public Int32 Strike
         {
             get
             {
                 string name = "Strike";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object this[string tagName]
+        public Object this[String tagName]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24377,45 +24377,45 @@ namespace FakeCQG
             }
         }
 
-        public double TickSize
+        public Double TickSize
         {
             get
             {
                 string name = "TickSize";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TickSizeFractionDenominator
+        public Int32 TickSizeFractionDenominator
         {
             get
             {
                 string name = "TickSizeFractionDenominator";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TickSizeFractionNumerator
+        public Int32 TickSizeFractionNumerator
         {
             get
             {
                 string name = "TickSizeFractionNumerator";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TickValue
+        public Double TickValue
         {
             get
             {
                 string name = "TickValue";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24432,12 +24432,12 @@ namespace FakeCQG
 
         }
 
-        public double TodayCTotalVolume
+        public Double TodayCTotalVolume
         {
             get
             {
                 string name = "TodayCTotalVolume";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24465,56 +24465,56 @@ namespace FakeCQG
 
         }
 
-        public string UnderlyingInstrumentName
+        public String UnderlyingInstrumentName
         {
             get
             {
                 string name = "UnderlyingInstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double YCOI
+        public Double YCOI
         {
             get
             {
                 string name = "YCOI";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Year
+        public Int32 Year
         {
             get
             {
                 string name = "Year";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string YearString
+        public String YearString
         {
             get
             {
                 string name = "YearString";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double YesterdayCTotalVolume
+        public Double YesterdayCTotalVolume
         {
             get
             {
                 string name = "YesterdayCTotalVolume";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24531,65 +24531,65 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double FromDisplayPrice(string display_price)
+        public virtual Double FromDisplayPrice(String display_price)
         {
             object[] args = new object[1] {display_price};
             string name = "FromDisplayPrice";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tagName)
+        public virtual Object get_Tag(String tagName)
         {
             object[] args = new object[1] {tagName};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual double GetNearestTradeablePrice(double price_)
+        public virtual Double GetNearestTradeablePrice(Double price_)
         {
             object[] args = new object[1] {price_};
             string name = "GetNearestTradeablePrice";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double GetTickSizeFor(double Price)
+        public virtual Double GetTickSizeFor(Double Price)
         {
             object[] args = new object[1] {Price};
             string name = "GetTickSizeFor";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double GetTickValueFor(double Price)
+        public virtual Double GetTickValueFor(Double Price)
         {
             object[] args = new object[1] {Price};
             string name = "GetTickValueFor";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -24600,32 +24600,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tagName, object pVal)
+        public virtual void set_Tag(String tagName, Object pVal)
         {
             object[] args = new object[2] {tagName, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual string ToDisplayPrice(double correct_price)
+        public virtual String ToDisplayPrice(Double correct_price)
         {
             object[] args = new object[1] {correct_price};
             string name = "ToDisplayPrice";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24654,12 +24654,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24687,11 +24687,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -24702,17 +24702,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24723,17 +24723,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24773,12 +24773,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24817,12 +24817,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -24839,25 +24839,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24868,17 +24868,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24907,18 +24907,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGInstrument this[object index_]
+        public CQGInstrument this[Object index_]
         {
             get
             {
@@ -24940,11 +24940,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -24955,17 +24955,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -24976,17 +24976,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25015,12 +25015,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25059,25 +25059,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25088,17 +25088,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25127,12 +25127,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Commodity
+        public String Commodity
         {
             get
             {
                 string name = "Commodity";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25159,12 +25159,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25175,12 +25175,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25218,25 +25218,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25247,17 +25247,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25286,18 +25286,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGInstrumentsGroup this[object index_]
+        public CQGInstrumentsGroup this[Object index_]
         {
             get
             {
@@ -25319,11 +25319,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -25334,17 +25334,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25355,17 +25355,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25410,12 +25410,12 @@ namespace FakeCQG
             }
         }
 
-        public bool DOMStatus
+        public Boolean DOMStatus
         {
             get
             {
                 string name = "DOMStatus";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25458,12 +25458,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25485,25 +25485,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25514,17 +25514,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25553,23 +25553,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int this[int index_]
+        public Int32 this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25586,11 +25586,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -25601,17 +25601,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25622,17 +25622,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25683,25 +25683,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25712,24 +25712,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void Log(string content_, eLogSeverity severity_ = eLogSeverity.lsInfo)
+        public virtual void Log(String content_, eLogSeverity severity_ = eLogSeverity.lsInfo)
         {
             object[] args = new object[2] {content_, severity_};
             string name = "Log";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25758,67 +25758,67 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string DisplayPrice
+        public String DisplayPrice
         {
             get
             {
                 string name = "DisplayPrice";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Note
+        public String Note
         {
             get
             {
                 string name = "Note";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25846,12 +25846,12 @@ namespace FakeCQG
 
         }
 
-        public int TradeId
+        public Int32 TradeId
         {
             get
             {
                 string name = "TradeId";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25879,25 +25879,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25908,17 +25908,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -25947,12 +25947,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25963,12 +25963,12 @@ namespace FakeCQG
             }
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25979,12 +25979,12 @@ namespace FakeCQG
             }
         }
 
-        public string Note
+        public String Note
         {
             get
             {
                 string name = "Note";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -25995,12 +25995,12 @@ namespace FakeCQG
             }
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26011,12 +26011,12 @@ namespace FakeCQG
             }
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26059,12 +26059,12 @@ namespace FakeCQG
             }
         }
 
-        public int TradeId
+        public Int32 TradeId
         {
             get
             {
                 string name = "TradeId";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26102,25 +26102,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26131,17 +26131,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26170,12 +26170,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26192,18 +26192,18 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGManualFill this[int trade_id]
+        public CQGManualFill this[Int32 trade_id]
         {
             get
             {
@@ -26225,15 +26225,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGManualFill get_ItemByIndex(int index_)
+        public virtual CQGManualFill get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -26248,17 +26248,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26269,17 +26269,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26308,18 +26308,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGManualFills this[int account_id]
+        public CQGManualFills this[Int32 account_id]
         {
             get
             {
@@ -26341,15 +26341,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGManualFills get_ItemByIndex(int index_)
+        public virtual CQGManualFills get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -26364,17 +26364,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26385,17 +26385,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26424,12 +26424,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26446,7 +26446,7 @@ namespace FakeCQG
 
         }
 
-        public CQGModifiedProperty this[int index_]
+        public CQGModifiedProperty this[Int32 index_]
         {
             get
             {
@@ -26468,15 +26468,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGModifiedProperty get_ItemByIndex(int index_)
+        public virtual CQGModifiedProperty get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -26491,17 +26491,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26512,17 +26512,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26551,45 +26551,45 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object NewValue
+        public Object NewValue
         {
             get
             {
                 string name = "NewValue";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object PreviousValue
+        public Object PreviousValue
         {
             get
             {
                 string name = "PreviousValue";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26617,25 +26617,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26646,17 +26646,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26701,12 +26701,12 @@ namespace FakeCQG
             }
         }
 
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var result = (uint)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (UInt32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26717,12 +26717,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26733,12 +26733,12 @@ namespace FakeCQG
             }
         }
 
-        public bool FromAllTraders
+        public Boolean FromAllTraders
         {
             get
             {
                 string name = "FromAllTraders";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26781,12 +26781,12 @@ namespace FakeCQG
             }
         }
 
-        public bool Parked
+        public Boolean Parked
         {
             get
             {
                 string name = "Parked";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26808,25 +26808,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26837,17 +26837,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26876,12 +26876,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var result = (uint)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (UInt32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26892,12 +26892,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26908,12 +26908,12 @@ namespace FakeCQG
             }
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -26937,25 +26937,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -26966,17 +26966,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27021,12 +27021,12 @@ namespace FakeCQG
             }
         }
 
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var result = (uint)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (UInt32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27037,12 +27037,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27053,34 +27053,34 @@ namespace FakeCQG
             }
         }
 
-        public bool CanBeCanceled
+        public Boolean CanBeCanceled
         {
             get
             {
                 string name = "CanBeCanceled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool CanBeModified
+        public Boolean CanBeModified
         {
             get
             {
                 string name = "CanBeModified";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool CanBeReplaced
+        public Boolean CanBeReplaced
         {
             get
             {
                 string name = "CanBeReplaced";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27102,12 +27102,12 @@ namespace FakeCQG
             }
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27134,12 +27134,12 @@ namespace FakeCQG
             }
         }
 
-        public int FilledQuantity
+        public Int32 FilledQuantity
         {
             get
             {
                 string name = "FilledQuantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27156,23 +27156,23 @@ namespace FakeCQG
 
         }
 
-        public string GUID
+        public String GUID
         {
             get
             {
                 string name = "GUID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string GWOrderID
+        public String GWOrderID
         {
             get
             {
                 string name = "GWOrderID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27205,34 +27205,34 @@ namespace FakeCQG
             }
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsExternal
+        public Boolean IsExternal
         {
             get
             {
                 string name = "IsExternal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsFinal
+        public Boolean IsFinal
         {
             get
             {
                 string name = "IsFinal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27260,12 +27260,12 @@ namespace FakeCQG
 
         }
 
-        public double LimitPrice
+        public Double LimitPrice
         {
             get
             {
                 string name = "LimitPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27276,12 +27276,12 @@ namespace FakeCQG
             }
         }
 
-        public bool OrderCheckMark
+        public Boolean OrderCheckMark
         {
             get
             {
                 string name = "OrderCheckMark";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27292,12 +27292,12 @@ namespace FakeCQG
             }
         }
 
-        public string OriginalOrderID
+        public String OriginalOrderID
         {
             get
             {
                 string name = "OriginalOrderID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27325,12 +27325,12 @@ namespace FakeCQG
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27341,12 +27341,12 @@ namespace FakeCQG
             }
         }
 
-        public int RemainingQuantity
+        public Int32 RemainingQuantity
         {
             get
             {
                 string name = "RemainingQuantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27390,12 +27390,12 @@ namespace FakeCQG
 
         }
 
-        public double StopPrice
+        public Double StopPrice
         {
             get
             {
                 string name = "StopPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27406,12 +27406,12 @@ namespace FakeCQG
             }
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27466,12 +27466,12 @@ namespace FakeCQG
 
         }
 
-        public string UEName
+        public String UEName
         {
             get
             {
                 string name = "UEName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27500,33 +27500,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27537,10 +27537,10 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27570,17 +27570,17 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27631,25 +27631,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27660,17 +27660,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27699,12 +27699,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27732,11 +27732,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -27747,17 +27747,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27768,17 +27768,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27807,34 +27807,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool CanBeSet
+        public Boolean CanBeSet
         {
             get
             {
                 string name = "CanBeSet";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27873,12 +27873,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -27900,25 +27900,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27929,17 +27929,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -27968,18 +27968,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGOrder this[string order_id]
+        public CQGOrder this[String order_id]
         {
             get
             {
@@ -28007,15 +28007,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGOrder get_ItemByGuid(string order_guid)
+        public virtual CQGOrder get_ItemByGuid(String order_guid)
         {
             object[] args = new object[1] {order_guid};
             string name = "get_ItemByGuid";
@@ -28030,17 +28030,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28051,14 +28051,14 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual CQGOrders SelectByInstrumentName(string instrument_name)
+        public virtual CQGOrders SelectByInstrumentName(String instrument_name)
         {
             object[] args = new object[1] {instrument_name};
             string name = "SelectByInstrumentName";
@@ -28082,7 +28082,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrders SelectByProperty(eOrderProperty property_type, object property_value)
+        public virtual CQGOrders SelectByProperty(eOrderProperty property_type, Object property_value)
         {
             object[] args = new object[2] {property_type, property_value};
             string name = "SelectByProperty";
@@ -28098,7 +28098,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrders SelectByTag(string tag_name, object tag_value = null)
+        public virtual CQGOrders SelectByTag(String tag_name, Object tag_value = null)
         {
             object[] args = new object[2] {tag_name, tag_value};
             string name = "SelectByTag";
@@ -28106,10 +28106,10 @@ namespace FakeCQG
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28193,12 +28193,12 @@ namespace FakeCQG
 
         }
 
-        public int QueryID
+        public Int32 QueryID
         {
             get
             {
                 string name = "QueryID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28254,25 +28254,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28283,17 +28283,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28322,18 +28322,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public object this[string i_GUID]
+        public Object this[String i_GUID]
         {
             get
             {
                 string name = "StatisticsOnReceive";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool Switch
+        public Boolean Switch
         {
             set
             {
@@ -28353,41 +28353,41 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_StatisticsOnReceive(string i_GUID)
+        public virtual Object get_StatisticsOnReceive(String i_GUID)
         {
             object[] args = new object[1] {i_GUID};
             string name = "get_StatisticsOnReceive";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_StatisticsOnSend(string i_GUID)
+        public virtual Object get_StatisticsOnSend(String i_GUID)
         {
             object[] args = new object[1] {i_GUID};
             string name = "get_StatisticsOnSend";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28398,17 +28398,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28448,34 +28448,34 @@ namespace FakeCQG
 
         }
 
-        public string Comment
+        public String Comment
         {
             get
             {
                 string name = "Comment";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public object DefaultValue
+        public Object DefaultValue
         {
             get
             {
                 string name = "DefaultValue";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28503,25 +28503,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28532,17 +28532,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28571,18 +28571,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGParameterDefinition this[int index_]
+        public CQGParameterDefinition this[Int32 index_]
         {
             get
             {
@@ -28593,7 +28593,7 @@ namespace FakeCQG
 
         }
 
-        public CQGParameterDefinition this[string parameter_name]
+        public CQGParameterDefinition this[String parameter_name]
         {
             get
             {
@@ -28615,15 +28615,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGParameterDefinition get_ItemByName(string parameter_name)
+        public virtual CQGParameterDefinition get_ItemByName(String parameter_name)
         {
             object[] args = new object[1] {parameter_name};
             string name = "get_ItemByName";
@@ -28638,17 +28638,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28659,17 +28659,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28698,56 +28698,56 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double PFHigh
+        public Double PFHigh
         {
             get
             {
                 string name = "PFHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double PFLow
+        public Double PFLow
         {
             get
             {
                 string name = "PFLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28764,23 +28764,23 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool Up
+        public Boolean Up
         {
             get
             {
                 string name = "Up";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28797,25 +28797,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28826,17 +28826,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -28865,12 +28865,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28887,18 +28887,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGPointAndFigureBar this[int index_]
+        public CQGPointAndFigureBar this[Int32 index_]
         {
             get
             {
@@ -28953,12 +28953,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -28980,19 +28980,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -29003,17 +29003,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29024,24 +29024,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29070,18 +29070,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGPointAndFigureBars this[int index_]
+        public CQGPointAndFigureBars this[Int32 index_]
         {
             get
             {
@@ -29092,7 +29092,7 @@ namespace FakeCQG
 
         }
 
-        public CQGPointAndFigureBars this[string id_]
+        public CQGPointAndFigureBars this[String id_]
         {
             get
             {
@@ -29114,15 +29114,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGPointAndFigureBars get_ItemById(string id_)
+        public virtual CQGPointAndFigureBars get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -29137,17 +29137,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29158,17 +29158,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29197,12 +29197,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int BoxSize
+        public Int32 BoxSize
         {
             get
             {
                 string name = "BoxSize";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29261,12 +29261,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29277,12 +29277,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29293,12 +29293,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29309,12 +29309,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29325,12 +29325,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29341,12 +29341,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29357,12 +29357,12 @@ namespace FakeCQG
             }
         }
 
-        public int Reversal
+        public Int32 Reversal
         {
             get
             {
                 string name = "Reversal";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29389,12 +29389,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29421,12 +29421,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29437,12 +29437,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29464,25 +29464,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29493,17 +29493,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29543,12 +29543,12 @@ namespace FakeCQG
 
         }
 
-        public double AveragePrice
+        public Double AveragePrice
         {
             get
             {
                 string name = "AveragePrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29565,23 +29565,23 @@ namespace FakeCQG
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool ManualFillsInvolved
+        public Boolean ManualFillsInvolved
         {
             get
             {
                 string name = "ManualFillsInvolved";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29598,12 +29598,12 @@ namespace FakeCQG
 
         }
 
-        public double MVO
+        public Double MVO
         {
             get
             {
                 string name = "MVO";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29620,34 +29620,34 @@ namespace FakeCQG
 
         }
 
-        public double OTE
+        public Double OTE
         {
             get
             {
                 string name = "OTE";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double ProfitLoss
+        public Double ProfitLoss
         {
             get
             {
                 string name = "ProfitLoss";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29686,12 +29686,12 @@ namespace FakeCQG
 
         }
 
-        public double UPL
+        public Double UPL
         {
             get
             {
                 string name = "UPL";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29708,25 +29708,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29737,17 +29737,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29776,18 +29776,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGPosition this[string instrument_name]
+        public CQGPosition this[String instrument_name]
         {
             get
             {
@@ -29798,7 +29798,7 @@ namespace FakeCQG
 
         }
 
-        public CQGPosition this[int index_]
+        public CQGPosition this[Int32 index_]
         {
             get
             {
@@ -29820,15 +29820,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGPosition get_ItemByIndex(int index_)
+        public virtual CQGPosition get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -29843,17 +29843,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29864,17 +29864,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29903,12 +29903,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -29947,25 +29947,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -29976,17 +29976,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30015,34 +30015,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Expression
+        public String Expression
         {
             get
             {
                 string name = "Expression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Number
+        public Int32 Number
         {
             get
             {
                 string name = "Number";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30059,25 +30059,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30088,17 +30088,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30127,18 +30127,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGQFormulaDefinition this[int index_]
+        public CQGQFormulaDefinition this[Int32 index_]
         {
             get
             {
@@ -30149,7 +30149,7 @@ namespace FakeCQG
 
         }
 
-        public CQGQFormulaDefinition this[string qformula_name]
+        public CQGQFormulaDefinition this[String qformula_name]
         {
             get
             {
@@ -30171,15 +30171,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGQFormulaDefinition get_ItemByName(string qformula_name)
+        public virtual CQGQFormulaDefinition get_ItemByName(String qformula_name)
         {
             object[] args = new object[1] {qformula_name};
             string name = "get_ItemByName";
@@ -30194,17 +30194,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30215,17 +30215,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30254,12 +30254,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool HasVolume
+        public Boolean HasVolume
         {
             get
             {
                 string name = "HasVolume";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30276,34 +30276,34 @@ namespace FakeCQG
 
         }
 
-        public bool IsValid
+        public Boolean IsValid
         {
             get
             {
                 string name = "IsValid";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30342,12 +30342,12 @@ namespace FakeCQG
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30364,25 +30364,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30393,17 +30393,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30432,12 +30432,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30465,11 +30465,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -30480,17 +30480,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30501,17 +30501,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30540,34 +30540,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string LogonName
+        public String LogonName
         {
             get
             {
                 string name = "LogonName";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ROMNumber
+        public Int32 ROMNumber
         {
             get
             {
                 string name = "ROMNumber";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string ServerAddress
+        public String ServerAddress
         {
             get
             {
                 string name = "ServerAddress";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30584,25 +30584,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30613,17 +30613,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30663,34 +30663,34 @@ namespace FakeCQG
 
         }
 
-        public sbyte DayCloseOffset
+        public SByte DayCloseOffset
         {
             get
             {
                 string name = "DayCloseOffset";
-                var result = (sbyte)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (SByte)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public sbyte DayStartOffset
+        public SByte DayStartOffset
         {
             get
             {
                 string name = "DayStartOffset";
-                var result = (sbyte)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (SByte)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool DayStartsYesterday
+        public Boolean DayStartsYesterday
         {
             get
             {
                 string name = "DayStartsYesterday";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30718,34 +30718,34 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public short Number
+        public Int16 Number
         {
             get
             {
                 string name = "Number";
-                var result = (short)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int16)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool PrimaryFlag
+        public Boolean PrimaryFlag
         {
             get
             {
                 string name = "PrimaryFlag";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30817,25 +30817,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30846,25 +30846,25 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
+        public virtual Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false)
         {
             object[] args = new object[2] {date_time, use_session_valid_times};
             string name = "IsTimeInSession";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -30893,12 +30893,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30915,12 +30915,12 @@ namespace FakeCQG
 
         }
 
-        public int DescriptionNumber
+        public Int32 DescriptionNumber
         {
             get
             {
                 string name = "DescriptionNumber";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30948,7 +30948,7 @@ namespace FakeCQG
 
         }
 
-        public CQGSession this[object index_]
+        public CQGSession this[Object index_]
         {
             get
             {
@@ -30959,12 +30959,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -30992,11 +30992,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -31007,17 +31007,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31028,25 +31028,25 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
+        public virtual Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false)
         {
             object[] args = new object[2] {date_time, use_session_valid_times};
             string name = "IsTimeInSession";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31075,18 +31075,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGSessions this[object index_]
+        public CQGSessions this[Object index_]
         {
             get
             {
@@ -31108,11 +31108,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -31123,17 +31123,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31144,17 +31144,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31183,23 +31183,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string ClientId
+        public String ClientId
         {
             get
             {
                 string name = "ClientId";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31216,12 +31216,12 @@ namespace FakeCQG
 
         }
 
-        public string RequestString
+        public String RequestString
         {
             get
             {
                 string name = "RequestString";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31238,12 +31238,12 @@ namespace FakeCQG
 
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31260,25 +31260,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31289,17 +31289,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31328,18 +31328,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGStrategyDefinition this[string id_]
+        public CQGStrategyDefinition this[String id_]
         {
             get
             {
@@ -31350,7 +31350,7 @@ namespace FakeCQG
 
         }
 
-        public CQGStrategyDefinition this[int index_]
+        public CQGStrategyDefinition this[Int32 index_]
         {
             get
             {
@@ -31372,15 +31372,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGStrategyDefinition get_ItemByIndex(int index_)
+        public virtual CQGStrategyDefinition get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -31395,17 +31395,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31416,17 +31416,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31455,12 +31455,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string ExecutionId
+        public String ExecutionId
         {
             get
             {
                 string name = "ExecutionId";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31477,23 +31477,23 @@ namespace FakeCQG
 
         }
 
-        public string OriginalOrderID
+        public String OriginalOrderID
         {
             get
             {
                 string name = "OriginalOrderID";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31510,25 +31510,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31539,17 +31539,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31578,18 +31578,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGStrategyLegFill this[int index_]
+        public CQGStrategyLegFill this[Int32 index_]
         {
             get
             {
@@ -31611,15 +31611,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGStrategyLegFill get_ItemByIndex(int index_)
+        public virtual CQGStrategyLegFill get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -31627,17 +31627,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31648,17 +31648,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31687,23 +31687,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31720,11 +31720,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -31735,17 +31735,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31756,17 +31756,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -31795,122 +31795,122 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31927,56 +31927,56 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -31993,25 +31993,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32022,17 +32022,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32061,12 +32061,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32083,18 +32083,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGSubMinuteBar this[int index_]
+        public CQGSubMinuteBar this[Int32 index_]
         {
             get
             {
@@ -32149,12 +32149,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32176,19 +32176,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -32199,17 +32199,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32220,24 +32220,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32266,18 +32266,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGSubMinuteBars this[int index_]
+        public CQGSubMinuteBars this[Int32 index_]
         {
             get
             {
@@ -32288,7 +32288,7 @@ namespace FakeCQG
 
         }
 
-        public CQGSubMinuteBars this[string id_]
+        public CQGSubMinuteBars this[String id_]
         {
             get
             {
@@ -32310,15 +32310,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGSubMinuteBars get_ItemById(string id_)
+        public virtual CQGSubMinuteBars get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -32333,17 +32333,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32354,17 +32354,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32409,12 +32409,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32425,12 +32425,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32457,12 +32457,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32473,12 +32473,12 @@ namespace FakeCQG
             }
         }
 
-        public int Interval
+        public Int32 Interval
         {
             get
             {
                 string name = "Interval";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32489,12 +32489,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32505,12 +32505,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32521,12 +32521,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32553,12 +32553,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32585,12 +32585,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32617,12 +32617,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32644,25 +32644,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32673,17 +32673,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32723,12 +32723,12 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32767,25 +32767,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32796,17 +32796,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -32835,133 +32835,133 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double BestAskPrice
+        public Double BestAskPrice
         {
             get
             {
                 string name = "BestAskPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double BestBidPrice
+        public Double BestBidPrice
         {
             get
             {
                 string name = "BestBidPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int DomAskCount
+        public Int32 DomAskCount
         {
             get
             {
                 string name = "DomAskCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int this[int index_]
+        public Int32 this[Int32 index_]
         {
             get
             {
                 string name = "DomAskVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int DomBidCount
+        public Int32 DomBidCount
         {
             get
             {
                 string name = "DomBidCount";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -32978,45 +32978,45 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueMid
+        public Double TrueMid
         {
             get
             {
                 string name = "TrueMid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33033,41 +33033,41 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual int get_DomAskVolume(int index_)
+        public virtual Int32 get_DomAskVolume(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_DomAskVolume";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual int get_DomBidVolume(int index_)
+        public virtual Int32 get_DomBidVolume(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_DomBidVolume";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33078,17 +33078,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33117,12 +33117,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33139,18 +33139,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTFlowBar this[int index_]
+        public CQGTFlowBar this[Int32 index_]
         {
             get
             {
@@ -33205,12 +33205,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33232,19 +33232,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -33255,17 +33255,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33276,24 +33276,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33322,18 +33322,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTFlowBars this[int index_]
+        public CQGTFlowBars this[Int32 index_]
         {
             get
             {
@@ -33344,7 +33344,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTFlowBars this[string id_]
+        public CQGTFlowBars this[String id_]
         {
             get
             {
@@ -33366,15 +33366,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTFlowBars get_ItemById(string id_)
+        public virtual CQGTFlowBars get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -33389,17 +33389,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33410,17 +33410,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33465,12 +33465,12 @@ namespace FakeCQG
             }
         }
 
-        public int AggregationLevel
+        public Int32 AggregationLevel
         {
             get
             {
                 string name = "AggregationLevel";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33497,12 +33497,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33545,12 +33545,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33561,12 +33561,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33577,12 +33577,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33593,12 +33593,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33609,12 +33609,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33641,12 +33641,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33673,12 +33673,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33689,12 +33689,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33716,25 +33716,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33745,17 +33745,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33784,23 +33784,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string ContributorId
+        public String ContributorId
         {
             get
             {
                 string name = "ContributorId";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ContributorIdCode
+        public Int32 ContributorIdCode
         {
             get
             {
                 string name = "ContributorIdCode";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33828,12 +33828,12 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33850,23 +33850,23 @@ namespace FakeCQG
 
         }
 
-        public int SalesConditionCode
+        public Int32 SalesConditionCode
         {
             get
             {
                 string name = "SalesConditionCode";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string SalesConditionLabel
+        public String SalesConditionLabel
         {
             get
             {
                 string name = "SalesConditionLabel";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33883,12 +33883,12 @@ namespace FakeCQG
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33905,25 +33905,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33934,17 +33934,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -33973,12 +33973,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -33995,29 +33995,29 @@ namespace FakeCQG
 
         }
 
-        public bool HasUpdates
+        public Boolean HasUpdates
         {
             get
             {
                 string name = "HasUpdates";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTick this[int index_]
+        public CQGTick this[Int32 index_]
         {
             get
             {
@@ -34072,12 +34072,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34099,19 +34099,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -34122,17 +34122,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34143,11 +34143,11 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -34158,24 +34158,24 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34204,18 +34204,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTicks this[int index_]
+        public CQGTicks this[Int32 index_]
         {
             get
             {
@@ -34226,7 +34226,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTicks this[string id_]
+        public CQGTicks this[String id_]
         {
             get
             {
@@ -34248,15 +34248,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTicks get_ItemById(string id_)
+        public virtual CQGTicks get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -34271,17 +34271,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34292,17 +34292,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34363,12 +34363,12 @@ namespace FakeCQG
             }
         }
 
-        public int SessionsFilter
+        public Int32 SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34379,12 +34379,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34438,25 +34438,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34467,17 +34467,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34506,210 +34506,210 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int ActualVolume
+        public Int32 ActualVolume
         {
             get
             {
                 string name = "ActualVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int CommodityOpenInterest
+        public Int32 CommodityOpenInterest
         {
             get
             {
                 string name = "CommodityOpenInterest";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int CommodityTickVolume
+        public Int32 CommodityTickVolume
         {
             get
             {
                 string name = "CommodityTickVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int CommodityVolume
+        public Int32 CommodityVolume
         {
             get
             {
                 string name = "CommodityVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ContractOpenInterest
+        public Int32 ContractOpenInterest
         {
             get
             {
                 string name = "ContractOpenInterest";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ContractTickVolume
+        public Int32 ContractTickVolume
         {
             get
             {
                 string name = "ContractTickVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int ContractVolume
+        public Int32 ContractVolume
         {
             get
             {
                 string name = "ContractVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int OpenInterest
+        public Int32 OpenInterest
         {
             get
             {
                 string name = "OpenInterest";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34726,34 +34726,34 @@ namespace FakeCQG
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34770,25 +34770,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34799,17 +34799,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34838,12 +34838,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34860,18 +34860,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTimedBar this[int index_]
+        public CQGTimedBar this[Int32 index_]
         {
             get
             {
@@ -34926,12 +34926,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -34953,19 +34953,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -34976,17 +34976,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -34997,32 +34997,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35051,18 +35051,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTimedBars this[int index_]
+        public CQGTimedBars this[Int32 index_]
         {
             get
             {
@@ -35073,7 +35073,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTimedBars this[string id_]
+        public CQGTimedBars this[String id_]
         {
             get
             {
@@ -35095,15 +35095,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTimedBars get_ItemById(string id_)
+        public virtual CQGTimedBars get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -35118,17 +35118,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35139,17 +35139,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35194,12 +35194,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35210,12 +35210,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35242,12 +35242,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IgnoreEventsOnHistoricalBars
+        public Boolean IgnoreEventsOnHistoricalBars
         {
             get
             {
                 string name = "IgnoreEventsOnHistoricalBars";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35258,12 +35258,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35274,12 +35274,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35290,12 +35290,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35306,12 +35306,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35338,12 +35338,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35354,12 +35354,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35386,12 +35386,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35413,11 +35413,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -35427,17 +35427,17 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35448,32 +35448,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, bool include_output)
+        public virtual void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, Boolean include_output)
         {
             object[] args = new object[2] {timed_bar_output, include_output};
             string name = "IncludeOutput";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output)
+        public virtual Boolean IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output)
         {
             object[] args = new object[1] {timed_bar_output};
             string name = "IsOutputIncluded";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35502,45 +35502,45 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int GroupID
+        public Int32 GroupID
         {
             get
             {
                 string name = "GroupID";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool IsMatched
+        public Boolean IsMatched
         {
             get
             {
                 string name = "IsMatched";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35590,25 +35590,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35619,17 +35619,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35658,18 +35658,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradeEntry this[int index_]
+        public CQGTradeEntry this[Int32 index_]
         {
             get
             {
@@ -35691,11 +35691,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -35706,17 +35706,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35727,17 +35727,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35766,12 +35766,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool CanPlaceOrderSignal
+        public Boolean CanPlaceOrderSignal
         {
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35788,23 +35788,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35821,23 +35821,23 @@ namespace FakeCQG
 
         }
 
-        public bool Signal
+        public Boolean Signal
         {
             get
             {
                 string name = "Signal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35865,25 +35865,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35894,17 +35894,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -35933,23 +35933,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool AllowEntryOnExit
+        public Boolean AllowEntryOnExit
         {
             get
             {
                 string name = "AllowEntryOnExit";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool AllowPyramids
+        public Boolean AllowPyramids
         {
             get
             {
                 string name = "AllowPyramids";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -35977,25 +35977,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36006,17 +36006,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36045,12 +36045,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool CanPlaceOrderSignal
+        public Boolean CanPlaceOrderSignal
         {
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36067,23 +36067,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36100,23 +36100,23 @@ namespace FakeCQG
 
         }
 
-        public bool Signal
+        public Boolean Signal
         {
             get
             {
                 string name = "Signal";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36144,25 +36144,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36173,17 +36173,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36212,34 +36212,34 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public bool AllowExitOnEntry
+        public Boolean AllowExitOnEntry
         {
             get
             {
                 string name = "AllowExitOnEntry";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public bool AllowMoreThanOnce
+        public Boolean AllowMoreThanOnce
         {
             get
             {
                 string name = "AllowMoreThanOnce";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36267,25 +36267,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36296,17 +36296,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36335,18 +36335,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradeExitDefinition this[int index_]
+        public CQGTradeExitDefinition this[Int32 index_]
         {
             get
             {
@@ -36357,7 +36357,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradeExitDefinition this[string exit_name]
+        public CQGTradeExitDefinition this[String exit_name]
         {
             get
             {
@@ -36379,15 +36379,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradeExitDefinition get_ItemByName(string exit_name)
+        public virtual CQGTradeExitDefinition get_ItemByName(String exit_name)
         {
             object[] args = new object[1] {exit_name};
             string name = "get_ItemByName";
@@ -36402,17 +36402,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36423,17 +36423,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36462,18 +36462,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradeExit this[int index_]
+        public CQGTradeExit this[Int32 index_]
         {
             get
             {
@@ -36484,7 +36484,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradeExit this[string exit_name]
+        public CQGTradeExit this[String exit_name]
         {
             get
             {
@@ -36506,15 +36506,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradeExit get_ItemByName(string exit_name)
+        public virtual CQGTradeExit get_ItemByName(String exit_name)
         {
             object[] args = new object[1] {exit_name};
             string name = "get_ItemByName";
@@ -36529,17 +36529,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36550,17 +36550,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36589,18 +36589,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTrade this[int index_]
+        public CQGTrade this[Int32 index_]
         {
             get
             {
@@ -36622,11 +36622,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -36637,17 +36637,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36658,17 +36658,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36705,25 +36705,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36734,17 +36734,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36773,12 +36773,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36795,12 +36795,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36822,25 +36822,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36851,17 +36851,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36890,12 +36890,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -36923,11 +36923,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -36938,17 +36938,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -36959,17 +36959,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37009,12 +37009,12 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37064,12 +37064,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37102,33 +37102,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37139,24 +37139,24 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37185,23 +37185,23 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Commission
+        public Double Commission
         {
             get
             {
                 string name = "Commission";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37218,12 +37218,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37262,25 +37262,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37291,17 +37291,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37330,18 +37330,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystemDefinition this[int index_]
+        public CQGTradingSystemDefinition this[Int32 index_]
         {
             get
             {
@@ -37352,7 +37352,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemDefinition this[string trading_system_abbreviation]
+        public CQGTradingSystemDefinition this[String trading_system_abbreviation]
         {
             get
             {
@@ -37374,15 +37374,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradingSystemDefinition get_ItemByAbbreviation(string trading_system_abbreviation)
+        public virtual CQGTradingSystemDefinition get_ItemByAbbreviation(String trading_system_abbreviation)
         {
             object[] args = new object[1] {trading_system_abbreviation};
             string name = "get_ItemByAbbreviation";
@@ -37390,7 +37390,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGTradingSystemDefinition get_ItemByName(string trading_system_name)
+        public virtual CQGTradingSystemDefinition get_ItemByName(String trading_system_name)
         {
             object[] args = new object[1] {trading_system_name};
             string name = "get_ItemByName";
@@ -37405,17 +37405,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37426,17 +37426,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37465,12 +37465,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37487,25 +37487,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37516,17 +37516,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37566,12 +37566,12 @@ namespace FakeCQG
 
         }
 
-        public int EntryRowIndex
+        public Int32 EntryRowIndex
         {
             get
             {
                 string name = "EntryRowIndex";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37588,12 +37588,12 @@ namespace FakeCQG
 
         }
 
-        public int ExitRowIndex
+        public Int32 ExitRowIndex
         {
             get
             {
                 string name = "ExitRowIndex";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37610,25 +37610,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37639,17 +37639,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37678,12 +37678,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37700,25 +37700,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37729,17 +37729,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -37795,12 +37795,12 @@ namespace FakeCQG
             }
         }
 
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37827,12 +37827,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37854,12 +37854,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37886,12 +37886,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37902,12 +37902,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37918,12 +37918,12 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37934,12 +37934,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37950,12 +37950,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37966,12 +37966,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -37998,12 +37998,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -38041,11 +38041,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -38055,25 +38055,25 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             object[] args = new object[1] {key_};
             string name = "get_Parameter";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38091,32 +38091,32 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic)
+        public virtual Boolean IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic)
         {
             object[] args = new object[1] {trading_system_statistic};
             string name = "IsStatisticIncluded";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38145,18 +38145,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystem this[int index_]
+        public CQGTradingSystem this[Int32 index_]
         {
             get
             {
@@ -38167,7 +38167,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystem this[string id_]
+        public CQGTradingSystem this[String id_]
         {
             get
             {
@@ -38189,15 +38189,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradingSystem get_ItemById(string id_)
+        public virtual CQGTradingSystem get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -38212,17 +38212,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38233,17 +38233,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38294,25 +38294,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38323,25 +38323,25 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual bool IsStatisticChanged(eTradingSystemStatistic trading_system_statistic)
+        public virtual Boolean IsStatisticChanged(eTradingSystemStatistic trading_system_statistic)
         {
             object[] args = new object[1] {trading_system_statistic};
             string name = "IsStatisticChanged";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38370,265 +38370,265 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public double AverageDuration
+        public Double AverageDuration
         {
             get
             {
                 string name = "AverageDuration";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double AverageLoss
+        public Double AverageLoss
         {
             get
             {
                 string name = "AverageLoss";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double AverageProfit
+        public Double AverageProfit
         {
             get
             {
                 string name = "AverageProfit";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double AverageWin
+        public Double AverageWin
         {
             get
             {
                 string name = "AverageWin";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double ClosedNetProfit
+        public Double ClosedNetProfit
         {
             get
             {
                 string name = "ClosedNetProfit";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double CurConsecLosses
+        public Double CurConsecLosses
         {
             get
             {
                 string name = "CurConsecLosses";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double CurConsecWins
+        public Double CurConsecWins
         {
             get
             {
                 string name = "CurConsecWins";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double CurDrawDown
+        public Double CurDrawDown
         {
             get
             {
                 string name = "CurDrawDown";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double LinearRegression
+        public Double LinearRegression
         {
             get
             {
                 string name = "LinearRegression";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaxClosedDraw
+        public Double MaxClosedDraw
         {
             get
             {
                 string name = "MaxClosedDraw";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaxConsecLosses
+        public Double MaxConsecLosses
         {
             get
             {
                 string name = "MaxConsecLosses";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaxConsecWins
+        public Double MaxConsecWins
         {
             get
             {
                 string name = "MaxConsecWins";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaxDrawAmount
+        public Double MaxDrawAmount
         {
             get
             {
                 string name = "MaxDrawAmount";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaxDrawDuration
+        public Double MaxDrawDuration
         {
             get
             {
                 string name = "MaxDrawDuration";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaximumLoss
+        public Double MaximumLoss
         {
             get
             {
                 string name = "MaximumLoss";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double MaximumWin
+        public Double MaximumWin
         {
             get
             {
                 string name = "MaximumWin";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double OpenPosition
+        public Double OpenPosition
         {
             get
             {
                 string name = "OpenPosition";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double PercentLong
+        public Double PercentLong
         {
             get
             {
                 string name = "PercentLong";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double PercentWinners
+        public Double PercentWinners
         {
             get
             {
                 string name = "PercentWinners";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double ProfitLossRatio
+        public Double ProfitLossRatio
         {
             get
             {
                 string name = "ProfitLossRatio";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double ProfitToMaxDraw
+        public Double ProfitToMaxDraw
         {
             get
             {
                 string name = "ProfitToMaxDraw";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double RemoveToNeutral
+        public Double RemoveToNeutral
         {
             get
             {
                 string name = "RemoveToNeutral";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double ReturnRetracement
+        public Double ReturnRetracement
         {
             get
             {
                 string name = "ReturnRetracement";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TimePercentage
+        public Double TimePercentage
         {
             get
             {
                 string name = "TimePercentage";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -38645,45 +38645,45 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TotalNetProfit
+        public Double TotalNetProfit
         {
             get
             {
                 string name = "TotalNetProfit";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TotalTradeCount
+        public Double TotalTradeCount
         {
             get
             {
                 string name = "TotalTradeCount";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double this[eTradingSystemStatistic ts_statistic]
+        public Double this[eTradingSystemStatistic ts_statistic]
         {
             get
             {
                 string name = "Value";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -38700,33 +38700,33 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual double get_Value(eTradingSystemStatistic ts_statistic)
+        public virtual Double get_Value(eTradingSystemStatistic ts_statistic)
         {
             object[] args = new object[1] {ts_statistic};
             string name = "get_Value";
-            var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38737,17 +38737,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38776,18 +38776,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystemStatistics this[int index_]
+        public CQGTradingSystemStatistics this[Int32 index_]
         {
             get
             {
@@ -38809,11 +38809,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -38824,17 +38824,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38845,11 +38845,11 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -38860,17 +38860,17 @@ namespace FakeCQG
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -38910,12 +38910,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsActive
+        public Boolean IsActive
         {
             get
             {
                 string name = "IsActive";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -38932,12 +38932,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -38987,25 +38987,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39016,17 +39016,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39077,12 +39077,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39110,25 +39110,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39139,17 +39139,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39178,18 +39178,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystemTradeDefinition this[int index_]
+        public CQGTradingSystemTradeDefinition this[Int32 index_]
         {
             get
             {
@@ -39200,7 +39200,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemTradeDefinition this[string trade_name]
+        public CQGTradingSystemTradeDefinition this[String trade_name]
         {
             get
             {
@@ -39222,15 +39222,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradingSystemTradeDefinition get_ItemByName(string trade_name)
+        public virtual CQGTradingSystemTradeDefinition get_ItemByName(String trade_name)
         {
             object[] args = new object[1] {trade_name};
             string name = "get_ItemByName";
@@ -39245,17 +39245,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39266,17 +39266,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39305,18 +39305,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystemTrade this[int index_]
+        public CQGTradingSystemTrade this[Int32 index_]
         {
             get
             {
@@ -39327,7 +39327,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemTrade this[string trade_name]
+        public CQGTradingSystemTrade this[String trade_name]
         {
             get
             {
@@ -39349,12 +39349,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39371,15 +39371,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTradingSystemTrade get_ItemByName(string trade_name)
+        public virtual CQGTradingSystemTrade get_ItemByName(String trade_name)
         {
             object[] args = new object[1] {trade_name};
             string name = "get_ItemByName";
@@ -39394,17 +39394,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39415,17 +39415,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39454,18 +39454,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTradingSystemTradesRow this[int index_]
+        public CQGTradingSystemTradesRow this[Int32 index_]
         {
             get
             {
@@ -39487,11 +39487,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -39502,17 +39502,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39523,17 +39523,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39562,12 +39562,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39595,11 +39595,11 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -39619,17 +39619,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39640,17 +39640,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39679,12 +39679,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public string ExecutionId
+        public String ExecutionId
         {
             get
             {
                 string name = "ExecutionId";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39712,23 +39712,23 @@ namespace FakeCQG
 
         }
 
-        public int HangQuantity
+        public Int32 HangQuantity
         {
             get
             {
                 string name = "HangQuantity";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39756,12 +39756,12 @@ namespace FakeCQG
 
         }
 
-        public string RejectReason
+        public String RejectReason
         {
             get
             {
                 string name = "RejectReason";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -39822,25 +39822,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39851,17 +39851,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39890,18 +39890,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGTransaction this[string id_]
+        public CQGTransaction this[String id_]
         {
             get
             {
@@ -39912,7 +39912,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTransaction this[int index_]
+        public CQGTransaction this[Int32 index_]
         {
             get
             {
@@ -39934,15 +39934,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGTransaction get_ItemByIndex(int index_)
+        public virtual CQGTransaction get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
@@ -39957,17 +39957,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -39978,17 +39978,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40017,89 +40017,89 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40116,34 +40116,34 @@ namespace FakeCQG
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var result = (double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Double)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40160,25 +40160,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40189,17 +40189,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40228,12 +40228,12 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40250,18 +40250,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGYield this[int index_]
+        public CQGYield this[Int32 index_]
         {
             get
             {
@@ -40316,12 +40316,12 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40343,19 +40343,19 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             object[] args = new object[1] {tag_name};
             string name = "get_Tag";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
@@ -40366,17 +40366,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40387,32 +40387,32 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             object[] args = new object[1] {date_};
             string name = "IndexForDate";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
             CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40441,18 +40441,18 @@ namespace FakeCQG
         #endregion
 
         #region Properties
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
         }
 
-        public CQGYields this[int index_]
+        public CQGYields this[Int32 index_]
         {
             get
             {
@@ -40463,7 +40463,7 @@ namespace FakeCQG
 
         }
 
-        public CQGYields this[string id_]
+        public CQGYields this[String id_]
         {
             get
             {
@@ -40485,15 +40485,15 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public virtual CQGYields get_ItemById(string id_)
+        public virtual CQGYields get_ItemById(String id_)
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
@@ -40508,17 +40508,17 @@ namespace FakeCQG
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40529,17 +40529,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40600,12 +40600,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40616,12 +40616,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40632,12 +40632,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40664,12 +40664,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40680,12 +40680,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40696,12 +40696,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40728,12 +40728,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40760,12 +40760,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40776,12 +40776,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 return result;
             }
 
@@ -40803,25 +40803,25 @@ namespace FakeCQG
             return result;
         }
 
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public virtual object GetLifetimeService()
+        public virtual Object GetLifetimeService()
         {
             string name = "GetLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40832,17 +40832,17 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual object InitializeLifetimeService()
+        public virtual Object InitializeLifetimeService()
         {
             string name = "InitializeLifetimeService";
-            var result = (object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Object)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40861,18 +40861,18 @@ namespace FakeCQG
         #endregion
 
         #region Methods
-        public new bool Equals(object obj)
+        public new Boolean Equals(Object obj)
         {
             object[] args = new object[1] {obj};
             string name = "Equals";
-            var result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            var result = (Boolean)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
             return result;
         }
 
-        public new int GetHashCode()
+        public new Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = (int)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (Int32)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 
@@ -40883,10 +40883,10 @@ namespace FakeCQG
             return result;
         }
 
-        public new string ToString()
+        public new String ToString()
         {
             string name = "ToString";
-            var result = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            var result = (String)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
             return result;
         }
 

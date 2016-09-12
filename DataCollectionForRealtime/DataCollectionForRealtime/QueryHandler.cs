@@ -102,11 +102,11 @@ namespace DataCollectionForRealtime
 
                 case QueryInfo.QueryType.Property:
                     qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                    bool value = (bool)qObj.GetType().InvokeMember("IsStarted", BindingFlags.GetProperty, null, qObj, null);
+                    var value = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, null);
 
                     try
                     {
-                        if (query.ArgValues != null || query.ArgKeys != null)
+                        if (query.ArgValues.Count != 0 || query.ArgKeys != null)
                         {
                             var val = default(object);
 

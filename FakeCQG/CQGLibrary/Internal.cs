@@ -162,17 +162,17 @@ namespace FakeCQG
                 case QueryInfo.QueryType.Constructor:
                 case QueryInfo.QueryType.Property:
                 case QueryInfo.QueryType.Method:
-                    if (argKeys == null)
+                    if (argKeys.Count == 0)
                     {
                         model = new QueryInfo(qType, key, objKey, name, argVals: argVals);
                         OnLogChange(model.ToString());
                     }
-                    else if (argVals == null)
+                    else if (argVals.Count == 0)
                     {
                         model = new QueryInfo(qType, key, objKey, name, argKeys);
                         OnLogChange(model.ToString());
                     }
-                    else if (argKeys == null && argVals == null)
+                    else if (argKeys.Count == 0 && argVals.Count == 0)
                     {
                         model = new QueryInfo(qType, key, objKey, name);
                         OnLogChange(model.ToString());
