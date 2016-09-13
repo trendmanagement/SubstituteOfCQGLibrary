@@ -9,13 +9,18 @@ using MongoDB.Driver;
 
 namespace DataCollectionForRealtime
 {
-    class QueryHandler
+    public class QueryHandler
     {
         private CQGDataManagement cqgDataManagement;
 
         public static List<QueryInfo> QueryList;
 
         Assembly CQGAssm;
+
+        public Assembly CQGAssembly
+        {
+            get { return CQGAssm; }
+        }
 
         public QueryHandler(RealtimeDataManagement rdm)
         {
@@ -295,7 +300,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-        static Type FindDelegateType(Assembly assm, string eventName)
+        public static Type FindDelegateType(Assembly assm, string eventName)
         {
             string delegateTypeName = string.Format("_ICQGCELEvents_{0}EventHandler", eventName);
             foreach (Type type in assm.ExportedTypes)

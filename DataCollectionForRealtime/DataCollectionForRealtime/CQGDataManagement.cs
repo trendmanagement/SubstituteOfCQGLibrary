@@ -7,10 +7,10 @@ using CQG;
 
 namespace DataCollectionForRealtime
 {
-    class CQGDataManagement
+    public class CQGDataManagement
     {
 
-        internal CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
+        public  CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
         {
             this.realtimeDataManagement = realtimeDataManagement;
             

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollectionForRealtime", "DataCollectionForRealtime\DataCollectionForRealtime.csproj", "{1C0B34B2-9DEE-4BFD-8064-789ACC00A162}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCollectionForRealtime",
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQGLibrary", "..\FakeCQG\CQGLibrary\CQGLibrary.csproj", "{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestRealCQG", "UnitTestRealCQG\UnitTestRealCQG.csproj", "{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,14 @@ Global
 		{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}.Release|x86.ActiveCfg = Release|x86
 		{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}.Release|x86.Build.0 = Release|x86
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E80552A-8D1F-4B10-AE79-5AA6EF2A4C6A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
