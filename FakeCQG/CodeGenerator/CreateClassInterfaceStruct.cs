@@ -110,7 +110,7 @@ namespace CodeGenerator
 
                 foreach (EventInfo einfo in SortEvents(type.GetEvents()))
                 {
-                    // EventChecking(einfo);
+                    EventChecking(einfo);
                 }
 
                 MemberEnd();

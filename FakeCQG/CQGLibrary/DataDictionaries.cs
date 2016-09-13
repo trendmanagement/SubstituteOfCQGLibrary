@@ -13,7 +13,17 @@ namespace FakeCQG
 
         private static Dictionary<string, object> answerDictionary = new Dictionary<string, object>();
 
+        private static Dictionary<string, bool> isAnswer = new Dictionary<string, bool>();
+
         private static Dictionary<string, bool> eventCheckingDictionary = new Dictionary<string, bool>();
+
+        public static Dictionary<string, bool> IsAnswer
+        {
+            get
+            {
+                return isAnswer;
+            }
+        }
 
         public static Dictionary<string, bool> EventCheckingDictionary
         {

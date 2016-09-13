@@ -27,21 +27,25 @@ namespace FakeCQG
             typeof(bool) };
 
         #region Help objects
+        private static string _log;
+       
+        private const int index = 0;
+        private const int maxRequestTime = 30000;       // 30s
+        private const string IdName = "Key";
+        private static System.Timers.Timer timer;
+        private static bool timerStoped;
+
+
+        public string Key { get; set; }
+
         public delegate void GetQueryInfosHandler(List<QueryInfo> queries);
         public static event GetQueryInfosHandler GetQueries;
         public delegate void LogHandler(string message);
         public static event LogHandler LogChange;
-        private static string _log;
-
-        public string Key { get; set; }
-        const int index = 0;
-        const int maxRequestTime = 30000;       // 30s
+        
         //Changed the access level of visibility for testing
         public static int QueryTemeout = int.MaxValue;  // Currently set to the max value for debugging
-        const string IdName = "Key";
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
-        static System.Timers.Timer timer;
-        static bool timerStoped;
         #endregion
 
         #region Internal CQG methods
@@ -140,9 +144,10 @@ namespace FakeCQG
         {
             AnswerInfo answer = default(AnswerInfo);
             Task task = Task.Run(() => { answer = GetAnswerData(key); });
-            bool success = task.Wait(QueryTemeout);
+            bool success = task.Wait(QueryTemeout); 
             if (success)
             {
+                DataDictionaries.IsAnswer.Remove(key);
                 return answer;
             }
             else
@@ -190,6 +195,7 @@ namespace FakeCQG
                 default:
                     break;
             }
+            DataDictionaries.IsAnswer.Add(key, false);
             return model;
         }
 
@@ -229,7 +235,7 @@ namespace FakeCQG
             });
         }
 
-        public static AnswerInfo GetAnswerData(string id, out bool isAnswer)
+        public static AnswerInfo GetAnswerData(string id, out bool isAns)
         {
             AnswerHelper mongo = new AnswerHelper();
             var collAnswer = mongo.GetCollection;
@@ -240,7 +246,7 @@ namespace FakeCQG
                 answer = collAnswer.Find(filter).First();
                 OnLogChange(answer.Key, answer.ValueKey, false);
                 RemoveAnswerAsync(answer.Key);
-                isAnswer = true;
+                isAns = true;
                 //if (answer.Key == "value")
                 //{
                 //    isVal = true;
@@ -256,7 +262,7 @@ namespace FakeCQG
             catch (Exception ex)
             {
                 OnLogChange(id, "null", false);
-                isAnswer = false;
+                isAns = false;
                 return default(AnswerInfo);
             }
         }
@@ -266,20 +272,33 @@ namespace FakeCQG
             var collAnswer = mongo.GetCollection;
             var filter = Builders<AnswerInfo>.Filter.Eq("Key", id);
             AnswerInfo answer = default(AnswerInfo);
-            try
+            while(!DataDictionaries.IsAnswer[id])
             {
-                answer = collAnswer.Find(filter).First();
-                OnLogChange(answer.Key, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.Key);
-                return answer;
+                try
+                {
+                    answer = collAnswer.Find(filter).First();
+                    OnLogChange(answer.Key, answer.ValueKey, false);
+                    RemoveAnswerAsync(answer.Key);
+                    DataDictionaries.IsAnswer[id] = true;
+                    
+                }
+                catch (Exception ex)
+                {
+                    //OnLogChange(id, "null", false);
+                    //if (!DataDictionaries.IsAnswer[id])
+                    //{
+                    //    return GetAnswerData(id);
+                    //}
+                    //else
+                    //{
+                    //    return answer;
+                    //}
+
+                    ////TODO: Create type of exception for  variant "no answer"
+                    //throw new Exception("No answer in MongoDB");
+                }
             }
-            catch (Exception ex)
-            {
-                //OnLogChange(id, "null", false);
-                return GetAnswerData(id);
-                ////TODO: Create type of exception for  variant "no answer"
-                //throw new Exception("No answer in MongoDB");
-            }
+            return answer;
         }
         public static Task<bool> CheckQueryAsync(string Id)
         {
@@ -336,6 +355,21 @@ namespace FakeCQG
                 }
             });
         }
+        public static object[] CheckWhetherEventHappened(string name)
+        {
+            var argValues = new Dictionary<int, object>();
+
+            AnswerHelper mongo = new AnswerHelper();
+            var collAnswer = mongo.GetCollection;
+            var filter = Builders<AnswerInfo>.Filter.Eq("QueryName", name);
+            AnswerInfo answer = default(AnswerInfo);
+
+            answer = collAnswer.Find(filter).First();
+            argValues = answer.ArgValues;
+            
+            return (object[])argValues[1];
+        }
+
 
         public static Task RemoveQueryAsync(string key)
         {

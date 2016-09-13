@@ -86,7 +86,7 @@ namespace DataCollectionForRealtime
                     
                     switch (query.QueryName)
                     {
-                        case "CQGCEL":
+                        case "CQG.CQGCELClass":
                             qObj = cqgDataManagement.M_CEL;
                             break;
                         default:

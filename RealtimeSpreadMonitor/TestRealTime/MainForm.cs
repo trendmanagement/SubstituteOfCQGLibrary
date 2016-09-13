@@ -52,7 +52,7 @@ namespace TestRealTime
 
         private void CQG_LogChange(string message)
         {
-            AsyncTaskListener.LogMessage(message);
+            Task.Run(() => { AsyncTaskListener.LogMessage(message); });
         }
 
         private void buttonRead_Click(object sender, EventArgs e)
