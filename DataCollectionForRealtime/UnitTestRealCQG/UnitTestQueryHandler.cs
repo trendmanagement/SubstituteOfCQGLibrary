@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using FakeCQG.Models;
 using System.Reflection;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace UnitTestRealCQG
 {
@@ -119,6 +120,77 @@ namespace UnitTestRealCQG
             }
         }
 
+
+        delegate void myDelegate1();
+        delegate void myDelegate2();
+        delegate void myDelegate3();
+        [TestMethod]
+        public void Method_IsDelegate()
+        {
+            // arrange
+            Type[] noDelegateTypes = { typeof(string), typeof(int), typeof(MyClass) };
+            Type[] delegateTypes = { typeof(myDelegate1), typeof(myDelegate2), typeof(myDelegate3) };
+            List<bool> resaltFalse = new List<bool>();
+            List<bool> resaltTrue = new List<bool>();
+            StartUp();
+
+            // act
+            foreach (var type in noDelegateTypes)
+            {
+                resaltFalse.Add(QueryHandler.IsDelegate(type));
+            }
+            foreach (var type in delegateTypes)
+            {
+                resaltTrue.Add(QueryHandler.IsDelegate(type));
+            }
+
+            // assert
+            for (int i = 0; i < resaltFalse.Count; i++)
+            {
+                Assert.IsFalse(resaltFalse[i]);
+                Assert.IsTrue(resaltTrue[i]);
+            }
+        }
+
+        [TestMethod]
+        public void Method_DeleteProcessedQuery()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            bool isQueryTrue = default(bool);
+            bool isQueryFalse = default(bool);
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+            StartUp();
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.ClearQueriesListAsync();
+            }).GetAwaiter().GetResult();
+
+            // act 1
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Property, id, string.Empty, name, null, null));
+                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+
+            QueryHandler.DeleteProcessedQuery(id);
+
+            Task.Run(async () =>
+            {
+                //await FakeCQG.CQG.RemoveQueryAsync(id);
+                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.IsTrue(isQueryTrue);
+            Assert.IsFalse(isQueryFalse);
+        }
+
+        private void CQG_LogChange(string message)
+        {
+        }
+
         #endregion
 
         void StartUp()
@@ -129,3 +201,7 @@ namespace UnitTestRealCQG
         }
     }
 }
+    internal class MyClass
+    {
+    }
+

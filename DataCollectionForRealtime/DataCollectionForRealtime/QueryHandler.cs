@@ -291,7 +291,7 @@ namespace DataCollectionForRealtime
             var filter = Builders<QueryInfo>.Filter.Eq("Key", key);
             try
             {
-                collectionQ.DeleteOneAsync(filter);
+                collectionQ.DeleteOne(filter);
                 AsyncTaskListener.LogMessage("Query was successfully deleted.");
             }
             catch (Exception ex)
@@ -317,7 +317,7 @@ namespace DataCollectionForRealtime
             return null;
         }
 
-        static bool IsDelegate(Type type)
+        public static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
         }
