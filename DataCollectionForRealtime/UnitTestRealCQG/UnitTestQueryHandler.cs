@@ -3,8 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataCollectionForRealtime;
 using System.Collections.Generic;
 using FakeCQG.Models;
-using System.Reflection;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace UnitTestRealCQG
@@ -38,7 +36,7 @@ namespace UnitTestRealCQG
         {
             // arrange
             var queryType = QueryInfo.QueryType.Property;
-            string[] keys = { "key1",  "key2", "key3" };
+            string[] keys = { "key1", "key2", "key3" };
             var list = new List<QueryInfo>()
             {
                 new QueryInfo(queryType, keys[0], string.Empty, string.Empty, null, null),
@@ -95,18 +93,18 @@ namespace UnitTestRealCQG
         public void Method_FindDelegateType()
         {
             // arrange
-            string[,] names = 
-            { 
+            string[,] names =
+            {
                 { "TimedBarsResolved", "_ICQGCELEvents_TimedBarsResolvedEventHandler" },
                 { "TimedBarsAdded", "_ICQGCELEvents_TimedBarsAddedEventHandler" },
                 { "TimedBarsUpdated", "_ICQGCELEvents_TimedBarsUpdatedEventHandler"}
             };
             Type[] types = new Type[names.GetLength(0)];
             StartUp();
-            
+
             // act
             var nullType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, "name");
-            for(int i = 0; i < types.Length; i++)
+            for (int i = 0; i < types.Length; i++)
             {
                 types[i] = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, names[i, 0]);
             }
@@ -178,7 +176,46 @@ namespace UnitTestRealCQG
 
             Task.Run(async () =>
             {
-                //await FakeCQG.CQG.RemoveQueryAsync(id);
+                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.IsTrue(isQueryTrue);
+            Assert.IsFalse(isQueryFalse);
+        }
+
+        [TestMethod]
+        public void Method_LoadInAnswer()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            bool isQueryTrue = default(bool);
+            bool isQueryFalse = default(bool);
+            var query = new QueryInfo(QueryInfo.QueryType.Property, id, string.Empty, name, null, null);
+            var answer = new AnswerInfo(id, string.Empty, name, null, null);
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+            StartUp();
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.ClearQueriesListAsync();
+            }).GetAwaiter().GetResult();
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.ClearAnswersAsync();
+            }).GetAwaiter().GetResult();
+
+            // act
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.LoadInQueryAsync(query);
+                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+
+            QueryHandler.LoadInAnswer(answer);
+
+            Task.Run(async () =>
+            {
                 isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
@@ -201,7 +238,7 @@ namespace UnitTestRealCQG
         }
     }
 }
-    internal class MyClass
+internal class MyClass
     {
     }
 
