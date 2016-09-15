@@ -131,20 +131,27 @@ namespace FakeCQG
 
             AnswerInfo result = WaitingForAnAnswer(key);
 
-            if (result.Key == "value")
+            if (result.ValueKey == "value")
             {
                 return result.Value;
             }
             else
             {
-                return result.Key;
+                return result.ValueKey;
             }
         }
         public static AnswerInfo WaitingForAnAnswer(string key)
         {
+            
             AnswerInfo answer = default(AnswerInfo);
             Task task = Task.Run(() => { answer = GetAnswerData(key); });
-            bool success = task.Wait(QueryTemeout); 
+            //while (!task.IsCompleted)
+            //{
+
+            //}
+            //DataDictionaries.IsAnswer.Remove(key);
+            //return answer;
+            bool success = task.Wait(QueryTemeout);
             if (success)
             {
                 DataDictionaries.IsAnswer.Remove(key);

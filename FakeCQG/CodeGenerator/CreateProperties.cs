@@ -76,11 +76,43 @@ namespace CodeGenerator
                 File.WriteLine(Indent2 + "get" + colon);
                 if (!isInterface)
                 {
-                    File.WriteLine(Indent2 + "{");
-                    File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                    File.WriteLine(Indent3 + "var result = (" + TypeToString(pinfo.PropertyType) + ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);");
-                    File.WriteLine(Indent3 + "return result;");
-                    File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                    if (pinfo.PropertyType.Assembly.FullName.Substring(0, 8) == "mscorlib" || pinfo.PropertyType.IsEnum)
+                    {
+                        File.WriteLine(Indent2 + "{");
+                        File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
+                        File.WriteLine(Indent3 + "var result = (" + TypeToString(pinfo.PropertyType) + ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);");
+                        File.WriteLine(Indent3 + "return result;");
+                        File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                    }
+                    else
+                    {
+                        //File.WriteLine(Indent2 + "{");
+                        //File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
+                        //File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + " prop = new " +
+                        //    TypeToString(pinfo.PropertyType) + "((" + TypeToString(pinfo.PropertyType) +
+                        //    ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name));");
+                        //File.WriteLine(Indent3 + "return prop;");
+                        //File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                        File.WriteLine(Indent2 + "{");
+                        File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
+                        File.WriteLine(Indent3 + "string " + pinfo.Name + 
+                            "Key = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);");
+                        if (pinfo.PropertyType.IsInterface)
+                        {
+                            File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + "Class prop = new " +
+                            TypeToString(pinfo.PropertyType)  + "Class();");
+                        }
+                        else
+                        {
+                            File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + " prop = new " +
+                                TypeToString(pinfo.PropertyType) + "();");
+                        }
+
+                        //GetPropertiesFromMatryoshka(pinfo);
+
+                        File.WriteLine(Indent3 + "return prop;");
+                        File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                    }
                 }
             }
 
@@ -97,6 +129,43 @@ namespace CodeGenerator
             }
 
             MemberEnd();
+        }
+        //
+        static void GetPropertiesFromMatryoshka(PropertyInfo pinfo)
+        {
+            foreach(var pi in pinfo.GetType().GetProperties())
+            {
+                string propType = TypeToString(pi.PropertyType);
+                if (propType == "IEnumerable`1")
+                {
+                    propType = "IEnumerable";
+                }
+                if (pinfo.PropertyType.Assembly.FullName.Substring(0, 8) == "mscorlib" || pinfo.PropertyType.IsEnum)
+                {
+                    File.WriteLine(Environment.NewLine + Indent3 + "//////// " + pinfo.Name);
+                    File.WriteLine(Indent3 + "string " + pi.Name + "Name = \"" + pi.Name + "\";");       
+                    File.WriteLine(Indent3 + "var " + pi.Name + " = (" + propType + 
+                        ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, " + pinfo.Name + "Key, " + pi.Name + "Name);");
+                    File.WriteLine(Indent3 + "////////");
+                }
+                else
+                {
+                    File.WriteLine(Environment.NewLine + Indent3 + "//////// " + pinfo.Name);
+                    File.WriteLine(Indent3 + "string " + pi.Name + "Name = \"" + pi.Name + "\";");
+                    File.WriteLine(Indent3 + "string " + pi.Name + "Key = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, " + 
+                        pinfo.Name + "Key, " + pi.Name + "Name);");
+                    if (pinfo.PropertyType.IsInterface)
+                    {
+                        File.WriteLine(Indent3 + propType + "Class " + pi.Name + "Prop = new " + propType + "Class();");
+                    }
+                    else
+                    {
+                        File.WriteLine(Indent3 + propType + " " + pi.Name + "Prop = new " + propType + "();");
+                    }
+                    GetPropertiesFromMatryoshka(pi);
+                    File.WriteLine(Indent3 + "////////");
+                }
+            }
         }
 
         static bool IsStaticProperty(PropertyInfo pinfo)

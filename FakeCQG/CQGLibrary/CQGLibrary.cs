@@ -11289,8 +11289,9 @@ namespace FakeCQG
             get
             {
                 string name = "AuthorizedTraders";
-                var result = (CQGStringCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AuthorizedTradersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStringCollectionClass prop = new CQGStringCollectionClass();
+                return prop;
             }
 
         }
@@ -11316,8 +11317,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -11327,8 +11329,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencySummaries";
-                var result = (CQGAccountSummaries)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurrencySummariesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountSummariesClass prop = new CQGAccountSummariesClass();
+                return prop;
             }
 
         }
@@ -11415,8 +11418,9 @@ namespace FakeCQG
             get
             {
                 string name = "InternalOrders";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InternalOrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -11426,8 +11430,9 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -11437,8 +11442,9 @@ namespace FakeCQG
             get
             {
                 string name = "Positions";
-                var result = (CQGPositions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PositionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPositionsClass prop = new CQGPositionsClass();
+                return prop;
             }
 
         }
@@ -11486,8 +11492,9 @@ namespace FakeCQG
             get
             {
                 string name = "Summary";
-                var result = (CQGAccountSummary)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string SummaryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
+                return prop;
             }
 
         }
@@ -11620,8 +11627,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
         }
@@ -11631,8 +11639,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByFCM";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByFCMKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
         }
@@ -11762,8 +11771,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAccountSummary)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
+                return prop;
             }
 
         }
@@ -11859,8 +11869,9 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
         }
@@ -12062,8 +12073,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAdvancedStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyClass prop = new CQGAdvancedStudyClass();
+                return prop;
             }
 
         }
@@ -12073,8 +12085,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGAdvancedStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyClass prop = new CQGAdvancedStudyClass();
+                return prop;
             }
 
         }
@@ -12189,8 +12202,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurveHeaders";
-                var result = (CQGCurveHeaders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurveHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveHeadersClass prop = new CQGCurveHeadersClass();
+                return prop;
             }
 
         }
@@ -12200,8 +12214,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -12233,8 +12248,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCurves)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurvesClass prop = new CQGCurvesClass();
+                return prop;
             }
 
         }
@@ -12244,8 +12260,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -12255,8 +12272,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGAdvancedStudyRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyRequestClass prop = new CQGAdvancedStudyRequestClass();
+                return prop;
             }
 
         }
@@ -12424,8 +12442,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurveDefinitions";
-                var result = (CQGCurveDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurveDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveDefinitionsClass prop = new CQGCurveDefinitionsClass();
+                return prop;
             }
 
         }
@@ -12446,8 +12465,9 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                var result = (CQGParameterDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
+                return prop;
             }
 
         }
@@ -12547,8 +12567,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -12558,8 +12579,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByAbbreviation";
-                var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -12719,8 +12741,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -13111,8 +13134,9 @@ namespace FakeCQG
             get
             {
                 string name = "Values";
-                var result = (CQGStringCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ValuesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStringCollectionClass prop = new CQGStringCollectionClass();
+                return prop;
             }
 
         }
@@ -13219,8 +13243,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAlgorithmicOrderDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAlgorithmicOrderDefinitionClass prop = new CQGAlgorithmicOrderDefinitionClass();
+                return prop;
             }
 
         }
@@ -13596,8 +13621,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGAlgorithmicOrderProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAlgorithmicOrderPropertyClass prop = new CQGAlgorithmicOrderPropertyClass();
+                return prop;
             }
 
         }
@@ -14350,8 +14376,9 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPIServers";
-                var result = (CQGStringCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RemoteOpenAPIServersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStringCollectionClass prop = new CQGStringCollectionClass();
+                return prop;
             }
 
         }
@@ -14582,8 +14609,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -14699,8 +14727,9 @@ namespace FakeCQG
             get
             {
                 string name = "Accounts";
-                var result = (CQGAccounts)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountsClass prop = new CQGAccountsClass();
+                return prop;
             }
 
         }
@@ -14726,8 +14755,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllAdvancedStudies";
-                var result = (CQGAdvancedStudies)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllAdvancedStudiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAdvancedStudiesClass prop = new CQGAdvancedStudiesClass();
+                return prop;
             }
 
         }
@@ -14737,8 +14767,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllConditions";
-                var result = (CQGConditions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllConditionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionsClass prop = new CQGConditionsClass();
+                return prop;
             }
 
         }
@@ -14748,8 +14779,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllConstantVolumeBars";
-                var result = (CQGConstantVolumeBarsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllConstantVolumeBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConstantVolumeBarsCollectionClass prop = new CQGConstantVolumeBarsCollectionClass();
+                return prop;
             }
 
         }
@@ -14759,8 +14791,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllCustomStudies";
-                var result = (CQGCustomStudies)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllCustomStudiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudiesClass prop = new CQGCustomStudiesClass();
+                return prop;
             }
 
         }
@@ -14770,8 +14803,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllExpressions";
-                var result = (CQGExpressions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllExpressionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionsClass prop = new CQGExpressionsClass();
+                return prop;
             }
 
         }
@@ -14781,8 +14815,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllInstrumentsGroups";
-                var result = (CQGInstrumentsGroups)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllInstrumentsGroupsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentsGroupsClass prop = new CQGInstrumentsGroupsClass();
+                return prop;
             }
 
         }
@@ -14792,8 +14827,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllManualFills";
-                var result = (CQGManualFillsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllManualFillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGManualFillsCollectionClass prop = new CQGManualFillsCollectionClass();
+                return prop;
             }
 
         }
@@ -14803,8 +14839,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllPointAndFigureBars";
-                var result = (CQGPointAndFigureBarsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllPointAndFigureBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPointAndFigureBarsCollectionClass prop = new CQGPointAndFigureBarsCollectionClass();
+                return prop;
             }
 
         }
@@ -14814,8 +14851,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllStrategyDefinitions";
-                var result = (CQGStrategyDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllStrategyDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStrategyDefinitionsClass prop = new CQGStrategyDefinitionsClass();
+                return prop;
             }
 
         }
@@ -14825,8 +14863,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllSubMinuteBars";
-                var result = (CQGSubMinuteBarsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllSubMinuteBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSubMinuteBarsCollectionClass prop = new CQGSubMinuteBarsCollectionClass();
+                return prop;
             }
 
         }
@@ -14836,8 +14875,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllTFlowBars";
-                var result = (CQGTFlowBarsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllTFlowBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTFlowBarsCollectionClass prop = new CQGTFlowBarsCollectionClass();
+                return prop;
             }
 
         }
@@ -14847,8 +14887,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllTicks";
-                var result = (CQGTicksCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllTicksKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTicksCollectionClass prop = new CQGTicksCollectionClass();
+                return prop;
             }
 
         }
@@ -14858,8 +14899,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllTimedBars";
-                var result = (CQGTimedBarsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllTimedBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTimedBarsCollectionClass prop = new CQGTimedBarsCollectionClass();
+                return prop;
             }
 
         }
@@ -14869,8 +14911,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllTradingSystems";
-                var result = (CQGTradingSystems)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllTradingSystemsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemsClass prop = new CQGTradingSystemsClass();
+                return prop;
             }
 
         }
@@ -14880,8 +14923,9 @@ namespace FakeCQG
             get
             {
                 string name = "AllYields";
-                var result = (CQGYieldsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AllYieldsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGYieldsCollectionClass prop = new CQGYieldsCollectionClass();
+                return prop;
             }
 
         }
@@ -14891,8 +14935,9 @@ namespace FakeCQG
             get
             {
                 string name = "APIConfiguration";
-                var result = (CQGAPIConfig)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string APIConfigurationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAPIConfigClass prop = new CQGAPIConfigClass();
+                return prop;
             }
 
         }
@@ -14902,8 +14947,9 @@ namespace FakeCQG
             get
             {
                 string name = "Configuration";
-                var result = (CQGCELConfiguration)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ConfigurationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELConfiguration prop = new CQGCELConfiguration();
+                return prop;
             }
 
             set
@@ -14918,8 +14964,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencyRates";
-                var result = (CQGCurrencyRates)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurrencyRatesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurrencyRatesClass prop = new CQGCurrencyRatesClass();
+                return prop;
             }
 
         }
@@ -14929,8 +14976,9 @@ namespace FakeCQG
             get
             {
                 string name = "DirectEventsAccessor";
-                var result = (CQGDirectEventsAccessor)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DirectEventsAccessorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDirectEventsAccessorClass prop = new CQGDirectEventsAccessorClass();
+                return prop;
             }
 
         }
@@ -14940,8 +14988,9 @@ namespace FakeCQG
             get
             {
                 string name = "Environment";
-                var result = (CQGEnvironment)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string EnvironmentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGEnvironmentClass prop = new CQGEnvironmentClass();
+                return prop;
             }
 
         }
@@ -14951,8 +15000,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instruments";
-                var result = (CQGInstruments)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentsClass prop = new CQGInstrumentsClass();
+                return prop;
             }
 
         }
@@ -14962,8 +15012,9 @@ namespace FakeCQG
             get
             {
                 string name = "InternalOrders";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InternalOrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -14984,8 +15035,9 @@ namespace FakeCQG
             get
             {
                 string name = "Logger";
-                var result = (CQGLogger)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LoggerKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGLoggerClass prop = new CQGLoggerClass();
+                return prop;
             }
 
         }
@@ -14995,8 +15047,9 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -18385,8 +18438,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGChangedTradeEntry)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGChangedTradeEntryClass prop = new CQGChangedTradeEntryClass();
+                return prop;
             }
 
         }
@@ -18493,8 +18547,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradeEntry";
-                var result = (CQGTradeEntry)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeEntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryClass prop = new CQGTradeEntryClass();
+                return prop;
             }
 
         }
@@ -18594,8 +18649,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradeExit";
-                var result = (CQGTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeExitKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitClass prop = new CQGTradeExitClass();
+                return prop;
             }
 
         }
@@ -18706,8 +18762,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGChangedTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGChangedTradeExitClass prop = new CQGChangedTradeExitClass();
+                return prop;
             }
 
         }
@@ -19052,8 +19109,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGConditionDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
+                return prop;
             }
 
         }
@@ -19085,8 +19143,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGConditionResult)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionResultClass prop = new CQGConditionResultClass();
+                return prop;
             }
 
         }
@@ -19096,8 +19155,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -19107,8 +19167,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGConditionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionRequestClass prop = new CQGConditionRequestClass();
+                return prop;
             }
 
         }
@@ -19276,8 +19337,9 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                var result = (CQGParameterDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
+                return prop;
             }
 
         }
@@ -19377,8 +19439,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGConditionDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
+                return prop;
             }
 
         }
@@ -19388,8 +19451,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGConditionDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
+                return prop;
             }
 
         }
@@ -19541,8 +19605,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGConditionDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
+                return prop;
             }
 
         }
@@ -19950,8 +20015,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCondition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionClass prop = new CQGConditionClass();
+                return prop;
             }
 
         }
@@ -19961,8 +20027,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGCondition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConditionClass prop = new CQGConditionClass();
+                return prop;
             }
 
         }
@@ -20365,8 +20432,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGConstantVolumeBar)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConstantVolumeBarClass prop = new CQGConstantVolumeBarClass();
+                return prop;
             }
 
         }
@@ -20376,8 +20444,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -20387,8 +20456,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGConstantVolumeBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConstantVolumeBarsRequestClass prop = new CQGConstantVolumeBarsRequestClass();
+                return prop;
             }
 
         }
@@ -20548,8 +20618,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGConstantVolumeBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConstantVolumeBarsClass prop = new CQGConstantVolumeBarsClass();
+                return prop;
             }
 
         }
@@ -20559,8 +20630,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGConstantVolumeBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGConstantVolumeBarsClass prop = new CQGConstantVolumeBarsClass();
+                return prop;
             }
 
         }
@@ -20994,8 +21066,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -21150,8 +21223,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCurrencyRate)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurrencyRateClass prop = new CQGCurrencyRateClass();
+                return prop;
             }
 
         }
@@ -21348,8 +21422,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCurveDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveDefinitionClass prop = new CQGCurveDefinitionClass();
+                return prop;
             }
 
         }
@@ -21359,8 +21434,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGCurveDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveDefinitionClass prop = new CQGCurveDefinitionClass();
+                return prop;
             }
 
         }
@@ -21713,8 +21789,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCustomStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyClass prop = new CQGCustomStudyClass();
+                return prop;
             }
 
         }
@@ -21724,8 +21801,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGCustomStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyClass prop = new CQGCustomStudyClass();
+                return prop;
             }
 
         }
@@ -21840,8 +21918,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurveHeaders";
-                var result = (CQGCurveHeaders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurveHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveHeadersClass prop = new CQGCurveHeadersClass();
+                return prop;
             }
 
         }
@@ -21851,8 +21930,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -21884,8 +21964,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCurves)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurvesClass prop = new CQGCurvesClass();
+                return prop;
             }
 
         }
@@ -21895,8 +21976,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -21906,8 +21988,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGCustomStudyRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyRequestClass prop = new CQGCustomStudyRequestClass();
+                return prop;
             }
 
         }
@@ -22075,8 +22158,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurveDefinitions";
-                var result = (CQGCurveDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurveDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCurveDefinitionsClass prop = new CQGCurveDefinitionsClass();
+                return prop;
             }
 
         }
@@ -22097,8 +22181,9 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                var result = (CQGParameterDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
+                return prop;
             }
 
         }
@@ -22198,8 +22283,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -22209,8 +22295,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByAbbreviation";
-                var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -22370,8 +22457,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
+                return prop;
             }
 
         }
@@ -22816,8 +22904,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGDataSource)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDataSourceClass prop = new CQGDataSourceClass();
+                return prop;
             }
 
         }
@@ -22827,8 +22916,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByAbbreviation";
-                var result = (CQGDataSource)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDataSourceClass prop = new CQGDataSourceClass();
+                return prop;
             }
 
         }
@@ -23066,8 +23156,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGDataSourceSymbol)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDataSourceSymbolClass prop = new CQGDataSourceSymbolClass();
+                return prop;
             }
 
         }
@@ -23643,8 +23734,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -23654,8 +23746,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByPrice";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByPriceKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -23759,8 +23852,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -23836,8 +23930,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -23891,8 +23986,9 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPISession";
-                var result = (CQGRemoteOpenAPISession)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RemoteOpenAPISessionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGRemoteOpenAPISessionClass prop = new CQGRemoteOpenAPISessionClass();
+                return prop;
             }
 
         }
@@ -24212,8 +24308,9 @@ namespace FakeCQG
             get
             {
                 string name = "Parameters";
-                var result = (CQGExecutionPatternParameters)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExecutionPatternParametersClass prop = new CQGExecutionPatternParametersClass();
+                return prop;
             }
 
         }
@@ -24324,8 +24421,9 @@ namespace FakeCQG
             get
             {
                 string name = "Parameters";
-                var result = (CQGExecutionPatternParameters)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExecutionPatternParametersClass prop = new CQGExecutionPatternParametersClass();
+                return prop;
             }
 
         }
@@ -24452,8 +24550,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGExecutionPatternParameter)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExecutionPatternParameterClass prop = new CQGExecutionPatternParameterClass();
+                return prop;
             }
 
         }
@@ -24597,8 +24696,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGExpressionOutputs)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionOutputsClass prop = new CQGExpressionOutputsClass();
+                return prop;
             }
 
         }
@@ -24608,8 +24708,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -24619,8 +24720,9 @@ namespace FakeCQG
             get
             {
                 string name = "OutputHeaders";
-                var result = (CQGExpressionOutputHeaders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OutputHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionOutputHeadersClass prop = new CQGExpressionOutputHeadersClass();
+                return prop;
             }
 
         }
@@ -24630,8 +24732,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGExpressionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionRequestClass prop = new CQGExpressionRequestClass();
+                return prop;
             }
 
         }
@@ -25369,8 +25472,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGExpression)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionClass prop = new CQGExpressionClass();
+                return prop;
             }
 
         }
@@ -25380,8 +25484,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGExpression)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGExpressionClass prop = new CQGExpressionClass();
+                return prop;
             }
 
         }
@@ -25518,8 +25623,9 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderClass prop = new CQGOrderClass();
+                return prop;
             }
 
         }
@@ -25759,8 +25865,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGFillClass prop = new CQGFillClass();
+                return prop;
             }
 
         }
@@ -25770,8 +25877,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGFillClass prop = new CQGFillClass();
+                return prop;
             }
 
         }
@@ -25919,8 +26027,9 @@ namespace FakeCQG
             get
             {
                 string name = "Fill";
-                var result = (CQGFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string FillKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGFillClass prop = new CQGFillClass();
+                return prop;
             }
 
         }
@@ -26097,8 +26206,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGGWTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGGWTradeClass prop = new CQGGWTradeClass();
+                return prop;
             }
 
         }
@@ -26108,8 +26218,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGGWTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGGWTradeClass prop = new CQGGWTradeClass();
+                return prop;
             }
 
         }
@@ -26479,8 +26590,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGHoliday)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGHolidayClass prop = new CQGHolidayClass();
+                return prop;
             }
 
         }
@@ -26490,8 +26602,9 @@ namespace FakeCQG
             get
             {
                 string name = "Sessions";
-                var result = (CQGSessions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string SessionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSessionsClass prop = new CQGSessionsClass();
+                return prop;
             }
 
         }
@@ -26587,8 +26700,9 @@ namespace FakeCQG
             get
             {
                 string name = "Ask";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AskKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -26614,8 +26728,9 @@ namespace FakeCQG
             get
             {
                 string name = "Bid";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string BidKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -26625,8 +26740,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -26696,8 +26812,9 @@ namespace FakeCQG
             get
             {
                 string name = "DOMAsks";
-                var result = (CQGDOMQuotes)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DOMAsksKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDOMQuotesClass prop = new CQGDOMQuotesClass();
+                return prop;
             }
 
         }
@@ -26707,8 +26824,9 @@ namespace FakeCQG
             get
             {
                 string name = "DOMBids";
-                var result = (CQGDOMQuotes)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DOMBidsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGDOMQuotesClass prop = new CQGDOMQuotesClass();
+                return prop;
             }
 
         }
@@ -26926,8 +27044,9 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                var result = (CQGInstrumentProperties)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentPropertiesClass prop = new CQGInstrumentPropertiesClass();
+                return prop;
             }
 
         }
@@ -26959,8 +27078,9 @@ namespace FakeCQG
             get
             {
                 string name = "Quotes";
-                var result = (CQGQuotes)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string QuotesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuotesClass prop = new CQGQuotesClass();
+                return prop;
             }
 
         }
@@ -27014,8 +27134,9 @@ namespace FakeCQG
             get
             {
                 string name = "Sessions";
-                var result = (CQGSessions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string SessionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSessionsClass prop = new CQGSessionsClass();
+                return prop;
             }
 
         }
@@ -27118,8 +27239,9 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -27129,8 +27251,9 @@ namespace FakeCQG
             get
             {
                 string name = "UnderlyingInstrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string UnderlyingInstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -27340,8 +27463,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGInstrumentProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentPropertyClass prop = new CQGInstrumentPropertyClass();
+                return prop;
             }
 
         }
@@ -27437,8 +27561,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -27593,8 +27718,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -27701,8 +27827,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instruments";
-                var result = (CQGInstruments)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentsClass prop = new CQGInstrumentsClass();
+                return prop;
             }
 
         }
@@ -27712,8 +27839,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGInstrumentsGroupRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentsGroupRequestClass prop = new CQGInstrumentsGroupRequestClass();
+                return prop;
             }
 
         }
@@ -27972,8 +28100,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGInstrumentsGroup)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentsGroupClass prop = new CQGInstrumentsGroupClass();
+                return prop;
             }
 
         }
@@ -28336,8 +28465,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -28878,8 +29008,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGManualFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGManualFillClass prop = new CQGManualFillClass();
+                return prop;
             }
 
         }
@@ -28994,8 +29125,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGManualFills)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGManualFillsClass prop = new CQGManualFillsClass();
+                return prop;
             }
 
         }
@@ -29110,8 +29242,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGModifiedProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGModifiedPropertyClass prop = new CQGModifiedPropertyClass();
+                return prop;
             }
 
         }
@@ -29121,8 +29254,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGModifiedProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGModifiedPropertyClass prop = new CQGModifiedPropertyClass();
+                return prop;
             }
 
         }
@@ -29360,8 +29494,9 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
             set
@@ -29424,8 +29559,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
             set
@@ -29680,8 +29816,9 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
             set
@@ -29820,8 +29957,9 @@ namespace FakeCQG
             get
             {
                 string name = "Fills";
-                var result = (CQGFills)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string FillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGFillsClass prop = new CQGFillsClass();
+                return prop;
             }
 
         }
@@ -29864,8 +30002,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
             set
@@ -29913,8 +30052,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -29989,8 +30129,9 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                var result = (CQGOrderProperties)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderPropertiesClass prop = new CQGOrderPropertiesClass();
+                return prop;
             }
 
         }
@@ -30119,8 +30260,9 @@ namespace FakeCQG
             get
             {
                 string name = "Transactions";
-                var result = (CQGTransactions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TransactionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTransactionsClass prop = new CQGTransactionsClass();
+                return prop;
             }
 
         }
@@ -30284,8 +30426,9 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                var result = (CQGOrderProperties)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderPropertiesClass prop = new CQGOrderPropertiesClass();
+                return prop;
             }
 
         }
@@ -30385,8 +30528,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGOrderProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderPropertyClass prop = new CQGOrderPropertyClass();
+                return prop;
             }
 
         }
@@ -30515,8 +30659,9 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderClass prop = new CQGOrderClass();
+                return prop;
             }
 
         }
@@ -30654,8 +30799,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderClass prop = new CQGOrderClass();
+                return prop;
             }
 
         }
@@ -30813,8 +30959,9 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
         }
@@ -30824,8 +30971,9 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                var result = (CQGCEL)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGCELClass prop = new CQGCELClass();
+                return prop;
             }
 
         }
@@ -30835,8 +30983,9 @@ namespace FakeCQG
             get
             {
                 string name = "FinalError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string FinalErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -30846,8 +30995,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastChunk";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastChunkKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -30857,8 +31007,9 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrdersClass prop = new CQGOrdersClass();
+                return prop;
             }
 
         }
@@ -31112,8 +31263,9 @@ namespace FakeCQG
             get
             {
                 string name = "AvailableValues";
-                var result = (CQGStringCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AvailableValuesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStringCollectionClass prop = new CQGStringCollectionClass();
+                return prop;
             }
 
         }
@@ -31257,8 +31409,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGParameterDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionClass prop = new CQGParameterDefinitionClass();
+                return prop;
             }
 
         }
@@ -31268,8 +31421,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGParameterDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionClass prop = new CQGParameterDefinitionClass();
+                return prop;
             }
 
         }
@@ -31573,8 +31727,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGPointAndFigureBar)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPointAndFigureBarClass prop = new CQGPointAndFigureBarClass();
+                return prop;
             }
 
         }
@@ -31584,8 +31739,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -31595,8 +31751,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGPointAndFigureBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPointAndFigureBarsRequestClass prop = new CQGPointAndFigureBarsRequestClass();
+                return prop;
             }
 
         }
@@ -31756,8 +31913,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGPointAndFigureBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPointAndFigureBarsClass prop = new CQGPointAndFigureBarsClass();
+                return prop;
             }
 
         }
@@ -31767,8 +31925,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGPointAndFigureBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPointAndFigureBarsClass prop = new CQGPointAndFigureBarsClass();
+                return prop;
             }
 
         }
@@ -32207,8 +32366,9 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountClass prop = new CQGAccountClass();
+                return prop;
             }
 
         }
@@ -32229,8 +32389,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -32262,8 +32423,9 @@ namespace FakeCQG
             get
             {
                 string name = "MatchedTrades";
-                var result = (CQGTrades)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string MatchedTradesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradesClass prop = new CQGTradesClass();
+                return prop;
             }
 
         }
@@ -32284,8 +32446,9 @@ namespace FakeCQG
             get
             {
                 string name = "OpenTrades";
-                var result = (CQGTrades)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OpenTradesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradesClass prop = new CQGTradesClass();
+                return prop;
             }
 
         }
@@ -32462,8 +32625,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGPosition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPositionClass prop = new CQGPositionClass();
+                return prop;
             }
 
         }
@@ -32473,8 +32637,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGPosition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPositionClass prop = new CQGPositionClass();
+                return prop;
             }
 
         }
@@ -32589,8 +32754,9 @@ namespace FakeCQG
             get
             {
                 string name = "Positions";
-                var result = (CQGPositions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PositionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGPositionsClass prop = new CQGPositionsClass();
+                return prop;
             }
 
         }
@@ -32813,8 +32979,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGQFormulaDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQFormulaDefinitionClass prop = new CQGQFormulaDefinitionClass();
+                return prop;
             }
 
         }
@@ -32824,8 +32991,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGQFormulaDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQFormulaDefinitionClass prop = new CQGQFormulaDefinitionClass();
+                return prop;
             }
 
         }
@@ -32940,8 +33108,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -33118,8 +33287,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGQuoteClass prop = new CQGQuoteClass();
+                return prop;
             }
 
         }
@@ -33382,8 +33552,9 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                var result = (CQGInstrument)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGInstrumentClass prop = new CQGInstrumentClass();
+                return prop;
             }
 
         }
@@ -33612,8 +33783,9 @@ namespace FakeCQG
             get
             {
                 string name = "Holidays";
-                var result = (CQGHolidays)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string HolidaysKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGHolidaysClass prop = new CQGHolidaysClass();
+                return prop;
             }
 
         }
@@ -33623,8 +33795,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGSession)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSessionClass prop = new CQGSessionClass();
+                return prop;
             }
 
         }
@@ -33761,8 +33934,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGSessions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSessionsClass prop = new CQGSessionsClass();
+                return prop;
             }
 
         }
@@ -33880,8 +34054,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -34014,8 +34189,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGStrategyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStrategyDefinitionClass prop = new CQGStrategyDefinitionClass();
+                return prop;
             }
 
         }
@@ -34025,8 +34201,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGStrategyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStrategyDefinitionClass prop = new CQGStrategyDefinitionClass();
+                return prop;
             }
 
         }
@@ -34141,8 +34318,9 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderClass prop = new CQGOrderClass();
+                return prop;
             }
 
         }
@@ -34264,8 +34442,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGStrategyLegFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStrategyLegFillClass prop = new CQGStrategyLegFillClass();
+                return prop;
             }
 
         }
@@ -34769,8 +34948,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGSubMinuteBar)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSubMinuteBarClass prop = new CQGSubMinuteBarClass();
+                return prop;
             }
 
         }
@@ -34780,8 +34960,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -34791,8 +34972,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGSubMinuteBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSubMinuteBarsRequestClass prop = new CQGSubMinuteBarsRequestClass();
+                return prop;
             }
 
         }
@@ -34952,8 +35134,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGSubMinuteBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSubMinuteBarsClass prop = new CQGSubMinuteBarsClass();
+                return prop;
             }
 
         }
@@ -34963,8 +35146,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGSubMinuteBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGSubMinuteBarsClass prop = new CQGSubMinuteBarsClass();
+                return prop;
             }
 
         }
@@ -35387,8 +35571,9 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencySummaries";
-                var result = (CQGAccountSummaries)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string CurrencySummariesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountSummariesClass prop = new CQGAccountSummariesClass();
+                return prop;
             }
 
         }
@@ -35420,8 +35605,9 @@ namespace FakeCQG
             get
             {
                 string name = "Summary";
-                var result = (CQGAccountSummary)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string SummaryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
+                return prop;
             }
 
         }
@@ -35825,8 +36011,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTFlowBar)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTFlowBarClass prop = new CQGTFlowBarClass();
+                return prop;
             }
 
         }
@@ -35836,8 +36023,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -35847,8 +36035,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGTFlowBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTFlowBarsRequestClass prop = new CQGTFlowBarsRequestClass();
+                return prop;
             }
 
         }
@@ -36008,8 +36197,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTFlowBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTFlowBarsClass prop = new CQGTFlowBarsClass();
+                return prop;
             }
 
         }
@@ -36019,8 +36209,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGTFlowBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTFlowBarsClass prop = new CQGTFlowBarsClass();
+                return prop;
             }
 
         }
@@ -36692,8 +36883,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTick)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTickClass prop = new CQGTickClass();
+                return prop;
             }
 
         }
@@ -36703,8 +36895,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -36714,8 +36907,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGTicksRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTicksRequestClass prop = new CQGTicksRequestClass();
+                return prop;
             }
 
         }
@@ -36890,8 +37084,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTicks)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTicksClass prop = new CQGTicksClass();
+                return prop;
             }
 
         }
@@ -36901,8 +37096,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGTicks)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTicksClass prop = new CQGTicksClass();
+                return prop;
             }
 
         }
@@ -37546,8 +37742,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTimedBar)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTimedBarClass prop = new CQGTimedBarClass();
+                return prop;
             }
 
         }
@@ -37557,8 +37754,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -37568,8 +37766,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGTimedBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTimedBarsRequestClass prop = new CQGTimedBarsRequestClass();
+                return prop;
             }
 
         }
@@ -37737,8 +37936,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTimedBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTimedBarsClass prop = new CQGTimedBarsClass();
+                return prop;
             }
 
         }
@@ -37748,8 +37948,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGTimedBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTimedBarsClass prop = new CQGTimedBarsClass();
+                return prop;
             }
 
         }
@@ -38344,8 +38545,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradeEntry)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryClass prop = new CQGTradeEntryClass();
+                return prop;
             }
 
         }
@@ -38452,8 +38654,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGTradeEntryDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryDefinitionClass prop = new CQGTradeEntryDefinitionClass();
+                return prop;
             }
 
         }
@@ -38485,8 +38688,9 @@ namespace FakeCQG
             get
             {
                 string name = "RelatedExits";
-                var result = (CQGTradeExits)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RelatedExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitsClass prop = new CQGTradeExitsClass();
+                return prop;
             }
 
         }
@@ -38518,8 +38722,9 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                var result = (CQGTradingSystemTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
+                return prop;
             }
 
         }
@@ -38731,8 +38936,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGTradeExitDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
+                return prop;
             }
 
         }
@@ -38764,8 +38970,9 @@ namespace FakeCQG
             get
             {
                 string name = "RelatedEntries";
-                var result = (CQGTradeEntries)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RelatedEntriesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntriesClass prop = new CQGTradeEntriesClass();
+                return prop;
             }
 
         }
@@ -38797,8 +39004,9 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                var result = (CQGTradingSystemTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
+                return prop;
             }
 
         }
@@ -39021,8 +39229,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradeExitDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
+                return prop;
             }
 
         }
@@ -39032,8 +39241,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGTradeExitDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
+                return prop;
             }
 
         }
@@ -39148,8 +39358,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitClass prop = new CQGTradeExitClass();
+                return prop;
             }
 
         }
@@ -39159,8 +39370,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitClass prop = new CQGTradeExitClass();
+                return prop;
             }
 
         }
@@ -39275,8 +39487,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeClass prop = new CQGTradeClass();
+                return prop;
             }
 
         }
@@ -39576,8 +39789,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemBaseBarParameter)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemBaseBarParameterClass prop = new CQGTradingSystemBaseBarParameterClass();
+                return prop;
             }
 
         }
@@ -39673,8 +39887,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
+                return prop;
             }
 
         }
@@ -39695,8 +39910,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -39706,8 +39922,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGTradingSystemRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemRequestClass prop = new CQGTradingSystemRequestClass();
+                return prop;
             }
 
         }
@@ -39717,8 +39934,9 @@ namespace FakeCQG
             get
             {
                 string name = "Statistics";
-                var result = (CQGTradingSystemStatisticsCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string StatisticsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemStatisticsCollectionClass prop = new CQGTradingSystemStatisticsCollectionClass();
+                return prop;
             }
 
         }
@@ -39755,8 +39973,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradesRows";
-                var result = (CQGTradingSystemTradesRows)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradesRowsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradesRowsClass prop = new CQGTradingSystemTradesRowsClass();
+                return prop;
             }
 
         }
@@ -39904,8 +40123,9 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                var result = (CQGParameterDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
+                return prop;
             }
 
         }
@@ -39915,8 +40135,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradeDefinitions";
-                var result = (CQGTradingSystemTradeDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeDefinitionsClass prop = new CQGTradingSystemTradeDefinitionsClass();
+                return prop;
             }
 
         }
@@ -40016,8 +40237,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
+                return prop;
             }
 
         }
@@ -40027,8 +40249,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByAbbreviation";
-                var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
+                return prop;
             }
 
         }
@@ -40230,8 +40453,9 @@ namespace FakeCQG
             get
             {
                 string name = "Entry";
-                var result = (CQGTradeEntry)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string EntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryClass prop = new CQGTradeEntryClass();
+                return prop;
             }
 
         }
@@ -40252,8 +40476,9 @@ namespace FakeCQG
             get
             {
                 string name = "Exit";
-                var result = (CQGTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ExitKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitClass prop = new CQGTradeExitClass();
+                return prop;
             }
 
         }
@@ -40443,8 +40668,9 @@ namespace FakeCQG
             get
             {
                 string name = "BaseBarParameters";
-                var result = (CQGTradingSystemBaseBarParameters)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string BaseBarParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemBaseBarParametersClass prop = new CQGTradingSystemBaseBarParametersClass();
+                return prop;
             }
 
         }
@@ -40518,8 +40744,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
+                return prop;
             }
 
         }
@@ -40831,8 +41058,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystem)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemClass prop = new CQGTradingSystemClass();
+                return prop;
             }
 
         }
@@ -40842,8 +41070,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGTradingSystem)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemClass prop = new CQGTradingSystemClass();
+                return prop;
             }
 
         }
@@ -40947,8 +41176,9 @@ namespace FakeCQG
             get
             {
                 string name = "Statistics";
-                var result = (CQGTradingSystemStatistics)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string StatisticsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemStatisticsClass prop = new CQGTradingSystemStatisticsClass();
+                return prop;
             }
 
         }
@@ -41462,8 +41692,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemStatistics)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemStatisticsClass prop = new CQGTradingSystemStatisticsClass();
+                return prop;
             }
 
         }
@@ -41574,8 +41805,9 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                var result = (CQGTradingSystemTradeDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
+                return prop;
             }
 
         }
@@ -41618,8 +41850,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradeEntry";
-                var result = (CQGTradeEntry)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeEntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryClass prop = new CQGTradeEntryClass();
+                return prop;
             }
 
         }
@@ -41629,8 +41862,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradeExits";
-                var result = (CQGTradeExits)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradeExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitsClass prop = new CQGTradeExitsClass();
+                return prop;
             }
 
         }
@@ -41640,8 +41874,9 @@ namespace FakeCQG
             get
             {
                 string name = "TradesRow";
-                var result = (CQGTradingSystemTradesRow)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string TradesRowKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradesRowClass prop = new CQGTradingSystemTradesRowClass();
+                return prop;
             }
 
         }
@@ -41730,8 +41965,9 @@ namespace FakeCQG
             get
             {
                 string name = "Entry";
-                var result = (CQGTradeEntryDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string EntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeEntryDefinitionClass prop = new CQGTradeEntryDefinitionClass();
+                return prop;
             }
 
         }
@@ -41741,8 +41977,9 @@ namespace FakeCQG
             get
             {
                 string name = "Exits";
-                var result = (CQGTradeExitDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradeExitDefinitionsClass prop = new CQGTradeExitDefinitionsClass();
+                return prop;
             }
 
         }
@@ -41864,8 +42101,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemTradeDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
+                return prop;
             }
 
         }
@@ -41875,8 +42113,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGTradingSystemTradeDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
+                return prop;
             }
 
         }
@@ -41991,8 +42230,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
+                return prop;
             }
 
         }
@@ -42002,8 +42242,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByName";
-                var result = (CQGTradingSystemTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
+                return prop;
             }
 
         }
@@ -42140,8 +42381,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTradingSystemTradesRow)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemTradesRowClass prop = new CQGTradingSystemTradesRowClass();
+                return prop;
             }
 
         }
@@ -42248,8 +42490,9 @@ namespace FakeCQG
             get
             {
                 string name = "StatisticsChangeInfo";
-                var result = (CQGTradingSystemStatisticsChangeInfo)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string StatisticsChangeInfoKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTradingSystemStatisticsChangeInfoClass prop = new CQGTradingSystemStatisticsChangeInfoClass();
+                return prop;
             }
 
         }
@@ -42365,8 +42608,9 @@ namespace FakeCQG
             get
             {
                 string name = "Fill";
-                var result = (CQGFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string FillKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGFillClass prop = new CQGFillClass();
+                return prop;
             }
 
         }
@@ -42376,8 +42620,9 @@ namespace FakeCQG
             get
             {
                 string name = "HangOrderIds";
-                var result = (CQGStringCollection)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string HangOrderIdsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStringCollectionClass prop = new CQGStringCollectionClass();
+                return prop;
             }
 
         }
@@ -42409,8 +42654,9 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGOrderClass prop = new CQGOrderClass();
+                return prop;
             }
 
         }
@@ -42420,8 +42666,9 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                var result = (CQGModifiedProperties)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGModifiedPropertiesClass prop = new CQGModifiedPropertiesClass();
+                return prop;
             }
 
         }
@@ -42464,8 +42711,9 @@ namespace FakeCQG
             get
             {
                 string name = "StrategyLegFills";
-                var result = (CQGStrategyLegFills)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string StrategyLegFillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGStrategyLegFillsClass prop = new CQGStrategyLegFillsClass();
+                return prop;
             }
 
         }
@@ -42576,8 +42824,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGTransaction)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTransactionClass prop = new CQGTransactionClass();
+                return prop;
             }
 
         }
@@ -42587,8 +42836,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemByIndex";
-                var result = (CQGTransaction)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGTransactionClass prop = new CQGTransactionClass();
+                return prop;
             }
 
         }
@@ -42936,8 +43186,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGYield)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGYieldClass prop = new CQGYieldClass();
+                return prop;
             }
 
         }
@@ -42947,8 +43198,9 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                var result = (CQGError)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGErrorClass prop = new CQGErrorClass();
+                return prop;
             }
 
         }
@@ -42958,8 +43210,9 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                var result = (CQGYieldsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGYieldsRequestClass prop = new CQGYieldsRequestClass();
+                return prop;
             }
 
         }
@@ -43127,8 +43380,9 @@ namespace FakeCQG
             get
             {
                 string name = "Item";
-                var result = (CQGYields)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGYieldsClass prop = new CQGYieldsClass();
+                return prop;
             }
 
         }
@@ -43138,8 +43392,9 @@ namespace FakeCQG
             get
             {
                 string name = "ItemById";
-                var result = (CQGYields)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
-                return result;
+                string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
+                CQGYieldsClass prop = new CQGYieldsClass();
+                return prop;
             }
 
         }
