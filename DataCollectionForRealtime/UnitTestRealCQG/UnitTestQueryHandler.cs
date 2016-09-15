@@ -224,6 +224,57 @@ namespace UnitTestRealCQG
             Assert.IsFalse(isQueryFalse);
         }
 
+        [TestMethod]
+        public void Method_QueryProcessing_QueryTypeConstructor_CQGCELQueryName()
+        {
+            // arrange
+            string id = "key";
+            string objectKey = "objectKey";
+            string name = "CQG.CQGCELClass";
+            bool isQueryTrue = default(bool);
+            bool isQueryFalse = default(bool);
+            var query = new QueryInfo(QueryInfo.QueryType.Constructor, id, objectKey, name, null, null);
+            AnswerInfo answer = default(AnswerInfo);
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+            FakeCQG.CQG.GetQueries += CQG_GetQueries;
+            StartUp();
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.ClearQueriesListAsync();
+            }).GetAwaiter().GetResult();
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.ClearAnswersAsync();
+            }).GetAwaiter().GetResult();
+
+            // act
+            Task.Run(async () =>
+            {
+                await FakeCQG.CQG.LoadInQueryAsync(query);
+                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+
+            QueryHandler.QueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+            }).GetAwaiter().GetResult();
+            answer = FakeCQG.CQG.GetAnswerData(id);
+            var objectValue = FakeCQG.DataDictionaries.GetObjectFromTheDictionary(objectKey);
+
+            // assert
+            Assert.AreEqual(name, answer.QueryName);
+            Assert.AreEqual(objectKey, answer.ObjectKey);
+            Assert.IsTrue(isQueryTrue);
+            Assert.IsFalse(isQueryFalse);
+            Assert.IsNull(objectValue);
+        }
+
+        private void CQG_GetQueries(List<QueryInfo> queries)
+        {
+        }
+
         private void CQG_LogChange(string message)
         {
         }
