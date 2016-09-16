@@ -485,7 +485,10 @@ namespace FakeCQG
             {
                 _log = string.Format("Answer - key {0}, value {1}", key, value);
             }
-            LogChange(_log);
+            if (LogChange != null)
+            {
+                LogChange(_log);
+            }
         }
 
         private static void OnLogChange(string message)

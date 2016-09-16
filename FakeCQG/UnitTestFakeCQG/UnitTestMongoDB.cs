@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace UnitTestFakeCQG
 {
@@ -179,7 +179,7 @@ namespace UnitTestFakeCQG
             string idTrue = "keyTrue";
             string idFalse = "keyFalse";
             string name = "name";
-            bool isAnsweer = default(bool);
+            bool isAnswer = default(bool);
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             Task.Run(async () =>
             {
@@ -189,16 +189,16 @@ namespace UnitTestFakeCQG
             {
                 // act 1
                 await FakeCQG.CQG.LoadInAnswerAsync(new AnswerInfo(idTrue, string.Empty, name, null, null));
-                isAnsweer = await FakeCQG.CQG.CheckAnswerAsync(idTrue);
+                isAnswer = await FakeCQG.CQG.CheckAnswerAsync(idTrue);
 
                 // assert 1
-                Assert.AreEqual(isAnsweer, true);
+                Assert.AreEqual(isAnswer, true);
 
                 // act 2
-                isAnsweer = await FakeCQG.CQG.CheckAnswerAsync(idFalse);
+                isAnswer = await FakeCQG.CQG.CheckAnswerAsync(idFalse);
 
                 // assert 2
-                Assert.AreEqual(isAnsweer, false);
+                Assert.AreEqual(isAnswer, false);
 
             }).GetAwaiter().GetResult();
         }
@@ -292,7 +292,6 @@ namespace UnitTestFakeCQG
         {
             "queries in collection at",
             "**********************************************************",
-            "Queries was cleared successful",
             "Queries list was cleared successfully",
             "Query"
         };
