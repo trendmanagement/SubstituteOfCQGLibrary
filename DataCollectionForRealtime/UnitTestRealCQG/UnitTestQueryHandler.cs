@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataCollectionForRealtime;
 using System.Collections.Generic;
-using FakeCQG.Models;
 using System.Threading.Tasks;
+using DataCollectionForRealtime;
+using FakeCQG.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestRealCQG
 {

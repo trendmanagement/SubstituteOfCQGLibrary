@@ -181,6 +181,7 @@ namespace FakeCQG
                 return result.ValueKey;
             }
         }
+
         public static AnswerInfo WaitingForAnAnswer(string key)
         {
             

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using FakeCQG;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
 using MongoDB.Driver;
+
+[assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
 namespace DataCollectionForRealtime
 {
@@ -20,7 +23,9 @@ namespace DataCollectionForRealtime
         public Assembly CQGAssembly
         {
             get { return CQGAssm; }
-        }        public QueryHandler(RealtimeDataManagement rdm)
+        }
+
+        public QueryHandler(RealtimeDataManagement rdm)
         {
             cqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>();
@@ -322,7 +327,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-        static Type FindDelegateType(Assembly assm, string eventName)
+        internal static Type FindDelegateType(Assembly assm, string eventName)
         {
             string delegateTypeName = string.Format("_ICQGCELEvents_{0}EventHandler", eventName);
             foreach (Type type in assm.ExportedTypes)
@@ -339,7 +344,7 @@ namespace DataCollectionForRealtime
             return null;
         }
 
-        static bool IsDelegate(Type type)
+        internal static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
         }
