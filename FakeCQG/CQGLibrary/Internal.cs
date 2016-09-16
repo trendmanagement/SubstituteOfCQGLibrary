@@ -491,7 +491,10 @@ namespace FakeCQG
         private static void OnLogChange(string message)
         {
             _log = message;
-            LogChange(_log);
+            if (LogChange != null)
+            {
+                LogChange(_log);
+            }
         }
 
         private static void OnGetQueries(List<QueryInfo> queries)

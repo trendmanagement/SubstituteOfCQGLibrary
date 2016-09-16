@@ -1,90 +1,86 @@
-using System.Diagnostics;
 using System;
-using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Collections;
 using CQG = FakeCQG;
 
 namespace TimedBars
 {
-	public class frmTimedBarsRequestSettings : System.Windows.Forms.Form
-	{
-		
-		
-		#region " Windows Form Designer generated code "
-		
-		public frmTimedBarsRequestSettings()
-		{
-			
-			//This call is required by the Windows Form Designer.
-			InitializeComponent();
-			
-			//Add any initialization after the InitializeComponent() call
-			
-		}
-		
-		//Form overrides dispose to clean up the component list.
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing)
-			{
-				if (!(components == null))
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose(disposing);
-		}
-		
-		//Required by the Windows Form Designer
-		private System.ComponentModel.Container components = null;
-		
-		//NOTE: The following procedure is required by the Windows Form Designer
-		//It can be modified using the Windows Form Designer.
-		//Do not modify it using the code editor.
-		internal System.Windows.Forms.Label Label1;
-		internal System.Windows.Forms.GroupBox GroupBox1;
-		internal System.Windows.Forms.GroupBox GroupBox2;
-		internal System.Windows.Forms.Label Label2;
-		internal System.Windows.Forms.Label Label3;
-		internal System.Windows.Forms.GroupBox GroupBox3;
-		internal System.Windows.Forms.DateTimePicker dtpEndRange;
-		internal System.Windows.Forms.DateTimePicker dtpStartRange;
-		internal System.Windows.Forms.TextBox txtSymbol;
-		internal System.Windows.Forms.Button btnOK;
-		internal System.Windows.Forms.Button btnCancel;
-		internal System.Windows.Forms.GroupBox GroupBox4;
-		internal System.Windows.Forms.Label Label4;
-		internal System.Windows.Forms.Label Label5;
-		internal System.Windows.Forms.Label Label6;
-		internal System.Windows.Forms.Label Label7;
-		internal System.Windows.Forms.GroupBox GroupBox5;
-		internal System.Windows.Forms.GroupBox GroupBox6;
-		internal System.Windows.Forms.NumericUpDown nudSessionsFilter;
-		internal System.Windows.Forms.RadioButton optDateDate;
-		internal System.Windows.Forms.RadioButton optDateInt;
-		internal System.Windows.Forms.CheckBox chkIncludeEnd;
-		internal System.Windows.Forms.CheckBox chkEqualizeCloses;
-		internal System.Windows.Forms.NumericUpDown nudDaysBeforeExpiration;
-		internal System.Windows.Forms.ComboBox cmbContinuationType;
-		internal System.Windows.Forms.ComboBox cmbHistoricalPeriod;
-		internal System.Windows.Forms.NumericUpDown nudIntradayPeriod;
-		internal System.Windows.Forms.CheckBox chkUpdatesEnabled;
-		internal System.Windows.Forms.CheckBox chkSFDailyFromIntraday;
-		internal System.Windows.Forms.CheckBox chkSessionsCustomFilter;
-		internal System.Windows.Forms.RadioButton optIntInt;
-		internal System.Windows.Forms.NumericUpDown nudStartRange;
-		internal System.Windows.Forms.NumericUpDown nudEndRange;
-		internal System.Windows.Forms.TextBox txtSessionsFilter;
-		internal System.Windows.Forms.Label label9;
-		internal System.Windows.Forms.ComboBox cmbTickFilter;
+    public class frmTimedBarsRequestSettings : System.Windows.Forms.Form
+    {
+        
+        
+        #region " Windows Form Designer generated code "
+        
+        public frmTimedBarsRequestSettings()
+        {
+            
+            //This call is required by the Windows Form Designer.
+            InitializeComponent();
+            
+            //Add any initialization after the InitializeComponent() call
+            
+        }
+        
+        //Form overrides dispose to clean up the component list.
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (!(components == null))
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+        
+        //Required by the Windows Form Designer
+        private System.ComponentModel.Container components = null;
+        
+        //NOTE: The following procedure is required by the Windows Form Designer
+        //It can be modified using the Windows Form Designer.
+        //Do not modify it using the code editor.
+        internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.GroupBox GroupBox1;
+        internal System.Windows.Forms.GroupBox GroupBox2;
+        internal System.Windows.Forms.Label Label2;
+        internal System.Windows.Forms.Label Label3;
+        internal System.Windows.Forms.GroupBox GroupBox3;
+        internal System.Windows.Forms.DateTimePicker dtpEndRange;
+        internal System.Windows.Forms.DateTimePicker dtpStartRange;
+        internal System.Windows.Forms.TextBox txtSymbol;
+        internal System.Windows.Forms.Button btnOK;
+        internal System.Windows.Forms.Button btnCancel;
+        internal System.Windows.Forms.GroupBox GroupBox4;
+        internal System.Windows.Forms.Label Label4;
+        internal System.Windows.Forms.Label Label5;
+        internal System.Windows.Forms.Label Label6;
+        internal System.Windows.Forms.Label Label7;
+        internal System.Windows.Forms.GroupBox GroupBox5;
+        internal System.Windows.Forms.GroupBox GroupBox6;
+        internal System.Windows.Forms.NumericUpDown nudSessionsFilter;
+        internal System.Windows.Forms.RadioButton optDateDate;
+        internal System.Windows.Forms.RadioButton optDateInt;
+        internal System.Windows.Forms.CheckBox chkIncludeEnd;
+        internal System.Windows.Forms.CheckBox chkEqualizeCloses;
+        internal System.Windows.Forms.NumericUpDown nudDaysBeforeExpiration;
+        internal System.Windows.Forms.ComboBox cmbContinuationType;
+        internal System.Windows.Forms.ComboBox cmbHistoricalPeriod;
+        internal System.Windows.Forms.NumericUpDown nudIntradayPeriod;
+        internal System.Windows.Forms.CheckBox chkUpdatesEnabled;
+        internal System.Windows.Forms.CheckBox chkSFDailyFromIntraday;
+        internal System.Windows.Forms.CheckBox chkSessionsCustomFilter;
+        internal System.Windows.Forms.RadioButton optIntInt;
+        internal System.Windows.Forms.NumericUpDown nudStartRange;
+        internal System.Windows.Forms.NumericUpDown nudEndRange;
+        internal System.Windows.Forms.TextBox txtSessionsFilter;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.ComboBox cmbTickFilter;
         internal System.Windows.Forms.GroupBox GroupBox7;
         internal System.Windows.Forms.CheckedListBox chlstOutputs;
         internal System.Windows.Forms.CheckBox chkNoHistorical;
-		internal System.Windows.Forms.Label Label8;
-		[System.Diagnostics.DebuggerStepThrough()]private void InitializeComponent()
-		{
+        internal System.Windows.Forms.Label Label8;
+        [System.Diagnostics.DebuggerStepThrough()]private void InitializeComponent()
+        {
          this.Label1 = new System.Windows.Forms.Label();
          this.GroupBox1 = new System.Windows.Forms.GroupBox();
          this.nudEndRange = new System.Windows.Forms.NumericUpDown();
@@ -629,299 +625,299 @@ namespace TimedBars
          this.ResumeLayout(false);
 
       }
-		
-		#endregion
-		
-		// Default range start, range end and intraday period
-		private const int DEF_RANGE_START = 0;
-		private const int DEF_RANGE_END = - 10;
-		
-		// Current request
-		private CQG.CQGTimedBarsRequest m_TimedBarsRequest;
-		
-		// CQGCEL line time
-		private DateTime m_LineTime;
-		
-		/// <summary>
-		/// Occurs when the user clicks on the OK button.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void btnOK_Click(System.Object sender, System.EventArgs e)
-		{
-			CQG.eHistoricalPeriod historicalPeriod;
-			
-			try
-			{
-				m_TimedBarsRequest.Symbol = txtSymbol.Text;
-				
-				if (optIntInt.Checked)
-				{
-					m_TimedBarsRequest.RangeStart = System.Convert.ToInt32(nudStartRange.Value);
-					m_TimedBarsRequest.RangeEnd = System.Convert.ToInt32(nudEndRange.Value);
-				}
-				else if (optDateInt.Checked)
-				{
-					m_TimedBarsRequest.RangeStart = dtpStartRange.Value;
-					m_TimedBarsRequest.RangeEnd = System.Convert.ToInt32(nudEndRange.Value);
-				}
-				else if (optDateDate.Checked)
-				{
-					m_TimedBarsRequest.RangeStart = dtpStartRange.Value;
-					m_TimedBarsRequest.RangeEnd = dtpEndRange.Value;
-				}
-				m_TimedBarsRequest.IncludeEnd = chkIncludeEnd.Checked;
-				
-				historicalPeriod = (CQG.eHistoricalPeriod) cmbHistoricalPeriod.SelectedItem;
-				if (historicalPeriod == CQG.eHistoricalPeriod.hpUndefined)
-				{
-					m_TimedBarsRequest.IntradayPeriod = System.Convert.ToInt32(nudIntradayPeriod.Value);
-				}
-				else
-				{
-					m_TimedBarsRequest.HistoricalPeriod = historicalPeriod;
-				}
+        
+        #endregion
+        
+        // Default range start, range end and intraday period
+        private const int DEF_RANGE_START = 0;
+        private const int DEF_RANGE_END = - 10;
+        
+        // Current request
+        private CQG.CQGTimedBarsRequest m_TimedBarsRequest;
+        
+        // CQGCEL line time
+        private DateTime m_LineTime;
+        
+        /// <summary>
+        /// Occurs when the user clicks on the OK button.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void btnOK_Click(System.Object sender, System.EventArgs e)
+        {
+            CQG.eHistoricalPeriod historicalPeriod;
+            
+            try
+            {
+                m_TimedBarsRequest.Symbol = txtSymbol.Text;
+                
+                if (optIntInt.Checked)
+                {
+                    m_TimedBarsRequest.RangeStart = System.Convert.ToInt32(nudStartRange.Value);
+                    m_TimedBarsRequest.RangeEnd = System.Convert.ToInt32(nudEndRange.Value);
+                }
+                else if (optDateInt.Checked)
+                {
+                    m_TimedBarsRequest.RangeStart = dtpStartRange.Value;
+                    m_TimedBarsRequest.RangeEnd = System.Convert.ToInt32(nudEndRange.Value);
+                }
+                else if (optDateDate.Checked)
+                {
+                    m_TimedBarsRequest.RangeStart = dtpStartRange.Value;
+                    m_TimedBarsRequest.RangeEnd = dtpEndRange.Value;
+                }
+                m_TimedBarsRequest.IncludeEnd = chkIncludeEnd.Checked;
+                
+                historicalPeriod = (CQG.eHistoricalPeriod) cmbHistoricalPeriod.SelectedItem;
+                if (historicalPeriod == CQG.eHistoricalPeriod.hpUndefined)
+                {
+                    m_TimedBarsRequest.IntradayPeriod = System.Convert.ToInt32(nudIntradayPeriod.Value);
+                }
+                else
+                {
+                    m_TimedBarsRequest.HistoricalPeriod = historicalPeriod;
+                }
 
-				m_TimedBarsRequest.TickFilter = (CQG.eTickFilter) cmbTickFilter.SelectedItem;
-				
-				m_TimedBarsRequest.Continuation = (CQG.eTimeSeriesContinuationType) cmbContinuationType.SelectedItem;
-				m_TimedBarsRequest.EqualizeCloses = chkEqualizeCloses.Checked;
-				m_TimedBarsRequest.DaysBeforeExpiration = System.Convert.ToInt32(nudDaysBeforeExpiration.Value);
-				
-				m_TimedBarsRequest.UpdatesEnabled = chkUpdatesEnabled.Checked;
-				m_TimedBarsRequest.IgnoreEventsOnHistoricalBars = chkNoHistorical.Checked;
-				
-				if (chkSessionsCustomFilter.Checked)
-				{
-					m_TimedBarsRequest.SessionsFilter = txtSessionsFilter.Text;
-				}
-				else
-				{
-					m_TimedBarsRequest.SessionsFilter = System.Convert.ToInt32(nudSessionsFilter.Value);
-				}
-				
-				if (chkSFDailyFromIntraday.Checked)
-				{
-					m_TimedBarsRequest.SessionFlags = CQG.eSessionFlag.sfDailyFromIntraday;
-				}
-				else
-				{
-					m_TimedBarsRequest.SessionFlags = CQG.eSessionFlag.sfUndefined;
-				}
-				
+                m_TimedBarsRequest.TickFilter = (CQG.eTickFilter) cmbTickFilter.SelectedItem;
+                
+                m_TimedBarsRequest.Continuation = (CQG.eTimeSeriesContinuationType) cmbContinuationType.SelectedItem;
+                m_TimedBarsRequest.EqualizeCloses = chkEqualizeCloses.Checked;
+                m_TimedBarsRequest.DaysBeforeExpiration = System.Convert.ToInt32(nudDaysBeforeExpiration.Value);
+                
+                m_TimedBarsRequest.UpdatesEnabled = chkUpdatesEnabled.Checked;
+                m_TimedBarsRequest.IgnoreEventsOnHistoricalBars = chkNoHistorical.Checked;
+                
+                if (chkSessionsCustomFilter.Checked)
+                {
+                    m_TimedBarsRequest.SessionsFilter = txtSessionsFilter.Text;
+                }
+                else
+                {
+                    m_TimedBarsRequest.SessionsFilter = System.Convert.ToInt32(nudSessionsFilter.Value);
+                }
+                
+                if (chkSFDailyFromIntraday.Checked)
+                {
+                    m_TimedBarsRequest.SessionFlags = CQG.eSessionFlag.sfDailyFromIntraday;
+                }
+                else
+                {
+                    m_TimedBarsRequest.SessionFlags = CQG.eSessionFlag.sfUndefined;
+                }
+                
                 m_TimedBarsRequest.ExcludeAllOutputs();
                 foreach (CQG.eTimedBarsRequestOutputs selectedOutput in chlstOutputs.CheckedItems)
                 {
                     m_TimedBarsRequest.IncludeOutput(selectedOutput, true);
                 }
-				
-				this.DialogResult = DialogResult.OK;
-				this.Close();
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "btnOK_Click", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Occurs when the cancel button is clicked. Closes the request form.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void btnCancel_Click(System.Object sender, System.EventArgs e)
-		{
-			this.Close();
-		}
-		
-		/// <summary>
-		/// Initializes the form.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void frmRequest_Load(System.Object sender, System.EventArgs e)
-		{
-			try
-			{
-				InitContinuationType();
-				InitHistoricalPeriod();
-				InitTickFilter();
+                
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "btnOK_Click", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Occurs when the cancel button is clicked. Closes the request form.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void btnCancel_Click(System.Object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+        
+        /// <summary>
+        /// Initializes the form.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void frmRequest_Load(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                InitContinuationType();
+                InitHistoricalPeriod();
+                InitTickFilter();
             InitTBRequestOutputs();
-				
-				// Sets default values in the form
-				nudIntradayPeriod.Value = m_TimedBarsRequest.IntradayPeriod;
-				cmbHistoricalPeriod.SelectedItem = m_TimedBarsRequest.HistoricalPeriod;
-				cmbTickFilter.SelectedItem = m_TimedBarsRequest.TickFilter;
-				chkUpdatesEnabled.Checked = m_TimedBarsRequest.UpdatesEnabled;
-				chkNoHistorical.Checked = m_TimedBarsRequest.IgnoreEventsOnHistoricalBars;
+                
+                // Sets default values in the form
+                nudIntradayPeriod.Value = m_TimedBarsRequest.IntradayPeriod;
+                cmbHistoricalPeriod.SelectedItem = m_TimedBarsRequest.HistoricalPeriod;
+                cmbTickFilter.SelectedItem = m_TimedBarsRequest.TickFilter;
+                chkUpdatesEnabled.Checked = m_TimedBarsRequest.UpdatesEnabled;
+                chkNoHistorical.Checked = m_TimedBarsRequest.IgnoreEventsOnHistoricalBars;
             chkNoHistorical.Enabled = chkUpdatesEnabled.Checked;
-				chkIncludeEnd.Checked = m_TimedBarsRequest.IncludeEnd;
-				nudSessionsFilter.Text = m_TimedBarsRequest.SessionsFilter.ToString();
-				cmbContinuationType.SelectedItem = m_TimedBarsRequest.Continuation;
-				chkEqualizeCloses.Checked = m_TimedBarsRequest.EqualizeCloses;
-				nudDaysBeforeExpiration.Value = System.Convert.ToInt32(m_TimedBarsRequest.DaysBeforeExpiration);
-				chkSFDailyFromIntraday.Checked = (m_TimedBarsRequest.SessionFlags & CQG.eSessionFlag.sfDailyFromIntraday) == CQG.eSessionFlag.sfDailyFromIntraday;
-				
-				RequestTypeChanged();
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "frmRequest_Load", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Sets the new request reference
-		/// </summary>
-		/// <returns>
-		/// New reference of CQGTimedBarsRequest
-		/// </returns>
-		[property:System.CLSCompliant(false)]		public CQG.CQGTimedBarsRequest TimedBarsRequest
-		{
-			set
-			{
-				m_TimedBarsRequest = value;
-			}
-		}
-		
-		/// <summary>
-		/// Sets the new time
-		/// </summary>
-		/// <returns>
-		/// New time value
-		/// </returns>
-		public DateTime LineTime
-		{
-			set
-			{
-				m_LineTime = value;
-			}
-		}
-		
-		/// <summary>
-		/// Changes NUD to textbox if CustomSession is checked.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void chkSessionsCustomFilter_CheckedChanged(System.Object sender, System.EventArgs e)
-		{
-			try
-			{
-				txtSessionsFilter.Visible = chkSessionsCustomFilter.Checked;
-				nudSessionsFilter.Visible = ! chkSessionsCustomFilter.Checked;
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "chkSessionsCustomFilter_CheckedChanged", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Calls RequestTypeChanged sub to change the request type and control enablements
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void RequestType_CheckedChanged(System.Object sender, System.EventArgs e)
-		{
-			try
-			{
-				RequestTypeChanged();
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "RequestType_CheckedChanged", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Initializes combobox of Continuation Types.
-		/// </summary>
-		private void InitContinuationType()
-		{
-			try
-			{
-				cmbContinuationType.Items.Clear();
-				
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctNoContinuation);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctStandard);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctStandardByMonth);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctActive);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctActiveByMonth);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctAdjusted);
-				cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctAdjustedByMonth);
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitContinuationType", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Initializes combobox of Historical Periods.
-		/// </summary>
-		private void InitHistoricalPeriod()
-		{
-			try
-			{
-				cmbHistoricalPeriod.Items.Clear();
-				
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpUndefined);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpDaily);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpWeekly);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpMonthly);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpQuarterly);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpSemiannual);
-				cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpYearly);
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitHistoricalPeriod", ex);
-			}
-		}
+                chkIncludeEnd.Checked = m_TimedBarsRequest.IncludeEnd;
+                nudSessionsFilter.Text = m_TimedBarsRequest.SessionsFilter.ToString();
+                cmbContinuationType.SelectedItem = m_TimedBarsRequest.Continuation;
+                chkEqualizeCloses.Checked = m_TimedBarsRequest.EqualizeCloses;
+                nudDaysBeforeExpiration.Value = System.Convert.ToInt32(m_TimedBarsRequest.DaysBeforeExpiration);
+                chkSFDailyFromIntraday.Checked = (m_TimedBarsRequest.SessionFlags & CQG.eSessionFlag.sfDailyFromIntraday) == CQG.eSessionFlag.sfDailyFromIntraday;
+                
+                RequestTypeChanged();
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "frmRequest_Load", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Sets the new request reference
+        /// </summary>
+        /// <returns>
+        /// New reference of CQGTimedBarsRequest
+        /// </returns>
+        public CQG.CQGTimedBarsRequest TimedBarsRequest
+        {
+            set
+            {
+                m_TimedBarsRequest = value;
+            }
+        }
+        
+        /// <summary>
+        /// Sets the new time
+        /// </summary>
+        /// <returns>
+        /// New time value
+        /// </returns>
+        public DateTime LineTime
+        {
+            set
+            {
+                m_LineTime = value;
+            }
+        }
+        
+        /// <summary>
+        /// Changes NUD to textbox if CustomSession is checked.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void chkSessionsCustomFilter_CheckedChanged(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                txtSessionsFilter.Visible = chkSessionsCustomFilter.Checked;
+                nudSessionsFilter.Visible = ! chkSessionsCustomFilter.Checked;
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "chkSessionsCustomFilter_CheckedChanged", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Calls RequestTypeChanged sub to change the request type and control enablements
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void RequestType_CheckedChanged(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                RequestTypeChanged();
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "RequestType_CheckedChanged", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Initializes combobox of Continuation Types.
+        /// </summary>
+        private void InitContinuationType()
+        {
+            try
+            {
+                cmbContinuationType.Items.Clear();
+                
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctNoContinuation);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctStandard);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctStandardByMonth);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctActive);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctActiveByMonth);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctAdjusted);
+                cmbContinuationType.Items.Add(CQG.eTimeSeriesContinuationType.tsctAdjustedByMonth);
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitContinuationType", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Initializes combobox of Historical Periods.
+        /// </summary>
+        private void InitHistoricalPeriod()
+        {
+            try
+            {
+                cmbHistoricalPeriod.Items.Clear();
+                
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpUndefined);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpDaily);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpWeekly);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpMonthly);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpQuarterly);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpSemiannual);
+                cmbHistoricalPeriod.Items.Add(CQG.eHistoricalPeriod.hpYearly);
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitHistoricalPeriod", ex);
+            }
+        }
 
-		/// <summary>
-		/// Initializes combobox of Tick Filter.
-		/// </summary>
-		private void InitTickFilter()
-		{
-			try
-			{
-				cmbTickFilter.Items.Clear();
+        /// <summary>
+        /// Initializes combobox of Tick Filter.
+        /// </summary>
+        private void InitTickFilter()
+        {
+            try
+            {
+                cmbTickFilter.Items.Clear();
 
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfAll);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfAsk);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfAskLow);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfBid);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfBidHigh);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfDefault);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfSettlement);
-				cmbTickFilter.Items.Add(CQG.eTickFilter.tfTrade);
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitTickFilter", ex);
-			}
-		}
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfAll);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfAsk);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfAskLow);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfBid);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfBidHigh);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfDefault);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfSettlement);
+                cmbTickFilter.Items.Add(CQG.eTickFilter.tfTrade);
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitTickFilter", ex);
+            }
+        }
 
         /// <summary>
         /// Initializes checked list box of timed bars request outputs
@@ -940,150 +936,150 @@ namespace TimedBars
             }
             catch (Exception ex)
             {
-            	modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitTBRequestOutputs", ex);
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "InitTBRequestOutputs", ex);
             }
         }
-		
-		/// <summary>
-		/// Enables NUD for Intraday Period, if hpUndefined is selected.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void cmbHistoricalPeriod_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-		{
-			try
-			{
-				nudIntradayPeriod.Enabled = ((CQG.eHistoricalPeriod) cmbHistoricalPeriod.SelectedItem) == CQG.eHistoricalPeriod.hpUndefined;
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "cmbHistoricalPeriod_SelectedIndexChanged", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Changes Continuation Type related contols' enablements, depending from selected Continuation Type.
-		/// </summary>
-		/// <param name="sender">
-		/// The source of the event.
-		/// </param>
-		/// <param name="e">
-		/// An EventArgs that contains the event data.
-		/// </param>
-		private void cmbContinuationType_SelectedIndexChanged(System.Object sender, System.EventArgs e)
-		{
-			try
-			{
-				switch ((CQG.eTimeSeriesContinuationType) cmbContinuationType.SelectedItem)
-				{
-					case CQG.eTimeSeriesContinuationType.tsctNoContinuation:
-						chkEqualizeCloses.Enabled = false;
-						nudDaysBeforeExpiration.Enabled = false;
-						break;
-						
-					case CQG.eTimeSeriesContinuationType.tsctStandard:
-						chkEqualizeCloses.Enabled = false;
-						nudDaysBeforeExpiration.Enabled = false;
-						break;
-						
-					case CQG.eTimeSeriesContinuationType.tsctStandardByMonth:
-						
-						chkEqualizeCloses.Enabled = false;
-						nudDaysBeforeExpiration.Enabled = false;
-						break;
-					case CQG.eTimeSeriesContinuationType.tsctActive:
-						chkEqualizeCloses.Enabled = true;
-						nudDaysBeforeExpiration.Enabled = false;
-						break;
-						
-					case CQG.eTimeSeriesContinuationType.tsctActiveByMonth:
-						
-						chkEqualizeCloses.Enabled = true;
-						nudDaysBeforeExpiration.Enabled = false;
-						break;
-					default:
-						
-						chkEqualizeCloses.Enabled = true;
-						nudDaysBeforeExpiration.Enabled = true;
-						break;
-				}
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "cmbContinuationType_SelectedIndexChanged", ex);
-			}
-		}
-		
-		/// <summary>
-		/// Changes the request type and control enablements
-		/// </summary>
-		private void RequestTypeChanged()
-		{
-			try
-			{
-				if (optIntInt.Checked)
-				{
-					dtpStartRange.Visible = false;
-					dtpEndRange.Visible = false;
-					
-					nudStartRange.Visible = true;
-					nudEndRange.Visible = true;
-					
-					nudStartRange.Value = DEF_RANGE_START;
-					nudEndRange.Value = DEF_RANGE_END;
-					
-					nudStartRange.Enabled = false;
-					chkIncludeEnd.Enabled = false;
-				}
-				else if (optDateInt.Checked)
-				{
-					dtpStartRange.Visible = true;
-					dtpEndRange.Visible = false;
-					
-					nudStartRange.Visible = false;
-					nudEndRange.Visible = true;
-					
-					dtpStartRange.Value = m_LineTime.AddDays(-1);
-					nudEndRange.Value = DEF_RANGE_END;
-					
-					dtpStartRange.Enabled = true;
-					chkIncludeEnd.Enabled = false;
-				}
-				else if (optDateDate.Checked)
-				{
-					dtpStartRange.Visible = true;
-					dtpEndRange.Visible = true;
-					
-					nudStartRange.Visible = false;
-					nudEndRange.Visible = false;
-					
-					dtpStartRange.Value = m_LineTime.AddDays(-1);
-					dtpEndRange.Value = m_LineTime;
-					
-					dtpStartRange.Enabled = true;
-					chkIncludeEnd.Enabled = true;
-				}
-			}
-			catch (Exception ex)
-			{
-				modErrorHandler.ShowError("frmTimedBarsRequestSettings", "RequestTypeChanged", ex);
-			}
-		}
+        
+        /// <summary>
+        /// Enables NUD for Intraday Period, if hpUndefined is selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void cmbHistoricalPeriod_SelectedIndexChanged(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                nudIntradayPeriod.Enabled = ((CQG.eHistoricalPeriod) cmbHistoricalPeriod.SelectedItem) == CQG.eHistoricalPeriod.hpUndefined;
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "cmbHistoricalPeriod_SelectedIndexChanged", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Changes Continuation Type related contols' enablements, depending from selected Continuation Type.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event.
+        /// </param>
+        /// <param name="e">
+        /// An EventArgs that contains the event data.
+        /// </param>
+        private void cmbContinuationType_SelectedIndexChanged(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                switch ((CQG.eTimeSeriesContinuationType) cmbContinuationType.SelectedItem)
+                {
+                    case CQG.eTimeSeriesContinuationType.tsctNoContinuation:
+                        chkEqualizeCloses.Enabled = false;
+                        nudDaysBeforeExpiration.Enabled = false;
+                        break;
+                        
+                    case CQG.eTimeSeriesContinuationType.tsctStandard:
+                        chkEqualizeCloses.Enabled = false;
+                        nudDaysBeforeExpiration.Enabled = false;
+                        break;
+                        
+                    case CQG.eTimeSeriesContinuationType.tsctStandardByMonth:
+                        
+                        chkEqualizeCloses.Enabled = false;
+                        nudDaysBeforeExpiration.Enabled = false;
+                        break;
+                    case CQG.eTimeSeriesContinuationType.tsctActive:
+                        chkEqualizeCloses.Enabled = true;
+                        nudDaysBeforeExpiration.Enabled = false;
+                        break;
+                        
+                    case CQG.eTimeSeriesContinuationType.tsctActiveByMonth:
+                        
+                        chkEqualizeCloses.Enabled = true;
+                        nudDaysBeforeExpiration.Enabled = false;
+                        break;
+                    default:
+                        
+                        chkEqualizeCloses.Enabled = true;
+                        nudDaysBeforeExpiration.Enabled = true;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "cmbContinuationType_SelectedIndexChanged", ex);
+            }
+        }
+        
+        /// <summary>
+        /// Changes the request type and control enablements
+        /// </summary>
+        private void RequestTypeChanged()
+        {
+            try
+            {
+                if (optIntInt.Checked)
+                {
+                    dtpStartRange.Visible = false;
+                    dtpEndRange.Visible = false;
+                    
+                    nudStartRange.Visible = true;
+                    nudEndRange.Visible = true;
+                    
+                    nudStartRange.Value = DEF_RANGE_START;
+                    nudEndRange.Value = DEF_RANGE_END;
+                    
+                    nudStartRange.Enabled = false;
+                    chkIncludeEnd.Enabled = false;
+                }
+                else if (optDateInt.Checked)
+                {
+                    dtpStartRange.Visible = true;
+                    dtpEndRange.Visible = false;
+                    
+                    nudStartRange.Visible = false;
+                    nudEndRange.Visible = true;
+                    
+                    dtpStartRange.Value = m_LineTime.AddDays(-1);
+                    nudEndRange.Value = DEF_RANGE_END;
+                    
+                    dtpStartRange.Enabled = true;
+                    chkIncludeEnd.Enabled = false;
+                }
+                else if (optDateDate.Checked)
+                {
+                    dtpStartRange.Visible = true;
+                    dtpEndRange.Visible = true;
+                    
+                    nudStartRange.Visible = false;
+                    nudEndRange.Visible = false;
+                    
+                    dtpStartRange.Value = m_LineTime.AddDays(-1);
+                    dtpEndRange.Value = m_LineTime;
+                    
+                    dtpStartRange.Enabled = true;
+                    chkIncludeEnd.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                modErrorHandler.ShowError("frmTimedBarsRequestSettings", "RequestTypeChanged", ex);
+            }
+        }
 
-		private void Label7_Click(object sender, System.EventArgs e)
-		{
-		
-		}
+        private void Label7_Click(object sender, System.EventArgs e)
+        {
+        
+        }
 
       private void chkUpdatesEnabled_CheckedChanged(object sender, System.EventArgs e)
       {
          chkNoHistorical.Enabled = chkUpdatesEnabled.Checked;
       }
-		
-	}
-	
+        
+    }
+    
 }
