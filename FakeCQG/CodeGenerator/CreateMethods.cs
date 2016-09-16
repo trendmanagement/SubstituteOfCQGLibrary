@@ -80,23 +80,66 @@ namespace CodeGenerator
                 }
 
                 File.Write(Indent2 + "string name = \"" + minfo.Name + "\";" + Environment.NewLine + Indent2);
-                if (minfo.ReturnType != typeof(void))
+                if (minfo.ReturnType.Assembly.FullName.Substring(0, 8) == "mscorlib" || minfo.ReturnType.IsEnum)
                 {
-                    File.Write("var result = (" + TypeToString(minfo.ReturnType) + ")");
-                }
-                if (minfo.GetParameters().Length != 0)
-                {
-                    File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);");
+                    if (minfo.ReturnType != typeof(void))
+                    {
+                        File.Write("var result = (" + TypeToString(minfo.ReturnType) + ")");
+                    }
+                    else
+                    {
+                        File.Write("bool result = (bool)");
+                    }
+
+                    if (minfo.GetParameters().Length != 0)
+                    {
+                        File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);");
+                    }
+                    else
+                    {
+                        File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);");
+                    }
+
+                    if (minfo.ReturnType != typeof(void))
+                    {
+                        File.WriteLine(Indent2 + "return result;");
+                    }
                 }
                 else
                 {
-                    File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);");
+                    if (minfo.ReturnType != typeof(void))
+                    {
+                        File.Write("string resultKey = (string)");
+                    }
+                    else
+                    {
+                        File.Write("bool resultKey = (bool)");
+                    }
+
+                    if (minfo.GetParameters().Length != 0)
+                    {
+                        File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);");
+                    }
+                    else
+                    {
+                        File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);");
+                    }
+
+                    if (minfo.ReturnType.IsInterface)
+                    {
+                        File.WriteLine(Indent2 + TypeToString(minfo.ReturnType) + "Class result = new " +
+                        TypeToString(minfo.ReturnType) + "Class();");
+                    }
+                    else
+                    {
+                        File.WriteLine(Indent2 + TypeToString(minfo.ReturnType) + " result = new " +
+                            TypeToString(minfo.ReturnType) + "();");
+                    }
+                    File.WriteLine(Indent2 + "object resultFlld = result;");
+                    File.WriteLine(Indent2 + "CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);");
+                    File.WriteLine(Indent2 + "return (" + TypeToString(minfo.ReturnType) + ")resultFlld;");
                 }
-                    
-                if (minfo.ReturnType != typeof(void))
-                {
-                    File.WriteLine(Indent2 + "return result;");
-                }
+                
                 MemberEnd();
             }
             else
