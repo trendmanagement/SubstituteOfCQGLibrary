@@ -89,7 +89,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CQGLibrary\CQGLibrary.csproj">
+    <ProjectReference Include="..\..\FakeCQG\CQGLibrary\CQGLibrary.csproj">
       <Project>{282d7bb6-5cc3-44ef-9c47-8edd337462ea}</Project>
       <Name>CQGLibrary</Name>
     </ProjectReference>
