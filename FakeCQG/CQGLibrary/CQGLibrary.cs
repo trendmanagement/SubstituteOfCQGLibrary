@@ -10302,258 +10302,258 @@ namespace FakeCQG
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AccountChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyAdded(CQGAdvancedStudy arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "AdvancedStudyAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyDefinitionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyResolved(CQGAdvancedStudy arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AdvancedStudyUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AlgorithmicOrderPlaced(String arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AlgorithmicOrderPlaced";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AlgorithmicOrderRegistrationComplete(String arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AlgorithmicOrderRegistrationComplete";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AllOrdersCanceled(eOrderSideFilter arg1, CQGIntegerCollection arg2, CQGStringCollection arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "AllOrdersCanceled";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void AuthenticationStatusChanged(eSessionStatus arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "AuthenticationStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void BarsTimestampsResolved(CQGBarsTimestamps arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "BarsTimestampsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CELStarted()
         {
             string name = "CELStarted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionAdded(CQGCondition arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "ConditionAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionDefinitionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionInserted(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionRemoved(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionResolved(CQGCondition arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConditionUpdated(CQGCondition arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConditionUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "ConstantVolumeBarsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ConstantVolumeBarsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "CurrencyRatesChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomSessionsResolved(CQGSessionsCollection arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomSessionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyAdded(CQGCustomStudy arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "CustomStudyAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyDefinitionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyInserted(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyRemoved(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyResolved(CQGCustomStudy arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CustomStudyUpdated(CQGCustomStudy arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "CustomStudyUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "DataConnectionStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataError(Object arg1, String arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataSourcesResolved(CQGDataSources arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "DataSourcesResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataSourceSymbolsResolved(String arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "DataSourceSymbolsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new Boolean Equals(Object obj)
@@ -10568,35 +10568,35 @@ namespace FakeCQG
         {
             object[] args = new object[1] {arg1};
             string name = "ExpressionAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ExpressionInserted(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ExpressionRemoved(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ExpressionResolved(CQGExpression arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ExpressionUpdated(CQGExpression arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ExpressionUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new Int32 GetHashCode()
@@ -10617,314 +10617,314 @@ namespace FakeCQG
         {
             object[] args = new object[1] {arg1};
             string name = "GWConnectionStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, Int32 arg2, Int32 arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "GWEnvironmentChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void HistoricalSessionsResolved(CQGSessionsCollection arg1, CQGHistoricalSessionsRequest arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "HistoricalSessionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ICConnectionStatusChanged(eICConnectionStatus arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "ICConnectionStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void IncorrectSymbol(String arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentDOMChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentsGroupChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentsGroupResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "IsReady";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void LineTimeChanged(DateTime arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "LineTimeChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ManualFillChanged(CQGManualFill arg1, eManualFillUpdateType arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ManualFillsResolved(CQGManualFills arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ManualFillUpdateResolved(CQGManualFillRequest arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "ManualFillUpdateResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void OnIdle()
         {
             string name = "OnIdle";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void OnQueryProgress(CQGOrdersQuery arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "OnQueryProgress";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void OrderChanged(eChangeType arg1, CQGOrder arg2, CQGOrderProperties arg3, CQGFill arg4, CQGError arg5)
         {
             object[] args = new object[5] {arg1, arg2, arg3, arg4, arg5};
             string name = "OrderChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PasswordChanged(eSessionStatus arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PasswordChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "PointAndFigureBarsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PointAndFigureBarsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PositionsStatementResolved(CQGPositionsStatement arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "PositionsStatementResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "QFormulaDefinitionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void StrategyDefinitionProgress(CQGStrategyDefinition arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "StrategyDefinitionProgress";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SubMinuteBarsAdded(CQGSubMinuteBars arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "SubMinuteBarsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SubMinuteBarsResolved(CQGSubMinuteBars arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SubMinuteBarsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void SummariesStatementResolved(CQGSummariesStatement arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "SummariesStatementResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TFlowBarsAdded(CQGTFlowBars arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "TFlowBarsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TFlowBarsInserted(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TFlowBarsResolved(CQGTFlowBars arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TFlowBarsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TicksAdded(CQGTicks arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TicksAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TicksResolved(CQGTicks arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TicksResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TimedBarsAdded(CQGTimedBars arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "TimedBarsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TimedBarsInserted(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TimedBarsRemoved(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TimedBarsResolved(CQGTimedBars arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TimedBarsUpdated(CQGTimedBars arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TimedBarsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -10938,98 +10938,98 @@ namespace FakeCQG
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableCommoditiesResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradableExchangesResolved(Int32 arg1, CQGExchanges arg2, CQGError arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "TradableExchangesResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemAddNotification(CQGTradingSystem arg1, CQGTradingSystemAddInfo arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemAddNotification";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemDefinitionsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemInsertNotification(CQGTradingSystem arg1, CQGTradingSystemInsertInfo arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemInsertNotification";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemRemoveNotification(CQGTradingSystem arg1, CQGTradingSystemRemoveInfo arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemRemoveNotification";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemResolved(CQGTradingSystem arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem arg1, CQGTradingSystemRelationAddInfo arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemTradeRelationAddNotification";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TradingSystemUpdateNotification(CQGTradingSystem arg1, CQGTradingSystemUpdateInfo arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "TradingSystemUpdateNotification";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void YieldsAdded(CQGYields arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "YieldsAdded";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void YieldsInserted(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsInserted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void YieldsRemoved(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsRemoved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void YieldsResolved(CQGYields arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void YieldsUpdated(CQGYields arg1, Int32 arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "YieldsUpdated";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         #endregion
@@ -11060,28 +11060,28 @@ namespace FakeCQG
         public virtual void CELStarted()
         {
             string name = "CELStarted";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "CurrencyRatesChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "DataConnectionStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void DataError(Object arg1, String arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "DataError";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new Boolean Equals(Object obj)
@@ -11110,27 +11110,27 @@ namespace FakeCQG
         {
             object[] args = new object[1] {arg1};
             string name = "GWConnectionStatusChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "IsReady";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void LineTimeChanged(DateTime arg1)
         {
             object[] args = new object[1] {arg1};
             string name = "LineTimeChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void OnIdle()
         {
             string name = "OnIdle";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public new String ToString()
@@ -11169,7 +11169,7 @@ namespace FakeCQG
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "CommodityInstrumentsResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new Boolean Equals(Object obj)
@@ -11198,42 +11198,42 @@ namespace FakeCQG
         {
             object[] args = new object[1] {arg1};
             string name = "IncorrectSymbol";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentDOMChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             object[] args = new object[3] {arg1, arg2, arg3};
             string name = "InstrumentsGroupChanged";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentsGroupResolved";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             object[] args = new object[2] {arg1, arg2};
             string name = "InstrumentSubscribed";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -11291,7 +11291,9 @@ namespace FakeCQG
                 string name = "AuthorizedTraders";
                 string AuthorizedTradersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStringCollectionClass prop = new CQGStringCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStringCollection)propFlld;
             }
 
         }
@@ -11319,7 +11321,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -11331,7 +11335,9 @@ namespace FakeCQG
                 string name = "CurrencySummaries";
                 string CurrencySummariesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountSummariesClass prop = new CQGAccountSummariesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccountSummaries)propFlld;
             }
 
         }
@@ -11420,7 +11426,9 @@ namespace FakeCQG
                 string name = "InternalOrders";
                 string InternalOrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -11432,7 +11440,9 @@ namespace FakeCQG
                 string name = "Orders";
                 string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -11444,7 +11454,9 @@ namespace FakeCQG
                 string name = "Positions";
                 string PositionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPositionsClass prop = new CQGPositionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPositions)propFlld;
             }
 
         }
@@ -11494,7 +11506,9 @@ namespace FakeCQG
                 string name = "Summary";
                 string SummaryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccountSummary)propFlld;
             }
 
         }
@@ -11629,7 +11643,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
         }
@@ -11641,7 +11657,9 @@ namespace FakeCQG
                 string name = "ItemByFCM";
                 string ItemByFCMKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
         }
@@ -11653,7 +11671,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {cqg_account};
             string name = "Add";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -11676,16 +11694,22 @@ namespace FakeCQG
         {
             object[] args = new object[2] {fcm_account_id, fcm_id};
             string name = "get_ItemByFCM";
-            var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAccountClass result = new CQGAccountClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAccount)resultFlld;
         }
 
         public virtual CQGAccount get_ItemByIndex(Int32 index_)
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGAccount)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAccountClass result = new CQGAccountClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAccount)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -11773,7 +11797,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccountSummary)propFlld;
             }
 
         }
@@ -11871,7 +11897,9 @@ namespace FakeCQG
                 string name = "Account";
                 string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
         }
@@ -12075,7 +12103,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyClass prop = new CQGAdvancedStudyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudy)propFlld;
             }
 
         }
@@ -12087,7 +12117,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyClass prop = new CQGAdvancedStudyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudy)propFlld;
             }
 
         }
@@ -12115,8 +12147,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGAdvancedStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAdvancedStudyClass result = new CQGAdvancedStudyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAdvancedStudy)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -12204,7 +12239,9 @@ namespace FakeCQG
                 string name = "CurveHeaders";
                 string CurveHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveHeadersClass prop = new CQGCurveHeadersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveHeaders)propFlld;
             }
 
         }
@@ -12216,7 +12253,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudyDefinition)propFlld;
             }
 
         }
@@ -12250,7 +12289,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurvesClass prop = new CQGCurvesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurves)propFlld;
             }
 
         }
@@ -12262,7 +12303,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -12274,7 +12317,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyRequestClass prop = new CQGAdvancedStudyRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudyRequest)propFlld;
             }
 
         }
@@ -12391,7 +12436,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -12444,7 +12489,9 @@ namespace FakeCQG
                 string name = "CurveDefinitions";
                 string CurveDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveDefinitionsClass prop = new CQGCurveDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveDefinitions)propFlld;
             }
 
         }
@@ -12467,7 +12514,9 @@ namespace FakeCQG
                 string name = "ParameterDefinitions";
                 string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinitions)propFlld;
             }
 
         }
@@ -12569,7 +12618,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudyDefinition)propFlld;
             }
 
         }
@@ -12581,7 +12632,9 @@ namespace FakeCQG
                 string name = "ItemByAbbreviation";
                 string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudyDefinition)propFlld;
             }
 
         }
@@ -12609,16 +12662,22 @@ namespace FakeCQG
         {
             object[] args = new object[1] {advanced_study_abbreviation};
             string name = "get_ItemByAbbreviation";
-            var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAdvancedStudyDefinitionClass result = new CQGAdvancedStudyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAdvancedStudyDefinition)resultFlld;
         }
 
         public virtual CQGAdvancedStudyDefinition get_ItemByName(String advanced_study_name)
         {
             object[] args = new object[1] {advanced_study_name};
             string name = "get_ItemByName";
-            var result = (CQGAdvancedStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAdvancedStudyDefinitionClass result = new CQGAdvancedStudyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAdvancedStudyDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -12743,7 +12802,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudyDefinitionClass prop = new CQGAdvancedStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudyDefinition)propFlld;
             }
 
         }
@@ -12992,7 +13053,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {curve_key};
             string name = "IncludeCurve";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -13014,7 +13075,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -13136,7 +13197,9 @@ namespace FakeCQG
                 string name = "Values";
                 string ValuesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStringCollectionClass prop = new CQGStringCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStringCollection)propFlld;
             }
 
         }
@@ -13148,7 +13211,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {value_};
             string name = "AddValue";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -13245,7 +13308,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAlgorithmicOrderDefinitionClass prop = new CQGAlgorithmicOrderDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAlgorithmicOrderDefinition)propFlld;
             }
 
         }
@@ -13257,14 +13322,17 @@ namespace FakeCQG
         {
             object[] args = new object[1] {definition_};
             string name = "Add";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGAlgorithmicOrderDefinition CreateDefinition()
         {
             string name = "CreateDefinition";
-            var result = (CQGAlgorithmicOrderDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGAlgorithmicOrderDefinitionClass result = new CQGAlgorithmicOrderDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAlgorithmicOrderDefinition)resultFlld;
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -13623,7 +13691,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAlgorithmicOrderPropertyClass prop = new CQGAlgorithmicOrderPropertyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAlgorithmicOrderProperty)propFlld;
             }
 
         }
@@ -14378,7 +14448,9 @@ namespace FakeCQG
                 string name = "RemoteOpenAPIServers";
                 string RemoteOpenAPIServersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStringCollectionClass prop = new CQGStringCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStringCollection)propFlld;
             }
 
         }
@@ -14486,13 +14558,13 @@ namespace FakeCQG
         {
             object[] args = new object[1] {server_address};
             string name = "AddRemoteOpenAPIServer";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ClearRemoteOpenAPIServers()
         {
             string name = "ClearRemoteOpenAPIServers";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -14611,7 +14683,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -14729,7 +14803,9 @@ namespace FakeCQG
                 string name = "Accounts";
                 string AccountsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountsClass prop = new CQGAccountsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccounts)propFlld;
             }
 
         }
@@ -14757,7 +14833,9 @@ namespace FakeCQG
                 string name = "AllAdvancedStudies";
                 string AllAdvancedStudiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAdvancedStudiesClass prop = new CQGAdvancedStudiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAdvancedStudies)propFlld;
             }
 
         }
@@ -14769,7 +14847,9 @@ namespace FakeCQG
                 string name = "AllConditions";
                 string AllConditionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionsClass prop = new CQGConditionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditions)propFlld;
             }
 
         }
@@ -14781,7 +14861,9 @@ namespace FakeCQG
                 string name = "AllConstantVolumeBars";
                 string AllConstantVolumeBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConstantVolumeBarsCollectionClass prop = new CQGConstantVolumeBarsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConstantVolumeBarsCollection)propFlld;
             }
 
         }
@@ -14793,7 +14875,9 @@ namespace FakeCQG
                 string name = "AllCustomStudies";
                 string AllCustomStudiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudiesClass prop = new CQGCustomStudiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudies)propFlld;
             }
 
         }
@@ -14805,7 +14889,9 @@ namespace FakeCQG
                 string name = "AllExpressions";
                 string AllExpressionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionsClass prop = new CQGExpressionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpressions)propFlld;
             }
 
         }
@@ -14817,7 +14903,9 @@ namespace FakeCQG
                 string name = "AllInstrumentsGroups";
                 string AllInstrumentsGroupsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentsGroupsClass prop = new CQGInstrumentsGroupsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrumentsGroups)propFlld;
             }
 
         }
@@ -14829,7 +14917,9 @@ namespace FakeCQG
                 string name = "AllManualFills";
                 string AllManualFillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGManualFillsCollectionClass prop = new CQGManualFillsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGManualFillsCollection)propFlld;
             }
 
         }
@@ -14841,7 +14931,9 @@ namespace FakeCQG
                 string name = "AllPointAndFigureBars";
                 string AllPointAndFigureBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPointAndFigureBarsCollectionClass prop = new CQGPointAndFigureBarsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPointAndFigureBarsCollection)propFlld;
             }
 
         }
@@ -14853,7 +14945,9 @@ namespace FakeCQG
                 string name = "AllStrategyDefinitions";
                 string AllStrategyDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStrategyDefinitionsClass prop = new CQGStrategyDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStrategyDefinitions)propFlld;
             }
 
         }
@@ -14865,7 +14959,9 @@ namespace FakeCQG
                 string name = "AllSubMinuteBars";
                 string AllSubMinuteBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSubMinuteBarsCollectionClass prop = new CQGSubMinuteBarsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSubMinuteBarsCollection)propFlld;
             }
 
         }
@@ -14877,7 +14973,9 @@ namespace FakeCQG
                 string name = "AllTFlowBars";
                 string AllTFlowBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTFlowBarsCollectionClass prop = new CQGTFlowBarsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTFlowBarsCollection)propFlld;
             }
 
         }
@@ -14889,7 +14987,9 @@ namespace FakeCQG
                 string name = "AllTicks";
                 string AllTicksKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTicksCollectionClass prop = new CQGTicksCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTicksCollection)propFlld;
             }
 
         }
@@ -14901,7 +15001,9 @@ namespace FakeCQG
                 string name = "AllTimedBars";
                 string AllTimedBarsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTimedBarsCollectionClass prop = new CQGTimedBarsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTimedBarsCollection)propFlld;
             }
 
         }
@@ -14913,7 +15015,9 @@ namespace FakeCQG
                 string name = "AllTradingSystems";
                 string AllTradingSystemsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemsClass prop = new CQGTradingSystemsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystems)propFlld;
             }
 
         }
@@ -14925,7 +15029,9 @@ namespace FakeCQG
                 string name = "AllYields";
                 string AllYieldsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGYieldsCollectionClass prop = new CQGYieldsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGYieldsCollection)propFlld;
             }
 
         }
@@ -14937,7 +15043,9 @@ namespace FakeCQG
                 string name = "APIConfiguration";
                 string APIConfigurationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAPIConfigClass prop = new CQGAPIConfigClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAPIConfig)propFlld;
             }
 
         }
@@ -14949,7 +15057,9 @@ namespace FakeCQG
                 string name = "Configuration";
                 string ConfigurationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELConfiguration prop = new CQGCELConfiguration();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCELConfiguration)propFlld;
             }
 
             set
@@ -14966,7 +15076,9 @@ namespace FakeCQG
                 string name = "CurrencyRates";
                 string CurrencyRatesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurrencyRatesClass prop = new CQGCurrencyRatesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurrencyRates)propFlld;
             }
 
         }
@@ -14978,7 +15090,9 @@ namespace FakeCQG
                 string name = "DirectEventsAccessor";
                 string DirectEventsAccessorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDirectEventsAccessorClass prop = new CQGDirectEventsAccessorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDirectEventsAccessor)propFlld;
             }
 
         }
@@ -14990,7 +15104,9 @@ namespace FakeCQG
                 string name = "Environment";
                 string EnvironmentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGEnvironmentClass prop = new CQGEnvironmentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGEnvironment)propFlld;
             }
 
         }
@@ -15002,7 +15118,9 @@ namespace FakeCQG
                 string name = "Instruments";
                 string InstrumentsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentsClass prop = new CQGInstrumentsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstruments)propFlld;
             }
 
         }
@@ -15014,7 +15132,9 @@ namespace FakeCQG
                 string name = "InternalOrders";
                 string InternalOrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -15037,7 +15157,9 @@ namespace FakeCQG
                 string name = "Logger";
                 string LoggerKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGLoggerClass prop = new CQGLoggerClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGLogger)propFlld;
             }
 
         }
@@ -15049,7 +15171,9 @@ namespace FakeCQG
                 string name = "Orders";
                 string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -15277,131 +15401,167 @@ namespace FakeCQG
         {
             object[] args = new object[4] {cqg_account, cqg_instrument, from_all_traders, order_side};
             string name = "ActivateAllOrders";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ActivateAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             object[] args = new object[1] {cqg_order_action_request};
             string name = "ActivateAllOrdersEx";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             object[] args = new object[5] {cqg_account, cqg_instrument, from_all_traders, parked_, order_side};
             string name = "CancelAllOrders";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void CancelAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             object[] args = new object[1] {cqg_order_action_request};
             string name = "CancelAllOrdersEx";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ChangePassword(String username_, String old_password, String new_password)
         {
             object[] args = new object[3] {username_, old_password, new_password};
             string name = "ChangePassword";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ChangeRemoteOpenAPIServer(String server_address)
         {
             object[] args = new object[1] {server_address};
             string name = "ChangeRemoteOpenAPIServer";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGAccounts CreateAccountsCollection()
         {
             string name = "CreateAccountsCollection";
-            var result = (CQGAccounts)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGAccountsClass result = new CQGAccountsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAccounts)resultFlld;
         }
 
         public virtual CQGAdvancedStudyRequest CreateAdvancedStudyRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateAdvancedStudyRequest";
-            var result = (CQGAdvancedStudyRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAdvancedStudyRequestClass result = new CQGAdvancedStudyRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAdvancedStudyRequest)resultFlld;
         }
 
         public virtual CQGAlgorithmicOrderDefinitions CreateAlgorithmicOrderDefinitions()
         {
             string name = "CreateAlgorithmicOrderDefinitions";
-            var result = (CQGAlgorithmicOrderDefinitions)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGAlgorithmicOrderDefinitionsClass result = new CQGAlgorithmicOrderDefinitionsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAlgorithmicOrderDefinitions)resultFlld;
         }
 
         public virtual CQGConditionRequest CreateConditionRequest(String condition_name)
         {
             object[] args = new object[1] {condition_name};
             string name = "CreateConditionRequest";
-            var result = (CQGConditionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConditionRequestClass result = new CQGConditionRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGConditionRequest)resultFlld;
         }
 
         public virtual CQGConstantVolumeBarsRequest CreateConstantVolumeBarsRequest()
         {
             string name = "CreateConstantVolumeBarsRequest";
-            var result = (CQGConstantVolumeBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGConstantVolumeBarsRequestClass result = new CQGConstantVolumeBarsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGConstantVolumeBarsRequest)resultFlld;
         }
 
         public virtual CQGCustomStudyRequest CreateCustomStudyRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateCustomStudyRequest";
-            var result = (CQGCustomStudyRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCustomStudyRequestClass result = new CQGCustomStudyRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCustomStudyRequest)resultFlld;
         }
 
         public virtual CQGExecutionPattern CreateExecutionPattern(CQGStrategyDefinition cqg_definition = null, eOrderType order_type = eOrderType.otUndefined)
         {
             object[] args = new object[2] {cqg_definition, order_type};
             string name = "CreateExecutionPattern";
-            var result = (CQGExecutionPattern)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGExecutionPatternClass result = new CQGExecutionPatternClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGExecutionPattern)resultFlld;
         }
 
         public virtual CQGExpressionRequest CreateExpressionRequest()
         {
             string name = "CreateExpressionRequest";
-            var result = (CQGExpressionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGExpressionRequestClass result = new CQGExpressionRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGExpressionRequest)resultFlld;
         }
 
         public virtual CQGHistoricalSessionsRequest CreateHistoricalSessionsRequest()
         {
             string name = "CreateHistoricalSessionsRequest";
-            var result = (CQGHistoricalSessionsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGHistoricalSessionsRequestClass result = new CQGHistoricalSessionsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGHistoricalSessionsRequest)resultFlld;
         }
 
         public virtual CQGInstrumentSubscriptionRequest CreateInstrumentRequest()
         {
             string name = "CreateInstrumentRequest";
-            var result = (CQGInstrumentSubscriptionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGInstrumentSubscriptionRequestClass result = new CQGInstrumentSubscriptionRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGInstrumentSubscriptionRequest)resultFlld;
         }
 
         public virtual CQGInstrumentsGroupRequest CreateInstrumentsGroupRequest()
         {
             string name = "CreateInstrumentsGroupRequest";
-            var result = (CQGInstrumentsGroupRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGInstrumentsGroupRequestClass result = new CQGInstrumentsGroupRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGInstrumentsGroupRequest)resultFlld;
         }
 
         public virtual CQGManualFillRequest CreateManualFillRequest(eManualFillUpdateType update_type, CQGManualFill manual_fill = null)
         {
             object[] args = new object[2] {update_type, manual_fill};
             string name = "CreateManualFillRequest";
-            var result = (CQGManualFillRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGManualFillRequestClass result = new CQGManualFillRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGManualFillRequest)resultFlld;
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -15416,104 +15576,146 @@ namespace FakeCQG
         {
             object[] args = new object[8] {order_type, cqg_instrument, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateOrder";
-            var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrderClass result = new CQGOrderClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrder)resultFlld;
         }
 
         public virtual CQGOrderActionRequest CreateOrderActionRequest()
         {
             string name = "CreateOrderActionRequest";
-            var result = (CQGOrderActionRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGOrderActionRequestClass result = new CQGOrderActionRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrderActionRequest)resultFlld;
         }
 
         public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, String instrument_name, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "")
         {
             object[] args = new object[8] {order_type, instrument_name, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateOrderByInstrumentName";
-            var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrderClass result = new CQGOrderClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrder)resultFlld;
         }
 
         public virtual CQGOrderChain CreateOrderChain()
         {
             string name = "CreateOrderChain";
-            var result = (CQGOrderChain)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGOrderChainClass result = new CQGOrderChainClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrderChain)resultFlld;
         }
 
         public virtual CQGPointAndFigureBarsRequest CreatePointAndFigureBarsRequest()
         {
             string name = "CreatePointAndFigureBarsRequest";
-            var result = (CQGPointAndFigureBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGPointAndFigureBarsRequestClass result = new CQGPointAndFigureBarsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGPointAndFigureBarsRequest)resultFlld;
         }
 
         public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             object[] args = new object[9] {order_type, cqg_definition, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateStrategyOrder";
-            var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrderClass result = new CQGOrderClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrder)resultFlld;
         }
 
         public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, String expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             object[] args = new object[9] {order_type, expression_string, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part};
             string name = "CreateStrategyOrderByExpression";
-            var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrderClass result = new CQGOrderClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrder)resultFlld;
         }
 
         public virtual CQGSubMinuteBarsRequest CreateSubMinuteBarsRequest()
         {
             string name = "CreateSubMinuteBarsRequest";
-            var result = (CQGSubMinuteBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGSubMinuteBarsRequestClass result = new CQGSubMinuteBarsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGSubMinuteBarsRequest)resultFlld;
         }
 
         public virtual CQGTFlowBarsRequest CreateTFlowBarsRequest()
         {
             string name = "CreateTFlowBarsRequest";
-            var result = (CQGTFlowBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGTFlowBarsRequestClass result = new CQGTFlowBarsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTFlowBarsRequest)resultFlld;
         }
 
         public virtual CQGTicksRequest CreateTicksRequest()
         {
             string name = "CreateTicksRequest";
-            var result = (CQGTicksRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGTicksRequestClass result = new CQGTicksRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTicksRequest)resultFlld;
         }
 
         public virtual CQGTimedBarsRequest CreateTimedBarsRequest()
         {
             string name = "CreateTimedBarsRequest";
-            var result = (CQGTimedBarsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGTimedBarsRequestClass result = new CQGTimedBarsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTimedBarsRequest)resultFlld;
         }
 
         public virtual CQGTradingSystemRequest CreateTradingSystemRequest(String name_or_abbr)
         {
             object[] args = new object[1] {name_or_abbr};
             string name = "CreateTradingSystemRequest";
-            var result = (CQGTradingSystemRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemRequestClass result = new CQGTradingSystemRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystemRequest)resultFlld;
         }
 
         public virtual CQGYieldsRequest CreateYieldsRequest()
         {
             string name = "CreateYieldsRequest";
-            var result = (CQGYieldsRequest)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGYieldsRequestClass result = new CQGYieldsRequestClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGYieldsRequest)resultFlld;
         }
 
         public virtual CQGStrategyDefinition DefineStrategy(String request_string_)
         {
             object[] args = new object[1] {request_string_};
             string name = "DefineStrategy";
-            var result = (CQGStrategyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGStrategyDefinitionClass result = new CQGStrategyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGStrategyDefinition)resultFlld;
         }
 
         public new Boolean Equals(Object obj)
@@ -15548,21 +15750,21 @@ namespace FakeCQG
         public virtual void GWLogoff()
         {
             string name = "GWLogoff";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void GWLogon(String username_, String password_)
         {
             object[] args = new object[2] {username_, password_};
             string name = "GWLogon";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void GWOTPLogon(String username_, String password_, String otpassword_)
         {
             object[] args = new object[3] {username_, password_, otpassword_};
             string name = "GWOTPLogon";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -15584,461 +15786,503 @@ namespace FakeCQG
         {
             object[] args = new object[2] {username_, password_};
             string name = "LogOn";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain)
         {
             object[] args = new object[3] {compound_order_id, compound_order_guid, order_chain};
             string name = "ModifyCompoundOrder";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void NewInstrument(String symbol_)
         {
             object[] args = new object[1] {symbol_};
             string name = "NewInstrument";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void PlaceCompoundOrder(CQGOrderChain order_chain)
         {
             object[] args = new object[1] {order_chain};
             string name = "PlaceCompoundOrder";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGOrdersQuery QueryOrders(CQGAccount cqg_account, CQGInstrument cqg_instrument = null, eOrderStatusFilter status_filter = eOrderStatusFilter.osfAll, DateTime date_ = default(DateTime), eOrderSide order_side = eOrderSide.osdUndefined)
         {
             object[] args = new object[5] {cqg_account, cqg_instrument, status_filter, date_, order_side};
             string name = "QueryOrders";
-            var result = (CQGOrdersQuery)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersQueryClass result = new CQGOrdersQueryClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrdersQuery)resultFlld;
         }
 
         public virtual void QueryPositionsStatement(Int32 gw_account_id, DateTime date_)
         {
             object[] args = new object[2] {gw_account_id, date_};
             string name = "QueryPositionsStatement";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void QuerySummariesStatement(Int32 gw_account_id, DateTime date_)
         {
             object[] args = new object[2] {gw_account_id, date_};
             string name = "QuerySummariesStatement";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0)
         {
             object[] args = new object[6] {guid_, name_, abbrv_, description_, definitions_, icon_index};
             string name = "RegisterAlgorithmicOrder";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveAdvancedStudy(CQGAdvancedStudy cqg_advanced_study)
         {
             object[] args = new object[1] {cqg_advanced_study};
             string name = "RemoveAdvancedStudy";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveAllAdvancedStudies()
         {
             string name = "RemoveAllAdvancedStudies";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllConditions()
         {
             string name = "RemoveAllConditions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllConstantVolumeBars()
         {
             string name = "RemoveAllConstantVolumeBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllCustomStudies()
         {
             string name = "RemoveAllCustomStudies";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllExpressions()
         {
             string name = "RemoveAllExpressions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllInstruments()
         {
             string name = "RemoveAllInstruments";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllPointAndFigureBars()
         {
             string name = "RemoveAllPointAndFigureBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllSubMinuteBars()
         {
             string name = "RemoveAllSubMinuteBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllTFlowBars()
         {
             string name = "RemoveAllTFlowBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllTicks()
         {
             string name = "RemoveAllTicks";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllTimedBars()
         {
             string name = "RemoveAllTimedBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllTradingSystems()
         {
             string name = "RemoveAllTradingSystems";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveAllYields()
         {
             string name = "RemoveAllYields";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RemoveCondition(CQGCondition cqg_condition)
         {
             object[] args = new object[1] {cqg_condition};
             string name = "RemoveCondition";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveConstantVolumeBars(CQGConstantVolumeBars cqg_constant_volume_bars)
         {
             object[] args = new object[1] {cqg_constant_volume_bars};
             string name = "RemoveConstantVolumeBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveCustomStudy(CQGCustomStudy cqg_custom_study)
         {
             object[] args = new object[1] {cqg_custom_study};
             string name = "RemoveCustomStudy";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveExpression(CQGExpression cqg_expression)
         {
             object[] args = new object[1] {cqg_expression};
             string name = "RemoveExpression";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveInstrument(CQGInstrument cqg_instrument)
         {
             object[] args = new object[1] {cqg_instrument};
             string name = "RemoveInstrument";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveInstrumentsGroup(CQGInstrumentsGroup instruments_group)
         {
             object[] args = new object[1] {instruments_group};
             string name = "RemoveInstrumentsGroup";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemovePointAndFigureBars(CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
             object[] args = new object[1] {cqg_point_and_figure_bars};
             string name = "RemovePointAndFigureBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveSubMinuteBars(CQGSubMinuteBars cqg_subminute_bars)
         {
             object[] args = new object[1] {cqg_subminute_bars};
             string name = "RemoveSubMinuteBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveTFlowBars(CQGTFlowBars cqg_tflow_bars)
         {
             object[] args = new object[1] {cqg_tflow_bars};
             string name = "RemoveTFlowBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveTicks(CQGTicks cqg_ticks)
         {
             object[] args = new object[1] {cqg_ticks};
             string name = "RemoveTicks";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveTimedBars(CQGTimedBars cqg_timed_bars)
         {
             object[] args = new object[1] {cqg_timed_bars};
             string name = "RemoveTimedBars";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveTradingSystem(CQGTradingSystem cqg_trading_system)
         {
             object[] args = new object[1] {cqg_trading_system};
             string name = "RemoveTradingSystem";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RemoveYields(CQGYields cqg_yields)
         {
             object[] args = new object[1] {cqg_yields};
             string name = "RemoveYields";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGAdvancedStudy RequestAdvancedStudy(CQGAdvancedStudyRequest cqg_advanced_study_request)
         {
             object[] args = new object[1] {cqg_advanced_study_request};
             string name = "RequestAdvancedStudy";
-            var result = (CQGAdvancedStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGAdvancedStudyClass result = new CQGAdvancedStudyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGAdvancedStudy)resultFlld;
         }
 
         public virtual void RequestAdvancedStudyDefinitions()
         {
             string name = "RequestAdvancedStudyDefinitions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGBarsTimestamps RequestBarsTimestamps(CQGTimedBarsRequest cqg_timestamps_request)
         {
             object[] args = new object[1] {cqg_timestamps_request};
             string name = "RequestBarsTimestamps";
-            var result = (CQGBarsTimestamps)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGBarsTimestampsClass result = new CQGBarsTimestampsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGBarsTimestamps)resultFlld;
         }
 
         public virtual void RequestCommodityInstruments(String commodity_name, eInstrumentType instrument_types, Boolean tradable_only = false)
         {
             object[] args = new object[3] {commodity_name, instrument_types, tradable_only};
             string name = "RequestCommodityInstruments";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGCondition RequestCondition(CQGConditionRequest cqg_condition_request)
         {
             object[] args = new object[1] {cqg_condition_request};
             string name = "RequestCondition";
-            var result = (CQGCondition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConditionClass result = new CQGConditionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCondition)resultFlld;
         }
 
         public virtual void RequestConditionDefinitions()
         {
             string name = "RequestConditionDefinitions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGConstantVolumeBars RequestConstantVolumeBars(CQGConstantVolumeBarsRequest cqg_constant_volume_bars_request)
         {
             object[] args = new object[1] {cqg_constant_volume_bars_request};
             string name = "RequestConstantVolumeBars";
-            var result = (CQGConstantVolumeBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConstantVolumeBarsClass result = new CQGConstantVolumeBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGConstantVolumeBars)resultFlld;
         }
 
         public virtual void RequestCustomSessions()
         {
             string name = "RequestCustomSessions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGCustomStudy RequestCustomStudy(CQGCustomStudyRequest cqg_custom_study_request)
         {
             object[] args = new object[1] {cqg_custom_study_request};
             string name = "RequestCustomStudy";
-            var result = (CQGCustomStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCustomStudyClass result = new CQGCustomStudyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCustomStudy)resultFlld;
         }
 
         public virtual void RequestCustomStudyDefinitions()
         {
             string name = "RequestCustomStudyDefinitions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RequestDataSources()
         {
             string name = "RequestDataSources";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void RequestDataSourceSymbols(String data_source_abbreviation)
         {
             object[] args = new object[1] {data_source_abbreviation};
             string name = "RequestDataSourceSymbols";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGExpression RequestExpression(CQGExpressionRequest cqg_expression_request)
         {
             object[] args = new object[1] {cqg_expression_request};
             string name = "RequestExpression";
-            var result = (CQGExpression)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGExpressionClass result = new CQGExpressionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGExpression)resultFlld;
         }
 
         public virtual void RequestHistoricalSessions(CQGHistoricalSessionsRequest cqg_historical_sessions_request)
         {
             object[] args = new object[1] {cqg_historical_sessions_request};
             string name = "RequestHistoricalSessions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes)
         {
             object[] args = new object[2] {group_request, trace_group_changes};
             string name = "RequestInstrumentsGroup";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level)
         {
             object[] args = new object[2] {gw_account_id, update_level};
             string name = "RequestManualFills";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RequestManualFillUpdate(CQGManualFillRequest cqg_manual_fill_request)
         {
             object[] args = new object[1] {cqg_manual_fill_request};
             string name = "RequestManualFillUpdate";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGPointAndFigureBars RequestPointAndFigureBars(CQGPointAndFigureBarsRequest cqg_point_and_figure_bars_request)
         {
             object[] args = new object[1] {cqg_point_and_figure_bars_request};
             string name = "RequestPointAndFigureBars";
-            var result = (CQGPointAndFigureBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGPointAndFigureBarsClass result = new CQGPointAndFigureBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGPointAndFigureBars)resultFlld;
         }
 
         public virtual void RequestQFormulaDefinitions()
         {
             string name = "RequestQFormulaDefinitions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGSubMinuteBars RequestSubMinuteBars(CQGSubMinuteBarsRequest cqg_subminute_bars_request)
         {
             object[] args = new object[1] {cqg_subminute_bars_request};
             string name = "RequestSubMinuteBars";
-            var result = (CQGSubMinuteBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGSubMinuteBarsClass result = new CQGSubMinuteBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGSubMinuteBars)resultFlld;
         }
 
         public virtual CQGTFlowBars RequestTFlowBars(CQGTFlowBarsRequest cqg_tflow_bars_request)
         {
             object[] args = new object[1] {cqg_tflow_bars_request};
             string name = "RequestTFlowBars";
-            var result = (CQGTFlowBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTFlowBarsClass result = new CQGTFlowBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTFlowBars)resultFlld;
         }
 
         public virtual CQGTicks RequestTicks(CQGTicksRequest cqg_ticks_request)
         {
             object[] args = new object[1] {cqg_ticks_request};
             string name = "RequestTicks";
-            var result = (CQGTicks)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTicksClass result = new CQGTicksClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTicks)resultFlld;
         }
 
         public virtual CQGTimedBars RequestTimedBars(CQGTimedBarsRequest cqg_timed_bars_request)
         {
             object[] args = new object[1] {cqg_timed_bars_request};
             string name = "RequestTimedBars";
-            var result = (CQGTimedBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTimedBarsClass result = new CQGTimedBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTimedBars)resultFlld;
         }
 
         public virtual void RequestTradableCommodities(Int32 gw_account_id = 0)
         {
             object[] args = new object[1] {gw_account_id};
             string name = "RequestTradableCommodities";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void RequestTradableExchanges(Int32 gw_account_id = 0)
         {
             object[] args = new object[1] {gw_account_id};
             string name = "RequestTradableExchanges";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual CQGTradingSystem RequestTradingSystem(CQGTradingSystemRequest cqg_trading_system_request)
         {
             object[] args = new object[1] {cqg_trading_system_request};
             string name = "RequestTradingSystem";
-            var result = (CQGTradingSystem)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemClass result = new CQGTradingSystemClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystem)resultFlld;
         }
 
         public virtual void RequestTradingSystemDefinitions()
         {
             string name = "RequestTradingSystemDefinitions";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGYields RequestYields(CQGYieldsRequest cqg_yields_request)
         {
             object[] args = new object[1] {cqg_yields_request};
             string name = "RequestYields";
-            var result = (CQGYields)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGYieldsClass result = new CQGYieldsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGYields)resultFlld;
         }
 
         public virtual void Shutdown()
         {
             string name = "Shutdown";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void Startup()
         {
             string name = "Startup";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void SubscribeNewInstrument(CQGInstrumentSubscriptionRequest instrument_request)
         {
             object[] args = new object[1] {instrument_request};
             string name = "SubscribeNewInstrument";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void TerminateCQGIC(Boolean start_again = false)
         {
             object[] args = new object[1] {start_again};
             string name = "TerminateCQGIC";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -16052,7 +16296,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {guid_};
             string name = "UnregisterAlgorithmicOrder";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         #endregion
@@ -18440,7 +18684,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGChangedTradeEntryClass prop = new CQGChangedTradeEntryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGChangedTradeEntry)propFlld;
             }
 
         }
@@ -18549,7 +18795,9 @@ namespace FakeCQG
                 string name = "TradeEntry";
                 string TradeEntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryClass prop = new CQGTradeEntryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntry)propFlld;
             }
 
         }
@@ -18651,7 +18899,9 @@ namespace FakeCQG
                 string name = "TradeExit";
                 string TradeExitKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitClass prop = new CQGTradeExitClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExit)propFlld;
             }
 
         }
@@ -18764,7 +19014,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGChangedTradeExitClass prop = new CQGChangedTradeExitClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGChangedTradeExit)propFlld;
             }
 
         }
@@ -19111,7 +19363,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionDefinition)propFlld;
             }
 
         }
@@ -19145,7 +19399,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionResultClass prop = new CQGConditionResultClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionResult)propFlld;
             }
 
         }
@@ -19157,7 +19413,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -19169,7 +19427,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionRequestClass prop = new CQGConditionRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionRequest)propFlld;
             }
 
         }
@@ -19286,7 +19546,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -19339,7 +19599,9 @@ namespace FakeCQG
                 string name = "ParameterDefinitions";
                 string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinitions)propFlld;
             }
 
         }
@@ -19441,7 +19703,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionDefinition)propFlld;
             }
 
         }
@@ -19453,7 +19717,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionDefinition)propFlld;
             }
 
         }
@@ -19481,8 +19747,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {condition_name};
             string name = "get_ItemByName";
-            var result = (CQGConditionDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConditionDefinitionClass result = new CQGConditionDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGConditionDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -19607,7 +19876,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionDefinitionClass prop = new CQGConditionDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConditionDefinition)propFlld;
             }
 
         }
@@ -19863,7 +20134,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -20017,7 +20288,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionClass prop = new CQGConditionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCondition)propFlld;
             }
 
         }
@@ -20029,7 +20302,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConditionClass prop = new CQGConditionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCondition)propFlld;
             }
 
         }
@@ -20057,8 +20332,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGCondition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConditionClass result = new CQGConditionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCondition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -20434,7 +20712,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConstantVolumeBarClass prop = new CQGConstantVolumeBarClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConstantVolumeBar)propFlld;
             }
 
         }
@@ -20446,7 +20726,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -20458,7 +20740,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConstantVolumeBarsRequestClass prop = new CQGConstantVolumeBarsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConstantVolumeBarsRequest)propFlld;
             }
 
         }
@@ -20567,7 +20851,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -20620,7 +20904,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConstantVolumeBarsClass prop = new CQGConstantVolumeBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConstantVolumeBars)propFlld;
             }
 
         }
@@ -20632,7 +20918,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGConstantVolumeBarsClass prop = new CQGConstantVolumeBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGConstantVolumeBars)propFlld;
             }
 
         }
@@ -20660,8 +20948,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGConstantVolumeBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGConstantVolumeBarsClass result = new CQGConstantVolumeBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGConstantVolumeBars)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -21068,7 +21359,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -21225,7 +21518,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurrencyRateClass prop = new CQGCurrencyRateClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurrencyRate)propFlld;
             }
 
         }
@@ -21424,7 +21719,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveDefinitionClass prop = new CQGCurveDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveDefinition)propFlld;
             }
 
         }
@@ -21436,7 +21733,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveDefinitionClass prop = new CQGCurveDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveDefinition)propFlld;
             }
 
         }
@@ -21464,8 +21763,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {curve_name};
             string name = "get_ItemByName";
-            var result = (CQGCurveDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCurveDefinitionClass result = new CQGCurveDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCurveDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -21791,7 +22093,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyClass prop = new CQGCustomStudyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudy)propFlld;
             }
 
         }
@@ -21803,7 +22107,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyClass prop = new CQGCustomStudyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudy)propFlld;
             }
 
         }
@@ -21831,8 +22137,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGCustomStudy)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCustomStudyClass result = new CQGCustomStudyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCustomStudy)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -21920,7 +22229,9 @@ namespace FakeCQG
                 string name = "CurveHeaders";
                 string CurveHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveHeadersClass prop = new CQGCurveHeadersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveHeaders)propFlld;
             }
 
         }
@@ -21932,7 +22243,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudyDefinition)propFlld;
             }
 
         }
@@ -21966,7 +22279,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurvesClass prop = new CQGCurvesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurves)propFlld;
             }
 
         }
@@ -21978,7 +22293,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -21990,7 +22307,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyRequestClass prop = new CQGCustomStudyRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudyRequest)propFlld;
             }
 
         }
@@ -22107,7 +22426,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -22160,7 +22479,9 @@ namespace FakeCQG
                 string name = "CurveDefinitions";
                 string CurveDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCurveDefinitionsClass prop = new CQGCurveDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCurveDefinitions)propFlld;
             }
 
         }
@@ -22183,7 +22504,9 @@ namespace FakeCQG
                 string name = "ParameterDefinitions";
                 string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinitions)propFlld;
             }
 
         }
@@ -22285,7 +22608,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudyDefinition)propFlld;
             }
 
         }
@@ -22297,7 +22622,9 @@ namespace FakeCQG
                 string name = "ItemByAbbreviation";
                 string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudyDefinition)propFlld;
             }
 
         }
@@ -22325,16 +22652,22 @@ namespace FakeCQG
         {
             object[] args = new object[1] {custom_study_abbreviation};
             string name = "get_ItemByAbbreviation";
-            var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCustomStudyDefinitionClass result = new CQGCustomStudyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCustomStudyDefinition)resultFlld;
         }
 
         public virtual CQGCustomStudyDefinition get_ItemByName(String custom_study_name)
         {
             object[] args = new object[1] {custom_study_name};
             string name = "get_ItemByName";
-            var result = (CQGCustomStudyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGCustomStudyDefinitionClass result = new CQGCustomStudyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGCustomStudyDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -22459,7 +22792,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCustomStudyDefinitionClass prop = new CQGCustomStudyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCustomStudyDefinition)propFlld;
             }
 
         }
@@ -22708,7 +23043,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {curve_key};
             string name = "IncludeCurve";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -22730,7 +23065,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -22906,7 +23241,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDataSourceClass prop = new CQGDataSourceClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDataSource)propFlld;
             }
 
         }
@@ -22918,7 +23255,9 @@ namespace FakeCQG
                 string name = "ItemByAbbreviation";
                 string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDataSourceClass prop = new CQGDataSourceClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDataSource)propFlld;
             }
 
         }
@@ -22946,8 +23285,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {data_source_abbreviation};
             string name = "get_ItemByAbbreviation";
-            var result = (CQGDataSource)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGDataSourceClass result = new CQGDataSourceClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGDataSource)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -23158,7 +23500,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDataSourceSymbolClass prop = new CQGDataSourceSymbolClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDataSourceSymbol)propFlld;
             }
 
         }
@@ -23736,7 +24080,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -23748,7 +24094,9 @@ namespace FakeCQG
                 string name = "ItemByPrice";
                 string ItemByPriceKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -23776,8 +24124,11 @@ namespace FakeCQG
         {
             object[] args = new object[2] {price_, round_to_better};
             string name = "get_ItemByPrice";
-            var result = (CQGQuote)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGQuoteClass result = new CQGQuoteClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGQuote)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -23854,7 +24205,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -23932,7 +24285,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -23988,7 +24343,9 @@ namespace FakeCQG
                 string name = "RemoteOpenAPISession";
                 string RemoteOpenAPISessionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGRemoteOpenAPISessionClass prop = new CQGRemoteOpenAPISessionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGRemoteOpenAPISession)propFlld;
             }
 
         }
@@ -24310,7 +24667,9 @@ namespace FakeCQG
                 string name = "Parameters";
                 string ParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExecutionPatternParametersClass prop = new CQGExecutionPatternParametersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExecutionPatternParameters)propFlld;
             }
 
         }
@@ -24423,7 +24782,9 @@ namespace FakeCQG
                 string name = "Parameters";
                 string ParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExecutionPatternParametersClass prop = new CQGExecutionPatternParametersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExecutionPatternParameters)propFlld;
             }
 
         }
@@ -24552,7 +24913,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExecutionPatternParameterClass prop = new CQGExecutionPatternParameterClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExecutionPatternParameter)propFlld;
             }
 
         }
@@ -24564,8 +24927,11 @@ namespace FakeCQG
         {
             object[] args = new object[3] {name_, type_, value_};
             string name = "Add";
-            var result = (CQGExecutionPatternParameter)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGExecutionPatternParameterClass result = new CQGExecutionPatternParameterClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGExecutionPatternParameter)resultFlld;
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -24623,7 +24989,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "Remove";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -24698,7 +25064,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionOutputsClass prop = new CQGExpressionOutputsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpressionOutputs)propFlld;
             }
 
         }
@@ -24710,7 +25078,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -24722,7 +25092,9 @@ namespace FakeCQG
                 string name = "OutputHeaders";
                 string OutputHeadersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionOutputHeadersClass prop = new CQGExpressionOutputHeadersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpressionOutputHeaders)propFlld;
             }
 
         }
@@ -24734,7 +25106,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionRequestClass prop = new CQGExpressionRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpressionRequest)propFlld;
             }
 
         }
@@ -24851,7 +25225,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -25361,7 +25735,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {sub_expression, alias_};
             string name = "AddSubExpression";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -25474,7 +25848,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionClass prop = new CQGExpressionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpression)propFlld;
             }
 
         }
@@ -25486,7 +25862,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGExpressionClass prop = new CQGExpressionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGExpression)propFlld;
             }
 
         }
@@ -25514,8 +25892,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGExpression)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGExpressionClass result = new CQGExpressionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGExpression)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -25625,7 +26006,9 @@ namespace FakeCQG
                 string name = "Order";
                 string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderClass prop = new CQGOrderClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrder)propFlld;
             }
 
         }
@@ -25737,8 +26120,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {leg_};
             string name = "get_GWTrades";
-            var result = (CQGGWTrades)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGGWTradesClass result = new CQGGWTradesClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGGWTrades)resultFlld;
         }
 
         public virtual Int32 get_GWTradesCount(Int32 leg_)
@@ -25867,7 +26253,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGFillClass prop = new CQGFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGFill)propFlld;
             }
 
         }
@@ -25879,7 +26267,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGFillClass prop = new CQGFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGFill)propFlld;
             }
 
         }
@@ -25907,8 +26297,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGFillClass result = new CQGFillClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGFill)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -26029,7 +26422,9 @@ namespace FakeCQG
                 string name = "Fill";
                 string FillKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGFillClass prop = new CQGFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGFill)propFlld;
             }
 
         }
@@ -26208,7 +26603,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGGWTradeClass prop = new CQGGWTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGGWTrade)propFlld;
             }
 
         }
@@ -26220,7 +26617,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGGWTradeClass prop = new CQGGWTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGGWTrade)propFlld;
             }
 
         }
@@ -26248,8 +26647,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGGWTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGGWTradeClass result = new CQGGWTradeClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGGWTrade)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -26592,7 +26994,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGHolidayClass prop = new CQGHolidayClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGHoliday)propFlld;
             }
 
         }
@@ -26604,7 +27008,9 @@ namespace FakeCQG
                 string name = "Sessions";
                 string SessionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSessionsClass prop = new CQGSessionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSessions)propFlld;
             }
 
         }
@@ -26702,7 +27108,9 @@ namespace FakeCQG
                 string name = "Ask";
                 string AskKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -26730,7 +27138,9 @@ namespace FakeCQG
                 string name = "Bid";
                 string BidKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -26742,7 +27152,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -26814,7 +27226,9 @@ namespace FakeCQG
                 string name = "DOMAsks";
                 string DOMAsksKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDOMQuotesClass prop = new CQGDOMQuotesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDOMQuotes)propFlld;
             }
 
         }
@@ -26826,7 +27240,9 @@ namespace FakeCQG
                 string name = "DOMBids";
                 string DOMBidsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGDOMQuotesClass prop = new CQGDOMQuotesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGDOMQuotes)propFlld;
             }
 
         }
@@ -27046,7 +27462,9 @@ namespace FakeCQG
                 string name = "Properties";
                 string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentPropertiesClass prop = new CQGInstrumentPropertiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrumentProperties)propFlld;
             }
 
         }
@@ -27080,7 +27498,9 @@ namespace FakeCQG
                 string name = "Quotes";
                 string QuotesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuotesClass prop = new CQGQuotesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuotes)propFlld;
             }
 
         }
@@ -27136,7 +27556,9 @@ namespace FakeCQG
                 string name = "Sessions";
                 string SessionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSessionsClass prop = new CQGSessionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSessions)propFlld;
             }
 
         }
@@ -27241,7 +27663,9 @@ namespace FakeCQG
                 string name = "Trade";
                 string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -27253,7 +27677,9 @@ namespace FakeCQG
                 string name = "UnderlyingInstrument";
                 string UnderlyingInstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -27404,7 +27830,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tagName, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual String ToDisplayPrice(Double correct_price)
@@ -27465,7 +27891,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentPropertyClass prop = new CQGInstrumentPropertyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrumentProperty)propFlld;
             }
 
         }
@@ -27563,7 +27991,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -27720,7 +28150,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -27829,7 +28261,9 @@ namespace FakeCQG
                 string name = "Instruments";
                 string InstrumentsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentsClass prop = new CQGInstrumentsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstruments)propFlld;
             }
 
         }
@@ -27841,7 +28275,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentsGroupRequestClass prop = new CQGInstrumentsGroupRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrumentsGroupRequest)propFlld;
             }
 
         }
@@ -28102,7 +28538,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentsGroupClass prop = new CQGInstrumentsGroupClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrumentsGroup)propFlld;
             }
 
         }
@@ -28467,7 +28905,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -28523,7 +28963,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {content_, severity_};
             string name = "Log";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -29010,7 +29450,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGManualFillClass prop = new CQGManualFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGManualFill)propFlld;
             }
 
         }
@@ -29038,8 +29480,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGManualFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGManualFillClass result = new CQGManualFillClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGManualFill)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -29127,7 +29572,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGManualFillsClass prop = new CQGManualFillsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGManualFills)propFlld;
             }
 
         }
@@ -29155,8 +29602,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGManualFills)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGManualFillsClass result = new CQGManualFillsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGManualFills)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -29244,7 +29694,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGModifiedPropertyClass prop = new CQGModifiedPropertyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGModifiedProperty)propFlld;
             }
 
         }
@@ -29256,7 +29708,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGModifiedPropertyClass prop = new CQGModifiedPropertyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGModifiedProperty)propFlld;
             }
 
         }
@@ -29284,8 +29738,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGModifiedProperty)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGModifiedPropertyClass result = new CQGModifiedPropertyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGModifiedProperty)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -29496,7 +29953,9 @@ namespace FakeCQG
                 string name = "Account";
                 string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
             set
@@ -29561,7 +30020,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
             set
@@ -29732,7 +30193,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {cqg_order};
             string name = "AddOrder";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -29818,7 +30279,9 @@ namespace FakeCQG
                 string name = "Account";
                 string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
             set
@@ -29959,7 +30422,9 @@ namespace FakeCQG
                 string name = "Fills";
                 string FillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGFillsClass prop = new CQGFillsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGFills)propFlld;
             }
 
         }
@@ -30004,7 +30469,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
             set
@@ -30054,7 +30521,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -30131,7 +30600,9 @@ namespace FakeCQG
                 string name = "Properties";
                 string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderPropertiesClass prop = new CQGOrderPropertiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrderProperties)propFlld;
             }
 
         }
@@ -30262,7 +30733,9 @@ namespace FakeCQG
                 string name = "Transactions";
                 string TransactionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTransactionsClass prop = new CQGTransactionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTransactions)propFlld;
             }
 
         }
@@ -30295,13 +30768,13 @@ namespace FakeCQG
         public virtual void Activate()
         {
             string name = "Activate";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void Cancel()
         {
             string name = "Cancel";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -30360,33 +30833,36 @@ namespace FakeCQG
         {
             object[] args = new object[1] {cqg_order_modify};
             string name = "Modify";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual void Place()
         {
             string name = "Place";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual CQGOrderModify PrepareModify()
         {
             string name = "PrepareModify";
-            var result = (CQGOrderModify)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            CQGOrderModifyClass result = new CQGOrderModifyClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrderModify)resultFlld;
         }
 
         public virtual void SendCareOrderAck()
         {
             string name = "SendCareOrderAck";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual void set_Tag(String tag_name, Object pVal)
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -30428,7 +30904,9 @@ namespace FakeCQG
                 string name = "Properties";
                 string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderPropertiesClass prop = new CQGOrderPropertiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrderProperties)propFlld;
             }
 
         }
@@ -30530,7 +31008,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderPropertyClass prop = new CQGOrderPropertyClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrderProperty)propFlld;
             }
 
         }
@@ -30661,7 +31141,9 @@ namespace FakeCQG
                 string name = "Order";
                 string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderClass prop = new CQGOrderClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrder)propFlld;
             }
 
         }
@@ -30801,7 +31283,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderClass prop = new CQGOrderClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrder)propFlld;
             }
 
         }
@@ -30812,7 +31296,7 @@ namespace FakeCQG
         public virtual void AddToLiveOrders()
         {
             string name = "AddToLiveOrders";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -30835,8 +31319,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {order_guid};
             string name = "get_ItemByGuid";
-            var result = (CQGOrder)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrderClass result = new CQGOrderClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrder)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -30878,48 +31365,66 @@ namespace FakeCQG
         {
             object[] args = new object[1] {instrument_name};
             string name = "SelectByInstrumentName";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public virtual CQGOrders SelectByOrderStatus(eOrderStatus order_status)
         {
             object[] args = new object[1] {order_status};
             string name = "SelectByOrderStatus";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public virtual CQGOrders SelectByOrderType(eOrderType order_type)
         {
             object[] args = new object[1] {order_type};
             string name = "SelectByOrderType";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public virtual CQGOrders SelectByProperty(eOrderProperty property_type, Object property_value)
         {
             object[] args = new object[2] {property_type, property_value};
             string name = "SelectByProperty";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public virtual CQGOrders SelectBySide(eOrderSide order_side)
         {
             object[] args = new object[1] {order_side};
             string name = "SelectBySide";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public virtual CQGOrders SelectByTag(String tag_name, Object tag_value = null)
         {
             object[] args = new object[2] {tag_name, tag_value};
             string name = "SelectByTag";
-            var result = (CQGOrders)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGOrdersClass result = new CQGOrdersClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGOrders)resultFlld;
         }
 
         public new String ToString()
@@ -30961,7 +31466,9 @@ namespace FakeCQG
                 string name = "Account";
                 string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
         }
@@ -30973,7 +31480,9 @@ namespace FakeCQG
                 string name = "CEL";
                 string CELKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGCELClass prop = new CQGCELClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGCEL)propFlld;
             }
 
         }
@@ -30985,7 +31494,9 @@ namespace FakeCQG
                 string name = "FinalError";
                 string FinalErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -30997,7 +31508,9 @@ namespace FakeCQG
                 string name = "LastChunk";
                 string LastChunkKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -31009,7 +31522,9 @@ namespace FakeCQG
                 string name = "Orders";
                 string OrdersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrdersClass prop = new CQGOrdersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrders)propFlld;
             }
 
         }
@@ -31064,7 +31579,7 @@ namespace FakeCQG
         public virtual void Cancel()
         {
             string name = "Cancel";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual ObjRef CreateObjRef(Type requestedType)
@@ -31265,7 +31780,9 @@ namespace FakeCQG
                 string name = "AvailableValues";
                 string AvailableValuesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStringCollectionClass prop = new CQGStringCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStringCollection)propFlld;
             }
 
         }
@@ -31411,7 +31928,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionClass prop = new CQGParameterDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinition)propFlld;
             }
 
         }
@@ -31423,7 +31942,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionClass prop = new CQGParameterDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinition)propFlld;
             }
 
         }
@@ -31451,8 +31972,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {parameter_name};
             string name = "get_ItemByName";
-            var result = (CQGParameterDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGParameterDefinitionClass result = new CQGParameterDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGParameterDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -31729,7 +32253,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPointAndFigureBarClass prop = new CQGPointAndFigureBarClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPointAndFigureBar)propFlld;
             }
 
         }
@@ -31741,7 +32267,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -31753,7 +32281,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPointAndFigureBarsRequestClass prop = new CQGPointAndFigureBarsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPointAndFigureBarsRequest)propFlld;
             }
 
         }
@@ -31862,7 +32392,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -31915,7 +32445,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPointAndFigureBarsClass prop = new CQGPointAndFigureBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPointAndFigureBars)propFlld;
             }
 
         }
@@ -31927,7 +32459,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPointAndFigureBarsClass prop = new CQGPointAndFigureBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPointAndFigureBars)propFlld;
             }
 
         }
@@ -31955,8 +32489,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGPointAndFigureBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGPointAndFigureBarsClass result = new CQGPointAndFigureBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGPointAndFigureBars)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -32368,7 +32905,9 @@ namespace FakeCQG
                 string name = "Account";
                 string AccountKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountClass prop = new CQGAccountClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccount)propFlld;
             }
 
         }
@@ -32391,7 +32930,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -32425,7 +32966,9 @@ namespace FakeCQG
                 string name = "MatchedTrades";
                 string MatchedTradesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradesClass prop = new CQGTradesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTrades)propFlld;
             }
 
         }
@@ -32448,7 +32991,9 @@ namespace FakeCQG
                 string name = "OpenTrades";
                 string OpenTradesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradesClass prop = new CQGTradesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTrades)propFlld;
             }
 
         }
@@ -32627,7 +33172,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPositionClass prop = new CQGPositionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPosition)propFlld;
             }
 
         }
@@ -32639,7 +33186,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPositionClass prop = new CQGPositionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPosition)propFlld;
             }
 
         }
@@ -32667,8 +33216,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGPosition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGPositionClass result = new CQGPositionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGPosition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -32756,7 +33308,9 @@ namespace FakeCQG
                 string name = "Positions";
                 string PositionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGPositionsClass prop = new CQGPositionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGPositions)propFlld;
             }
 
         }
@@ -32981,7 +33535,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQFormulaDefinitionClass prop = new CQGQFormulaDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQFormulaDefinition)propFlld;
             }
 
         }
@@ -32993,7 +33549,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQFormulaDefinitionClass prop = new CQGQFormulaDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQFormulaDefinition)propFlld;
             }
 
         }
@@ -33021,8 +33579,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {qformula_name};
             string name = "get_ItemByName";
-            var result = (CQGQFormulaDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGQFormulaDefinitionClass result = new CQGQFormulaDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGQFormulaDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -33110,7 +33671,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -33289,7 +33852,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGQuoteClass prop = new CQGQuoteClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGQuote)propFlld;
             }
 
         }
@@ -33554,7 +34119,9 @@ namespace FakeCQG
                 string name = "Instrument";
                 string InstrumentKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGInstrumentClass prop = new CQGInstrumentClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGInstrument)propFlld;
             }
 
         }
@@ -33785,7 +34352,9 @@ namespace FakeCQG
                 string name = "Holidays";
                 string HolidaysKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGHolidaysClass prop = new CQGHolidaysClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGHolidays)propFlld;
             }
 
         }
@@ -33797,7 +34366,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSessionClass prop = new CQGSessionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSession)propFlld;
             }
 
         }
@@ -33936,7 +34507,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSessionsClass prop = new CQGSessionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSessions)propFlld;
             }
 
         }
@@ -34056,7 +34629,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -34191,7 +34766,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStrategyDefinitionClass prop = new CQGStrategyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStrategyDefinition)propFlld;
             }
 
         }
@@ -34203,7 +34780,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStrategyDefinitionClass prop = new CQGStrategyDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStrategyDefinition)propFlld;
             }
 
         }
@@ -34231,8 +34810,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGStrategyDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGStrategyDefinitionClass result = new CQGStrategyDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGStrategyDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -34320,7 +34902,9 @@ namespace FakeCQG
                 string name = "Order";
                 string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderClass prop = new CQGOrderClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrder)propFlld;
             }
 
         }
@@ -34444,7 +35028,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStrategyLegFillClass prop = new CQGStrategyLegFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStrategyLegFill)propFlld;
             }
 
         }
@@ -34472,8 +35058,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGStrategyLegFill)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGStrategyLegFillClass result = new CQGStrategyLegFillClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGStrategyLegFill)resultFlld;
         }
 
         public new Int32 GetHashCode()
@@ -34950,7 +35539,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSubMinuteBarClass prop = new CQGSubMinuteBarClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSubMinuteBar)propFlld;
             }
 
         }
@@ -34962,7 +35553,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -34974,7 +35567,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSubMinuteBarsRequestClass prop = new CQGSubMinuteBarsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSubMinuteBarsRequest)propFlld;
             }
 
         }
@@ -35083,7 +35678,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -35136,7 +35731,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSubMinuteBarsClass prop = new CQGSubMinuteBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSubMinuteBars)propFlld;
             }
 
         }
@@ -35148,7 +35745,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGSubMinuteBarsClass prop = new CQGSubMinuteBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGSubMinuteBars)propFlld;
             }
 
         }
@@ -35176,8 +35775,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGSubMinuteBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGSubMinuteBarsClass result = new CQGSubMinuteBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGSubMinuteBars)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -35573,7 +36175,9 @@ namespace FakeCQG
                 string name = "CurrencySummaries";
                 string CurrencySummariesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountSummariesClass prop = new CQGAccountSummariesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccountSummaries)propFlld;
             }
 
         }
@@ -35607,7 +36211,9 @@ namespace FakeCQG
                 string name = "Summary";
                 string SummaryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGAccountSummaryClass prop = new CQGAccountSummaryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGAccountSummary)propFlld;
             }
 
         }
@@ -36013,7 +36619,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTFlowBarClass prop = new CQGTFlowBarClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTFlowBar)propFlld;
             }
 
         }
@@ -36025,7 +36633,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -36037,7 +36647,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTFlowBarsRequestClass prop = new CQGTFlowBarsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTFlowBarsRequest)propFlld;
             }
 
         }
@@ -36146,7 +36758,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -36199,7 +36811,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTFlowBarsClass prop = new CQGTFlowBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTFlowBars)propFlld;
             }
 
         }
@@ -36211,7 +36825,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTFlowBarsClass prop = new CQGTFlowBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTFlowBars)propFlld;
             }
 
         }
@@ -36239,8 +36855,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGTFlowBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTFlowBarsClass result = new CQGTFlowBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTFlowBars)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -36885,7 +37504,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTickClass prop = new CQGTickClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTick)propFlld;
             }
 
         }
@@ -36897,7 +37518,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -36909,7 +37532,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTicksRequestClass prop = new CQGTicksRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTicksRequest)propFlld;
             }
 
         }
@@ -37019,7 +37644,7 @@ namespace FakeCQG
         {
             object[] args = new object[4] {date_1, date_2, start_index, end_index};
             string name = "IndicesForDates";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -37033,7 +37658,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -37086,7 +37711,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTicksClass prop = new CQGTicksClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTicks)propFlld;
             }
 
         }
@@ -37098,7 +37725,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTicksClass prop = new CQGTicksClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTicks)propFlld;
             }
 
         }
@@ -37126,8 +37755,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGTicks)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTicksClass result = new CQGTicksClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTicks)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -37744,7 +38376,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTimedBarClass prop = new CQGTimedBarClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTimedBar)propFlld;
             }
 
         }
@@ -37756,7 +38390,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -37768,7 +38404,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTimedBarsRequestClass prop = new CQGTimedBarsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTimedBarsRequest)propFlld;
             }
 
         }
@@ -37885,7 +38523,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -37938,7 +38576,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTimedBarsClass prop = new CQGTimedBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTimedBars)propFlld;
             }
 
         }
@@ -37950,7 +38590,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTimedBarsClass prop = new CQGTimedBarsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTimedBars)propFlld;
             }
 
         }
@@ -37978,8 +38620,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGTimedBars)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTimedBarsClass result = new CQGTimedBarsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTimedBars)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -38295,7 +38940,7 @@ namespace FakeCQG
         public virtual void ExcludeAllOutputs()
         {
             string name = "ExcludeAllOutputs";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public new Int32 GetHashCode()
@@ -38323,7 +38968,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {timed_bar_output, include_output};
             string name = "IncludeOutput";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -38547,7 +39192,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryClass prop = new CQGTradeEntryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntry)propFlld;
             }
 
         }
@@ -38656,7 +39303,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryDefinitionClass prop = new CQGTradeEntryDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntryDefinition)propFlld;
             }
 
         }
@@ -38690,7 +39339,9 @@ namespace FakeCQG
                 string name = "RelatedExits";
                 string RelatedExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitsClass prop = new CQGTradeExitsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExits)propFlld;
             }
 
         }
@@ -38724,7 +39375,9 @@ namespace FakeCQG
                 string name = "Trade";
                 string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTrade)propFlld;
             }
 
         }
@@ -38938,7 +39591,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExitDefinition)propFlld;
             }
 
         }
@@ -38972,7 +39627,9 @@ namespace FakeCQG
                 string name = "RelatedEntries";
                 string RelatedEntriesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntriesClass prop = new CQGTradeEntriesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntries)propFlld;
             }
 
         }
@@ -39006,7 +39663,9 @@ namespace FakeCQG
                 string name = "Trade";
                 string TradeKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTrade)propFlld;
             }
 
         }
@@ -39231,7 +39890,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExitDefinition)propFlld;
             }
 
         }
@@ -39243,7 +39904,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitDefinitionClass prop = new CQGTradeExitDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExitDefinition)propFlld;
             }
 
         }
@@ -39271,8 +39934,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {exit_name};
             string name = "get_ItemByName";
-            var result = (CQGTradeExitDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradeExitDefinitionClass result = new CQGTradeExitDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradeExitDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -39360,7 +40026,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitClass prop = new CQGTradeExitClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExit)propFlld;
             }
 
         }
@@ -39372,7 +40040,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitClass prop = new CQGTradeExitClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExit)propFlld;
             }
 
         }
@@ -39400,8 +40070,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {exit_name};
             string name = "get_ItemByName";
-            var result = (CQGTradeExit)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradeExitClass result = new CQGTradeExitClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradeExit)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -39489,7 +40162,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeClass prop = new CQGTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTrade)propFlld;
             }
 
         }
@@ -39791,7 +40466,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemBaseBarParameterClass prop = new CQGTradingSystemBaseBarParameterClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemBaseBarParameter)propFlld;
             }
 
         }
@@ -39889,7 +40566,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemDefinition)propFlld;
             }
 
         }
@@ -39912,7 +40591,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -39924,7 +40605,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemRequestClass prop = new CQGTradingSystemRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemRequest)propFlld;
             }
 
         }
@@ -39936,7 +40619,9 @@ namespace FakeCQG
                 string name = "Statistics";
                 string StatisticsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemStatisticsCollectionClass prop = new CQGTradingSystemStatisticsCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemStatisticsCollection)propFlld;
             }
 
         }
@@ -39975,7 +40660,9 @@ namespace FakeCQG
                 string name = "TradesRows";
                 string TradesRowsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradesRowsClass prop = new CQGTradingSystemTradesRowsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradesRows)propFlld;
             }
 
         }
@@ -40039,7 +40726,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -40125,7 +40812,9 @@ namespace FakeCQG
                 string name = "ParameterDefinitions";
                 string ParameterDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGParameterDefinitionsClass prop = new CQGParameterDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGParameterDefinitions)propFlld;
             }
 
         }
@@ -40137,7 +40826,9 @@ namespace FakeCQG
                 string name = "TradeDefinitions";
                 string TradeDefinitionsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeDefinitionsClass prop = new CQGTradingSystemTradeDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradeDefinitions)propFlld;
             }
 
         }
@@ -40239,7 +40930,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemDefinition)propFlld;
             }
 
         }
@@ -40251,7 +40944,9 @@ namespace FakeCQG
                 string name = "ItemByAbbreviation";
                 string ItemByAbbreviationKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemDefinition)propFlld;
             }
 
         }
@@ -40279,16 +40974,22 @@ namespace FakeCQG
         {
             object[] args = new object[1] {trading_system_abbreviation};
             string name = "get_ItemByAbbreviation";
-            var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemDefinitionClass result = new CQGTradingSystemDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystemDefinition)resultFlld;
         }
 
         public virtual CQGTradingSystemDefinition get_ItemByName(String trading_system_name)
         {
             object[] args = new object[1] {trading_system_name};
             string name = "get_ItemByName";
-            var result = (CQGTradingSystemDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemDefinitionClass result = new CQGTradingSystemDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystemDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -40455,7 +41156,9 @@ namespace FakeCQG
                 string name = "Entry";
                 string EntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryClass prop = new CQGTradeEntryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntry)propFlld;
             }
 
         }
@@ -40478,7 +41181,9 @@ namespace FakeCQG
                 string name = "Exit";
                 string ExitKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitClass prop = new CQGTradeExitClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExit)propFlld;
             }
 
         }
@@ -40670,7 +41375,9 @@ namespace FakeCQG
                 string name = "BaseBarParameters";
                 string BaseBarParametersKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemBaseBarParametersClass prop = new CQGTradingSystemBaseBarParametersClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemBaseBarParameters)propFlld;
             }
 
         }
@@ -40746,7 +41453,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemDefinitionClass prop = new CQGTradingSystemDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemDefinition)propFlld;
             }
 
         }
@@ -40949,7 +41658,7 @@ namespace FakeCQG
         public virtual void ExcludeAllStatistics()
         {
             string name = "ExcludeAllStatistics";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);
         }
 
         public virtual Object get_Parameter(Object key_)
@@ -40985,7 +41694,7 @@ namespace FakeCQG
         {
             object[] args = new object[1] {trading_system_statistic};
             string name = "IncludeStatistic";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -41007,7 +41716,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {key_, pVal};
             string name = "set_Parameter";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -41060,7 +41769,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemClass prop = new CQGTradingSystemClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystem)propFlld;
             }
 
         }
@@ -41072,7 +41783,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemClass prop = new CQGTradingSystemClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystem)propFlld;
             }
 
         }
@@ -41100,8 +41813,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGTradingSystem)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemClass result = new CQGTradingSystemClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystem)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -41178,7 +41894,9 @@ namespace FakeCQG
                 string name = "Statistics";
                 string StatisticsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemStatisticsClass prop = new CQGTradingSystemStatisticsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemStatistics)propFlld;
             }
 
         }
@@ -41694,7 +42412,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemStatisticsClass prop = new CQGTradingSystemStatisticsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemStatistics)propFlld;
             }
 
         }
@@ -41758,7 +42478,7 @@ namespace FakeCQG
         {
             object[] args = new object[4] {date_1, date_2, start_index, end_index};
             string name = "IndicesForDates";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public virtual Object InitializeLifetimeService()
@@ -41807,7 +42527,9 @@ namespace FakeCQG
                 string name = "Definition";
                 string DefinitionKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradeDefinition)propFlld;
             }
 
         }
@@ -41852,7 +42574,9 @@ namespace FakeCQG
                 string name = "TradeEntry";
                 string TradeEntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryClass prop = new CQGTradeEntryClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntry)propFlld;
             }
 
         }
@@ -41864,7 +42588,9 @@ namespace FakeCQG
                 string name = "TradeExits";
                 string TradeExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitsClass prop = new CQGTradeExitsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExits)propFlld;
             }
 
         }
@@ -41876,7 +42602,9 @@ namespace FakeCQG
                 string name = "TradesRow";
                 string TradesRowKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradesRowClass prop = new CQGTradingSystemTradesRowClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradesRow)propFlld;
             }
 
         }
@@ -41967,7 +42695,9 @@ namespace FakeCQG
                 string name = "Entry";
                 string EntryKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeEntryDefinitionClass prop = new CQGTradeEntryDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeEntryDefinition)propFlld;
             }
 
         }
@@ -41979,7 +42709,9 @@ namespace FakeCQG
                 string name = "Exits";
                 string ExitsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradeExitDefinitionsClass prop = new CQGTradeExitDefinitionsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradeExitDefinitions)propFlld;
             }
 
         }
@@ -42103,7 +42835,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradeDefinition)propFlld;
             }
 
         }
@@ -42115,7 +42849,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeDefinitionClass prop = new CQGTradingSystemTradeDefinitionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradeDefinition)propFlld;
             }
 
         }
@@ -42143,8 +42879,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {trade_name};
             string name = "get_ItemByName";
-            var result = (CQGTradingSystemTradeDefinition)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemTradeDefinitionClass result = new CQGTradingSystemTradeDefinitionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystemTradeDefinition)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -42232,7 +42971,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTrade)propFlld;
             }
 
         }
@@ -42244,7 +42985,9 @@ namespace FakeCQG
                 string name = "ItemByName";
                 string ItemByNameKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradeClass prop = new CQGTradingSystemTradeClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTrade)propFlld;
             }
 
         }
@@ -42294,8 +43037,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {trade_name};
             string name = "get_ItemByName";
-            var result = (CQGTradingSystemTrade)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTradingSystemTradeClass result = new CQGTradingSystemTradeClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTradingSystemTrade)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -42383,7 +43129,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemTradesRowClass prop = new CQGTradingSystemTradesRowClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemTradesRow)propFlld;
             }
 
         }
@@ -42492,7 +43240,9 @@ namespace FakeCQG
                 string name = "StatisticsChangeInfo";
                 string StatisticsChangeInfoKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTradingSystemStatisticsChangeInfoClass prop = new CQGTradingSystemStatisticsChangeInfoClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTradingSystemStatisticsChangeInfo)propFlld;
             }
 
         }
@@ -42520,16 +43270,22 @@ namespace FakeCQG
         {
             object[] args = new object[1] {change_filter};
             string name = "get_ChangedEntries";
-            var result = (CQGChangedTradeEntries)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGChangedTradeEntriesClass result = new CQGChangedTradeEntriesClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGChangedTradeEntries)resultFlld;
         }
 
         public virtual CQGChangedTradeExits get_ChangedExits(eTradeChangeCategory change_filter = eTradeChangeCategory.tccAll)
         {
             object[] args = new object[1] {change_filter};
             string name = "get_ChangedExits";
-            var result = (CQGChangedTradeExits)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGChangedTradeExitsClass result = new CQGChangedTradeExitsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGChangedTradeExits)resultFlld;
         }
 
         public new Int32 GetHashCode()
@@ -42610,7 +43366,9 @@ namespace FakeCQG
                 string name = "Fill";
                 string FillKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGFillClass prop = new CQGFillClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGFill)propFlld;
             }
 
         }
@@ -42622,7 +43380,9 @@ namespace FakeCQG
                 string name = "HangOrderIds";
                 string HangOrderIdsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStringCollectionClass prop = new CQGStringCollectionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStringCollection)propFlld;
             }
 
         }
@@ -42656,7 +43416,9 @@ namespace FakeCQG
                 string name = "Order";
                 string OrderKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGOrderClass prop = new CQGOrderClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGOrder)propFlld;
             }
 
         }
@@ -42668,7 +43430,9 @@ namespace FakeCQG
                 string name = "Properties";
                 string PropertiesKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGModifiedPropertiesClass prop = new CQGModifiedPropertiesClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGModifiedProperties)propFlld;
             }
 
         }
@@ -42713,7 +43477,9 @@ namespace FakeCQG
                 string name = "StrategyLegFills";
                 string StrategyLegFillsKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGStrategyLegFillsClass prop = new CQGStrategyLegFillsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGStrategyLegFills)propFlld;
             }
 
         }
@@ -42826,7 +43592,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTransactionClass prop = new CQGTransactionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTransaction)propFlld;
             }
 
         }
@@ -42838,7 +43606,9 @@ namespace FakeCQG
                 string name = "ItemByIndex";
                 string ItemByIndexKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGTransactionClass prop = new CQGTransactionClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGTransaction)propFlld;
             }
 
         }
@@ -42866,8 +43636,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {index_};
             string name = "get_ItemByIndex";
-            var result = (CQGTransaction)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGTransactionClass result = new CQGTransactionClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGTransaction)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()
@@ -43188,7 +43961,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGYieldClass prop = new CQGYieldClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGYield)propFlld;
             }
 
         }
@@ -43200,7 +43975,9 @@ namespace FakeCQG
                 string name = "LastError";
                 string LastErrorKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGErrorClass prop = new CQGErrorClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGError)propFlld;
             }
 
         }
@@ -43212,7 +43989,9 @@ namespace FakeCQG
                 string name = "Request";
                 string RequestKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGYieldsRequestClass prop = new CQGYieldsRequestClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGYieldsRequest)propFlld;
             }
 
         }
@@ -43329,7 +44108,7 @@ namespace FakeCQG
         {
             object[] args = new object[2] {tag_name, pVal};
             string name = "set_Tag";
-            CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            bool result = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
         }
 
         public new String ToString()
@@ -43382,7 +44161,9 @@ namespace FakeCQG
                 string name = "Item";
                 string ItemKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGYieldsClass prop = new CQGYieldsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGYields)propFlld;
             }
 
         }
@@ -43394,7 +44175,9 @@ namespace FakeCQG
                 string name = "ItemById";
                 string ItemByIdKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);
                 CQGYieldsClass prop = new CQGYieldsClass();
-                return prop;
+                object propFlld = prop;
+                CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);
+                return (CQGYields)propFlld;
             }
 
         }
@@ -43422,8 +44205,11 @@ namespace FakeCQG
         {
             object[] args = new object[1] {id_};
             string name = "get_ItemById";
-            var result = (CQGYields)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
-            return result;
+            string resultKey = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);
+            CQGYieldsClass result = new CQGYieldsClass();
+            object resultFlld = result;
+            CQG.GetPropertiesFromMatryoshka(ref resultFlld, thisObjUnqKey);
+            return (CQGYields)resultFlld;
         }
 
         public virtual IEnumerator GetEnumerator()

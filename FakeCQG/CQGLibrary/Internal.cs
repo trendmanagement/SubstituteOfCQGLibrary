@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Timers;
@@ -51,12 +52,48 @@ namespace FakeCQG
         #region Internal CQG methods
         public static void SetProperty(string name, string objKey, object value)
         {
+
             bool isTrue = (bool)ExecuteTheQuery(QueryInfo.QueryType.Property, objKey, name, new object[] { value });
             if (!isTrue)
             {
                 OnLogChange(String.Format("Setter ICQGCEL.{0} wasn't successfully completed", name));
             }
         }
+
+        public static void GetPropertiesFromMatryoshka(ref object parentObj, string parentObjKey)
+        {
+            PropertyInfo[] pinfos = parentObj.GetType().GetProperties();
+            foreach (var pi in pinfos)
+            {
+                Type propType = pi.PropertyType;
+                //if (propType == "IEnumerable`1")
+                //{
+                //    propType = "IEnumerable";
+                //}
+                if (pi.PropertyType.Assembly.FullName.Substring(0, 8) == "mscorlib" || pi.PropertyType.IsEnum)
+                {
+                    parentObj.GetType().GetProperty(pi.Name).SetValue(parentObj, ExecuteTheQuery(QueryInfo.QueryType.Property,
+                        parentObjKey, pi.Name));
+                }
+                else
+                {
+                    string propKey = (string)ExecuteTheQuery(QueryInfo.QueryType.Property,
+                        parentObjKey, pi.Name);
+                    object piObj;
+                    if (pi.PropertyType.IsInterface)
+                    {
+                        propType = Type.GetType(propType.ToString() + "Class ");
+                        piObj = Activator.CreateInstance(propType);
+                    }
+                    else
+                    {
+                        piObj = Activator.CreateInstance(propType);
+                    }
+                    GetPropertiesFromMatryoshka( ref piObj, propKey);
+                }
+            }
+        }
+
         #endregion
 
         #region MongoDB communication methods
@@ -134,6 +171,10 @@ namespace FakeCQG
             if (result.ValueKey == "value")
             {
                 return result.Value;
+            }
+            else if(result.ValueKey == "true")
+            {
+                return true;
             }
             else
             {

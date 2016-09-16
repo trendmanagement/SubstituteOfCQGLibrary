@@ -7,7 +7,7 @@ using CQG;
 
 namespace DataCollectionForRealtime
 {
-    public class CQGDataManagement
+    class CQGDataManagement
     {
 
         public  CQGDataManagement(RealtimeDataManagement realtimeDataManagement)

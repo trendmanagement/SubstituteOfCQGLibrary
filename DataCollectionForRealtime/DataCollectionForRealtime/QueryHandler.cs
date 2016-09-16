@@ -9,7 +9,7 @@ using MongoDB.Driver;
 
 namespace DataCollectionForRealtime
 {
-    public class QueryHandler
+    class QueryHandler
     {
         private CQGDataManagement cqgDataManagement;
 
@@ -20,9 +20,7 @@ namespace DataCollectionForRealtime
         public Assembly CQGAssembly
         {
             get { return CQGAssm; }
-        }
-
-        public QueryHandler(RealtimeDataManagement rdm)
+        }        public QueryHandler(RealtimeDataManagement rdm)
         {
             cqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>();
@@ -163,10 +161,12 @@ namespace DataCollectionForRealtime
                     qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     //MethodInfo mi = qObj.GetType().GetMethod(query.QueryName);
 
-                    int numOfArgs = query.ArgKeys.Count + query.ArgValues.Count;           
+                    int numOfArgs = (query.ArgKeys != null? query.ArgKeys.Count : 0) + (query.ArgValues != null ? query.ArgValues.Count : 0);
+
 
                     //TODO: Make sure, that correct type of object member passed to the CreateInstance method as arg below
-                    object retunV = Activator.CreateInstance(qObj.GetType().GetMember(query.QueryName).GetType());
+                    Type returnType = qObj.GetType().GetMethod(query.QueryName).ReturnType;
+                    object retunV = Activator.CreateInstance(returnType);
                     
                     if (numOfArgs != 0)
                     {
@@ -187,30 +187,52 @@ namespace DataCollectionForRealtime
                                 methodArgs[argPair.Key] = argPair.Value;
                             }
                         }
-
-                        //TODO: Ensure that type of variable and its value will be correct
-                        retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, methodArgs);
+                        
+                        if (returnType != typeof(void))
+                        {
+                            //TODO: Ensure that type of variable and its value will be correct
+                            retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, methodArgs);
+                        }
+                        else
+                        {
+                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, methodArgs);
+                        }
                     }
                     else
                     {
-                        //TODO: Ensure that type of variable and its value will be correct
-                        retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, null);
+                        if (returnType != typeof(void))
+                        {
+                            //TODO: Ensure that type of variable and its value will be correct
+                            retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, null);
+                        }
+                        else
+                        {
+                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, null);
+                        }
                     }
-                    
- 
-                    if (retunV.GetType().Assembly.FullName.Substring(0, 8) != "mscorlib")
+
+                    if (returnType != typeof(void))
                     {
-                        var returnKey = Guid.NewGuid().ToString("D");
-                        DataDictionaries.PutAnswerToTheDictionary(returnKey, retunV);
+                        if (retunV.GetType().Assembly.FullName.Substring(0, 8) != "mscorlib" || !retunV.GetType().IsEnum)
+                        {
+                            var returnKey = Guid.NewGuid().ToString("D");
+                            DataDictionaries.PutAnswerToTheDictionary(returnKey, retunV);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                            isSuccessful = true;
+                        }
+                        else
+                        {
+                            var returnKey = "value";
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: retunV);
+                            isSuccessful = true;
+                        }
+                    }
+                    else
+                    {
+                        var returnKey = "true";
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                         isSuccessful = true;
-                    }
-                    else
-                    {
-                        var returnKey = "value";
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: retunV);
-                        isSuccessful = true;
-                    }
+                    }    
 
                     DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                     LoadInAnswer(answer);
@@ -291,7 +313,7 @@ namespace DataCollectionForRealtime
             var filter = Builders<QueryInfo>.Filter.Eq("Key", key);
             try
             {
-                collectionQ.DeleteOne(filter);
+                collectionQ.DeleteOneAsync(filter);
                 AsyncTaskListener.LogMessage("Query was successfully deleted.");
             }
             catch (Exception ex)
@@ -300,7 +322,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-        public static Type FindDelegateType(Assembly assm, string eventName)
+        static Type FindDelegateType(Assembly assm, string eventName)
         {
             string delegateTypeName = string.Format("_ICQGCELEvents_{0}EventHandler", eventName);
             foreach (Type type in assm.ExportedTypes)
@@ -317,7 +339,7 @@ namespace DataCollectionForRealtime
             return null;
         }
 
-        public static bool IsDelegate(Type type)
+        static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
         }
