@@ -15,5 +15,6 @@ namespace FakeCQG.Helpers
 
         public const string QueryCollectionName = "Queries";
         public const string AnswerCollectionName = "Answers";
+        public const string HandShakingCollectionName = "HandShaking";
     }
 }

@@ -64,11 +64,15 @@
   <ItemGroup>
     <Compile Include="CQGLibrary.cs" />
     <Compile Include="DataDictionaries.cs" />
+    <Compile Include="HandShaking\Listener.cs" />
+    <Compile Include="HandShaking\Subscriber.cs" />
     <Compile Include="Helpers\AnswerHelper.cs" />
     <Compile Include="Helpers\ConnectionSettings.cs" />
+    <Compile Include="Helpers\MongoHelper.cs" />
     <Compile Include="Internal.cs" />
     <Compile Include="Models\AnswerInfo.cs" />
     <Compile Include="Helpers\QueryHelper.cs" />
+    <Compile Include="Models\HandShakerModel.cs" />
     <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,6 +85,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

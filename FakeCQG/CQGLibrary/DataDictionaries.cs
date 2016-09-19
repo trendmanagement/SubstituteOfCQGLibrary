@@ -76,5 +76,10 @@ namespace FakeCQG
                 }
             }
         }
+
+        public static void RemoveObject(string key)
+        {
+            objDictionary.Remove(key);
+        }
     }
 }

@@ -8,7 +8,7 @@
 
             File.WriteLine(Indent1 + "~" + typeName + "()");
             File.WriteLine(Indent1 + "{");
-            File.WriteLine(Indent2 + "throw new NotImplementedException();");
+            File.WriteLine(Indent2 + "LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Constructor, string.Empty, thisObjUnqKey, null, null));");
 
             MemberEnd();
         }

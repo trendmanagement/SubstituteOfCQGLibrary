@@ -13,6 +13,7 @@ namespace TestRealTime
         public MainForm()
         {
             InitializeComponent();
+
             FakeCQG.CQG.LogChange += CQG_LogChange;
             FakeCQG.CQG.GetQueries += CQG_GetQueries;
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
