@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using CQGLibrary.HandShaking;
 
 
 using FakeCQG;
@@ -28,6 +29,8 @@ namespace DataCollectionForRealtime
             cqgDataManagement = new CQGDataManagement(this);
 
             queryHandler = new QueryHandler(cqgDataManagement);
+
+            Listener.StartListerning(5000);
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
         }

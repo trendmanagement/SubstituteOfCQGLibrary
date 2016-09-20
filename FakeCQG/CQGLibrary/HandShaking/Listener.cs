@@ -18,9 +18,9 @@ namespace CQGLibrary.HandShaking
         static Timer timer;
 
         public delegate void ListenerEventHandler(List<HandShakerModel> subscribers);
-        public static event ListenerEventHandler OnSubscribersAdded;
+        public static event ListenerEventHandler SubscribersAdded;
 
-        public static Task CheckListeners()
+        public static Task StartHandShaking()
         {
             MongoHelper mongo = new MongoHelper();
             var collection = mongo.GetCollection;
@@ -42,11 +42,28 @@ namespace CQGLibrary.HandShaking
         {
             var filter = Builders<HandShakerModel>.Filter.Empty;
             List<HandShakerModel> subscribers = new List<HandShakerModel>();
-            while (true)
+            subscribers = collection.Find(filter).ToList();
+            OnSubscribersAdded(subscribers);
+        }
+
+        private static void OnSubscribersAdded(List<HandShakerModel> subscribers)
+        {
+            //TODO: Implement logic for variant without subscribers and for only one suscriber
+            if(subscribers.Count == 0)
             {
-                subscribers = collection.Find(filter).ToList();
-                OnSubscribersAdded(subscribers);
+                FakeCQG.CQG.OnLogChange("No subscribers for handshaking");
             }
+            else if(subscribers.Count == 1)
+            {
+                FakeCQG.CQG.OnLogChange("DC has one subscriber");
+                SubscribersAdded(subscribers);
+            }
+            else
+            {
+                FakeCQG.CQG.OnLogChange(string.Format("DC has {0} subscribers", subscribers.Count));
+                SubscribersAdded(subscribers);
+            }
+            timer.Start();
         }
 
         private static void SendHandShakerQuery(IMongoCollection<HandShakerModel> collection)
@@ -63,10 +80,17 @@ namespace CQGLibrary.HandShaking
             collection.DeleteMany(filter);
         }
 
-        public static void StartListerning(int timer)
+        public static void StartListerning(int time)
         {
+            timer = new Timer(time);
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
             //TODO: Implement periodic push handshaking queries
         }
 
+        private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            StartHandShaking();
+        }
     }
 }

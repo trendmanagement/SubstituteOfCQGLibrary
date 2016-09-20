@@ -10292,7 +10292,7 @@ namespace FakeCQG
         #region Destructor
         ~_ICQGCELEvents_SinkHelper()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11051,7 +11051,7 @@ namespace FakeCQG
         #region Destructor
         ~_ICQGCELGeneralEvents_SinkHelper()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11159,7 +11159,7 @@ namespace FakeCQG
         #region Destructor
         ~_ICQGCELInstrumentEvents_SinkHelper()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11262,7 +11262,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAccountClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11619,7 +11619,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAccountsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11773,7 +11773,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAccountSummariesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -11884,7 +11884,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAccountSummaryClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -12079,7 +12079,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAdvancedStudiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -12215,7 +12215,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAdvancedStudyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -12465,7 +12465,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAdvancedStudyDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -12594,7 +12594,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAdvancedStudyDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -12741,7 +12741,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAdvancedStudyRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13104,7 +13104,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgorithmicOrderDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13284,7 +13284,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgorithmicOrderDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13412,7 +13412,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgorithmicOrderParametersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13667,7 +13667,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgorithmicOrderPropertiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13778,7 +13778,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgorithmicOrderPropertyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13879,7 +13879,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAlgoSupplierClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -13955,7 +13955,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGAPIConfigClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -14637,7 +14637,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGBarsTimestampsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -14790,7 +14790,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCELClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -18649,7 +18649,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGChangedTradeEntriesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -18771,7 +18771,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGChangedTradeEntryClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -18875,7 +18875,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGChangedTradeExitClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -18979,7 +18979,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGChangedTradeExitsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19101,7 +19101,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCommoditiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19220,7 +19220,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCommodityInstrumentsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19339,7 +19339,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19575,7 +19575,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19679,7 +19679,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -19815,7 +19815,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -20163,7 +20163,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionResultClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -20264,7 +20264,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConditionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -20400,7 +20400,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConstantVolumeBarClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -20666,7 +20666,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConstantVolumeBarsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -20880,7 +20880,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConstantVolumeBarsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21016,7 +21016,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGConstantVolumeBarsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21335,7 +21335,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurrencyRateClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21494,7 +21494,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurrencyRatesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21605,7 +21605,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurveDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21695,7 +21695,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurveDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21831,7 +21831,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurveHeadersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -21939,7 +21939,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCurvesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -22069,7 +22069,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCustomStudiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -22205,7 +22205,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCustomStudyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -22455,7 +22455,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCustomStudyDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -22584,7 +22584,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCustomStudyDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -22731,7 +22731,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGCustomStudyRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -23094,7 +23094,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDataSourceClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -23217,7 +23217,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDataSourcesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -23353,7 +23353,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDataSourceSymbolClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -23465,7 +23465,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDataSourceSymbolsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -23594,7 +23594,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDirectEventsAccessorClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24056,7 +24056,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGDOMQuotesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24192,7 +24192,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGEnvironmentClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24423,7 +24423,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGErrorClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24535,7 +24535,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExchangesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24654,7 +24654,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExecutionPatternClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24758,7 +24758,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExecutionPatternParameterClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -24889,7 +24889,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExecutionPatternParametersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25018,7 +25018,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExpressionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25254,7 +25254,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExpressionOutputHeadersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25362,7 +25362,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExpressionOutputsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25492,7 +25492,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExpressionRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25824,7 +25824,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGExpressionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -25960,7 +25960,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGFillClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26229,7 +26229,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGFillsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26365,7 +26365,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGGWTradeClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26579,7 +26579,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGGWTradesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26715,7 +26715,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGHistoricalSessionsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26858,7 +26858,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGHolidayClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -26970,7 +26970,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGHolidaysClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -27095,7 +27095,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -27867,7 +27867,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentPropertiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -27978,7 +27978,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentPropertyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28126,7 +28126,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28237,7 +28237,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentsGroupClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28355,7 +28355,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentsGroupRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28514,7 +28514,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentsGroupsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28625,7 +28625,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGInstrumentSubscriptionRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28784,7 +28784,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGIntegerCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28892,7 +28892,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGLoggerClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -28992,7 +28992,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGManualFillClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29181,7 +29181,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGManualFillRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29404,7 +29404,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGManualFillsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29548,7 +29548,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGManualFillsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29670,7 +29670,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGModifiedPropertiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29806,7 +29806,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGModifiedPropertyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -29940,7 +29940,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderActionRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -30137,7 +30137,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderChainClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -30266,7 +30266,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -30891,7 +30891,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderModifyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -30984,7 +30984,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderPropertiesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31095,7 +31095,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderPropertyClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31259,7 +31259,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrdersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31453,7 +31453,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrdersQueryClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31652,7 +31652,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGOrderStatisticsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31767,7 +31767,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGParameterDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -31904,7 +31904,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGParameterDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -32040,7 +32040,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPointAndFigureBarClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -32207,7 +32207,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPointAndFigureBarsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -32421,7 +32421,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPointAndFigureBarsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -32557,7 +32557,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPointAndFigureBarsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -32892,7 +32892,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPositionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33148,7 +33148,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPositionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33284,7 +33284,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGPositionsStatementClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33399,7 +33399,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGQFormulaDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33511,7 +33511,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGQFormulaDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33647,7 +33647,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGQuoteClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33828,7 +33828,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGQuotesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -33939,7 +33939,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGRemoteOpenAPISessionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34051,7 +34051,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSessionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34295,7 +34295,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSessionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34483,7 +34483,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSessionsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34594,7 +34594,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGStrategyDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34742,7 +34742,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGStrategyDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -34878,7 +34878,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGStrategyLegFillClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35004,7 +35004,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGStrategyLegFillsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35119,7 +35119,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGStringCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35227,7 +35227,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSubMinuteBarClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35493,7 +35493,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSubMinuteBarsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35707,7 +35707,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSubMinuteBarsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -35843,7 +35843,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSubMinuteBarsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -36162,7 +36162,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGSummariesStatementClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -36291,7 +36291,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTFlowBarClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -36573,7 +36573,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTFlowBarsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -36787,7 +36787,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTFlowBarsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -36923,7 +36923,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTFlowBarsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -37258,7 +37258,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTickClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -37447,7 +37447,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTicksClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -37687,7 +37687,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTicksCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -37823,7 +37823,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTicksRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -37998,7 +37998,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTimedBarClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -38330,7 +38330,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTimedBarsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -38552,7 +38552,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTimedBarsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -38688,7 +38688,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTimedBarsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39012,7 +39012,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39168,7 +39168,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeEntriesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39279,7 +39279,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeEntryClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39455,7 +39455,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeEntryDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39567,7 +39567,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeExitClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39743,7 +39743,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeExitDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -39866,7 +39866,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeExitDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40002,7 +40002,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradeExitsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40138,7 +40138,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradesClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40249,7 +40249,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemAddInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40325,7 +40325,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemBaseBarParameterClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40442,7 +40442,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemBaseBarParametersClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40553,7 +40553,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40755,7 +40755,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -40906,7 +40906,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41053,7 +41053,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemInsertInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41143,7 +41143,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemRelationAddInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41272,7 +41272,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemRemoveInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41362,7 +41362,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41745,7 +41745,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41881,7 +41881,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemStatisticsChangeInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -41982,7 +41982,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemStatisticsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -42388,7 +42388,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemStatisticsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -42514,7 +42514,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemTradeClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -42682,7 +42682,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemTradeDefinitionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -42811,7 +42811,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemTradeDefinitionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -42947,7 +42947,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemTradesRowClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43105,7 +43105,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemTradesRowsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43216,7 +43216,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTradingSystemUpdateInfoClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43342,7 +43342,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTransactionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43568,7 +43568,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGTransactionsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43704,7 +43704,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGYieldClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -43915,7 +43915,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGYieldsClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -44137,7 +44137,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGYieldsCollectionClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion
@@ -44273,7 +44273,7 @@ namespace FakeCQG
         #region Destructor
         ~CQGYieldsRequestClass()
         {
-            throw new NotImplementedException();
+            CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Destructor, string.Empty, thisObjUnqKey, null, null));
         }
 
         #endregion

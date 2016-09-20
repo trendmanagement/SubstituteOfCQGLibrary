@@ -45,7 +45,7 @@ namespace FakeCQG
         public static event LogHandler LogChange;
         
         //Changed the access level of visibility for testing
-        public static int QueryTemeout = int.MaxValue;  // Currently set to the max value for debugging
+        public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
         #endregion
 
@@ -193,7 +193,7 @@ namespace FakeCQG
             //}
             //DataDictionaries.IsAnswer.Remove(key);
             //return answer;
-            bool success = task.Wait(QueryTemeout);
+            bool success = task.Wait(QueryTimeout);
             if (success)
             {
                 DataDictionaries.IsAnswer.Remove(key);
@@ -517,7 +517,7 @@ namespace FakeCQG
         #endregion
 
         #region Handlers
-        private static void OnLogChange(string key, string value, bool isQuery)
+        internal static void OnLogChange(string key, string value, bool isQuery)
         {
             if (isQuery)
             {
@@ -533,7 +533,7 @@ namespace FakeCQG
             }
         }
 
-        private static void OnLogChange(string message)
+        internal static void OnLogChange(string message)
         {
             _log = message;
             if (LogChange != null)

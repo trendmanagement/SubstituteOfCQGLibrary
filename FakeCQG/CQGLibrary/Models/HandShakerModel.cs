@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,15 @@ namespace CQGLibrary.Models
 {
     public class HandShakerModel
     {
+        [BsonId]
+        Guid _id;
+        public Guid ID
+        {
+            get { return _id; }
+        }
+
         private string _key;
+
         public string Key
         {
             get { return _key; }
@@ -17,6 +27,7 @@ namespace CQGLibrary.Models
 
         public HandShakerModel(string key)
         {
+            _id = Guid.NewGuid();
             _key = key;
         }
     }

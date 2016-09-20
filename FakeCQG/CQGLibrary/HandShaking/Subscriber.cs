@@ -19,17 +19,30 @@ namespace CQGLibrary.HandShaking
         {
             return Task.Run(() =>
             {
+                FakeCQG.CQG.OnLogChange("Listerning handshacking is started");
+
                 const string key = "HANDSHAKING";
                 MongoHelper mongo = new MongoHelper();
                 var collection = mongo.GetCollection;
-                var filter = Builders<HandShakerModel>.Filter.Eq("Key", key);
+                var filterKey = Builders<HandShakerModel>.Filter.Eq("Key", key);
+                var filterId = Builders<HandShakerModel>.Filter.Eq("_id", handShaker.ID);
                 while (true)
                 {
-                    var subscriber = collection.Find(filter).FirstOrDefault();
-
-                    if (subscriber != null)
+                    try
                     {
-                        collection.InsertOne(handShaker);
+                        bool isHandShakingQuery = (collection.Find(filterKey).FirstOrDefault() != null);
+                        bool isAnswer = (collection.Find(filterId).FirstOrDefault() != null);
+
+                        if (isHandShakingQuery && !isAnswer)
+                        {
+                            collection.InsertOne(handShaker);
+                            FakeCQG.CQG.OnLogChange(key);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        string message = ex.Message;
+                        FakeCQG.CQG.OnLogChange(message);
                     }
                 }
             });
