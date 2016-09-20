@@ -92,22 +92,23 @@ namespace DataCollectionForRealtime
             {
                 case QueryInfo.QueryType.Constructor:
                     
-                    switch (query.QueryName)
-                    {
-                        case "CQG.CQGCELClass":
-                            qObj = cqgDataManagement.M_CEL;
-                            break;
-                        default:
-                            //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
-                            qObj = CQGAssm.CreateInstance(query.QueryName);
-                            break;
-                    }
-                    
+                    //switch (query.QueryName)
+                    //{
+                    //    case "CQG.CQGCELClass":
+                    //        qObj = cqgDataManagement.M_CEL;
+                    //        break;
+                    //    default:
+                    //        //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
+                    //        qObj = CQGAssm.CreateInstance(query.QueryName);
+                    //        break;
+                    //}
+                    qObj = CQGAssm.CreateInstance(query.QueryName);
+                   
                     DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                     answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
                     LoadInAnswer(answer);
                     break;
-
+                    
                 case QueryInfo.QueryType.Property:
                     qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     var value = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, null);
@@ -167,16 +168,10 @@ namespace DataCollectionForRealtime
                     //MethodInfo mi = qObj.GetType().GetMethod(query.QueryName);
 
                     int numOfArgs = (query.ArgKeys != null? query.ArgKeys.Count : 0) + (query.ArgValues != null ? query.ArgValues.Count : 0);
+                    object[] methodArgs = new object[numOfArgs];
 
-
-                    //TODO: Make sure, that correct type of object member passed to the CreateInstance method as arg below
-                    Type returnType = qObj.GetType().GetMethod(query.QueryName).ReturnType;
-                    object retunV = Activator.CreateInstance(returnType);
-                    
                     if (numOfArgs != 0)
                     {
-                        object[] methodArgs = new object[numOfArgs];
-
                         if (query.ArgKeys != null)
                         {
                             foreach (KeyValuePair<int, string> argPair in query.ArgKeys)
@@ -192,32 +187,16 @@ namespace DataCollectionForRealtime
                                 methodArgs[argPair.Key] = argPair.Value;
                             }
                         }
-                        
-                        if (returnType != typeof(void))
-                        {
-                            //TODO: Ensure that type of variable and its value will be correct
-                            retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, methodArgs);
-                        }
-                        else
-                        {
-                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, methodArgs);
-                        }
-                    }
-                    else
-                    {
-                        if (returnType != typeof(void))
-                        {
-                            //TODO: Ensure that type of variable and its value will be correct
-                            retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, null);
-                        }
-                        else
-                        {
-                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, null);
-                        }
                     }
 
+                    //TODO: Make sure, that correct type of object member passed to the CreateInstance method as arg below
+                    Type returnType = qObj.GetType().GetMethod(query.QueryName).ReturnType;
                     if (returnType != typeof(void))
                     {
+                        object retunV = Activator.CreateInstance(returnType);
+                        retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, 
+                            numOfArgs != 0 ? methodArgs : null);
+
                         if (retunV.GetType().Assembly.FullName.Substring(0, 8) != "mscorlib" || !retunV.GetType().IsEnum)
                         {
                             var returnKey = Guid.NewGuid().ToString("D");
@@ -234,10 +213,11 @@ namespace DataCollectionForRealtime
                     }
                     else
                     {
+                        qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, numOfArgs != 0 ? methodArgs : null);
                         var returnKey = "true";
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                         isSuccessful = true;
-                    }    
+                    }
 
                     DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                     LoadInAnswer(answer);

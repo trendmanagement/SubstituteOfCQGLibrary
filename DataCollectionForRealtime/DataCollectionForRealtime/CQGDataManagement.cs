@@ -79,7 +79,7 @@ namespace DataCollectionForRealtime
                 m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);
                 m_CEL.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
-                
+
                 //m_CEL.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(m_CEL_TimedBarResolved);
                 //m_CEL.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(m_CEL_TimedBarsAdded);
                 //m_CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(m_CEL_TimedBarsUpdated);
@@ -87,7 +87,7 @@ namespace DataCollectionForRealtime
                 ////m_CEL.IncorrectSymbol += new _ICQGCELEvents_IncorrectSymbolEventHandler(CEL_IncorrectSymbol);
                 //m_CEL.InstrumentSubscribed += new _ICQGCELEvents_InstrumentSubscribedEventHandler(m_CEL_InstrumentSubscribed);
                 //m_CEL.InstrumentChanged += new _ICQGCELEvents_InstrumentChangedEventHandler(m_CEL_InstrumentChanged);
-
+                
                 m_CEL.DataError += new _ICQGCELEvents_DataErrorEventHandler(m_CEL_DataError);
 
                 //m_CEL.APIConfiguration.NewInstrumentMode = true;
