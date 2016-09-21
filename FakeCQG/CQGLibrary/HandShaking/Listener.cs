@@ -17,7 +17,7 @@ namespace CQGLibrary.HandShaking
         static HandShakerModel handShaking = new HandShakerModel(key);
         static Timer timer;
 
-        public delegate void ListenerEventHandler(List<HandShakerModel> subscribers);
+        public delegate void ListenerEventHandler(HandShakingEventArgs args);
         public static event ListenerEventHandler SubscribersAdded;
 
         public static Task StartHandShaking()
@@ -52,16 +52,12 @@ namespace CQGLibrary.HandShaking
             if(subscribers.Count == 0)
             {
                 FakeCQG.CQG.OnLogChange("No subscribers for handshaking");
-            }
-            else if(subscribers.Count == 1)
-            {
-                FakeCQG.CQG.OnLogChange("DC has one subscriber");
-                SubscribersAdded(subscribers);
+                SubscribersAdded(new HandShakingEventArgs());
             }
             else
             {
                 FakeCQG.CQG.OnLogChange(string.Format("DC has {0} subscribers", subscribers.Count));
-                SubscribersAdded(subscribers);
+                SubscribersAdded(new HandShakingEventArgs(subscribers));
             }
             timer.Start();
         }

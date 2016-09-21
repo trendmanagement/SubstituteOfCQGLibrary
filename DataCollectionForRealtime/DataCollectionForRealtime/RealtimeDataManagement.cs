@@ -12,6 +12,7 @@ using CQGLibrary.HandShaking;
 using FakeCQG;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
+using CQGLibrary.Models;
 
 namespace DataCollectionForRealtime
 {
@@ -22,6 +23,8 @@ namespace DataCollectionForRealtime
 
         private QueryHandler queryHandler;
 
+        int timeForHandShaking = 5000;
+
         public RealtimeDataManagement()
         {
             InitializeComponent();
@@ -30,9 +33,27 @@ namespace DataCollectionForRealtime
 
             queryHandler = new QueryHandler(cqgDataManagement);
 
-            Listener.StartListerning(5000);
+            Listener.StartListerning(timeForHandShaking);
+
+            Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
+        }
+
+        private void Listener_SubscribersAdded(HandShakingEventArgs args)
+        {
+            DataDictionaries.RealTimeIds = new HashSet<Guid>();
+            if (!args.NoSubscribers)
+            {
+                foreach (var subscriber in args.Subscribers)
+                {
+                    DataDictionaries.RealTimeIds.Add(subscriber.ID);
+                }
+            }
+            else
+            {
+                DataDictionaries.ClearAllDictionaris();
+            }
         }
 
         internal void updateConnectionStatus(string connectionStatusLabel,
