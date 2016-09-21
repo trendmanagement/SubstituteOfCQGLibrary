@@ -37,19 +37,19 @@
             this.mainRealtimeMenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemListern = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tabPageMongo = new System.Windows.Forms.TabPage();
-            this.buttonCheck = new System.Windows.Forms.Button();
-            this.buttonFill = new System.Windows.Forms.Button();
-            this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
-            this.checkBoxAuto = new System.Windows.Forms.CheckBox();
             this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.tabPageMongo = new System.Windows.Forms.TabPage();
+            this.checkBoxAuto = new System.Windows.Forms.CheckBox();
+            this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
+            this.buttonFill = new System.Windows.Forms.Button();
+            this.buttonCheck = new System.Windows.Forms.Button();
             this.statusStripOptionMonitor.SuspendLayout();
             this.mainRealtimeMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tabPageMongo.SuspendLayout();
             this.tabControlMain.SuspendLayout();
+            this.tabPageMongo.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripOptionMonitor
@@ -127,6 +127,16 @@
             this.splitContainer1.SplitterDistance = 208;
             this.splitContainer1.TabIndex = 10;
             // 
+            // tabControlMain
+            // 
+            this.tabControlMain.Controls.Add(this.tabPageMongo);
+            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(559, 304);
+            this.tabControlMain.TabIndex = 7;
+            // 
             // tabPageMongo
             // 
             this.tabPageMongo.Controls.Add(this.checkBoxAuto);
@@ -141,25 +151,15 @@
             this.tabPageMongo.Text = "Mongo-CQG";
             this.tabPageMongo.UseVisualStyleBackColor = true;
             // 
-            // buttonCheck
+            // checkBoxAuto
             // 
-            this.buttonCheck.Location = new System.Drawing.Point(7, 7);
-            this.buttonCheck.Name = "buttonCheck";
-            this.buttonCheck.Size = new System.Drawing.Size(166, 23);
-            this.buttonCheck.TabIndex = 0;
-            this.buttonCheck.Text = "Check queries in MongoDB";
-            this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
-            // 
-            // buttonFill
-            // 
-            this.buttonFill.Location = new System.Drawing.Point(179, 7);
-            this.buttonFill.Name = "buttonFill";
-            this.buttonFill.Size = new System.Drawing.Size(104, 23);
-            this.buttonFill.TabIndex = 1;
-            this.buttonFill.Text = "Fill empty data";
-            this.buttonFill.UseVisualStyleBackColor = true;
-            this.buttonFill.Click += new System.EventHandler(this.buttonFill_Click);
+            this.checkBoxAuto.AutoSize = true;
+            this.checkBoxAuto.Location = new System.Drawing.Point(444, 12);
+            this.checkBoxAuto.Name = "checkBoxAuto";
+            this.checkBoxAuto.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxAuto.TabIndex = 3;
+            this.checkBoxAuto.Text = "Automatic work";
+            this.checkBoxAuto.UseVisualStyleBackColor = true;
             // 
             // richTextBoxLog
             // 
@@ -169,25 +169,25 @@
             this.richTextBoxLog.TabIndex = 2;
             this.richTextBoxLog.Text = "";
             // 
-            // checkBoxAuto
+            // buttonFill
             // 
-            this.checkBoxAuto.AutoSize = true;
-            this.checkBoxAuto.Location = new System.Drawing.Point(290, 12);
-            this.checkBoxAuto.Name = "checkBoxAuto";
-            this.checkBoxAuto.Size = new System.Drawing.Size(99, 17);
-            this.checkBoxAuto.TabIndex = 3;
-            this.checkBoxAuto.Text = "Automatic work";
-            this.checkBoxAuto.UseVisualStyleBackColor = true;
+            this.buttonFill.Location = new System.Drawing.Point(163, 7);
+            this.buttonFill.Name = "buttonFill";
+            this.buttonFill.Size = new System.Drawing.Size(271, 23);
+            this.buttonFill.TabIndex = 1;
+            this.buttonFill.Text = "Process the request and send a response to the DB";
+            this.buttonFill.UseVisualStyleBackColor = true;
+            this.buttonFill.Click += new System.EventHandler(this.buttonFill_Click);
             // 
-            // tabControlMain
+            // buttonCheck
             // 
-            this.tabControlMain.Controls.Add(this.tabPageMongo);
-            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(559, 304);
-            this.tabControlMain.TabIndex = 7;
+            this.buttonCheck.Location = new System.Drawing.Point(7, 7);
+            this.buttonCheck.Name = "buttonCheck";
+            this.buttonCheck.Size = new System.Drawing.Size(150, 23);
+            this.buttonCheck.TabIndex = 0;
+            this.buttonCheck.Text = "Check queries in MongoDB";
+            this.buttonCheck.UseVisualStyleBackColor = true;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // RealtimeDataManagement
             // 
@@ -207,9 +207,9 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tabControlMain.ResumeLayout(false);
             this.tabPageMongo.ResumeLayout(false);
             this.tabPageMongo.PerformLayout();
-            this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

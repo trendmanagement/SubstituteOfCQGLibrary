@@ -77,6 +77,7 @@ namespace TestRealTime
         private async void buttonCall_Click(object sender, EventArgs e)
         {
             bool isStarted = cqgcel.IsStarted;
+            cqgcel.Shutdown();
             await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Property, "key", string.Empty, "name", null, null));
         }
     }
