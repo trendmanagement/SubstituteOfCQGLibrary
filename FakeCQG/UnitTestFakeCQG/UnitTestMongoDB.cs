@@ -409,7 +409,7 @@ namespace UnitTestFakeCQG
             string name = "name";
             Timer timer = new Timer();
             bool isThrownException = false;
-            FakeCQG.CQG.QueryTemeout = 1000;
+            FakeCQG.CQG.QueryTimeout = 1000;
             FakeCQG.CQG.LogChange += CQG_LogChange_NoAnswer;
             Task.Run(async () =>
             {

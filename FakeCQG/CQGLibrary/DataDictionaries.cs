@@ -33,6 +33,8 @@ namespace FakeCQG
             }
         }
 
+        public static HashSet<Guid> RealTimeIds = new HashSet<Guid>();
+
         public static bool KeyExistInObjectDictionary(string key)
         {
             return objDictionary.ContainsKey(key);
@@ -75,6 +77,19 @@ namespace FakeCQG
                     eventCheckingDictionary[einfo.Name] = false;
                 }
             }
+        }
+
+        public static void RemoveObject(string key)
+        {
+            objDictionary.Remove(key);
+        }
+
+        public static void ClearAllDictionaris()
+        {
+            objDictionary = new Dictionary<string, object>();
+            answerDictionary = new Dictionary<string, object>();
+            isAnswer = new Dictionary<string, bool>();
+            eventCheckingDictionary = new Dictionary<string, bool>();
         }
     }
 }

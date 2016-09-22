@@ -90,6 +90,9 @@ namespace DataCollectionForRealtime
             //Handling of a request depending on its kind
             switch (query.TypeOfQuery)
             {
+                case QueryInfo.QueryType.Destructor:
+                    DataDictionaries.RemoveObject(query.ObjectKey);
+                    break;
                 case QueryInfo.QueryType.Constructor:
                     
                     //switch (query.QueryName)

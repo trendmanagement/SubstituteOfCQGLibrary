@@ -6,7 +6,7 @@ namespace FakeCQG.Models
 {
     public class QueryInfo
     {
-        public enum QueryType {Property, Method, Constructor, Event}
+        public enum QueryType {Property, Method, Constructor, Event, Destructor}
 
         [BsonId]
         [BsonRepresentation(BsonType.String)]
