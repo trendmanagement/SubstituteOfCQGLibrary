@@ -108,7 +108,7 @@ namespace DataCollectionForRealtime
                     qObj = CQGAssm.CreateInstance(query.QueryName);
                    
                     DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                    answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
                     LoadInAnswer(answer);
                     break;
                     
@@ -138,7 +138,7 @@ namespace DataCollectionForRealtime
                             }
 
                             qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, new object[] { val });
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
                         }
                         else
                         {
@@ -147,13 +147,13 @@ namespace DataCollectionForRealtime
                             if (propV.GetType().Assembly.FullName.Substring(0, 8) == "mscorlib" || propV.GetType().IsEnum)
                             {
                                 var answerKey = "value";
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                                answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
                             }
                             else
                             {
                                 var answerKey = Guid.NewGuid().ToString("D");
                                 DataDictionaries.PutAnswerToTheDictionary(answerKey, propV);
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                                answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
                             }
                             LoadInAnswer(answer);
                         }
@@ -204,13 +204,13 @@ namespace DataCollectionForRealtime
                         {
                             var returnKey = Guid.NewGuid().ToString("D");
                             DataDictionaries.PutAnswerToTheDictionary(returnKey, retunV);
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                             isSuccessful = true;
                         }
                         else
                         {
                             var returnKey = "value";
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: retunV);
+                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: retunV);
                             isSuccessful = true;
                         }
                     }
@@ -218,7 +218,7 @@ namespace DataCollectionForRealtime
                     {
                         qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, numOfArgs != 0 ? methodArgs : null);
                         var returnKey = "true";
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                        answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                         isSuccessful = true;
                     }
 
@@ -258,7 +258,7 @@ namespace DataCollectionForRealtime
                     }
 
                     DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                    answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
                     LoadInAnswer(answer);
                     break;
             }
@@ -330,6 +330,22 @@ namespace DataCollectionForRealtime
         internal static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
+        }
+
+        public AnswerInfo GenerateAnswer(string key, string objKey, string name, Dictionary<int, object> argVals = null, string vKey = null, object val = null,
+            bool isEventQ = false)
+        {
+            AnswerInfo answer = new AnswerInfo(key, objKey, name, argVals, vKey, val, isEventQ);
+            try
+            {
+                //TODO: Create logic for getting value from real CQG
+            }
+            catch(Exception ex)
+            {
+                answer.IsCQGException = true;
+                answer.CQGException = new Action(() => { throw ex; });
+            }
+            return answer;
         }
     }
 }
