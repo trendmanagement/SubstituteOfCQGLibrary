@@ -14,33 +14,32 @@ namespace CodeGenerator
             // Add public constructors
             foreach (ConstructorInfo cinfo in cinfos)
             {
-                CreateCtor(cinfo, eventsChecking);
+                CreatePublicCtor(cinfo, eventsChecking);
             }
 
-            if (cinfos.Length == 0 && !type.IsValueType)
+            if (!type.IsValueType)
             {
-                // Add a default internal costructor
-                CreateCtor(type.Name, eventsChecking);
+                // Add an internal costructor taking data collector object key
+                CreateInternalCtor(type.Name, eventsChecking);
             }
         }
 
-        static void CreateCtor(ConstructorInfo cinfo, bool eventsChecking)
+        static void CreatePublicCtor(ConstructorInfo cinfo, bool eventsChecking)
         {
             CreateMethodSignature(cinfo);
 
-            File.WriteLine(Indent2 + "thisObjUnqKey = Guid.NewGuid().ToString(\"D\");");
             File.WriteLine(Indent2 + "string name = \"" + cinfo.DeclaringType + "\";");
-            File.WriteLine(Indent2 + "string v = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Constructor, thisObjUnqKey, name);");
+            File.WriteLine(Indent2 + "dcObjKey = CQG.CallCtor(name);");
 
             CtorEnd(eventsChecking);
         }
 
-        static void CreateCtor(string typeName, bool eventsChecking)
+        static void CreateInternalCtor(string typeName, bool eventsChecking)
         {
-            File.WriteLine(Indent1 + "internal " + typeName + "()");
+            File.WriteLine(Indent1 + "internal " + typeName + "(string dcObjKey)");
             File.WriteLine(Indent1 + "{");
 
-            File.WriteLine(Indent2 + "thisObjUnqKey = Guid.NewGuid().ToString(\"D\");");
+            File.WriteLine(Indent2 + "this.dcObjKey = dcObjKey;");
 
             CtorEnd(eventsChecking);
         }

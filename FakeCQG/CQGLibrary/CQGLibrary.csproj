@@ -62,7 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CQGLibrary.cs" />
+    <Compile Include="AutoGenClientAPI.cs" />
+    <Compile Include="ClientAPIHelpers.cs" />
     <Compile Include="DataDictionaries.cs" />
     <Compile Include="Helpers\AnswerHelper.cs" />
     <Compile Include="Helpers\ConnectionSettings.cs" />

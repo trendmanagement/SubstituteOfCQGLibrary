@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 
 namespace CodeGenerator
@@ -12,8 +12,7 @@ namespace CodeGenerator
             string delegateName = null,
             bool isInterface = false,
             bool isStruct = false,
-            bool isNew = false,
-            Dictionary<int, string> nameSubstitutes = null)
+            bool isNew = false)
         {
             string public_ = !isInterface ? "public " : string.Empty;
             File.Write(Indent1 + public_);
@@ -60,7 +59,7 @@ namespace CodeGenerator
             }
             File.Write(methodName + "(");
 
-            CreateMethodArguments(mb.GetParameters(), nameSubstitutes);
+            CreateMethodArguments(mb.GetParameters());
 
             if (delegateName == null && !isInterface)
             {
@@ -72,14 +71,17 @@ namespace CodeGenerator
             }
         }
 
-        static void CreateMethodArguments(ParameterInfo[] pinfos, Dictionary<int, string> nameSubstitutes)
+        static void CreateMethodArguments(ParameterInfo[] pinfos, bool isDCEventHandler = false)
         {
-            bool first = true;
-            foreach (ParameterInfo pinfo in pinfos)
+            StreamWriter file = isDCEventHandler ? DCEvHndlrFile : File;
+
+            for (int i = 0; i < pinfos.Length; i++)
             {
-                if (!first)
+                ParameterInfo pinfo = pinfos[i];
+
+                if (i != 0)
                 {
-                    File.Write(", ");
+                    file.Write(", ");
                 }
 
                 string typeName = TypeToString(pinfo.ParameterType);
@@ -93,53 +95,47 @@ namespace CodeGenerator
                 {
                     typeName = "ref " + typeName;
                 }
-                
-                string parName = pinfo.Name;
-                if (parName == null || parName.Length == 0)
-                {
-                    parName = nameSubstitutes[pinfo.Position];
-                }
 
-                File.Write(typeName + " " + parName);
+                string parName = GetParamName(pinfo);
+
+                file.Write(typeName + " " + parName);
 
                 // Default value
                 if (pinfo.HasDefaultValue && pinfo.Name != null)
                 {
-                    File.Write(" = ");
+                    file.Write(" = ");
                     if (object.ReferenceEquals(pinfo.DefaultValue, null))
                     {
-                        File.Write("null");
+                        file.Write("null");
                     }
                     else
                     {
                         if (pinfo.DefaultValue.GetType() != pinfo.ParameterType && pinfo.ParameterType == typeof(object))
                         {
-                            File.Write("null");
+                            file.Write("null");
                         }
                         else if (pinfo.ParameterType.IsEnum)
                         {
-                            File.Write(typeName + "." + pinfo.DefaultValue);
+                            file.Write(typeName + "." + pinfo.DefaultValue);
                         }
                         else if (pinfo.ParameterType == typeof(bool))
                         {
-                            File.Write(pinfo.DefaultValue.ToString().ToLower());
+                            file.Write(pinfo.DefaultValue.ToString().ToLower());
                         }
                         else if (pinfo.ParameterType == typeof(string))
                         {
-                            File.Write("\"" + pinfo.DefaultValue + "\"");
+                            file.Write("\"" + pinfo.DefaultValue + "\"");
                         }
                         else if (pinfo.ParameterType == typeof(DateTime))
                         {
-                            File.Write("default(DateTime)");
+                            file.Write("default(DateTime)");
                         }
                         else
                         {
-                            File.Write(pinfo.DefaultValue);
+                            file.Write(pinfo.DefaultValue);
                         }
                     }
                 }
-
-                first = false;
             }
         }
     }

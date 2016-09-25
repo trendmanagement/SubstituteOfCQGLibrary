@@ -7,7 +7,6 @@ namespace TestRealTime
 {
     public partial class MainForm : Form
     {
-        private FakeCQG.CQG cqg;
         private FakeCQG.CQGCELClass cqgcel;
 
         public MainForm()
@@ -76,7 +75,7 @@ namespace TestRealTime
         {
             bool isStarted = cqgcel.IsStarted;
             cqgcel.Shutdown();
-            await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Property, "key", string.Empty, "name", null, null));
+            await FakeCQG.CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.SetProperty, "key", string.Empty, "name", null, null));
         }
     }
 }

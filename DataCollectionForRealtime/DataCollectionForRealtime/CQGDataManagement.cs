@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Reflection;
 using System.Text;
 using System.Threading;
 using CQG;
@@ -9,8 +8,7 @@ namespace DataCollectionForRealtime
 {
     class CQGDataManagement
     {
-
-        public  CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
+        public CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
         {
             this.realtimeDataManagement = realtimeDataManagement;
             
@@ -26,11 +24,16 @@ namespace DataCollectionForRealtime
         private RealtimeDataManagement realtimeDataManagement;
         
         private CQG.CQGCEL m_CEL;
+        private string m_CEL_key;
 
-        public CQG.CQGCEL M_CEL
+        public CQG.CQGCEL CEL
         {
             get { return m_CEL; }
-            set { M_CEL = value; }
+        }
+
+        public string CEL_key
+        {
+            get { return m_CEL_key; }
         }
 
         //List<OptionSpreadExpression> optionSpreadExpressionList = new List<OptionSpreadExpression>();
@@ -73,8 +76,10 @@ namespace DataCollectionForRealtime
         {
             try
             {
-
+                // Create real CQGCEL object and put it into the dictionary
                 m_CEL = new CQG.CQGCEL();
+                m_CEL_key = FakeCQG.CQG.CreateUniqueKey();
+                FakeCQG.DataDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
 
                 m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);
@@ -87,7 +92,7 @@ namespace DataCollectionForRealtime
                 ////m_CEL.IncorrectSymbol += new _ICQGCELEvents_IncorrectSymbolEventHandler(CEL_IncorrectSymbol);
                 //m_CEL.InstrumentSubscribed += new _ICQGCELEvents_InstrumentSubscribedEventHandler(m_CEL_InstrumentSubscribed);
                 //m_CEL.InstrumentChanged += new _ICQGCELEvents_InstrumentChangedEventHandler(m_CEL_InstrumentChanged);
-                
+
                 m_CEL.DataError += new _ICQGCELEvents_DataErrorEventHandler(m_CEL_DataError);
 
                 //m_CEL.APIConfiguration.NewInstrumentMode = true;
@@ -99,29 +104,6 @@ namespace DataCollectionForRealtime
                 m_CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzPacific;
 
                 connectCQG();
-                Type[] ins = new Type[m_CEL.GetType().GetInterfaces().Length];
-                int i = 0;
-                foreach (Type memi in m_CEL.GetType().GetInterfaces())
-                {
-                    ins[i] = memi;
-                    AsyncTaskListener.LogMessage(memi.DeclaringType + " " + memi.MemberType + " " + memi.Name);
-                    i++;
-                }
-                AsyncTaskListener.LogMessage("");
-                foreach (Type memis in ins)
-                {
-                    
-                    foreach (MemberInfo memi in memis.GetMembers())
-                    {
-                        AsyncTaskListener.LogMessage(memi.DeclaringType + " " + memi.MemberType + " " + memi.Name);
-                    }
-                    AsyncTaskListener.LogMessage("");
-                }
-                AsyncTaskListener.LogMessage("");
-                foreach (MemberInfo memi in m_CEL.GetType().GetMembers())
-                {
-                    AsyncTaskListener.LogMessage(memi.DeclaringType + " " + memi.MemberType + " " + memi.Name);
-                }
             }
             catch (Exception ex)
             {

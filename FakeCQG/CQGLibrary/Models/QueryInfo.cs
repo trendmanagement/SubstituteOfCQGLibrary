@@ -6,19 +6,32 @@ namespace FakeCQG.Models
 {
     public class QueryInfo
     {
-        public enum QueryType {Property, Method, Constructor, Event}
+        public enum QueryType
+        {
+            Ctor,
+            Dtor,
+            GetProperty,
+            SetProperty,
+            Method,
+            Event
+        }
 
         [BsonId]
         [BsonRepresentation(BsonType.String)]
         public string Key { get; set; }
         public string ObjectKey { get; set; }
         public string QueryName { get; set; }
-        public Dictionary<int, string> ArgKeys { get; set; }
-        public Dictionary<int, object> ArgValues { get; set; }
+        public Dictionary<string, string> ArgKeys { get; set; }
+        public Dictionary<string, object> ArgValues { get; set; }
         public QueryType TypeOfQuery { get; set; }
 
-        public QueryInfo(QueryType qType, string key, string objKey, string qName, 
-            Dictionary<int, string> argKeys = null, Dictionary<int, object> argVals = null)
+        public QueryInfo(
+            QueryType qType,
+            string key,
+            string objKey,
+            string qName, 
+            Dictionary<string, string> argKeys = null,
+            Dictionary<string, object> argVals = null)
         {
             Key = key;
             ObjectKey = objKey;

@@ -6,16 +6,14 @@ using System.Reflection;
 
 namespace FakeCQG
 {
-    //Here placed all dictionaries with data that transferred by the key and methods for its managing
+    // Here placed all dictionaries with data that transferred by the key and methods for its managing
     public static class DataDictionaries
     {
-        private static Dictionary<string, object> objDictionary = new Dictionary<string, object>();
+        static Dictionary<string, object> objDictionary = new Dictionary<string, object>();
 
-        private static Dictionary<string, object> answerDictionary = new Dictionary<string, object>();
+        static Dictionary<string, bool> isAnswer = new Dictionary<string, bool>();
 
-        private static Dictionary<string, bool> isAnswer = new Dictionary<string, bool>();
-
-        private static Dictionary<string, bool> eventCheckingDictionary = new Dictionary<string, bool>();
+        static Dictionary<string, bool> eventCheckingDictionary = new Dictionary<string, bool>();
 
         public static Dictionary<string, bool> IsAnswer
         {
@@ -48,14 +46,9 @@ namespace FakeCQG
             return objDictionary[key];
         }
 
-        public static void PutAnswerToTheDictionary(string key, object answer)
+        public static void RemoveObjectFromTheDictionary(string key)
         {
-            answerDictionary[key] = answer;
-        }
-
-        public static object GetAnswerFromTheDictionary(string key)
-        {
-            return answerDictionary[key];
+            objDictionary.Remove(key);
         }
 
         public static void FillEventCheckingDictionary()
