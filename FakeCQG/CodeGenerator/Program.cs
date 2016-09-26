@@ -9,7 +9,7 @@ namespace CodeGenerator
         static StreamWriter DCEvHndlrFile;
 
         // Set this to False to get type names in short form, e.g. "int" instead of "Int32"
-        static bool QuickTestMode = true;
+        static bool QuickTestMode = false;
 
         static void Main(string[] args)
         {

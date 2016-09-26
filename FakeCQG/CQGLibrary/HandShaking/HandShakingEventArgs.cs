@@ -1,28 +1,27 @@
-﻿using CQGLibrary.Models;
+﻿using FakeCQG.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CQGLibrary.HandShaking
+namespace FakeCQG.Handshaking
 {
-    public class HandShakingEventArgs
+    public class HandshakingEventArgs
     {
-        private List<HandShakerModel> _subscriberas;
+        private List<HandshakerModel> _subscriberas;
         public bool NoSubscribers { get; set; }
-        public List<HandShakerModel> Subscribers { get { return _subscriberas; } }
+        public List<HandshakerModel> Subscribers { get { return _subscriberas; } }
 
-        public HandShakingEventArgs()
+        public HandshakingEventArgs()
         {
             NoSubscribers = true;
         }
 
-        public HandShakingEventArgs(List<HandShakerModel> subscribers)
+        public HandshakingEventArgs(List<HandshakerModel> subscribers)
         {
             NoSubscribers = false;
             _subscriberas = subscribers;
         }
-
     }
 }

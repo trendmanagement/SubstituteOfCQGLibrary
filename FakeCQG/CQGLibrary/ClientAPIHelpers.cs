@@ -2,7 +2,7 @@ using FakeCQG.Models;
 
 namespace FakeCQG
 {
-    public partial class CQG
+    public static partial class CQG
     {
         public static string CallCtor(string name)
         {

@@ -1,16 +1,15 @@
-﻿using CQGLibrary.Models;
-using FakeCQG.Helpers;
+﻿using FakeCQG.Models;
 using MongoDB.Driver;
 
-namespace CQGLibrary.Helpers
+namespace FakeCQG.Helpers
 {
     public class MongoHelper
     {
         protected IMongoClient _client;
         protected IMongoDatabase _database;
-        protected IMongoCollection<HandShakerModel> _collection;
+        protected IMongoCollection<HandshakerModel> _collection;
 
-        public IMongoCollection<HandShakerModel> GetCollection
+        public IMongoCollection<HandshakerModel> GetCollection
         {
             get
             {
@@ -30,8 +29,7 @@ namespace CQGLibrary.Helpers
         {
             _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<HandShakerModel>(ConnectionSettings.HandShakingCollectionName);
+            _collection = _database.GetCollection<HandshakerModel>(ConnectionSettings.HandshakingCollectionName);
         }
-
     }
 }

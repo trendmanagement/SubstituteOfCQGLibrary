@@ -4,9 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
-using FakeCQG.Helpers;
 using FakeCQG.Models;
-using MongoDB.Driver;
 
 [assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
@@ -14,42 +12,50 @@ namespace DataCollectionForRealtime
 {
     class QueryHandler
     {
-        CQGDataManagement cqgDataManagement;
+        CQGDataManagement CqgDataManagement;
 
         Assembly CQGAssm;
 
-        public static List<QueryInfo> QueryList;
+        public List<QueryInfo> QueryList;
+        HashSet<string> KeysOfQueriesInProcess;
 
         public Assembly CQGAssembly
         {
-            get { return CQGAssm; }
+            get
+            {
+                return CQGAssm;
+            }
         }
 
         public QueryHandler(RealtimeDataManagement rdm)
         {
-            cqgDataManagement = new CQGDataManagement(rdm);
+            CqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>();
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(CQGDataManagement cqgDM)
         {
-            cqgDataManagement = cqgDM;
+            CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>();
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(RealtimeDataManagement rdm, IList<QueryInfo> ql)
         {
-            cqgDataManagement = new CQGDataManagement(rdm);
+            CqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>(ql);
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
         {
-            cqgDataManagement = cqgDM;
+            CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>(ql);
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
@@ -67,19 +73,11 @@ namespace DataCollectionForRealtime
 
         public void CheckRequestsQueue()
         {
-            //ManualResetEvent _event = new ManualResetEvent(false);
-            //ThreadPool.QueueUserWorkItem(o => QueryList = CQGLibrary.CQG.ReadQueries());
-            //Task.Run(() =>
-            //{
-                //QueryList = CQGLibrary.CQG.ReadQueries();
-            //});
-            FakeCQG.CQG.ReadQueriesAsync();
+            FakeCQG.CQG.QueryHelper.ReadQueriesAsync(KeysOfQueriesInProcess);
         }
 
-        public bool QueryProcessing(QueryInfo query)
+        public void ProcessQuery(QueryInfo query)
         {
-            bool isSuccessful = false;
-
             //Object where the data obtained after query execution is placed
             //This object will be sent to the DB
             AnswerInfo answer;
@@ -94,7 +92,7 @@ namespace DataCollectionForRealtime
                         switch (query.QueryName)
                         {
                             case "CQG.CQGCELClass":
-                                key = cqgDataManagement.CEL_key;
+                                key = CqgDataManagement.CEL_key;
                                 break;
                             default:
                                 //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
@@ -105,7 +103,7 @@ namespace DataCollectionForRealtime
                         }
 
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: key);
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
@@ -115,7 +113,7 @@ namespace DataCollectionForRealtime
 
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
 
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
@@ -139,7 +137,7 @@ namespace DataCollectionForRealtime
                             answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
                         }
 
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
@@ -153,7 +151,7 @@ namespace DataCollectionForRealtime
 
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
 
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
@@ -178,17 +176,15 @@ namespace DataCollectionForRealtime
                                 DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
                                 answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                             }
-                            isSuccessful = true;
                         }
                         else
                         {
                             var returnKey = "true";
                             answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                            isSuccessful = true;
                         }
 
                         DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
@@ -227,55 +223,24 @@ namespace DataCollectionForRealtime
 
                         DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
-                        PushAnswer(answer);
+                        PushAnswerAndDeleteQuery(answer);
                     }
                     break;
             }
-
-            return isSuccessful;
         }
+
+        internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
+        {
+            FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
+            FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.Key);
+        }
+
         public void ProcessEntireQueryList()
         {
-            foreach (QueryInfo temp in QueryList)
+            foreach (QueryInfo query in QueryList)
             {
-                QueryProcessing(temp);
-            }
-        }
-
-        public void PushAnswer(AnswerInfo answer)
-        {
-            try
-            {
-                AnswerHelper mongoA = new AnswerHelper();
-
-                var collectionA = mongoA.GetCollection;
-                collectionA.InsertOne(answer);
-                lock (FakeCQG.CQG.LogLock)
-                {
-                    AsyncTaskListener.LogMessage(answer.ToString());
-                    AsyncTaskListener.LogMessage("************************************************************");
-                }
-                DeleteProcessedQuery(answer.Key);
-            }
-            catch (Exception exc)
-            {
-                AsyncTaskListener.LogMessage(exc.Message);
-            }
-        }
-
-        public void DeleteProcessedQuery(string key)
-        {
-            QueryHelper mongoQ = new QueryHelper();
-
-            var collectionQ = mongoQ.GetCollection;
-            var filter = Builders<QueryInfo>.Filter.Eq(FakeCQG.CQG.IdName, key);
-            try
-            {
-                collectionQ.DeleteOneAsync(filter);
-            }
-            catch (Exception ex)
-            {
-                AsyncTaskListener.LogMessage(ex.Message);
+                ProcessQuery(query);
+                KeysOfQueriesInProcess.Remove(query.Key);
             }
         }
 

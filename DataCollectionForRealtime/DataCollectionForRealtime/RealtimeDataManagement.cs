@@ -1,60 +1,57 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using CQGLibrary.HandShaking;
-
-
-using FakeCQG;
-using FakeCQG.Helpers;
-using FakeCQG.Models;
-using CQGLibrary.Models;
-using System.Collections.Generic;
+using FakeCQG.Handshaking;
 
 namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
+        const int AutoWorkTimerInterval = 1000;
+        const int HandshakingTimerInterval = 15000;
+        const int DictionaryClearingInterval = 30000;
+
         System.Timers.Timer AutoWorkTimer;
+        Timer HandshakingTimer = new Timer();
 
-        const int AutoWorkTimerInterval = 1000; // 1s
-        Timer timer = new Timer();
-        int intervalForClearDictionary = 30000;
+        CQGDataManagement CqgDataManagement;
 
-        CQGDataManagement cqgDataManagement;
-
-        int timeForHandShaking = 15000;
-
-        QueryHandler queryHandler;
+        QueryHandler QueryHandler;
 
         public RealtimeDataManagement()
         {
             InitializeComponent();
 
-            cqgDataManagement = new CQGDataManagement(this);
+            CqgDataManagement = new CQGDataManagement(this);
 
-            queryHandler = new QueryHandler(cqgDataManagement);
+            QueryHandler = new QueryHandler(CqgDataManagement);
 
-            Listener.StartListerning(timeForHandShaking);
+            Listener.StartListening(HandshakingTimerInterval);
 
             Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
 
-            timer.Disposed += Timer_Disposed;
-            timer.Interval = intervalForClearDictionary;
+            HandshakingTimer.Disposed += HandshakingTimer_Disposed;
+            HandshakingTimer.Interval = DictionaryClearingInterval;
         }
 
-        private void Timer_Disposed(object sender, EventArgs e)
+        private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            DataDictionaries.ClearAllDictionaris();
+            FakeCQG.DataDictionaries.ClearAllDictionaris();
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
         {
-            FakeCQG.CQG.ClearQueriesListAsync();
-            FakeCQG.CQG.ClearAnswersListAsync();
             FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
+
+            FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
+            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
+            FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
+
+            FakeCQG.CQG.AnswerHelper = new FakeCQG.Helpers.AnswerHelper();
+            FakeCQG.CQG.AnswerHelper.ClearAnswersListAsync();
 
             AutoWorkTimer = new System.Timers.Timer();
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
@@ -62,20 +59,20 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.AutoReset = false;
         }
 
-        private void Listener_SubscribersAdded(HandShakingEventArgs args)
+        private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
-            DataDictionaries.RealTimeIds = new HashSet<Guid>();
+            FakeCQG.DataDictionaries.RealTimeIds = new HashSet<Guid>();
             if (!args.NoSubscribers)
             {
                 foreach (var subscriber in args.Subscribers)
                 {
-                    DataDictionaries.RealTimeIds.Add(subscriber.ID);
+                    FakeCQG.DataDictionaries.RealTimeIds.Add(subscriber.ID);
                 }
-                timer.Stop();
+                HandshakingTimer.Stop();
             }
             else
             {
-                timer.Start();
+                HandshakingTimer.Start();
             }
         }
 
@@ -166,13 +163,13 @@ namespace DataCollectionForRealtime
 
         private void buttonCheck_Click(object sender, EventArgs e)
         {
-            queryHandler.CheckRequestsQueue();
+            QueryHandler.CheckRequestsQueue();
         }
 
         private void buttonRespond_Click(object sender, EventArgs e)
         {
-            queryHandler.ProcessEntireQueryList();
-        }     
+            QueryHandler.ProcessEntireQueryList();
+        }
 
         private void CQG_LogChange(string message)
         {
@@ -194,8 +191,8 @@ namespace DataCollectionForRealtime
 
         private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
-            queryHandler.CheckRequestsQueue();
-            queryHandler.ProcessEntireQueryList();
+            QueryHandler.CheckRequestsQueue();
+            QueryHandler.ProcessEntireQueryList();
             if (checkBoxAuto.Checked)
             {
                 AutoWorkTimer.Start();

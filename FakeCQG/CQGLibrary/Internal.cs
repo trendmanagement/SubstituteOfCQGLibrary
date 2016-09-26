@@ -1,73 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
-using MongoDB.Driver;
 
 namespace FakeCQG
 {
-    public partial class CQG 
+    static class Keys
+    {
+        public const string IdName = "Key";
+        public const string QueryName = "QueryName";
+        public const string ArgValues = "ArgValues";
+        public const string HandshakerId = "_id";
+    }
+
+    public static partial class CQG
     {
         #region Helper objects
+
         static bool EventsCheckingON = false;
 
         static string Log;
         public static object LogLock = new object();
 
-        public const string IdName = "Key";
-
-        private static bool IsFirstStart = true;
-
-        public delegate void GetQueryInfosHandler(List<QueryInfo> queries);
-        public static event GetQueryInfosHandler GetQueries;
         public delegate void LogHandler(string message);
         public static event LogHandler LogChange;
 
         // Changed the access level of visibility for testing
         public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
+
+        public static QueryHelper QueryHelper;
+        public static AnswerHelper AnswerHelper;
+
+        static bool FirstCall = true;
+
         #endregion
 
         #region MongoDB communication methods
-        public static void CommonEventHandler(string name, object[] args = null)
-        {
-            AnswerHelper mongo = new AnswerHelper();
-            var allAnswers = mongo.GetCollection;
-            var filter = Builders<AnswerInfo>.Filter.Eq("QueryName", name);
-            AnswerInfo answer = null;
-            try
-            {
-                answer = allAnswers.Find(filter).First();
-                var argValues = new Dictionary<int, object>();
-                argValues.Add(0, "!");
-                argValues.Add(1, args);
-                var update = Builders<AnswerInfo>.Update.Set("ArgValues", argValues);
-                //TODO: deserialize argValues from dictionary to bson
-                //allAnswers.UpdateOne(filter, update);
-            }
-            catch (Exception ex)
-            {
-                OnLogChange(ex.Message);
-            }
-        }
 
         public static object ExecuteTheQuery(QueryInfo.QueryType qType, string objKey, string name, object[] args = null)
         {
+            if (FirstCall)
+            {
+                // Lazy connection to MongoDB
+                QueryHelper = new QueryHelper();
+                AnswerHelper = new AnswerHelper();
+
+                // Start handshaking
+                Handshaking.Subscriber.ListenForHanshaking();
+
+                FirstCall = false;
+            }
+
             if (!EventsCheckingON)
             {
                 DataDictionaries.FillEventCheckingDictionary();
 
                 EventsCheckingON = true;
-            }
-
-            //Checking for firat time stert and if it is first start execute handshaking method
-            if (IsFirstStart)
-            {
-                CQGLibrary.HandShaking.Subscriber.ListenForHanshaking();
-                IsFirstStart = false;
             }
 
             var argKeys = new Dictionary<string, string>();
@@ -94,7 +85,7 @@ namespace FakeCQG
             }
 
             QueryInfo qInfo = CreateQuery(qType, queryKey, objKey, name, argKeys, argVals);
-            Task.Run(() => PushQueryAsync(qInfo));
+            Task.Run(() => QueryHelper.PushQueryAsync(qInfo));
 
             AnswerInfo result = WaitingForAnAnswer(queryKey);
 
@@ -115,7 +106,7 @@ namespace FakeCQG
         public static AnswerInfo WaitingForAnAnswer(string queryKey)
         {
             AnswerInfo answer = null;
-            Task task = Task.Run(() => { answer = GetAnswerData(queryKey); });
+            Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
             bool success = task.Wait(QueryTimeout);
             if (success)
             {
@@ -125,7 +116,7 @@ namespace FakeCQG
             else
             {
                 OnLogChange(NoAnswerMessage);
-                task.Dispose();
+                task = null;
                 throw new TimeoutException();
             }
         }
@@ -178,241 +169,10 @@ namespace FakeCQG
             return model;
         }
 
-        public static Task PushQueryAsync(QueryInfo model)
-        {
-            return Task.Run(() => PushQuery(model));
-        }
+        #endregion
 
-        static void PushQuery(QueryInfo model)
-        {
-            QueryHelper mongo = new QueryHelper();
-            var allQueries = mongo.GetCollection;
-            allQueries.InsertOne(model);
-            OnLogChange(model.Key, model.QueryName, true);
-        }
+        #region Handlers
 
-        public static Task PushAnswerAsync(AnswerInfo model)
-        {
-            return Task.Run(() => PushAnswer(model));
-        }
-
-        static void PushAnswer(AnswerInfo model)
-        {
-            AnswerHelper mongo = new AnswerHelper();
-            var allAnswers = mongo.GetCollection;
-            allAnswers.InsertOne(model);
-            OnLogChange(model.Key, model.QueryName, true);
-        }
-
-        public static AnswerInfo GetAnswerData(string id, out bool isAns)
-        {
-            AnswerHelper mongo = new AnswerHelper();
-            var allAnswers = mongo.GetCollection;
-            var filter = Builders<AnswerInfo>.Filter.Eq(IdName, id);
-            AnswerInfo answer = null;
-            try
-            {
-                answer = allAnswers.Find(filter).First();
-                OnLogChange(answer.Key, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.Key);
-                isAns = true;
-                return answer;
-            }
-            catch (Exception)
-            {
-                OnLogChange(id, "null", false);
-                isAns = false;
-                return null;
-            }
-        }
-
-        public static AnswerInfo GetAnswerData(string id)
-        {
-            AnswerHelper mongo = new AnswerHelper();
-            var allAnswers = mongo.GetCollection;
-            var filter = Builders<AnswerInfo>.Filter.Eq(IdName, id);
-            AnswerInfo answer = null;
-            while (!DataDictionaries.IsAnswer[id])
-            {
-                try
-                {
-                    answer = allAnswers.Find(filter).First();
-                    OnLogChange(answer.Key, answer.ValueKey, false);
-                    RemoveAnswerAsync(answer.Key);
-                    DataDictionaries.IsAnswer[id] = true;
-                }
-                catch (Exception)
-                {
-                    ////TODO: Create type of exception for  variant "no answer"
-                    //throw new Exception("No answer in MongoDB");
-                }
-            }
-            return answer;
-        }
-
-        public static Task<bool> CheckQueryAsync(string Id)
-        {
-            return Task.Run(() =>
-            {
-                QueryHelper mongo = new QueryHelper();
-                var allQueries = mongo.GetCollection;
-                var filter = Builders<QueryInfo>.Filter.Eq(IdName, Id);
-                try
-                {
-                    QueryInfo result = null;
-                    try
-                    {
-                        result = allQueries.Find(filter).SingleOrDefault();
-                    }
-                    catch (Exception ex)
-                    {
-                        OnLogChange(ex.Message);
-                    }
-                    return result != null;
-                }
-                catch (Exception)
-                {
-                    //TODO: Add logic for different exceptions
-                    return false;
-                }
-            });
-        }
-
-        public static Task<bool> CheckAnswerAsync(string Id)
-        {
-            return Task.Run(() =>
-            {
-                AnswerHelper mongo = new AnswerHelper();
-                var allAnswers = mongo.GetCollection;
-                var filter = Builders<AnswerInfo>.Filter.Eq(IdName, Id);
-                try
-                {
-                    AnswerInfo result = null;
-                    try
-                    {
-                        result = allAnswers.Find(filter).SingleOrDefault();
-                    }
-                    catch (Exception ex)
-                    {
-                        OnLogChange(ex.Message);
-                    }
-                    return (result != null) ? true : false;
-                }
-                catch (Exception)
-                {
-                    //TODO: Add logic for different exceptions
-                    return false;
-                }
-            });
-        }
-
-        public static object[] CheckWhetherEventHappened(string name)
-        {
-            var argValues = new Dictionary<int, object>();
-
-            AnswerHelper mongo = new AnswerHelper();
-            var allAnswers = mongo.GetCollection;
-            var filter = Builders<AnswerInfo>.Filter.Eq("QueryName", name);
-            AnswerInfo answer = null;
-
-            answer = allAnswers.Find(filter).First();
-            argValues = answer.ArgValues;
-            
-            return (object[])argValues[1];
-        }
-
-        public static Task RemoveQueryAsync(string key)
-        {
-            return Task.Run(() =>
-            {
-                QueryHelper mongo = new QueryHelper();
-                var allQueries = mongo.GetCollection;
-                var filter = Builders<QueryInfo>.Filter.Eq(IdName, key);
-                allQueries.DeleteOne(filter);
-            });
-        }
-
-        public static Task RemoveAnswerAsync(string key)
-        {
-            return Task.Run(() =>
-            {
-                AnswerHelper mongo = new AnswerHelper();
-                var allAnswers = mongo.GetCollection;
-                var filter = Builders<AnswerInfo>.Filter.Eq(IdName, key);
-                allAnswers.DeleteOne(filter);
-            });
-        }
-
-        public static Task ReadQueriesAsync()
-        {
-            return Task.Run(() =>
-            {
-                QueryHelper mongo = new QueryHelper();
-                var allQueries = mongo.GetCollection;
-                var filter = Builders<QueryInfo>.Filter.Empty;
-                List<QueryInfo> result = new List<QueryInfo>();
-                try
-                {
-                    result = allQueries.Find(filter).ToList();
-                    OnGetQueries(result);
-                    lock (LogLock)
-                    {
-                        OnLogChange(string.Format("{0} quer(y/ies) in collection at {1}", result.Count, DateTime.Now));
-                        foreach (QueryInfo query in result)
-                        {
-                            OnLogChange(query.ToString());
-                        }
-                        OnLogChange("************************************************************");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    OnLogChange(ex.Message);
-                }
-            });
-        }
-
-        public static Task ClearQueriesListAsync()
-        {
-            return Task.Run(() =>
-            {
-                QueryHelper mongo = new QueryHelper();
-                try
-                {
-                    var allQueries = mongo.GetCollection;
-                    var filter = Builders<QueryInfo>.Filter.Empty;
-                    allQueries.DeleteMany(filter);
-                    OnLogChange("Queries list was cleared successfully");
-                }
-                catch (Exception exc)
-                {
-                    OnLogChange(exc.Message);
-                }
-            });
-        }
-
-        public static Task ClearAnswersListAsync()
-        {
-            return Task.Run(() =>
-            {
-                AnswerHelper mongo = new AnswerHelper();
-                try
-                {
-                    var allAnswers = mongo.GetCollection;
-                    var filter = Builders<AnswerInfo>.Filter.Empty;
-                    allAnswers.DeleteMany(filter);
-                    OnLogChange("Answers list was cleared successfully");
-                }
-                catch (Exception exc)
-                {
-                    OnLogChange(exc.Message);
-                }
-            });
-        }
-
-#endregion
-
-#region Handlers
         internal static void OnLogChange(string key, string value, bool isQuery)
         {
             if (isQuery)
@@ -438,11 +198,7 @@ namespace FakeCQG
             }
         }
 
-        private static void OnGetQueries(List<QueryInfo> queries)
-        {
-            GetQueries(queries);
-        }
-#endregion
+        #endregion
 
         public static bool IsSerializableType(Type type)
         {

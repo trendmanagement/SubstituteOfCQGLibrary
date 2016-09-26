@@ -100,7 +100,7 @@ namespace DataCollectionForRealtime
                 m_CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
 
                 m_CEL.APIConfiguration.CollectionsThrowException = false;
-                
+
                 m_CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzPacific;
 
                 connectCQG();
@@ -348,6 +348,5 @@ namespace DataCollectionForRealtime
                 TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
             }
         }
-
     }
 }

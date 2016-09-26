@@ -26,7 +26,7 @@ namespace CodeGenerator
                 args = string.Empty;
             }
 
-            DCEvHndlrFile.WriteLine(Indent3 + "FakeCQG.CQG.CommonEventHandler(name" + args + ");");
+            DCEvHndlrFile.WriteLine(Indent3 + "FakeCQG.CQG.AnswerHelper.CommonEventHandler(name" + args + ");");
 
             DCEvHndlrFile.WriteLine(Indent2 + "}" + Environment.NewLine);
         }

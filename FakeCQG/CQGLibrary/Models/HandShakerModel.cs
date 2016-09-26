@@ -1,14 +1,9 @@
-﻿using MongoDB.Bson;
+﻿using System;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CQGLibrary.Models
+namespace FakeCQG.Models
 {
-    public class HandShakerModel
+    public class HandshakerModel
     {
         [BsonId]
         Guid _id;
@@ -25,7 +20,7 @@ namespace CQGLibrary.Models
             private set { _key = value; }
         }
 
-        public HandShakerModel(string key)
+        public HandshakerModel(string key)
         {
             _id = Guid.NewGuid();
             _key = key;

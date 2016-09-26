@@ -1352,7 +1352,7 @@ namespace TimedBars
                 CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
                 CEL.APIConfiguration.CollectionsThrowException = false;
                 CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzCentral;
-                
+
                 // Disables the controls
                 CEL_DataConnectionStatusChanged(CQG.eConnectionStatus.csConnectionDown);
                 // Starts up the CQGCEL
