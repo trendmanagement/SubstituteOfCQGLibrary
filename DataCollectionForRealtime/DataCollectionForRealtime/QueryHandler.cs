@@ -107,26 +107,6 @@ namespace DataCollectionForRealtime
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: key);
                         PushAnswer(answer);
                     }
-                case QueryInfo.QueryType.Destructor:
-                    DataDictionaries.RemoveObject(query.ObjectKey);
-                    break;
-                case QueryInfo.QueryType.Constructor:
-                    
-                    //switch (query.QueryName)
-                    //{
-                    //    case "CQG.CQGCELClass":
-                    //        qObj = cqgDataManagement.M_CEL;
-                    //        break;
-                    //    default:
-                    //        //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
-                    //        qObj = CQGAssm.CreateInstance(query.QueryName);
-                    //        break;
-                    //}
-                    qObj = CQGAssm.CreateInstance(query.QueryName);
-                   
-                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
-                    LoadInAnswer(answer);
                     break;
 
                 case QueryInfo.QueryType.CallDtor:
@@ -158,7 +138,7 @@ namespace DataCollectionForRealtime
                             DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
                             answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
                         }
-                        
+
                         PushAnswer(answer);
                     }
                     break;
@@ -251,10 +231,9 @@ namespace DataCollectionForRealtime
                     }
                     break;
             }
- 
+
             return isSuccessful;
         }
-
         public void ProcessEntireQueryList()
         {
             foreach (QueryInfo temp in QueryList)

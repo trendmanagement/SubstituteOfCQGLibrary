@@ -207,16 +207,6 @@ namespace FakeCQG
                 OnLogChange(answer.Key, answer.ValueKey, false);
                 RemoveAnswerAsync(answer.Key);
                 isAns = true;
-                //if (answer.Key == "value")
-                //{
-                //    isVal = true;
-                //    return answer.Value;
-                //}
-                //else
-                //{
-                //    isVal = false;
-                //    return answer;
-                //}
                 return answer;
             }
             catch (Exception)
@@ -244,16 +234,6 @@ namespace FakeCQG
                 }
                 catch (Exception)
                 {
-                    //OnLogChange(id, "null", false);
-                    //if (!DataDictionaries.IsAnswer[id])
-                    //{
-                    //    return GetAnswerData(id);
-                    //}
-                    //else
-                    //{
-                    //    return answer;
-                    //}
-
                     ////TODO: Create type of exception for  variant "no answer"
                     //throw new Exception("No answer in MongoDB");
                 }

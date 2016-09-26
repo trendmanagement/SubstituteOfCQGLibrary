@@ -8,6 +8,7 @@ using FakeCQG;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
 using CQGLibrary.Models;
+using System.Collections.Generic;
 
 namespace DataCollectionForRealtime
 {
@@ -20,6 +21,8 @@ namespace DataCollectionForRealtime
         CQGDataManagement cqgDataManagement;
 
         int timeForHandShaking = 5000;
+
+        QueryHandler queryHandler;
 
         public RealtimeDataManagement()
         {
@@ -37,6 +40,18 @@ namespace DataCollectionForRealtime
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
+        {
+            FakeCQG.CQG.ClearQueriesListAsync();
+            FakeCQG.CQG.ClearAnswersListAsync();
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+        }
+
         private void Listener_SubscribersAdded(HandShakingEventArgs args)
         {
             DataDictionaries.RealTimeIds = new HashSet<Guid>();
@@ -51,20 +66,6 @@ namespace DataCollectionForRealtime
             {
                 DataDictionaries.ClearAllDictionaris();
             }
-        }
-
-        internal void updateConnectionStatus(string connectionStatusLabel,
-            Color connColor)
-        {
-            FakeCQG.CQG.ClearQueriesListAsync();
-            FakeCQG.CQG.ClearAnswersListAsync();
-            FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
-
-            AutoWorkTimer = new System.Timers.Timer();
-            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
-            AutoWorkTimer.Interval = AutoWorkTimerInterval;
-            AutoWorkTimer.AutoReset = false;
         }
 
         internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)

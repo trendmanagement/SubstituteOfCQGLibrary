@@ -80,7 +80,6 @@ namespace FakeCQG
         public static void ClearAllDictionaris()
         {
             objDictionary = new Dictionary<string, object>();
-            answerDictionary = new Dictionary<string, object>();
             isAnswer = new Dictionary<string, bool>();
             eventCheckingDictionary = new Dictionary<string, bool>();
         }
