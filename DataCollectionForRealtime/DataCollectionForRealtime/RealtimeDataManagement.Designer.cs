@@ -41,7 +41,7 @@
             this.tabPageMongo = new System.Windows.Forms.TabPage();
             this.checkBoxAuto = new System.Windows.Forms.CheckBox();
             this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
-            this.buttonFill = new System.Windows.Forms.Button();
+            this.buttonRespond = new System.Windows.Forms.Button();
             this.buttonCheck = new System.Windows.Forms.Button();
             this.statusStripOptionMonitor.SuspendLayout();
             this.mainRealtimeMenuStrip.SuspendLayout();
@@ -80,7 +80,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -141,7 +141,7 @@
             // 
             this.tabPageMongo.Controls.Add(this.checkBoxAuto);
             this.tabPageMongo.Controls.Add(this.richTextBoxLog);
-            this.tabPageMongo.Controls.Add(this.buttonFill);
+            this.tabPageMongo.Controls.Add(this.buttonRespond);
             this.tabPageMongo.Controls.Add(this.buttonCheck);
             this.tabPageMongo.Location = new System.Drawing.Point(4, 22);
             this.tabPageMongo.Name = "tabPageMongo";
@@ -160,6 +160,7 @@
             this.checkBoxAuto.TabIndex = 3;
             this.checkBoxAuto.Text = "Automatic work";
             this.checkBoxAuto.UseVisualStyleBackColor = true;
+            this.checkBoxAuto.CheckedChanged += new System.EventHandler(this.checkBoxAuto_CheckedChanged);
             // 
             // richTextBoxLog
             // 
@@ -169,15 +170,15 @@
             this.richTextBoxLog.TabIndex = 2;
             this.richTextBoxLog.Text = "";
             // 
-            // buttonFill
+            // buttonRespond
             // 
-            this.buttonFill.Location = new System.Drawing.Point(163, 7);
-            this.buttonFill.Name = "buttonFill";
-            this.buttonFill.Size = new System.Drawing.Size(271, 23);
-            this.buttonFill.TabIndex = 1;
-            this.buttonFill.Text = "Process the request and send a response to the DB";
-            this.buttonFill.UseVisualStyleBackColor = true;
-            this.buttonFill.Click += new System.EventHandler(this.buttonFill_Click);
+            this.buttonRespond.Location = new System.Drawing.Point(163, 7);
+            this.buttonRespond.Name = "buttonRespond";
+            this.buttonRespond.Size = new System.Drawing.Size(271, 23);
+            this.buttonRespond.TabIndex = 1;
+            this.buttonRespond.Text = "Process the request and send a response to the DB";
+            this.buttonRespond.UseVisualStyleBackColor = true;
+            this.buttonRespond.Click += new System.EventHandler(this.buttonRespond_Click);
             // 
             // buttonCheck
             // 
@@ -229,7 +230,7 @@
         private System.Windows.Forms.TabPage tabPageMongo;
         private System.Windows.Forms.CheckBox checkBoxAuto;
         private System.Windows.Forms.RichTextBox richTextBoxLog;
-        private System.Windows.Forms.Button buttonFill;
+        private System.Windows.Forms.Button buttonRespond;
         private System.Windows.Forms.Button buttonCheck;
     }
 }

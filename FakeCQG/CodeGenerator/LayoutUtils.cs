@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text;
 
 namespace CodeGenerator
@@ -12,6 +11,7 @@ namespace CodeGenerator
         static string Indent1;
         static string Indent2;
         static string Indent3;
+        static string Indent4;
         static int CurrentIndent;
 
         enum RegionType
@@ -23,11 +23,12 @@ namespace CodeGenerator
             Structs,
             Constructors,
             Destructor,
+            Fields,
             Properties,
             Delegates,
             Events,
             Methods,
-            TimerTickHardler
+            TimerTickHandler
         }
 
         static List<RegionType> CurrentRegionTypes = new List<RegionType> { RegionType.None };
@@ -44,6 +45,8 @@ namespace CodeGenerator
             Indent2 = sb.ToString();
             sb.Append(Indent);
             Indent3 = sb.ToString();
+            sb.Append(Indent);
+            Indent4 = sb.ToString();
         }
 
         static void IncreaseIndent()
@@ -79,7 +82,7 @@ namespace CodeGenerator
             }
             if (regionType != RegionType.None)
             {
-                File.WriteLine(Indent1 + "#region " + regionType.ToString());
+                File.WriteLine(Indent1 + "#region " + regionType.ToString() + Environment.NewLine);
                 CurrentRegionTypes.Add(regionType);
             }
         }

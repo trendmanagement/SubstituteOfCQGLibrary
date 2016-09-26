@@ -11,10 +11,10 @@ namespace UnitTestFakeCQG
     public class UnitTestMongoDB
     {
         [TestMethod]
-        public void MethodAsync_LoadInOneQueryItem()
+        public void MethodAsync_PushOneQueryItem()
         {
             // arrange
-            var qType = QueryInfo.QueryType.Property;
+            var qType = QueryInfo.QueryType.SetProperty;
             string idTrue = "keyTrue";
             string idFalse = "keyFalse";
             bool isQuery = default(bool);
@@ -28,7 +28,7 @@ namespace UnitTestFakeCQG
             Task.Run(async () =>
             {
                 // act 1
-                await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(qType, idTrue, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushQueryAsync(new QueryInfo(qType, idTrue, string.Empty, name, null, null));
                 isQuery = await FakeCQG.CQG.CheckQueryAsync(idTrue);
 
                 // assert 1
@@ -60,7 +60,7 @@ namespace UnitTestFakeCQG
             Task.Run(async () =>
             {
                 // act
-                await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(qType, id, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushQueryAsync(new QueryInfo(qType, id, string.Empty, name, null, null));
                 isQuery = await FakeCQG.CQG.CheckQueryAsync(id);
                 await FakeCQG.CQG.RemoveQueryAsync(id);
                 isQuery = await FakeCQG.CQG.CheckQueryAsync(id);
@@ -76,7 +76,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_ReadInfoQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.Property;
+            var qType = QueryInfo.QueryType.SetProperty;
             string[] idTrue = { "key1True", "key2True", "key3True" };
             string idFalse = "keyFalse";
             string name = "name";
@@ -93,7 +93,7 @@ namespace UnitTestFakeCQG
                 // act
                 for (int i = 0; i < idTrue.Length; i++)
                 {
-                    await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(qType, idTrue[i], string.Empty, name, null, null));
+                    await FakeCQG.CQG.PushQueryAsync(new QueryInfo(qType, idTrue[i], string.Empty, name, null, null));
                 }
                 await FakeCQG.CQG.ReadQueriesAsync();
             }).GetAwaiter().GetResult();
@@ -112,7 +112,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_GetAllQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.Property;
+            var qType = QueryInfo.QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4", "key5" };
             string name = "name";
             FakeCQG.CQG.GetQueries += CQG_GetQueries;
@@ -128,7 +128,7 @@ namespace UnitTestFakeCQG
                 // act
                 for (int i = 0; i < keys.Length; i++)
                 {
-                    await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
+                    await FakeCQG.CQG.PushQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
                 }
                 await FakeCQG.CQG.ReadQueriesAsync();
             }).GetAwaiter().GetResult();
@@ -146,7 +146,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_RemoveAllQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.Property;
+            var qType = QueryInfo.QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4", "key5" };
             string name = "name";
             FakeCQG.CQG.LogChange += CQG_LogChange_For_RemoveAll;
@@ -162,7 +162,7 @@ namespace UnitTestFakeCQG
                 // act
                 for (int i = 0; i < keys.Length; i++)
                 {
-                    await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
+                    await FakeCQG.CQG.PushQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
                 }
                 await FakeCQG.CQG.ClearQueriesListAsync();
                 await FakeCQG.CQG.ReadQueriesAsync();
@@ -173,7 +173,7 @@ namespace UnitTestFakeCQG
         }
 
         [TestMethod]
-        public void MethodAsync_LoadInOneAnswerItem()
+        public void MethodAsync_PushOneAnswerItem()
         {
             // arrange
             string idTrue = "keyTrue";
@@ -183,12 +183,12 @@ namespace UnitTestFakeCQG
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
             Task.Run(async () =>
             {
                 // act 1
-                await FakeCQG.CQG.LoadInAnswerAsync(new AnswerInfo(idTrue, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushAnswerAsync(new AnswerInfo(idTrue, string.Empty, name, null, null));
                 isAnswer = await FakeCQG.CQG.CheckAnswerAsync(idTrue);
 
                 // assert 1
@@ -213,13 +213,13 @@ namespace UnitTestFakeCQG
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             Task.Run(async () =>
             {
                 // act
-                await FakeCQG.CQG.LoadInAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
                 isAnswer = await FakeCQG.CQG.CheckAnswerAsync(id);
                 await FakeCQG.CQG.RemoveAnswerAsync(id);
                 isAnswer = await FakeCQG.CQG.CheckAnswerAsync(id);
@@ -240,13 +240,13 @@ namespace UnitTestFakeCQG
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
 
             }).GetAwaiter().GetResult();
             var answer = FakeCQG.CQG.GetAnswerData(id, out isAnswer);
@@ -267,13 +267,13 @@ namespace UnitTestFakeCQG
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
+                await FakeCQG.CQG.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
 
             }).GetAwaiter().GetResult();
             FakeCQG.CQG.CommonEventHandler(name, arguments);
@@ -296,14 +296,17 @@ namespace UnitTestFakeCQG
             "Query"
         };
         #endregion
+
         private void CQG_LogChange_For_RemoveAll(string message)
         {
             removedAnswersInfo.Add(message);
         }
+
         private void CQG_GetQueries(List<QueryInfo> queries)
         {
             answers = queries;
         }
+
         private void CQG_LogChange_ReadAll(string message)
         {
             bool contains = false;
@@ -324,12 +327,13 @@ namespace UnitTestFakeCQG
                 answersInfo.Add(message);
             }
         }
+
         private void CQG_LogChange_Mock(string message)
         {
         }
+
         private void CQG_GetQueries_Mock(List<QueryInfo> queries)
         {
-
         }
     }
 
@@ -340,32 +344,32 @@ namespace UnitTestFakeCQG
         public void Method_CreateQuery_Properties()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.Property;
+            var queryType = QueryInfo.QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4" };
             string objectKey = default(string);
             string queryName = "name";
-            var argumentKeys = new Dictionary<int, string>() { { 1, "argumentKey" } };
-            var argumentvalues = new Dictionary<int, object>() { { 1, "argumentValue" } };
+            var argumentKeys = new Dictionary<string, string>() { { "1", "argumentKey" } };
+            var argumentValues = new Dictionary<string, object>() { { "1", "argumentValue" } };
             var queryList = new List<QueryInfo>();
 
             //act
-            queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[0], objectKey, queryName, argumentKeys, argumentvalues));
+            queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[0], objectKey, queryName, argumentKeys, argumentValues));
             queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[1], objectKey, queryName, argumentKeys, null));
-            queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[2], objectKey, queryName, null, argumentvalues));
+            queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[2], objectKey, queryName, null, argumentValues));
             queryList.Add(FakeCQG.CQG.CreateQuery(queryType, keys[3], objectKey, queryName, null, null));
 
-            //asset
+            //assert
             Assert.AreEqual(keys[0], queryList[0].Key);
-            Assert.AreEqual(argumentKeys[1], queryList[0].ArgKeys[1]);
-            Assert.AreEqual(argumentvalues[1], queryList[0].ArgValues[1]);
+            Assert.AreEqual(argumentKeys["1"], queryList[0].ArgKeys["1"]);
+            Assert.AreEqual(argumentValues["1"], queryList[0].ArgValues["1"]);
 
             Assert.AreEqual(keys[1], queryList[1].Key);
-            Assert.AreEqual(argumentKeys[1], queryList[1].ArgKeys[1]);
+            Assert.AreEqual(argumentKeys["1"], queryList[1].ArgKeys["1"]);
             Assert.AreEqual(null, queryList[1].ArgValues);
 
             Assert.AreEqual(keys[2], queryList[2].Key);
             Assert.AreEqual(null, queryList[2].ArgKeys);
-            Assert.AreEqual(argumentvalues[1], queryList[2].ArgValues[1]);
+            Assert.AreEqual(argumentValues["1"], queryList[2].ArgValues["1"]);
 
             Assert.AreEqual(keys[3], queryList[3].Key);
             Assert.AreEqual(null, queryList[3].ArgKeys);
@@ -380,16 +384,16 @@ namespace UnitTestFakeCQG
             string name = "name";
             FakeCQG.CQG.LogChange += CQG_LogChange_Mock;
             var answerInput = new AnswerInfo(id, string.Empty, name, null, null);
-            AnswerInfo answerOutput = default(AnswerInfo);
+            AnswerInfo answerOutput = null;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInAnswerAsync(answerInput);
+                await FakeCQG.CQG.PushAnswerAsync(answerInput);
             }).GetAwaiter().GetResult();
 
             answerOutput = FakeCQG.CQG.WaitingForAnAnswer(id);
@@ -405,7 +409,7 @@ namespace UnitTestFakeCQG
         public void Method_ExecuteTheQuery_TimerElapsed()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.Property;
+            var queryType = QueryInfo.QueryType.SetProperty;
             string name = "name";
             Timer timer = new Timer();
             bool isThrownException = false;
@@ -413,7 +417,7 @@ namespace UnitTestFakeCQG
             FakeCQG.CQG.LogChange += CQG_LogChange_NoAnswer;
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await FakeCQG.CQG.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
             Task.Run(async () =>
             {
@@ -426,12 +430,12 @@ namespace UnitTestFakeCQG
                 var answer = FakeCQG.CQG.ExecuteTheQuery(queryType, string.Empty, name, null);
                 Assert.Fail("An exception should have been thrown");
             }
-            catch(TimeoutException ex)
+            catch (TimeoutException ex)
             {
                 isThrownException = (ex == null) ? false : true;
             }
 
-            //assert
+            // assert
             Assert.IsTrue(isThrownException);
         }
 
@@ -439,6 +443,7 @@ namespace UnitTestFakeCQG
         {
             NoAnswerMessage = message;
         }
+
         private void CQG_LogChange_Mock(string message)
         {
         }

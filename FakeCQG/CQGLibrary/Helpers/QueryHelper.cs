@@ -1,6 +1,6 @@
-﻿using MongoDB.Driver;
+﻿using FakeCQG.Helpers;
 using FakeCQG.Models;
-using FakeCQG.Helpers;
+using MongoDB.Driver;
 
 namespace FakeCQG
 {
@@ -39,6 +39,5 @@ namespace FakeCQG
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
             _collection = _database.GetCollection<QueryInfo>(collectionName);
         }
-
     }
 }

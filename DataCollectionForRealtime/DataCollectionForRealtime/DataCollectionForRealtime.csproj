@@ -71,8 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncTaskListener.cs" />
+    <Compile Include="AutoGenEventHandlers.cs" />
     <Compile Include="CQGDataManagement.cs" />
-    <Compile Include="CQGEventHandlers.cs" />
     <Compile Include="QueryHandler.cs" />
     <Compile Include="PropertyModel.cs" />
     <Compile Include="RealtimeDataManagement.cs">

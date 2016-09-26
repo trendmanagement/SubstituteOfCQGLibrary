@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using CQGLibrary.HandShaking;
 
 
@@ -18,10 +13,11 @@ namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
+        System.Timers.Timer AutoWorkTimer;
 
-        private CQGDataManagement cqgDataManagement;
+        const int AutoWorkTimerInterval = 1000; // 1s
 
-        private QueryHandler queryHandler;
+        CQGDataManagement cqgDataManagement;
 
         int timeForHandShaking = 5000;
 
@@ -40,6 +36,7 @@ namespace DataCollectionForRealtime
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
         }
 
+        private void RealtimeDataManagement_Load(object sender, EventArgs e)
         private void Listener_SubscribersAdded(HandShakingEventArgs args)
         {
             DataDictionaries.RealTimeIds = new HashSet<Guid>();
@@ -58,6 +55,19 @@ namespace DataCollectionForRealtime
 
         internal void updateConnectionStatus(string connectionStatusLabel,
             Color connColor)
+        {
+            FakeCQG.CQG.ClearQueriesListAsync();
+            FakeCQG.CQG.ClearAnswersListAsync();
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+        }
+
+        internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
             if (this.InvokeRequired)
             {
@@ -147,27 +157,37 @@ namespace DataCollectionForRealtime
             queryHandler.CheckRequestsQueue();
         }
 
-        private void buttonFill_Click(object sender, EventArgs e)
+        private void buttonRespond_Click(object sender, EventArgs e)
         {
-            //TODO: Before filling we must:
-            // - collect queries                           TODO: Create collector for combine query
-            // - get data from CQG by combined qeury
-            // - divide answer for smoler answer by Key    TODO: Create answer divider 
-            // - fill osems smoler answer's by Key 
             queryHandler.ProcessEntireQueryList();
         }     
-
-        private void RealtimeDataManagement_Load(object sender, EventArgs e)
-        {
-            FakeCQG.CQG.ClearQueriesListAsync();
-            FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
-        }
 
         private void CQG_LogChange(string message)
         {
             AsyncTaskListener.LogMessage(message);
         }
 
+        private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+            if (cb.Checked)
+            {
+                AutoWorkTimer.Start();
+            }
+            else
+            {
+                AutoWorkTimer.Stop();
+            }
+        }
+
+        private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            queryHandler.CheckRequestsQueue();
+            queryHandler.ProcessEntireQueryList();
+            if (checkBoxAuto.Checked)
+            {
+                AutoWorkTimer.Start();
+            }
+        }
     }
 }

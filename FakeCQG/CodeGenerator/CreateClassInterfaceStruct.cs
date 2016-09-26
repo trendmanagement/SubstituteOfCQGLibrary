@@ -49,7 +49,8 @@ namespace CodeGenerator
             }
             foreach (Type ancType in ancTypes)
             {
-                if (SkippedAncestors.Contains(ancType.Name))
+                if (SkippedAncestors.Contains(ancType.Name) ||
+                    (ancType.IsInterface && CheckInterfaceInheritance(ancTypes, ancType)))
                 {
                     continue;
                 }
@@ -69,9 +70,9 @@ namespace CodeGenerator
 
             IncreaseIndent();
 
-            if (type.IsClass || type.IsValueType)
+            if (type.IsClass)
             {
-                File.WriteLine(Indent1 + "private string thisObjUnqKey;" + Environment.NewLine);                
+                File.WriteLine(Indent1 + "private string dcObjKey;" + Environment.NewLine);
             }
             if (eventsChecking)
             {
@@ -80,31 +81,32 @@ namespace CodeGenerator
 
             if (!type.IsInterface)
             {
+                // Add fields
+                CreateFields(type.GetFields());
+
                 // Add constructors
                 CreateCtors(type, eventsChecking);
-            }
 
-            if (!type.IsInterface && !type.IsValueType)
-            {
-                // Add destructor
-                CreateDtor(type.Name);
+                if (!type.IsValueType)
+                {
+                    // Add destructor
+                    CreateDtor(type.Name);
+                }
             }
 
             // Add properies
             CreateProperties(type.GetProperties(), type.IsInterface);
 
             // Add events
-            foreach (EventInfo einfo in SortEvents(type.GetEvents()))
-            {
-                CreateEvent(einfo, type.IsInterface);
-            }
+            CreateEvents(type.GetEvents(), type.IsInterface);
 
             // Add methods
             CreateMethods(type);
 
             if (eventsChecking)
             {
-                UpdateRegion(RegionType.TimerTickHardler);
+                UpdateRegion(RegionType.TimerTickHandler);
+
                 File.WriteLine(Indent1 + "private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)" +
                     Environment.NewLine + Indent1 + "{");
 
@@ -124,9 +126,44 @@ namespace CodeGenerator
             File.WriteLine(Indent1 + "}" + Environment.NewLine);
         }
 
-        static IEnumerable<EventInfo> SortEvents(EventInfo[] einfos)
+        /// <summary>
+        /// Check if any of types "checkedTypes" has direct or indirect inheritance from interface "intType"
+        /// </summary>
+        static bool CheckInterfaceInheritance(IEnumerable<Type> allTypes, Type intType)
         {
-            return einfos.OrderBy(einfo => einfo.EventHandlerType.Name);
+            IEnumerable<Type> checkedTypes = allTypes.Where(type => type != intType);
+            return CheckInterfaceEqualityOrInheritance(checkedTypes, intType);
+        }
+
+        /// <summary>
+        /// Check if any of types "checkedTypes" is equal to or has direct or indirect inheritance from interface "intType"
+        /// </summary>
+        static bool CheckInterfaceEqualityOrInheritance(IEnumerable<Type> checkedTypes, Type intType)
+        {
+            foreach (Type checkedType in checkedTypes)
+            {
+                // Check this type
+                if (checkedType == intType)
+                {
+                    return true;
+                }
+
+                // Get its ancestors
+                IEnumerable<Type> ancTypes = checkedType.GetInterfaces();
+                Type baseType = checkedType.BaseType;
+                if (baseType != null)
+                {
+                    ancTypes = ancTypes.Concat(new[] { baseType });
+                }
+
+                // Recursive call
+                if (CheckInterfaceEqualityOrInheritance(ancTypes, intType))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

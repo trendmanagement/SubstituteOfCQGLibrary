@@ -1341,13 +1341,14 @@ namespace TimedBars
             {
                 // Creates the CQGCEL object
                 CEL = new CQG.CQGCELClass();
-                CEL.DataError += new CQG._ICQGCELEvents_DataErrorEventHandler(CEL_DataError);
-                CEL.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CEL_DataConnectionStatusChanged);
-                CEL.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(CEL_TimedBarsResolved);
-                CEL.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(CEL_TimedBarsAdded);
-                CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(CEL_TimedBarsUpdated);
-                CEL.TimedBarsInserted += new CQG._ICQGCELEvents_TimedBarsInsertedEventHandler(CEL_TimedBarsInserted);
-                CEL.TimedBarsRemoved += new CQG._ICQGCELEvents_TimedBarsRemovedEventHandler(CEL_TimedBarsRemoved);
+                // !!
+                // CEL.DataError += new CQG._ICQGCELEvents_DataErrorEventHandler(CEL_DataError);
+                // CEL.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CEL_DataConnectionStatusChanged);
+                // CEL.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(CEL_TimedBarsResolved);
+                // CEL.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(CEL_TimedBarsAdded);
+                // CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(CEL_TimedBarsUpdated);
+                // CEL.TimedBarsInserted += new CQG._ICQGCELEvents_TimedBarsInsertedEventHandler(CEL_TimedBarsInserted);
+                // CEL.TimedBarsRemoved += new CQG._ICQGCELEvents_TimedBarsRemovedEventHandler(CEL_TimedBarsRemoved);
                 CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
                 CEL.APIConfiguration.CollectionsThrowException = false;
                 CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzCentral;

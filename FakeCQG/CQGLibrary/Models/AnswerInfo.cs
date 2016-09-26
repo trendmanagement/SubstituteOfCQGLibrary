@@ -16,7 +16,13 @@ namespace FakeCQG.Models
         public object Value { get; set; }
         public bool isEventQuery { get; set; }
 
-        public AnswerInfo(string key, string objKey, string name, Dictionary<int, object> argVals = null, string vKey = null, object val = null,
+        public AnswerInfo(
+            string key,
+            string objKey,
+            string name,
+            Dictionary<int, object> argVals = null,
+            string vKey = null,
+            object val = null,
             bool isEventQ = false)
         {
             Key = key;
