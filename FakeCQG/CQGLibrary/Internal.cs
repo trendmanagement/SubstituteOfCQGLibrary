@@ -15,8 +15,9 @@ namespace FakeCQG
         static bool EventsCheckingON = false;
 
         static string Log;
+        public static object LogLock = new object();
 
-        const string IdName = "Key";
+        public const string IdName = "Key";
 
         public delegate void GetQueryInfosHandler(List<QueryInfo> queries);
         public static event GetQueryInfosHandler GetQueries;
@@ -132,11 +133,11 @@ namespace FakeCQG
 
             switch (qType)
             {
-                case QueryInfo.QueryType.Ctor:
-                case QueryInfo.QueryType.Dtor:
+                case QueryInfo.QueryType.CallCtor:
+                case QueryInfo.QueryType.CallDtor:
                 case QueryInfo.QueryType.GetProperty:
                 case QueryInfo.QueryType.SetProperty:
-                case QueryInfo.QueryType.Method:
+                case QueryInfo.QueryType.CallMethod:
                     if (argKeys.Count == 0 && argVals.Count == 0)
                     {
                         model = new QueryInfo(qType, key, objKey, name);
@@ -365,13 +366,15 @@ namespace FakeCQG
                 {
                     result = allQueries.Find(filter).ToList();
                     OnGetQueries(result);
-                    OnLogChange("**********************************************************");
-                    OnLogChange(string.Format("{0} quer(y/ies) in collection at {1}", result.Count, DateTime.Now));
-                    foreach (QueryInfo query in result)
+                    lock (LogLock)
                     {
-                        OnLogChange(string.Format("QueryType: \"{0}\", ObjectType: \"{1}\", QueryId: \"{2}\"", query.TypeOfQuery, query.QueryName, query.Key));
+                        OnLogChange(string.Format("{0} quer(y/ies) in collection at {1}", result.Count, DateTime.Now));
+                        foreach (QueryInfo query in result)
+                        {
+                            OnLogChange(query.ToString());
+                        }
+                        OnLogChange("************************************************************");
                     }
-                    OnLogChange("**********************************************************");
                 }
                 catch (Exception ex)
                 {

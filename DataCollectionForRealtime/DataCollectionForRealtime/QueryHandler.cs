@@ -87,7 +87,7 @@ namespace DataCollectionForRealtime
             //Handling of a request depending on its kind
             switch (query.TypeOfQuery)
             {
-                case QueryInfo.QueryType.Ctor:
+                case QueryInfo.QueryType.CallCtor:
                     {
                         string key;
 
@@ -129,9 +129,13 @@ namespace DataCollectionForRealtime
                     LoadInAnswer(answer);
                     break;
 
-                case QueryInfo.QueryType.Dtor:
+                case QueryInfo.QueryType.CallDtor:
                     {
                         DataDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+
+                        PushAnswer(answer);
                     }
                     break;
 
@@ -173,7 +177,7 @@ namespace DataCollectionForRealtime
                     }
                     break;
 
-                case QueryInfo.QueryType.Method:
+                case QueryInfo.QueryType.CallMethod:
                     {
                         object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
@@ -267,13 +271,11 @@ namespace DataCollectionForRealtime
 
                 var collectionA = mongoA.GetCollection;
                 collectionA.InsertOne(answer);
-                AsyncTaskListener.LogMessageFormat(
-                    "The following answer to query of type \"{0}\" was pushed into the MongoDB:" + Environment.NewLine +
-                    "[Value: \"{1}\", Key: \"{2}\"]",
-                    answer.QueryName,
-                    answer.Value,
-                    answer.ValueKey);
-
+                lock (FakeCQG.CQG.LogLock)
+                {
+                    AsyncTaskListener.LogMessage(answer.ToString());
+                    AsyncTaskListener.LogMessage("************************************************************");
+                }
                 DeleteProcessedQuery(answer.Key);
             }
             catch (Exception exc)
@@ -287,11 +289,10 @@ namespace DataCollectionForRealtime
             QueryHelper mongoQ = new QueryHelper();
 
             var collectionQ = mongoQ.GetCollection;
-            var filter = Builders<QueryInfo>.Filter.Eq("Key", key);
+            var filter = Builders<QueryInfo>.Filter.Eq(FakeCQG.CQG.IdName, key);
             try
             {
                 collectionQ.DeleteOneAsync(filter);
-                AsyncTaskListener.LogMessage("Query was deleted successfully.");
             }
             catch (Exception ex)
             {
