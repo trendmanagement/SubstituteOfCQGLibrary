@@ -138,7 +138,7 @@ namespace DataCollectionForRealtime
                             DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
                             answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
                         }
-                        
+
                         PushAnswer(answer);
                     }
                     break;
@@ -231,10 +231,9 @@ namespace DataCollectionForRealtime
                     }
                     break;
             }
- 
+
             return isSuccessful;
         }
-
         public void ProcessEntireQueryList()
         {
             foreach (QueryInfo temp in QueryList)

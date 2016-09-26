@@ -1,4 +1,7 @@
-﻿namespace TestRealTime
+﻿using System;
+using CQGLibrary.Models;
+
+namespace TestRealTime
 {
     partial class MainForm
     {

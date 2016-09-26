@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FakeCQG.Models;
+using CQGLibrary.HandShaking;
 
 namespace TestRealTime
 {
@@ -12,6 +13,7 @@ namespace TestRealTime
         public MainForm()
         {
             InitializeComponent();
+            Subscriber.ListenForHanshaking();
             FakeCQG.CQG.LogChange += CQG_LogChange;
             FakeCQG.CQG.GetQueries += CQG_GetQueries;
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;

@@ -1,6 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using CQGLibrary.HandShaking;
+
+
+using FakeCQG;
+using FakeCQG.Helpers;
+using FakeCQG.Models;
+using CQGLibrary.Models;
+using System.Collections.Generic;
 
 namespace DataCollectionForRealtime
 {
@@ -12,6 +20,8 @@ namespace DataCollectionForRealtime
 
         CQGDataManagement cqgDataManagement;
 
+        int timeForHandShaking = 5000;
+
         QueryHandler queryHandler;
 
         public RealtimeDataManagement()
@@ -21,6 +31,10 @@ namespace DataCollectionForRealtime
             cqgDataManagement = new CQGDataManagement(this);
 
             queryHandler = new QueryHandler(cqgDataManagement);
+
+            Listener.StartListerning(timeForHandShaking);
+
+            Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
         }
@@ -36,6 +50,22 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
+        }
+
+        private void Listener_SubscribersAdded(HandShakingEventArgs args)
+        {
+            DataDictionaries.RealTimeIds = new HashSet<Guid>();
+            if (!args.NoSubscribers)
+            {
+                foreach (var subscriber in args.Subscribers)
+                {
+                    DataDictionaries.RealTimeIds.Add(subscriber.ID);
+                }
+            }
+            else
+            {
+                DataDictionaries.ClearAllDictionaris();
+            }
         }
 
         internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)

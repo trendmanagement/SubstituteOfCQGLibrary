@@ -905,17 +905,17 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler(CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_AdvancedStudyResolvedEventHandler(CQGAdvancedStudy cqg_advanced_study, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGAdvancedStudy cqg_advanced_study, int index_);
+    public delegate void _ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
+    public delegate void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(String guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
 
-    public delegate void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(string guid_, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(String guid_, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_AllOrdersCanceledEventHandler(eOrderSideFilter order_side, CQGIntegerCollection gw_account_ids, CQGStringCollection instrument_names);
 
@@ -925,29 +925,29 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_CELStartedEventHandler();
 
-    public delegate void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+    public delegate void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
     public delegate void _ICQGCELEvents_ConditionAddedEventHandler(CQGCondition cqg_condition);
 
     public delegate void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandler(CQGConditionDefinitions cqg_condition_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConditionInsertedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionInsertedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ConditionRemovedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionRemovedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConditionResolvedEventHandler(CQGCondition cqg_condition, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConditionUpdatedEventHandler(CQGCondition cqg_condition, int index_);
+    public delegate void _ICQGCELEvents_ConditionUpdatedEventHandler(CQGCondition cqg_condition, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+    public delegate void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_CurrencyRatesChangedEventHandler(CQGCurrencyRates cqg_currency_rates);
 
@@ -957,41 +957,41 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler(CQGCustomStudyDefinitions cqg_custom_study_definitions, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_CustomStudyInsertedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyInsertedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
-    public delegate void _ICQGCELEvents_CustomStudyRemovedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyRemovedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_CustomStudyResolvedEventHandler(CQGCustomStudy cqg_custom_study, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGCustomStudy cqg_custom_study, int index_);
+    public delegate void _ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGCustomStudy cqg_custom_study, Int32 index_);
 
     public delegate void _ICQGCELEvents_DataConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_DataErrorEventHandler(object cqg_error, string error_description);
+    public delegate void _ICQGCELEvents_DataErrorEventHandler(Object cqg_error, String error_description);
 
     public delegate void _ICQGCELEvents_DataSourcesResolvedEventHandler(CQGDataSources cqg_data_sources, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(String data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_ExpressionAddedEventHandler(CQGExpression cqg_expression);
 
-    public delegate void _ICQGCELEvents_ExpressionInsertedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionInsertedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
-    public delegate void _ICQGCELEvents_ExpressionRemovedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionRemovedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
     public delegate void _ICQGCELEvents_ExpressionResolvedEventHandler(CQGExpression cqg_expression, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_ExpressionUpdatedEventHandler(CQGExpression cqg_expression, int index_);
+    public delegate void _ICQGCELEvents_ExpressionUpdatedEventHandler(CQGExpression cqg_expression, Int32 index_);
 
     public delegate void _ICQGCELEvents_GWConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_GWEnvironmentChangedEventHandler(eGWEnvChangeCode event_code, int account_id, int phase_);
+    public delegate void _ICQGCELEvents_GWEnvironmentChangedEventHandler(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_);
 
     public delegate void _ICQGCELEvents_HistoricalSessionsResolvedEventHandler(CQGSessionsCollection cqg_historical_sessions, CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_ICConnectionStatusChangedEventHandler(eICConnectionStatus new_status);
 
-    public delegate void _ICQGCELEvents_IncorrectSymbolEventHandler(string symbol_);
+    public delegate void _ICQGCELEvents_IncorrectSymbolEventHandler(String symbol_);
 
     public delegate void _ICQGCELEvents_InstrumentChangedEventHandler(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1001,7 +1001,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_InstrumentsGroupResolvedEventHandler(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_InstrumentSubscribedEventHandler(string symbol_, CQGInstrument cqg_instrument);
+    public delegate void _ICQGCELEvents_InstrumentSubscribedEventHandler(String symbol_, CQGInstrument cqg_instrument);
 
     public delegate void _ICQGCELEvents_IsReadyEventHandler(ref eReadyStatus ready_status);
 
@@ -1023,13 +1023,13 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_PointAndFigureBarsAddedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+    public delegate void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_PositionsStatementResolvedEventHandler(CQGPositionsStatement cqg_positions_statement, CQGError cqg_error);
 
@@ -1039,43 +1039,43 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_SubMinuteBarsAddedEventHandler(CQGSubMinuteBars cqg_submintue_bars);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_SubMinuteBarsResolvedEventHandler(CQGSubMinuteBars cqg_subminte_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGSubMinuteBars cqg_subminute_bars, int index_);
+    public delegate void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_SummariesStatementResolvedEventHandler(CQGSummariesStatement cqg_summaries_statement, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TFlowBarsAddedEventHandler(CQGTFlowBars cqg_tflow_bars);
 
-    public delegate void _ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_TFlowBarsResolvedEventHandler(CQGTFlowBars cqg_tflow_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGTFlowBars cqg_tflow_bars, int index_);
+    public delegate void _ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TicksAddedEventHandler(CQGTicks cqg_ticks, int added_ticks_count);
+    public delegate void _ICQGCELEvents_TicksAddedEventHandler(CQGTicks cqg_ticks, Int32 added_ticks_count);
 
     public delegate void _ICQGCELEvents_TicksResolvedEventHandler(CQGTicks cqg_ticks, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TimedBarsAddedEventHandler(CQGTimedBars cqg_timed_bars);
 
-    public delegate void _ICQGCELEvents_TimedBarsInsertedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsInsertedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TimedBarsRemovedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsRemovedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
     public delegate void _ICQGCELEvents_TimedBarsResolvedEventHandler(CQGTimedBars cqg_timed_bars, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGTimedBars cqg_timed_bars, int index_);
+    public delegate void _ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-    public delegate void _ICQGCELEvents_TradableCommoditiesResolvedEventHandler(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_TradableCommoditiesResolvedEventHandler(Int32 gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_TradableExchangesResolvedEventHandler(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
+    public delegate void _ICQGCELEvents_TradableExchangesResolvedEventHandler(Int32 gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
 
     public delegate void _ICQGCELEvents_TradingSystemAddNotificationEventHandler(CQGTradingSystem cqg_trading_system, CQGTradingSystemAddInfo cqg_trading_system_add_info);
 
@@ -1093,13 +1093,13 @@ namespace FakeCQG
 
     public delegate void _ICQGCELEvents_YieldsAddedEventHandler(CQGYields cqg_yields);
 
-    public delegate void _ICQGCELEvents_YieldsInsertedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsInsertedEventHandler(CQGYields cqg_yields, Int32 index_);
 
-    public delegate void _ICQGCELEvents_YieldsRemovedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsRemovedEventHandler(CQGYields cqg_yields, Int32 index_);
 
     public delegate void _ICQGCELEvents_YieldsResolvedEventHandler(CQGYields cqg_yields, CQGError cqg_error);
 
-    public delegate void _ICQGCELEvents_YieldsUpdatedEventHandler(CQGYields cqg_yields, int index_);
+    public delegate void _ICQGCELEvents_YieldsUpdatedEventHandler(CQGYields cqg_yields, Int32 index_);
 
     public delegate void _ICQGCELGeneralEvents_CELStartedEventHandler();
 
@@ -1107,7 +1107,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
-    public delegate void _ICQGCELGeneralEvents_DataErrorEventHandler(object cqg_error, string error_description);
+    public delegate void _ICQGCELGeneralEvents_DataErrorEventHandler(Object cqg_error, String error_description);
 
     public delegate void _ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler(eConnectionStatus new_status);
 
@@ -1117,9 +1117,9 @@ namespace FakeCQG
 
     public delegate void _ICQGCELGeneralEvents_OnIdleEventHandler();
 
-    public delegate void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+    public delegate void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
-    public delegate void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(string symbol_);
+    public delegate void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(String symbol_);
 
     public delegate void _ICQGCELInstrumentEvents_InstrumentChangedEventHandler(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1129,7 +1129,7 @@ namespace FakeCQG
 
     public delegate void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-    public delegate void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(string symbol_, CQGInstrument cqg_instrument);
+    public delegate void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(String symbol_, CQGInstrument cqg_instrument);
 
     #endregion
 
@@ -1145,17 +1145,17 @@ namespace FakeCQG
 
         void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQGError cqg_error);
 
-        void AdvancedStudyInserted(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyInserted(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-        void AdvancedStudyRemoved(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyRemoved(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
         void AdvancedStudyResolved(CQGAdvancedStudy cqg_advanced_study, CQGError cqg_error);
 
-        void AdvancedStudyUpdated(CQGAdvancedStudy cqg_advanced_study, int index_);
+        void AdvancedStudyUpdated(CQGAdvancedStudy cqg_advanced_study, Int32 index_);
 
-        void AlgorithmicOrderPlaced(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
+        void AlgorithmicOrderPlaced(String guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props);
 
-        void AlgorithmicOrderRegistrationComplete(string guid_, CQGError cqg_error);
+        void AlgorithmicOrderRegistrationComplete(String guid_, CQGError cqg_error);
 
         void AllOrdersCanceled(eOrderSideFilter order_side, CQGIntegerCollection gw_account_ids, CQGStringCollection instrument_names);
 
@@ -1165,29 +1165,29 @@ namespace FakeCQG
 
         void CELStarted();
 
-        void CommodityInstrumentsResolved(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+        void CommodityInstrumentsResolved(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
         void ConditionAdded(CQGCondition cqg_condition);
 
         void ConditionDefinitionsResolved(CQGConditionDefinitions cqg_condition_definitions, CQGError cqg_error);
 
-        void ConditionInserted(CQGCondition cqg_condition, int index_);
+        void ConditionInserted(CQGCondition cqg_condition, Int32 index_);
 
-        void ConditionRemoved(CQGCondition cqg_condition, int index_);
+        void ConditionRemoved(CQGCondition cqg_condition, Int32 index_);
 
         void ConditionResolved(CQGCondition cqg_condition, CQGError cqg_error);
 
-        void ConditionUpdated(CQGCondition cqg_condition, int index_);
+        void ConditionUpdated(CQGCondition cqg_condition, Int32 index_);
 
         void ConstantVolumeBarsAdded(CQGConstantVolumeBars cqg_constant_volume_bars);
 
-        void ConstantVolumeBarsInserted(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsInserted(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
-        void ConstantVolumeBarsRemoved(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsRemoved(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
         void ConstantVolumeBarsResolved(CQGConstantVolumeBars cqg_constant_volume_bars, CQGError cqg_error);
 
-        void ConstantVolumeBarsUpdated(CQGConstantVolumeBars cqg_constant_volume_bars, int index_);
+        void ConstantVolumeBarsUpdated(CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_);
 
         void CurrencyRatesChanged(CQGCurrencyRates cqg_currency_rates);
 
@@ -1197,41 +1197,41 @@ namespace FakeCQG
 
         void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions cqg_custom_study_definitions, CQGError cqg_error);
 
-        void CustomStudyInserted(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyInserted(CQGCustomStudy cqg_custom_study, Int32 index_);
 
-        void CustomStudyRemoved(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyRemoved(CQGCustomStudy cqg_custom_study, Int32 index_);
 
         void CustomStudyResolved(CQGCustomStudy cqg_custom_study, CQGError cqg_error);
 
-        void CustomStudyUpdated(CQGCustomStudy cqg_custom_study, int index_);
+        void CustomStudyUpdated(CQGCustomStudy cqg_custom_study, Int32 index_);
 
         void DataConnectionStatusChanged(eConnectionStatus new_status);
 
-        void DataError(object cqg_error, string error_description);
+        void DataError(Object cqg_error, String error_description);
 
         void DataSourcesResolved(CQGDataSources cqg_data_sources, CQGError cqg_error);
 
-        void DataSourceSymbolsResolved(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
+        void DataSourceSymbolsResolved(String data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error);
 
         void ExpressionAdded(CQGExpression cqg_expression);
 
-        void ExpressionInserted(CQGExpression cqg_expression, int index_);
+        void ExpressionInserted(CQGExpression cqg_expression, Int32 index_);
 
-        void ExpressionRemoved(CQGExpression cqg_expression, int index_);
+        void ExpressionRemoved(CQGExpression cqg_expression, Int32 index_);
 
         void ExpressionResolved(CQGExpression cqg_expression, CQGError cqg_error);
 
-        void ExpressionUpdated(CQGExpression cqg_expression, int index_);
+        void ExpressionUpdated(CQGExpression cqg_expression, Int32 index_);
 
         void GWConnectionStatusChanged(eConnectionStatus new_status);
 
-        void GWEnvironmentChanged(eGWEnvChangeCode event_code, int account_id, int phase_);
+        void GWEnvironmentChanged(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_);
 
         void HistoricalSessionsResolved(CQGSessionsCollection cqg_historical_sessions, CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQGError cqg_error);
 
         void ICConnectionStatusChanged(eICConnectionStatus new_status);
 
-        void IncorrectSymbol(string symbol_);
+        void IncorrectSymbol(String symbol_);
 
         void InstrumentChanged(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1241,7 +1241,7 @@ namespace FakeCQG
 
         void InstrumentsGroupResolved(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-        void InstrumentSubscribed(string symbol_, CQGInstrument cqg_instrument);
+        void InstrumentSubscribed(String symbol_, CQGInstrument cqg_instrument);
 
         void IsReady(ref eReadyStatus ready_status);
 
@@ -1263,13 +1263,13 @@ namespace FakeCQG
 
         void PointAndFigureBarsAdded(CQGPointAndFigureBars cqg_point_and_figure_bars);
 
-        void PointAndFigureBarsInserted(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsInserted(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
-        void PointAndFigureBarsRemoved(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsRemoved(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
         void PointAndFigureBarsResolved(CQGPointAndFigureBars cqg_point_and_figure_bars, CQGError cqg_error);
 
-        void PointAndFigureBarsUpdated(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_);
+        void PointAndFigureBarsUpdated(CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_);
 
         void PositionsStatementResolved(CQGPositionsStatement cqg_positions_statement, CQGError cqg_error);
 
@@ -1279,43 +1279,43 @@ namespace FakeCQG
 
         void SubMinuteBarsAdded(CQGSubMinuteBars cqg_submintue_bars);
 
-        void SubMinuteBarsInserted(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsInserted(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
-        void SubMinuteBarsRemoved(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsRemoved(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
         void SubMinuteBarsResolved(CQGSubMinuteBars cqg_subminte_bars, CQGError cqg_error);
 
-        void SubMinuteBarsUpdated(CQGSubMinuteBars cqg_subminute_bars, int index_);
+        void SubMinuteBarsUpdated(CQGSubMinuteBars cqg_subminute_bars, Int32 index_);
 
         void SummariesStatementResolved(CQGSummariesStatement cqg_summaries_statement, CQGError cqg_error);
 
         void TFlowBarsAdded(CQGTFlowBars cqg_tflow_bars);
 
-        void TFlowBarsInserted(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsInserted(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-        void TFlowBarsRemoved(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsRemoved(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
         void TFlowBarsResolved(CQGTFlowBars cqg_tflow_bars, CQGError cqg_error);
 
-        void TFlowBarsUpdated(CQGTFlowBars cqg_tflow_bars, int index_);
+        void TFlowBarsUpdated(CQGTFlowBars cqg_tflow_bars, Int32 index_);
 
-        void TicksAdded(CQGTicks cqg_ticks, int added_ticks_count);
+        void TicksAdded(CQGTicks cqg_ticks, Int32 added_ticks_count);
 
         void TicksResolved(CQGTicks cqg_ticks, CQGError cqg_error);
 
         void TimedBarsAdded(CQGTimedBars cqg_timed_bars);
 
-        void TimedBarsInserted(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsInserted(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-        void TimedBarsRemoved(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsRemoved(CQGTimedBars cqg_timed_bars, Int32 index_);
 
         void TimedBarsResolved(CQGTimedBars cqg_timed_bars, CQGError cqg_error);
 
-        void TimedBarsUpdated(CQGTimedBars cqg_timed_bars, int index_);
+        void TimedBarsUpdated(CQGTimedBars cqg_timed_bars, Int32 index_);
 
-        void TradableCommoditiesResolved(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
+        void TradableCommoditiesResolved(Int32 gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error);
 
-        void TradableExchangesResolved(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
+        void TradableExchangesResolved(Int32 gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error);
 
         void TradingSystemAddNotification(CQGTradingSystem cqg_trading_system, CQGTradingSystemAddInfo cqg_trading_system_add_info);
 
@@ -1333,13 +1333,13 @@ namespace FakeCQG
 
         void YieldsAdded(CQGYields cqg_yields);
 
-        void YieldsInserted(CQGYields cqg_yields, int index_);
+        void YieldsInserted(CQGYields cqg_yields, Int32 index_);
 
-        void YieldsRemoved(CQGYields cqg_yields, int index_);
+        void YieldsRemoved(CQGYields cqg_yields, Int32 index_);
 
         void YieldsResolved(CQGYields cqg_yields, CQGError cqg_error);
 
-        void YieldsUpdated(CQGYields cqg_yields, int index_);
+        void YieldsUpdated(CQGYields cqg_yields, Int32 index_);
 
         #endregion
 
@@ -1565,7 +1565,7 @@ namespace FakeCQG
 
         void DataConnectionStatusChanged(eConnectionStatus new_status);
 
-        void DataError(object cqg_error, string error_description);
+        void DataError(Object cqg_error, String error_description);
 
         void GWConnectionStatusChanged(eConnectionStatus new_status);
 
@@ -1607,9 +1607,9 @@ namespace FakeCQG
     {
         #region Methods
 
-        void CommodityInstrumentsResolved(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
+        void CommodityInstrumentsResolved(String commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments);
 
-        void IncorrectSymbol(string symbol_);
+        void IncorrectSymbol(String symbol_);
 
         void InstrumentChanged(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties);
 
@@ -1619,7 +1619,7 @@ namespace FakeCQG
 
         void InstrumentsGroupResolved(CQGInstrumentsGroup instruments_group, CQGError cqg_error);
 
-        void InstrumentSubscribed(string symbol_, CQGInstrument cqg_instrument);
+        void InstrumentSubscribed(String symbol_, CQGInstrument cqg_instrument);
 
         #endregion
 
@@ -2334,7 +2334,7 @@ namespace FakeCQG
             get;
         }
 
-        bool AutoSubscribeInstruments
+        Boolean AutoSubscribeInstruments
         {
             get;
             set;
@@ -2355,7 +2355,7 @@ namespace FakeCQG
             get;
         }
 
-        string FcmAccountID
+        String FcmAccountID
         {
             get;
         }
@@ -2365,22 +2365,22 @@ namespace FakeCQG
             get;
         }
 
-        int FcmID
+        Int32 FcmID
         {
             get;
         }
 
-        string FcmName
+        String FcmName
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string GWAccountName
+        String GWAccountName
         {
             get;
         }
@@ -2406,7 +2406,7 @@ namespace FakeCQG
             set;
         }
 
-        string ReportingCurrency
+        String ReportingCurrency
         {
             get;
         }
@@ -2426,12 +2426,12 @@ namespace FakeCQG
             get;
         }
 
-        double TotalMarginValue
+        Double TotalMarginValue
         {
             get;
         }
 
-        double TotalPurchasingPower
+        Double TotalPurchasingPower
         {
             get;
         }
@@ -2444,17 +2444,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAccount this[int gw_account_id]
+        CQGAccount this[Int32 gw_account_id]
         {
             get;
         }
 
-        CQGAccount this[string fcm_account_id, int fcm_id]
+        CQGAccount this[String fcm_account_id, Int32 fcm_id]
         {
             get;
         }
@@ -2465,9 +2465,9 @@ namespace FakeCQG
 
         void Add(CQGAccount cqg_account);
 
-        CQGAccount get_ItemByFCM(string fcm_account_id, int fcm_id);
+        CQGAccount get_ItemByFCM(String fcm_account_id, Int32 fcm_id);
 
-        CQGAccount get_ItemByIndex(int index_);
+        CQGAccount get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -2477,12 +2477,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAccountSummary this[object index_]
+        CQGAccountSummary this[Object index_]
         {
             get;
         }
@@ -2504,12 +2504,12 @@ namespace FakeCQG
             get;
         }
 
-        string CurrencyName
+        String CurrencyName
         {
             get;
         }
 
-        bool ManualFillsInvolved
+        Boolean ManualFillsInvolved
         {
             get;
         }
@@ -2518,25 +2518,25 @@ namespace FakeCQG
 
         #region Methods
 
-        double Balance(int day_ = 0);
+        Double Balance(Int32 day_ = 0);
 
-        double CashExcess(int day_ = 1);
+        Double CashExcess(Int32 day_ = 1);
 
-        double Collaterals(int day_ = 1);
+        Double Collaterals(Int32 day_ = 1);
 
-        double InitialMargin(int day_ = 1);
+        Double InitialMargin(Int32 day_ = 1);
 
-        double MaintenanceMargin(int day_ = 1);
+        Double MaintenanceMargin(Int32 day_ = 1);
 
-        double MVO(int day_ = 0);
+        Double MVO(Int32 day_ = 0);
 
-        double NLV(int day_ = 0);
+        Double NLV(Int32 day_ = 0);
 
-        double OTE(int day_ = 0);
+        Double OTE(Int32 day_ = 0);
 
-        double ProfitLoss(int day_ = 1);
+        Double ProfitLoss(Int32 day_ = 1);
 
-        double UPL(int day_ = 0);
+        Double UPL(Int32 day_ = 0);
 
         #endregion
 
@@ -2546,17 +2546,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAdvancedStudy this[int index_]
+        CQGAdvancedStudy this[Int32 index_]
         {
             get;
         }
 
-        CQGAdvancedStudy this[string id_]
+        CQGAdvancedStudy this[String id_]
         {
             get;
         }
@@ -2565,7 +2565,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGAdvancedStudy get_ItemById(string id_);
+        CQGAdvancedStudy get_ItemById(String id_);
 
         #endregion
 
@@ -2575,7 +2575,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -2595,12 +2595,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGCurves this[int index_]
+        CQGCurves this[Int32 index_]
         {
             get;
         }
@@ -2625,7 +2625,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -2635,11 +2635,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -2649,7 +2649,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
@@ -2659,7 +2659,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -2677,17 +2677,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAdvancedStudyDefinition this[int index_]
+        CQGAdvancedStudyDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGAdvancedStudyDefinition this[string advanced_study_abbreviation]
+        CQGAdvancedStudyDefinition this[String advanced_study_abbreviation]
         {
             get;
         }
@@ -2696,9 +2696,9 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGAdvancedStudyDefinition get_ItemByAbbreviation(string advanced_study_abbreviation);
+        CQGAdvancedStudyDefinition get_ItemByAbbreviation(String advanced_study_abbreviation);
 
-        CQGAdvancedStudyDefinition get_ItemByName(string advanced_study_name);
+        CQGAdvancedStudyDefinition get_ItemByName(String advanced_study_name);
 
         #endregion
 
@@ -2708,7 +2708,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -2720,7 +2720,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -2731,7 +2731,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -2743,37 +2743,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -2785,7 +2785,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -2797,7 +2797,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -2807,13 +2807,13 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void IncludeCurve(object curve_key);
+        void IncludeCurve(Object curve_key);
 
-        bool IsCurveIncluded(object curve_key);
+        Boolean IsCurveIncluded(Object curve_key);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -2823,19 +2823,19 @@ namespace FakeCQG
     {
         #region Properties
 
-        object DefaultValue
+        Object DefaultValue
         {
             get;
             set;
         }
 
-        int DefaultValueIndex
+        Int32 DefaultValueIndex
         {
             get;
             set;
         }
 
-        string Name
+        String Name
         {
             get;
             set;
@@ -2847,7 +2847,7 @@ namespace FakeCQG
             set;
         }
 
-        string Unit
+        String Unit
         {
             get;
             set;
@@ -2862,7 +2862,7 @@ namespace FakeCQG
 
         #region Methods
 
-        void AddValue(string value_);
+        void AddValue(String value_);
 
         #endregion
 
@@ -2872,12 +2872,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAlgorithmicOrderDefinition this[int index_]
+        CQGAlgorithmicOrderDefinition this[Int32 index_]
         {
             get;
         }
@@ -2908,7 +2908,7 @@ namespace FakeCQG
             get;
         }
 
-        string ExecutionPattern
+        String ExecutionPattern
         {
             get;
         }
@@ -2918,17 +2918,17 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool Parked
+        Boolean Parked
         {
             get;
         }
@@ -2938,12 +2938,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -2953,17 +2953,17 @@ namespace FakeCQG
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
 
-        double TrailingOffset
+        Double TrailingOffset
         {
             get;
         }
 
-        int TriggerQuantity
+        Int32 TriggerQuantity
         {
             get;
         }
@@ -2973,7 +2973,7 @@ namespace FakeCQG
             get;
         }
 
-        int VisibleQuantity
+        Int32 VisibleQuantity
         {
             get;
         }
@@ -2986,12 +2986,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGAlgorithmicOrderProperty this[int index_]
+        CQGAlgorithmicOrderProperty this[Int32 index_]
         {
             get;
         }
@@ -3008,12 +3008,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Name
+        String Name
         {
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
         }
@@ -3026,25 +3026,25 @@ namespace FakeCQG
     {
         #region Properties
 
-        int AccountMarginAndPositionsThrottleInterval
+        Int32 AccountMarginAndPositionsThrottleInterval
         {
             get;
             set;
         }
 
-        int AgeToDeleteLogFileDays
+        Int32 AgeToDeleteLogFileDays
         {
             get;
             set;
         }
 
-        bool ApplyDaylightSavingChanges
+        Boolean ApplyDaylightSavingChanges
         {
             get;
             set;
         }
 
-        bool CollectionsThrowException
+        Boolean CollectionsThrowException
         {
             get;
             set;
@@ -3080,25 +3080,25 @@ namespace FakeCQG
             set;
         }
 
-        int DOMUpdatesPeriod
+        Int32 DOMUpdatesPeriod
         {
             get;
             set;
         }
 
-        bool FireEventOnChangedPrices
+        Boolean FireEventOnChangedPrices
         {
             get;
             set;
         }
 
-        bool GatewayEnabled
+        Boolean GatewayEnabled
         {
             get;
             set;
         }
 
-        bool IncludeOrderTransactions
+        Boolean IncludeOrderTransactions
         {
             get;
             set;
@@ -3110,7 +3110,7 @@ namespace FakeCQG
             set;
         }
 
-        int MaxLogFileCount
+        Int32 MaxLogFileCount
         {
             get;
             set;
@@ -3122,43 +3122,43 @@ namespace FakeCQG
             set;
         }
 
-        int MaxLogFileSize
+        Int32 MaxLogFileSize
         {
             get;
             set;
         }
 
-        int MessageProcessingTimeout
+        Int32 MessageProcessingTimeout
         {
             get;
             set;
         }
 
-        bool MetaDataEnabled
+        Boolean MetaDataEnabled
         {
             get;
             set;
         }
 
-        bool NewInstrumentChangeMode
+        Boolean NewInstrumentChangeMode
         {
             get;
             set;
         }
 
-        bool NewInstrumentMode
+        Boolean NewInstrumentMode
         {
             get;
             set;
         }
 
-        bool NonsynchronizedData
+        Boolean NonsynchronizedData
         {
             get;
             set;
         }
 
-        bool PendingOrderActionEnabled
+        Boolean PendingOrderActionEnabled
         {
             get;
             set;
@@ -3176,13 +3176,13 @@ namespace FakeCQG
             set;
         }
 
-        string ProviderPassword
+        String ProviderPassword
         {
             get;
             set;
         }
 
-        bool QueryAllAuthorizedTraders
+        Boolean QueryAllAuthorizedTraders
         {
             get;
             set;
@@ -3194,13 +3194,13 @@ namespace FakeCQG
             set;
         }
 
-        string RemoteOpenAPILoginService
+        String RemoteOpenAPILoginService
         {
             get;
             set;
         }
 
-        string RemoteOpenAPIServer
+        String RemoteOpenAPIServer
         {
             get;
             set;
@@ -3211,19 +3211,19 @@ namespace FakeCQG
             get;
         }
 
-        bool ReplaceLoginSession
+        Boolean ReplaceLoginSession
         {
             get;
             set;
         }
 
-        int SnapshotPeriod
+        Int32 SnapshotPeriod
         {
             get;
             set;
         }
 
-        bool StrategyManagerEnabled
+        Boolean StrategyManagerEnabled
         {
             get;
             set;
@@ -3235,13 +3235,13 @@ namespace FakeCQG
             set;
         }
 
-        bool UsedFromATLClient
+        Boolean UsedFromATLClient
         {
             get;
             set;
         }
 
-        bool UseOrderSide
+        Boolean UseOrderSide
         {
             get;
             set;
@@ -3251,7 +3251,7 @@ namespace FakeCQG
 
         #region Methods
 
-        void AddRemoteOpenAPIServer(string server_address);
+        void AddRemoteOpenAPIServer(String server_address);
 
         void ClearRemoteOpenAPIServers();
 
@@ -3263,17 +3263,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        DateTime this[int index_]
+        DateTime this[Int32 index_]
         {
             get;
         }
@@ -3422,7 +3422,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsStarted
+        Boolean IsStarted
         {
             get;
         }
@@ -3437,7 +3437,7 @@ namespace FakeCQG
             get;
         }
 
-        bool OTPRequired
+        Boolean OTPRequired
         {
             get;
         }
@@ -3446,29 +3446,29 @@ namespace FakeCQG
 
         #region Methods
 
-        void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined);
+        void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined);
 
         void ActivateAllOrdersEx(CQGOrderActionRequest cqg_order_action_request);
 
-        void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, bool parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined);
+        void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined);
 
         void CancelAllOrdersEx(CQGOrderActionRequest cqg_order_action_request);
 
-        void ChangePassword(string username_, string old_password, string new_password);
+        void ChangePassword(String username_, String old_password, String new_password);
 
-        void ChangeRemoteOpenAPIServer(string server_address);
+        void ChangeRemoteOpenAPIServer(String server_address);
 
         CQGAccounts CreateAccountsCollection();
 
-        CQGAdvancedStudyRequest CreateAdvancedStudyRequest(string name_or_abbr);
+        CQGAdvancedStudyRequest CreateAdvancedStudyRequest(String name_or_abbr);
 
         CQGAlgorithmicOrderDefinitions CreateAlgorithmicOrderDefinitions();
 
-        CQGConditionRequest CreateConditionRequest(string condition_name);
+        CQGConditionRequest CreateConditionRequest(String condition_name);
 
         CQGConstantVolumeBarsRequest CreateConstantVolumeBarsRequest();
 
-        CQGCustomStudyRequest CreateCustomStudyRequest(string name_or_abbr);
+        CQGCustomStudyRequest CreateCustomStudyRequest(String name_or_abbr);
 
         CQGExecutionPattern CreateExecutionPattern(CQGStrategyDefinition cqg_definition = null, eOrderType order_type = eOrderType.otUndefined);
 
@@ -3482,19 +3482,19 @@ namespace FakeCQG
 
         CQGManualFillRequest CreateManualFillRequest(eManualFillUpdateType update_type, CQGManualFill manual_fill = null);
 
-        CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "");
+        CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "");
 
         CQGOrderActionRequest CreateOrderActionRequest();
 
-        CQGOrder CreateOrderByInstrumentName(eOrderType order_type, string instrument_name, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "");
+        CQGOrder CreateOrderByInstrumentName(eOrderType order_type, String instrument_name, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "");
 
         CQGOrderChain CreateOrderChain();
 
         CQGPointAndFigureBarsRequest CreatePointAndFigureBarsRequest();
 
-        CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "");
+        CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "");
 
-        CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, string expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "");
+        CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, String expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "");
 
         CQGSubMinuteBarsRequest CreateSubMinuteBarsRequest();
 
@@ -3504,35 +3504,35 @@ namespace FakeCQG
 
         CQGTimedBarsRequest CreateTimedBarsRequest();
 
-        CQGTradingSystemRequest CreateTradingSystemRequest(string name_or_abbr);
+        CQGTradingSystemRequest CreateTradingSystemRequest(String name_or_abbr);
 
         CQGYieldsRequest CreateYieldsRequest();
 
-        CQGStrategyDefinition DefineStrategy(string request_string_);
+        CQGStrategyDefinition DefineStrategy(String request_string_);
 
         void GWLogoff();
 
-        void GWLogon(string username_, string password_);
+        void GWLogon(String username_, String password_);
 
-        void GWOTPLogon(string username_, string password_, string otpassword_);
+        void GWOTPLogon(String username_, String password_, String otpassword_);
 
-        bool IsValid(object value_or_object);
+        Boolean IsValid(Object value_or_object);
 
-        void LogOn(string username_, string password_);
+        void LogOn(String username_, String password_);
 
-        void ModifyCompoundOrder(int compound_order_id, string compound_order_guid, CQGOrderChain order_chain);
+        void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain);
 
-        void NewInstrument(string symbol_);
+        void NewInstrument(String symbol_);
 
         void PlaceCompoundOrder(CQGOrderChain order_chain);
 
         CQGOrdersQuery QueryOrders(CQGAccount cqg_account, CQGInstrument cqg_instrument = null, eOrderStatusFilter status_filter = eOrderStatusFilter.osfAll, DateTime date_ = default(DateTime), eOrderSide order_side = eOrderSide.osdUndefined);
 
-        void QueryPositionsStatement(int gw_account_id, DateTime date_);
+        void QueryPositionsStatement(Int32 gw_account_id, DateTime date_);
 
-        void QuerySummariesStatement(int gw_account_id, DateTime date_);
+        void QuerySummariesStatement(Int32 gw_account_id, DateTime date_);
 
-        void RegisterAlgorithmicOrder(string guid_, string name_, string abbrv_, string description_, CQGAlgorithmicOrderDefinitions definitions_, int icon_index = 0);
+        void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0);
 
         void RemoveAdvancedStudy(CQGAdvancedStudy cqg_advanced_study);
 
@@ -3594,7 +3594,7 @@ namespace FakeCQG
 
         CQGBarsTimestamps RequestBarsTimestamps(CQGTimedBarsRequest cqg_timestamps_request);
 
-        void RequestCommodityInstruments(string commodity_name, eInstrumentType instrument_types, bool tradable_only = false);
+        void RequestCommodityInstruments(String commodity_name, eInstrumentType instrument_types, Boolean tradable_only = false);
 
         CQGCondition RequestCondition(CQGConditionRequest cqg_condition_request);
 
@@ -3610,15 +3610,15 @@ namespace FakeCQG
 
         void RequestDataSources();
 
-        void RequestDataSourceSymbols(string data_source_abbreviation);
+        void RequestDataSourceSymbols(String data_source_abbreviation);
 
         CQGExpression RequestExpression(CQGExpressionRequest cqg_expression_request);
 
         void RequestHistoricalSessions(CQGHistoricalSessionsRequest cqg_historical_sessions_request);
 
-        void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, bool trace_group_changes);
+        void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes);
 
-        void RequestManualFills(int gw_account_id, eManualFillsDataLevel update_level);
+        void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level);
 
         void RequestManualFillUpdate(CQGManualFillRequest cqg_manual_fill_request);
 
@@ -3634,9 +3634,9 @@ namespace FakeCQG
 
         CQGTimedBars RequestTimedBars(CQGTimedBarsRequest cqg_timed_bars_request);
 
-        void RequestTradableCommodities(int gw_account_id = 0);
+        void RequestTradableCommodities(Int32 gw_account_id = 0);
 
-        void RequestTradableExchanges(int gw_account_id = 0);
+        void RequestTradableExchanges(Int32 gw_account_id = 0);
 
         CQGTradingSystem RequestTradingSystem(CQGTradingSystemRequest cqg_trading_system_request);
 
@@ -3650,9 +3650,9 @@ namespace FakeCQG
 
         void SubscribeNewInstrument(CQGInstrumentSubscriptionRequest instrument_request);
 
-        void TerminateCQGIC(bool start_again = false);
+        void TerminateCQGIC(Boolean start_again = false);
 
-        void UnregisterAlgorithmicOrder(string guid_);
+        void UnregisterAlgorithmicOrder(String guid_);
 
         #endregion
 
@@ -3667,12 +3667,12 @@ namespace FakeCQG
             get;
         }
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGChangedTradeEntry this[int index_]
+        CQGChangedTradeEntry this[Int32 index_]
         {
             get;
         }
@@ -3730,12 +3730,12 @@ namespace FakeCQG
             get;
         }
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGChangedTradeExit this[int index_]
+        CQGChangedTradeExit this[Int32 index_]
         {
             get;
         }
@@ -3752,17 +3752,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -3779,17 +3779,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        bool IsTradableOnly
+        Boolean IsTradableOnly
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -3806,7 +3806,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -3821,12 +3821,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGConditionResult this[int index_]
+        CQGConditionResult this[Int32 index_]
         {
             get;
         }
@@ -3851,7 +3851,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -3861,11 +3861,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -3875,7 +3875,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Name
+        String Name
         {
             get;
         }
@@ -3893,17 +3893,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGConditionDefinition this[int index_]
+        CQGConditionDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGConditionDefinition this[string condition_name]
+        CQGConditionDefinition this[String condition_name]
         {
             get;
         }
@@ -3912,7 +3912,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGConditionDefinition get_ItemByName(string condition_name);
+        CQGConditionDefinition get_ItemByName(String condition_name);
 
         #endregion
 
@@ -3922,7 +3922,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -3934,7 +3934,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -3945,7 +3945,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -3957,37 +3957,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -3999,7 +3999,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -4011,7 +4011,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -4021,9 +4021,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -4038,7 +4038,7 @@ namespace FakeCQG
             get;
         }
 
-        bool Value
+        Boolean Value
         {
             get;
         }
@@ -4051,17 +4051,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCondition this[int index_]
+        CQGCondition this[Int32 index_]
         {
             get;
         }
 
-        CQGCondition this[string id_]
+        CQGCondition this[String id_]
         {
             get;
         }
@@ -4070,7 +4070,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGCondition get_ItemById(string id_);
+        CQGCondition get_ItemById(String id_);
 
         #endregion
 
@@ -4080,62 +4080,62 @@ namespace FakeCQG
     {
         #region Properties
 
-        int ActualVolume
+        Int32 ActualVolume
         {
             get;
         }
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -4145,22 +4145,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -4173,7 +4173,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -4183,12 +4183,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGConstantVolumeBar this[int index_]
+        CQGConstantVolumeBar this[Int32 index_]
         {
             get;
         }
@@ -4213,7 +4213,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -4223,9 +4223,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -4235,17 +4235,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGConstantVolumeBars this[int index_]
+        CQGConstantVolumeBars this[Int32 index_]
         {
             get;
         }
 
-        CQGConstantVolumeBars this[string id_]
+        CQGConstantVolumeBars this[String id_]
         {
             get;
         }
@@ -4254,7 +4254,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGConstantVolumeBars get_ItemById(string id_);
+        CQGConstantVolumeBars get_ItemById(String id_);
 
         #endregion
 
@@ -4270,43 +4270,43 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        bool IncludeFlatTicks
+        Boolean IncludeFlatTicks
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -4318,7 +4318,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -4330,19 +4330,19 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
         }
 
-        int VolumeLevel
+        Int32 VolumeLevel
         {
             get;
             set;
@@ -4362,7 +4362,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string BaseCurrencyName
+        String BaseCurrencyName
         {
             get;
         }
@@ -4372,17 +4372,17 @@ namespace FakeCQG
             get;
         }
 
-        string CurrencyName
+        String CurrencyName
         {
             get;
         }
 
-        int FcmID
+        Int32 FcmID
         {
             get;
         }
 
-        double Rate
+        Double Rate
         {
             get;
         }
@@ -4405,12 +4405,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCurrencyRate this[int fcm_id, string currency_, string base_currency = ""]
+        CQGCurrencyRate this[Int32 fcm_id, String currency_, String base_currency = ""]
         {
             get;
         }
@@ -4427,7 +4427,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Name
+        String Name
         {
             get;
         }
@@ -4440,17 +4440,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCurveDefinition this[int index_]
+        CQGCurveDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGCurveDefinition this[string curve_name]
+        CQGCurveDefinition this[String curve_name]
         {
             get;
         }
@@ -4459,7 +4459,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGCurveDefinition get_ItemByName(string curve_name);
+        CQGCurveDefinition get_ItemByName(String curve_name);
 
         #endregion
 
@@ -4469,12 +4469,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -4491,12 +4491,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        double this[object key_]
+        Double this[Object key_]
         {
             get;
         }
@@ -4506,7 +4506,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -4523,17 +4523,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCustomStudy this[int index_]
+        CQGCustomStudy this[Int32 index_]
         {
             get;
         }
 
-        CQGCustomStudy this[string id_]
+        CQGCustomStudy this[String id_]
         {
             get;
         }
@@ -4542,7 +4542,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGCustomStudy get_ItemById(string id_);
+        CQGCustomStudy get_ItemById(String id_);
 
         #endregion
 
@@ -4552,7 +4552,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -4572,12 +4572,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGCurves this[int index_]
+        CQGCurves this[Int32 index_]
         {
             get;
         }
@@ -4602,7 +4602,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -4612,11 +4612,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -4626,7 +4626,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
@@ -4636,7 +4636,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -4654,17 +4654,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGCustomStudyDefinition this[int index_]
+        CQGCustomStudyDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGCustomStudyDefinition this[string custom_study_abbreviation]
+        CQGCustomStudyDefinition this[String custom_study_abbreviation]
         {
             get;
         }
@@ -4673,9 +4673,9 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGCustomStudyDefinition get_ItemByAbbreviation(string custom_study_abbreviation);
+        CQGCustomStudyDefinition get_ItemByAbbreviation(String custom_study_abbreviation);
 
-        CQGCustomStudyDefinition get_ItemByName(string custom_study_name);
+        CQGCustomStudyDefinition get_ItemByName(String custom_study_name);
 
         #endregion
 
@@ -4685,7 +4685,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -4697,7 +4697,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -4708,7 +4708,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -4720,37 +4720,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -4762,7 +4762,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -4774,7 +4774,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -4784,13 +4784,13 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
-        void IncludeCurve(object curve_key);
+        void IncludeCurve(Object curve_key);
 
-        bool IsCurveIncluded(object curve_key);
+        Boolean IsCurveIncluded(Object curve_key);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -4800,12 +4800,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -4828,17 +4828,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGDataSource this[int index_]
+        CQGDataSource this[Int32 index_]
         {
             get;
         }
 
-        CQGDataSource this[string data_source_abbreviation]
+        CQGDataSource this[String data_source_abbreviation]
         {
             get;
         }
@@ -4847,7 +4847,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGDataSource get_ItemByAbbreviation(string data_source_abbreviation);
+        CQGDataSource get_ItemByAbbreviation(String data_source_abbreviation);
 
         #endregion
 
@@ -4857,12 +4857,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
@@ -4880,17 +4880,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string DataSourceAbbreviation
+        String DataSourceAbbreviation
         {
             get;
         }
 
-        CQGDataSourceSymbol this[int index_]
+        CQGDataSourceSymbol this[Int32 index_]
         {
             get;
         }
@@ -4911,17 +4911,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGQuote this[int index_]
+        CQGQuote this[Int32 index_]
         {
             get;
         }
 
-        CQGQuote this[double price_, bool round_to_better = true]
+        CQGQuote this[Double price_, Boolean round_to_better = true]
         {
             get;
         }
@@ -4930,7 +4930,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGQuote get_ItemByPrice(double price_, bool round_to_better = true);
+        CQGQuote get_ItemByPrice(Double price_, Boolean round_to_better = true);
 
         #endregion
 
@@ -4945,17 +4945,17 @@ namespace FakeCQG
             get;
         }
 
-        string CELVersion
+        String CELVersion
         {
             get;
         }
 
-        int CQGSerialNumber
+        Int32 CQGSerialNumber
         {
             get;
         }
 
-        string CQGVersion
+        String CQGVersion
         {
             get;
         }
@@ -4970,7 +4970,7 @@ namespace FakeCQG
             get;
         }
 
-        string GWLogonName
+        String GWLogonName
         {
             get;
         }
@@ -4990,12 +4990,12 @@ namespace FakeCQG
             get;
         }
 
-        int MessagesPending
+        Int32 MessagesPending
         {
             get;
         }
 
-        int OrdersPending
+        Int32 OrdersPending
         {
             get;
         }
@@ -5013,17 +5013,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Code
+        Int32 Code
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
 
-        object Owner
+        Object Owner
         {
             get;
         }
@@ -5036,17 +5036,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -5068,7 +5068,7 @@ namespace FakeCQG
             get;
         }
 
-        string PatternString
+        String PatternString
         {
             get;
         }
@@ -5081,7 +5081,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Name
+        String Name
         {
             get;
         }
@@ -5096,7 +5096,7 @@ namespace FakeCQG
             get;
         }
 
-        string Value
+        String Value
         {
             get;
             set;
@@ -5110,12 +5110,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGExecutionPatternParameter this[object index_]
+        CQGExecutionPatternParameter this[Object index_]
         {
             get;
         }
@@ -5124,9 +5124,9 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGExecutionPatternParameter Add(string name_, eExecutionPatternParameterType type_, string value_ = "");
+        CQGExecutionPatternParameter Add(String name_, eExecutionPatternParameterType type_, String value_ = "");
 
-        void Remove(object index_);
+        void Remove(Object index_);
 
         #endregion
 
@@ -5136,7 +5136,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -5146,12 +5146,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGExpressionOutputs this[int index_]
+        CQGExpressionOutputs this[Int32 index_]
         {
             get;
         }
@@ -5181,7 +5181,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -5191,11 +5191,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -5205,12 +5205,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -5227,12 +5227,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        double this[object key_]
+        Double this[Object key_]
         {
             get;
         }
@@ -5242,7 +5242,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -5265,13 +5265,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -5283,31 +5283,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -5319,18 +5319,18 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
 
-        int SubExpressionCount
+        Int32 SubExpressionCount
         {
             get;
         }
@@ -5341,7 +5341,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -5351,11 +5351,11 @@ namespace FakeCQG
 
         #region Methods
 
-        void AddSubExpression(string sub_expression, string alias_ = "");
+        void AddSubExpression(String sub_expression, String alias_ = "");
 
-        string get_SubExpression(int index_);
+        String get_SubExpression(Int32 index_);
 
-        string get_SubExpressionAlias(int index_);
+        String get_SubExpressionAlias(Int32 index_);
 
         #endregion
 
@@ -5365,17 +5365,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGExpression this[int index_]
+        CQGExpression this[Int32 index_]
         {
             get;
         }
 
-        CQGExpression this[string id_]
+        CQGExpression this[String id_]
         {
             get;
         }
@@ -5384,7 +5384,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGExpression get_ItemById(string id_);
+        CQGExpression get_ItemById(String id_);
 
         #endregion
 
@@ -5394,17 +5394,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int this[int leg_]
+        Int32 this[Int32 leg_]
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        int LegCount
+        Int32 LegCount
         {
             get;
         }
@@ -5414,7 +5414,7 @@ namespace FakeCQG
             get;
         }
 
-        string RefFillId
+        String RefFillId
         {
             get;
         }
@@ -5438,29 +5438,29 @@ namespace FakeCQG
 
         #region Methods
 
-        bool get_Aggressive(int leg_ = 0);
+        Boolean get_Aggressive(Int32 leg_ = 0);
 
-        string get_Currency(int leg_ = 0);
+        String get_Currency(Int32 leg_ = 0);
 
-        string get_DisplayPrice(int leg_ = 0);
+        String get_DisplayPrice(Int32 leg_ = 0);
 
-        DateTime get_ExchangeTradeDate(int leg_ = 0);
+        DateTime get_ExchangeTradeDate(Int32 leg_ = 0);
 
-        string get_GWTradeId(int leg_ = 0);
+        String get_GWTradeId(Int32 leg_ = 0);
 
-        CQGGWTrades get_GWTrades(int leg_ = 0);
+        CQGGWTrades get_GWTrades(Int32 leg_ = 0);
 
-        int get_GWTradesCount(int leg_);
+        Int32 get_GWTradesCount(Int32 leg_);
 
-        string get_InstrumentName(int leg_ = 0);
+        String get_InstrumentName(Int32 leg_ = 0);
 
-        double get_Price(int leg_ = 0);
+        Double get_Price(Int32 leg_ = 0);
 
-        int get_Quantity(int leg_ = 0);
+        Int32 get_Quantity(Int32 leg_ = 0);
 
-        eOrderSide get_Side(int leg_ = 0);
+        eOrderSide get_Side(Int32 leg_ = 0);
 
-        DateTime get_StatementDate(int leg_ = 0);
+        DateTime get_StatementDate(Int32 leg_ = 0);
 
         #endregion
 
@@ -5470,17 +5470,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGFill this[string fill_id]
+        CQGFill this[String fill_id]
         {
             get;
         }
 
-        CQGFill this[int index_]
+        CQGFill this[Int32 index_]
         {
             get;
         }
@@ -5489,7 +5489,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGFill get_ItemByIndex(int index_);
+        CQGFill get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -5499,17 +5499,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool Aggressive
+        Boolean Aggressive
         {
             get;
         }
 
-        string Currency
+        String Currency
         {
             get;
         }
 
-        string DisplayPrice
+        String DisplayPrice
         {
             get;
         }
@@ -5524,27 +5524,27 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        int Leg
+        Int32 Leg
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -5567,17 +5567,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGGWTrade this[string trade_gw_id]
+        CQGGWTrade this[String trade_gw_id]
         {
             get;
         }
 
-        CQGGWTrade this[int index_]
+        CQGGWTrade this[Int32 index_]
         {
             get;
         }
@@ -5586,7 +5586,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGGWTrade get_ItemByIndex(int index_);
+        CQGGWTrade get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -5608,7 +5608,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -5633,7 +5633,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsDaily
+        Boolean IsDaily
         {
             get;
         }
@@ -5651,12 +5651,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGHoliday this[int index_]
+        CQGHoliday this[Int32 index_]
         {
             get;
         }
@@ -5699,17 +5699,17 @@ namespace FakeCQG
             get;
         }
 
-        string Commodity
+        String Commodity
         {
             get;
         }
 
-        string Country
+        String Country
         {
             get;
         }
 
-        string Currency
+        String Currency
         {
             get;
         }
@@ -5720,7 +5720,7 @@ namespace FakeCQG
             set;
         }
 
-        string Description
+        String Description
         {
             get;
         }
@@ -5735,29 +5735,29 @@ namespace FakeCQG
             get;
         }
 
-        int DOMBookLimit
+        Int32 DOMBookLimit
         {
             get;
             set;
         }
 
-        bool DOMStatus
+        Boolean DOMStatus
         {
             get;
             set;
         }
 
-        int DTE
+        Int32 DTE
         {
             get;
         }
 
-        string ExchangeAbbreviation
+        String ExchangeAbbreviation
         {
             get;
         }
 
-        int ExchangeID
+        Int32 ExchangeID
         {
             get;
         }
@@ -5767,17 +5767,17 @@ namespace FakeCQG
             get;
         }
 
-        string FullName
+        String FullName
         {
             get;
         }
 
-        double InitialMargin
+        Double InitialMargin
         {
             get;
         }
 
-        int InstrumentID
+        Int32 InstrumentID
         {
             get;
         }
@@ -5787,42 +5787,42 @@ namespace FakeCQG
             get;
         }
 
-        bool IsDownTick
+        Boolean IsDownTick
         {
             get;
         }
 
-        bool IsFastMarket
+        Boolean IsFastMarket
         {
             get;
         }
 
-        bool IsUpTick
+        Boolean IsUpTick
         {
             get;
         }
 
-        double MaintenanceMargin
+        Double MaintenanceMargin
         {
             get;
         }
 
-        int Month
+        Int32 Month
         {
             get;
         }
 
-        string MonthChar
+        String MonthChar
         {
             get;
         }
 
-        double NetChange
+        Double NetChange
         {
             get;
         }
 
-        string PreferredSessionsName
+        String PreferredSessionsName
         {
             get;
         }
@@ -5847,7 +5847,7 @@ namespace FakeCQG
             get;
         }
 
-        short Scale
+        Int16 Scale
         {
             get;
         }
@@ -5857,12 +5857,12 @@ namespace FakeCQG
             get;
         }
 
-        int SessionMask
+        Int32 SessionMask
         {
             get;
         }
 
-        int SessionNumber
+        Int32 SessionNumber
         {
             get;
         }
@@ -5872,33 +5872,33 @@ namespace FakeCQG
             get;
         }
 
-        int Strike
+        Int32 Strike
         {
             get;
         }
 
-        object this[string tagName]
+        Object this[String tagName]
         {
             get;
             set;
         }
 
-        double TickSize
+        Double TickSize
         {
             get;
         }
 
-        int TickSizeFractionDenominator
+        Int32 TickSizeFractionDenominator
         {
             get;
         }
 
-        int TickSizeFractionNumerator
+        Int32 TickSizeFractionNumerator
         {
             get;
         }
 
-        double TickValue
+        Double TickValue
         {
             get;
         }
@@ -5908,7 +5908,7 @@ namespace FakeCQG
             get;
         }
 
-        double TodayCTotalVolume
+        Double TodayCTotalVolume
         {
             get;
         }
@@ -5923,27 +5923,27 @@ namespace FakeCQG
             get;
         }
 
-        string UnderlyingInstrumentName
+        String UnderlyingInstrumentName
         {
             get;
         }
 
-        double YCOI
+        Double YCOI
         {
             get;
         }
 
-        int Year
+        Int32 Year
         {
             get;
         }
 
-        string YearString
+        String YearString
         {
             get;
         }
 
-        double YesterdayCTotalVolume
+        Double YesterdayCTotalVolume
         {
             get;
         }
@@ -5952,19 +5952,19 @@ namespace FakeCQG
 
         #region Methods
 
-        double FromDisplayPrice(string display_price);
+        Double FromDisplayPrice(String display_price);
 
-        object get_Tag(string tagName);
+        Object get_Tag(String tagName);
 
-        double GetNearestTradeablePrice(double price_);
+        Double GetNearestTradeablePrice(Double price_);
 
-        double GetTickSizeFor(double Price);
+        Double GetTickSizeFor(Double Price);
 
-        double GetTickValueFor(double Price);
+        Double GetTickValueFor(Double Price);
 
-        void set_Tag(string tagName, object pVal);
+        void set_Tag(String tagName, Object pVal);
 
-        string ToDisplayPrice(double correct_price);
+        String ToDisplayPrice(Double correct_price);
 
         #endregion
 
@@ -5974,7 +5974,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6001,7 +6001,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -6021,7 +6021,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
         }
@@ -6034,12 +6034,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGInstrument this[object index_]
+        CQGInstrument this[Object index_]
         {
             get;
         }
@@ -6056,7 +6056,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Id
+        String Id
         {
             get;
         }
@@ -6079,7 +6079,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Commodity
+        String Commodity
         {
             get;
             set;
@@ -6091,13 +6091,13 @@ namespace FakeCQG
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
@@ -6117,12 +6117,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGInstrumentsGroup this[object index_]
+        CQGInstrumentsGroup this[Object index_]
         {
             get;
         }
@@ -6145,7 +6145,7 @@ namespace FakeCQG
             set;
         }
 
-        bool DOMStatus
+        Boolean DOMStatus
         {
             get;
             set;
@@ -6163,7 +6163,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -6177,12 +6177,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        int this[int index_]
+        Int32 this[Int32 index_]
         {
             get;
         }
@@ -6208,7 +6208,7 @@ namespace FakeCQG
 
         #region Methods
 
-        void Log(string content_, eLogSeverity severity_ = eLogSeverity.lsInfo);
+        void Log(String content_, eLogSeverity severity_ = eLogSeverity.lsInfo);
 
         #endregion
 
@@ -6218,32 +6218,32 @@ namespace FakeCQG
     {
         #region Properties
 
-        string DisplayPrice
+        String DisplayPrice
         {
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        string Note
+        String Note
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -6258,7 +6258,7 @@ namespace FakeCQG
             get;
         }
 
-        int TradeId
+        Int32 TradeId
         {
             get;
         }
@@ -6276,31 +6276,31 @@ namespace FakeCQG
     {
         #region Properties
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
             set;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
             set;
         }
 
-        string Note
+        String Note
         {
             get;
             set;
         }
 
-        double Price
+        Double Price
         {
             get;
             set;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
             set;
@@ -6318,7 +6318,7 @@ namespace FakeCQG
             set;
         }
 
-        int TradeId
+        Int32 TradeId
         {
             get;
             set;
@@ -6338,7 +6338,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6348,12 +6348,12 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
 
-        CQGManualFill this[int trade_id]
+        CQGManualFill this[Int32 trade_id]
         {
             get;
         }
@@ -6362,7 +6362,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGManualFill get_ItemByIndex(int index_);
+        CQGManualFill get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -6372,12 +6372,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGManualFills this[int account_id]
+        CQGManualFills this[Int32 account_id]
         {
             get;
         }
@@ -6386,7 +6386,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGManualFills get_ItemByIndex(int index_);
+        CQGManualFills get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -6396,7 +6396,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6406,7 +6406,7 @@ namespace FakeCQG
             get;
         }
 
-        CQGModifiedProperty this[int index_]
+        CQGModifiedProperty this[Int32 index_]
         {
             get;
         }
@@ -6415,7 +6415,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGModifiedProperty get_ItemByIndex(int index_);
+        CQGModifiedProperty get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -6425,22 +6425,22 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Description
+        String Description
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        object NewValue
+        Object NewValue
         {
             get;
         }
 
-        object PreviousValue
+        Object PreviousValue
         {
             get;
         }
@@ -6464,29 +6464,29 @@ namespace FakeCQG
             set;
         }
 
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        bool CanBeCanceled
+        Boolean CanBeCanceled
         {
             get;
         }
 
-        bool CanBeModified
+        Boolean CanBeModified
         {
             get;
         }
 
-        bool CanBeReplaced
+        Boolean CanBeReplaced
         {
             get;
         }
@@ -6497,7 +6497,7 @@ namespace FakeCQG
             set;
         }
 
-        string Description
+        String Description
         {
             get;
             set;
@@ -6509,7 +6509,7 @@ namespace FakeCQG
             set;
         }
 
-        int FilledQuantity
+        Int32 FilledQuantity
         {
             get;
         }
@@ -6519,12 +6519,12 @@ namespace FakeCQG
             get;
         }
 
-        string GUID
+        String GUID
         {
             get;
         }
 
-        string GWOrderID
+        String GWOrderID
         {
             get;
         }
@@ -6540,17 +6540,17 @@ namespace FakeCQG
             set;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool IsExternal
+        Boolean IsExternal
         {
             get;
         }
 
-        bool IsFinal
+        Boolean IsFinal
         {
             get;
         }
@@ -6565,19 +6565,19 @@ namespace FakeCQG
             get;
         }
 
-        double LimitPrice
+        Double LimitPrice
         {
             get;
             set;
         }
 
-        bool OrderCheckMark
+        Boolean OrderCheckMark
         {
             get;
             set;
         }
 
-        string OriginalOrderID
+        String OriginalOrderID
         {
             get;
         }
@@ -6592,13 +6592,13 @@ namespace FakeCQG
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
             set;
         }
 
-        int RemainingQuantity
+        Int32 RemainingQuantity
         {
             get;
         }
@@ -6619,13 +6619,13 @@ namespace FakeCQG
             get;
         }
 
-        double StopPrice
+        Double StopPrice
         {
             get;
             set;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -6651,7 +6651,7 @@ namespace FakeCQG
             get;
         }
 
-        string UEName
+        String UEName
         {
             get;
         }
@@ -6664,7 +6664,7 @@ namespace FakeCQG
 
         void Cancel();
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
         void Modify(CQGOrderModify cqg_order_modify);
 
@@ -6674,7 +6674,7 @@ namespace FakeCQG
 
         void SendCareOrderAck();
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -6690,19 +6690,19 @@ namespace FakeCQG
             set;
         }
 
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        bool FromAllTraders
+        Boolean FromAllTraders
         {
             get;
             set;
@@ -6720,7 +6720,7 @@ namespace FakeCQG
             set;
         }
 
-        bool Parked
+        Boolean Parked
         {
             get;
             set;
@@ -6734,19 +6734,19 @@ namespace FakeCQG
     {
         #region Properties
 
-        uint AlgorithmID
+        UInt32 AlgorithmID
         {
             get;
             set;
         }
 
-        string AlgorithmStringID
+        String AlgorithmStringID
         {
             get;
             set;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -6778,7 +6778,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -6800,17 +6800,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool CanBeSet
+        Boolean CanBeSet
         {
             get;
         }
 
-        string Description
+        String Description
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -6830,7 +6830,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
             set;
@@ -6844,12 +6844,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGOrder this[string order_id]
+        CQGOrder this[String order_id]
         {
             get;
         }
@@ -6860,19 +6860,19 @@ namespace FakeCQG
 
         void AddToLiveOrders();
 
-        CQGOrder get_ItemByGuid(string order_guid);
+        CQGOrder get_ItemByGuid(String order_guid);
 
-        CQGOrders SelectByInstrumentName(string instrument_name);
+        CQGOrders SelectByInstrumentName(String instrument_name);
 
         CQGOrders SelectByOrderStatus(eOrderStatus order_status);
 
         CQGOrders SelectByOrderType(eOrderType order_type);
 
-        CQGOrders SelectByProperty(eOrderProperty property_type, object property_value);
+        CQGOrders SelectByProperty(eOrderProperty property_type, Object property_value);
 
         CQGOrders SelectBySide(eOrderSide order_side);
 
-        CQGOrders SelectByTag(string tag_name, object tag_value = null);
+        CQGOrders SelectByTag(String tag_name, Object tag_value = null);
 
         #endregion
 
@@ -6907,7 +6907,7 @@ namespace FakeCQG
             get;
         }
 
-        int QueryID
+        Int32 QueryID
         {
             get;
         }
@@ -6941,12 +6941,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        object this[string i_GUID]
+        Object this[String i_GUID]
         {
             get;
         }
 
-        bool Switch
+        Boolean Switch
         {
             set;
         }
@@ -6955,9 +6955,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_StatisticsOnReceive(string i_GUID);
+        Object get_StatisticsOnReceive(String i_GUID);
 
-        object get_StatisticsOnSend(string i_GUID);
+        Object get_StatisticsOnSend(String i_GUID);
 
         #endregion
 
@@ -6972,17 +6972,17 @@ namespace FakeCQG
             get;
         }
 
-        string Comment
+        String Comment
         {
             get;
         }
 
-        object DefaultValue
+        Object DefaultValue
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -7000,17 +7000,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGParameterDefinition this[int index_]
+        CQGParameterDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGParameterDefinition this[string parameter_name]
+        CQGParameterDefinition this[String parameter_name]
         {
             get;
         }
@@ -7019,7 +7019,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGParameterDefinition get_ItemByName(string parameter_name);
+        CQGParameterDefinition get_ItemByName(String parameter_name);
 
         #endregion
 
@@ -7029,27 +7029,27 @@ namespace FakeCQG
     {
         #region Properties
 
-        double High
+        Double High
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double PFHigh
+        Double PFHigh
         {
             get;
         }
 
-        double PFLow
+        Double PFLow
         {
             get;
         }
@@ -7059,12 +7059,12 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        bool Up
+        Boolean Up
         {
             get;
         }
@@ -7077,7 +7077,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7087,12 +7087,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGPointAndFigureBar this[int index_]
+        CQGPointAndFigureBar this[Int32 index_]
         {
             get;
         }
@@ -7117,7 +7117,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -7127,9 +7127,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -7139,17 +7139,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGPointAndFigureBars this[int index_]
+        CQGPointAndFigureBars this[Int32 index_]
         {
             get;
         }
 
-        CQGPointAndFigureBars this[string id_]
+        CQGPointAndFigureBars this[String id_]
         {
             get;
         }
@@ -7158,7 +7158,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGPointAndFigureBars get_ItemById(string id_);
+        CQGPointAndFigureBars get_ItemById(String id_);
 
         #endregion
 
@@ -7168,7 +7168,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int BoxSize
+        Int32 BoxSize
         {
             get;
             set;
@@ -7192,43 +7192,43 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
         }
 
-        int Reversal
+        Int32 Reversal
         {
             get;
             set;
@@ -7240,7 +7240,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -7252,13 +7252,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -7277,7 +7277,7 @@ namespace FakeCQG
             get;
         }
 
-        double AveragePrice
+        Double AveragePrice
         {
             get;
         }
@@ -7287,12 +7287,12 @@ namespace FakeCQG
             get;
         }
 
-        string InstrumentName
+        String InstrumentName
         {
             get;
         }
 
-        bool ManualFillsInvolved
+        Boolean ManualFillsInvolved
         {
             get;
         }
@@ -7302,7 +7302,7 @@ namespace FakeCQG
             get;
         }
 
-        double MVO
+        Double MVO
         {
             get;
         }
@@ -7312,17 +7312,17 @@ namespace FakeCQG
             get;
         }
 
-        double OTE
+        Double OTE
         {
             get;
         }
 
-        double ProfitLoss
+        Double ProfitLoss
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -7342,7 +7342,7 @@ namespace FakeCQG
             get;
         }
 
-        double UPL
+        Double UPL
         {
             get;
         }
@@ -7355,17 +7355,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGPosition this[string instrument_name]
+        CQGPosition this[String instrument_name]
         {
             get;
         }
 
-        CQGPosition this[int index_]
+        CQGPosition this[Int32 index_]
         {
             get;
         }
@@ -7374,7 +7374,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGPosition get_ItemByIndex(int index_);
+        CQGPosition get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -7384,7 +7384,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -7407,17 +7407,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Expression
+        String Expression
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        int Number
+        Int32 Number
         {
             get;
         }
@@ -7430,17 +7430,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGQFormulaDefinition this[int index_]
+        CQGQFormulaDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGQFormulaDefinition this[string qformula_name]
+        CQGQFormulaDefinition this[String qformula_name]
         {
             get;
         }
@@ -7449,7 +7449,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGQFormulaDefinition get_ItemByName(string qformula_name);
+        CQGQFormulaDefinition get_ItemByName(String qformula_name);
 
         #endregion
 
@@ -7459,7 +7459,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool HasVolume
+        Boolean HasVolume
         {
             get;
         }
@@ -7469,17 +7469,17 @@ namespace FakeCQG
             get;
         }
 
-        bool IsValid
+        Boolean IsValid
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
@@ -7499,7 +7499,7 @@ namespace FakeCQG
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -7512,7 +7512,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7534,17 +7534,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        string LogonName
+        String LogonName
         {
             get;
         }
 
-        int ROMNumber
+        Int32 ROMNumber
         {
             get;
         }
 
-        string ServerAddress
+        String ServerAddress
         {
             get;
         }
@@ -7562,17 +7562,17 @@ namespace FakeCQG
             get;
         }
 
-        sbyte DayCloseOffset
+        SByte DayCloseOffset
         {
             get;
         }
 
-        sbyte DayStartOffset
+        SByte DayStartOffset
         {
             get;
         }
 
-        bool DayStartsYesterday
+        Boolean DayStartsYesterday
         {
             get;
         }
@@ -7587,17 +7587,17 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
 
-        short Number
+        Int16 Number
         {
             get;
         }
 
-        bool PrimaryFlag
+        Boolean PrimaryFlag
         {
             get;
         }
@@ -7631,7 +7631,7 @@ namespace FakeCQG
 
         #region Methods
 
-        bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false);
+        Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false);
 
         #endregion
 
@@ -7641,7 +7641,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7651,7 +7651,7 @@ namespace FakeCQG
             get;
         }
 
-        int DescriptionNumber
+        Int32 DescriptionNumber
         {
             get;
         }
@@ -7666,12 +7666,12 @@ namespace FakeCQG
             get;
         }
 
-        CQGSession this[object index_]
+        CQGSession this[Object index_]
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -7685,7 +7685,7 @@ namespace FakeCQG
 
         #region Methods
 
-        bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false);
+        Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false);
 
         #endregion
 
@@ -7695,12 +7695,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGSessions this[object index_]
+        CQGSessions this[Object index_]
         {
             get;
         }
@@ -7717,12 +7717,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string ClientId
+        String ClientId
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -7732,7 +7732,7 @@ namespace FakeCQG
             get;
         }
 
-        string RequestString
+        String RequestString
         {
             get;
         }
@@ -7742,7 +7742,7 @@ namespace FakeCQG
             get;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
         }
@@ -7755,17 +7755,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGStrategyDefinition this[string id_]
+        CQGStrategyDefinition this[String id_]
         {
             get;
         }
 
-        CQGStrategyDefinition this[int index_]
+        CQGStrategyDefinition this[Int32 index_]
         {
             get;
         }
@@ -7774,7 +7774,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGStrategyDefinition get_ItemByIndex(int index_);
+        CQGStrategyDefinition get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -7784,7 +7784,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string ExecutionId
+        String ExecutionId
         {
             get;
         }
@@ -7794,12 +7794,12 @@ namespace FakeCQG
             get;
         }
 
-        string OriginalOrderID
+        String OriginalOrderID
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -7812,12 +7812,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGStrategyLegFill this[int index_]
+        CQGStrategyLegFill this[Int32 index_]
         {
             get;
         }
@@ -7826,7 +7826,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGStrategyLegFill get_ItemByIndex(int index_);
+        CQGStrategyLegFill get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -7836,12 +7836,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        string this[int index_]
+        String this[Int32 index_]
         {
             get;
         }
@@ -7858,57 +7858,57 @@ namespace FakeCQG
     {
         #region Properties
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -7918,27 +7918,27 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -7951,7 +7951,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -7961,12 +7961,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGSubMinuteBar this[int index_]
+        CQGSubMinuteBar this[Int32 index_]
         {
             get;
         }
@@ -7991,7 +7991,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8001,9 +8001,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8013,17 +8013,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGSubMinuteBars this[int index_]
+        CQGSubMinuteBars this[Int32 index_]
         {
             get;
         }
 
-        CQGSubMinuteBars this[string id_]
+        CQGSubMinuteBars this[String id_]
         {
             get;
         }
@@ -8032,7 +8032,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGSubMinuteBars get_ItemById(string id_);
+        CQGSubMinuteBars get_ItemById(String id_);
 
         #endregion
 
@@ -8048,13 +8048,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -8066,31 +8066,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int Interval
+        Int32 Interval
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -8102,7 +8102,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -8114,7 +8114,7 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8126,7 +8126,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8145,7 +8145,7 @@ namespace FakeCQG
             get;
         }
 
-        int GWAccountID
+        Int32 GWAccountID
         {
             get;
         }
@@ -8168,62 +8168,62 @@ namespace FakeCQG
     {
         #region Properties
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double BestAskPrice
+        Double BestAskPrice
         {
             get;
         }
 
-        double BestBidPrice
+        Double BestBidPrice
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        int DomAskCount
+        Int32 DomAskCount
         {
             get;
         }
 
-        int this[int index_]
+        Int32 this[Int32 index_]
         {
             get;
         }
 
-        int DomBidCount
+        Int32 DomBidCount
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
@@ -8233,22 +8233,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueMid
+        Double TrueMid
         {
             get;
         }
@@ -8257,9 +8257,9 @@ namespace FakeCQG
 
         #region Methods
 
-        int get_DomAskVolume(int index_);
+        Int32 get_DomAskVolume(Int32 index_);
 
-        int get_DomBidVolume(int index_);
+        Int32 get_DomBidVolume(Int32 index_);
 
         #endregion
 
@@ -8269,7 +8269,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8279,12 +8279,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTFlowBar this[int index_]
+        CQGTFlowBar this[Int32 index_]
         {
             get;
         }
@@ -8309,7 +8309,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8319,9 +8319,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8331,17 +8331,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTFlowBars this[int index_]
+        CQGTFlowBars this[Int32 index_]
         {
             get;
         }
 
-        CQGTFlowBars this[string id_]
+        CQGTFlowBars this[String id_]
         {
             get;
         }
@@ -8350,7 +8350,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTFlowBars get_ItemById(string id_);
+        CQGTFlowBars get_ItemById(String id_);
 
         #endregion
 
@@ -8366,7 +8366,7 @@ namespace FakeCQG
             set;
         }
 
-        int AggregationLevel
+        Int32 AggregationLevel
         {
             get;
             set;
@@ -8378,7 +8378,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -8396,31 +8396,31 @@ namespace FakeCQG
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -8432,7 +8432,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -8444,13 +8444,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8464,12 +8464,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string ContributorId
+        String ContributorId
         {
             get;
         }
 
-        int ContributorIdCode
+        Int32 ContributorIdCode
         {
             get;
         }
@@ -8484,7 +8484,7 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
@@ -8494,12 +8494,12 @@ namespace FakeCQG
             get;
         }
 
-        int SalesConditionCode
+        Int32 SalesConditionCode
         {
             get;
         }
 
-        string SalesConditionLabel
+        String SalesConditionLabel
         {
             get;
         }
@@ -8509,7 +8509,7 @@ namespace FakeCQG
             get;
         }
 
-        int Volume
+        Int32 Volume
         {
             get;
         }
@@ -8522,7 +8522,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8532,17 +8532,17 @@ namespace FakeCQG
             get;
         }
 
-        bool HasUpdates
+        Boolean HasUpdates
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTick this[int index_]
+        CQGTick this[Int32 index_]
         {
             get;
         }
@@ -8567,7 +8567,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8577,13 +8577,13 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
         void IndicesForDates(DateTime date_1, DateTime date_2, ref Int32 start_index, ref Int32 end_index);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8593,17 +8593,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTicks this[int index_]
+        CQGTicks this[Int32 index_]
         {
             get;
         }
 
-        CQGTicks this[string id_]
+        CQGTicks this[String id_]
         {
             get;
         }
@@ -8612,7 +8612,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTicks get_ItemById(string id_);
+        CQGTicks get_ItemById(String id_);
 
         #endregion
 
@@ -8634,13 +8634,13 @@ namespace FakeCQG
             set;
         }
 
-        int SessionsFilter
+        Int32 SessionsFilter
         {
             get;
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8666,97 +8666,97 @@ namespace FakeCQG
     {
         #region Properties
 
-        int ActualVolume
+        Int32 ActualVolume
         {
             get;
         }
 
-        int AskVolume
+        Int32 AskVolume
         {
             get;
         }
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        int BidVolume
+        Int32 BidVolume
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        int CommodityOpenInterest
+        Int32 CommodityOpenInterest
         {
             get;
         }
 
-        int CommodityTickVolume
+        Int32 CommodityTickVolume
         {
             get;
         }
 
-        int CommodityVolume
+        Int32 CommodityVolume
         {
             get;
         }
 
-        int ContractOpenInterest
+        Int32 ContractOpenInterest
         {
             get;
         }
 
-        int ContractTickVolume
+        Int32 ContractTickVolume
         {
             get;
         }
 
-        int ContractVolume
+        Int32 ContractVolume
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        int OpenInterest
+        Int32 OpenInterest
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
 
-        int TickVolume
+        Int32 TickVolume
         {
             get;
         }
@@ -8766,17 +8766,17 @@ namespace FakeCQG
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -8789,7 +8789,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -8799,12 +8799,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGTimedBar this[int index_]
+        CQGTimedBar this[Int32 index_]
         {
             get;
         }
@@ -8829,7 +8829,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -8839,11 +8839,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -8853,17 +8853,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTimedBars this[int index_]
+        CQGTimedBars this[Int32 index_]
         {
             get;
         }
 
-        CQGTimedBars this[string id_]
+        CQGTimedBars this[String id_]
         {
             get;
         }
@@ -8872,7 +8872,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTimedBars get_ItemById(string id_);
+        CQGTimedBars get_ItemById(String id_);
 
         #endregion
 
@@ -8888,13 +8888,13 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -8906,31 +8906,31 @@ namespace FakeCQG
             set;
         }
 
-        bool IgnoreEventsOnHistoricalBars
+        Boolean IgnoreEventsOnHistoricalBars
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
@@ -8942,13 +8942,13 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
@@ -8960,7 +8960,7 @@ namespace FakeCQG
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -8972,9 +8972,9 @@ namespace FakeCQG
 
         void ExcludeAllOutputs();
 
-        void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, bool include_output);
+        void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, Boolean include_output);
 
-        bool IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output);
+        Boolean IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output);
 
         #endregion
 
@@ -8984,22 +8984,22 @@ namespace FakeCQG
     {
         #region Properties
 
-        int GroupID
+        Int32 GroupID
         {
             get;
         }
 
-        bool IsMatched
+        Boolean IsMatched
         {
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -9027,12 +9027,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeEntry this[int index_]
+        CQGTradeEntry this[Int32 index_]
         {
             get;
         }
@@ -9049,7 +9049,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool CanPlaceOrderSignal
+        Boolean CanPlaceOrderSignal
         {
             get;
         }
@@ -9059,12 +9059,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -9074,12 +9074,12 @@ namespace FakeCQG
             get;
         }
 
-        bool Signal
+        Boolean Signal
         {
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
@@ -9097,12 +9097,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool AllowEntryOnExit
+        Boolean AllowEntryOnExit
         {
             get;
         }
 
-        bool AllowPyramids
+        Boolean AllowPyramids
         {
             get;
         }
@@ -9120,7 +9120,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool CanPlaceOrderSignal
+        Boolean CanPlaceOrderSignal
         {
             get;
         }
@@ -9130,12 +9130,12 @@ namespace FakeCQG
             get;
         }
 
-        double Price
+        Double Price
         {
             get;
         }
 
-        int Quantity
+        Int32 Quantity
         {
             get;
         }
@@ -9145,12 +9145,12 @@ namespace FakeCQG
             get;
         }
 
-        bool Signal
+        Boolean Signal
         {
             get;
         }
 
-        double StopLimitPrice
+        Double StopLimitPrice
         {
             get;
         }
@@ -9168,17 +9168,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        bool AllowExitOnEntry
+        Boolean AllowExitOnEntry
         {
             get;
         }
 
-        bool AllowMoreThanOnce
+        Boolean AllowMoreThanOnce
         {
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9196,17 +9196,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeExitDefinition this[int index_]
+        CQGTradeExitDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradeExitDefinition this[string exit_name]
+        CQGTradeExitDefinition this[String exit_name]
         {
             get;
         }
@@ -9215,7 +9215,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradeExitDefinition get_ItemByName(string exit_name);
+        CQGTradeExitDefinition get_ItemByName(String exit_name);
 
         #endregion
 
@@ -9225,17 +9225,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradeExit this[int index_]
+        CQGTradeExit this[Int32 index_]
         {
             get;
         }
 
-        CQGTradeExit this[string exit_name]
+        CQGTradeExit this[String exit_name]
         {
             get;
         }
@@ -9244,7 +9244,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradeExit get_ItemByName(string exit_name);
+        CQGTradeExit get_ItemByName(String exit_name);
 
         #endregion
 
@@ -9254,12 +9254,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTrade this[int index_]
+        CQGTrade this[Int32 index_]
         {
             get;
         }
@@ -9281,7 +9281,7 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -9306,7 +9306,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -9321,9 +9321,9 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -9337,7 +9337,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9347,7 +9347,7 @@ namespace FakeCQG
             get;
         }
 
-        object Value
+        Object Value
         {
             get;
             set;
@@ -9361,7 +9361,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -9383,12 +9383,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        string Abbreviation
+        String Abbreviation
         {
             get;
         }
 
-        double Commission
+        Double Commission
         {
             get;
         }
@@ -9398,7 +9398,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9421,17 +9421,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemDefinition this[int index_]
+        CQGTradingSystemDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemDefinition this[string trading_system_abbreviation]
+        CQGTradingSystemDefinition this[String trading_system_abbreviation]
         {
             get;
         }
@@ -9440,9 +9440,9 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradingSystemDefinition get_ItemByAbbreviation(string trading_system_abbreviation);
+        CQGTradingSystemDefinition get_ItemByAbbreviation(String trading_system_abbreviation);
 
-        CQGTradingSystemDefinition get_ItemByName(string trading_system_name);
+        CQGTradingSystemDefinition get_ItemByName(String trading_system_name);
 
         #endregion
 
@@ -9452,7 +9452,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -9470,7 +9470,7 @@ namespace FakeCQG
             get;
         }
 
-        int EntryRowIndex
+        Int32 EntryRowIndex
         {
             get;
         }
@@ -9480,7 +9480,7 @@ namespace FakeCQG
             get;
         }
 
-        int ExitRowIndex
+        Int32 ExitRowIndex
         {
             get;
         }
@@ -9493,7 +9493,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -9517,7 +9517,7 @@ namespace FakeCQG
             set;
         }
 
-        string BaseExpression
+        String BaseExpression
         {
             get;
             set;
@@ -9529,7 +9529,7 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
@@ -9540,7 +9540,7 @@ namespace FakeCQG
             get;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
@@ -9552,37 +9552,37 @@ namespace FakeCQG
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
         }
 
-        int IntradayPeriod
+        Int32 IntradayPeriod
         {
             get;
             set;
         }
 
-        object this[object key_]
+        Object this[Object key_]
         {
             get;
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -9594,7 +9594,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -9612,13 +9612,13 @@ namespace FakeCQG
 
         void ExcludeAllStatistics();
 
-        object get_Parameter(object key_);
+        Object get_Parameter(Object key_);
 
         void IncludeStatistic(eTradingSystemStatistic trading_system_statistic);
 
-        bool IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic);
+        Boolean IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic);
 
-        void set_Parameter(object key_, object pVal);
+        void set_Parameter(Object key_, Object pVal);
 
         #endregion
 
@@ -9628,17 +9628,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystem this[int index_]
+        CQGTradingSystem this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystem this[string id_]
+        CQGTradingSystem this[String id_]
         {
             get;
         }
@@ -9647,7 +9647,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradingSystem get_ItemById(string id_);
+        CQGTradingSystem get_ItemById(String id_);
 
         #endregion
 
@@ -9657,122 +9657,122 @@ namespace FakeCQG
     {
         #region Properties
 
-        double AverageDuration
+        Double AverageDuration
         {
             get;
         }
 
-        double AverageLoss
+        Double AverageLoss
         {
             get;
         }
 
-        double AverageProfit
+        Double AverageProfit
         {
             get;
         }
 
-        double AverageWin
+        Double AverageWin
         {
             get;
         }
 
-        double ClosedNetProfit
+        Double ClosedNetProfit
         {
             get;
         }
 
-        double CurConsecLosses
+        Double CurConsecLosses
         {
             get;
         }
 
-        double CurConsecWins
+        Double CurConsecWins
         {
             get;
         }
 
-        double CurDrawDown
+        Double CurDrawDown
         {
             get;
         }
 
-        double LinearRegression
+        Double LinearRegression
         {
             get;
         }
 
-        double MaxClosedDraw
+        Double MaxClosedDraw
         {
             get;
         }
 
-        double MaxConsecLosses
+        Double MaxConsecLosses
         {
             get;
         }
 
-        double MaxConsecWins
+        Double MaxConsecWins
         {
             get;
         }
 
-        double MaxDrawAmount
+        Double MaxDrawAmount
         {
             get;
         }
 
-        double MaxDrawDuration
+        Double MaxDrawDuration
         {
             get;
         }
 
-        double MaximumLoss
+        Double MaximumLoss
         {
             get;
         }
 
-        double MaximumWin
+        Double MaximumWin
         {
             get;
         }
 
-        double OpenPosition
+        Double OpenPosition
         {
             get;
         }
 
-        double PercentLong
+        Double PercentLong
         {
             get;
         }
 
-        double PercentWinners
+        Double PercentWinners
         {
             get;
         }
 
-        double ProfitLossRatio
+        Double ProfitLossRatio
         {
             get;
         }
 
-        double ProfitToMaxDraw
+        Double ProfitToMaxDraw
         {
             get;
         }
 
-        double RemoveToNeutral
+        Double RemoveToNeutral
         {
             get;
         }
 
-        double ReturnRetracement
+        Double ReturnRetracement
         {
             get;
         }
 
-        double TimePercentage
+        Double TimePercentage
         {
             get;
         }
@@ -9782,22 +9782,22 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
 
-        double TotalNetProfit
+        Double TotalNetProfit
         {
             get;
         }
 
-        double TotalTradeCount
+        Double TotalTradeCount
         {
             get;
         }
 
-        double this[eTradingSystemStatistic ts_statistic]
+        Double this[eTradingSystemStatistic ts_statistic]
         {
             get;
         }
@@ -9806,7 +9806,7 @@ namespace FakeCQG
 
         #region Methods
 
-        double get_Value(eTradingSystemStatistic ts_statistic);
+        Double get_Value(eTradingSystemStatistic ts_statistic);
 
         #endregion
 
@@ -9825,7 +9825,7 @@ namespace FakeCQG
 
         #region Methods
 
-        bool IsStatisticChanged(eTradingSystemStatistic trading_system_statistic);
+        Boolean IsStatisticChanged(eTradingSystemStatistic trading_system_statistic);
 
         #endregion
 
@@ -9835,12 +9835,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemStatistics this[int index_]
+        CQGTradingSystemStatistics this[Int32 index_]
         {
             get;
         }
@@ -9849,7 +9849,7 @@ namespace FakeCQG
 
         #region Methods
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
         void IndicesForDates(DateTime date_1, DateTime date_2, ref Int32 start_index, ref Int32 end_index);
 
@@ -9866,7 +9866,7 @@ namespace FakeCQG
             get;
         }
 
-        bool IsActive
+        Boolean IsActive
         {
             get;
         }
@@ -9876,7 +9876,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -9914,7 +9914,7 @@ namespace FakeCQG
             get;
         }
 
-        string Name
+        String Name
         {
             get;
         }
@@ -9932,17 +9932,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTradeDefinition this[int index_]
+        CQGTradingSystemTradeDefinition this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemTradeDefinition this[string trade_name]
+        CQGTradingSystemTradeDefinition this[String trade_name]
         {
             get;
         }
@@ -9951,7 +9951,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradingSystemTradeDefinition get_ItemByName(string trade_name);
+        CQGTradingSystemTradeDefinition get_ItemByName(String trade_name);
 
         #endregion
 
@@ -9961,17 +9961,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTrade this[int index_]
+        CQGTradingSystemTrade this[Int32 index_]
         {
             get;
         }
 
-        CQGTradingSystemTrade this[string trade_name]
+        CQGTradingSystemTrade this[String trade_name]
         {
             get;
         }
@@ -9981,7 +9981,7 @@ namespace FakeCQG
             get;
         }
 
-        int TimestampOffset
+        Int32 TimestampOffset
         {
             get;
         }
@@ -9990,7 +9990,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTradingSystemTrade get_ItemByName(string trade_name);
+        CQGTradingSystemTrade get_ItemByName(String trade_name);
 
         #endregion
 
@@ -10000,12 +10000,12 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTradingSystemTradesRow this[int index_]
+        CQGTradingSystemTradesRow this[Int32 index_]
         {
             get;
         }
@@ -10022,7 +10022,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Index
+        Int32 Index
         {
             get;
         }
@@ -10048,7 +10048,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        string ExecutionId
+        String ExecutionId
         {
             get;
         }
@@ -10063,12 +10063,12 @@ namespace FakeCQG
             get;
         }
 
-        int HangQuantity
+        Int32 HangQuantity
         {
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
@@ -10083,7 +10083,7 @@ namespace FakeCQG
             get;
         }
 
-        string RejectReason
+        String RejectReason
         {
             get;
         }
@@ -10116,17 +10116,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGTransaction this[string id_]
+        CQGTransaction this[String id_]
         {
             get;
         }
 
-        CQGTransaction this[int index_]
+        CQGTransaction this[Int32 index_]
         {
             get;
         }
@@ -10135,7 +10135,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGTransaction get_ItemByIndex(int index_);
+        CQGTransaction get_ItemByIndex(Int32 index_);
 
         #endregion
 
@@ -10145,42 +10145,42 @@ namespace FakeCQG
     {
         #region Properties
 
-        double Avg
+        Double Avg
         {
             get;
         }
 
-        double Close
+        Double Close
         {
             get;
         }
 
-        double High
+        Double High
         {
             get;
         }
 
-        double HLC3
+        Double HLC3
         {
             get;
         }
 
-        double Low
+        Double Low
         {
             get;
         }
 
-        double Mid
+        Double Mid
         {
             get;
         }
 
-        double Open
+        Double Open
         {
             get;
         }
 
-        double Range
+        Double Range
         {
             get;
         }
@@ -10190,17 +10190,17 @@ namespace FakeCQG
             get;
         }
 
-        double TrueHigh
+        Double TrueHigh
         {
             get;
         }
 
-        double TrueLow
+        Double TrueLow
         {
             get;
         }
 
-        double TrueRange
+        Double TrueRange
         {
             get;
         }
@@ -10213,7 +10213,7 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
@@ -10223,12 +10223,12 @@ namespace FakeCQG
             get;
         }
 
-        string Id
+        String Id
         {
             get;
         }
 
-        CQGYield this[int index_]
+        CQGYield this[Int32 index_]
         {
             get;
         }
@@ -10253,7 +10253,7 @@ namespace FakeCQG
             get;
         }
 
-        object this[string tag_name]
+        Object this[String tag_name]
         {
             get;
             set;
@@ -10263,11 +10263,11 @@ namespace FakeCQG
 
         #region Methods
 
-        object get_Tag(string tag_name);
+        Object get_Tag(String tag_name);
 
-        int IndexForDate(DateTime date_);
+        Int32 IndexForDate(DateTime date_);
 
-        void set_Tag(string tag_name, object pVal);
+        void set_Tag(String tag_name, Object pVal);
 
         #endregion
 
@@ -10277,17 +10277,17 @@ namespace FakeCQG
     {
         #region Properties
 
-        int Count
+        Int32 Count
         {
             get;
         }
 
-        CQGYields this[int index_]
+        CQGYields this[Int32 index_]
         {
             get;
         }
 
-        CQGYields this[string id_]
+        CQGYields this[String id_]
         {
             get;
         }
@@ -10296,7 +10296,7 @@ namespace FakeCQG
 
         #region Methods
 
-        CQGYields get_ItemById(string id_);
+        CQGYields get_ItemById(String id_);
 
         #endregion
 
@@ -10318,19 +10318,19 @@ namespace FakeCQG
             set;
         }
 
-        int DaysBeforeExpiration
+        Int32 DaysBeforeExpiration
         {
             get;
             set;
         }
 
-        bool EqualizeCloses
+        Boolean EqualizeCloses
         {
             get;
             set;
         }
 
-        bool IncludeEnd
+        Boolean IncludeEnd
         {
             get;
             set;
@@ -10342,19 +10342,19 @@ namespace FakeCQG
             set;
         }
 
-        object RangeEnd
+        Object RangeEnd
         {
             get;
             set;
         }
 
-        object RangeStart
+        Object RangeStart
         {
             get;
             set;
         }
 
-        int RecalcPeriod
+        Int32 RecalcPeriod
         {
             get;
             set;
@@ -10366,7 +10366,7 @@ namespace FakeCQG
             set;
         }
 
-        object SessionsFilter
+        Object SessionsFilter
         {
             get;
             set;
@@ -10378,13 +10378,13 @@ namespace FakeCQG
             set;
         }
 
-        string Symbol
+        String Symbol
         {
             get;
             set;
         }
 
-        bool UpdatesEnabled
+        Boolean UpdatesEnabled
         {
             get;
             set;
@@ -10478,7 +10478,7 @@ namespace FakeCQG
 
         public _ICQGCELEvents_DataSourceSymbolsResolvedEventHandler m_DataSourceSymbolsResolvedDelegate;
 
-        public int m_dwCookie;
+        public Int32 m_dwCookie;
 
         public _ICQGCELEvents_ExpressionAddedEventHandler m_ExpressionAddedDelegate;
 
@@ -10623,6 +10623,7 @@ namespace FakeCQG
 
         ~_ICQGCELEvents_SinkHelper()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -10651,14 +10652,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyRemoved";
             var args = new object[] { arg1, arg2 };
@@ -10672,21 +10673,21 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, int arg2)
+        public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyUpdated";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderPlaced(string arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
+        public virtual void AlgorithmicOrderPlaced(String arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
             string name = "AlgorithmicOrderPlaced";
             var args = new object[] { arg1, arg2, arg3 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void AlgorithmicOrderRegistrationComplete(string arg1, CQGError arg2)
+        public virtual void AlgorithmicOrderRegistrationComplete(String arg1, CQGError arg2)
         {
             string name = "AlgorithmicOrderRegistrationComplete";
             var args = new object[] { arg1, arg2 };
@@ -10720,7 +10721,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
+        public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             string name = "CommodityInstrumentsResolved";
             var args = new object[] { arg1, arg2, arg3 };
@@ -10741,14 +10742,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConditionInserted(CQGCondition arg1, int arg2)
+        public virtual void ConditionInserted(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConditionRemoved(CQGCondition arg1, int arg2)
+        public virtual void ConditionRemoved(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionRemoved";
             var args = new object[] { arg1, arg2 };
@@ -10762,7 +10763,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConditionUpdated(CQGCondition arg1, int arg2)
+        public virtual void ConditionUpdated(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionUpdated";
             var args = new object[] { arg1, arg2 };
@@ -10776,14 +10777,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -10797,7 +10798,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, int arg2)
+        public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsUpdated";
             var args = new object[] { arg1, arg2 };
@@ -10832,14 +10833,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void CustomStudyInserted(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyInserted(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void CustomStudyRemoved(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyRemoved(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyRemoved";
             var args = new object[] { arg1, arg2 };
@@ -10853,7 +10854,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void CustomStudyUpdated(CQGCustomStudy arg1, int arg2)
+        public virtual void CustomStudyUpdated(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyUpdated";
             var args = new object[] { arg1, arg2 };
@@ -10867,7 +10868,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void DataError(object arg1, string arg2)
+        public virtual void DataError(Object arg1, String arg2)
         {
             string name = "DataError";
             var args = new object[] { arg1, arg2 };
@@ -10881,7 +10882,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void DataSourceSymbolsResolved(string arg1, CQGDataSourceSymbols arg2, CQGError arg3)
+        public virtual void DataSourceSymbolsResolved(String arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
             string name = "DataSourceSymbolsResolved";
             var args = new object[] { arg1, arg2, arg3 };
@@ -10895,14 +10896,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ExpressionInserted(CQGExpression arg1, int arg2)
+        public virtual void ExpressionInserted(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ExpressionRemoved(CQGExpression arg1, int arg2)
+        public virtual void ExpressionRemoved(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionRemoved";
             var args = new object[] { arg1, arg2 };
@@ -10916,7 +10917,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ExpressionUpdated(CQGExpression arg1, int arg2)
+        public virtual void ExpressionUpdated(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionUpdated";
             var args = new object[] { arg1, arg2 };
@@ -10930,7 +10931,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, int arg2, int arg3)
+        public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, Int32 arg2, Int32 arg3)
         {
             string name = "GWEnvironmentChanged";
             var args = new object[] { arg1, arg2, arg3 };
@@ -10951,7 +10952,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void IncorrectSymbol(string arg1)
+        public virtual void IncorrectSymbol(String arg1)
         {
             string name = "IncorrectSymbol";
             var args = new object[] { arg1 };
@@ -10986,7 +10987,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
+        public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
             var args = new object[] { arg1, arg2 };
@@ -11062,14 +11063,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -11083,7 +11084,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, int arg2)
+        public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsUpdated";
             var args = new object[] { arg1, arg2 };
@@ -11118,14 +11119,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -11139,7 +11140,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, int arg2)
+        public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsUpdated";
             var args = new object[] { arg1, arg2 };
@@ -11160,14 +11161,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TFlowBarsInserted(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsInserted(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -11181,14 +11182,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, int arg2)
+        public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsUpdated";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TicksAdded(CQGTicks arg1, int arg2)
+        public virtual void TicksAdded(CQGTicks arg1, Int32 arg2)
         {
             string name = "TicksAdded";
             var args = new object[] { arg1, arg2 };
@@ -11209,14 +11210,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TimedBarsInserted(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsInserted(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TimedBarsRemoved(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsRemoved(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -11230,21 +11231,21 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TimedBarsUpdated(CQGTimedBars arg1, int arg2)
+        public virtual void TimedBarsUpdated(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsUpdated";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TradableCommoditiesResolved(int arg1, CQGCommodities arg2, CQGError arg3)
+        public virtual void TradableCommoditiesResolved(Int32 arg1, CQGCommodities arg2, CQGError arg3)
         {
             string name = "TradableCommoditiesResolved";
             var args = new object[] { arg1, arg2, arg3 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TradableExchangesResolved(int arg1, CQGExchanges arg2, CQGError arg3)
+        public virtual void TradableExchangesResolved(Int32 arg1, CQGExchanges arg2, CQGError arg3)
         {
             string name = "TradableExchangesResolved";
             var args = new object[] { arg1, arg2, arg3 };
@@ -11307,14 +11308,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void YieldsInserted(CQGYields arg1, int arg2)
+        public virtual void YieldsInserted(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsInserted";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void YieldsRemoved(CQGYields arg1, int arg2)
+        public virtual void YieldsRemoved(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsRemoved";
             var args = new object[] { arg1, arg2 };
@@ -11328,7 +11329,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void YieldsUpdated(CQGYields arg1, int arg2)
+        public virtual void YieldsUpdated(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsUpdated";
             var args = new object[] { arg1, arg2 };
@@ -11353,7 +11354,7 @@ namespace FakeCQG
 
         public _ICQGCELGeneralEvents_DataErrorEventHandler m_DataErrorDelegate;
 
-        public int m_dwCookie;
+        public Int32 m_dwCookie;
 
         public _ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler m_GWConnectionStatusChangedDelegate;
 
@@ -11378,6 +11379,7 @@ namespace FakeCQG
 
         ~_ICQGCELGeneralEvents_SinkHelper()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -11405,7 +11407,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void DataError(object arg1, string arg2)
+        public virtual void DataError(Object arg1, String arg2)
         {
             string name = "DataError";
             var args = new object[] { arg1, arg2 };
@@ -11451,7 +11453,7 @@ namespace FakeCQG
 
         public _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler m_CommodityInstrumentsResolvedDelegate;
 
-        public int m_dwCookie;
+        public Int32 m_dwCookie;
 
         public _ICQGCELInstrumentEvents_IncorrectSymbolEventHandler m_IncorrectSymbolDelegate;
 
@@ -11480,6 +11482,7 @@ namespace FakeCQG
 
         ~_ICQGCELInstrumentEvents_SinkHelper()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -11487,14 +11490,14 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
+        public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             string name = "CommodityInstrumentsResolved";
             var args = new object[] { arg1, arg2, arg3 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void IncorrectSymbol(string arg1)
+        public virtual void IncorrectSymbol(String arg1)
         {
             string name = "IncorrectSymbol";
             var args = new object[] { arg1 };
@@ -11529,7 +11532,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
+        public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
             var args = new object[] { arg1, arg2 };
@@ -11557,6 +11560,7 @@ namespace FakeCQG
 
         ~CQGAccountClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -11592,12 +11596,12 @@ namespace FakeCQG
 
         }
 
-        public bool AutoSubscribeInstruments
+        public Boolean AutoSubscribeInstruments
         {
             get
             {
                 string name = "AutoSubscribeInstruments";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -11643,12 +11647,12 @@ namespace FakeCQG
 
         }
 
-        public string FcmAccountID
+        public String FcmAccountID
         {
             get
             {
                 string name = "FcmAccountID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -11665,45 +11669,45 @@ namespace FakeCQG
 
         }
 
-        public int FcmID
+        public Int32 FcmID
         {
             get
             {
                 string name = "FcmID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string FcmName
+        public String FcmName
         {
             get
             {
                 string name = "FcmName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string GWAccountName
+        public String GWAccountName
         {
             get
             {
                 string name = "GWAccountName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -11761,12 +11765,12 @@ namespace FakeCQG
             }
         }
 
-        public string ReportingCurrency
+        public String ReportingCurrency
         {
             get
             {
                 string name = "ReportingCurrency";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -11806,23 +11810,23 @@ namespace FakeCQG
 
         }
 
-        public double TotalMarginValue
+        public Double TotalMarginValue
         {
             get
             {
                 string name = "TotalMarginValue";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TotalPurchasingPower
+        public Double TotalPurchasingPower
         {
             get
             {
                 string name = "TotalPurchasingPower";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -11853,6 +11857,7 @@ namespace FakeCQG
 
         ~CQGAccountsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -11860,18 +11865,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAccount this[int gw_account_id]
+        public CQGAccount this[Int32 gw_account_id]
         {
             get
             {
@@ -11884,7 +11889,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAccount this[string fcm_account_id, int fcm_id]
+        public CQGAccount this[String fcm_account_id, Int32 fcm_id]
         {
             get
             {
@@ -11908,7 +11913,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual CQGAccount get_ItemByFCM(string fcm_account_id, int fcm_id)
+        public virtual CQGAccount get_ItemByFCM(String fcm_account_id, Int32 fcm_id)
         {
             string name = "get_ItemByFCM";
             var args = new object[] { fcm_account_id, fcm_id };
@@ -11917,7 +11922,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAccount get_ItemByIndex(int index_)
+        public virtual CQGAccount get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -11954,6 +11959,7 @@ namespace FakeCQG
 
         ~CQGAccountSummariesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -11961,18 +11967,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAccountSummary this[object index_]
+        public CQGAccountSummary this[Object index_]
         {
             get
             {
@@ -12017,6 +12023,7 @@ namespace FakeCQG
 
         ~CQGAccountSummaryClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12036,23 +12043,23 @@ namespace FakeCQG
 
         }
 
-        public string CurrencyName
+        public String CurrencyName
         {
             get
             {
                 string name = "CurrencyName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool ManualFillsInvolved
+        public Boolean ManualFillsInvolved
         {
             get
             {
                 string name = "ManualFillsInvolved";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -12062,83 +12069,83 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual double Balance(int day_ = 0)
+        public virtual Double Balance(Int32 day_ = 0)
         {
             string name = "Balance";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double CashExcess(int day_ = 1)
+        public virtual Double CashExcess(Int32 day_ = 1)
         {
             string name = "CashExcess";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double Collaterals(int day_ = 1)
+        public virtual Double Collaterals(Int32 day_ = 1)
         {
             string name = "Collaterals";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double InitialMargin(int day_ = 1)
+        public virtual Double InitialMargin(Int32 day_ = 1)
         {
             string name = "InitialMargin";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double MaintenanceMargin(int day_ = 1)
+        public virtual Double MaintenanceMargin(Int32 day_ = 1)
         {
             string name = "MaintenanceMargin";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double MVO(int day_ = 0)
+        public virtual Double MVO(Int32 day_ = 0)
         {
             string name = "MVO";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double NLV(int day_ = 0)
+        public virtual Double NLV(Int32 day_ = 0)
         {
             string name = "NLV";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double OTE(int day_ = 0)
+        public virtual Double OTE(Int32 day_ = 0)
         {
             string name = "OTE";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double ProfitLoss(int day_ = 1)
+        public virtual Double ProfitLoss(Int32 day_ = 1)
         {
             string name = "ProfitLoss";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double UPL(int day_ = 0)
+        public virtual Double UPL(Int32 day_ = 0)
         {
             string name = "UPL";
             var args = new object[] { day_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
@@ -12163,6 +12170,7 @@ namespace FakeCQG
 
         ~CQGAdvancedStudiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12170,18 +12178,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAdvancedStudy this[int index_]
+        public CQGAdvancedStudy this[Int32 index_]
         {
             get
             {
@@ -12194,7 +12202,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAdvancedStudy this[string id_]
+        public CQGAdvancedStudy this[String id_]
         {
             get
             {
@@ -12211,7 +12219,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGAdvancedStudy get_ItemById(string id_)
+        public virtual CQGAdvancedStudy get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -12248,6 +12256,7 @@ namespace FakeCQG
 
         ~CQGAdvancedStudyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12255,12 +12264,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -12301,18 +12310,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCurves this[int index_]
+        public CQGCurves this[Int32 index_]
         {
             get
             {
@@ -12371,13 +12380,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -12392,11 +12401,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -12407,15 +12416,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -12443,6 +12452,7 @@ namespace FakeCQG
 
         ~CQGAdvancedStudyDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12450,12 +12460,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -12473,12 +12483,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -12521,6 +12531,7 @@ namespace FakeCQG
 
         ~CQGAdvancedStudyDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12528,18 +12539,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAdvancedStudyDefinition this[int index_]
+        public CQGAdvancedStudyDefinition this[Int32 index_]
         {
             get
             {
@@ -12552,7 +12563,7 @@ namespace FakeCQG
 
         }
 
-        public CQGAdvancedStudyDefinition this[string advanced_study_abbreviation]
+        public CQGAdvancedStudyDefinition this[String advanced_study_abbreviation]
         {
             get
             {
@@ -12569,7 +12580,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGAdvancedStudyDefinition get_ItemByAbbreviation(string advanced_study_abbreviation)
+        public virtual CQGAdvancedStudyDefinition get_ItemByAbbreviation(String advanced_study_abbreviation)
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { advanced_study_abbreviation };
@@ -12578,7 +12589,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAdvancedStudyDefinition get_ItemByName(string advanced_study_name)
+        public virtual CQGAdvancedStudyDefinition get_ItemByName(String advanced_study_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { advanced_study_name };
@@ -12615,6 +12626,7 @@ namespace FakeCQG
 
         ~CQGAdvancedStudyRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12622,12 +12634,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -12654,12 +12666,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -12682,12 +12694,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -12714,12 +12726,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -12730,12 +12742,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -12746,13 +12758,13 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -12763,12 +12775,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -12779,12 +12791,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -12795,12 +12807,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -12827,12 +12839,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -12859,12 +12871,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -12879,30 +12891,30 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void IncludeCurve(object curve_key)
+        public virtual void IncludeCurve(Object curve_key)
         {
             string name = "IncludeCurve";
             var args = new object[] { curve_key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual bool IsCurveIncluded(object curve_key)
+        public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             string name = "IsCurveIncluded";
             var args = new object[] { curve_key };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
@@ -12930,6 +12942,7 @@ namespace FakeCQG
 
         ~CQGAlgorithmicOrderDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -12937,12 +12950,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public object DefaultValue
+        public Object DefaultValue
         {
             get
             {
                 string name = "DefaultValue";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -12953,12 +12966,12 @@ namespace FakeCQG
             }
         }
 
-        public int DefaultValueIndex
+        public Int32 DefaultValueIndex
         {
             get
             {
                 string name = "DefaultValueIndex";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -12969,12 +12982,12 @@ namespace FakeCQG
             }
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13001,12 +13014,12 @@ namespace FakeCQG
             }
         }
 
-        public string Unit
+        public String Unit
         {
             get
             {
                 string name = "Unit";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13033,7 +13046,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void AddValue(string value_)
+        public virtual void AddValue(String value_)
         {
             string name = "AddValue";
             var args = new object[] { value_ };
@@ -13061,6 +13074,7 @@ namespace FakeCQG
 
         ~CQGAlgorithmicOrderDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13068,18 +13082,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAlgorithmicOrderDefinition this[int index_]
+        public CQGAlgorithmicOrderDefinition this[Int32 index_]
         {
             get
             {
@@ -13139,6 +13153,7 @@ namespace FakeCQG
 
         ~CQGAlgorithmicOrderParametersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13168,12 +13183,12 @@ namespace FakeCQG
 
         }
 
-        public string ExecutionPattern
+        public String ExecutionPattern
         {
             get
             {
                 string name = "ExecutionPattern";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13190,34 +13205,34 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool Parked
+        public Boolean Parked
         {
             get
             {
                 string name = "Parked";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13234,23 +13249,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13267,34 +13282,34 @@ namespace FakeCQG
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrailingOffset
+        public Double TrailingOffset
         {
             get
             {
                 string name = "TrailingOffset";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TriggerQuantity
+        public Int32 TriggerQuantity
         {
             get
             {
                 string name = "TriggerQuantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13311,12 +13326,12 @@ namespace FakeCQG
 
         }
 
-        public int VisibleQuantity
+        public Int32 VisibleQuantity
         {
             get
             {
                 string name = "VisibleQuantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13347,6 +13362,7 @@ namespace FakeCQG
 
         ~CQGAlgorithmicOrderPropertiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13354,18 +13370,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGAlgorithmicOrderProperty this[int index_]
+        public CQGAlgorithmicOrderProperty this[Int32 index_]
         {
             get
             {
@@ -13410,6 +13426,7 @@ namespace FakeCQG
 
         ~CQGAlgorithmicOrderPropertyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13417,23 +13434,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -13464,6 +13481,7 @@ namespace FakeCQG
 
         ~CQGAlgoSupplierClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13492,6 +13510,7 @@ namespace FakeCQG
 
         ~CQGAPIConfigClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -13499,12 +13518,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int AccountMarginAndPositionsThrottleInterval
+        public Int32 AccountMarginAndPositionsThrottleInterval
         {
             get
             {
                 string name = "AccountMarginAndPositionsThrottleInterval";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13515,12 +13534,12 @@ namespace FakeCQG
             }
         }
 
-        public int AgeToDeleteLogFileDays
+        public Int32 AgeToDeleteLogFileDays
         {
             get
             {
                 string name = "AgeToDeleteLogFileDays";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13531,12 +13550,12 @@ namespace FakeCQG
             }
         }
 
-        public bool ApplyDaylightSavingChanges
+        public Boolean ApplyDaylightSavingChanges
         {
             get
             {
                 string name = "ApplyDaylightSavingChanges";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13547,12 +13566,12 @@ namespace FakeCQG
             }
         }
 
-        public bool CollectionsThrowException
+        public Boolean CollectionsThrowException
         {
             get
             {
                 string name = "CollectionsThrowException";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13643,12 +13662,12 @@ namespace FakeCQG
             }
         }
 
-        public int DOMUpdatesPeriod
+        public Int32 DOMUpdatesPeriod
         {
             get
             {
                 string name = "DOMUpdatesPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13659,12 +13678,12 @@ namespace FakeCQG
             }
         }
 
-        public bool FireEventOnChangedPrices
+        public Boolean FireEventOnChangedPrices
         {
             get
             {
                 string name = "FireEventOnChangedPrices";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13675,12 +13694,12 @@ namespace FakeCQG
             }
         }
 
-        public bool GatewayEnabled
+        public Boolean GatewayEnabled
         {
             get
             {
                 string name = "GatewayEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13691,12 +13710,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeOrderTransactions
+        public Boolean IncludeOrderTransactions
         {
             get
             {
                 string name = "IncludeOrderTransactions";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13723,12 +13742,12 @@ namespace FakeCQG
             }
         }
 
-        public int MaxLogFileCount
+        public Int32 MaxLogFileCount
         {
             get
             {
                 string name = "MaxLogFileCount";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13755,12 +13774,12 @@ namespace FakeCQG
             }
         }
 
-        public int MaxLogFileSize
+        public Int32 MaxLogFileSize
         {
             get
             {
                 string name = "MaxLogFileSize";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13771,12 +13790,12 @@ namespace FakeCQG
             }
         }
 
-        public int MessageProcessingTimeout
+        public Int32 MessageProcessingTimeout
         {
             get
             {
                 string name = "MessageProcessingTimeout";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -13787,12 +13806,12 @@ namespace FakeCQG
             }
         }
 
-        public bool MetaDataEnabled
+        public Boolean MetaDataEnabled
         {
             get
             {
                 string name = "MetaDataEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13803,12 +13822,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NewInstrumentChangeMode
+        public Boolean NewInstrumentChangeMode
         {
             get
             {
                 string name = "NewInstrumentChangeMode";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13819,12 +13838,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NewInstrumentMode
+        public Boolean NewInstrumentMode
         {
             get
             {
                 string name = "NewInstrumentMode";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13835,12 +13854,12 @@ namespace FakeCQG
             }
         }
 
-        public bool NonsynchronizedData
+        public Boolean NonsynchronizedData
         {
             get
             {
                 string name = "NonsynchronizedData";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13851,12 +13870,12 @@ namespace FakeCQG
             }
         }
 
-        public bool PendingOrderActionEnabled
+        public Boolean PendingOrderActionEnabled
         {
             get
             {
                 string name = "PendingOrderActionEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13899,12 +13918,12 @@ namespace FakeCQG
             }
         }
 
-        public string ProviderPassword
+        public String ProviderPassword
         {
             get
             {
                 string name = "ProviderPassword";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13915,12 +13934,12 @@ namespace FakeCQG
             }
         }
 
-        public bool QueryAllAuthorizedTraders
+        public Boolean QueryAllAuthorizedTraders
         {
             get
             {
                 string name = "QueryAllAuthorizedTraders";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -13947,12 +13966,12 @@ namespace FakeCQG
             }
         }
 
-        public string RemoteOpenAPILoginService
+        public String RemoteOpenAPILoginService
         {
             get
             {
                 string name = "RemoteOpenAPILoginService";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13963,12 +13982,12 @@ namespace FakeCQG
             }
         }
 
-        public string RemoteOpenAPIServer
+        public String RemoteOpenAPIServer
         {
             get
             {
                 string name = "RemoteOpenAPIServer";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -13991,12 +14010,12 @@ namespace FakeCQG
 
         }
 
-        public bool ReplaceLoginSession
+        public Boolean ReplaceLoginSession
         {
             get
             {
                 string name = "ReplaceLoginSession";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14007,12 +14026,12 @@ namespace FakeCQG
             }
         }
 
-        public int SnapshotPeriod
+        public Int32 SnapshotPeriod
         {
             get
             {
                 string name = "SnapshotPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -14023,12 +14042,12 @@ namespace FakeCQG
             }
         }
 
-        public bool StrategyManagerEnabled
+        public Boolean StrategyManagerEnabled
         {
             get
             {
                 string name = "StrategyManagerEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14055,12 +14074,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UsedFromATLClient
+        public Boolean UsedFromATLClient
         {
             get
             {
                 string name = "UsedFromATLClient";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14071,12 +14090,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UseOrderSide
+        public Boolean UseOrderSide
         {
             get
             {
                 string name = "UseOrderSide";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14091,7 +14110,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void AddRemoteOpenAPIServer(string server_address)
+        public virtual void AddRemoteOpenAPIServer(String server_address)
         {
             string name = "AddRemoteOpenAPIServer";
             var args = new object[] { server_address };
@@ -14125,6 +14144,7 @@ namespace FakeCQG
 
         ~CQGBarsTimestampsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -14132,29 +14152,29 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public DateTime this[int index_]
+        public DateTime this[Int32 index_]
         {
             get
             {
@@ -14239,6 +14259,7 @@ namespace FakeCQG
 
         ~CQGCELClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -14542,12 +14563,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsStarted
+        public Boolean IsStarted
         {
             get
             {
                 string name = "IsStarted";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14577,12 +14598,12 @@ namespace FakeCQG
 
         }
 
-        public bool OTPRequired
+        public Boolean OTPRequired
         {
             get
             {
                 string name = "OTPRequired";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -14798,7 +14819,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined)
+        public virtual void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "ActivateAllOrders";
             var args = new object[] { cqg_account, cqg_instrument, from_all_traders, order_side };
@@ -14812,7 +14833,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, bool parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
+        public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "CancelAllOrders";
             var args = new object[] { cqg_account, cqg_instrument, from_all_traders, parked_, order_side };
@@ -14826,14 +14847,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ChangePassword(string username_, string old_password, string new_password)
+        public virtual void ChangePassword(String username_, String old_password, String new_password)
         {
             string name = "ChangePassword";
             var args = new object[] { username_, old_password, new_password };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ChangeRemoteOpenAPIServer(string server_address)
+        public virtual void ChangeRemoteOpenAPIServer(String server_address)
         {
             string name = "ChangeRemoteOpenAPIServer";
             var args = new object[] { server_address };
@@ -14848,7 +14869,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGAdvancedStudyRequest CreateAdvancedStudyRequest(string name_or_abbr)
+        public virtual CQGAdvancedStudyRequest CreateAdvancedStudyRequest(String name_or_abbr)
         {
             string name = "CreateAdvancedStudyRequest";
             var args = new object[] { name_or_abbr };
@@ -14865,7 +14886,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGConditionRequest CreateConditionRequest(string condition_name)
+        public virtual CQGConditionRequest CreateConditionRequest(String condition_name)
         {
             string name = "CreateConditionRequest";
             var args = new object[] { condition_name };
@@ -14882,7 +14903,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGCustomStudyRequest CreateCustomStudyRequest(string name_or_abbr)
+        public virtual CQGCustomStudyRequest CreateCustomStudyRequest(String name_or_abbr)
         {
             string name = "CreateCustomStudyRequest";
             var args = new object[] { name_or_abbr };
@@ -14941,7 +14962,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
+        public virtual CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "")
         {
             string name = "CreateOrder";
             var args = new object[] { order_type, cqg_instrument, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
@@ -14958,7 +14979,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, string instrument_name, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
+        public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, String instrument_name, CQGAccount cqg_account, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = 0, Double stop_price = 0, String ue_name_part = "")
         {
             string name = "CreateOrderByInstrumentName";
             var args = new object[] { order_type, instrument_name, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
@@ -14983,7 +15004,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
+        public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             string name = "CreateStrategyOrder";
             var args = new object[] { order_type, cqg_definition, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
@@ -14992,7 +15013,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, string expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
+        public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, String expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, Int32 order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, Double limit_price = -2147483647, Double stop_price = -2147483647, String ue_name_part = "")
         {
             string name = "CreateStrategyOrderByExpression";
             var args = new object[] { order_type, expression_string, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
@@ -15033,7 +15054,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGTradingSystemRequest CreateTradingSystemRequest(string name_or_abbr)
+        public virtual CQGTradingSystemRequest CreateTradingSystemRequest(String name_or_abbr)
         {
             string name = "CreateTradingSystemRequest";
             var args = new object[] { name_or_abbr };
@@ -15050,7 +15071,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGStrategyDefinition DefineStrategy(string request_string_)
+        public virtual CQGStrategyDefinition DefineStrategy(String request_string_)
         {
             string name = "DefineStrategy";
             var args = new object[] { request_string_ };
@@ -15065,43 +15086,43 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual void GWLogon(string username_, string password_)
+        public virtual void GWLogon(String username_, String password_)
         {
             string name = "GWLogon";
             var args = new object[] { username_, password_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void GWOTPLogon(string username_, string password_, string otpassword_)
+        public virtual void GWOTPLogon(String username_, String password_, String otpassword_)
         {
             string name = "GWOTPLogon";
             var args = new object[] { username_, password_, otpassword_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual bool IsValid(object value_or_object)
+        public virtual Boolean IsValid(Object value_or_object)
         {
             string name = "IsValid";
             var args = new object[] { value_or_object };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void LogOn(string username_, string password_)
+        public virtual void LogOn(String username_, String password_)
         {
             string name = "LogOn";
             var args = new object[] { username_, password_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void ModifyCompoundOrder(int compound_order_id, string compound_order_guid, CQGOrderChain order_chain)
+        public virtual void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain)
         {
             string name = "ModifyCompoundOrder";
             var args = new object[] { compound_order_id, compound_order_guid, order_chain };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void NewInstrument(string symbol_)
+        public virtual void NewInstrument(String symbol_)
         {
             string name = "NewInstrument";
             var args = new object[] { symbol_ };
@@ -15124,21 +15145,21 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void QueryPositionsStatement(int gw_account_id, DateTime date_)
+        public virtual void QueryPositionsStatement(Int32 gw_account_id, DateTime date_)
         {
             string name = "QueryPositionsStatement";
             var args = new object[] { gw_account_id, date_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void QuerySummariesStatement(int gw_account_id, DateTime date_)
+        public virtual void QuerySummariesStatement(Int32 gw_account_id, DateTime date_)
         {
             string name = "QuerySummariesStatement";
             var args = new object[] { gw_account_id, date_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void RegisterAlgorithmicOrder(string guid_, string name_, string abbrv_, string description_, CQGAlgorithmicOrderDefinitions definitions_, int icon_index = 0)
+        public virtual void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0)
         {
             string name = "RegisterAlgorithmicOrder";
             var args = new object[] { guid_, name_, abbrv_, description_, definitions_, icon_index };
@@ -15345,7 +15366,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void RequestCommodityInstruments(string commodity_name, eInstrumentType instrument_types, bool tradable_only = false)
+        public virtual void RequestCommodityInstruments(String commodity_name, eInstrumentType instrument_types, Boolean tradable_only = false)
         {
             string name = "RequestCommodityInstruments";
             var args = new object[] { commodity_name, instrument_types, tradable_only };
@@ -15403,7 +15424,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual void RequestDataSourceSymbols(string data_source_abbreviation)
+        public virtual void RequestDataSourceSymbols(String data_source_abbreviation)
         {
             string name = "RequestDataSourceSymbols";
             var args = new object[] { data_source_abbreviation };
@@ -15426,14 +15447,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, bool trace_group_changes)
+        public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes)
         {
             string name = "RequestInstrumentsGroup";
             var args = new object[] { group_request, trace_group_changes };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void RequestManualFills(int gw_account_id, eManualFillsDataLevel update_level)
+        public virtual void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level)
         {
             string name = "RequestManualFills";
             var args = new object[] { gw_account_id, update_level };
@@ -15498,14 +15519,14 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void RequestTradableCommodities(int gw_account_id = 0)
+        public virtual void RequestTradableCommodities(Int32 gw_account_id = 0)
         {
             string name = "RequestTradableCommodities";
             var args = new object[] { gw_account_id };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void RequestTradableExchanges(int gw_account_id = 0)
+        public virtual void RequestTradableExchanges(Int32 gw_account_id = 0)
         {
             string name = "RequestTradableExchanges";
             var args = new object[] { gw_account_id };
@@ -15555,14 +15576,14 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void TerminateCQGIC(bool start_again = false)
+        public virtual void TerminateCQGIC(Boolean start_again = false)
         {
             string name = "TerminateCQGIC";
             var args = new object[] { start_again };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void UnregisterAlgorithmicOrder(string guid_)
+        public virtual void UnregisterAlgorithmicOrder(String guid_)
         {
             string name = "UnregisterAlgorithmicOrder";
             var args = new object[] { guid_ };
@@ -15657,7 +15678,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("AdvancedStudyInserted");
-                    AdvancedStudyInserted.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    AdvancedStudyInserted.Invoke((CQGAdvancedStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15679,7 +15700,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("AdvancedStudyRemoved");
-                    AdvancedStudyRemoved.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    AdvancedStudyRemoved.Invoke((CQGAdvancedStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15723,7 +15744,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("AdvancedStudyUpdated");
-                    AdvancedStudyUpdated.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    AdvancedStudyUpdated.Invoke((CQGAdvancedStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15745,7 +15766,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("AlgorithmicOrderPlaced");
-                    AlgorithmicOrderPlaced.Invoke((string)args[0], (CQGAlgorithmicOrderParameters)args[1], (CQGAlgorithmicOrderProperties)args[2]);
+                    AlgorithmicOrderPlaced.Invoke((String)args[0], (CQGAlgorithmicOrderParameters)args[1], (CQGAlgorithmicOrderProperties)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -15767,7 +15788,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("AlgorithmicOrderRegistrationComplete");
-                    AlgorithmicOrderRegistrationComplete.Invoke((string)args[0], (CQGError)args[1]);
+                    AlgorithmicOrderRegistrationComplete.Invoke((String)args[0], (CQGError)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15877,7 +15898,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("CommodityInstrumentsResolved");
-                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
+                    CommodityInstrumentsResolved.Invoke((String)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -15943,7 +15964,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConditionInserted");
-                    ConditionInserted.Invoke((CQGCondition)args[0], (int)args[1]);
+                    ConditionInserted.Invoke((CQGCondition)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15965,7 +15986,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConditionRemoved");
-                    ConditionRemoved.Invoke((CQGCondition)args[0], (int)args[1]);
+                    ConditionRemoved.Invoke((CQGCondition)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16009,7 +16030,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConditionUpdated");
-                    ConditionUpdated.Invoke((CQGCondition)args[0], (int)args[1]);
+                    ConditionUpdated.Invoke((CQGCondition)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16053,7 +16074,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConstantVolumeBarsInserted");
-                    ConstantVolumeBarsInserted.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    ConstantVolumeBarsInserted.Invoke((CQGConstantVolumeBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16075,7 +16096,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConstantVolumeBarsRemoved");
-                    ConstantVolumeBarsRemoved.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    ConstantVolumeBarsRemoved.Invoke((CQGConstantVolumeBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16119,7 +16140,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ConstantVolumeBarsUpdated");
-                    ConstantVolumeBarsUpdated.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    ConstantVolumeBarsUpdated.Invoke((CQGConstantVolumeBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16229,7 +16250,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("CustomStudyInserted");
-                    CustomStudyInserted.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    CustomStudyInserted.Invoke((CQGCustomStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16251,7 +16272,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("CustomStudyRemoved");
-                    CustomStudyRemoved.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    CustomStudyRemoved.Invoke((CQGCustomStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16295,7 +16316,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("CustomStudyUpdated");
-                    CustomStudyUpdated.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    CustomStudyUpdated.Invoke((CQGCustomStudy)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16339,7 +16360,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("DataError");
-                    DataError.Invoke((object)args[0], (string)args[1]);
+                    DataError.Invoke((Object)args[0], (String)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16383,7 +16404,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("DataSourceSymbolsResolved");
-                    DataSourceSymbolsResolved.Invoke((string)args[0], (CQGDataSourceSymbols)args[1], (CQGError)args[2]);
+                    DataSourceSymbolsResolved.Invoke((String)args[0], (CQGDataSourceSymbols)args[1], (CQGError)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -16427,7 +16448,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ExpressionInserted");
-                    ExpressionInserted.Invoke((CQGExpression)args[0], (int)args[1]);
+                    ExpressionInserted.Invoke((CQGExpression)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16449,7 +16470,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ExpressionRemoved");
-                    ExpressionRemoved.Invoke((CQGExpression)args[0], (int)args[1]);
+                    ExpressionRemoved.Invoke((CQGExpression)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16493,7 +16514,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("ExpressionUpdated");
-                    ExpressionUpdated.Invoke((CQGExpression)args[0], (int)args[1]);
+                    ExpressionUpdated.Invoke((CQGExpression)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16537,7 +16558,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("GWEnvironmentChanged");
-                    GWEnvironmentChanged.Invoke((eGWEnvChangeCode)args[0], (int)args[1], (int)args[2]);
+                    GWEnvironmentChanged.Invoke((eGWEnvChangeCode)args[0], (Int32)args[1], (Int32)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -16603,7 +16624,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("IncorrectSymbol");
-                    IncorrectSymbol.Invoke((string)args[0]);
+                    IncorrectSymbol.Invoke((String)args[0]);
                 }
                 catch (Exception)
                 { }
@@ -16713,7 +16734,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("InstrumentSubscribed");
-                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)args[1]);
+                    InstrumentSubscribed.Invoke((String)args[0], (CQGInstrument)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16956,7 +16977,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("PointAndFigureBarsInserted");
-                    PointAndFigureBarsInserted.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    PointAndFigureBarsInserted.Invoke((CQGPointAndFigureBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16978,7 +16999,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("PointAndFigureBarsRemoved");
-                    PointAndFigureBarsRemoved.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    PointAndFigureBarsRemoved.Invoke((CQGPointAndFigureBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17022,7 +17043,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("PointAndFigureBarsUpdated");
-                    PointAndFigureBarsUpdated.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    PointAndFigureBarsUpdated.Invoke((CQGPointAndFigureBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17132,7 +17153,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("SubMinuteBarsInserted");
-                    SubMinuteBarsInserted.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    SubMinuteBarsInserted.Invoke((CQGSubMinuteBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17154,7 +17175,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("SubMinuteBarsRemoved");
-                    SubMinuteBarsRemoved.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    SubMinuteBarsRemoved.Invoke((CQGSubMinuteBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17198,7 +17219,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("SubMinuteBarsUpdated");
-                    SubMinuteBarsUpdated.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    SubMinuteBarsUpdated.Invoke((CQGSubMinuteBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17264,7 +17285,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TFlowBarsInserted");
-                    TFlowBarsInserted.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    TFlowBarsInserted.Invoke((CQGTFlowBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17286,7 +17307,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TFlowBarsRemoved");
-                    TFlowBarsRemoved.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    TFlowBarsRemoved.Invoke((CQGTFlowBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17330,7 +17351,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TFlowBarsUpdated");
-                    TFlowBarsUpdated.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    TFlowBarsUpdated.Invoke((CQGTFlowBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17352,7 +17373,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TicksAdded");
-                    TicksAdded.Invoke((CQGTicks)args[0], (int)args[1]);
+                    TicksAdded.Invoke((CQGTicks)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17418,7 +17439,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TimedBarsInserted");
-                    TimedBarsInserted.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    TimedBarsInserted.Invoke((CQGTimedBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17440,7 +17461,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TimedBarsRemoved");
-                    TimedBarsRemoved.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    TimedBarsRemoved.Invoke((CQGTimedBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17484,7 +17505,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TimedBarsUpdated");
-                    TimedBarsUpdated.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    TimedBarsUpdated.Invoke((CQGTimedBars)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17506,7 +17527,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TradableCommoditiesResolved");
-                    TradableCommoditiesResolved.Invoke((int)args[0], (CQGCommodities)args[1], (CQGError)args[2]);
+                    TradableCommoditiesResolved.Invoke((Int32)args[0], (CQGCommodities)args[1], (CQGError)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -17528,7 +17549,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("TradableExchangesResolved");
-                    TradableExchangesResolved.Invoke((int)args[0], (CQGExchanges)args[1], (CQGError)args[2]);
+                    TradableExchangesResolved.Invoke((Int32)args[0], (CQGExchanges)args[1], (CQGError)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -17726,7 +17747,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("YieldsInserted");
-                    YieldsInserted.Invoke((CQGYields)args[0], (int)args[1]);
+                    YieldsInserted.Invoke((CQGYields)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17748,7 +17769,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("YieldsRemoved");
-                    YieldsRemoved.Invoke((CQGYields)args[0], (int)args[1]);
+                    YieldsRemoved.Invoke((CQGYields)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17792,7 +17813,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("YieldsUpdated");
-                    YieldsUpdated.Invoke((CQGYields)args[0], (int)args[1]);
+                    YieldsUpdated.Invoke((CQGYields)args[0], (Int32)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17821,6 +17842,7 @@ namespace FakeCQG
 
         ~CQGChangedTradeEntriesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -17839,18 +17861,18 @@ namespace FakeCQG
 
         }
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGChangedTradeEntry this[int index_]
+        public CQGChangedTradeEntry this[Int32 index_]
         {
             get
             {
@@ -17895,6 +17917,7 @@ namespace FakeCQG
 
         ~CQGChangedTradeEntryClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -17950,6 +17973,7 @@ namespace FakeCQG
 
         ~CQGChangedTradeExitClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18005,6 +18029,7 @@ namespace FakeCQG
 
         ~CQGChangedTradeExitsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18023,18 +18048,18 @@ namespace FakeCQG
 
         }
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGChangedTradeExit this[int index_]
+        public CQGChangedTradeExit this[Int32 index_]
         {
             get
             {
@@ -18079,6 +18104,7 @@ namespace FakeCQG
 
         ~CQGCommoditiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18086,35 +18112,35 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -18152,6 +18178,7 @@ namespace FakeCQG
 
         ~CQGCommodityInstrumentsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18159,35 +18186,35 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsTradableOnly
+        public Boolean IsTradableOnly
         {
             get
             {
                 string name = "IsTradableOnly";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -18225,6 +18252,7 @@ namespace FakeCQG
 
         ~CQGConditionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18232,12 +18260,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -18266,18 +18294,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGConditionResult this[int index_]
+        public CQGConditionResult this[Int32 index_]
         {
             get
             {
@@ -18336,13 +18364,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -18357,11 +18385,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -18372,15 +18400,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -18408,6 +18436,7 @@ namespace FakeCQG
 
         ~CQGConditionDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18415,12 +18444,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -18463,6 +18492,7 @@ namespace FakeCQG
 
         ~CQGConditionDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18470,18 +18500,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGConditionDefinition this[int index_]
+        public CQGConditionDefinition this[Int32 index_]
         {
             get
             {
@@ -18494,7 +18524,7 @@ namespace FakeCQG
 
         }
 
-        public CQGConditionDefinition this[string condition_name]
+        public CQGConditionDefinition this[String condition_name]
         {
             get
             {
@@ -18511,7 +18541,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGConditionDefinition get_ItemByName(string condition_name)
+        public virtual CQGConditionDefinition get_ItemByName(String condition_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { condition_name };
@@ -18548,6 +18578,7 @@ namespace FakeCQG
 
         ~CQGConditionRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18555,12 +18586,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -18587,12 +18618,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -18615,12 +18646,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -18647,12 +18678,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -18663,12 +18694,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -18679,13 +18710,13 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -18696,12 +18727,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -18712,12 +18743,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -18728,12 +18759,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -18760,12 +18791,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -18792,12 +18823,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -18812,15 +18843,15 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
@@ -18848,6 +18879,7 @@ namespace FakeCQG
 
         ~CQGConditionResultClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18866,12 +18898,12 @@ namespace FakeCQG
 
         }
 
-        public bool Value
+        public Boolean Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -18902,6 +18934,7 @@ namespace FakeCQG
 
         ~CQGConditionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18909,18 +18942,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCondition this[int index_]
+        public CQGCondition this[Int32 index_]
         {
             get
             {
@@ -18933,7 +18966,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCondition this[string id_]
+        public CQGCondition this[String id_]
         {
             get
             {
@@ -18950,7 +18983,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGCondition get_ItemById(string id_)
+        public virtual CQGCondition get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -18987,6 +19020,7 @@ namespace FakeCQG
 
         ~CQGConstantVolumeBarClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -18994,133 +19028,133 @@ namespace FakeCQG
 
         #region Properties
 
-        public int ActualVolume
+        public Int32 ActualVolume
         {
             get
             {
                 string name = "ActualVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -19137,45 +19171,45 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -19206,6 +19240,7 @@ namespace FakeCQG
 
         ~CQGConstantVolumeBarsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19213,12 +19248,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -19235,18 +19270,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGConstantVolumeBar this[int index_]
+        public CQGConstantVolumeBar this[Int32 index_]
         {
             get
             {
@@ -19305,13 +19340,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -19326,11 +19361,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -19341,7 +19376,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -19369,6 +19404,7 @@ namespace FakeCQG
 
         ~CQGConstantVolumeBarsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19376,18 +19412,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGConstantVolumeBars this[int index_]
+        public CQGConstantVolumeBars this[Int32 index_]
         {
             get
             {
@@ -19400,7 +19436,7 @@ namespace FakeCQG
 
         }
 
-        public CQGConstantVolumeBars this[string id_]
+        public CQGConstantVolumeBars this[String id_]
         {
             get
             {
@@ -19417,7 +19453,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGConstantVolumeBars get_ItemById(string id_)
+        public virtual CQGConstantVolumeBars get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -19454,6 +19490,7 @@ namespace FakeCQG
 
         ~CQGConstantVolumeBarsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19477,12 +19514,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -19493,12 +19530,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -19509,12 +19546,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -19525,12 +19562,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeFlatTicks
+        public Boolean IncludeFlatTicks
         {
             get
             {
                 string name = "IncludeFlatTicks";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -19541,12 +19578,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -19557,12 +19594,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -19573,12 +19610,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -19605,12 +19642,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -19637,12 +19674,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -19653,12 +19690,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -19669,12 +19706,12 @@ namespace FakeCQG
             }
         }
 
-        public int VolumeLevel
+        public Int32 VolumeLevel
         {
             get
             {
                 string name = "VolumeLevel";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -19726,6 +19763,7 @@ namespace FakeCQG
 
         ~CQGCurrencyRateClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19733,12 +19771,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string BaseCurrencyName
+        public String BaseCurrencyName
         {
             get
             {
                 string name = "BaseCurrencyName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -19756,34 +19794,34 @@ namespace FakeCQG
 
         }
 
-        public string CurrencyName
+        public String CurrencyName
         {
             get
             {
                 string name = "CurrencyName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int FcmID
+        public Int32 FcmID
         {
             get
             {
                 string name = "FcmID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Rate
+        public Double Rate
         {
             get
             {
                 string name = "Rate";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -19836,6 +19874,7 @@ namespace FakeCQG
 
         ~CQGCurrencyRatesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19843,18 +19882,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCurrencyRate this[int fcm_id, string currency_, string base_currency = ""]
+        public CQGCurrencyRate this[Int32 fcm_id, String currency_, String base_currency = ""]
         {
             get
             {
@@ -19899,6 +19938,7 @@ namespace FakeCQG
 
         ~CQGCurveDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19906,12 +19946,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -19942,6 +19982,7 @@ namespace FakeCQG
 
         ~CQGCurveDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -19949,18 +19990,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCurveDefinition this[int index_]
+        public CQGCurveDefinition this[Int32 index_]
         {
             get
             {
@@ -19973,7 +20014,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCurveDefinition this[string curve_name]
+        public CQGCurveDefinition this[String curve_name]
         {
             get
             {
@@ -19990,7 +20031,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGCurveDefinition get_ItemByName(string curve_name)
+        public virtual CQGCurveDefinition get_ItemByName(String curve_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { curve_name };
@@ -20027,6 +20068,7 @@ namespace FakeCQG
 
         ~CQGCurveHeadersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20034,24 +20076,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -20089,6 +20131,7 @@ namespace FakeCQG
 
         ~CQGCurvesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20096,24 +20139,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double this[object key_]
+        public Double this[Object key_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<double>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Double>(dcObjKey, name, args);
                 return value;
             }
 
@@ -20130,12 +20173,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -20173,6 +20216,7 @@ namespace FakeCQG
 
         ~CQGCustomStudiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20180,18 +20224,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCustomStudy this[int index_]
+        public CQGCustomStudy this[Int32 index_]
         {
             get
             {
@@ -20204,7 +20248,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCustomStudy this[string id_]
+        public CQGCustomStudy this[String id_]
         {
             get
             {
@@ -20221,7 +20265,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGCustomStudy get_ItemById(string id_)
+        public virtual CQGCustomStudy get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -20258,6 +20302,7 @@ namespace FakeCQG
 
         ~CQGCustomStudyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20265,12 +20310,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -20311,18 +20356,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCurves this[int index_]
+        public CQGCurves this[Int32 index_]
         {
             get
             {
@@ -20381,13 +20426,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -20402,11 +20447,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -20417,15 +20462,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -20453,6 +20498,7 @@ namespace FakeCQG
 
         ~CQGCustomStudyDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20460,12 +20506,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -20483,12 +20529,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -20531,6 +20577,7 @@ namespace FakeCQG
 
         ~CQGCustomStudyDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20538,18 +20585,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGCustomStudyDefinition this[int index_]
+        public CQGCustomStudyDefinition this[Int32 index_]
         {
             get
             {
@@ -20562,7 +20609,7 @@ namespace FakeCQG
 
         }
 
-        public CQGCustomStudyDefinition this[string custom_study_abbreviation]
+        public CQGCustomStudyDefinition this[String custom_study_abbreviation]
         {
             get
             {
@@ -20579,7 +20626,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGCustomStudyDefinition get_ItemByAbbreviation(string custom_study_abbreviation)
+        public virtual CQGCustomStudyDefinition get_ItemByAbbreviation(String custom_study_abbreviation)
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { custom_study_abbreviation };
@@ -20588,7 +20635,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGCustomStudyDefinition get_ItemByName(string custom_study_name)
+        public virtual CQGCustomStudyDefinition get_ItemByName(String custom_study_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { custom_study_name };
@@ -20625,6 +20672,7 @@ namespace FakeCQG
 
         ~CQGCustomStudyRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20632,12 +20680,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -20664,12 +20712,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -20692,12 +20740,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -20724,12 +20772,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -20740,12 +20788,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -20756,13 +20804,13 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -20773,12 +20821,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -20789,12 +20837,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -20805,12 +20853,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -20837,12 +20885,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -20869,12 +20917,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -20889,30 +20937,30 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void IncludeCurve(object curve_key)
+        public virtual void IncludeCurve(Object curve_key)
         {
             string name = "IncludeCurve";
             var args = new object[] { curve_key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual bool IsCurveIncluded(object curve_key)
+        public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             string name = "IsCurveIncluded";
             var args = new object[] { curve_key };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
@@ -20940,6 +20988,7 @@ namespace FakeCQG
 
         ~CQGDataSourceClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -20947,23 +20996,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -21016,6 +21065,7 @@ namespace FakeCQG
 
         ~CQGDataSourcesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21023,18 +21073,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGDataSource this[int index_]
+        public CQGDataSource this[Int32 index_]
         {
             get
             {
@@ -21047,7 +21097,7 @@ namespace FakeCQG
 
         }
 
-        public CQGDataSource this[string data_source_abbreviation]
+        public CQGDataSource this[String data_source_abbreviation]
         {
             get
             {
@@ -21064,7 +21114,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGDataSource get_ItemByAbbreviation(string data_source_abbreviation)
+        public virtual CQGDataSource get_ItemByAbbreviation(String data_source_abbreviation)
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { data_source_abbreviation };
@@ -21101,6 +21151,7 @@ namespace FakeCQG
 
         ~CQGDataSourceSymbolClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21108,23 +21159,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -21166,6 +21217,7 @@ namespace FakeCQG
 
         ~CQGDataSourceSymbolsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21173,29 +21225,29 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string DataSourceAbbreviation
+        public String DataSourceAbbreviation
         {
             get
             {
                 string name = "DataSourceAbbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGDataSourceSymbol this[int index_]
+        public CQGDataSourceSymbol this[Int32 index_]
         {
             get
             {
@@ -21247,6 +21299,7 @@ namespace FakeCQG
 
         ~CQGDirectEventsAccessorClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21376,7 +21429,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("DataError");
-                    DataError.Invoke((object)args[0], (string)args[1]);
+                    DataError.Invoke((Object)args[0], (String)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -21487,7 +21540,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("CommodityInstrumentsResolved");
-                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
+                    CommodityInstrumentsResolved.Invoke((String)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
                 }
                 catch (Exception)
                 { }
@@ -21509,7 +21562,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("IncorrectSymbol");
-                    IncorrectSymbol.Invoke((string)args[0]);
+                    IncorrectSymbol.Invoke((String)args[0]);
                 }
                 catch (Exception)
                 { }
@@ -21619,7 +21672,7 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.CheckWhetherEventHappened("InstrumentSubscribed");
-                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)args[1]);
+                    InstrumentSubscribed.Invoke((String)args[0], (CQGInstrument)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -21648,6 +21701,7 @@ namespace FakeCQG
 
         ~CQGDOMQuotesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21655,18 +21709,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGQuote this[int index_]
+        public CQGQuote this[Int32 index_]
         {
             get
             {
@@ -21679,7 +21733,7 @@ namespace FakeCQG
 
         }
 
-        public CQGQuote this[double price_, bool round_to_better = true]
+        public CQGQuote this[Double price_, Boolean round_to_better = true]
         {
             get
             {
@@ -21696,7 +21750,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGQuote get_ItemByPrice(double price_, bool round_to_better = true)
+        public virtual CQGQuote get_ItemByPrice(Double price_, Boolean round_to_better = true)
         {
             string name = "get_ItemByPrice";
             var args = new object[] { price_, round_to_better };
@@ -21733,6 +21787,7 @@ namespace FakeCQG
 
         ~CQGEnvironmentClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21752,34 +21807,34 @@ namespace FakeCQG
 
         }
 
-        public string CELVersion
+        public String CELVersion
         {
             get
             {
                 string name = "CELVersion";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int CQGSerialNumber
+        public Int32 CQGSerialNumber
         {
             get
             {
                 string name = "CQGSerialNumber";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string CQGVersion
+        public String CQGVersion
         {
             get
             {
                 string name = "CQGVersion";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -21807,12 +21862,12 @@ namespace FakeCQG
 
         }
 
-        public string GWLogonName
+        public String GWLogonName
         {
             get
             {
                 string name = "GWLogonName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -21852,23 +21907,23 @@ namespace FakeCQG
 
         }
 
-        public int MessagesPending
+        public Int32 MessagesPending
         {
             get
             {
                 string name = "MessagesPending";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int OrdersPending
+        public Int32 OrdersPending
         {
             get
             {
                 string name = "OrdersPending";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -21911,6 +21966,7 @@ namespace FakeCQG
 
         ~CQGErrorClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21918,34 +21974,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Code
+        public Int32 Code
         {
             get
             {
                 string name = "Code";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object Owner
+        public Object Owner
         {
             get
             {
                 string name = "Owner";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -21976,6 +22032,7 @@ namespace FakeCQG
 
         ~CQGExchangesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -21983,35 +22040,35 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -22049,6 +22106,7 @@ namespace FakeCQG
 
         ~CQGExecutionPatternClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22068,12 +22126,12 @@ namespace FakeCQG
 
         }
 
-        public string PatternString
+        public String PatternString
         {
             get
             {
                 string name = "PatternString";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -22104,6 +22162,7 @@ namespace FakeCQG
 
         ~CQGExecutionPatternParameterClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22111,12 +22170,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -22145,12 +22204,12 @@ namespace FakeCQG
 
         }
 
-        public string Value
+        public String Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -22186,6 +22245,7 @@ namespace FakeCQG
 
         ~CQGExecutionPatternParametersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22193,18 +22253,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGExecutionPatternParameter this[object index_]
+        public CQGExecutionPatternParameter this[Object index_]
         {
             get
             {
@@ -22221,7 +22281,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGExecutionPatternParameter Add(string name_, eExecutionPatternParameterType type_, string value_ = "")
+        public virtual CQGExecutionPatternParameter Add(String name_, eExecutionPatternParameterType type_, String value_ = "")
         {
             string name = "Add";
             var args = new object[] { name_, type_, value_ };
@@ -22237,7 +22297,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void Remove(object index_)
+        public virtual void Remove(Object index_)
         {
             string name = "Remove";
             var args = new object[] { index_ };
@@ -22265,6 +22325,7 @@ namespace FakeCQG
 
         ~CQGExpressionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22272,12 +22333,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22294,18 +22355,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGExpressionOutputs this[int index_]
+        public CQGExpressionOutputs this[Int32 index_]
         {
             get
             {
@@ -22376,13 +22437,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -22397,11 +22458,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -22412,15 +22473,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -22448,6 +22509,7 @@ namespace FakeCQG
 
         ~CQGExpressionOutputHeadersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22455,24 +22517,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -22510,6 +22572,7 @@ namespace FakeCQG
 
         ~CQGExpressionOutputsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22517,24 +22580,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double this[object key_]
+        public Double this[Object key_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<double>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Double>(dcObjKey, name, args);
                 return value;
             }
 
@@ -22551,12 +22614,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22594,6 +22657,7 @@ namespace FakeCQG
 
         ~CQGExpressionRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22617,12 +22681,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22633,12 +22697,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -22665,12 +22729,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -22681,12 +22745,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22697,12 +22761,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -22713,12 +22777,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -22729,12 +22793,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22761,12 +22825,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -22777,24 +22841,24 @@ namespace FakeCQG
             }
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "SubExpression";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
         }
 
-        public int SubExpressionCount
+        public Int32 SubExpressionCount
         {
             get
             {
                 string name = "SubExpressionCount";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -22816,12 +22880,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -22836,26 +22900,26 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void AddSubExpression(string sub_expression, string alias_ = "")
+        public virtual void AddSubExpression(String sub_expression, String alias_ = "")
         {
             string name = "AddSubExpression";
             var args = new object[] { sub_expression, alias_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual string get_SubExpression(int index_)
+        public virtual String get_SubExpression(Int32 index_)
         {
             string name = "get_SubExpression";
             var args = new object[] { index_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual string get_SubExpressionAlias(int index_)
+        public virtual String get_SubExpressionAlias(Int32 index_)
         {
             string name = "get_SubExpressionAlias";
             var args = new object[] { index_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
@@ -22880,6 +22944,7 @@ namespace FakeCQG
 
         ~CQGExpressionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22887,18 +22952,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGExpression this[int index_]
+        public CQGExpression this[Int32 index_]
         {
             get
             {
@@ -22911,7 +22976,7 @@ namespace FakeCQG
 
         }
 
-        public CQGExpression this[string id_]
+        public CQGExpression this[String id_]
         {
             get
             {
@@ -22928,7 +22993,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGExpression get_ItemById(string id_)
+        public virtual CQGExpression get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -22965,6 +23030,7 @@ namespace FakeCQG
 
         ~CQGFillClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -22972,35 +23038,35 @@ namespace FakeCQG
 
         #region Properties
 
-        public int this[int leg_]
+        public Int32 this[Int32 leg_]
         {
             get
             {
                 string name = "GWTradesCount";
                 var args = new object[] { leg_ };
-                var value = CQG.GetProperty<int>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name, args);
                 return value;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int LegCount
+        public Int32 LegCount
         {
             get
             {
                 string name = "LegCount";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -23018,12 +23084,12 @@ namespace FakeCQG
 
         }
 
-        public string RefFillId
+        public String RefFillId
         {
             get
             {
                 string name = "RefFillId";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -23066,31 +23132,31 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual bool get_Aggressive(int leg_ = 0)
+        public virtual Boolean get_Aggressive(Int32 leg_ = 0)
         {
             string name = "get_Aggressive";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual string get_Currency(int leg_ = 0)
+        public virtual String get_Currency(Int32 leg_ = 0)
         {
             string name = "get_Currency";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual string get_DisplayPrice(int leg_ = 0)
+        public virtual String get_DisplayPrice(Int32 leg_ = 0)
         {
             string name = "get_DisplayPrice";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual DateTime get_ExchangeTradeDate(int leg_ = 0)
+        public virtual DateTime get_ExchangeTradeDate(Int32 leg_ = 0)
         {
             string name = "get_ExchangeTradeDate";
             var args = new object[] { leg_ };
@@ -23098,15 +23164,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual string get_GWTradeId(int leg_ = 0)
+        public virtual String get_GWTradeId(Int32 leg_ = 0)
         {
             string name = "get_GWTradeId";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual CQGGWTrades get_GWTrades(int leg_ = 0)
+        public virtual CQGGWTrades get_GWTrades(Int32 leg_ = 0)
         {
             string name = "get_GWTrades";
             var args = new object[] { leg_ };
@@ -23115,39 +23181,39 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int get_GWTradesCount(int leg_)
+        public virtual Int32 get_GWTradesCount(Int32 leg_)
         {
             string name = "get_GWTradesCount";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual string get_InstrumentName(int leg_ = 0)
+        public virtual String get_InstrumentName(Int32 leg_ = 0)
         {
             string name = "get_InstrumentName";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double get_Price(int leg_ = 0)
+        public virtual Double get_Price(Int32 leg_ = 0)
         {
             string name = "get_Price";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual int get_Quantity(int leg_ = 0)
+        public virtual Int32 get_Quantity(Int32 leg_ = 0)
         {
             string name = "get_Quantity";
             var args = new object[] { leg_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual eOrderSide get_Side(int leg_ = 0)
+        public virtual eOrderSide get_Side(Int32 leg_ = 0)
         {
             string name = "get_Side";
             var args = new object[] { leg_ };
@@ -23155,7 +23221,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual DateTime get_StatementDate(int leg_ = 0)
+        public virtual DateTime get_StatementDate(Int32 leg_ = 0)
         {
             string name = "get_StatementDate";
             var args = new object[] { leg_ };
@@ -23184,6 +23250,7 @@ namespace FakeCQG
 
         ~CQGFillsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23191,18 +23258,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGFill this[string fill_id]
+        public CQGFill this[String fill_id]
         {
             get
             {
@@ -23215,7 +23282,7 @@ namespace FakeCQG
 
         }
 
-        public CQGFill this[int index_]
+        public CQGFill this[Int32 index_]
         {
             get
             {
@@ -23232,7 +23299,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGFill get_ItemByIndex(int index_)
+        public virtual CQGFill get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -23269,6 +23336,7 @@ namespace FakeCQG
 
         ~CQGGWTradeClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23276,34 +23344,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool Aggressive
+        public Boolean Aggressive
         {
             get
             {
                 string name = "Aggressive";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Currency
+        public String Currency
         {
             get
             {
                 string name = "Currency";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string DisplayPrice
+        public String DisplayPrice
         {
             get
             {
                 string name = "DisplayPrice";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -23332,56 +23400,56 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Leg
+        public Int32 Leg
         {
             get
             {
                 string name = "Leg";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -23434,6 +23502,7 @@ namespace FakeCQG
 
         ~CQGGWTradesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23441,18 +23510,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGGWTrade this[string trade_gw_id]
+        public CQGGWTrade this[String trade_gw_id]
         {
             get
             {
@@ -23465,7 +23534,7 @@ namespace FakeCQG
 
         }
 
-        public CQGGWTrade this[int index_]
+        public CQGGWTrade this[Int32 index_]
         {
             get
             {
@@ -23482,7 +23551,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGGWTrade get_ItemByIndex(int index_)
+        public virtual CQGGWTrade get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -23519,6 +23588,7 @@ namespace FakeCQG
 
         ~CQGHistoricalSessionsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23558,12 +23628,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -23615,6 +23685,7 @@ namespace FakeCQG
 
         ~CQGHolidayClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23633,12 +23704,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsDaily
+        public Boolean IsDaily
         {
             get
             {
                 string name = "IsDaily";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -23680,6 +23751,7 @@ namespace FakeCQG
 
         ~CQGHolidaysClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23687,18 +23759,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGHoliday this[int index_]
+        public CQGHoliday this[Int32 index_]
         {
             get
             {
@@ -23755,6 +23827,7 @@ namespace FakeCQG
 
         ~CQGInstrumentClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -23814,34 +23887,34 @@ namespace FakeCQG
 
         }
 
-        public string Commodity
+        public String Commodity
         {
             get
             {
                 string name = "Commodity";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Country
+        public String Country
         {
             get
             {
                 string name = "Country";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Currency
+        public String Currency
         {
             get
             {
                 string name = "Currency";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -23863,12 +23936,12 @@ namespace FakeCQG
             }
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -23898,12 +23971,12 @@ namespace FakeCQG
 
         }
 
-        public int DOMBookLimit
+        public Int32 DOMBookLimit
         {
             get
             {
                 string name = "DOMBookLimit";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -23914,12 +23987,12 @@ namespace FakeCQG
             }
         }
 
-        public bool DOMStatus
+        public Boolean DOMStatus
         {
             get
             {
                 string name = "DOMStatus";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -23930,34 +24003,34 @@ namespace FakeCQG
             }
         }
 
-        public int DTE
+        public Int32 DTE
         {
             get
             {
                 string name = "DTE";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string ExchangeAbbreviation
+        public String ExchangeAbbreviation
         {
             get
             {
                 string name = "ExchangeAbbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ExchangeID
+        public Int32 ExchangeID
         {
             get
             {
                 string name = "ExchangeID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -23974,34 +24047,34 @@ namespace FakeCQG
 
         }
 
-        public string FullName
+        public String FullName
         {
             get
             {
                 string name = "FullName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double InitialMargin
+        public Double InitialMargin
         {
             get
             {
                 string name = "InitialMargin";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int InstrumentID
+        public Int32 InstrumentID
         {
             get
             {
                 string name = "InstrumentID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -24018,89 +24091,89 @@ namespace FakeCQG
 
         }
 
-        public bool IsDownTick
+        public Boolean IsDownTick
         {
             get
             {
                 string name = "IsDownTick";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsFastMarket
+        public Boolean IsFastMarket
         {
             get
             {
                 string name = "IsFastMarket";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsUpTick
+        public Boolean IsUpTick
         {
             get
             {
                 string name = "IsUpTick";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaintenanceMargin
+        public Double MaintenanceMargin
         {
             get
             {
                 string name = "MaintenanceMargin";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Month
+        public Int32 Month
         {
             get
             {
                 string name = "Month";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string MonthChar
+        public String MonthChar
         {
             get
             {
                 string name = "MonthChar";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double NetChange
+        public Double NetChange
         {
             get
             {
                 string name = "NetChange";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string PreferredSessionsName
+        public String PreferredSessionsName
         {
             get
             {
                 string name = "PreferredSessionsName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -24152,12 +24225,12 @@ namespace FakeCQG
 
         }
 
-        public short Scale
+        public Int16 Scale
         {
             get
             {
                 string name = "Scale";
-                var value = CQG.GetProperty<short>(dcObjKey, name);
+                var value = CQG.GetProperty<Int16>(dcObjKey, name);
                 return value;
             }
 
@@ -24174,23 +24247,23 @@ namespace FakeCQG
 
         }
 
-        public int SessionMask
+        public Int32 SessionMask
         {
             get
             {
                 string name = "SessionMask";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int SessionNumber
+        public Int32 SessionNumber
         {
             get
             {
                 string name = "SessionNumber";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -24208,24 +24281,24 @@ namespace FakeCQG
 
         }
 
-        public int Strike
+        public Int32 Strike
         {
             get
             {
                 string name = "Strike";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object this[string tagName]
+        public Object this[String tagName]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tagName };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -24236,45 +24309,45 @@ namespace FakeCQG
             }
         }
 
-        public double TickSize
+        public Double TickSize
         {
             get
             {
                 string name = "TickSize";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TickSizeFractionDenominator
+        public Int32 TickSizeFractionDenominator
         {
             get
             {
                 string name = "TickSizeFractionDenominator";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TickSizeFractionNumerator
+        public Int32 TickSizeFractionNumerator
         {
             get
             {
                 string name = "TickSizeFractionNumerator";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TickValue
+        public Double TickValue
         {
             get
             {
                 string name = "TickValue";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -24291,12 +24364,12 @@ namespace FakeCQG
 
         }
 
-        public double TodayCTotalVolume
+        public Double TodayCTotalVolume
         {
             get
             {
                 string name = "TodayCTotalVolume";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -24326,56 +24399,56 @@ namespace FakeCQG
 
         }
 
-        public string UnderlyingInstrumentName
+        public String UnderlyingInstrumentName
         {
             get
             {
                 string name = "UnderlyingInstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double YCOI
+        public Double YCOI
         {
             get
             {
                 string name = "YCOI";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Year
+        public Int32 Year
         {
             get
             {
                 string name = "Year";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string YearString
+        public String YearString
         {
             get
             {
                 string name = "YearString";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double YesterdayCTotalVolume
+        public Double YesterdayCTotalVolume
         {
             get
             {
                 string name = "YesterdayCTotalVolume";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -24385,58 +24458,58 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual double FromDisplayPrice(string display_price)
+        public virtual Double FromDisplayPrice(String display_price)
         {
             string name = "FromDisplayPrice";
             var args = new object[] { display_price };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual object get_Tag(string tagName)
+        public virtual Object get_Tag(String tagName)
         {
             string name = "get_Tag";
             var args = new object[] { tagName };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double GetNearestTradeablePrice(double price_)
+        public virtual Double GetNearestTradeablePrice(Double price_)
         {
             string name = "GetNearestTradeablePrice";
             var args = new object[] { price_ };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double GetTickSizeFor(double Price)
+        public virtual Double GetTickSizeFor(Double Price)
         {
             string name = "GetTickSizeFor";
             var args = new object[] { Price };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual double GetTickValueFor(double Price)
+        public virtual Double GetTickValueFor(Double Price)
         {
             string name = "GetTickValueFor";
             var args = new object[] { Price };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tagName, object pVal)
+        public virtual void set_Tag(String tagName, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tagName, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual string ToDisplayPrice(double correct_price)
+        public virtual String ToDisplayPrice(Double correct_price)
         {
             string name = "ToDisplayPrice";
             var args = new object[] { correct_price };
-            var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            var result = CQG.CallMethod<String>(dcObjKey, name, args);
             return result;
         }
 
@@ -24461,6 +24534,7 @@ namespace FakeCQG
 
         ~CQGInstrumentPropertiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24468,12 +24542,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -24524,6 +24598,7 @@ namespace FakeCQG
 
         ~CQGInstrumentPropertyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24543,12 +24618,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -24587,12 +24662,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -24623,6 +24698,7 @@ namespace FakeCQG
 
         ~CQGInstrumentsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24630,18 +24706,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGInstrument this[object index_]
+        public CQGInstrument this[Object index_]
         {
             get
             {
@@ -24686,6 +24762,7 @@ namespace FakeCQG
 
         ~CQGInstrumentsGroupClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24693,12 +24770,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -24753,6 +24830,7 @@ namespace FakeCQG
 
         ~CQGInstrumentsGroupRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24760,12 +24838,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Commodity
+        public String Commodity
         {
             get
             {
                 string name = "Commodity";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -24792,12 +24870,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -24808,12 +24886,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -24865,6 +24943,7 @@ namespace FakeCQG
 
         ~CQGInstrumentsGroupsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24872,18 +24951,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGInstrumentsGroup this[object index_]
+        public CQGInstrumentsGroup this[Object index_]
         {
             get
             {
@@ -24928,6 +25007,7 @@ namespace FakeCQG
 
         ~CQGInstrumentSubscriptionRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -24951,12 +25031,12 @@ namespace FakeCQG
             }
         }
 
-        public bool DOMStatus
+        public Boolean DOMStatus
         {
             get
             {
                 string name = "DOMStatus";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -24999,12 +25079,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -25040,6 +25120,7 @@ namespace FakeCQG
 
         ~CQGIntegerCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25047,24 +25128,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int this[int index_]
+        public Int32 this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<int>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name, args);
                 return value;
             }
 
@@ -25102,6 +25183,7 @@ namespace FakeCQG
 
         ~CQGLoggerClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25125,7 +25207,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual void Log(string content_, eLogSeverity severity_ = eLogSeverity.lsInfo)
+        public virtual void Log(String content_, eLogSeverity severity_ = eLogSeverity.lsInfo)
         {
             string name = "Log";
             var args = new object[] { content_, severity_ };
@@ -25153,6 +25235,7 @@ namespace FakeCQG
 
         ~CQGManualFillClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25160,67 +25243,67 @@ namespace FakeCQG
 
         #region Properties
 
-        public string DisplayPrice
+        public String DisplayPrice
         {
             get
             {
                 string name = "DisplayPrice";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Note
+        public String Note
         {
             get
             {
                 string name = "Note";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25248,12 +25331,12 @@ namespace FakeCQG
 
         }
 
-        public int TradeId
+        public Int32 TradeId
         {
             get
             {
                 string name = "TradeId";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25295,6 +25378,7 @@ namespace FakeCQG
 
         ~CQGManualFillRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25302,12 +25386,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25318,12 +25402,12 @@ namespace FakeCQG
             }
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -25334,12 +25418,12 @@ namespace FakeCQG
             }
         }
 
-        public string Note
+        public String Note
         {
             get
             {
                 string name = "Note";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -25350,12 +25434,12 @@ namespace FakeCQG
             }
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -25366,12 +25450,12 @@ namespace FakeCQG
             }
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25414,12 +25498,12 @@ namespace FakeCQG
             }
         }
 
-        public int TradeId
+        public Int32 TradeId
         {
             get
             {
                 string name = "TradeId";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25471,6 +25555,7 @@ namespace FakeCQG
 
         ~CQGManualFillsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25478,12 +25563,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25500,18 +25585,18 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGManualFill this[int trade_id]
+        public CQGManualFill this[Int32 trade_id]
         {
             get
             {
@@ -25528,7 +25613,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGManualFill get_ItemByIndex(int index_)
+        public virtual CQGManualFill get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -25565,6 +25650,7 @@ namespace FakeCQG
 
         ~CQGManualFillsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25572,18 +25658,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGManualFills this[int account_id]
+        public CQGManualFills this[Int32 account_id]
         {
             get
             {
@@ -25600,7 +25686,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGManualFills get_ItemByIndex(int index_)
+        public virtual CQGManualFills get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -25637,6 +25723,7 @@ namespace FakeCQG
 
         ~CQGModifiedPropertiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25644,12 +25731,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -25668,7 +25755,7 @@ namespace FakeCQG
 
         }
 
-        public CQGModifiedProperty this[int index_]
+        public CQGModifiedProperty this[Int32 index_]
         {
             get
             {
@@ -25685,7 +25772,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGModifiedProperty get_ItemByIndex(int index_)
+        public virtual CQGModifiedProperty get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -25722,6 +25809,7 @@ namespace FakeCQG
 
         ~CQGModifiedPropertyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25729,45 +25817,45 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object NewValue
+        public Object NewValue
         {
             get
             {
                 string name = "NewValue";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object PreviousValue
+        public Object PreviousValue
         {
             get
             {
                 string name = "PreviousValue";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -25809,6 +25897,7 @@ namespace FakeCQG
 
         ~CQGOrderActionRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25833,12 +25922,12 @@ namespace FakeCQG
             }
         }
 
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var value = CQG.GetProperty<uint>(dcObjKey, name);
+                var value = CQG.GetProperty<UInt32>(dcObjKey, name);
                 return value;
             }
 
@@ -25849,12 +25938,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -25865,12 +25954,12 @@ namespace FakeCQG
             }
         }
 
-        public bool FromAllTraders
+        public Boolean FromAllTraders
         {
             get
             {
                 string name = "FromAllTraders";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -25914,12 +26003,12 @@ namespace FakeCQG
             }
         }
 
-        public bool Parked
+        public Boolean Parked
         {
             get
             {
                 string name = "Parked";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -25955,6 +26044,7 @@ namespace FakeCQG
 
         ~CQGOrderChainClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -25962,12 +26052,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var value = CQG.GetProperty<uint>(dcObjKey, name);
+                var value = CQG.GetProperty<UInt32>(dcObjKey, name);
                 return value;
             }
 
@@ -25978,12 +26068,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -25994,12 +26084,12 @@ namespace FakeCQG
             }
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -26037,6 +26127,7 @@ namespace FakeCQG
 
         ~CQGOrderClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -26061,12 +26152,12 @@ namespace FakeCQG
             }
         }
 
-        public uint AlgorithmID
+        public UInt32 AlgorithmID
         {
             get
             {
                 string name = "AlgorithmID";
-                var value = CQG.GetProperty<uint>(dcObjKey, name);
+                var value = CQG.GetProperty<UInt32>(dcObjKey, name);
                 return value;
             }
 
@@ -26077,12 +26168,12 @@ namespace FakeCQG
             }
         }
 
-        public string AlgorithmStringID
+        public String AlgorithmStringID
         {
             get
             {
                 string name = "AlgorithmStringID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26093,34 +26184,34 @@ namespace FakeCQG
             }
         }
 
-        public bool CanBeCanceled
+        public Boolean CanBeCanceled
         {
             get
             {
                 string name = "CanBeCanceled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool CanBeModified
+        public Boolean CanBeModified
         {
             get
             {
                 string name = "CanBeModified";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool CanBeReplaced
+        public Boolean CanBeReplaced
         {
             get
             {
                 string name = "CanBeReplaced";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -26142,12 +26233,12 @@ namespace FakeCQG
             }
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26174,12 +26265,12 @@ namespace FakeCQG
             }
         }
 
-        public int FilledQuantity
+        public Int32 FilledQuantity
         {
             get
             {
                 string name = "FilledQuantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -26197,23 +26288,23 @@ namespace FakeCQG
 
         }
 
-        public string GUID
+        public String GUID
         {
             get
             {
                 string name = "GUID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string GWOrderID
+        public String GWOrderID
         {
             get
             {
                 string name = "GWOrderID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26247,34 +26338,34 @@ namespace FakeCQG
             }
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsExternal
+        public Boolean IsExternal
         {
             get
             {
                 string name = "IsExternal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsFinal
+        public Boolean IsFinal
         {
             get
             {
                 string name = "IsFinal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -26303,12 +26394,12 @@ namespace FakeCQG
 
         }
 
-        public double LimitPrice
+        public Double LimitPrice
         {
             get
             {
                 string name = "LimitPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -26319,12 +26410,12 @@ namespace FakeCQG
             }
         }
 
-        public bool OrderCheckMark
+        public Boolean OrderCheckMark
         {
             get
             {
                 string name = "OrderCheckMark";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -26335,12 +26426,12 @@ namespace FakeCQG
             }
         }
 
-        public string OriginalOrderID
+        public String OriginalOrderID
         {
             get
             {
                 string name = "OriginalOrderID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26369,12 +26460,12 @@ namespace FakeCQG
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -26385,12 +26476,12 @@ namespace FakeCQG
             }
         }
 
-        public int RemainingQuantity
+        public Int32 RemainingQuantity
         {
             get
             {
                 string name = "RemainingQuantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -26434,12 +26525,12 @@ namespace FakeCQG
 
         }
 
-        public double StopPrice
+        public Double StopPrice
         {
             get
             {
                 string name = "StopPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -26450,13 +26541,13 @@ namespace FakeCQG
             }
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -26512,12 +26603,12 @@ namespace FakeCQG
 
         }
 
-        public string UEName
+        public String UEName
         {
             get
             {
                 string name = "UEName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26539,11 +26630,11 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -26574,7 +26665,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -26602,6 +26693,7 @@ namespace FakeCQG
 
         ~CQGOrderModifyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -26646,6 +26738,7 @@ namespace FakeCQG
 
         ~CQGOrderPropertiesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -26653,12 +26746,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -26709,6 +26802,7 @@ namespace FakeCQG
 
         ~CQGOrderPropertyClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -26716,34 +26810,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool CanBeSet
+        public Boolean CanBeSet
         {
             get
             {
                 string name = "CanBeSet";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Description
+        public String Description
         {
             get
             {
                 string name = "Description";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -26783,12 +26877,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -26824,6 +26918,7 @@ namespace FakeCQG
 
         ~CQGOrdersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -26831,18 +26926,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGOrder this[string order_id]
+        public CQGOrder this[String order_id]
         {
             get
             {
@@ -26865,7 +26960,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual CQGOrder get_ItemByGuid(string order_guid)
+        public virtual CQGOrder get_ItemByGuid(String order_guid)
         {
             string name = "get_ItemByGuid";
             var args = new object[] { order_guid };
@@ -26881,7 +26976,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrders SelectByInstrumentName(string instrument_name)
+        public virtual CQGOrders SelectByInstrumentName(String instrument_name)
         {
             string name = "SelectByInstrumentName";
             var args = new object[] { instrument_name };
@@ -26908,7 +27003,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrders SelectByProperty(eOrderProperty property_type, object property_value)
+        public virtual CQGOrders SelectByProperty(eOrderProperty property_type, Object property_value)
         {
             string name = "SelectByProperty";
             var args = new object[] { property_type, property_value };
@@ -26926,7 +27021,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGOrders SelectByTag(string tag_name, object tag_value = null)
+        public virtual CQGOrders SelectByTag(String tag_name, Object tag_value = null)
         {
             string name = "SelectByTag";
             var args = new object[] { tag_name, tag_value };
@@ -26956,6 +27051,7 @@ namespace FakeCQG
 
         ~CQGOrdersQueryClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27023,12 +27119,12 @@ namespace FakeCQG
 
         }
 
-        public int QueryID
+        public Int32 QueryID
         {
             get
             {
                 string name = "QueryID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27098,6 +27194,7 @@ namespace FakeCQG
 
         ~CQGOrderStatisticsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27105,19 +27202,19 @@ namespace FakeCQG
 
         #region Properties
 
-        public object this[string i_GUID]
+        public Object this[String i_GUID]
         {
             get
             {
                 string name = "StatisticsOnReceive";
                 var args = new object[] { i_GUID };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
         }
 
-        public bool Switch
+        public Boolean Switch
         {
             set
             {
@@ -27130,19 +27227,19 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_StatisticsOnReceive(string i_GUID)
+        public virtual Object get_StatisticsOnReceive(String i_GUID)
         {
             string name = "get_StatisticsOnReceive";
             var args = new object[] { i_GUID };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual object get_StatisticsOnSend(string i_GUID)
+        public virtual Object get_StatisticsOnSend(String i_GUID)
         {
             string name = "get_StatisticsOnSend";
             var args = new object[] { i_GUID };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -27167,6 +27264,7 @@ namespace FakeCQG
 
         ~CQGParameterDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27186,34 +27284,34 @@ namespace FakeCQG
 
         }
 
-        public string Comment
+        public String Comment
         {
             get
             {
                 string name = "Comment";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public object DefaultValue
+        public Object DefaultValue
         {
             get
             {
                 string name = "DefaultValue";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -27255,6 +27353,7 @@ namespace FakeCQG
 
         ~CQGParameterDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27262,18 +27361,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGParameterDefinition this[int index_]
+        public CQGParameterDefinition this[Int32 index_]
         {
             get
             {
@@ -27286,7 +27385,7 @@ namespace FakeCQG
 
         }
 
-        public CQGParameterDefinition this[string parameter_name]
+        public CQGParameterDefinition this[String parameter_name]
         {
             get
             {
@@ -27303,7 +27402,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGParameterDefinition get_ItemByName(string parameter_name)
+        public virtual CQGParameterDefinition get_ItemByName(String parameter_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { parameter_name };
@@ -27340,6 +27439,7 @@ namespace FakeCQG
 
         ~CQGPointAndFigureBarClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27347,56 +27447,56 @@ namespace FakeCQG
 
         #region Properties
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double PFHigh
+        public Double PFHigh
         {
             get
             {
                 string name = "PFHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double PFLow
+        public Double PFLow
         {
             get
             {
                 string name = "PFLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -27413,23 +27513,23 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool Up
+        public Boolean Up
         {
             get
             {
                 string name = "Up";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -27460,6 +27560,7 @@ namespace FakeCQG
 
         ~CQGPointAndFigureBarsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27467,12 +27568,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27489,18 +27590,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGPointAndFigureBar this[int index_]
+        public CQGPointAndFigureBar this[Int32 index_]
         {
             get
             {
@@ -27559,13 +27660,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -27580,11 +27681,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -27595,7 +27696,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -27623,6 +27724,7 @@ namespace FakeCQG
 
         ~CQGPointAndFigureBarsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27630,18 +27732,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGPointAndFigureBars this[int index_]
+        public CQGPointAndFigureBars this[Int32 index_]
         {
             get
             {
@@ -27654,7 +27756,7 @@ namespace FakeCQG
 
         }
 
-        public CQGPointAndFigureBars this[string id_]
+        public CQGPointAndFigureBars this[String id_]
         {
             get
             {
@@ -27671,7 +27773,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGPointAndFigureBars get_ItemById(string id_)
+        public virtual CQGPointAndFigureBars get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -27708,6 +27810,7 @@ namespace FakeCQG
 
         ~CQGPointAndFigureBarsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -27715,12 +27818,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int BoxSize
+        public Int32 BoxSize
         {
             get
             {
                 string name = "BoxSize";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27779,12 +27882,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27795,12 +27898,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -27811,12 +27914,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -27827,12 +27930,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -27843,12 +27946,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -27859,12 +27962,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27875,12 +27978,12 @@ namespace FakeCQG
             }
         }
 
-        public int Reversal
+        public Int32 Reversal
         {
             get
             {
                 string name = "Reversal";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -27907,12 +28010,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -27939,12 +28042,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -27955,12 +28058,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -27996,6 +28099,7 @@ namespace FakeCQG
 
         ~CQGPositionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28015,12 +28119,12 @@ namespace FakeCQG
 
         }
 
-        public double AveragePrice
+        public Double AveragePrice
         {
             get
             {
                 string name = "AveragePrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -28038,23 +28142,23 @@ namespace FakeCQG
 
         }
 
-        public string InstrumentName
+        public String InstrumentName
         {
             get
             {
                 string name = "InstrumentName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool ManualFillsInvolved
+        public Boolean ManualFillsInvolved
         {
             get
             {
                 string name = "ManualFillsInvolved";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -28072,12 +28176,12 @@ namespace FakeCQG
 
         }
 
-        public double MVO
+        public Double MVO
         {
             get
             {
                 string name = "MVO";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -28095,34 +28199,34 @@ namespace FakeCQG
 
         }
 
-        public double OTE
+        public Double OTE
         {
             get
             {
                 string name = "OTE";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double ProfitLoss
+        public Double ProfitLoss
         {
             get
             {
                 string name = "ProfitLoss";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28161,12 +28265,12 @@ namespace FakeCQG
 
         }
 
-        public double UPL
+        public Double UPL
         {
             get
             {
                 string name = "UPL";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -28197,6 +28301,7 @@ namespace FakeCQG
 
         ~CQGPositionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28204,18 +28309,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGPosition this[string instrument_name]
+        public CQGPosition this[String instrument_name]
         {
             get
             {
@@ -28228,7 +28333,7 @@ namespace FakeCQG
 
         }
 
-        public CQGPosition this[int index_]
+        public CQGPosition this[Int32 index_]
         {
             get
             {
@@ -28245,7 +28350,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGPosition get_ItemByIndex(int index_)
+        public virtual CQGPosition get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -28282,6 +28387,7 @@ namespace FakeCQG
 
         ~CQGPositionsStatementClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28289,12 +28395,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28348,6 +28454,7 @@ namespace FakeCQG
 
         ~CQGQFormulaDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28355,34 +28462,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Expression
+        public String Expression
         {
             get
             {
                 string name = "Expression";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Number
+        public Int32 Number
         {
             get
             {
                 string name = "Number";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28413,6 +28520,7 @@ namespace FakeCQG
 
         ~CQGQFormulaDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28420,18 +28528,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGQFormulaDefinition this[int index_]
+        public CQGQFormulaDefinition this[Int32 index_]
         {
             get
             {
@@ -28444,7 +28552,7 @@ namespace FakeCQG
 
         }
 
-        public CQGQFormulaDefinition this[string qformula_name]
+        public CQGQFormulaDefinition this[String qformula_name]
         {
             get
             {
@@ -28461,7 +28569,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGQFormulaDefinition get_ItemByName(string qformula_name)
+        public virtual CQGQFormulaDefinition get_ItemByName(String qformula_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { qformula_name };
@@ -28498,6 +28606,7 @@ namespace FakeCQG
 
         ~CQGQuoteClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28505,12 +28614,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool HasVolume
+        public Boolean HasVolume
         {
             get
             {
                 string name = "HasVolume";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -28528,34 +28637,34 @@ namespace FakeCQG
 
         }
 
-        public bool IsValid
+        public Boolean IsValid
         {
             get
             {
                 string name = "IsValid";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -28594,12 +28703,12 @@ namespace FakeCQG
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28630,6 +28739,7 @@ namespace FakeCQG
 
         ~CQGQuotesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28637,12 +28747,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28693,6 +28803,7 @@ namespace FakeCQG
 
         ~CQGRemoteOpenAPISessionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28700,34 +28811,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public string LogonName
+        public String LogonName
         {
             get
             {
                 string name = "LogonName";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ROMNumber
+        public Int32 ROMNumber
         {
             get
             {
                 string name = "ROMNumber";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string ServerAddress
+        public String ServerAddress
         {
             get
             {
                 string name = "ServerAddress";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -28758,6 +28869,7 @@ namespace FakeCQG
 
         ~CQGSessionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28776,34 +28888,34 @@ namespace FakeCQG
 
         }
 
-        public sbyte DayCloseOffset
+        public SByte DayCloseOffset
         {
             get
             {
                 string name = "DayCloseOffset";
-                var value = CQG.GetProperty<sbyte>(dcObjKey, name);
+                var value = CQG.GetProperty<SByte>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public sbyte DayStartOffset
+        public SByte DayStartOffset
         {
             get
             {
                 string name = "DayStartOffset";
-                var value = CQG.GetProperty<sbyte>(dcObjKey, name);
+                var value = CQG.GetProperty<SByte>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool DayStartsYesterday
+        public Boolean DayStartsYesterday
         {
             get
             {
                 string name = "DayStartsYesterday";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -28832,34 +28944,34 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public short Number
+        public Int16 Number
         {
             get
             {
                 string name = "Number";
-                var value = CQG.GetProperty<short>(dcObjKey, name);
+                var value = CQG.GetProperty<Int16>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool PrimaryFlag
+        public Boolean PrimaryFlag
         {
             get
             {
                 string name = "PrimaryFlag";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -28924,11 +29036,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
+        public virtual Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false)
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
@@ -28953,6 +29065,7 @@ namespace FakeCQG
 
         ~CQGSessionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -28960,12 +29073,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -28982,12 +29095,12 @@ namespace FakeCQG
 
         }
 
-        public int DescriptionNumber
+        public Int32 DescriptionNumber
         {
             get
             {
                 string name = "DescriptionNumber";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -29016,7 +29129,7 @@ namespace FakeCQG
 
         }
 
-        public CQGSession this[object index_]
+        public CQGSession this[Object index_]
         {
             get
             {
@@ -29029,12 +29142,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -29062,11 +29175,11 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
+        public virtual Boolean IsTimeInSession(DateTime date_time, Boolean use_session_valid_times = false)
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
@@ -29091,6 +29204,7 @@ namespace FakeCQG
 
         ~CQGSessionsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29098,18 +29212,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGSessions this[object index_]
+        public CQGSessions this[Object index_]
         {
             get
             {
@@ -29154,6 +29268,7 @@ namespace FakeCQG
 
         ~CQGStrategyDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29161,23 +29276,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string ClientId
+        public String ClientId
         {
             get
             {
                 string name = "ClientId";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -29195,12 +29310,12 @@ namespace FakeCQG
 
         }
 
-        public string RequestString
+        public String RequestString
         {
             get
             {
                 string name = "RequestString";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -29217,12 +29332,12 @@ namespace FakeCQG
 
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -29253,6 +29368,7 @@ namespace FakeCQG
 
         ~CQGStrategyDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29260,18 +29376,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGStrategyDefinition this[string id_]
+        public CQGStrategyDefinition this[String id_]
         {
             get
             {
@@ -29284,7 +29400,7 @@ namespace FakeCQG
 
         }
 
-        public CQGStrategyDefinition this[int index_]
+        public CQGStrategyDefinition this[Int32 index_]
         {
             get
             {
@@ -29301,7 +29417,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGStrategyDefinition get_ItemByIndex(int index_)
+        public virtual CQGStrategyDefinition get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -29338,6 +29454,7 @@ namespace FakeCQG
 
         ~CQGStrategyLegFillClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29345,12 +29462,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string ExecutionId
+        public String ExecutionId
         {
             get
             {
                 string name = "ExecutionId";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -29368,23 +29485,23 @@ namespace FakeCQG
 
         }
 
-        public string OriginalOrderID
+        public String OriginalOrderID
         {
             get
             {
                 string name = "OriginalOrderID";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -29415,6 +29532,7 @@ namespace FakeCQG
 
         ~CQGStrategyLegFillsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29422,18 +29540,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGStrategyLegFill this[int index_]
+        public CQGStrategyLegFill this[Int32 index_]
         {
             get
             {
@@ -29450,7 +29568,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGStrategyLegFill get_ItemByIndex(int index_)
+        public virtual CQGStrategyLegFill get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -29480,6 +29598,7 @@ namespace FakeCQG
 
         ~CQGStringCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29487,24 +29606,24 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string this[int index_]
+        public String this[Int32 index_]
         {
             get
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<string>(dcObjKey, name, args);
+                var value = CQG.GetProperty<String>(dcObjKey, name, args);
                 return value;
             }
 
@@ -29542,6 +29661,7 @@ namespace FakeCQG
 
         ~CQGSubMinuteBarClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29549,122 +29669,122 @@ namespace FakeCQG
 
         #region Properties
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -29681,56 +29801,56 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -29761,6 +29881,7 @@ namespace FakeCQG
 
         ~CQGSubMinuteBarsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29768,12 +29889,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -29790,18 +29911,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGSubMinuteBar this[int index_]
+        public CQGSubMinuteBar this[Int32 index_]
         {
             get
             {
@@ -29860,13 +29981,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -29881,11 +30002,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -29896,7 +30017,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -29924,6 +30045,7 @@ namespace FakeCQG
 
         ~CQGSubMinuteBarsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -29931,18 +30053,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGSubMinuteBars this[int index_]
+        public CQGSubMinuteBars this[Int32 index_]
         {
             get
             {
@@ -29955,7 +30077,7 @@ namespace FakeCQG
 
         }
 
-        public CQGSubMinuteBars this[string id_]
+        public CQGSubMinuteBars this[String id_]
         {
             get
             {
@@ -29972,7 +30094,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGSubMinuteBars get_ItemById(string id_)
+        public virtual CQGSubMinuteBars get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -30009,6 +30131,7 @@ namespace FakeCQG
 
         ~CQGSubMinuteBarsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30032,12 +30155,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30048,12 +30171,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -30080,12 +30203,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -30096,12 +30219,12 @@ namespace FakeCQG
             }
         }
 
-        public int Interval
+        public Int32 Interval
         {
             get
             {
                 string name = "Interval";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30112,12 +30235,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -30128,12 +30251,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -30144,12 +30267,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30176,12 +30299,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -30208,12 +30331,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -30240,12 +30363,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -30281,6 +30404,7 @@ namespace FakeCQG
 
         ~CQGSummariesStatementClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30300,12 +30424,12 @@ namespace FakeCQG
 
         }
 
-        public int GWAccountID
+        public Int32 GWAccountID
         {
             get
             {
                 string name = "GWAccountID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30359,6 +30483,7 @@ namespace FakeCQG
 
         ~CQGTFlowBarClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30366,134 +30491,134 @@ namespace FakeCQG
 
         #region Properties
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double BestAskPrice
+        public Double BestAskPrice
         {
             get
             {
                 string name = "BestAskPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double BestBidPrice
+        public Double BestBidPrice
         {
             get
             {
                 string name = "BestBidPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int DomAskCount
+        public Int32 DomAskCount
         {
             get
             {
                 string name = "DomAskCount";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int this[int index_]
+        public Int32 this[Int32 index_]
         {
             get
             {
                 string name = "DomAskVolume";
                 var args = new object[] { index_ };
-                var value = CQG.GetProperty<int>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name, args);
                 return value;
             }
 
         }
 
-        public int DomBidCount
+        public Int32 DomBidCount
         {
             get
             {
                 string name = "DomBidCount";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -30510,45 +30635,45 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueMid
+        public Double TrueMid
         {
             get
             {
                 string name = "TrueMid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -30558,19 +30683,19 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual int get_DomAskVolume(int index_)
+        public virtual Int32 get_DomAskVolume(Int32 index_)
         {
             string name = "get_DomAskVolume";
             var args = new object[] { index_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual int get_DomBidVolume(int index_)
+        public virtual Int32 get_DomBidVolume(Int32 index_)
         {
             string name = "get_DomBidVolume";
             var args = new object[] { index_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
@@ -30595,6 +30720,7 @@ namespace FakeCQG
 
         ~CQGTFlowBarsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30602,12 +30728,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30624,18 +30750,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTFlowBar this[int index_]
+        public CQGTFlowBar this[Int32 index_]
         {
             get
             {
@@ -30694,13 +30820,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -30715,11 +30841,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -30730,7 +30856,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -30758,6 +30884,7 @@ namespace FakeCQG
 
         ~CQGTFlowBarsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30765,18 +30892,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTFlowBars this[int index_]
+        public CQGTFlowBars this[Int32 index_]
         {
             get
             {
@@ -30789,7 +30916,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTFlowBars this[string id_]
+        public CQGTFlowBars this[String id_]
         {
             get
             {
@@ -30806,7 +30933,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTFlowBars get_ItemById(string id_)
+        public virtual CQGTFlowBars get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -30843,6 +30970,7 @@ namespace FakeCQG
 
         ~CQGTFlowBarsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -30866,12 +30994,12 @@ namespace FakeCQG
             }
         }
 
-        public int AggregationLevel
+        public Int32 AggregationLevel
         {
             get
             {
                 string name = "AggregationLevel";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30898,12 +31026,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -30946,12 +31074,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -30962,12 +31090,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -30978,12 +31106,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -30994,12 +31122,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -31010,12 +31138,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31042,12 +31170,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -31074,12 +31202,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -31090,12 +31218,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -31131,6 +31259,7 @@ namespace FakeCQG
 
         ~CQGTickClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31138,23 +31267,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string ContributorId
+        public String ContributorId
         {
             get
             {
                 string name = "ContributorId";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ContributorIdCode
+        public Int32 ContributorIdCode
         {
             get
             {
                 string name = "ContributorIdCode";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31182,12 +31311,12 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -31204,23 +31333,23 @@ namespace FakeCQG
 
         }
 
-        public int SalesConditionCode
+        public Int32 SalesConditionCode
         {
             get
             {
                 string name = "SalesConditionCode";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string SalesConditionLabel
+        public String SalesConditionLabel
         {
             get
             {
                 string name = "SalesConditionLabel";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -31237,12 +31366,12 @@ namespace FakeCQG
 
         }
 
-        public int Volume
+        public Int32 Volume
         {
             get
             {
                 string name = "Volume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31273,6 +31402,7 @@ namespace FakeCQG
 
         ~CQGTicksClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31280,12 +31410,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31302,29 +31432,29 @@ namespace FakeCQG
 
         }
 
-        public bool HasUpdates
+        public Boolean HasUpdates
         {
             get
             {
                 string name = "HasUpdates";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTick this[int index_]
+        public CQGTick this[Int32 index_]
         {
             get
             {
@@ -31383,13 +31513,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -31404,11 +31534,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -31419,11 +31549,11 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
@@ -31434,7 +31564,7 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -31462,6 +31592,7 @@ namespace FakeCQG
 
         ~CQGTicksCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31469,18 +31600,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTicks this[int index_]
+        public CQGTicks this[Int32 index_]
         {
             get
             {
@@ -31493,7 +31624,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTicks this[string id_]
+        public CQGTicks this[String id_]
         {
             get
             {
@@ -31510,7 +31641,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTicks get_ItemById(string id_)
+        public virtual CQGTicks get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -31547,6 +31678,7 @@ namespace FakeCQG
 
         ~CQGTicksRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31586,12 +31718,12 @@ namespace FakeCQG
             }
         }
 
-        public int SessionsFilter
+        public Int32 SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31602,12 +31734,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -31675,6 +31807,7 @@ namespace FakeCQG
 
         ~CQGTimedBarClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31682,210 +31815,210 @@ namespace FakeCQG
 
         #region Properties
 
-        public int ActualVolume
+        public Int32 ActualVolume
         {
             get
             {
                 string name = "ActualVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int AskVolume
+        public Int32 AskVolume
         {
             get
             {
                 string name = "AskVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int BidVolume
+        public Int32 BidVolume
         {
             get
             {
                 string name = "BidVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int CommodityOpenInterest
+        public Int32 CommodityOpenInterest
         {
             get
             {
                 string name = "CommodityOpenInterest";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int CommodityTickVolume
+        public Int32 CommodityTickVolume
         {
             get
             {
                 string name = "CommodityTickVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int CommodityVolume
+        public Int32 CommodityVolume
         {
             get
             {
                 string name = "CommodityVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ContractOpenInterest
+        public Int32 ContractOpenInterest
         {
             get
             {
                 string name = "ContractOpenInterest";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ContractTickVolume
+        public Int32 ContractTickVolume
         {
             get
             {
                 string name = "ContractTickVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int ContractVolume
+        public Int32 ContractVolume
         {
             get
             {
                 string name = "ContractVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int OpenInterest
+        public Int32 OpenInterest
         {
             get
             {
                 string name = "OpenInterest";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int TickVolume
+        public Int32 TickVolume
         {
             get
             {
                 string name = "TickVolume";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31902,34 +32035,34 @@ namespace FakeCQG
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -31960,6 +32093,7 @@ namespace FakeCQG
 
         ~CQGTimedBarsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -31967,12 +32101,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -31989,18 +32123,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTimedBar this[int index_]
+        public CQGTimedBar this[Int32 index_]
         {
             get
             {
@@ -32059,13 +32193,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -32080,11 +32214,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -32095,15 +32229,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -32131,6 +32265,7 @@ namespace FakeCQG
 
         ~CQGTimedBarsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32138,18 +32273,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTimedBars this[int index_]
+        public CQGTimedBars this[Int32 index_]
         {
             get
             {
@@ -32162,7 +32297,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTimedBars this[string id_]
+        public CQGTimedBars this[String id_]
         {
             get
             {
@@ -32179,7 +32314,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTimedBars get_ItemById(string id_)
+        public virtual CQGTimedBars get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -32216,6 +32351,7 @@ namespace FakeCQG
 
         ~CQGTimedBarsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32239,12 +32375,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -32255,12 +32391,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32287,12 +32423,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IgnoreEventsOnHistoricalBars
+        public Boolean IgnoreEventsOnHistoricalBars
         {
             get
             {
                 string name = "IgnoreEventsOnHistoricalBars";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32303,12 +32439,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32319,12 +32455,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -32335,12 +32471,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -32351,12 +32487,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -32383,12 +32519,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -32399,12 +32535,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -32431,12 +32567,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32457,18 +32593,18 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, bool include_output)
+        public virtual void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, Boolean include_output)
         {
             string name = "IncludeOutput";
             var args = new object[] { timed_bar_output, include_output };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual bool IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output)
+        public virtual Boolean IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output)
         {
             string name = "IsOutputIncluded";
             var args = new object[] { timed_bar_output };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
@@ -32493,6 +32629,7 @@ namespace FakeCQG
 
         ~CQGTradeClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32500,45 +32637,45 @@ namespace FakeCQG
 
         #region Properties
 
-        public int GroupID
+        public Int32 GroupID
         {
             get
             {
                 string name = "GroupID";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool IsMatched
+        public Boolean IsMatched
         {
             get
             {
                 string name = "IsMatched";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -32602,6 +32739,7 @@ namespace FakeCQG
 
         ~CQGTradeEntriesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32609,18 +32747,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradeEntry this[int index_]
+        public CQGTradeEntry this[Int32 index_]
         {
             get
             {
@@ -32665,6 +32803,7 @@ namespace FakeCQG
 
         ~CQGTradeEntryClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32672,12 +32811,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool CanPlaceOrderSignal
+        public Boolean CanPlaceOrderSignal
         {
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32695,23 +32834,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -32729,23 +32868,23 @@ namespace FakeCQG
 
         }
 
-        public bool Signal
+        public Boolean Signal
         {
             get
             {
                 string name = "Signal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -32788,6 +32927,7 @@ namespace FakeCQG
 
         ~CQGTradeEntryDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32795,23 +32935,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool AllowEntryOnExit
+        public Boolean AllowEntryOnExit
         {
             get
             {
                 string name = "AllowEntryOnExit";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool AllowPyramids
+        public Boolean AllowPyramids
         {
             get
             {
                 string name = "AllowPyramids";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32853,6 +32993,7 @@ namespace FakeCQG
 
         ~CQGTradeExitClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32860,12 +33001,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool CanPlaceOrderSignal
+        public Boolean CanPlaceOrderSignal
         {
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -32883,23 +33024,23 @@ namespace FakeCQG
 
         }
 
-        public double Price
+        public Double Price
         {
             get
             {
                 string name = "Price";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public int Quantity
+        public Int32 Quantity
         {
             get
             {
                 string name = "Quantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -32917,23 +33058,23 @@ namespace FakeCQG
 
         }
 
-        public bool Signal
+        public Boolean Signal
         {
             get
             {
                 string name = "Signal";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double StopLimitPrice
+        public Double StopLimitPrice
         {
             get
             {
                 string name = "StopLimitPrice";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -32976,6 +33117,7 @@ namespace FakeCQG
 
         ~CQGTradeExitDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -32983,34 +33125,34 @@ namespace FakeCQG
 
         #region Properties
 
-        public bool AllowExitOnEntry
+        public Boolean AllowExitOnEntry
         {
             get
             {
                 string name = "AllowExitOnEntry";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public bool AllowMoreThanOnce
+        public Boolean AllowMoreThanOnce
         {
             get
             {
                 string name = "AllowMoreThanOnce";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -33052,6 +33194,7 @@ namespace FakeCQG
 
         ~CQGTradeExitDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33059,18 +33202,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradeExitDefinition this[int index_]
+        public CQGTradeExitDefinition this[Int32 index_]
         {
             get
             {
@@ -33083,7 +33226,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradeExitDefinition this[string exit_name]
+        public CQGTradeExitDefinition this[String exit_name]
         {
             get
             {
@@ -33100,7 +33243,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradeExitDefinition get_ItemByName(string exit_name)
+        public virtual CQGTradeExitDefinition get_ItemByName(String exit_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { exit_name };
@@ -33137,6 +33280,7 @@ namespace FakeCQG
 
         ~CQGTradeExitsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33144,18 +33288,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradeExit this[int index_]
+        public CQGTradeExit this[Int32 index_]
         {
             get
             {
@@ -33168,7 +33312,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradeExit this[string exit_name]
+        public CQGTradeExit this[String exit_name]
         {
             get
             {
@@ -33185,7 +33329,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradeExit get_ItemByName(string exit_name)
+        public virtual CQGTradeExit get_ItemByName(String exit_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { exit_name };
@@ -33222,6 +33366,7 @@ namespace FakeCQG
 
         ~CQGTradesClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33229,18 +33374,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTrade this[int index_]
+        public CQGTrade this[Int32 index_]
         {
             get
             {
@@ -33285,6 +33430,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemAddInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33313,6 +33459,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemBaseBarParameterClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33320,12 +33467,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -33342,12 +33489,12 @@ namespace FakeCQG
 
         }
 
-        public object Value
+        public Object Value
         {
             get
             {
                 string name = "Value";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -33383,6 +33530,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemBaseBarParametersClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33390,12 +33538,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -33446,6 +33594,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33465,12 +33614,12 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -33523,13 +33672,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -33556,15 +33705,15 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -33592,6 +33741,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33599,23 +33749,23 @@ namespace FakeCQG
 
         #region Properties
 
-        public string Abbreviation
+        public String Abbreviation
         {
             get
             {
                 string name = "Abbreviation";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Commission
+        public Double Commission
         {
             get
             {
                 string name = "Commission";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -33632,12 +33782,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -33692,6 +33842,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33699,18 +33850,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystemDefinition this[int index_]
+        public CQGTradingSystemDefinition this[Int32 index_]
         {
             get
             {
@@ -33723,7 +33874,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemDefinition this[string trading_system_abbreviation]
+        public CQGTradingSystemDefinition this[String trading_system_abbreviation]
         {
             get
             {
@@ -33740,7 +33891,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradingSystemDefinition get_ItemByAbbreviation(string trading_system_abbreviation)
+        public virtual CQGTradingSystemDefinition get_ItemByAbbreviation(String trading_system_abbreviation)
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { trading_system_abbreviation };
@@ -33749,7 +33900,7 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual CQGTradingSystemDefinition get_ItemByName(string trading_system_name)
+        public virtual CQGTradingSystemDefinition get_ItemByName(String trading_system_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { trading_system_name };
@@ -33786,6 +33937,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemInsertInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33793,12 +33945,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -33829,6 +33981,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemRelationAddInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33848,12 +34001,12 @@ namespace FakeCQG
 
         }
 
-        public int EntryRowIndex
+        public Int32 EntryRowIndex
         {
             get
             {
                 string name = "EntryRowIndex";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -33871,12 +34024,12 @@ namespace FakeCQG
 
         }
 
-        public int ExitRowIndex
+        public Int32 ExitRowIndex
         {
             get
             {
                 string name = "ExitRowIndex";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -33907,6 +34060,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemRemoveInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33914,12 +34068,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -33950,6 +34104,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -33985,12 +34140,12 @@ namespace FakeCQG
             }
         }
 
-        public string BaseExpression
+        public String BaseExpression
         {
             get
             {
                 string name = "BaseExpression";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -34017,12 +34172,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -34045,12 +34200,12 @@ namespace FakeCQG
 
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -34077,12 +34232,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -34093,12 +34248,12 @@ namespace FakeCQG
             }
         }
 
-        public int IntradayPeriod
+        public Int32 IntradayPeriod
         {
             get
             {
                 string name = "IntradayPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -34109,13 +34264,13 @@ namespace FakeCQG
             }
         }
 
-        public object this[object key_]
+        public Object this[Object key_]
         {
             get
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -34126,12 +34281,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -34142,12 +34297,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -34158,12 +34313,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -34190,12 +34345,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -34232,11 +34387,11 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
-        public virtual object get_Parameter(object key_)
+        public virtual Object get_Parameter(Object key_)
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -34247,15 +34402,15 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
-        public virtual bool IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic)
+        public virtual Boolean IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic)
         {
             string name = "IsStatisticIncluded";
             var args = new object[] { trading_system_statistic };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Parameter(object key_, object pVal)
+        public virtual void set_Parameter(Object key_, Object pVal)
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
@@ -34283,6 +34438,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -34290,18 +34446,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystem this[int index_]
+        public CQGTradingSystem this[Int32 index_]
         {
             get
             {
@@ -34314,7 +34470,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystem this[string id_]
+        public CQGTradingSystem this[String id_]
         {
             get
             {
@@ -34331,7 +34487,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradingSystem get_ItemById(string id_)
+        public virtual CQGTradingSystem get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -34368,6 +34524,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemStatisticsChangeInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -34391,11 +34548,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual bool IsStatisticChanged(eTradingSystemStatistic trading_system_statistic)
+        public virtual Boolean IsStatisticChanged(eTradingSystemStatistic trading_system_statistic)
         {
             string name = "IsStatisticChanged";
             var args = new object[] { trading_system_statistic };
-            var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Boolean>(dcObjKey, name, args);
             return result;
         }
 
@@ -34420,6 +34577,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemStatisticsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -34427,265 +34585,265 @@ namespace FakeCQG
 
         #region Properties
 
-        public double AverageDuration
+        public Double AverageDuration
         {
             get
             {
                 string name = "AverageDuration";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double AverageLoss
+        public Double AverageLoss
         {
             get
             {
                 string name = "AverageLoss";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double AverageProfit
+        public Double AverageProfit
         {
             get
             {
                 string name = "AverageProfit";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double AverageWin
+        public Double AverageWin
         {
             get
             {
                 string name = "AverageWin";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double ClosedNetProfit
+        public Double ClosedNetProfit
         {
             get
             {
                 string name = "ClosedNetProfit";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double CurConsecLosses
+        public Double CurConsecLosses
         {
             get
             {
                 string name = "CurConsecLosses";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double CurConsecWins
+        public Double CurConsecWins
         {
             get
             {
                 string name = "CurConsecWins";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double CurDrawDown
+        public Double CurDrawDown
         {
             get
             {
                 string name = "CurDrawDown";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double LinearRegression
+        public Double LinearRegression
         {
             get
             {
                 string name = "LinearRegression";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaxClosedDraw
+        public Double MaxClosedDraw
         {
             get
             {
                 string name = "MaxClosedDraw";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaxConsecLosses
+        public Double MaxConsecLosses
         {
             get
             {
                 string name = "MaxConsecLosses";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaxConsecWins
+        public Double MaxConsecWins
         {
             get
             {
                 string name = "MaxConsecWins";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaxDrawAmount
+        public Double MaxDrawAmount
         {
             get
             {
                 string name = "MaxDrawAmount";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaxDrawDuration
+        public Double MaxDrawDuration
         {
             get
             {
                 string name = "MaxDrawDuration";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaximumLoss
+        public Double MaximumLoss
         {
             get
             {
                 string name = "MaximumLoss";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double MaximumWin
+        public Double MaximumWin
         {
             get
             {
                 string name = "MaximumWin";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double OpenPosition
+        public Double OpenPosition
         {
             get
             {
                 string name = "OpenPosition";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double PercentLong
+        public Double PercentLong
         {
             get
             {
                 string name = "PercentLong";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double PercentWinners
+        public Double PercentWinners
         {
             get
             {
                 string name = "PercentWinners";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double ProfitLossRatio
+        public Double ProfitLossRatio
         {
             get
             {
                 string name = "ProfitLossRatio";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double ProfitToMaxDraw
+        public Double ProfitToMaxDraw
         {
             get
             {
                 string name = "ProfitToMaxDraw";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double RemoveToNeutral
+        public Double RemoveToNeutral
         {
             get
             {
                 string name = "RemoveToNeutral";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double ReturnRetracement
+        public Double ReturnRetracement
         {
             get
             {
                 string name = "ReturnRetracement";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TimePercentage
+        public Double TimePercentage
         {
             get
             {
                 string name = "TimePercentage";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -34702,46 +34860,46 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TotalNetProfit
+        public Double TotalNetProfit
         {
             get
             {
                 string name = "TotalNetProfit";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TotalTradeCount
+        public Double TotalTradeCount
         {
             get
             {
                 string name = "TotalTradeCount";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double this[eTradingSystemStatistic ts_statistic]
+        public Double this[eTradingSystemStatistic ts_statistic]
         {
             get
             {
                 string name = "Value";
                 var args = new object[] { ts_statistic };
-                var value = CQG.GetProperty<double>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Double>(dcObjKey, name, args);
                 return value;
             }
 
@@ -34751,11 +34909,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual double get_Value(eTradingSystemStatistic ts_statistic)
+        public virtual Double get_Value(eTradingSystemStatistic ts_statistic)
         {
             string name = "get_Value";
             var args = new object[] { ts_statistic };
-            var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Double>(dcObjKey, name, args);
             return result;
         }
 
@@ -34780,6 +34938,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemStatisticsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -34787,18 +34946,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystemStatistics this[int index_]
+        public CQGTradingSystemStatistics this[Int32 index_]
         {
             get
             {
@@ -34822,11 +34981,11 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
@@ -34858,6 +35017,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemTradeClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -34877,12 +35037,12 @@ namespace FakeCQG
 
         }
 
-        public bool IsActive
+        public Boolean IsActive
         {
             get
             {
                 string name = "IsActive";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -34899,12 +35059,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -34971,6 +35131,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemTradeDefinitionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35002,12 +35163,12 @@ namespace FakeCQG
 
         }
 
-        public string Name
+        public String Name
         {
             get
             {
                 string name = "Name";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -35049,6 +35210,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemTradeDefinitionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35056,18 +35218,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystemTradeDefinition this[int index_]
+        public CQGTradingSystemTradeDefinition this[Int32 index_]
         {
             get
             {
@@ -35080,7 +35242,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemTradeDefinition this[string trade_name]
+        public CQGTradingSystemTradeDefinition this[String trade_name]
         {
             get
             {
@@ -35097,7 +35259,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradingSystemTradeDefinition get_ItemByName(string trade_name)
+        public virtual CQGTradingSystemTradeDefinition get_ItemByName(String trade_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { trade_name };
@@ -35134,6 +35296,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemTradesRowClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35141,18 +35304,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystemTrade this[int index_]
+        public CQGTradingSystemTrade this[Int32 index_]
         {
             get
             {
@@ -35165,7 +35328,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTradingSystemTrade this[string trade_name]
+        public CQGTradingSystemTrade this[String trade_name]
         {
             get
             {
@@ -35189,12 +35352,12 @@ namespace FakeCQG
 
         }
 
-        public int TimestampOffset
+        public Int32 TimestampOffset
         {
             get
             {
                 string name = "TimestampOffset";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -35204,7 +35367,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTradingSystemTrade get_ItemByName(string trade_name)
+        public virtual CQGTradingSystemTrade get_ItemByName(String trade_name)
         {
             string name = "get_ItemByName";
             var args = new object[] { trade_name };
@@ -35241,6 +35404,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemTradesRowsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35248,18 +35412,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTradingSystemTradesRow this[int index_]
+        public CQGTradingSystemTradesRow this[Int32 index_]
         {
             get
             {
@@ -35304,6 +35468,7 @@ namespace FakeCQG
 
         ~CQGTradingSystemUpdateInfoClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35311,12 +35476,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Index
+        public Int32 Index
         {
             get
             {
                 string name = "Index";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -35377,6 +35542,7 @@ namespace FakeCQG
 
         ~CQGTransactionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35384,12 +35550,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public string ExecutionId
+        public String ExecutionId
         {
             get
             {
                 string name = "ExecutionId";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -35419,23 +35585,23 @@ namespace FakeCQG
 
         }
 
-        public int HangQuantity
+        public Int32 HangQuantity
         {
             get
             {
                 string name = "HangQuantity";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -35465,12 +35631,12 @@ namespace FakeCQG
 
         }
 
-        public string RejectReason
+        public String RejectReason
         {
             get
             {
                 string name = "RejectReason";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -35546,6 +35712,7 @@ namespace FakeCQG
 
         ~CQGTransactionsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35553,18 +35720,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGTransaction this[string id_]
+        public CQGTransaction this[String id_]
         {
             get
             {
@@ -35577,7 +35744,7 @@ namespace FakeCQG
 
         }
 
-        public CQGTransaction this[int index_]
+        public CQGTransaction this[Int32 index_]
         {
             get
             {
@@ -35594,7 +35761,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGTransaction get_ItemByIndex(int index_)
+        public virtual CQGTransaction get_ItemByIndex(Int32 index_)
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
@@ -35631,6 +35798,7 @@ namespace FakeCQG
 
         ~CQGYieldClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35638,89 +35806,89 @@ namespace FakeCQG
 
         #region Properties
 
-        public double Avg
+        public Double Avg
         {
             get
             {
                 string name = "Avg";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Close
+        public Double Close
         {
             get
             {
                 string name = "Close";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double High
+        public Double High
         {
             get
             {
                 string name = "High";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double HLC3
+        public Double HLC3
         {
             get
             {
                 string name = "HLC3";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Low
+        public Double Low
         {
             get
             {
                 string name = "Low";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Mid
+        public Double Mid
         {
             get
             {
                 string name = "Mid";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Open
+        public Double Open
         {
             get
             {
                 string name = "Open";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double Range
+        public Double Range
         {
             get
             {
                 string name = "Range";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -35737,34 +35905,34 @@ namespace FakeCQG
 
         }
 
-        public double TrueHigh
+        public Double TrueHigh
         {
             get
             {
                 string name = "TrueHigh";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueLow
+        public Double TrueLow
         {
             get
             {
                 string name = "TrueLow";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public double TrueRange
+        public Double TrueRange
         {
             get
             {
                 string name = "TrueRange";
-                var value = CQG.GetProperty<double>(dcObjKey, name);
+                var value = CQG.GetProperty<Double>(dcObjKey, name);
                 return value;
             }
 
@@ -35795,6 +35963,7 @@ namespace FakeCQG
 
         ~CQGYieldsClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35802,12 +35971,12 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -35824,18 +35993,18 @@ namespace FakeCQG
 
         }
 
-        public string Id
+        public String Id
         {
             get
             {
                 string name = "Id";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGYield this[int index_]
+        public CQGYield this[Int32 index_]
         {
             get
             {
@@ -35894,13 +36063,13 @@ namespace FakeCQG
 
         }
 
-        public object this[string tag_name]
+        public Object this[String tag_name]
         {
             get
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = CQG.GetProperty<object>(dcObjKey, name, args);
+                var value = CQG.GetProperty<Object>(dcObjKey, name, args);
                 return value;
             }
 
@@ -35915,11 +36084,11 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual object get_Tag(string tag_name)
+        public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Object>(dcObjKey, name, args);
             return result;
         }
 
@@ -35930,15 +36099,15 @@ namespace FakeCQG
             return result;
         }
 
-        public virtual int IndexForDate(DateTime date_)
+        public virtual Int32 IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = CQG.CallMethod<int>(dcObjKey, name, args);
+            var result = CQG.CallMethod<Int32>(dcObjKey, name, args);
             return result;
         }
 
-        public virtual void set_Tag(string tag_name, object pVal)
+        public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
@@ -35966,6 +36135,7 @@ namespace FakeCQG
 
         ~CQGYieldsCollectionClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -35973,18 +36143,18 @@ namespace FakeCQG
 
         #region Properties
 
-        public int Count
+        public Int32 Count
         {
             get
             {
                 string name = "Count";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
         }
 
-        public CQGYields this[int index_]
+        public CQGYields this[Int32 index_]
         {
             get
             {
@@ -35997,7 +36167,7 @@ namespace FakeCQG
 
         }
 
-        public CQGYields this[string id_]
+        public CQGYields this[String id_]
         {
             get
             {
@@ -36014,7 +36184,7 @@ namespace FakeCQG
 
         #region Methods
 
-        public virtual CQGYields get_ItemById(string id_)
+        public virtual CQGYields get_ItemById(String id_)
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
@@ -36051,6 +36221,7 @@ namespace FakeCQG
 
         ~CQGYieldsRequestClass()
         {
+            CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.CallDtor, string.Empty, dcObjKey, null, null));
             CQG.CallDtor(dcObjKey);
         }
 
@@ -36090,12 +36261,12 @@ namespace FakeCQG
             }
         }
 
-        public int DaysBeforeExpiration
+        public Int32 DaysBeforeExpiration
         {
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -36106,12 +36277,12 @@ namespace FakeCQG
             }
         }
 
-        public bool EqualizeCloses
+        public Boolean EqualizeCloses
         {
             get
             {
                 string name = "EqualizeCloses";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -36122,12 +36293,12 @@ namespace FakeCQG
             }
         }
 
-        public bool IncludeEnd
+        public Boolean IncludeEnd
         {
             get
             {
                 string name = "IncludeEnd";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -36154,12 +36325,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeEnd
+        public Object RangeEnd
         {
             get
             {
                 string name = "RangeEnd";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -36170,12 +36341,12 @@ namespace FakeCQG
             }
         }
 
-        public object RangeStart
+        public Object RangeStart
         {
             get
             {
                 string name = "RangeStart";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -36186,12 +36357,12 @@ namespace FakeCQG
             }
         }
 
-        public int RecalcPeriod
+        public Int32 RecalcPeriod
         {
             get
             {
                 string name = "RecalcPeriod";
-                var value = CQG.GetProperty<int>(dcObjKey, name);
+                var value = CQG.GetProperty<Int32>(dcObjKey, name);
                 return value;
             }
 
@@ -36218,12 +36389,12 @@ namespace FakeCQG
             }
         }
 
-        public object SessionsFilter
+        public Object SessionsFilter
         {
             get
             {
                 string name = "SessionsFilter";
-                var value = CQG.GetProperty<object>(dcObjKey, name);
+                var value = CQG.GetProperty<Object>(dcObjKey, name);
                 return value;
             }
 
@@ -36250,12 +36421,12 @@ namespace FakeCQG
             }
         }
 
-        public string Symbol
+        public String Symbol
         {
             get
             {
                 string name = "Symbol";
-                var value = CQG.GetProperty<string>(dcObjKey, name);
+                var value = CQG.GetProperty<String>(dcObjKey, name);
                 return value;
             }
 
@@ -36266,12 +36437,12 @@ namespace FakeCQG
             }
         }
 
-        public bool UpdatesEnabled
+        public Boolean UpdatesEnabled
         {
             get
             {
                 string name = "UpdatesEnabled";
-                var value = CQG.GetProperty<bool>(dcObjKey, name);
+                var value = CQG.GetProperty<Boolean>(dcObjKey, name);
                 return value;
             }
 
@@ -36302,17 +36473,17 @@ namespace FakeCQG
 
         public eDOMUpdatesMode DOMUpdatesMode;
 
-        public int DOMUpdatesPeriod;
+        public Int32 DOMUpdatesPeriod;
 
         public eLogSeverity LogSeverity;
 
-        public int MaxLogFileCount;
+        public Int32 MaxLogFileCount;
 
         public DateTime MaxLogFileDuration;
 
-        public int MaxLogFileSize;
+        public Int32 MaxLogFileSize;
 
-        public short MetaDataEnabled;
+        public Int16 MetaDataEnabled;
 
         public eReadyStatusCheck ReadyStatusCheck;
 
