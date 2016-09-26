@@ -6,18 +6,18 @@ namespace FakeCQG
     {
         public static string CallCtor(string name)
         {
-            string dcObjKey = (string)ExecuteTheQuery(QueryInfo.QueryType.Ctor, null, name);
+            string dcObjKey = (string)ExecuteTheQuery(QueryInfo.QueryType.CallCtor, null, name);
             return dcObjKey;
         }
 
         public static void CallDtor(string dcObjKey)
         {
-            ExecuteTheQuery(QueryInfo.QueryType.Dtor, dcObjKey, null);
+            ExecuteTheQuery(QueryInfo.QueryType.CallDtor, dcObjKey, null);
         }
 
         public static T GetProperty<T>(string dcObjKey, string name, object[] args = null)
         {
-            dynamic value = ExecuteTheQuery(QueryInfo.QueryType.GetProperty, dcObjKey, name, args);
+            T value = (T)ExecuteTheQuery(QueryInfo.QueryType.GetProperty, dcObjKey, name, args);
             return value;
         }
 
@@ -29,13 +29,13 @@ namespace FakeCQG
 
         public static T CallMethod<T>(string dcObjKey, string name, object[] args = null)
         {
-            dynamic obj = ExecuteTheQuery(QueryInfo.QueryType.Method, dcObjKey, name, args);
+            T obj = (T)ExecuteTheQuery(QueryInfo.QueryType.CallMethod, dcObjKey, name, args);
             return obj;
         }
 
         public static void CallVoidMethod(string dcObjKey, string name, object[] args = null)
         {
-            ExecuteTheQuery(QueryInfo.QueryType.Method, dcObjKey, name, args);
+            ExecuteTheQuery(QueryInfo.QueryType.CallMethod, dcObjKey, name, args);
         }
     }
 }

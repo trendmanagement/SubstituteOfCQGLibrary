@@ -47,7 +47,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_RemoveOneQueryItem()
         {
             // arrange
-            var qType = QueryInfo.QueryType.Method;
+            var qType = QueryInfo.QueryType.CallMethod;
             string id = "key";
             bool isQuery = default(bool);
             string name = "name";

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -8,11 +9,11 @@ namespace FakeCQG.Models
     {
         public enum QueryType
         {
-            Ctor,
-            Dtor,
+            CallCtor,
+            CallDtor,
             GetProperty,
             SetProperty,
-            Method,
+            CallMethod,
             Event
         }
 
@@ -39,6 +40,19 @@ namespace FakeCQG.Models
             ArgKeys = argKeys;
             ArgValues = argVals;
             TypeOfQuery = qType;
+        }
+
+        public override string ToString()
+        {
+            return string.Format(
+                "QUERY:" + Environment.NewLine +
+                "    Key: {0}" + Environment.NewLine +
+                "    ObjectKey: {1}" + Environment.NewLine +
+                "    QueryName: {2}" + Environment.NewLine +
+                "    ArgKeys: {3}" + Environment.NewLine +
+                "    ArgValues: {4}" + Environment.NewLine +
+                "    TypeOfQuery: {5}",
+                Key, ObjectKey, QueryName, ArgKeys, ArgValues, TypeOfQuery);
         }
     }
 }
