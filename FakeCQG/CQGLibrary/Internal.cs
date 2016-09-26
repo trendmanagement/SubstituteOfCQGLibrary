@@ -19,6 +19,8 @@ namespace FakeCQG
 
         public const string IdName = "Key";
 
+        private static bool IsFirstStart = true;
+
         public delegate void GetQueryInfosHandler(List<QueryInfo> queries);
         public static event GetQueryInfosHandler GetQueries;
         public delegate void LogHandler(string message);
@@ -27,9 +29,9 @@ namespace FakeCQG
         // Changed the access level of visibility for testing
         public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
         public const string NoAnswerMessage = "Timer elapsed. No answer.";
-#endregion
+        #endregion
 
-#region MongoDB communication methods
+        #region MongoDB communication methods
         public static void CommonEventHandler(string name, object[] args = null)
         {
             AnswerHelper mongo = new AnswerHelper();
@@ -59,6 +61,13 @@ namespace FakeCQG
                 DataDictionaries.FillEventCheckingDictionary();
 
                 EventsCheckingON = true;
+            }
+
+            //Checking for firat time stert and if it is first start execute handshaking method
+            if (IsFirstStart)
+            {
+                CQGLibrary.HandShaking.Subscriber.ListenForHanshaking();
+                IsFirstStart = false;
             }
 
             var argKeys = new Dictionary<string, string>();
