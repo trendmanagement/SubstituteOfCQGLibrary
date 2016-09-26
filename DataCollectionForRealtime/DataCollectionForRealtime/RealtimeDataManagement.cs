@@ -17,10 +17,12 @@ namespace DataCollectionForRealtime
         System.Timers.Timer AutoWorkTimer;
 
         const int AutoWorkTimerInterval = 1000; // 1s
+        Timer timer = new Timer();
+        int intervalForClearDictionary = 30000;
 
         CQGDataManagement cqgDataManagement;
 
-        int timeForHandShaking = 5000;
+        int timeForHandShaking = 15000;
 
         QueryHandler queryHandler;
 
@@ -37,6 +39,14 @@ namespace DataCollectionForRealtime
             Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
+
+            timer.Disposed += Timer_Disposed;
+            timer.Interval = intervalForClearDictionary;
+        }
+
+        private void Timer_Disposed(object sender, EventArgs e)
+        {
+            DataDictionaries.ClearAllDictionaris();
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
@@ -61,10 +71,11 @@ namespace DataCollectionForRealtime
                 {
                     DataDictionaries.RealTimeIds.Add(subscriber.ID);
                 }
+                timer.Stop();
             }
             else
             {
-                DataDictionaries.ClearAllDictionaris();
+                timer.Start();
             }
         }
 
