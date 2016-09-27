@@ -17,7 +17,7 @@ namespace CodeGenerator
             {
                 // Write a line of code that collects all the arguments into object[] as following:
                 // var args = new object[] { "!", arg1, arg2, ..., argn }
-                CreateArgsObjectArray(DCEvHndlrFile, Indent3, minfo.GetParameters(), true);
+                CreateArgsObjectArray(DCEvHndlrFile, Indent3, minfo.GetParameters(), false);
 
                 args = ", args";
             }

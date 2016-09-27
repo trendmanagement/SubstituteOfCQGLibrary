@@ -188,16 +188,11 @@ namespace DataCollectionForRealtime
                     }
                     break;
 
-                case QueryInfo.QueryType.Event:
+                case QueryInfo.QueryType.SubscribeToEvent:
+                case QueryInfo.QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                         EventInfo ei = qObj.GetType().GetEvent(query.QueryName);
-
-                        if ((string)query.ArgValues["0"] != "+" || (string)query.ArgValues["0"] != " - ")
-                        {
-                            AsyncTaskListener.LogMessage("Argument that describes event subtype is not valid.");
-                            break;
-                        }
 
                         // Find corresponding CQG delegate
                         Type delType = FindDelegateType(CQGAssm, query.QueryName);
@@ -208,13 +203,13 @@ namespace DataCollectionForRealtime
                         MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                         Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
 
-                        if ((string)query.ArgValues["0"] == " + ")
+                        if (query.TypeOfQuery == QueryInfo.QueryType.SubscribeToEvent)
                         {
                             // Subscribe our handler to CQG event
                             ei.AddEventHandler(qObj, d);
                             //qObj.GetType().InvokeMember("add_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
                         }
-                        else if ((string)query.ArgValues["0"] == " - ")
+                        else if (query.TypeOfQuery == QueryInfo.QueryType.UnsubscribeFromEvent)
                         {
                             // Unsubscribe our handler to CQG event
                             ei.RemoveEventHandler(qObj, d);
@@ -251,7 +246,7 @@ namespace DataCollectionForRealtime
             {
                 if (IsDelegate(type))
                 {
-                    MethodInfo minfo = type.GetMethod("Invoke");
+                    //MethodInfo minfo = type.GetMethod("Invoke");
                     if (type.Name == delegateTypeName)
                     {
                         return type;

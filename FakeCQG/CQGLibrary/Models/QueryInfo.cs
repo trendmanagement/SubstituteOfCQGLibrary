@@ -14,7 +14,8 @@ namespace FakeCQG.Models
             GetProperty,
             SetProperty,
             CallMethod,
-            Event
+            SubscribeToEvent,
+            UnsubscribeFromEvent
         }
 
         [BsonId]

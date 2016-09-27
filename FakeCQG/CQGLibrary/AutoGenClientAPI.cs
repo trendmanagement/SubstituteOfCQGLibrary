@@ -15575,18 +15575,11 @@ namespace FakeCQG
 
         private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
         {
-            if (AccountChanged == null && DataDictionaries.EventCheckingDictionary["AccountChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AccountChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AccountChanged"] = false;
-            }
-            else if (AccountChanged != null && !DataDictionaries.EventCheckingDictionary["AccountChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AccountChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AccountChanged"] = true;
-            }
+            CQG.SubscriberChecking("AccountChanged", dcObjKey, 
+                AccountChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"], 
+                AccountChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AccountChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"] == true)
             {
                 try
                 {
@@ -15597,18 +15590,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyAdded == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"] = false;
-            }
-            else if (AdvancedStudyAdded != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyAdded", dcObjKey, 
+                AdvancedStudyAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"], 
+                AdvancedStudyAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"] == true)
             {
                 try
                 {
@@ -15619,18 +15605,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyDefinitionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"] = false;
-            }
-            else if (AdvancedStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyDefinitionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyDefinitionsResolved", dcObjKey, 
+                AdvancedStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"], 
+                AdvancedStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyDefinitionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -15641,18 +15620,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyInserted == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"] = false;
-            }
-            else if (AdvancedStudyInserted != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyInserted", dcObjKey, 
+                AdvancedStudyInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"], 
+                AdvancedStudyInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"] == true)
             {
                 try
                 {
@@ -15663,18 +15635,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyRemoved == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"] = false;
-            }
-            else if (AdvancedStudyRemoved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyRemoved", dcObjKey, 
+                AdvancedStudyRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"], 
+                AdvancedStudyRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"] == true)
             {
                 try
                 {
@@ -15685,18 +15650,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyResolved == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"] = false;
-            }
-            else if (AdvancedStudyResolved != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyResolved", dcObjKey, 
+                AdvancedStudyResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"], 
+                AdvancedStudyResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"] == true)
             {
                 try
                 {
@@ -15707,18 +15665,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AdvancedStudyUpdated == null && DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"] = false;
-            }
-            else if (AdvancedStudyUpdated != null && !DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AdvancedStudyUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"] = true;
-            }
+            CQG.SubscriberChecking("AdvancedStudyUpdated", dcObjKey, 
+                AdvancedStudyUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"], 
+                AdvancedStudyUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AdvancedStudyUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"] == true)
             {
                 try
                 {
@@ -15729,18 +15680,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AlgorithmicOrderPlaced == null && DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AlgorithmicOrderPlaced", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"] = false;
-            }
-            else if (AlgorithmicOrderPlaced != null && !DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AlgorithmicOrderPlaced", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"] = true;
-            }
+            CQG.SubscriberChecking("AlgorithmicOrderPlaced", dcObjKey, 
+                AlgorithmicOrderPlaced != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"], 
+                AlgorithmicOrderPlaced == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AlgorithmicOrderPlaced"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"] == true)
             {
                 try
                 {
@@ -15751,18 +15695,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AlgorithmicOrderRegistrationComplete == null && DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AlgorithmicOrderRegistrationComplete", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"] = false;
-            }
-            else if (AlgorithmicOrderRegistrationComplete != null && !DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AlgorithmicOrderRegistrationComplete", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"] = true;
-            }
+            CQG.SubscriberChecking("AlgorithmicOrderRegistrationComplete", dcObjKey, 
+                AlgorithmicOrderRegistrationComplete != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"], 
+                AlgorithmicOrderRegistrationComplete == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AlgorithmicOrderRegistrationComplete"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"] == true)
             {
                 try
                 {
@@ -15773,18 +15710,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AllOrdersCanceled == null && DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AllOrdersCanceled", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"] = false;
-            }
-            else if (AllOrdersCanceled != null && !DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AllOrdersCanceled", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"] = true;
-            }
+            CQG.SubscriberChecking("AllOrdersCanceled", dcObjKey, 
+                AllOrdersCanceled != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"], 
+                AllOrdersCanceled == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AllOrdersCanceled"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"] == true)
             {
                 try
                 {
@@ -15795,18 +15725,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (AuthenticationStatusChanged == null && DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AuthenticationStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"] = false;
-            }
-            else if (AuthenticationStatusChanged != null && !DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "AuthenticationStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("AuthenticationStatusChanged", dcObjKey, 
+                AuthenticationStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"], 
+                AuthenticationStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["AuthenticationStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"] == true)
             {
                 try
                 {
@@ -15817,18 +15740,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (BarsTimestampsResolved == null && DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "BarsTimestampsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"] = false;
-            }
-            else if (BarsTimestampsResolved != null && !DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "BarsTimestampsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"] = true;
-            }
+            CQG.SubscriberChecking("BarsTimestampsResolved", dcObjKey, 
+                BarsTimestampsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"], 
+                BarsTimestampsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["BarsTimestampsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"] == true)
             {
                 try
                 {
@@ -15839,18 +15755,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CELStarted == null && DataDictionaries.EventCheckingDictionary["CELStarted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CELStarted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CELStarted"] = false;
-            }
-            else if (CELStarted != null && !DataDictionaries.EventCheckingDictionary["CELStarted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CELStarted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CELStarted"] = true;
-            }
+            CQG.SubscriberChecking("CELStarted", dcObjKey, 
+                CELStarted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
+                CELStarted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CELStarted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
             {
                 try
                 {
@@ -15861,18 +15770,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CommodityInstrumentsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = false;
-            }
-            else if (CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CommodityInstrumentsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = true;
-            }
+            CQG.SubscriberChecking("CommodityInstrumentsResolved", dcObjKey, 
+                CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
+                CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
             {
                 try
                 {
@@ -15883,18 +15785,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionAdded == null && DataDictionaries.EventCheckingDictionary["ConditionAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionAdded"] = false;
-            }
-            else if (ConditionAdded != null && !DataDictionaries.EventCheckingDictionary["ConditionAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionAdded"] = true;
-            }
+            CQG.SubscriberChecking("ConditionAdded", dcObjKey, 
+                ConditionAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"], 
+                ConditionAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"] == true)
             {
                 try
                 {
@@ -15905,18 +15800,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionDefinitionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"] = false;
-            }
-            else if (ConditionDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionDefinitionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("ConditionDefinitionsResolved", dcObjKey, 
+                ConditionDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"], 
+                ConditionDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionDefinitionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -15927,18 +15815,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionInserted == null && DataDictionaries.EventCheckingDictionary["ConditionInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionInserted"] = false;
-            }
-            else if (ConditionInserted != null && !DataDictionaries.EventCheckingDictionary["ConditionInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionInserted"] = true;
-            }
+            CQG.SubscriberChecking("ConditionInserted", dcObjKey, 
+                ConditionInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"], 
+                ConditionInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"] == true)
             {
                 try
                 {
@@ -15949,18 +15830,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionRemoved == null && DataDictionaries.EventCheckingDictionary["ConditionRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionRemoved"] = false;
-            }
-            else if (ConditionRemoved != null && !DataDictionaries.EventCheckingDictionary["ConditionRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionRemoved"] = true;
-            }
+            CQG.SubscriberChecking("ConditionRemoved", dcObjKey, 
+                ConditionRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"], 
+                ConditionRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"] == true)
             {
                 try
                 {
@@ -15971,18 +15845,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionResolved == null && DataDictionaries.EventCheckingDictionary["ConditionResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionResolved"] = false;
-            }
-            else if (ConditionResolved != null && !DataDictionaries.EventCheckingDictionary["ConditionResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionResolved"] = true;
-            }
+            CQG.SubscriberChecking("ConditionResolved", dcObjKey, 
+                ConditionResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"], 
+                ConditionResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"] == true)
             {
                 try
                 {
@@ -15993,18 +15860,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConditionUpdated == null && DataDictionaries.EventCheckingDictionary["ConditionUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConditionUpdated"] = false;
-            }
-            else if (ConditionUpdated != null && !DataDictionaries.EventCheckingDictionary["ConditionUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConditionUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConditionUpdated"] = true;
-            }
+            CQG.SubscriberChecking("ConditionUpdated", dcObjKey, 
+                ConditionUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"], 
+                ConditionUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConditionUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"] == true)
             {
                 try
                 {
@@ -16015,18 +15875,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConstantVolumeBarsAdded == null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"] = false;
-            }
-            else if (ConstantVolumeBarsAdded != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"] = true;
-            }
+            CQG.SubscriberChecking("ConstantVolumeBarsAdded", dcObjKey, 
+                ConstantVolumeBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"], 
+                ConstantVolumeBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"] == true)
             {
                 try
                 {
@@ -16037,18 +15890,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConstantVolumeBarsInserted == null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"] = false;
-            }
-            else if (ConstantVolumeBarsInserted != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"] = true;
-            }
+            CQG.SubscriberChecking("ConstantVolumeBarsInserted", dcObjKey, 
+                ConstantVolumeBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"], 
+                ConstantVolumeBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"] == true)
             {
                 try
                 {
@@ -16059,18 +15905,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConstantVolumeBarsRemoved == null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"] = false;
-            }
-            else if (ConstantVolumeBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("ConstantVolumeBarsRemoved", dcObjKey, 
+                ConstantVolumeBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"], 
+                ConstantVolumeBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"] == true)
             {
                 try
                 {
@@ -16081,18 +15920,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConstantVolumeBarsResolved == null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"] = false;
-            }
-            else if (ConstantVolumeBarsResolved != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"] = true;
-            }
+            CQG.SubscriberChecking("ConstantVolumeBarsResolved", dcObjKey, 
+                ConstantVolumeBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"], 
+                ConstantVolumeBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"] == true)
             {
                 try
                 {
@@ -16103,18 +15935,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ConstantVolumeBarsUpdated == null && DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"] = false;
-            }
-            else if (ConstantVolumeBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ConstantVolumeBarsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("ConstantVolumeBarsUpdated", dcObjKey, 
+                ConstantVolumeBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"], 
+                ConstantVolumeBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ConstantVolumeBarsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"] == true)
             {
                 try
                 {
@@ -16125,18 +15950,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CurrencyRatesChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = false;
-            }
-            else if (CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CurrencyRatesChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = true;
-            }
+            CQG.SubscriberChecking("CurrencyRatesChanged", dcObjKey, 
+                CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
+                CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
             {
                 try
                 {
@@ -16147,18 +15965,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomSessionsResolved == null && DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomSessionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"] = false;
-            }
-            else if (CustomSessionsResolved != null && !DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomSessionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("CustomSessionsResolved", dcObjKey, 
+                CustomSessionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"], 
+                CustomSessionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomSessionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"] == true)
             {
                 try
                 {
@@ -16169,18 +15980,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyAdded == null && DataDictionaries.EventCheckingDictionary["CustomStudyAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyAdded"] = false;
-            }
-            else if (CustomStudyAdded != null && !DataDictionaries.EventCheckingDictionary["CustomStudyAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyAdded"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyAdded", dcObjKey, 
+                CustomStudyAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"], 
+                CustomStudyAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"] == true)
             {
                 try
                 {
@@ -16191,18 +15995,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyDefinitionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"] = false;
-            }
-            else if (CustomStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyDefinitionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyDefinitionsResolved", dcObjKey, 
+                CustomStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"], 
+                CustomStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyDefinitionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -16213,18 +16010,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyInserted == null && DataDictionaries.EventCheckingDictionary["CustomStudyInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyInserted"] = false;
-            }
-            else if (CustomStudyInserted != null && !DataDictionaries.EventCheckingDictionary["CustomStudyInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyInserted"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyInserted", dcObjKey, 
+                CustomStudyInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"], 
+                CustomStudyInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"] == true)
             {
                 try
                 {
@@ -16235,18 +16025,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyRemoved == null && DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"] = false;
-            }
-            else if (CustomStudyRemoved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyRemoved", dcObjKey, 
+                CustomStudyRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"], 
+                CustomStudyRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"] == true)
             {
                 try
                 {
@@ -16257,18 +16040,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyResolved == null && DataDictionaries.EventCheckingDictionary["CustomStudyResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyResolved"] = false;
-            }
-            else if (CustomStudyResolved != null && !DataDictionaries.EventCheckingDictionary["CustomStudyResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyResolved"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyResolved", dcObjKey, 
+                CustomStudyResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"], 
+                CustomStudyResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"] == true)
             {
                 try
                 {
@@ -16279,18 +16055,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CustomStudyUpdated == null && DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"] = false;
-            }
-            else if (CustomStudyUpdated != null && !DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CustomStudyUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"] = true;
-            }
+            CQG.SubscriberChecking("CustomStudyUpdated", dcObjKey, 
+                CustomStudyUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"], 
+                CustomStudyUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CustomStudyUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"] == true)
             {
                 try
                 {
@@ -16301,18 +16070,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataConnectionStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = false;
-            }
-            else if (DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataConnectionStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("DataConnectionStatusChanged", dcObjKey, 
+                DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
+                DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16323,18 +16085,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataError == null && DataDictionaries.EventCheckingDictionary["DataError"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataError", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataError"] = false;
-            }
-            else if (DataError != null && !DataDictionaries.EventCheckingDictionary["DataError"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataError", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataError"] = true;
-            }
+            CQG.SubscriberChecking("DataError", dcObjKey, 
+                DataError != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
+                DataError == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataError"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
             {
                 try
                 {
@@ -16345,18 +16100,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataSourcesResolved == null && DataDictionaries.EventCheckingDictionary["DataSourcesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataSourcesResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataSourcesResolved"] = false;
-            }
-            else if (DataSourcesResolved != null && !DataDictionaries.EventCheckingDictionary["DataSourcesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataSourcesResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataSourcesResolved"] = true;
-            }
+            CQG.SubscriberChecking("DataSourcesResolved", dcObjKey, 
+                DataSourcesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"], 
+                DataSourcesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataSourcesResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"] == true)
             {
                 try
                 {
@@ -16367,18 +16115,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataSourceSymbolsResolved == null && DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataSourceSymbolsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"] = false;
-            }
-            else if (DataSourceSymbolsResolved != null && !DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataSourceSymbolsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"] = true;
-            }
+            CQG.SubscriberChecking("DataSourceSymbolsResolved", dcObjKey, 
+                DataSourceSymbolsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"], 
+                DataSourceSymbolsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataSourceSymbolsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"] == true)
             {
                 try
                 {
@@ -16389,18 +16130,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ExpressionAdded == null && DataDictionaries.EventCheckingDictionary["ExpressionAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ExpressionAdded"] = false;
-            }
-            else if (ExpressionAdded != null && !DataDictionaries.EventCheckingDictionary["ExpressionAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ExpressionAdded"] = true;
-            }
+            CQG.SubscriberChecking("ExpressionAdded", dcObjKey, 
+                ExpressionAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"], 
+                ExpressionAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ExpressionAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"] == true)
             {
                 try
                 {
@@ -16411,18 +16145,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ExpressionInserted == null && DataDictionaries.EventCheckingDictionary["ExpressionInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ExpressionInserted"] = false;
-            }
-            else if (ExpressionInserted != null && !DataDictionaries.EventCheckingDictionary["ExpressionInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ExpressionInserted"] = true;
-            }
+            CQG.SubscriberChecking("ExpressionInserted", dcObjKey, 
+                ExpressionInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"], 
+                ExpressionInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ExpressionInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"] == true)
             {
                 try
                 {
@@ -16433,18 +16160,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ExpressionRemoved == null && DataDictionaries.EventCheckingDictionary["ExpressionRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ExpressionRemoved"] = false;
-            }
-            else if (ExpressionRemoved != null && !DataDictionaries.EventCheckingDictionary["ExpressionRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ExpressionRemoved"] = true;
-            }
+            CQG.SubscriberChecking("ExpressionRemoved", dcObjKey, 
+                ExpressionRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"], 
+                ExpressionRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ExpressionRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"] == true)
             {
                 try
                 {
@@ -16455,18 +16175,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ExpressionResolved == null && DataDictionaries.EventCheckingDictionary["ExpressionResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ExpressionResolved"] = false;
-            }
-            else if (ExpressionResolved != null && !DataDictionaries.EventCheckingDictionary["ExpressionResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ExpressionResolved"] = true;
-            }
+            CQG.SubscriberChecking("ExpressionResolved", dcObjKey, 
+                ExpressionResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"], 
+                ExpressionResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ExpressionResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"] == true)
             {
                 try
                 {
@@ -16477,18 +16190,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ExpressionUpdated == null && DataDictionaries.EventCheckingDictionary["ExpressionUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ExpressionUpdated"] = false;
-            }
-            else if (ExpressionUpdated != null && !DataDictionaries.EventCheckingDictionary["ExpressionUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ExpressionUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ExpressionUpdated"] = true;
-            }
+            CQG.SubscriberChecking("ExpressionUpdated", dcObjKey, 
+                ExpressionUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"], 
+                ExpressionUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ExpressionUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"] == true)
             {
                 try
                 {
@@ -16499,18 +16205,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWConnectionStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = false;
-            }
-            else if (GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWConnectionStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("GWConnectionStatusChanged", dcObjKey, 
+                GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
+                GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16521,18 +16220,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (GWEnvironmentChanged == null && DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWEnvironmentChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"] = false;
-            }
-            else if (GWEnvironmentChanged != null && !DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWEnvironmentChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"] = true;
-            }
+            CQG.SubscriberChecking("GWEnvironmentChanged", dcObjKey, 
+                GWEnvironmentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"], 
+                GWEnvironmentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["GWEnvironmentChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"] == true)
             {
                 try
                 {
@@ -16543,18 +16235,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (HistoricalSessionsResolved == null && DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "HistoricalSessionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"] = false;
-            }
-            else if (HistoricalSessionsResolved != null && !DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "HistoricalSessionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("HistoricalSessionsResolved", dcObjKey, 
+                HistoricalSessionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"], 
+                HistoricalSessionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["HistoricalSessionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"] == true)
             {
                 try
                 {
@@ -16565,18 +16250,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ICConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ICConnectionStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"] = false;
-            }
-            else if (ICConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ICConnectionStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("ICConnectionStatusChanged", dcObjKey, 
+                ICConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"], 
+                ICConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ICConnectionStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16587,18 +16265,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IncorrectSymbol", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = false;
-            }
-            else if (IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IncorrectSymbol", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = true;
-            }
+            CQG.SubscriberChecking("IncorrectSymbol", dcObjKey, 
+                IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
+                IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
 
-            if (DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
             {
                 try
                 {
@@ -16609,18 +16280,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = false;
-            }
-            else if (InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentChanged", dcObjKey, 
+                InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
+                InstrumentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
             {
                 try
                 {
@@ -16631,18 +16295,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentDOMChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = false;
-            }
-            else if (InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentDOMChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentDOMChanged", dcObjKey, 
+                InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
+                InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
             {
                 try
                 {
@@ -16653,18 +16310,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = false;
-            }
-            else if (InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentsGroupChanged", dcObjKey, 
+                InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
+                InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
             {
                 try
                 {
@@ -16675,18 +16325,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = false;
-            }
-            else if (InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentsGroupResolved", dcObjKey, 
+                InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
+                InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
             {
                 try
                 {
@@ -16697,18 +16340,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentSubscribed", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = false;
-            }
-            else if (InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentSubscribed", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentSubscribed", dcObjKey, 
+                InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
+                InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
             {
                 try
                 {
@@ -16719,18 +16355,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (IsReady == null && DataDictionaries.EventCheckingDictionary["IsReady"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IsReady", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["IsReady"] = false;
-            }
-            else if (IsReady != null && !DataDictionaries.EventCheckingDictionary["IsReady"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IsReady", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["IsReady"] = true;
-            }
+            CQG.SubscriberChecking("IsReady", dcObjKey, 
+                IsReady != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
+                IsReady == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
 
-            if (DataDictionaries.EventCheckingDictionary["IsReady"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
             {
                 try
                 {
@@ -16742,18 +16371,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (LineTimeChanged == null && DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "LineTimeChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = false;
-            }
-            else if (LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "LineTimeChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = true;
-            }
+            CQG.SubscriberChecking("LineTimeChanged", dcObjKey, 
+                LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
+                LineTimeChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["LineTimeChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
             {
                 try
                 {
@@ -16764,18 +16386,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ManualFillChanged == null && DataDictionaries.EventCheckingDictionary["ManualFillChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ManualFillChanged"] = false;
-            }
-            else if (ManualFillChanged != null && !DataDictionaries.EventCheckingDictionary["ManualFillChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ManualFillChanged"] = true;
-            }
+            CQG.SubscriberChecking("ManualFillChanged", dcObjKey, 
+                ManualFillChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"], 
+                ManualFillChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ManualFillChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"] == true)
             {
                 try
                 {
@@ -16786,18 +16401,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ManualFillsResolved == null && DataDictionaries.EventCheckingDictionary["ManualFillsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ManualFillsResolved"] = false;
-            }
-            else if (ManualFillsResolved != null && !DataDictionaries.EventCheckingDictionary["ManualFillsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ManualFillsResolved"] = true;
-            }
+            CQG.SubscriberChecking("ManualFillsResolved", dcObjKey, 
+                ManualFillsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"], 
+                ManualFillsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ManualFillsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"] == true)
             {
                 try
                 {
@@ -16808,18 +16416,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (ManualFillUpdateResolved == null && DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillUpdateResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"] = false;
-            }
-            else if (ManualFillUpdateResolved != null && !DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "ManualFillUpdateResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"] = true;
-            }
+            CQG.SubscriberChecking("ManualFillUpdateResolved", dcObjKey, 
+                ManualFillUpdateResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"], 
+                ManualFillUpdateResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["ManualFillUpdateResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"] == true)
             {
                 try
                 {
@@ -16830,18 +16431,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (OnIdle == null && DataDictionaries.EventCheckingDictionary["OnIdle"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnIdle", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["OnIdle"] = false;
-            }
-            else if (OnIdle != null && !DataDictionaries.EventCheckingDictionary["OnIdle"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnIdle", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["OnIdle"] = true;
-            }
+            CQG.SubscriberChecking("OnIdle", dcObjKey, 
+                OnIdle != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
+                OnIdle == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
 
-            if (DataDictionaries.EventCheckingDictionary["OnIdle"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
             {
                 try
                 {
@@ -16852,18 +16446,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (OnQueryProgress == null && DataDictionaries.EventCheckingDictionary["OnQueryProgress"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnQueryProgress", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["OnQueryProgress"] = false;
-            }
-            else if (OnQueryProgress != null && !DataDictionaries.EventCheckingDictionary["OnQueryProgress"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnQueryProgress", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["OnQueryProgress"] = true;
-            }
+            CQG.SubscriberChecking("OnQueryProgress", dcObjKey, 
+                OnQueryProgress != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"], 
+                OnQueryProgress == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"]);
 
-            if (DataDictionaries.EventCheckingDictionary["OnQueryProgress"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"] == true)
             {
                 try
                 {
@@ -16874,18 +16461,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (OrderChanged == null && DataDictionaries.EventCheckingDictionary["OrderChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OrderChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["OrderChanged"] = false;
-            }
-            else if (OrderChanged != null && !DataDictionaries.EventCheckingDictionary["OrderChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OrderChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["OrderChanged"] = true;
-            }
+            CQG.SubscriberChecking("OrderChanged", dcObjKey, 
+                OrderChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"], 
+                OrderChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["OrderChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"] == true)
             {
                 try
                 {
@@ -16896,18 +16476,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PasswordChanged == null && DataDictionaries.EventCheckingDictionary["PasswordChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PasswordChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PasswordChanged"] = false;
-            }
-            else if (PasswordChanged != null && !DataDictionaries.EventCheckingDictionary["PasswordChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PasswordChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PasswordChanged"] = true;
-            }
+            CQG.SubscriberChecking("PasswordChanged", dcObjKey, 
+                PasswordChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"], 
+                PasswordChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PasswordChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"] == true)
             {
                 try
                 {
@@ -16918,18 +16491,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PointAndFigureBarsAdded == null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"] = false;
-            }
-            else if (PointAndFigureBarsAdded != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"] = true;
-            }
+            CQG.SubscriberChecking("PointAndFigureBarsAdded", dcObjKey, 
+                PointAndFigureBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"], 
+                PointAndFigureBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PointAndFigureBarsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"] == true)
             {
                 try
                 {
@@ -16940,18 +16506,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PointAndFigureBarsInserted == null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"] = false;
-            }
-            else if (PointAndFigureBarsInserted != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"] = true;
-            }
+            CQG.SubscriberChecking("PointAndFigureBarsInserted", dcObjKey, 
+                PointAndFigureBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"], 
+                PointAndFigureBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PointAndFigureBarsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"] == true)
             {
                 try
                 {
@@ -16962,18 +16521,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PointAndFigureBarsRemoved == null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"] = false;
-            }
-            else if (PointAndFigureBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("PointAndFigureBarsRemoved", dcObjKey, 
+                PointAndFigureBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"], 
+                PointAndFigureBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PointAndFigureBarsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"] == true)
             {
                 try
                 {
@@ -16984,18 +16536,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PointAndFigureBarsResolved == null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"] = false;
-            }
-            else if (PointAndFigureBarsResolved != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"] = true;
-            }
+            CQG.SubscriberChecking("PointAndFigureBarsResolved", dcObjKey, 
+                PointAndFigureBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"], 
+                PointAndFigureBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PointAndFigureBarsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"] == true)
             {
                 try
                 {
@@ -17006,18 +16551,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PointAndFigureBarsUpdated == null && DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"] = false;
-            }
-            else if (PointAndFigureBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PointAndFigureBarsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("PointAndFigureBarsUpdated", dcObjKey, 
+                PointAndFigureBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"], 
+                PointAndFigureBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PointAndFigureBarsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"] == true)
             {
                 try
                 {
@@ -17028,18 +16566,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (PositionsStatementResolved == null && DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PositionsStatementResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"] = false;
-            }
-            else if (PositionsStatementResolved != null && !DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "PositionsStatementResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"] = true;
-            }
+            CQG.SubscriberChecking("PositionsStatementResolved", dcObjKey, 
+                PositionsStatementResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"], 
+                PositionsStatementResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["PositionsStatementResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"] == true)
             {
                 try
                 {
@@ -17050,18 +16581,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (QFormulaDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "QFormulaDefinitionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"] = false;
-            }
-            else if (QFormulaDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "QFormulaDefinitionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("QFormulaDefinitionsResolved", dcObjKey, 
+                QFormulaDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"], 
+                QFormulaDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["QFormulaDefinitionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -17072,18 +16596,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (StrategyDefinitionProgress == null && DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "StrategyDefinitionProgress", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"] = false;
-            }
-            else if (StrategyDefinitionProgress != null && !DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "StrategyDefinitionProgress", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"] = true;
-            }
+            CQG.SubscriberChecking("StrategyDefinitionProgress", dcObjKey, 
+                StrategyDefinitionProgress != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"], 
+                StrategyDefinitionProgress == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"]);
 
-            if (DataDictionaries.EventCheckingDictionary["StrategyDefinitionProgress"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"] == true)
             {
                 try
                 {
@@ -17094,18 +16611,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SubMinuteBarsAdded == null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"] = false;
-            }
-            else if (SubMinuteBarsAdded != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"] = true;
-            }
+            CQG.SubscriberChecking("SubMinuteBarsAdded", dcObjKey, 
+                SubMinuteBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"], 
+                SubMinuteBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SubMinuteBarsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"] == true)
             {
                 try
                 {
@@ -17116,18 +16626,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SubMinuteBarsInserted == null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"] = false;
-            }
-            else if (SubMinuteBarsInserted != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"] = true;
-            }
+            CQG.SubscriberChecking("SubMinuteBarsInserted", dcObjKey, 
+                SubMinuteBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"], 
+                SubMinuteBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SubMinuteBarsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"] == true)
             {
                 try
                 {
@@ -17138,18 +16641,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SubMinuteBarsRemoved == null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"] = false;
-            }
-            else if (SubMinuteBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("SubMinuteBarsRemoved", dcObjKey, 
+                SubMinuteBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"], 
+                SubMinuteBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SubMinuteBarsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"] == true)
             {
                 try
                 {
@@ -17160,18 +16656,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SubMinuteBarsResolved == null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"] = false;
-            }
-            else if (SubMinuteBarsResolved != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"] = true;
-            }
+            CQG.SubscriberChecking("SubMinuteBarsResolved", dcObjKey, 
+                SubMinuteBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"], 
+                SubMinuteBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SubMinuteBarsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"] == true)
             {
                 try
                 {
@@ -17182,18 +16671,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SubMinuteBarsUpdated == null && DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"] = false;
-            }
-            else if (SubMinuteBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SubMinuteBarsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("SubMinuteBarsUpdated", dcObjKey, 
+                SubMinuteBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"], 
+                SubMinuteBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SubMinuteBarsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"] == true)
             {
                 try
                 {
@@ -17204,18 +16686,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (SummariesStatementResolved == null && DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SummariesStatementResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"] = false;
-            }
-            else if (SummariesStatementResolved != null && !DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "SummariesStatementResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"] = true;
-            }
+            CQG.SubscriberChecking("SummariesStatementResolved", dcObjKey, 
+                SummariesStatementResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"], 
+                SummariesStatementResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["SummariesStatementResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"] == true)
             {
                 try
                 {
@@ -17226,18 +16701,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TFlowBarsAdded == null && DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"] = false;
-            }
-            else if (TFlowBarsAdded != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"] = true;
-            }
+            CQG.SubscriberChecking("TFlowBarsAdded", dcObjKey, 
+                TFlowBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"], 
+                TFlowBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TFlowBarsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"] == true)
             {
                 try
                 {
@@ -17248,18 +16716,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TFlowBarsInserted == null && DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"] = false;
-            }
-            else if (TFlowBarsInserted != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"] = true;
-            }
+            CQG.SubscriberChecking("TFlowBarsInserted", dcObjKey, 
+                TFlowBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"], 
+                TFlowBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TFlowBarsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"] == true)
             {
                 try
                 {
@@ -17270,18 +16731,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TFlowBarsRemoved == null && DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"] = false;
-            }
-            else if (TFlowBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("TFlowBarsRemoved", dcObjKey, 
+                TFlowBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"], 
+                TFlowBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TFlowBarsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"] == true)
             {
                 try
                 {
@@ -17292,18 +16746,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TFlowBarsResolved == null && DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"] = false;
-            }
-            else if (TFlowBarsResolved != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"] = true;
-            }
+            CQG.SubscriberChecking("TFlowBarsResolved", dcObjKey, 
+                TFlowBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"], 
+                TFlowBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TFlowBarsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"] == true)
             {
                 try
                 {
@@ -17314,18 +16761,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TFlowBarsUpdated == null && DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"] = false;
-            }
-            else if (TFlowBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TFlowBarsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("TFlowBarsUpdated", dcObjKey, 
+                TFlowBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"], 
+                TFlowBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TFlowBarsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"] == true)
             {
                 try
                 {
@@ -17336,18 +16776,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TicksAdded == null && DataDictionaries.EventCheckingDictionary["TicksAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TicksAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TicksAdded"] = false;
-            }
-            else if (TicksAdded != null && !DataDictionaries.EventCheckingDictionary["TicksAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TicksAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TicksAdded"] = true;
-            }
+            CQG.SubscriberChecking("TicksAdded", dcObjKey, 
+                TicksAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"], 
+                TicksAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TicksAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"] == true)
             {
                 try
                 {
@@ -17358,18 +16791,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TicksResolved == null && DataDictionaries.EventCheckingDictionary["TicksResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TicksResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TicksResolved"] = false;
-            }
-            else if (TicksResolved != null && !DataDictionaries.EventCheckingDictionary["TicksResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TicksResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TicksResolved"] = true;
-            }
+            CQG.SubscriberChecking("TicksResolved", dcObjKey, 
+                TicksResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"], 
+                TicksResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TicksResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"] == true)
             {
                 try
                 {
@@ -17380,18 +16806,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TimedBarsAdded == null && DataDictionaries.EventCheckingDictionary["TimedBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsAdded"] = false;
-            }
-            else if (TimedBarsAdded != null && !DataDictionaries.EventCheckingDictionary["TimedBarsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsAdded"] = true;
-            }
+            CQG.SubscriberChecking("TimedBarsAdded", dcObjKey, 
+                TimedBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"], 
+                TimedBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TimedBarsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"] == true)
             {
                 try
                 {
@@ -17402,18 +16821,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TimedBarsInserted == null && DataDictionaries.EventCheckingDictionary["TimedBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsInserted"] = false;
-            }
-            else if (TimedBarsInserted != null && !DataDictionaries.EventCheckingDictionary["TimedBarsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsInserted"] = true;
-            }
+            CQG.SubscriberChecking("TimedBarsInserted", dcObjKey, 
+                TimedBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"], 
+                TimedBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TimedBarsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"] == true)
             {
                 try
                 {
@@ -17424,18 +16836,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TimedBarsRemoved == null && DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"] = false;
-            }
-            else if (TimedBarsRemoved != null && !DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("TimedBarsRemoved", dcObjKey, 
+                TimedBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"], 
+                TimedBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TimedBarsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"] == true)
             {
                 try
                 {
@@ -17446,18 +16851,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TimedBarsResolved == null && DataDictionaries.EventCheckingDictionary["TimedBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsResolved"] = false;
-            }
-            else if (TimedBarsResolved != null && !DataDictionaries.EventCheckingDictionary["TimedBarsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsResolved"] = true;
-            }
+            CQG.SubscriberChecking("TimedBarsResolved", dcObjKey, 
+                TimedBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"], 
+                TimedBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TimedBarsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"] == true)
             {
                 try
                 {
@@ -17468,18 +16866,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TimedBarsUpdated == null && DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"] = false;
-            }
-            else if (TimedBarsUpdated != null && !DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TimedBarsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("TimedBarsUpdated", dcObjKey, 
+                TimedBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"], 
+                TimedBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TimedBarsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"] == true)
             {
                 try
                 {
@@ -17490,18 +16881,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradableCommoditiesResolved == null && DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradableCommoditiesResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"] = false;
-            }
-            else if (TradableCommoditiesResolved != null && !DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradableCommoditiesResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"] = true;
-            }
+            CQG.SubscriberChecking("TradableCommoditiesResolved", dcObjKey, 
+                TradableCommoditiesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"], 
+                TradableCommoditiesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradableCommoditiesResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"] == true)
             {
                 try
                 {
@@ -17512,18 +16896,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradableExchangesResolved == null && DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradableExchangesResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"] = false;
-            }
-            else if (TradableExchangesResolved != null && !DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradableExchangesResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"] = true;
-            }
+            CQG.SubscriberChecking("TradableExchangesResolved", dcObjKey, 
+                TradableExchangesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"], 
+                TradableExchangesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradableExchangesResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"] == true)
             {
                 try
                 {
@@ -17534,18 +16911,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemAddNotification == null && DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemAddNotification", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"] = false;
-            }
-            else if (TradingSystemAddNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemAddNotification", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemAddNotification", dcObjKey, 
+                TradingSystemAddNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"], 
+                TradingSystemAddNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemAddNotification"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"] == true)
             {
                 try
                 {
@@ -17556,18 +16926,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemDefinitionsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"] = false;
-            }
-            else if (TradingSystemDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemDefinitionsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemDefinitionsResolved", dcObjKey, 
+                TradingSystemDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"], 
+                TradingSystemDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemDefinitionsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -17578,18 +16941,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemInsertNotification == null && DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemInsertNotification", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"] = false;
-            }
-            else if (TradingSystemInsertNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemInsertNotification", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemInsertNotification", dcObjKey, 
+                TradingSystemInsertNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"], 
+                TradingSystemInsertNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemInsertNotification"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"] == true)
             {
                 try
                 {
@@ -17600,18 +16956,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemRemoveNotification == null && DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemRemoveNotification", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"] = false;
-            }
-            else if (TradingSystemRemoveNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemRemoveNotification", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemRemoveNotification", dcObjKey, 
+                TradingSystemRemoveNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"], 
+                TradingSystemRemoveNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemRemoveNotification"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"] == true)
             {
                 try
                 {
@@ -17622,18 +16971,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemResolved == null && DataDictionaries.EventCheckingDictionary["TradingSystemResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemResolved"] = false;
-            }
-            else if (TradingSystemResolved != null && !DataDictionaries.EventCheckingDictionary["TradingSystemResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemResolved"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemResolved", dcObjKey, 
+                TradingSystemResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"], 
+                TradingSystemResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"] == true)
             {
                 try
                 {
@@ -17644,18 +16986,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemTradeRelationAddNotification == null && DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemTradeRelationAddNotification", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"] = false;
-            }
-            else if (TradingSystemTradeRelationAddNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemTradeRelationAddNotification", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemTradeRelationAddNotification", dcObjKey, 
+                TradingSystemTradeRelationAddNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"], 
+                TradingSystemTradeRelationAddNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemTradeRelationAddNotification"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"] == true)
             {
                 try
                 {
@@ -17666,18 +17001,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (TradingSystemUpdateNotification == null && DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemUpdateNotification", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"] = false;
-            }
-            else if (TradingSystemUpdateNotification != null && !DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "TradingSystemUpdateNotification", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"] = true;
-            }
+            CQG.SubscriberChecking("TradingSystemUpdateNotification", dcObjKey, 
+                TradingSystemUpdateNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"], 
+                TradingSystemUpdateNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary["TradingSystemUpdateNotification"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"] == true)
             {
                 try
                 {
@@ -17688,18 +17016,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (YieldsAdded == null && DataDictionaries.EventCheckingDictionary["YieldsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsAdded", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["YieldsAdded"] = false;
-            }
-            else if (YieldsAdded != null && !DataDictionaries.EventCheckingDictionary["YieldsAdded"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsAdded", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["YieldsAdded"] = true;
-            }
+            CQG.SubscriberChecking("YieldsAdded", dcObjKey, 
+                YieldsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"], 
+                YieldsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary["YieldsAdded"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"] == true)
             {
                 try
                 {
@@ -17710,18 +17031,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (YieldsInserted == null && DataDictionaries.EventCheckingDictionary["YieldsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsInserted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["YieldsInserted"] = false;
-            }
-            else if (YieldsInserted != null && !DataDictionaries.EventCheckingDictionary["YieldsInserted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsInserted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["YieldsInserted"] = true;
-            }
+            CQG.SubscriberChecking("YieldsInserted", dcObjKey, 
+                YieldsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"], 
+                YieldsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["YieldsInserted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"] == true)
             {
                 try
                 {
@@ -17732,18 +17046,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (YieldsRemoved == null && DataDictionaries.EventCheckingDictionary["YieldsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsRemoved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["YieldsRemoved"] = false;
-            }
-            else if (YieldsRemoved != null && !DataDictionaries.EventCheckingDictionary["YieldsRemoved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsRemoved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["YieldsRemoved"] = true;
-            }
+            CQG.SubscriberChecking("YieldsRemoved", dcObjKey, 
+                YieldsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"], 
+                YieldsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["YieldsRemoved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"] == true)
             {
                 try
                 {
@@ -17754,18 +17061,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (YieldsResolved == null && DataDictionaries.EventCheckingDictionary["YieldsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["YieldsResolved"] = false;
-            }
-            else if (YieldsResolved != null && !DataDictionaries.EventCheckingDictionary["YieldsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["YieldsResolved"] = true;
-            }
+            CQG.SubscriberChecking("YieldsResolved", dcObjKey, 
+                YieldsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"], 
+                YieldsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["YieldsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"] == true)
             {
                 try
                 {
@@ -17776,18 +17076,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (YieldsUpdated == null && DataDictionaries.EventCheckingDictionary["YieldsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsUpdated", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["YieldsUpdated"] = false;
-            }
-            else if (YieldsUpdated != null && !DataDictionaries.EventCheckingDictionary["YieldsUpdated"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "YieldsUpdated", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["YieldsUpdated"] = true;
-            }
+            CQG.SubscriberChecking("YieldsUpdated", dcObjKey, 
+                YieldsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"], 
+                YieldsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary["YieldsUpdated"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"] == true)
             {
                 try
                 {
@@ -21294,18 +20587,11 @@ namespace FakeCQG
 
         private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
         {
-            if (CELStarted == null && DataDictionaries.EventCheckingDictionary["CELStarted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CELStarted", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CELStarted"] = false;
-            }
-            else if (CELStarted != null && !DataDictionaries.EventCheckingDictionary["CELStarted"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CELStarted", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CELStarted"] = true;
-            }
+            CQG.SubscriberChecking("CELStarted", dcObjKey, 
+                CELStarted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
+                CELStarted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CELStarted"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
             {
                 try
                 {
@@ -21316,18 +20602,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CurrencyRatesChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = false;
-            }
-            else if (CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CurrencyRatesChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] = true;
-            }
+            CQG.SubscriberChecking("CurrencyRatesChanged", dcObjKey, 
+                CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
+                CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CurrencyRatesChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
             {
                 try
                 {
@@ -21338,18 +20617,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataConnectionStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = false;
-            }
-            else if (DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataConnectionStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("DataConnectionStatusChanged", dcObjKey, 
+                DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
+                DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataConnectionStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -21360,18 +20632,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (DataError == null && DataDictionaries.EventCheckingDictionary["DataError"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataError", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["DataError"] = false;
-            }
-            else if (DataError != null && !DataDictionaries.EventCheckingDictionary["DataError"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "DataError", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["DataError"] = true;
-            }
+            CQG.SubscriberChecking("DataError", dcObjKey, 
+                DataError != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
+                DataError == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
 
-            if (DataDictionaries.EventCheckingDictionary["DataError"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
             {
                 try
                 {
@@ -21382,18 +20647,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWConnectionStatusChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = false;
-            }
-            else if (GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "GWConnectionStatusChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] = true;
-            }
+            CQG.SubscriberChecking("GWConnectionStatusChanged", dcObjKey, 
+                GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
+                GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["GWConnectionStatusChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -21404,18 +20662,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (IsReady == null && DataDictionaries.EventCheckingDictionary["IsReady"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IsReady", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["IsReady"] = false;
-            }
-            else if (IsReady != null && !DataDictionaries.EventCheckingDictionary["IsReady"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IsReady", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["IsReady"] = true;
-            }
+            CQG.SubscriberChecking("IsReady", dcObjKey, 
+                IsReady != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
+                IsReady == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
 
-            if (DataDictionaries.EventCheckingDictionary["IsReady"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
             {
                 try
                 {
@@ -21427,18 +20678,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (LineTimeChanged == null && DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "LineTimeChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = false;
-            }
-            else if (LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary["LineTimeChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "LineTimeChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["LineTimeChanged"] = true;
-            }
+            CQG.SubscriberChecking("LineTimeChanged", dcObjKey, 
+                LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
+                LineTimeChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["LineTimeChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
             {
                 try
                 {
@@ -21449,18 +20693,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (OnIdle == null && DataDictionaries.EventCheckingDictionary["OnIdle"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnIdle", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["OnIdle"] = false;
-            }
-            else if (OnIdle != null && !DataDictionaries.EventCheckingDictionary["OnIdle"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "OnIdle", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["OnIdle"] = true;
-            }
+            CQG.SubscriberChecking("OnIdle", dcObjKey, 
+                OnIdle != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
+                OnIdle == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
 
-            if (DataDictionaries.EventCheckingDictionary["OnIdle"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
             {
                 try
                 {
@@ -21471,18 +20708,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CommodityInstrumentsResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = false;
-            }
-            else if (CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "CommodityInstrumentsResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] = true;
-            }
+            CQG.SubscriberChecking("CommodityInstrumentsResolved", dcObjKey, 
+                CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
+                CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["CommodityInstrumentsResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
             {
                 try
                 {
@@ -21493,18 +20723,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IncorrectSymbol", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = false;
-            }
-            else if (IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary["IncorrectSymbol"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "IncorrectSymbol", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] = true;
-            }
+            CQG.SubscriberChecking("IncorrectSymbol", dcObjKey, 
+                IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
+                IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
 
-            if (DataDictionaries.EventCheckingDictionary["IncorrectSymbol"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
             {
                 try
                 {
@@ -21515,18 +20738,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = false;
-            }
-            else if (InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentChanged", dcObjKey, 
+                InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
+                InstrumentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
             {
                 try
                 {
@@ -21537,18 +20753,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentDOMChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = false;
-            }
-            else if (InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentDOMChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentDOMChanged", dcObjKey, 
+                InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
+                InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentDOMChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
             {
                 try
                 {
@@ -21559,18 +20768,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupChanged", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = false;
-            }
-            else if (InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupChanged", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentsGroupChanged", dcObjKey, 
+                InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
+                InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentsGroupChanged"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
             {
                 try
                 {
@@ -21581,18 +20783,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupResolved", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = false;
-            }
-            else if (InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentsGroupResolved", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentsGroupResolved", dcObjKey, 
+                InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
+                InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentsGroupResolved"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
             {
                 try
                 {
@@ -21603,18 +20798,11 @@ namespace FakeCQG
                 { }
             }
 
-            if (InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentSubscribed", new object[] { "-" });
-                DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = false;
-            }
-            else if (InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"])
-            {
-                bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, "InstrumentSubscribed", new object[] { "+" });
-                DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] = true;
-            }
+            CQG.SubscriberChecking("InstrumentSubscribed", dcObjKey, 
+                InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
+                InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
 
-            if (DataDictionaries.EventCheckingDictionary["InstrumentSubscribed"] == true)
+            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
             {
                 try
                 {

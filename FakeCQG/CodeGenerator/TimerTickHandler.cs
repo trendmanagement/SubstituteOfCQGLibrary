@@ -7,19 +7,12 @@ namespace CodeGenerator
     {
         static void EventChecking(EventInfo einfo)
         {
-            File.WriteLine(Indent2 + "if (" + einfo.Name + " == null && DataDictionaries.EventCheckingDictionary[\"" + einfo.Name + "\"])" +
-                Environment.NewLine + Indent2 + "{");
-            File.WriteLine(Indent3 + "bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, \"" +
-                einfo.Name + "\", new object[] { \"-\" });");
-            File.WriteLine(Indent3 + "DataDictionaries.EventCheckingDictionary[\"" + einfo.Name + "\"] = false;");
-            File.WriteLine(Indent2 + "}" + Environment.NewLine + Indent2 + "else if (" + einfo.Name + 
-                " != null && !DataDictionaries.EventCheckingDictionary[\"" + einfo.Name + "\"])" +
-                Environment.NewLine + Indent2 + "{");
-            File.WriteLine(Indent3 + "bool res = (bool)CQG.ExecuteTheQuery(QueryInfo.QueryType.Event, dcObjKey, \"" +
-                einfo.Name + "\", new object[] { \"+\" });");
-            File.WriteLine(Indent3 + "DataDictionaries.EventCheckingDictionary[\"" + einfo.Name + "\"] = true;");
-            File.WriteLine(Indent2 + "}"+ Environment.NewLine);
-            File.WriteLine(Indent2 + "if (DataDictionaries.EventCheckingDictionary[\"" + einfo.Name + "\"] == true)" +
+            File.WriteLine(Indent2 + "CQG.SubscriberChecking(\"" + einfo.Name + "\", dcObjKey, " + Environment.NewLine +
+                Indent3 + einfo.Name + " != null && !DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
+                + Environment.NewLine + Indent3 + einfo.Name + " == null && DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
+                "\"]);" + Environment.NewLine);
+
+            File.WriteLine(Indent2 + "if (DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"] == true)" +
                 Environment.NewLine + Indent2 + "{");
             File.WriteLine(Indent3 + "try" + Environment.NewLine + Indent3 + "{");
             File.WriteLine(Indent4 + "object[] args = CQG.AnswerHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\");");
