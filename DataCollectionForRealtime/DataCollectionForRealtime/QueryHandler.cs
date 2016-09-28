@@ -123,18 +123,29 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
+                        try
+                        {
+                            var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
 
-                        if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
-                        {
-                            string answerKey = "value";
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                            if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
+                            {
+                                string answerKey = "value";
+                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                            }
+                            else
+                            {
+                                string answerKey = FakeCQG.CQG.CreateUniqueKey();
+                                DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
+                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                            }
                         }
-                        else
+                        catch(Exception ex)
                         {
-                            string answerKey = FakeCQG.CQG.CreateUniqueKey();
-                            DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
                         }
 
                         PushAnswerAndDeleteQuery(answer);
@@ -147,9 +158,19 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, args);
-
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        try
+                        {
+                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, args);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        }
+                        catch(Exception ex)
+                        {
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
+                        }
 
                         PushAnswerAndDeleteQuery(answer);
                     }
@@ -161,26 +182,37 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
-
-                        if (!object.ReferenceEquals(returnV, null))
+                        try
                         {
-                            if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                            object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
+
+                            if (!object.ReferenceEquals(returnV, null))
                             {
-                                var returnKey = "value";
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
+                                if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                                {
+                                    var returnKey = "value";
+                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
+                                }
+                                else
+                                {
+                                    var returnKey = FakeCQG.CQG.CreateUniqueKey();
+                                    DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
+                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                                }
                             }
                             else
                             {
-                                var returnKey = FakeCQG.CQG.CreateUniqueKey();
-                                DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
+                                var returnKey = "true";
                                 answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                             }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            var returnKey = "true";
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
                         }
 
                         DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
