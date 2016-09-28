@@ -210,12 +210,12 @@ namespace FakeCQG
         {
             if (isUnsubscriptionRequired)
             {
-                bool res = (bool)ExecuteTheQuery(QueryInfo.QueryType.UnsubscribeFromEvent, objKey, name);
+                ExecuteTheQuery(QueryInfo.QueryType.UnsubscribeFromEvent, objKey, name);
                 DataDictionaries.EventCheckingDictionary[objKey][name] = false;
             }
             else if (isSubscriptionRequired)
             {
-                bool res = (bool)ExecuteTheQuery(QueryInfo.QueryType.SubscribeToEvent, objKey, name);
+                ExecuteTheQuery(QueryInfo.QueryType.SubscribeToEvent, objKey, name);
                 DataDictionaries.EventCheckingDictionary[objKey][name] = true;
             }
         }

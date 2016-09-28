@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
@@ -27,43 +26,20 @@ namespace DataCollectionForRealtime
             }
         }
 
-        public QueryHandler(RealtimeDataManagement rdm)
-        {
-            CqgDataManagement = new CQGDataManagement(rdm);
-            QueryList = new List<QueryInfo>();
-            KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
         public QueryHandler(CQGDataManagement cqgDM)
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>();
             KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
+            CQGAssm = cqgDM.CQGAssm;
         }
 
-        public QueryHandler(RealtimeDataManagement rdm, IList<QueryInfo> ql)
-        {
-            CqgDataManagement = new CQGDataManagement(rdm);
-            QueryList = new List<QueryInfo>(ql);
-            KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
-        public QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
+        internal QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>(ql);
             KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
-        public void LoadCQGAssembly()
-        {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assmPath = Path.Combine(path, "Interop.CQG.dll");
-            CQGAssm = Assembly.LoadFile(assmPath);
+            CQGAssm = cqgDM.CQGAssm;
         }
 
         public void SetQueryList(List<QueryInfo> queries)
@@ -183,7 +159,6 @@ namespace DataCollectionForRealtime
                             answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                         }
 
-                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                         PushAnswerAndDeleteQuery(answer);
                     }
                     break;
@@ -207,20 +182,22 @@ namespace DataCollectionForRealtime
                         {
                             // Subscribe our handler to CQG event
                             ei.AddEventHandler(qObj, d);
-                            //qObj.GetType().InvokeMember("add_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
                         }
                         else if (query.TypeOfQuery == QueryInfo.QueryType.UnsubscribeFromEvent)
                         {
-                            // Unsubscribe our handler to CQG event
+                            // Unsubscribe our handler from CQG event
                             ei.RemoveEventHandler(qObj, d);
-                            //qObj.GetType().InvokeMember("remove_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
                         }
 
-                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
                         PushAnswerAndDeleteQuery(answer);
                     }
                     break;
+
+                default:
+                    {
+                        throw new ArgumentOutOfRangeException();
+                    }
             }
         }
 
@@ -246,7 +223,7 @@ namespace DataCollectionForRealtime
             {
                 if (IsDelegate(type))
                 {
-                    //MethodInfo minfo = type.GetMethod("Invoke");
+                    MethodInfo minfo = type.GetMethod("Invoke");
                     if (type.Name == delegateTypeName)
                     {
                         return type;
