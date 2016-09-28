@@ -14,6 +14,8 @@ namespace FakeCQG.Models
         public string ObjectKey { get; set; }
         public string QueryName { get; set; }
         public Dictionary<int, object> ArgValues { get; set; }
+
+        private string _valueKey;
         public string ValueKey
         {
             get
@@ -23,11 +25,11 @@ namespace FakeCQG.Models
                     _exception.Invoke();
                     return string.Empty;
                 }
-                return ValueKey;
+                return _valueKey;
             }
             set
             {
-                ValueKey = value;
+                _valueKey = value;
             }
         }
         public object Value { get; set; }
