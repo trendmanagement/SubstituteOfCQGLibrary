@@ -30,11 +30,26 @@ namespace FakeCQG.Helpers
 
         public AnswerHelper()
         {
-            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
-            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.AnswerCollectionName);
+            Connect();
         }
 
+        ~AnswerHelper()
+        {
+            Disconnect();
+        }
+
+        private void Disconnect()
+        {
+            Client.DropDatabase(ConnectionSettings.MongoDBName);
+        }
+
+        public bool Connect()
+        {
+            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
+            Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.QueryCollectionName);
+            return (Collection != null) ? false : true;
+        }
         public Task PushAnswerAsync(AnswerInfo answer)
         {
             return Task.Run(() => PushAnswer(answer));
@@ -54,6 +69,10 @@ namespace FakeCQG.Helpers
             catch (Exception ex)
             {
                 CQG.OnLogChange(ex.Message);
+                if (Connect())
+                {
+                    PushAnswer(answer);
+                }
             }
         }
 
@@ -71,6 +90,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        CheckAnswerAsync(Id);
+                    }
                 }
 
                 return (result != null);
@@ -86,23 +109,20 @@ namespace FakeCQG.Helpers
                 CQG.OnLogChange(answer.Key, answer.ValueKey, false);
                 RemoveAnswerAsync(answer.Key);
                 isAns = true;
-                //if (answer.Key == "value")
-                //{
-                //    isVal = true;
-                //    return answer.Value;
-                //}
-                //else
-                //{
-                //    isVal = false;
-                //    return answer;
-                //}
                 return answer;
             }
             catch (Exception)
             {
-                CQG.OnLogChange(id, "null", false);
-                isAns = false;
-                return null;
+                if (Connect())
+                {
+                    return GetAnswerData(id, out isAns);
+                }
+                else
+                {
+                    CQG.OnLogChange(id, "null", false);
+                    isAns = false;
+                    return null;
+                }
             }
         }
 
@@ -121,18 +141,10 @@ namespace FakeCQG.Helpers
                 }
                 catch (Exception)
                 {
-                    //OnLogChange(id, "null", false);
-                    //if (!DataDictionaries.IsAnswer[id])
-                    //{
-                    //    return GetAnswerData(id);
-                    //}
-                    //else
-                    //{
-                    //    return answer;
-                    //}
-
-                    ////TODO: Create type of exception for  variant "no answer"
-                    //throw new Exception("No answer in MongoDB");
+                    if (Connect())
+                    {
+                        return GetAnswerData(id);
+                    }
                 }
             }
             return answer;
@@ -151,6 +163,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        ClearAnswersListAsync();
+                    }
                 }
             });
         }
@@ -167,6 +183,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        RemoveAnswerAsync(key);
+                    }
                 }
             });
         }
@@ -183,7 +203,14 @@ namespace FakeCQG.Helpers
             catch (Exception ex)
             {
                 CQG.OnLogChange(ex.Message);
-                return null;
+                if (Connect())
+                {
+                    return CheckWhetherEventHappened(name);
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
@@ -203,6 +230,10 @@ namespace FakeCQG.Helpers
             catch (Exception ex)
             {
                 CQG.OnLogChange(ex.Message);
+                if (Connect())
+                {
+                    CommonEventHandler(name, args);
+                }
             }
         }
     }

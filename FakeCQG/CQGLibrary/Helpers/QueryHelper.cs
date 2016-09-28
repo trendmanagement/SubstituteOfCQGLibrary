@@ -34,11 +34,26 @@ namespace FakeCQG.Helpers
 
         public QueryHelper()
         {
+            Connect();
+        }
+
+        ~QueryHelper()
+        {
+            Disconnect();
+        }
+
+        private void Disconnect()
+        {
+            Client.DropDatabase(ConnectionSettings.MongoDBName);
+        }
+
+        public bool Connect()
+        {
             Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
             Collection = Database.GetCollection<QueryInfo>(ConnectionSettings.QueryCollectionName);
+            return (Collection != null) ? false : true;
         }
-
         public Task PushQueryAsync(QueryInfo query)
         {
             return Task.Run(() =>
@@ -51,6 +66,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        PushQueryAsync(query);
+                    }
                 }
             });
         }
@@ -68,6 +87,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        CheckQueryAsync(Id);
+                    }
                 }
                 return (result != null);
             });
@@ -105,6 +128,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        ReadQueriesAsync(keysOfQueriesInProcess);
+                    }
                 }
             });
         }
@@ -122,6 +149,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        ClearQueriesListAsync();
+                    }
                 }
             });
         }
@@ -138,6 +169,10 @@ namespace FakeCQG.Helpers
                 catch (Exception ex)
                 {
                     CQG.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        RemoveQueryAsync(key);
+                    }
                 }
             });
         }
@@ -152,6 +187,10 @@ namespace FakeCQG.Helpers
             catch (Exception ex)
             {
                 CQG.OnLogChange(ex.Message);
+                if (Connect())
+                {
+                    DeleteProcessedQuery(key);
+                }
             }
         }
     }

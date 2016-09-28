@@ -70,7 +70,7 @@
     <Compile Include="Handshaking\Subscriber.cs" />
     <Compile Include="Helpers\AnswerHelper.cs" />
     <Compile Include="Helpers\ConnectionSettings.cs" />
-    <Compile Include="Helpers\MongoHelper.cs" />
+    <Compile Include="Helpers\HandshakingHelper.cs" />
     <Compile Include="Helpers\QueryHelper.cs" />
     <Compile Include="Internal.cs" />
     <Compile Include="Models\AnswerInfo.cs" />
