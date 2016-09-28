@@ -51,7 +51,10 @@ namespace CodeGenerator
             {
                 File.Write("static ");
             }
-            File.Write(TypeToString(pinfo.PropertyType) + " ");
+
+            // Write property type
+            string propTypeStr = TypeToString(pinfo.PropertyType);
+            File.Write(propTypeStr + " ");
 
             ParameterInfo[] indexParams = pinfo.GetIndexParameters();
             if (indexParams.Length == 0)
@@ -63,109 +66,77 @@ namespace CodeGenerator
             {
                 // This is an index property
                 File.Write("this[");
-                CreateMethodArguments(indexParams, null);
+                CreateMethodArguments(indexParams);
                 File.WriteLine("]");
             }
 
             File.WriteLine(Indent1 + "{");
 
-            string colon = isInterface ? ";" : string.Empty;
+            string colonOrEmpty = isInterface ? ";" : string.Empty;
 
             if (pinfo.GetGetMethod() != null)
             {
-                File.WriteLine(Indent2 + "get" + colon);
+                // Create getter
+                File.WriteLine(Indent2 + "get" + colonOrEmpty);
                 if (!isInterface)
                 {
-                    if (pinfo.PropertyType.Assembly.FullName.Substring(0, 8) == "mscorlib" || pinfo.PropertyType.IsEnum)
+                    File.WriteLine(Indent2 + "{");
+                    File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
+
+                    string args;
+                    if (indexParams.Length == 0)
                     {
-                        File.WriteLine(Indent2 + "{");
-                        File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                        File.WriteLine(Indent3 + "var result = (" + TypeToString(pinfo.PropertyType) + ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);");
-                        File.WriteLine(Indent3 + "return result;");
-                        File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                        args = "dcObjKey, name";
                     }
                     else
                     {
-                        //File.WriteLine(Indent2 + "{");
-                        //File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                        //File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + " prop = new " +
-                        //    TypeToString(pinfo.PropertyType) + "((" + TypeToString(pinfo.PropertyType) +
-                        //    ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name));");
-                        //File.WriteLine(Indent3 + "return prop;");
-                        //File.WriteLine(Indent2 + "}" + Environment.NewLine);
-                        File.WriteLine(Indent2 + "{");
-                        File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                        File.WriteLine(Indent3 + "string " + pinfo.Name + 
-                            "Key = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, thisObjUnqKey, name);");
+                        // Write a line of code that collects all the index parameters into object[] as following:
+                        // var args = new object[] { arg1, arg2, ..., argn }
+                        CreateArgsObjectArray(File, Indent3, indexParams);
+
+                        args = "dcObjKey, name, args";
+                    }
+
+                    if (IsSerializableType(pinfo.PropertyType))
+                    {
+                        File.WriteLine(Indent3 + "var value = CQG.GetProperty<" + propTypeStr + ">(" + args + ");");
+                    }
+                    else
+                    {
+                        File.WriteLine(Indent3 + "string key = CQG.GetProperty<string>(" + args + ");");
+                        File.Write(Indent3 + "var value = new " + propTypeStr);
                         if (pinfo.PropertyType.IsInterface)
                         {
-                            File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + "Class prop = new " +
-                            TypeToString(pinfo.PropertyType)  + "Class();");
+                            File.Write("Class");
                         }
-                        else
-                        {
-                            File.WriteLine(Indent3 + TypeToString(pinfo.PropertyType) + " prop = new " +
-                                TypeToString(pinfo.PropertyType) + "();");
-                        }
-                        File.WriteLine(Indent3 + "object propFlld = prop;");
-                        File.WriteLine(Indent3 + "CQG.GetPropertiesFromMatryoshka(ref propFlld, thisObjUnqKey);");
-                        File.WriteLine(Indent3 + "return (" + TypeToString(pinfo.PropertyType) + ")propFlld;");
-                        File.WriteLine(Indent2 + "}" + Environment.NewLine);
+                        File.WriteLine("(key);");
                     }
+
+                    File.WriteLine(Indent3 + "return value;");
+                    File.WriteLine(Indent2 + "}" + Environment.NewLine);
                 }
             }
 
             if (pinfo.GetSetMethod() != null)
             {
-                File.WriteLine(Indent2 + "set" + colon);
+                // Create setter
+                File.WriteLine(Indent2 + "set" + colonOrEmpty);
                 if (!isInterface)
                 {
+                    if (indexParams.Length > 1)
+                    {
+                        // Such properties were not found in CQG 
+                        throw new NotImplementedException();
+                    }
                     File.WriteLine(Indent2 + "{");
                     File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                    File.WriteLine(Indent3 + "CQG.SetProperty(name, thisObjUnqKey, value);");
+                    File.WriteLine(Indent3 + "CQG.SetProperty(dcObjKey, name, value);");
                     File.WriteLine(Indent2 + "}");
                 }
             }
 
             MemberEnd();
         }
-        //
-        //static void GetPropertiesFromMatryoshka(PropertyInfo pinfo)
-        //{
-        //    foreach(var pi in pinfo.GetType().GetProperties())
-        //    {
-        //        string propType = TypeToString(pi.PropertyType);
-        //        if (propType == "IEnumerable`1")
-        //        {
-        //            propType = "IEnumerable";
-        //        }
-        //        if (pi.PropertyType.Assembly.FullName.Substring(0, 8) == "mscorlib" || pi.PropertyType.IsEnum)
-        //        {
-        //            File.WriteLine(Environment.NewLine + Indent3 + "//////// " + pinfo.Name);
-        //            File.WriteLine(Indent3 + "string " + pi.Name + "Name = \"" + pi.Name + "\";");       
-        //            File.WriteLine(Indent3 + "var " + pi.Name + " = (" + propType + 
-        //                ")CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, " + pinfo.Name + "Key, " + pi.Name + "Name);");
-        //            File.WriteLine(Indent3 + "////////");
-        //        }
-        //        else
-        //        {
-        //            File.WriteLine(Environment.NewLine + Indent3 + "//////// " + pinfo.Name);
-        //            File.WriteLine(Indent3 + "string " + pi.Name + "Name = \"" + pi.Name + "\";");
-        //            File.WriteLine(Indent3 + "string " + pi.Name + "Key = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Property, " + 
-        //                pinfo.Name + "Key, " + pi.Name + "Name);");
-        //            if (pi.PropertyType.IsInterface)
-        //            {
-        //                File.WriteLine(Indent3 + propType + "Class " + pi.Name + "Prop = new " + propType + "Class();");
-        //            }
-        //            else
-        //            {
-        //                File.WriteLine(Indent3 + propType + " " + pi.Name + "Prop = new " + propType + "();");
-        //            }
-        //            GetPropertiesFromMatryoshka(pi);
-        //            File.WriteLine(Indent3 + "////////");
-        //        }
-        //    }
-        //}
 
         static bool IsStaticProperty(PropertyInfo pinfo)
         {

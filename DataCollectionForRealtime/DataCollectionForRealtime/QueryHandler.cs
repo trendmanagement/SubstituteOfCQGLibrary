@@ -4,9 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
-using FakeCQG.Helpers;
 using FakeCQG.Models;
-using MongoDB.Driver;
 
 [assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
@@ -14,42 +12,50 @@ namespace DataCollectionForRealtime
 {
     class QueryHandler
     {
-        private CQGDataManagement cqgDataManagement;
-
-        public static List<QueryInfo> QueryList;
+        CQGDataManagement CqgDataManagement;
 
         Assembly CQGAssm;
 
+        public List<QueryInfo> QueryList;
+        HashSet<string> KeysOfQueriesInProcess;
+
         public Assembly CQGAssembly
         {
-            get { return CQGAssm; }
+            get
+            {
+                return CQGAssm;
+            }
         }
 
         public QueryHandler(RealtimeDataManagement rdm)
         {
-            cqgDataManagement = new CQGDataManagement(rdm);
+            CqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>();
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(CQGDataManagement cqgDM)
         {
-            cqgDataManagement = cqgDM;
+            CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>();
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(RealtimeDataManagement rdm, IList<QueryInfo> ql)
         {
-            cqgDataManagement = new CQGDataManagement(rdm);
+            CqgDataManagement = new CQGDataManagement(rdm);
             QueryList = new List<QueryInfo>(ql);
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
         public QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
         {
-            cqgDataManagement = cqgDM;
+            CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>(ql);
+            KeysOfQueriesInProcess = new HashSet<string>();
             LoadCQGAssembly();
         }
 
@@ -67,22 +73,11 @@ namespace DataCollectionForRealtime
 
         public void CheckRequestsQueue()
         {
-            //ManualResetEvent _event = new ManualResetEvent(false);
-            //ThreadPool.QueueUserWorkItem(o => QueryList = CQGLibrary.CQG.ReadQueries());
-            //Task.Run(() =>
-            //{
-                //QueryList = CQGLibrary.CQG.ReadQueries();
-            //});
-            FakeCQG.CQG.ReadQueriesAsync();
+            FakeCQG.CQG.QueryHelper.ReadQueriesAsync(KeysOfQueriesInProcess);
         }
 
-        public bool QueryProcessing(QueryInfo query)
+        public void ProcessQuery(QueryInfo query)
         {
-            bool isSuccessful = false;
-
-            //Object from real CQG used below for the query execution
-            object qObj;
-
             //Object where the data obtained after query execution is placed
             //This object will be sent to the DB
             AnswerInfo answer;
@@ -90,223 +85,194 @@ namespace DataCollectionForRealtime
             //Handling of a request depending on its kind
             switch (query.TypeOfQuery)
             {
-                case QueryInfo.QueryType.Destructor:
-                    DataDictionaries.RemoveObject(query.ObjectKey);
-                    break;
-                case QueryInfo.QueryType.Constructor:
-                    
-                    //switch (query.QueryName)
-                    //{
-                    //    case "CQG.CQGCELClass":
-                    //        qObj = cqgDataManagement.M_CEL;
-                    //        break;
-                    //    default:
-                    //        //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
-                    //        qObj = CQGAssm.CreateInstance(query.QueryName);
-                    //        break;
-                    //}
-                    qObj = CQGAssm.CreateInstance(query.QueryName);
-                   
-                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
-                    LoadInAnswer(answer);
-                    break;
-                    
-                case QueryInfo.QueryType.Property:
-                    qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                    var value = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, null);
-
-                    try
+                case QueryInfo.QueryType.CallCtor:
                     {
-                        if (query.ArgValues.Count != 0 || query.ArgKeys != null)
-                        {
-                            var val = default(object);
+                        string key;
 
-                            //If there is an arg - it must be only the one!
-                            if (query.ArgKeys != null)
+                        switch (query.QueryName)
+                        {
+                            case "CQG.CQGCELClass":
+                                key = CqgDataManagement.CEL_key;
+                                break;
+                            default:
+                                //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
+                                object qObj = CQGAssm.CreateInstance(query.QueryName);
+                                key = FakeCQG.CQG.CreateUniqueKey();
+                                DataDictionaries.PutObjectToTheDictionary(key, qObj);
+                                break;
+                        }
+
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: key);
+                        PushAnswerAndDeleteQuery(answer);
+                    }
+                    break;
+
+                case QueryInfo.QueryType.CallDtor:
+                    {
+                        DataDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+
+                        PushAnswerAndDeleteQuery(answer);
+                    }
+                    break;
+
+                case QueryInfo.QueryType.GetProperty:
+                    {
+                        object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                        object[] args = ParseInputArgsFromQuery(query);
+
+                        try
+                        {
+                            var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
+
+                            if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
                             {
-                                val = DataDictionaries.GetAnswerFromTheDictionary(query.ArgKeys[0]);
-                            }
-                            else if (query.ArgValues != null)
-                            {
-                                val = query.ArgValues[0];
+                                string answerKey = "value";
+                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
                             }
                             else
                             {
-                                //TODO: To provide correct handling of all exception cases
-                                throw new Exception();
+                                string answerKey = FakeCQG.CQG.CreateUniqueKey();
+                                DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
+                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
                             }
-
-                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, new object[] { val });
-                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
                         }
-                        else
+                        catch(Exception ex)
                         {
-                            //TODO: Ensure that type of variable and its value will be correct
-                            var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, null);
-                            if (propV.GetType().Assembly.FullName.Substring(0, 8) == "mscorlib" || propV.GetType().IsEnum)
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
                             {
-                                var answerKey = "value";
-                                answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
+                        }
+
+                        PushAnswerAndDeleteQuery(answer);
+                    }
+                    break;
+
+                case QueryInfo.QueryType.SetProperty:
+                    {
+                        object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                        object[] args = ParseInputArgsFromQuery(query);
+
+                        try
+                        {
+                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, args);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        }
+                        catch(Exception ex)
+                        {
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
+                        }
+
+                        PushAnswerAndDeleteQuery(answer);
+                    }
+                    break;
+
+                case QueryInfo.QueryType.CallMethod:
+                    {
+                        object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                        object[] args = ParseInputArgsFromQuery(query);
+
+                        try
+                        {
+                            object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
+
+                            if (!object.ReferenceEquals(returnV, null))
+                            {
+                                if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                                {
+                                    var returnKey = "value";
+                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
+                                }
+                                else
+                                {
+                                    var returnKey = FakeCQG.CQG.CreateUniqueKey();
+                                    DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
+                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                                }
                             }
                             else
                             {
-                                var answerKey = Guid.NewGuid().ToString("D");
-                                DataDictionaries.PutAnswerToTheDictionary(answerKey, propV);
-                                answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                                var returnKey = "true";
+                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
                             }
-                            LoadInAnswer(answer);
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        AsyncTaskListener.LogMessage(ex.Message);
-                    }
+                        catch (Exception ex)
+                        {
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
+                        }
 
-                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
+                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
+                        PushAnswerAndDeleteQuery(answer);
+                    }
                     break;
 
-                case QueryInfo.QueryType.Method:
-                    qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                    //MethodInfo mi = qObj.GetType().GetMethod(query.QueryName);
-
-                    int numOfArgs = (query.ArgKeys != null? query.ArgKeys.Count : 0) + (query.ArgValues != null ? query.ArgValues.Count : 0);
-                    object[] methodArgs = new object[numOfArgs];
-
-                    if (numOfArgs != 0)
-                    {
-                        if (query.ArgKeys != null)
-                        {
-                            foreach (KeyValuePair<int, string> argPair in query.ArgKeys)
-                            {
-                                methodArgs[argPair.Key] = DataDictionaries.GetAnswerFromTheDictionary(argPair.Value);
-                            }
-                        }
-
-                        if (query.ArgValues != null)
-                        {
-                            foreach (KeyValuePair<int, object> argPair in query.ArgValues)
-                            {
-                                methodArgs[argPair.Key] = argPair.Value;
-                            }
-                        }
-                    }
-
-                    //TODO: Make sure, that correct type of object member passed to the CreateInstance method as arg below
-                    Type returnType = qObj.GetType().GetMethod(query.QueryName).ReturnType;
-                    if (returnType != typeof(void))
-                    {
-                        object retunV = Activator.CreateInstance(returnType);
-                        retunV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, 
-                            numOfArgs != 0 ? methodArgs : null);
-
-                        if (retunV.GetType().Assembly.FullName.Substring(0, 8) != "mscorlib" || !retunV.GetType().IsEnum)
-                        {
-                            var returnKey = Guid.NewGuid().ToString("D");
-                            DataDictionaries.PutAnswerToTheDictionary(returnKey, retunV);
-                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                            isSuccessful = true;
-                        }
-                        else
-                        {
-                            var returnKey = "value";
-                            answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: retunV);
-                            isSuccessful = true;
-                        }
-                    }
-                    else
-                    {
-                        qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, numOfArgs != 0 ? methodArgs : null);
-                        var returnKey = "true";
-                        answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                        isSuccessful = true;
-                    }
-
-                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    LoadInAnswer(answer);
-                    break;
                 case QueryInfo.QueryType.Event:
-                    qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                    EventInfo ei = qObj.GetType().GetEvent(query.QueryName);
-
-                    if (query.ArgValues[0].ToString() != "+" || query.ArgValues[0].ToString() != "-")
                     {
-                        AsyncTaskListener.LogMessage("Argument that describes event subtype is not valid.");
-                        break;
+                        object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                        EventInfo ei = qObj.GetType().GetEvent(query.QueryName);
+
+                        if ((string)query.ArgValues["0"] != "+" || (string)query.ArgValues["0"] != " - ")
+                        {
+                            AsyncTaskListener.LogMessage("Argument that describes event subtype is not valid.");
+                            break;
+                        }
+
+                        // Find corresponding CQG delegate
+                        Type delType = FindDelegateType(CQGAssm, query.QueryName);
+
+                        // Instantiate the delegate with our own handler
+                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", query.QueryName);
+
+                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                        if ((string)query.ArgValues["0"] == " + ")
+                        {
+                            // Subscribe our handler to CQG event
+                            ei.AddEventHandler(qObj, d);
+                            //qObj.GetType().InvokeMember("add_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
+                        }
+                        else if ((string)query.ArgValues["0"] == " - ")
+                        {
+                            // Unsubscribe our handler to CQG event
+                            ei.RemoveEventHandler(qObj, d);
+                            //qObj.GetType().InvokeMember("remove_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
+                        }
+
+                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        PushAnswerAndDeleteQuery(answer);
                     }
-
-                    // Find corresponding CQG delegate
-                    Type delType = FindDelegateType(CQGAssm, query.QueryName);
-
-                    // Instantiate the delegate with our own handler
-                    string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", query.QueryName);
-                    
-                    MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
-                    Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
-
-                    if (query.ArgValues[0] == "+")
-                    {
-                        // Subscribe our handler to CQG event
-                        ei.AddEventHandler(qObj, d);
-                        //qObj.GetType().InvokeMember("add_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
-                    }
-                    else if (query.ArgValues[0] == "-")
-                    {
-                        // Unsubscribe our handler to CQG event
-                        ei.RemoveEventHandler(qObj, d);
-                        //qObj.GetType().InvokeMember("remove_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
-                    }
-
-                    DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
-                    answer = GenerateAnswer(query.Key, query.ObjectKey, query.QueryName, val: true);
-                    LoadInAnswer(answer);
                     break;
             }
- 
-            return isSuccessful;
+        }
+
+        internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
+        {
+            FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
+            FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.Key);
         }
 
         public void ProcessEntireQueryList()
         {
-            foreach (var temp in QueryList)
+            foreach (QueryInfo query in QueryList)
             {
-                QueryProcessing(temp);
-            }
-        }
-
-        public void LoadInAnswer(AnswerInfo answer)
-        {
-            try
-            {
-                AnswerHelper mongoA = new AnswerHelper();
-
-                var collectionA = mongoA.GetCollection;
-                collectionA.InsertOne(answer);
-                AsyncTaskListener.LogMessage(string.Format("Answer [\"{0}\",\"{1}\"] to query \"{2}\" has been pushed into the MongoDB",
-                    answer.Value, answer.ValueKey, answer.QueryName));
-
-                DeleteProcessedQuery(answer.Key);
-            }
-            catch (Exception exc)
-            {
-                AsyncTaskListener.LogMessage(exc.Message);
-            }
-        }
-
-        public void DeleteProcessedQuery(string key)
-        {
-            QueryHelper mongoQ = new QueryHelper();
-
-            var collectionQ = mongoQ.GetCollection;
-            var filter = Builders<QueryInfo>.Filter.Eq("Key", key);
-            try
-            {
-                collectionQ.DeleteOneAsync(filter);
-                AsyncTaskListener.LogMessage("Query was successfully deleted.");
-            }
-            catch (Exception ex)
-            {
-                AsyncTaskListener.LogMessage(ex.Message);
+                ProcessQuery(query);
+                KeysOfQueriesInProcess.Remove(query.Key);
             }
         }
 
@@ -332,20 +298,31 @@ namespace DataCollectionForRealtime
             return type.BaseType == typeof(MulticastDelegate);
         }
 
-        public AnswerInfo GenerateAnswer(string key, string objKey, string name, Dictionary<int, object> argVals = null, string vKey = null, object val = null,
-            bool isEventQ = false)
+        static object[] ParseInputArgsFromQuery(QueryInfo query)
         {
-            AnswerInfo answer = new AnswerInfo(key, objKey, name, argVals, vKey, val, isEventQ);
-            try
+            int numArgs = (query.ArgKeys != null ? query.ArgKeys.Count : 0) + (query.ArgValues != null ? query.ArgValues.Count : 0);
+            var args = new object[numArgs];
+
+            if (numArgs != 0)
             {
-                //TODO: Create logic for getting value from real CQG
+                if (query.ArgKeys != null)
+                {
+                    foreach (KeyValuePair<string, string> argPair in query.ArgKeys)
+                    {
+                        args[int.Parse(argPair.Key)] = DataDictionaries.GetObjectFromTheDictionary(argPair.Value);
+                    }
+                }
+
+                if (query.ArgValues != null)
+                {
+                    foreach (KeyValuePair<string, object> argPair in query.ArgValues)
+                    {
+                        args[int.Parse(argPair.Key)] = argPair.Value;
+                    }
+                }
             }
-            catch(Exception ex)
-            {
-                answer.IsCQGException = true;
-                answer.CQGException = new Action(() => { throw ex; });
-            }
-            return answer;
+
+            return args;
         }
     }
 }

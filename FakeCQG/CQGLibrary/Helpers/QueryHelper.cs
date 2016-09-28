@@ -1,20 +1,26 @@
-﻿using MongoDB.Driver;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using FakeCQG.Models;
-using FakeCQG.Helpers;
+using MongoDB.Driver;
 
-namespace FakeCQG
+namespace FakeCQG.Helpers
 {
     public class QueryHelper
     {
-        protected IMongoClient _client;
-        protected IMongoDatabase _database;
-        protected IMongoCollection<QueryInfo> _collection;
+        public delegate void NewQueriesReadyHandler(List<QueryInfo> queries);
+        public event NewQueriesReadyHandler NewQueriesReady;
+
+        protected IMongoClient Client;
+        protected IMongoDatabase Database;
+        protected IMongoCollection<QueryInfo> Collection;
 
         public IMongoCollection<QueryInfo> GetCollection
         {
             get
             {
-                return _collection;
+                return Collection;
             }
         }
 
@@ -22,23 +28,131 @@ namespace FakeCQG
         {
             get
             {
-                return _database;
+                return Database;
             }
         }
 
         public QueryHelper()
         {
-            _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
-            _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<QueryInfo>(ConnectionSettings.QueryCollectionName);
+            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
+            Collection = Database.GetCollection<QueryInfo>(ConnectionSettings.QueryCollectionName);
         }
 
-        public QueryHelper(string collectionName)
+        public Task PushQueryAsync(QueryInfo query)
         {
-            _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
-            _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<QueryInfo>(collectionName);
+            return Task.Run(() =>
+            {
+                try
+                {
+                    Collection.InsertOne(query);
+                    CQG.OnLogChange(query.Key, query.QueryName, true);
+                }
+                catch (Exception ex)
+                {
+                    CQG.OnLogChange(ex.Message);
+                }
+            });
         }
 
+        public Task<bool> CheckQueryAsync(string Id)
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, Id);
+                QueryInfo result = null;
+                try
+                {
+                    result = Collection.Find(filter).SingleOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    CQG.OnLogChange(ex.Message);
+                }
+                return (result != null);
+            });
+        }
+
+        public Task ReadQueriesAsync(HashSet<string> keysOfQueriesInProcess)
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Empty;
+                try
+                {
+                    // Select only the queries that are not being processed
+                    var queries = Collection.Find(filter).ToEnumerable().Where(query => !keysOfQueriesInProcess.Contains(query.Key)).ToList();
+                    
+                    if (queries.Count != 0)
+                    {
+                        // Mark them as being processed
+                        keysOfQueriesInProcess.UnionWith(queries.Select(query => query.Key));
+
+                        // Fire the event
+                        NewQueriesReady(queries);
+                    }
+
+                    lock (CQG.LogLock)
+                    {
+                        CQG.OnLogChange("************************************************************");
+                        CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
+                        foreach (QueryInfo query in queries)
+                        {
+                            CQG.OnLogChange(query.ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    CQG.OnLogChange(ex.Message);
+                }
+            });
+        }
+
+        public Task ClearQueriesListAsync()
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Empty;
+                try
+                {
+                    Collection.DeleteMany(filter);
+                    CQG.OnLogChange("Queries list was cleared successfully");
+                }
+                catch (Exception ex)
+                {
+                    CQG.OnLogChange(ex.Message);
+                }
+            });
+        }
+
+        public Task RemoveQueryAsync(string key)
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, key);
+                try
+                {
+                    Collection.DeleteOne(filter);
+                }
+                catch (Exception ex)
+                {
+                    CQG.OnLogChange(ex.Message);
+                }
+            });
+        }
+
+        public void DeleteProcessedQuery(string key)
+        {
+            var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, key);
+            try
+            {
+                Collection.DeleteOneAsync(filter);
+            }
+            catch (Exception ex)
+            {
+                CQG.OnLogChange(ex.Message);
+            }
+        }
     }
 }

@@ -1,63 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Driver;
-using CQGLibrary.HandShaking;
-
-
-using FakeCQG;
-using FakeCQG.Helpers;
-using FakeCQG.Models;
-using CQGLibrary.Models;
+using FakeCQG.Handshaking;
 
 namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
+        const int AutoWorkTimerInterval = 1000;
+        const int HandshakingTimerInterval = 15000;
+        const int DictionaryClearingInterval = 30000;
 
-        private CQGDataManagement cqgDataManagement;
+        System.Timers.Timer AutoWorkTimer;
+        Timer HandshakingTimer = new Timer();
 
-        private QueryHandler queryHandler;
+        CQGDataManagement CqgDataManagement;
 
-        int timeForHandShaking = 5000;
+        QueryHandler QueryHandler;
 
         public RealtimeDataManagement()
         {
             InitializeComponent();
 
-            cqgDataManagement = new CQGDataManagement(this);
+            CqgDataManagement = new CQGDataManagement(this);
 
-            queryHandler = new QueryHandler(cqgDataManagement);
+            QueryHandler = new QueryHandler(CqgDataManagement);
 
-            Listener.StartListerning(timeForHandShaking);
+            Listener.StartListening(HandshakingTimerInterval);
 
             Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
+
+            HandshakingTimer.Disposed += HandshakingTimer_Disposed;
+            HandshakingTimer.Interval = DictionaryClearingInterval;
         }
 
-        private void Listener_SubscribersAdded(HandShakingEventArgs args)
+        private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            DataDictionaries.RealTimeIds = new HashSet<Guid>();
+            FakeCQG.DataDictionaries.ClearAllDictionaris();
+        }
+
+        private void RealtimeDataManagement_Load(object sender, EventArgs e)
+        {
+            FakeCQG.CQG.LogChange += CQG_LogChange;
+
+            FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
+            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
+            FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
+
+            FakeCQG.CQG.AnswerHelper = new FakeCQG.Helpers.AnswerHelper();
+            FakeCQG.CQG.AnswerHelper.ClearAnswersListAsync();
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+        }
+
+        private void Listener_SubscribersAdded(HandshakingEventArgs args)
+        {
+            FakeCQG.DataDictionaries.RealTimeIds = new HashSet<Guid>();
             if (!args.NoSubscribers)
             {
                 foreach (var subscriber in args.Subscribers)
                 {
-                    DataDictionaries.RealTimeIds.Add(subscriber.ID);
+                    FakeCQG.DataDictionaries.RealTimeIds.Add(subscriber.ID);
                 }
+                HandshakingTimer.Stop();
             }
             else
             {
-                DataDictionaries.ClearAllDictionaris();
+                HandshakingTimer.Start();
             }
         }
 
-        internal void updateConnectionStatus(string connectionStatusLabel,
-            Color connColor)
+        internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
             if (this.InvokeRequired)
             {
@@ -144,24 +163,12 @@ namespace DataCollectionForRealtime
 
         private void buttonCheck_Click(object sender, EventArgs e)
         {
-            queryHandler.CheckRequestsQueue();
+            QueryHandler.CheckRequestsQueue();
         }
 
-        private void buttonFill_Click(object sender, EventArgs e)
+        private void buttonRespond_Click(object sender, EventArgs e)
         {
-            //TODO: Before filling we must:
-            // - collect queries                           TODO: Create collector for combine query
-            // - get data from CQG by combined qeury
-            // - divide answer for smoler answer by Key    TODO: Create answer divider 
-            // - fill osems smoler answer's by Key 
-            queryHandler.ProcessEntireQueryList();
-        }     
-
-        private void RealtimeDataManagement_Load(object sender, EventArgs e)
-        {
-            FakeCQG.CQG.ClearQueriesListAsync();
-            FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += queryHandler.SetQueryList;
+            QueryHandler.ProcessEntireQueryList();
         }
 
         private void CQG_LogChange(string message)
@@ -169,5 +176,27 @@ namespace DataCollectionForRealtime
             AsyncTaskListener.LogMessage(message);
         }
 
+        private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+            if (cb.Checked)
+            {
+                AutoWorkTimer.Start();
+            }
+            else
+            {
+                AutoWorkTimer.Stop();
+            }
+        }
+
+        private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            QueryHandler.CheckRequestsQueue();
+            QueryHandler.ProcessEntireQueryList();
+            if (checkBoxAuto.Checked)
+            {
+                AutoWorkTimer.Start();
+            }
+        }
     }
 }
