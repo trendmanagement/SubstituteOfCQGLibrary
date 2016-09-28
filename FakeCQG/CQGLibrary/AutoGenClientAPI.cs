@@ -10633,84 +10633,120 @@ namespace FakeCQG
         public virtual void AccountChanged(eAccountChangeType arg1, CQGAccount arg2, CQGPosition arg3)
         {
             string name = "AccountChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyAdded(CQGAdvancedStudy arg1)
         {
             string name = "AdvancedStudyAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions arg1, CQGError arg2)
         {
             string name = "AdvancedStudyDefinitionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, int arg2)
         {
             string name = "AdvancedStudyInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, int arg2)
         {
             string name = "AdvancedStudyRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyResolved(CQGAdvancedStudy arg1, CQGError arg2)
         {
             string name = "AdvancedStudyResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, int arg2)
         {
             string name = "AdvancedStudyUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AlgorithmicOrderPlaced(string arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
             string name = "AlgorithmicOrderPlaced";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AlgorithmicOrderRegistrationComplete(string arg1, CQGError arg2)
         {
             string name = "AlgorithmicOrderRegistrationComplete";
-            var args = new object[] { arg1, arg2 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AllOrdersCanceled(eOrderSideFilter arg1, CQGIntegerCollection arg2, CQGStringCollection arg3)
         {
             string name = "AllOrdersCanceled";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void AuthenticationStatusChanged(eSessionStatus arg1, CQGError arg2)
         {
             string name = "AuthenticationStatusChanged";
-            var args = new object[] { arg1, arg2 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void BarsTimestampsResolved(CQGBarsTimestamps arg1, CQGError arg2)
         {
             string name = "BarsTimestampsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -10723,140 +10759,192 @@ namespace FakeCQG
         public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             string name = "CommodityInstrumentsResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionAdded(CQGCondition arg1)
         {
             string name = "ConditionAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions arg1, CQGError arg2)
         {
             string name = "ConditionDefinitionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionInserted(CQGCondition arg1, int arg2)
         {
             string name = "ConditionInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionRemoved(CQGCondition arg1, int arg2)
         {
             string name = "ConditionRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionResolved(CQGCondition arg1, CQGError arg2)
         {
             string name = "ConditionResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConditionUpdated(CQGCondition arg1, int arg2)
         {
             string name = "ConditionUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars arg1)
         {
             string name = "ConstantVolumeBarsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, int arg2)
         {
             string name = "ConstantVolumeBarsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, int arg2)
         {
             string name = "ConstantVolumeBarsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars arg1, CQGError arg2)
         {
             string name = "ConstantVolumeBarsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, int arg2)
         {
             string name = "ConstantVolumeBarsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             string name = "CurrencyRatesChanged";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomSessionsResolved(CQGSessionsCollection arg1, CQGError arg2)
         {
             string name = "CustomSessionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyAdded(CQGCustomStudy arg1)
         {
             string name = "CustomStudyAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions arg1, CQGError arg2)
         {
             string name = "CustomStudyDefinitionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyInserted(CQGCustomStudy arg1, int arg2)
         {
             string name = "CustomStudyInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyRemoved(CQGCustomStudy arg1, int arg2)
         {
             string name = "CustomStudyRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyResolved(CQGCustomStudy arg1, CQGError arg2)
         {
             string name = "CustomStudyResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CustomStudyUpdated(CQGCustomStudy arg1, int arg2)
         {
             string name = "CustomStudyUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -10877,49 +10965,69 @@ namespace FakeCQG
         public virtual void DataSourcesResolved(CQGDataSources arg1, CQGError arg2)
         {
             string name = "DataSourcesResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void DataSourceSymbolsResolved(string arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
             string name = "DataSourceSymbolsResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ExpressionAdded(CQGExpression arg1)
         {
             string name = "ExpressionAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ExpressionInserted(CQGExpression arg1, int arg2)
         {
             string name = "ExpressionInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ExpressionRemoved(CQGExpression arg1, int arg2)
         {
             string name = "ExpressionRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ExpressionResolved(CQGExpression arg1, CQGError arg2)
         {
             string name = "ExpressionResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ExpressionUpdated(CQGExpression arg1, int arg2)
         {
             string name = "ExpressionUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -10940,7 +11048,13 @@ namespace FakeCQG
         public virtual void HistoricalSessionsResolved(CQGSessionsCollection arg1, CQGHistoricalSessionsRequest arg2, CQGError arg3)
         {
             string name = "HistoricalSessionsResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1Key, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -10961,42 +11075,66 @@ namespace FakeCQG
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             string name = "InstrumentChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1Key, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             string name = "InstrumentDOMChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1Key, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             string name = "InstrumentsGroupChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             string name = "InstrumentsGroupResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
-            var args = new object[] { arg1, arg2 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             string name = "IsReady";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11010,21 +11148,31 @@ namespace FakeCQG
         public virtual void ManualFillChanged(CQGManualFill arg1, eManualFillUpdateType arg2)
         {
             string name = "ManualFillChanged";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ManualFillsResolved(CQGManualFills arg1, CQGError arg2)
         {
             string name = "ManualFillsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ManualFillUpdateResolved(CQGManualFillRequest arg1, CQGError arg2)
         {
             string name = "ManualFillUpdateResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11037,301 +11185,433 @@ namespace FakeCQG
         public virtual void OnQueryProgress(CQGOrdersQuery arg1, CQGError arg2)
         {
             string name = "OnQueryProgress";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void OrderChanged(eChangeType arg1, CQGOrder arg2, CQGOrderProperties arg3, CQGFill arg4, CQGError arg5)
         {
             string name = "OrderChanged";
-            var args = new object[] { arg1, arg2, arg3, arg4, arg5 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            string arg4Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg4Key, arg4);
+            string arg5Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg5Key, arg5);
+            var args = new object[] { arg1, arg2Key, arg3Key, arg4Key, arg5Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PasswordChanged(eSessionStatus arg1, CQGError arg2)
         {
             string name = "PasswordChanged";
-            var args = new object[] { arg1, arg2 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars arg1)
         {
             string name = "PointAndFigureBarsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, int arg2)
         {
             string name = "PointAndFigureBarsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, int arg2)
         {
             string name = "PointAndFigureBarsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars arg1, CQGError arg2)
         {
             string name = "PointAndFigureBarsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, int arg2)
         {
             string name = "PointAndFigureBarsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void PositionsStatementResolved(CQGPositionsStatement arg1, CQGError arg2)
         {
             string name = "PositionsStatementResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions arg1, CQGError arg2)
         {
             string name = "QFormulaDefinitionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void StrategyDefinitionProgress(CQGStrategyDefinition arg1, CQGError arg2)
         {
             string name = "StrategyDefinitionProgress";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SubMinuteBarsAdded(CQGSubMinuteBars arg1)
         {
             string name = "SubMinuteBarsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, int arg2)
         {
             string name = "SubMinuteBarsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, int arg2)
         {
             string name = "SubMinuteBarsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SubMinuteBarsResolved(CQGSubMinuteBars arg1, CQGError arg2)
         {
             string name = "SubMinuteBarsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, int arg2)
         {
             string name = "SubMinuteBarsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void SummariesStatementResolved(CQGSummariesStatement arg1, CQGError arg2)
         {
             string name = "SummariesStatementResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TFlowBarsAdded(CQGTFlowBars arg1)
         {
             string name = "TFlowBarsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TFlowBarsInserted(CQGTFlowBars arg1, int arg2)
         {
             string name = "TFlowBarsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, int arg2)
         {
             string name = "TFlowBarsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TFlowBarsResolved(CQGTFlowBars arg1, CQGError arg2)
         {
             string name = "TFlowBarsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, int arg2)
         {
             string name = "TFlowBarsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TicksAdded(CQGTicks arg1, int arg2)
         {
             string name = "TicksAdded";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TicksResolved(CQGTicks arg1, CQGError arg2)
         {
             string name = "TicksResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TimedBarsAdded(CQGTimedBars arg1)
         {
             string name = "TimedBarsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TimedBarsInserted(CQGTimedBars arg1, int arg2)
         {
             string name = "TimedBarsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TimedBarsRemoved(CQGTimedBars arg1, int arg2)
         {
             string name = "TimedBarsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TimedBarsResolved(CQGTimedBars arg1, CQGError arg2)
         {
             string name = "TimedBarsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TimedBarsUpdated(CQGTimedBars arg1, int arg2)
         {
             string name = "TimedBarsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradableCommoditiesResolved(int arg1, CQGCommodities arg2, CQGError arg3)
         {
             string name = "TradableCommoditiesResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradableExchangesResolved(int arg1, CQGExchanges arg2, CQGError arg3)
         {
             string name = "TradableExchangesResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemAddNotification(CQGTradingSystem arg1, CQGTradingSystemAddInfo arg2)
         {
             string name = "TradingSystemAddNotification";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions arg1, CQGError arg2)
         {
             string name = "TradingSystemDefinitionsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemInsertNotification(CQGTradingSystem arg1, CQGTradingSystemInsertInfo arg2)
         {
             string name = "TradingSystemInsertNotification";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemRemoveNotification(CQGTradingSystem arg1, CQGTradingSystemRemoveInfo arg2)
         {
             string name = "TradingSystemRemoveNotification";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemResolved(CQGTradingSystem arg1, CQGError arg2)
         {
             string name = "TradingSystemResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem arg1, CQGTradingSystemRelationAddInfo arg2)
         {
             string name = "TradingSystemTradeRelationAddNotification";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void TradingSystemUpdateNotification(CQGTradingSystem arg1, CQGTradingSystemUpdateInfo arg2)
         {
             string name = "TradingSystemUpdateNotification";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void YieldsAdded(CQGYields arg1)
         {
             string name = "YieldsAdded";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void YieldsInserted(CQGYields arg1, int arg2)
         {
             string name = "YieldsInserted";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void YieldsRemoved(CQGYields arg1, int arg2)
         {
             string name = "YieldsRemoved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void YieldsResolved(CQGYields arg1, CQGError arg2)
         {
             string name = "YieldsResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void YieldsUpdated(CQGYields arg1, int arg2)
         {
             string name = "YieldsUpdated";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11394,7 +11674,9 @@ namespace FakeCQG
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             string name = "CurrencyRatesChanged";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11422,7 +11704,9 @@ namespace FakeCQG
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             string name = "IsReady";
-            var args = new object[] { arg1 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            var args = new object[] { arg1Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11490,7 +11774,9 @@ namespace FakeCQG
         public virtual void CommodityInstrumentsResolved(string arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             string name = "CommodityInstrumentsResolved";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11504,35 +11790,57 @@ namespace FakeCQG
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             string name = "InstrumentChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1Key, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             string name = "InstrumentDOMChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1Key, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             string name = "InstrumentsGroupChanged";
-            var args = new object[] { arg1, arg2, arg3 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            string arg3Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg3Key, arg3);
+            var args = new object[] { arg1, arg2Key, arg3Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             string name = "InstrumentsGroupResolved";
-            var args = new object[] { arg1, arg2 };
+            string arg1Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg1Key, arg1);
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1Key, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void InstrumentSubscribed(string arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
-            var args = new object[] { arg1, arg2 };
+            string arg2Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(arg2Key, arg2);
+            var args = new object[] { arg1, arg2Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -11904,7 +12212,9 @@ namespace FakeCQG
         public virtual void Add(CQGAccount cqg_account)
         {
             string name = "Add";
-            var args = new object[] { cqg_account };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            var args = new object[] { cqg_accountKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -13099,7 +13409,9 @@ namespace FakeCQG
         public virtual void Add(CQGAlgorithmicOrderDefinition definition_)
         {
             string name = "Add";
-            var args = new object[] { definition_ };
+            string definition_Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(definition_Key, definition_);
+            var args = new object[] { definition_Key };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -14801,28 +15113,40 @@ namespace FakeCQG
         public virtual void ActivateAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "ActivateAllOrders";
-            var args = new object[] { cqg_account, cqg_instrument, from_all_traders, order_side };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { cqg_accountKey, cqg_instrumentKey, from_all_traders, order_side };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void ActivateAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             string name = "ActivateAllOrdersEx";
-            var args = new object[] { cqg_order_action_request };
+            string cqg_order_action_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_order_action_requestKey, cqg_order_action_request);
+            var args = new object[] { cqg_order_action_requestKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, bool from_all_traders = false, bool parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "CancelAllOrders";
-            var args = new object[] { cqg_account, cqg_instrument, from_all_traders, parked_, order_side };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { cqg_accountKey, cqg_instrumentKey, from_all_traders, parked_, order_side };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void CancelAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             string name = "CancelAllOrdersEx";
-            var args = new object[] { cqg_order_action_request };
+            string cqg_order_action_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_order_action_requestKey, cqg_order_action_request);
+            var args = new object[] { cqg_order_action_requestKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -14894,7 +15218,9 @@ namespace FakeCQG
         public virtual CQGExecutionPattern CreateExecutionPattern(CQGStrategyDefinition cqg_definition = null, eOrderType order_type = eOrderType.otUndefined)
         {
             string name = "CreateExecutionPattern";
-            var args = new object[] { cqg_definition, order_type };
+            string cqg_definitionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_definitionKey, cqg_definition);
+            var args = new object[] { cqg_definitionKey, order_type };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGExecutionPatternClass(key);
             return result;
@@ -14935,7 +15261,9 @@ namespace FakeCQG
         public virtual CQGManualFillRequest CreateManualFillRequest(eManualFillUpdateType update_type, CQGManualFill manual_fill = null)
         {
             string name = "CreateManualFillRequest";
-            var args = new object[] { update_type, manual_fill };
+            string manual_fillKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(manual_fillKey, manual_fill);
+            var args = new object[] { update_type, manual_fillKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGManualFillRequestClass(key);
             return result;
@@ -14944,7 +15272,11 @@ namespace FakeCQG
         public virtual CQGOrder CreateOrder(eOrderType order_type, CQGInstrument cqg_instrument, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
         {
             string name = "CreateOrder";
-            var args = new object[] { order_type, cqg_instrument, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            var args = new object[] { order_type, cqg_instrumentKey, cqg_accountKey, order_quantity, order_side, limit_price, stop_price, ue_name_part };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrderClass(key);
             return result;
@@ -14961,7 +15293,9 @@ namespace FakeCQG
         public virtual CQGOrder CreateOrderByInstrumentName(eOrderType order_type, string instrument_name, CQGAccount cqg_account, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = 0, double stop_price = 0, string ue_name_part = "")
         {
             string name = "CreateOrderByInstrumentName";
-            var args = new object[] { order_type, instrument_name, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            var args = new object[] { order_type, instrument_name, cqg_accountKey, order_quantity, order_side, limit_price, stop_price, ue_name_part };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrderClass(key);
             return result;
@@ -14986,7 +15320,13 @@ namespace FakeCQG
         public virtual CQGOrder CreateStrategyOrder(eOrderType order_type, CQGStrategyDefinition cqg_definition, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
         {
             string name = "CreateStrategyOrder";
-            var args = new object[] { order_type, cqg_definition, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
+            string cqg_definitionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_definitionKey, cqg_definition);
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_accountsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountsKey, cqg_accounts);
+            var args = new object[] { order_type, cqg_definitionKey, cqg_accountKey, cqg_accountsKey, order_quantity, order_side, limit_price, stop_price, ue_name_part };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrderClass(key);
             return result;
@@ -14995,7 +15335,11 @@ namespace FakeCQG
         public virtual CQGOrder CreateStrategyOrderByExpression(eOrderType order_type, string expression_string, CQGAccount cqg_account, CQGAccounts cqg_accounts, int order_quantity, eOrderSide order_side = eOrderSide.osdUndefined, double limit_price = -2147483647, double stop_price = -2147483647, string ue_name_part = "")
         {
             string name = "CreateStrategyOrderByExpression";
-            var args = new object[] { order_type, expression_string, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_accountsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountsKey, cqg_accounts);
+            var args = new object[] { order_type, expression_string, cqg_accountKey, cqg_accountsKey, order_quantity, order_side, limit_price, stop_price, ue_name_part };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrderClass(key);
             return result;
@@ -15097,7 +15441,9 @@ namespace FakeCQG
         public virtual void ModifyCompoundOrder(int compound_order_id, string compound_order_guid, CQGOrderChain order_chain)
         {
             string name = "ModifyCompoundOrder";
-            var args = new object[] { compound_order_id, compound_order_guid, order_chain };
+            string order_chainKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(order_chainKey, order_chain);
+            var args = new object[] { compound_order_id, compound_order_guid, order_chainKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -15111,14 +15457,20 @@ namespace FakeCQG
         public virtual void PlaceCompoundOrder(CQGOrderChain order_chain)
         {
             string name = "PlaceCompoundOrder";
-            var args = new object[] { order_chain };
+            string order_chainKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(order_chainKey, order_chain);
+            var args = new object[] { order_chainKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual CQGOrdersQuery QueryOrders(CQGAccount cqg_account, CQGInstrument cqg_instrument = null, eOrderStatusFilter status_filter = eOrderStatusFilter.osfAll, DateTime date_ = default(DateTime), eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "QueryOrders";
-            var args = new object[] { cqg_account, cqg_instrument, status_filter, date_, order_side };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { cqg_accountKey, cqg_instrumentKey, status_filter, date_, order_side };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrdersQueryClass(key);
             return result;
@@ -15141,14 +15493,18 @@ namespace FakeCQG
         public virtual void RegisterAlgorithmicOrder(string guid_, string name_, string abbrv_, string description_, CQGAlgorithmicOrderDefinitions definitions_, int icon_index = 0)
         {
             string name = "RegisterAlgorithmicOrder";
-            var args = new object[] { guid_, name_, abbrv_, description_, definitions_, icon_index };
+            string definitions_Key = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(definitions_Key, definitions_);
+            var args = new object[] { guid_, name_, abbrv_, description_, definitions_Key, icon_index };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveAdvancedStudy(CQGAdvancedStudy cqg_advanced_study)
         {
             string name = "RemoveAdvancedStudy";
-            var args = new object[] { cqg_advanced_study };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            var args = new object[] { cqg_advanced_studyKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -15233,98 +15589,126 @@ namespace FakeCQG
         public virtual void RemoveCondition(CQGCondition cqg_condition)
         {
             string name = "RemoveCondition";
-            var args = new object[] { cqg_condition };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            var args = new object[] { cqg_conditionKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveConstantVolumeBars(CQGConstantVolumeBars cqg_constant_volume_bars)
         {
             string name = "RemoveConstantVolumeBars";
-            var args = new object[] { cqg_constant_volume_bars };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            var args = new object[] { cqg_constant_volume_barsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveCustomStudy(CQGCustomStudy cqg_custom_study)
         {
             string name = "RemoveCustomStudy";
-            var args = new object[] { cqg_custom_study };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            var args = new object[] { cqg_custom_studyKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveExpression(CQGExpression cqg_expression)
         {
             string name = "RemoveExpression";
-            var args = new object[] { cqg_expression };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            var args = new object[] { cqg_expressionKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveInstrument(CQGInstrument cqg_instrument)
         {
             string name = "RemoveInstrument";
-            var args = new object[] { cqg_instrument };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { cqg_instrumentKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveInstrumentsGroup(CQGInstrumentsGroup instruments_group)
         {
             string name = "RemoveInstrumentsGroup";
-            var args = new object[] { instruments_group };
+            string instruments_groupKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_groupKey, instruments_group);
+            var args = new object[] { instruments_groupKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemovePointAndFigureBars(CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
             string name = "RemovePointAndFigureBars";
-            var args = new object[] { cqg_point_and_figure_bars };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            var args = new object[] { cqg_point_and_figure_barsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveSubMinuteBars(CQGSubMinuteBars cqg_subminute_bars)
         {
             string name = "RemoveSubMinuteBars";
-            var args = new object[] { cqg_subminute_bars };
+            string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminute_barsKey, cqg_subminute_bars);
+            var args = new object[] { cqg_subminute_barsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveTFlowBars(CQGTFlowBars cqg_tflow_bars)
         {
             string name = "RemoveTFlowBars";
-            var args = new object[] { cqg_tflow_bars };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            var args = new object[] { cqg_tflow_barsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveTicks(CQGTicks cqg_ticks)
         {
             string name = "RemoveTicks";
-            var args = new object[] { cqg_ticks };
+            string cqg_ticksKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_ticksKey, cqg_ticks);
+            var args = new object[] { cqg_ticksKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveTimedBars(CQGTimedBars cqg_timed_bars)
         {
             string name = "RemoveTimedBars";
-            var args = new object[] { cqg_timed_bars };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            var args = new object[] { cqg_timed_barsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveTradingSystem(CQGTradingSystem cqg_trading_system)
         {
             string name = "RemoveTradingSystem";
-            var args = new object[] { cqg_trading_system };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            var args = new object[] { cqg_trading_systemKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RemoveYields(CQGYields cqg_yields)
         {
             string name = "RemoveYields";
-            var args = new object[] { cqg_yields };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            var args = new object[] { cqg_yieldsKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual CQGAdvancedStudy RequestAdvancedStudy(CQGAdvancedStudyRequest cqg_advanced_study_request)
         {
             string name = "RequestAdvancedStudy";
-            var args = new object[] { cqg_advanced_study_request };
+            string cqg_advanced_study_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_study_requestKey, cqg_advanced_study_request);
+            var args = new object[] { cqg_advanced_study_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGAdvancedStudyClass(key);
             return result;
@@ -15339,7 +15723,9 @@ namespace FakeCQG
         public virtual CQGBarsTimestamps RequestBarsTimestamps(CQGTimedBarsRequest cqg_timestamps_request)
         {
             string name = "RequestBarsTimestamps";
-            var args = new object[] { cqg_timestamps_request };
+            string cqg_timestamps_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timestamps_requestKey, cqg_timestamps_request);
+            var args = new object[] { cqg_timestamps_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGBarsTimestampsClass(key);
             return result;
@@ -15355,7 +15741,9 @@ namespace FakeCQG
         public virtual CQGCondition RequestCondition(CQGConditionRequest cqg_condition_request)
         {
             string name = "RequestCondition";
-            var args = new object[] { cqg_condition_request };
+            string cqg_condition_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_condition_requestKey, cqg_condition_request);
+            var args = new object[] { cqg_condition_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGConditionClass(key);
             return result;
@@ -15370,7 +15758,9 @@ namespace FakeCQG
         public virtual CQGConstantVolumeBars RequestConstantVolumeBars(CQGConstantVolumeBarsRequest cqg_constant_volume_bars_request)
         {
             string name = "RequestConstantVolumeBars";
-            var args = new object[] { cqg_constant_volume_bars_request };
+            string cqg_constant_volume_bars_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_bars_requestKey, cqg_constant_volume_bars_request);
+            var args = new object[] { cqg_constant_volume_bars_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGConstantVolumeBarsClass(key);
             return result;
@@ -15385,7 +15775,9 @@ namespace FakeCQG
         public virtual CQGCustomStudy RequestCustomStudy(CQGCustomStudyRequest cqg_custom_study_request)
         {
             string name = "RequestCustomStudy";
-            var args = new object[] { cqg_custom_study_request };
+            string cqg_custom_study_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_study_requestKey, cqg_custom_study_request);
+            var args = new object[] { cqg_custom_study_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGCustomStudyClass(key);
             return result;
@@ -15413,7 +15805,9 @@ namespace FakeCQG
         public virtual CQGExpression RequestExpression(CQGExpressionRequest cqg_expression_request)
         {
             string name = "RequestExpression";
-            var args = new object[] { cqg_expression_request };
+            string cqg_expression_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expression_requestKey, cqg_expression_request);
+            var args = new object[] { cqg_expression_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGExpressionClass(key);
             return result;
@@ -15422,14 +15816,18 @@ namespace FakeCQG
         public virtual void RequestHistoricalSessions(CQGHistoricalSessionsRequest cqg_historical_sessions_request)
         {
             string name = "RequestHistoricalSessions";
-            var args = new object[] { cqg_historical_sessions_request };
+            string cqg_historical_sessions_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_historical_sessions_requestKey, cqg_historical_sessions_request);
+            var args = new object[] { cqg_historical_sessions_requestKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, bool trace_group_changes)
         {
             string name = "RequestInstrumentsGroup";
-            var args = new object[] { group_request, trace_group_changes };
+            string group_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(group_requestKey, group_request);
+            var args = new object[] { group_requestKey, trace_group_changes };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -15443,14 +15841,18 @@ namespace FakeCQG
         public virtual void RequestManualFillUpdate(CQGManualFillRequest cqg_manual_fill_request)
         {
             string name = "RequestManualFillUpdate";
-            var args = new object[] { cqg_manual_fill_request };
+            string cqg_manual_fill_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_manual_fill_requestKey, cqg_manual_fill_request);
+            var args = new object[] { cqg_manual_fill_requestKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
         public virtual CQGPointAndFigureBars RequestPointAndFigureBars(CQGPointAndFigureBarsRequest cqg_point_and_figure_bars_request)
         {
             string name = "RequestPointAndFigureBars";
-            var args = new object[] { cqg_point_and_figure_bars_request };
+            string cqg_point_and_figure_bars_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_bars_requestKey, cqg_point_and_figure_bars_request);
+            var args = new object[] { cqg_point_and_figure_bars_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGPointAndFigureBarsClass(key);
             return result;
@@ -15465,7 +15867,9 @@ namespace FakeCQG
         public virtual CQGSubMinuteBars RequestSubMinuteBars(CQGSubMinuteBarsRequest cqg_subminute_bars_request)
         {
             string name = "RequestSubMinuteBars";
-            var args = new object[] { cqg_subminute_bars_request };
+            string cqg_subminute_bars_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminute_bars_requestKey, cqg_subminute_bars_request);
+            var args = new object[] { cqg_subminute_bars_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGSubMinuteBarsClass(key);
             return result;
@@ -15474,7 +15878,9 @@ namespace FakeCQG
         public virtual CQGTFlowBars RequestTFlowBars(CQGTFlowBarsRequest cqg_tflow_bars_request)
         {
             string name = "RequestTFlowBars";
-            var args = new object[] { cqg_tflow_bars_request };
+            string cqg_tflow_bars_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_bars_requestKey, cqg_tflow_bars_request);
+            var args = new object[] { cqg_tflow_bars_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGTFlowBarsClass(key);
             return result;
@@ -15483,7 +15889,9 @@ namespace FakeCQG
         public virtual CQGTicks RequestTicks(CQGTicksRequest cqg_ticks_request)
         {
             string name = "RequestTicks";
-            var args = new object[] { cqg_ticks_request };
+            string cqg_ticks_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_ticks_requestKey, cqg_ticks_request);
+            var args = new object[] { cqg_ticks_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGTicksClass(key);
             return result;
@@ -15492,7 +15900,9 @@ namespace FakeCQG
         public virtual CQGTimedBars RequestTimedBars(CQGTimedBarsRequest cqg_timed_bars_request)
         {
             string name = "RequestTimedBars";
-            var args = new object[] { cqg_timed_bars_request };
+            string cqg_timed_bars_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_bars_requestKey, cqg_timed_bars_request);
+            var args = new object[] { cqg_timed_bars_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGTimedBarsClass(key);
             return result;
@@ -15515,7 +15925,9 @@ namespace FakeCQG
         public virtual CQGTradingSystem RequestTradingSystem(CQGTradingSystemRequest cqg_trading_system_request)
         {
             string name = "RequestTradingSystem";
-            var args = new object[] { cqg_trading_system_request };
+            string cqg_trading_system_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_requestKey, cqg_trading_system_request);
+            var args = new object[] { cqg_trading_system_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGTradingSystemClass(key);
             return result;
@@ -15530,7 +15942,9 @@ namespace FakeCQG
         public virtual CQGYields RequestYields(CQGYieldsRequest cqg_yields_request)
         {
             string name = "RequestYields";
-            var args = new object[] { cqg_yields_request };
+            string cqg_yields_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yields_requestKey, cqg_yields_request);
+            var args = new object[] { cqg_yields_requestKey };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGYieldsClass(key);
             return result;
@@ -15551,7 +15965,9 @@ namespace FakeCQG
         public virtual void SubscribeNewInstrument(CQGInstrumentSubscriptionRequest instrument_request)
         {
             string name = "SubscribeNewInstrument";
-            var args = new object[] { instrument_request };
+            string instrument_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instrument_requestKey, instrument_request);
+            var args = new object[] { instrument_requestKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -15584,7 +16000,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AccountChanged");
-                    AccountChanged.Invoke((eAccountChangeType)args[0], (CQGAccount)args[1], (CQGPosition)args[2]);
+                    var arg1 = new CQGAccountClass((string)args[1]);
+                    var arg2 = new CQGPositionClass((string)args[2]);
+                    AccountChanged.Invoke((eAccountChangeType)args[0], (CQGAccount)arg1, (CQGPosition)arg2);
                 }
                 catch (Exception)
                 { }
@@ -15599,7 +16017,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyAdded");
-                    AdvancedStudyAdded.Invoke((CQGAdvancedStudy)args[0]);
+                    var arg0 = new CQGAdvancedStudyClass((string)args[0]);
+                    AdvancedStudyAdded.Invoke((CQGAdvancedStudy)arg0);
                 }
                 catch (Exception)
                 { }
@@ -15614,7 +16033,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyDefinitionsResolved");
-                    AdvancedStudyDefinitionsResolved.Invoke((CQGAdvancedStudyDefinitions)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGAdvancedStudyDefinitionsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    AdvancedStudyDefinitionsResolved.Invoke((CQGAdvancedStudyDefinitions)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15629,7 +16050,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyInserted");
-                    AdvancedStudyInserted.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGAdvancedStudyClass((string)args[0]);
+                    AdvancedStudyInserted.Invoke((CQGAdvancedStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15644,7 +16066,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyRemoved");
-                    AdvancedStudyRemoved.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGAdvancedStudyClass((string)args[0]);
+                    AdvancedStudyRemoved.Invoke((CQGAdvancedStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15659,7 +16082,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyResolved");
-                    AdvancedStudyResolved.Invoke((CQGAdvancedStudy)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGAdvancedStudyClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    AdvancedStudyResolved.Invoke((CQGAdvancedStudy)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15674,7 +16099,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AdvancedStudyUpdated");
-                    AdvancedStudyUpdated.Invoke((CQGAdvancedStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGAdvancedStudyClass((string)args[0]);
+                    AdvancedStudyUpdated.Invoke((CQGAdvancedStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15689,7 +16115,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AlgorithmicOrderPlaced");
-                    AlgorithmicOrderPlaced.Invoke((string)args[0], (CQGAlgorithmicOrderParameters)args[1], (CQGAlgorithmicOrderProperties)args[2]);
+                    var arg1 = new CQGAlgorithmicOrderParametersClass((string)args[1]);
+                    var arg2 = new CQGAlgorithmicOrderPropertiesClass((string)args[2]);
+                    AlgorithmicOrderPlaced.Invoke((string)args[0], (CQGAlgorithmicOrderParameters)arg1, (CQGAlgorithmicOrderProperties)arg2);
                 }
                 catch (Exception)
                 { }
@@ -15704,7 +16132,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AlgorithmicOrderRegistrationComplete");
-                    AlgorithmicOrderRegistrationComplete.Invoke((string)args[0], (CQGError)args[1]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    AlgorithmicOrderRegistrationComplete.Invoke((string)args[0], (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15719,7 +16148,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AllOrdersCanceled");
-                    AllOrdersCanceled.Invoke((eOrderSideFilter)args[0], (CQGIntegerCollection)args[1], (CQGStringCollection)args[2]);
+                    var arg1 = new CQGIntegerCollectionClass((string)args[1]);
+                    var arg2 = new CQGStringCollectionClass((string)args[2]);
+                    AllOrdersCanceled.Invoke((eOrderSideFilter)args[0], (CQGIntegerCollection)arg1, (CQGStringCollection)arg2);
                 }
                 catch (Exception)
                 { }
@@ -15734,7 +16165,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("AuthenticationStatusChanged");
-                    AuthenticationStatusChanged.Invoke((eSessionStatus)args[0], (CQGError)args[1]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    AuthenticationStatusChanged.Invoke((eSessionStatus)args[0], (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15749,7 +16181,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("BarsTimestampsResolved");
-                    BarsTimestampsResolved.Invoke((CQGBarsTimestamps)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGBarsTimestampsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    BarsTimestampsResolved.Invoke((CQGBarsTimestamps)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15779,7 +16213,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CommodityInstrumentsResolved");
-                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
+                    var arg2 = new CQGCommodityInstrumentsClass((string)args[2]);
+                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)arg2);
                 }
                 catch (Exception)
                 { }
@@ -15794,7 +16229,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionAdded");
-                    ConditionAdded.Invoke((CQGCondition)args[0]);
+                    var arg0 = new CQGConditionClass((string)args[0]);
+                    ConditionAdded.Invoke((CQGCondition)arg0);
                 }
                 catch (Exception)
                 { }
@@ -15809,7 +16245,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionDefinitionsResolved");
-                    ConditionDefinitionsResolved.Invoke((CQGConditionDefinitions)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGConditionDefinitionsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ConditionDefinitionsResolved.Invoke((CQGConditionDefinitions)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15824,7 +16262,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionInserted");
-                    ConditionInserted.Invoke((CQGCondition)args[0], (int)args[1]);
+                    var arg0 = new CQGConditionClass((string)args[0]);
+                    ConditionInserted.Invoke((CQGCondition)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15839,7 +16278,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionRemoved");
-                    ConditionRemoved.Invoke((CQGCondition)args[0], (int)args[1]);
+                    var arg0 = new CQGConditionClass((string)args[0]);
+                    ConditionRemoved.Invoke((CQGCondition)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15854,7 +16294,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionResolved");
-                    ConditionResolved.Invoke((CQGCondition)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGConditionClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ConditionResolved.Invoke((CQGCondition)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15869,7 +16311,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConditionUpdated");
-                    ConditionUpdated.Invoke((CQGCondition)args[0], (int)args[1]);
+                    var arg0 = new CQGConditionClass((string)args[0]);
+                    ConditionUpdated.Invoke((CQGCondition)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15884,7 +16327,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConstantVolumeBarsAdded");
-                    ConstantVolumeBarsAdded.Invoke((CQGConstantVolumeBars)args[0]);
+                    var arg0 = new CQGConstantVolumeBarsClass((string)args[0]);
+                    ConstantVolumeBarsAdded.Invoke((CQGConstantVolumeBars)arg0);
                 }
                 catch (Exception)
                 { }
@@ -15899,7 +16343,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConstantVolumeBarsInserted");
-                    ConstantVolumeBarsInserted.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    var arg0 = new CQGConstantVolumeBarsClass((string)args[0]);
+                    ConstantVolumeBarsInserted.Invoke((CQGConstantVolumeBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15914,7 +16359,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConstantVolumeBarsRemoved");
-                    ConstantVolumeBarsRemoved.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    var arg0 = new CQGConstantVolumeBarsClass((string)args[0]);
+                    ConstantVolumeBarsRemoved.Invoke((CQGConstantVolumeBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15929,7 +16375,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConstantVolumeBarsResolved");
-                    ConstantVolumeBarsResolved.Invoke((CQGConstantVolumeBars)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGConstantVolumeBarsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ConstantVolumeBarsResolved.Invoke((CQGConstantVolumeBars)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15944,7 +16392,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ConstantVolumeBarsUpdated");
-                    ConstantVolumeBarsUpdated.Invoke((CQGConstantVolumeBars)args[0], (int)args[1]);
+                    var arg0 = new CQGConstantVolumeBarsClass((string)args[0]);
+                    ConstantVolumeBarsUpdated.Invoke((CQGConstantVolumeBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -15959,7 +16408,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CurrencyRatesChanged");
-                    CurrencyRatesChanged.Invoke((CQGCurrencyRates)args[0]);
+                    var arg0 = new CQGCurrencyRatesClass((string)args[0]);
+                    CurrencyRatesChanged.Invoke((CQGCurrencyRates)arg0);
                 }
                 catch (Exception)
                 { }
@@ -15974,7 +16424,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomSessionsResolved");
-                    CustomSessionsResolved.Invoke((CQGSessionsCollection)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGSessionsCollectionClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    CustomSessionsResolved.Invoke((CQGSessionsCollection)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -15989,7 +16441,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyAdded");
-                    CustomStudyAdded.Invoke((CQGCustomStudy)args[0]);
+                    var arg0 = new CQGCustomStudyClass((string)args[0]);
+                    CustomStudyAdded.Invoke((CQGCustomStudy)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16004,7 +16457,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyDefinitionsResolved");
-                    CustomStudyDefinitionsResolved.Invoke((CQGCustomStudyDefinitions)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGCustomStudyDefinitionsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    CustomStudyDefinitionsResolved.Invoke((CQGCustomStudyDefinitions)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16019,7 +16474,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyInserted");
-                    CustomStudyInserted.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGCustomStudyClass((string)args[0]);
+                    CustomStudyInserted.Invoke((CQGCustomStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16034,7 +16490,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyRemoved");
-                    CustomStudyRemoved.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGCustomStudyClass((string)args[0]);
+                    CustomStudyRemoved.Invoke((CQGCustomStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16049,7 +16506,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyResolved");
-                    CustomStudyResolved.Invoke((CQGCustomStudy)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGCustomStudyClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    CustomStudyResolved.Invoke((CQGCustomStudy)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16064,7 +16523,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CustomStudyUpdated");
-                    CustomStudyUpdated.Invoke((CQGCustomStudy)args[0], (int)args[1]);
+                    var arg0 = new CQGCustomStudyClass((string)args[0]);
+                    CustomStudyUpdated.Invoke((CQGCustomStudy)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16109,7 +16569,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("DataSourcesResolved");
-                    DataSourcesResolved.Invoke((CQGDataSources)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGDataSourcesClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    DataSourcesResolved.Invoke((CQGDataSources)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16124,7 +16586,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("DataSourceSymbolsResolved");
-                    DataSourceSymbolsResolved.Invoke((string)args[0], (CQGDataSourceSymbols)args[1], (CQGError)args[2]);
+                    var arg1 = new CQGDataSourceSymbolsClass((string)args[1]);
+                    var arg2 = new CQGErrorClass((string)args[2]);
+                    DataSourceSymbolsResolved.Invoke((string)args[0], (CQGDataSourceSymbols)arg1, (CQGError)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16139,7 +16603,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ExpressionAdded");
-                    ExpressionAdded.Invoke((CQGExpression)args[0]);
+                    var arg0 = new CQGExpressionClass((string)args[0]);
+                    ExpressionAdded.Invoke((CQGExpression)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16154,7 +16619,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ExpressionInserted");
-                    ExpressionInserted.Invoke((CQGExpression)args[0], (int)args[1]);
+                    var arg0 = new CQGExpressionClass((string)args[0]);
+                    ExpressionInserted.Invoke((CQGExpression)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16169,7 +16635,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ExpressionRemoved");
-                    ExpressionRemoved.Invoke((CQGExpression)args[0], (int)args[1]);
+                    var arg0 = new CQGExpressionClass((string)args[0]);
+                    ExpressionRemoved.Invoke((CQGExpression)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16184,7 +16651,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ExpressionResolved");
-                    ExpressionResolved.Invoke((CQGExpression)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGExpressionClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ExpressionResolved.Invoke((CQGExpression)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16199,7 +16668,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ExpressionUpdated");
-                    ExpressionUpdated.Invoke((CQGExpression)args[0], (int)args[1]);
+                    var arg0 = new CQGExpressionClass((string)args[0]);
+                    ExpressionUpdated.Invoke((CQGExpression)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16244,7 +16714,10 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("HistoricalSessionsResolved");
-                    HistoricalSessionsResolved.Invoke((CQGSessionsCollection)args[0], (CQGHistoricalSessionsRequest)args[1], (CQGError)args[2]);
+                    var arg0 = new CQGSessionsCollectionClass((string)args[0]);
+                    var arg1 = new CQGHistoricalSessionsRequestClass((string)args[1]);
+                    var arg2 = new CQGErrorClass((string)args[2]);
+                    HistoricalSessionsResolved.Invoke((CQGSessionsCollection)arg0, (CQGHistoricalSessionsRequest)arg1, (CQGError)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16289,7 +16762,10 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentChanged");
-                    InstrumentChanged.Invoke((CQGInstrument)args[0], (CQGQuotes)args[1], (CQGInstrumentProperties)args[2]);
+                    var arg0 = new CQGInstrumentClass((string)args[0]);
+                    var arg1 = new CQGQuotesClass((string)args[1]);
+                    var arg2 = new CQGInstrumentPropertiesClass((string)args[2]);
+                    InstrumentChanged.Invoke((CQGInstrument)arg0, (CQGQuotes)arg1, (CQGInstrumentProperties)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16304,7 +16780,10 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentDOMChanged");
-                    InstrumentDOMChanged.Invoke((CQGInstrument)args[0], (CQGDOMQuotes)args[1], (CQGDOMQuotes)args[2]);
+                    var arg0 = new CQGInstrumentClass((string)args[0]);
+                    var arg1 = new CQGDOMQuotesClass((string)args[1]);
+                    var arg2 = new CQGDOMQuotesClass((string)args[2]);
+                    InstrumentDOMChanged.Invoke((CQGInstrument)arg0, (CQGDOMQuotes)arg1, (CQGDOMQuotes)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16319,7 +16798,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentsGroupChanged");
-                    InstrumentsGroupChanged.Invoke((eChangeType)args[0], (CQGInstrumentsGroup)args[1], (CQGStringCollection)args[2]);
+                    var arg1 = new CQGInstrumentsGroupClass((string)args[1]);
+                    var arg2 = new CQGStringCollectionClass((string)args[2]);
+                    InstrumentsGroupChanged.Invoke((eChangeType)args[0], (CQGInstrumentsGroup)arg1, (CQGStringCollection)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16334,7 +16815,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentsGroupResolved");
-                    InstrumentsGroupResolved.Invoke((CQGInstrumentsGroup)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGInstrumentsGroupClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    InstrumentsGroupResolved.Invoke((CQGInstrumentsGroup)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16349,7 +16832,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentSubscribed");
-                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)args[1]);
+                    var arg1 = new CQGInstrumentClass((string)args[1]);
+                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16364,8 +16848,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("IsReady");
-                    eReadyStatus arg0 = (eReadyStatus)args[0];
-                    IsReady.Invoke(ref arg0);
+                    eReadyStatus rArg0 = (eReadyStatus)args[0];
+                    IsReady.Invoke(ref rArg0);
                 }
                 catch (Exception)
                 { }
@@ -16395,7 +16879,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ManualFillChanged");
-                    ManualFillChanged.Invoke((CQGManualFill)args[0], (eManualFillUpdateType)args[1]);
+                    var arg0 = new CQGManualFillClass((string)args[0]);
+                    ManualFillChanged.Invoke((CQGManualFill)arg0, (eManualFillUpdateType)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16410,7 +16895,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ManualFillsResolved");
-                    ManualFillsResolved.Invoke((CQGManualFills)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGManualFillsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ManualFillsResolved.Invoke((CQGManualFills)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16425,7 +16912,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("ManualFillUpdateResolved");
-                    ManualFillUpdateResolved.Invoke((CQGManualFillRequest)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGManualFillRequestClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    ManualFillUpdateResolved.Invoke((CQGManualFillRequest)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16455,7 +16944,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("OnQueryProgress");
-                    OnQueryProgress.Invoke((CQGOrdersQuery)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGOrdersQueryClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    OnQueryProgress.Invoke((CQGOrdersQuery)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16470,7 +16961,11 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("OrderChanged");
-                    OrderChanged.Invoke((eChangeType)args[0], (CQGOrder)args[1], (CQGOrderProperties)args[2], (CQGFill)args[3], (CQGError)args[4]);
+                    var arg1 = new CQGOrderClass((string)args[1]);
+                    var arg2 = new CQGOrderPropertiesClass((string)args[2]);
+                    var arg3 = new CQGFillClass((string)args[3]);
+                    var arg4 = new CQGErrorClass((string)args[4]);
+                    OrderChanged.Invoke((eChangeType)args[0], (CQGOrder)arg1, (CQGOrderProperties)arg2, (CQGFill)arg3, (CQGError)arg4);
                 }
                 catch (Exception)
                 { }
@@ -16485,7 +16980,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PasswordChanged");
-                    PasswordChanged.Invoke((eSessionStatus)args[0], (CQGError)args[1]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    PasswordChanged.Invoke((eSessionStatus)args[0], (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16500,7 +16996,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PointAndFigureBarsAdded");
-                    PointAndFigureBarsAdded.Invoke((CQGPointAndFigureBars)args[0]);
+                    var arg0 = new CQGPointAndFigureBarsClass((string)args[0]);
+                    PointAndFigureBarsAdded.Invoke((CQGPointAndFigureBars)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16515,7 +17012,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PointAndFigureBarsInserted");
-                    PointAndFigureBarsInserted.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    var arg0 = new CQGPointAndFigureBarsClass((string)args[0]);
+                    PointAndFigureBarsInserted.Invoke((CQGPointAndFigureBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16530,7 +17028,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PointAndFigureBarsRemoved");
-                    PointAndFigureBarsRemoved.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    var arg0 = new CQGPointAndFigureBarsClass((string)args[0]);
+                    PointAndFigureBarsRemoved.Invoke((CQGPointAndFigureBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16545,7 +17044,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PointAndFigureBarsResolved");
-                    PointAndFigureBarsResolved.Invoke((CQGPointAndFigureBars)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGPointAndFigureBarsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    PointAndFigureBarsResolved.Invoke((CQGPointAndFigureBars)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16560,7 +17061,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PointAndFigureBarsUpdated");
-                    PointAndFigureBarsUpdated.Invoke((CQGPointAndFigureBars)args[0], (int)args[1]);
+                    var arg0 = new CQGPointAndFigureBarsClass((string)args[0]);
+                    PointAndFigureBarsUpdated.Invoke((CQGPointAndFigureBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16575,7 +17077,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("PositionsStatementResolved");
-                    PositionsStatementResolved.Invoke((CQGPositionsStatement)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGPositionsStatementClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    PositionsStatementResolved.Invoke((CQGPositionsStatement)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16590,7 +17094,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("QFormulaDefinitionsResolved");
-                    QFormulaDefinitionsResolved.Invoke((CQGQFormulaDefinitions)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGQFormulaDefinitionsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    QFormulaDefinitionsResolved.Invoke((CQGQFormulaDefinitions)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16605,7 +17111,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("StrategyDefinitionProgress");
-                    StrategyDefinitionProgress.Invoke((CQGStrategyDefinition)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGStrategyDefinitionClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    StrategyDefinitionProgress.Invoke((CQGStrategyDefinition)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16620,7 +17128,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SubMinuteBarsAdded");
-                    SubMinuteBarsAdded.Invoke((CQGSubMinuteBars)args[0]);
+                    var arg0 = new CQGSubMinuteBarsClass((string)args[0]);
+                    SubMinuteBarsAdded.Invoke((CQGSubMinuteBars)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16635,7 +17144,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SubMinuteBarsInserted");
-                    SubMinuteBarsInserted.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    var arg0 = new CQGSubMinuteBarsClass((string)args[0]);
+                    SubMinuteBarsInserted.Invoke((CQGSubMinuteBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16650,7 +17160,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SubMinuteBarsRemoved");
-                    SubMinuteBarsRemoved.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    var arg0 = new CQGSubMinuteBarsClass((string)args[0]);
+                    SubMinuteBarsRemoved.Invoke((CQGSubMinuteBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16665,7 +17176,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SubMinuteBarsResolved");
-                    SubMinuteBarsResolved.Invoke((CQGSubMinuteBars)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGSubMinuteBarsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    SubMinuteBarsResolved.Invoke((CQGSubMinuteBars)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16680,7 +17193,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SubMinuteBarsUpdated");
-                    SubMinuteBarsUpdated.Invoke((CQGSubMinuteBars)args[0], (int)args[1]);
+                    var arg0 = new CQGSubMinuteBarsClass((string)args[0]);
+                    SubMinuteBarsUpdated.Invoke((CQGSubMinuteBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16695,7 +17209,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("SummariesStatementResolved");
-                    SummariesStatementResolved.Invoke((CQGSummariesStatement)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGSummariesStatementClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    SummariesStatementResolved.Invoke((CQGSummariesStatement)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16710,7 +17226,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TFlowBarsAdded");
-                    TFlowBarsAdded.Invoke((CQGTFlowBars)args[0]);
+                    var arg0 = new CQGTFlowBarsClass((string)args[0]);
+                    TFlowBarsAdded.Invoke((CQGTFlowBars)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16725,7 +17242,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TFlowBarsInserted");
-                    TFlowBarsInserted.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTFlowBarsClass((string)args[0]);
+                    TFlowBarsInserted.Invoke((CQGTFlowBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16740,7 +17258,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TFlowBarsRemoved");
-                    TFlowBarsRemoved.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTFlowBarsClass((string)args[0]);
+                    TFlowBarsRemoved.Invoke((CQGTFlowBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16755,7 +17274,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TFlowBarsResolved");
-                    TFlowBarsResolved.Invoke((CQGTFlowBars)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGTFlowBarsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    TFlowBarsResolved.Invoke((CQGTFlowBars)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16770,7 +17291,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TFlowBarsUpdated");
-                    TFlowBarsUpdated.Invoke((CQGTFlowBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTFlowBarsClass((string)args[0]);
+                    TFlowBarsUpdated.Invoke((CQGTFlowBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16785,7 +17307,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TicksAdded");
-                    TicksAdded.Invoke((CQGTicks)args[0], (int)args[1]);
+                    var arg0 = new CQGTicksClass((string)args[0]);
+                    TicksAdded.Invoke((CQGTicks)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16800,7 +17323,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TicksResolved");
-                    TicksResolved.Invoke((CQGTicks)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGTicksClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    TicksResolved.Invoke((CQGTicks)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16815,7 +17340,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TimedBarsAdded");
-                    TimedBarsAdded.Invoke((CQGTimedBars)args[0]);
+                    var arg0 = new CQGTimedBarsClass((string)args[0]);
+                    TimedBarsAdded.Invoke((CQGTimedBars)arg0);
                 }
                 catch (Exception)
                 { }
@@ -16830,7 +17356,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TimedBarsInserted");
-                    TimedBarsInserted.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTimedBarsClass((string)args[0]);
+                    TimedBarsInserted.Invoke((CQGTimedBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16845,7 +17372,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TimedBarsRemoved");
-                    TimedBarsRemoved.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTimedBarsClass((string)args[0]);
+                    TimedBarsRemoved.Invoke((CQGTimedBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16860,7 +17388,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TimedBarsResolved");
-                    TimedBarsResolved.Invoke((CQGTimedBars)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGTimedBarsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    TimedBarsResolved.Invoke((CQGTimedBars)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16875,7 +17405,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TimedBarsUpdated");
-                    TimedBarsUpdated.Invoke((CQGTimedBars)args[0], (int)args[1]);
+                    var arg0 = new CQGTimedBarsClass((string)args[0]);
+                    TimedBarsUpdated.Invoke((CQGTimedBars)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -16890,7 +17421,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradableCommoditiesResolved");
-                    TradableCommoditiesResolved.Invoke((int)args[0], (CQGCommodities)args[1], (CQGError)args[2]);
+                    var arg1 = new CQGCommoditiesClass((string)args[1]);
+                    var arg2 = new CQGErrorClass((string)args[2]);
+                    TradableCommoditiesResolved.Invoke((int)args[0], (CQGCommodities)arg1, (CQGError)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16905,7 +17438,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradableExchangesResolved");
-                    TradableExchangesResolved.Invoke((int)args[0], (CQGExchanges)args[1], (CQGError)args[2]);
+                    var arg1 = new CQGExchangesClass((string)args[1]);
+                    var arg2 = new CQGErrorClass((string)args[2]);
+                    TradableExchangesResolved.Invoke((int)args[0], (CQGExchanges)arg1, (CQGError)arg2);
                 }
                 catch (Exception)
                 { }
@@ -16920,7 +17455,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemAddNotification");
-                    TradingSystemAddNotification.Invoke((CQGTradingSystem)args[0], (CQGTradingSystemAddInfo)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGTradingSystemAddInfoClass((string)args[1]);
+                    TradingSystemAddNotification.Invoke((CQGTradingSystem)arg0, (CQGTradingSystemAddInfo)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16935,7 +17472,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemDefinitionsResolved");
-                    TradingSystemDefinitionsResolved.Invoke((CQGTradingSystemDefinitions)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGTradingSystemDefinitionsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    TradingSystemDefinitionsResolved.Invoke((CQGTradingSystemDefinitions)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16950,7 +17489,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemInsertNotification");
-                    TradingSystemInsertNotification.Invoke((CQGTradingSystem)args[0], (CQGTradingSystemInsertInfo)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGTradingSystemInsertInfoClass((string)args[1]);
+                    TradingSystemInsertNotification.Invoke((CQGTradingSystem)arg0, (CQGTradingSystemInsertInfo)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16965,7 +17506,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemRemoveNotification");
-                    TradingSystemRemoveNotification.Invoke((CQGTradingSystem)args[0], (CQGTradingSystemRemoveInfo)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGTradingSystemRemoveInfoClass((string)args[1]);
+                    TradingSystemRemoveNotification.Invoke((CQGTradingSystem)arg0, (CQGTradingSystemRemoveInfo)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16980,7 +17523,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemResolved");
-                    TradingSystemResolved.Invoke((CQGTradingSystem)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    TradingSystemResolved.Invoke((CQGTradingSystem)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -16995,7 +17540,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemTradeRelationAddNotification");
-                    TradingSystemTradeRelationAddNotification.Invoke((CQGTradingSystem)args[0], (CQGTradingSystemRelationAddInfo)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGTradingSystemRelationAddInfoClass((string)args[1]);
+                    TradingSystemTradeRelationAddNotification.Invoke((CQGTradingSystem)arg0, (CQGTradingSystemRelationAddInfo)arg1);
                 }
                 catch (Exception)
                 { }
@@ -17010,7 +17557,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("TradingSystemUpdateNotification");
-                    TradingSystemUpdateNotification.Invoke((CQGTradingSystem)args[0], (CQGTradingSystemUpdateInfo)args[1]);
+                    var arg0 = new CQGTradingSystemClass((string)args[0]);
+                    var arg1 = new CQGTradingSystemUpdateInfoClass((string)args[1]);
+                    TradingSystemUpdateNotification.Invoke((CQGTradingSystem)arg0, (CQGTradingSystemUpdateInfo)arg1);
                 }
                 catch (Exception)
                 { }
@@ -17025,7 +17574,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("YieldsAdded");
-                    YieldsAdded.Invoke((CQGYields)args[0]);
+                    var arg0 = new CQGYieldsClass((string)args[0]);
+                    YieldsAdded.Invoke((CQGYields)arg0);
                 }
                 catch (Exception)
                 { }
@@ -17040,7 +17590,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("YieldsInserted");
-                    YieldsInserted.Invoke((CQGYields)args[0], (int)args[1]);
+                    var arg0 = new CQGYieldsClass((string)args[0]);
+                    YieldsInserted.Invoke((CQGYields)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17055,7 +17606,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("YieldsRemoved");
-                    YieldsRemoved.Invoke((CQGYields)args[0], (int)args[1]);
+                    var arg0 = new CQGYieldsClass((string)args[0]);
+                    YieldsRemoved.Invoke((CQGYields)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -17070,7 +17622,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("YieldsResolved");
-                    YieldsResolved.Invoke((CQGYields)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGYieldsClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    YieldsResolved.Invoke((CQGYields)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -17085,7 +17639,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("YieldsUpdated");
-                    YieldsUpdated.Invoke((CQGYields)args[0], (int)args[1]);
+                    var arg0 = new CQGYieldsClass((string)args[0]);
+                    YieldsUpdated.Invoke((CQGYields)arg0, (int)args[1]);
                 }
                 catch (Exception)
                 { }
@@ -20611,7 +21166,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CurrencyRatesChanged");
-                    CurrencyRatesChanged.Invoke((CQGCurrencyRates)args[0]);
+                    var arg0 = new CQGCurrencyRatesClass((string)args[0]);
+                    CurrencyRatesChanged.Invoke((CQGCurrencyRates)arg0);
                 }
                 catch (Exception)
                 { }
@@ -20671,8 +21227,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("IsReady");
-                    eReadyStatus arg0 = (eReadyStatus)args[0];
-                    IsReady.Invoke(ref arg0);
+                    eReadyStatus rArg0 = (eReadyStatus)args[0];
+                    IsReady.Invoke(ref rArg0);
                 }
                 catch (Exception)
                 { }
@@ -20717,7 +21273,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("CommodityInstrumentsResolved");
-                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)args[2]);
+                    var arg2 = new CQGCommodityInstrumentsClass((string)args[2]);
+                    CommodityInstrumentsResolved.Invoke((string)args[0], (eInstrumentType)args[1], (CQGCommodityInstruments)arg2);
                 }
                 catch (Exception)
                 { }
@@ -20747,7 +21304,10 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentChanged");
-                    InstrumentChanged.Invoke((CQGInstrument)args[0], (CQGQuotes)args[1], (CQGInstrumentProperties)args[2]);
+                    var arg0 = new CQGInstrumentClass((string)args[0]);
+                    var arg1 = new CQGQuotesClass((string)args[1]);
+                    var arg2 = new CQGInstrumentPropertiesClass((string)args[2]);
+                    InstrumentChanged.Invoke((CQGInstrument)arg0, (CQGQuotes)arg1, (CQGInstrumentProperties)arg2);
                 }
                 catch (Exception)
                 { }
@@ -20762,7 +21322,10 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentDOMChanged");
-                    InstrumentDOMChanged.Invoke((CQGInstrument)args[0], (CQGDOMQuotes)args[1], (CQGDOMQuotes)args[2]);
+                    var arg0 = new CQGInstrumentClass((string)args[0]);
+                    var arg1 = new CQGDOMQuotesClass((string)args[1]);
+                    var arg2 = new CQGDOMQuotesClass((string)args[2]);
+                    InstrumentDOMChanged.Invoke((CQGInstrument)arg0, (CQGDOMQuotes)arg1, (CQGDOMQuotes)arg2);
                 }
                 catch (Exception)
                 { }
@@ -20777,7 +21340,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentsGroupChanged");
-                    InstrumentsGroupChanged.Invoke((eChangeType)args[0], (CQGInstrumentsGroup)args[1], (CQGStringCollection)args[2]);
+                    var arg1 = new CQGInstrumentsGroupClass((string)args[1]);
+                    var arg2 = new CQGStringCollectionClass((string)args[2]);
+                    InstrumentsGroupChanged.Invoke((eChangeType)args[0], (CQGInstrumentsGroup)arg1, (CQGStringCollection)arg2);
                 }
                 catch (Exception)
                 { }
@@ -20792,7 +21357,9 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentsGroupResolved");
-                    InstrumentsGroupResolved.Invoke((CQGInstrumentsGroup)args[0], (CQGError)args[1]);
+                    var arg0 = new CQGInstrumentsGroupClass((string)args[0]);
+                    var arg1 = new CQGErrorClass((string)args[1]);
+                    InstrumentsGroupResolved.Invoke((CQGInstrumentsGroup)arg0, (CQGError)arg1);
                 }
                 catch (Exception)
                 { }
@@ -20807,7 +21374,8 @@ namespace FakeCQG
                 try
                 {
                     object[] args = CQG.AnswerHelper.CheckWhetherEventHappened("InstrumentSubscribed");
-                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)args[1]);
+                    var arg1 = new CQGInstrumentClass((string)args[1]);
+                    InstrumentSubscribed.Invoke((string)args[0], (CQGInstrument)arg1);
                 }
                 catch (Exception)
                 { }
@@ -25200,7 +25768,9 @@ namespace FakeCQG
         public virtual void AddOrder(CQGOrder cqg_order)
         {
             string name = "AddOrder";
-            var args = new object[] { cqg_order };
+            string cqg_orderKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_orderKey, cqg_order);
+            var args = new object[] { cqg_orderKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
@@ -25738,7 +26308,9 @@ namespace FakeCQG
         public virtual void Modify(CQGOrderModify cqg_order_modify)
         {
             string name = "Modify";
-            var args = new object[] { cqg_order_modify };
+            string cqg_order_modifyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_order_modifyKey, cqg_order_modify);
+            var args = new object[] { cqg_order_modifyKey };
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 

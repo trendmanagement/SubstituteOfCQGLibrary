@@ -18,87 +18,123 @@ namespace DataCollectionForRealtime
 {
     class CQGEventHandlers
     {
-        public static void _ICQGCELEvents_AccountChangedEventHandlerImpl(eAccountChangeType change_type, CQGAccount cqg_account, CQGPosition cqg_position)
+        public static void _ICQGCELEvents_AccountChangedEventHandlerImpl(eAccountChangeType change_type, CQG.CQGAccount cqg_account, CQG.CQGPosition cqg_position)
         {
             string name = "_ICQGCELEvents_AccountChangedEventHandler";
-            var args = new object[] { change_type, cqg_account, cqg_position };
+            string cqg_accountKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_accountKey, cqg_account);
+            string cqg_positionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_positionKey, cqg_position);
+            var args = new object[] { change_type, cqg_accountKey, cqg_positionKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study)
+        public static void _ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study)
         {
             string name = "_ICQGCELEvents_AdvancedStudyAddedEventHandler";
-            var args = new object[] { cqg_advanced_study };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            var args = new object[] { cqg_advanced_studyKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl(CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQGError cqg_error)
+        public static void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler";
-            var args = new object[] { cqg_advanced_study_definitions, cqg_error };
+            string cqg_advanced_study_definitionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_study_definitionsKey, cqg_advanced_study_definitions);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_advanced_study_definitionsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyInsertedEventHandler";
-            var args = new object[] { cqg_advanced_study, index_ };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            var args = new object[] { cqg_advanced_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyRemovedEventHandler";
-            var args = new object[] { cqg_advanced_study, index_ };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            var args = new object[] { cqg_advanced_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, CQGError cqg_error)
+        public static void _ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AdvancedStudyResolvedEventHandler";
-            var args = new object[] { cqg_advanced_study, cqg_error };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_advanced_studyKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyUpdatedEventHandler";
-            var args = new object[] { cqg_advanced_study, index_ };
+            string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_advanced_studyKey, cqg_advanced_study);
+            var args = new object[] { cqg_advanced_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(string guid_, CQGAlgorithmicOrderParameters main_params, CQGAlgorithmicOrderProperties custom_props)
+        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(string guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderPlacedEventHandler";
-            var args = new object[] { guid_, main_params, custom_props };
+            string main_paramsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(main_paramsKey, main_params);
+            string custom_propsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(custom_propsKey, custom_props);
+            var args = new object[] { guid_, main_paramsKey, custom_propsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(string guid_, CQGError cqg_error)
+        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(string guid_, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler";
-            var args = new object[] { guid_, cqg_error };
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { guid_, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AllOrdersCanceledEventHandlerImpl(eOrderSideFilter order_side, CQGIntegerCollection gw_account_ids, CQGStringCollection instrument_names)
+        public static void _ICQGCELEvents_AllOrdersCanceledEventHandlerImpl(eOrderSideFilter order_side, CQG.CQGIntegerCollection gw_account_ids, CQG.CQGStringCollection instrument_names)
         {
             string name = "_ICQGCELEvents_AllOrdersCanceledEventHandler";
-            var args = new object[] { order_side, gw_account_ids, instrument_names };
+            string gw_account_idsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(gw_account_idsKey, gw_account_ids);
+            string instrument_namesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instrument_namesKey, instrument_names);
+            var args = new object[] { order_side, gw_account_idsKey, instrument_namesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl(eSessionStatus new_status, CQGError cqg_error)
+        public static void _ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl(eSessionStatus new_status, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AuthenticationStatusChangedEventHandler";
-            var args = new object[] { new_status, cqg_error };
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { new_status, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl(CQGBarsTimestamps cqg_bars_timestamps, CQGError cqg_error)
+        public static void _ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl(CQG.CQGBarsTimestamps cqg_bars_timestamps, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_BarsTimestampsResolvedEventHandler";
-            var args = new object[] { cqg_bars_timestamps, cqg_error };
+            string cqg_bars_timestampsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_bars_timestampsKey, cqg_bars_timestamps);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_bars_timestampsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -108,143 +144,195 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELEvents_CommodityInstrumentsResolvedEventHandler";
-            var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
+            string cqg_commodity_intrumentsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_commodity_intrumentsKey, cqg_commodity_intruments);
+            var args = new object[] { commodity_name, instrument_types, cqg_commodity_intrumentsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionAddedEventHandlerImpl(CQGCondition cqg_condition)
+        public static void _ICQGCELEvents_ConditionAddedEventHandlerImpl(CQG.CQGCondition cqg_condition)
         {
             string name = "_ICQGCELEvents_ConditionAddedEventHandler";
-            var args = new object[] { cqg_condition };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            var args = new object[] { cqg_conditionKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl(CQGConditionDefinitions cqg_condition_definitions, CQGError cqg_error)
+        public static void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl(CQG.CQGConditionDefinitions cqg_condition_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConditionDefinitionsResolvedEventHandler";
-            var args = new object[] { cqg_condition_definitions, cqg_error };
+            string cqg_condition_definitionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_condition_definitionsKey, cqg_condition_definitions);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_condition_definitionsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionInsertedEventHandler";
-            var args = new object[] { cqg_condition, index_ };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            var args = new object[] { cqg_conditionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionRemovedEventHandler";
-            var args = new object[] { cqg_condition, index_ };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            var args = new object[] { cqg_conditionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionResolvedEventHandlerImpl(CQGCondition cqg_condition, CQGError cqg_error)
+        public static void _ICQGCELEvents_ConditionResolvedEventHandlerImpl(CQG.CQGCondition cqg_condition, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConditionResolvedEventHandler";
-            var args = new object[] { cqg_condition, cqg_error };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_conditionKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionUpdatedEventHandler";
-            var args = new object[] { cqg_condition, index_ };
+            string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_conditionKey, cqg_condition);
+            var args = new object[] { cqg_conditionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars)
+        public static void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsAddedEventHandler";
-            var args = new object[] { cqg_constant_volume_bars };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            var args = new object[] { cqg_constant_volume_barsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler";
-            var args = new object[] { cqg_constant_volume_bars, index_ };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            var args = new object[] { cqg_constant_volume_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler";
-            var args = new object[] { cqg_constant_volume_bars, index_ };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            var args = new object[] { cqg_constant_volume_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, CQGError cqg_error)
+        public static void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler";
-            var args = new object[] { cqg_constant_volume_bars, cqg_error };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_constant_volume_barsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler";
-            var args = new object[] { cqg_constant_volume_bars, index_ };
+            string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_constant_volume_barsKey, cqg_constant_volume_bars);
+            var args = new object[] { cqg_constant_volume_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl(CQGCurrencyRates cqg_currency_rates)
+        public static void _ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
             string name = "_ICQGCELEvents_CurrencyRatesChangedEventHandler";
-            var args = new object[] { cqg_currency_rates };
+            string cqg_currency_ratesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_currency_ratesKey, cqg_currency_rates);
+            var args = new object[] { cqg_currency_ratesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl(CQGSessionsCollection cqg_sessions_collection, CQGError cqg_error)
+        public static void _ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_sessions_collection, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomSessionsResolvedEventHandler";
-            var args = new object[] { cqg_sessions_collection, cqg_error };
+            string cqg_sessions_collectionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_sessions_collectionKey, cqg_sessions_collection);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_sessions_collectionKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyAddedEventHandlerImpl(CQGCustomStudy cqg_custom_study)
+        public static void _ICQGCELEvents_CustomStudyAddedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study)
         {
             string name = "_ICQGCELEvents_CustomStudyAddedEventHandler";
-            var args = new object[] { cqg_custom_study };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            var args = new object[] { cqg_custom_studyKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl(CQGCustomStudyDefinitions cqg_custom_study_definitions, CQGError cqg_error)
+        public static void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGCustomStudyDefinitions cqg_custom_study_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler";
-            var args = new object[] { cqg_custom_study_definitions, cqg_error };
+            string cqg_custom_study_definitionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_study_definitionsKey, cqg_custom_study_definitions);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_custom_study_definitionsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyInsertedEventHandler";
-            var args = new object[] { cqg_custom_study, index_ };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            var args = new object[] { cqg_custom_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyRemovedEventHandler";
-            var args = new object[] { cqg_custom_study, index_ };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            var args = new object[] { cqg_custom_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyResolvedEventHandlerImpl(CQGCustomStudy cqg_custom_study, CQGError cqg_error)
+        public static void _ICQGCELEvents_CustomStudyResolvedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomStudyResolvedEventHandler";
-            var args = new object[] { cqg_custom_study, cqg_error };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_custom_studyKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyUpdatedEventHandler";
-            var args = new object[] { cqg_custom_study, index_ };
+            string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_custom_studyKey, cqg_custom_study);
+            var args = new object[] { cqg_custom_studyKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -262,52 +350,72 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataSourcesResolvedEventHandlerImpl(CQGDataSources cqg_data_sources, CQGError cqg_error)
+        public static void _ICQGCELEvents_DataSourcesResolvedEventHandlerImpl(CQG.CQGDataSources cqg_data_sources, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_DataSourcesResolvedEventHandler";
-            var args = new object[] { cqg_data_sources, cqg_error };
+            string cqg_data_sourcesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_data_sourcesKey, cqg_data_sources);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_data_sourcesKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(string data_source_abbreviation, CQGDataSourceSymbols cqg_data_source_symbols, CQGError cqg_error)
+        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(string data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_DataSourceSymbolsResolvedEventHandler";
-            var args = new object[] { data_source_abbreviation, cqg_data_source_symbols, cqg_error };
+            string cqg_data_source_symbolsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_data_source_symbolsKey, cqg_data_source_symbols);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { data_source_abbreviation, cqg_data_source_symbolsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionAddedEventHandlerImpl(CQGExpression cqg_expression)
+        public static void _ICQGCELEvents_ExpressionAddedEventHandlerImpl(CQG.CQGExpression cqg_expression)
         {
             string name = "_ICQGCELEvents_ExpressionAddedEventHandler";
-            var args = new object[] { cqg_expression };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            var args = new object[] { cqg_expressionKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionInsertedEventHandler";
-            var args = new object[] { cqg_expression, index_ };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            var args = new object[] { cqg_expressionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionRemovedEventHandler";
-            var args = new object[] { cqg_expression, index_ };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            var args = new object[] { cqg_expressionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionResolvedEventHandlerImpl(CQGExpression cqg_expression, CQGError cqg_error)
+        public static void _ICQGCELEvents_ExpressionResolvedEventHandlerImpl(CQG.CQGExpression cqg_expression, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ExpressionResolvedEventHandler";
-            var args = new object[] { cqg_expression, cqg_error };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_expressionKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionUpdatedEventHandler";
-            var args = new object[] { cqg_expression, index_ };
+            string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_expressionKey, cqg_expression);
+            var args = new object[] { cqg_expressionKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -325,10 +433,16 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl(CQGSessionsCollection cqg_historical_sessions, CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQGError cqg_error)
+        public static void _ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_historical_sessions, CQG.CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_HistoricalSessionsResolvedEventHandler";
-            var args = new object[] { cqg_historical_sessions, cqg_historical_sessions_request, cqg_error };
+            string cqg_historical_sessionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_historical_sessionsKey, cqg_historical_sessions);
+            string cqg_historical_sessions_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_historical_sessions_requestKey, cqg_historical_sessions_request);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_historical_sessionsKey, cqg_historical_sessions_requestKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -346,45 +460,69 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentChangedEventHandlerImpl(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties)
+        public static void _ICQGCELEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
             string name = "_ICQGCELEvents_InstrumentChangedEventHandler";
-            var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            string cqg_quotesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_quotesKey, cqg_quotes);
+            string cqg_instrument_propertiesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrument_propertiesKey, cqg_instrument_properties);
+            var args = new object[] { cqg_instrumentKey, cqg_quotesKey, cqg_instrument_propertiesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl(CQGInstrument cqg_instrument, CQGDOMQuotes prev_asks, CQGDOMQuotes prev_bids)
+        public static void _ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
             string name = "_ICQGCELEvents_InstrumentDOMChangedEventHandler";
-            var args = new object[] { cqg_instrument, prev_asks, prev_bids };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            string prev_asksKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(prev_asksKey, prev_asks);
+            string prev_bidsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(prev_bidsKey, prev_bids);
+            var args = new object[] { cqg_instrumentKey, prev_asksKey, prev_bidsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl(eChangeType change_type, CQGInstrumentsGroup instruments_group, CQGStringCollection instruments_names)
+        public static void _ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl(eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
             string name = "_ICQGCELEvents_InstrumentsGroupChangedEventHandler";
-            var args = new object[] { change_type, instruments_group, instruments_names };
+            string instruments_groupKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_groupKey, instruments_group);
+            string instruments_namesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_namesKey, instruments_names);
+            var args = new object[] { change_type, instruments_groupKey, instruments_namesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl(CQGInstrumentsGroup instruments_group, CQGError cqg_error)
+        public static void _ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_InstrumentsGroupResolvedEventHandler";
-            var args = new object[] { instruments_group, cqg_error };
+            string instruments_groupKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_groupKey, instruments_group);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { instruments_groupKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQGInstrument cqg_instrument)
+        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELEvents_InstrumentSubscribedEventHandler";
-            var args = new object[] { symbol_, cqg_instrument };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { symbol_, cqg_instrumentKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_IsReadyEventHandlerImpl(ref eReadyStatus ready_status)
+        public static void _ICQGCELEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
             string name = "_ICQGCELEvents_IsReadyEventHandler";
-            var args = new object[] { ready_status };
+            string ready_statusKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(ready_statusKey, ready_status);
+            var args = new object[] { ready_statusKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -395,24 +533,34 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ManualFillChangedEventHandlerImpl(CQGManualFill cqg_manual_fill, eManualFillUpdateType modify_type)
+        public static void _ICQGCELEvents_ManualFillChangedEventHandlerImpl(CQG.CQGManualFill cqg_manual_fill, eManualFillUpdateType modify_type)
         {
             string name = "_ICQGCELEvents_ManualFillChangedEventHandler";
-            var args = new object[] { cqg_manual_fill, modify_type };
+            string cqg_manual_fillKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_manual_fillKey, cqg_manual_fill);
+            var args = new object[] { cqg_manual_fillKey, modify_type };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ManualFillsResolvedEventHandlerImpl(CQGManualFills cqg_manual_fills, CQGError cqg_error)
+        public static void _ICQGCELEvents_ManualFillsResolvedEventHandlerImpl(CQG.CQGManualFills cqg_manual_fills, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ManualFillsResolvedEventHandler";
-            var args = new object[] { cqg_manual_fills, cqg_error };
+            string cqg_manual_fillsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_manual_fillsKey, cqg_manual_fills);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_manual_fillsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl(CQGManualFillRequest cqg_manual_fill_request, CQGError cqg_error)
+        public static void _ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl(CQG.CQGManualFillRequest cqg_manual_fill_request, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ManualFillUpdateResolvedEventHandler";
-            var args = new object[] { cqg_manual_fill_request, cqg_error };
+            string cqg_manual_fill_requestKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_manual_fill_requestKey, cqg_manual_fill_request);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_manual_fill_requestKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -422,304 +570,436 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELEvents_OnQueryProgressEventHandlerImpl(CQGOrdersQuery cqg_orders_query, CQGError cqg_error)
+        public static void _ICQGCELEvents_OnQueryProgressEventHandlerImpl(CQG.CQGOrdersQuery cqg_orders_query, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_OnQueryProgressEventHandler";
-            var args = new object[] { cqg_orders_query, cqg_error };
+            string cqg_orders_queryKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_orders_queryKey, cqg_orders_query);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_orders_queryKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_OrderChangedEventHandlerImpl(eChangeType change_type, CQGOrder cqg_order, CQGOrderProperties old_properties, CQGFill cqg_fill, CQGError cqg_error)
+        public static void _ICQGCELEvents_OrderChangedEventHandlerImpl(eChangeType change_type, CQG.CQGOrder cqg_order, CQG.CQGOrderProperties old_properties, CQG.CQGFill cqg_fill, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_OrderChangedEventHandler";
-            var args = new object[] { change_type, cqg_order, old_properties, cqg_fill, cqg_error };
+            string cqg_orderKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_orderKey, cqg_order);
+            string old_propertiesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(old_propertiesKey, old_properties);
+            string cqg_fillKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_fillKey, cqg_fill);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { change_type, cqg_orderKey, old_propertiesKey, cqg_fillKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PasswordChangedEventHandlerImpl(eSessionStatus request_status, CQGError cqg_error)
+        public static void _ICQGCELEvents_PasswordChangedEventHandlerImpl(eSessionStatus request_status, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PasswordChangedEventHandler";
-            var args = new object[] { request_status, cqg_error };
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { request_status, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars)
+        public static void _ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsAddedEventHandler";
-            var args = new object[] { cqg_point_and_figure_bars };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            var args = new object[] { cqg_point_and_figure_barsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsInsertedEventHandler";
-            var args = new object[] { cqg_point_and_figure_bars, index_ };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            var args = new object[] { cqg_point_and_figure_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsRemovedEventHandler";
-            var args = new object[] { cqg_point_and_figure_bars, index_ };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            var args = new object[] { cqg_point_and_figure_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, CQGError cqg_error)
+        public static void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsResolvedEventHandler";
-            var args = new object[] { cqg_point_and_figure_bars, cqg_error };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_point_and_figure_barsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler";
-            var args = new object[] { cqg_point_and_figure_bars, index_ };
+            string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_point_and_figure_barsKey, cqg_point_and_figure_bars);
+            var args = new object[] { cqg_point_and_figure_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl(CQGPositionsStatement cqg_positions_statement, CQGError cqg_error)
+        public static void _ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl(CQG.CQGPositionsStatement cqg_positions_statement, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PositionsStatementResolvedEventHandler";
-            var args = new object[] { cqg_positions_statement, cqg_error };
+            string cqg_positions_statementKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_positions_statementKey, cqg_positions_statement);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_positions_statementKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl(CQGQFormulaDefinitions cqg_qformula_definitions, CQGError cqg_error)
+        public static void _ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl(CQG.CQGQFormulaDefinitions cqg_qformula_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_QFormulaDefinitionsResolvedEventHandler";
-            var args = new object[] { cqg_qformula_definitions, cqg_error };
+            string cqg_qformula_definitionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_qformula_definitionsKey, cqg_qformula_definitions);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_qformula_definitionsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl(CQGStrategyDefinition cqg_definition, CQGError cqg_error)
+        public static void _ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl(CQG.CQGStrategyDefinition cqg_definition, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_StrategyDefinitionProgressEventHandler";
-            var args = new object[] { cqg_definition, cqg_error };
+            string cqg_definitionKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_definitionKey, cqg_definition);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_definitionKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl(CQGSubMinuteBars cqg_submintue_bars)
+        public static void _ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_submintue_bars)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsAddedEventHandler";
-            var args = new object[] { cqg_submintue_bars };
+            string cqg_submintue_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_submintue_barsKey, cqg_submintue_bars);
+            var args = new object[] { cqg_submintue_barsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsInsertedEventHandler";
-            var args = new object[] { cqg_subminute_bars, index_ };
+            string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminute_barsKey, cqg_subminute_bars);
+            var args = new object[] { cqg_subminute_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsRemovedEventHandler";
-            var args = new object[] { cqg_subminute_bars, index_ };
+            string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminute_barsKey, cqg_subminute_bars);
+            var args = new object[] { cqg_subminute_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl(CQGSubMinuteBars cqg_subminte_bars, CQGError cqg_error)
+        public static void _ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminte_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsResolvedEventHandler";
-            var args = new object[] { cqg_subminte_bars, cqg_error };
+            string cqg_subminte_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminte_barsKey, cqg_subminte_bars);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_subminte_barsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsUpdatedEventHandler";
-            var args = new object[] { cqg_subminute_bars, index_ };
+            string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_subminute_barsKey, cqg_subminute_bars);
+            var args = new object[] { cqg_subminute_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl(CQGSummariesStatement cqg_summaries_statement, CQGError cqg_error)
+        public static void _ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl(CQG.CQGSummariesStatement cqg_summaries_statement, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_SummariesStatementResolvedEventHandler";
-            var args = new object[] { cqg_summaries_statement, cqg_error };
+            string cqg_summaries_statementKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_summaries_statementKey, cqg_summaries_statement);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_summaries_statementKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsAddedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars)
+        public static void _ICQGCELEvents_TFlowBarsAddedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars)
         {
             string name = "_ICQGCELEvents_TFlowBarsAddedEventHandler";
-            var args = new object[] { cqg_tflow_bars };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            var args = new object[] { cqg_tflow_barsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsInsertedEventHandler";
-            var args = new object[] { cqg_tflow_bars, index_ };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            var args = new object[] { cqg_tflow_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsRemovedEventHandler";
-            var args = new object[] { cqg_tflow_bars, index_ };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            var args = new object[] { cqg_tflow_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, CQGError cqg_error)
+        public static void _ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TFlowBarsResolvedEventHandler";
-            var args = new object[] { cqg_tflow_bars, cqg_error };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_tflow_barsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsUpdatedEventHandler";
-            var args = new object[] { cqg_tflow_bars, index_ };
+            string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_tflow_barsKey, cqg_tflow_bars);
+            var args = new object[] { cqg_tflow_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQGTicks cqg_ticks, int added_ticks_count)
+        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, int added_ticks_count)
         {
             string name = "_ICQGCELEvents_TicksAddedEventHandler";
-            var args = new object[] { cqg_ticks, added_ticks_count };
+            string cqg_ticksKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_ticksKey, cqg_ticks);
+            var args = new object[] { cqg_ticksKey, added_ticks_count };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TicksResolvedEventHandlerImpl(CQGTicks cqg_ticks, CQGError cqg_error)
+        public static void _ICQGCELEvents_TicksResolvedEventHandlerImpl(CQG.CQGTicks cqg_ticks, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TicksResolvedEventHandler";
-            var args = new object[] { cqg_ticks, cqg_error };
+            string cqg_ticksKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_ticksKey, cqg_ticks);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_ticksKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsAddedEventHandlerImpl(CQGTimedBars cqg_timed_bars)
+        public static void _ICQGCELEvents_TimedBarsAddedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars)
         {
             string name = "_ICQGCELEvents_TimedBarsAddedEventHandler";
-            var args = new object[] { cqg_timed_bars };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            var args = new object[] { cqg_timed_barsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsInsertedEventHandler";
-            var args = new object[] { cqg_timed_bars, index_ };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            var args = new object[] { cqg_timed_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsRemovedEventHandler";
-            var args = new object[] { cqg_timed_bars, index_ };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            var args = new object[] { cqg_timed_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsResolvedEventHandlerImpl(CQGTimedBars cqg_timed_bars, CQGError cqg_error)
+        public static void _ICQGCELEvents_TimedBarsResolvedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TimedBarsResolvedEventHandler";
-            var args = new object[] { cqg_timed_bars, cqg_error };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_timed_barsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsUpdatedEventHandler";
-            var args = new object[] { cqg_timed_bars, index_ };
+            string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_timed_barsKey, cqg_timed_bars);
+            var args = new object[] { cqg_timed_barsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(int gw_account_id, CQGCommodities cqg_commodities, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableCommoditiesResolvedEventHandler";
-            var args = new object[] { gw_account_id, cqg_commodities, cqg_error };
+            string cqg_commoditiesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_commoditiesKey, cqg_commodities);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { gw_account_id, cqg_commoditiesKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(int gw_account_id, CQGExchanges cqg_exchanges, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableExchangesResolvedEventHandler";
-            var args = new object[] { gw_account_id, cqg_exchanges, cqg_error };
+            string cqg_exchangesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_exchangesKey, cqg_exchanges);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { gw_account_id, cqg_exchangesKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGTradingSystemAddInfo cqg_trading_system_add_info)
+        public static void _ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemAddInfo cqg_trading_system_add_info)
         {
             string name = "_ICQGCELEvents_TradingSystemAddNotificationEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_trading_system_add_info };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_trading_system_add_infoKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_add_infoKey, cqg_trading_system_add_info);
+            var args = new object[] { cqg_trading_systemKey, cqg_trading_system_add_infoKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl(CQGTradingSystemDefinitions cqg_trading_system_definitions, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl(CQG.CQGTradingSystemDefinitions cqg_trading_system_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandler";
-            var args = new object[] { cqg_trading_system_definitions, cqg_error };
+            string cqg_trading_system_definitionsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_definitionsKey, cqg_trading_system_definitions);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_trading_system_definitionsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGTradingSystemInsertInfo cqg_trading_system_insert_info)
+        public static void _ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemInsertInfo cqg_trading_system_insert_info)
         {
             string name = "_ICQGCELEvents_TradingSystemInsertNotificationEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_trading_system_insert_info };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_trading_system_insert_infoKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_insert_infoKey, cqg_trading_system_insert_info);
+            var args = new object[] { cqg_trading_systemKey, cqg_trading_system_insert_infoKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGTradingSystemRemoveInfo cqg_trading_system_remove_info)
+        public static void _ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRemoveInfo cqg_trading_system_remove_info)
         {
             string name = "_ICQGCELEvents_TradingSystemRemoveNotificationEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_trading_system_remove_info };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_trading_system_remove_infoKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_remove_infoKey, cqg_trading_system_remove_info);
+            var args = new object[] { cqg_trading_systemKey, cqg_trading_system_remove_infoKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemResolvedEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGError cqg_error)
+        public static void _ICQGCELEvents_TradingSystemResolvedEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradingSystemResolvedEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_error };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_trading_systemKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGTradingSystemRelationAddInfo cqg_trading_system_relation_add_info)
+        public static void _ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRelationAddInfo cqg_trading_system_relation_add_info)
         {
             string name = "_ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_trading_system_relation_add_info };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_trading_system_relation_add_infoKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_relation_add_infoKey, cqg_trading_system_relation_add_info);
+            var args = new object[] { cqg_trading_systemKey, cqg_trading_system_relation_add_infoKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl(CQGTradingSystem cqg_trading_system, CQGTradingSystemUpdateInfo cqg_trading_system_update_info)
+        public static void _ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemUpdateInfo cqg_trading_system_update_info)
         {
             string name = "_ICQGCELEvents_TradingSystemUpdateNotificationEventHandler";
-            var args = new object[] { cqg_trading_system, cqg_trading_system_update_info };
+            string cqg_trading_systemKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_systemKey, cqg_trading_system);
+            string cqg_trading_system_update_infoKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_trading_system_update_infoKey, cqg_trading_system_update_info);
+            var args = new object[] { cqg_trading_systemKey, cqg_trading_system_update_infoKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsAddedEventHandlerImpl(CQGYields cqg_yields)
+        public static void _ICQGCELEvents_YieldsAddedEventHandlerImpl(CQG.CQGYields cqg_yields)
         {
             string name = "_ICQGCELEvents_YieldsAddedEventHandler";
-            var args = new object[] { cqg_yields };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            var args = new object[] { cqg_yieldsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsInsertedEventHandler";
-            var args = new object[] { cqg_yields, index_ };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            var args = new object[] { cqg_yieldsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsRemovedEventHandler";
-            var args = new object[] { cqg_yields, index_ };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            var args = new object[] { cqg_yieldsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsResolvedEventHandlerImpl(CQGYields cqg_yields, CQGError cqg_error)
+        public static void _ICQGCELEvents_YieldsResolvedEventHandlerImpl(CQG.CQGYields cqg_yields, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_YieldsResolvedEventHandler";
-            var args = new object[] { cqg_yields, cqg_error };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { cqg_yieldsKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsUpdatedEventHandler";
-            var args = new object[] { cqg_yields, index_ };
+            string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_yieldsKey, cqg_yields);
+            var args = new object[] { cqg_yieldsKey, index_ };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -729,10 +1009,12 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELGeneralEvents_CurrencyRatesChangedEventHandlerImpl(CQGCurrencyRates cqg_currency_rates)
+        public static void _ICQGCELGeneralEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
             string name = "_ICQGCELGeneralEvents_CurrencyRatesChangedEventHandler";
-            var args = new object[] { cqg_currency_rates };
+            string cqg_currency_ratesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_currency_ratesKey, cqg_currency_rates);
+            var args = new object[] { cqg_currency_ratesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -757,10 +1039,12 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELGeneralEvents_IsReadyEventHandlerImpl(ref eReadyStatus ready_status)
+        public static void _ICQGCELGeneralEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
             string name = "_ICQGCELGeneralEvents_IsReadyEventHandler";
-            var args = new object[] { ready_status };
+            string ready_statusKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(ready_statusKey, ready_status);
+            var args = new object[] { ready_statusKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -777,10 +1061,12 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler";
-            var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
+            string cqg_commodity_intrumentsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_commodity_intrumentsKey, cqg_commodity_intruments);
+            var args = new object[] { commodity_name, instrument_types, cqg_commodity_intrumentsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
@@ -791,38 +1077,60 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl(CQGInstrument cqg_instrument, CQGQuotes cqg_quotes, CQGInstrumentProperties cqg_instrument_properties)
+        public static void _ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentChangedEventHandler";
-            var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            string cqg_quotesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_quotesKey, cqg_quotes);
+            string cqg_instrument_propertiesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrument_propertiesKey, cqg_instrument_properties);
+            var args = new object[] { cqg_instrumentKey, cqg_quotesKey, cqg_instrument_propertiesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl(CQGInstrument cqg_instrument, CQGDOMQuotes prev_asks, CQGDOMQuotes prev_bids)
+        public static void _ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandler";
-            var args = new object[] { cqg_instrument, prev_asks, prev_bids };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            string prev_asksKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(prev_asksKey, prev_asks);
+            string prev_bidsKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(prev_bidsKey, prev_bids);
+            var args = new object[] { cqg_instrumentKey, prev_asksKey, prev_bidsKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl(eChangeType change_type, CQGInstrumentsGroup instruments_group, CQGStringCollection instruments_names)
+        public static void _ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl(eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandler";
-            var args = new object[] { change_type, instruments_group, instruments_names };
+            string instruments_groupKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_groupKey, instruments_group);
+            string instruments_namesKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_namesKey, instruments_names);
+            var args = new object[] { change_type, instruments_groupKey, instruments_namesKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl(CQGInstrumentsGroup instruments_group, CQGError cqg_error)
+        public static void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler";
-            var args = new object[] { instruments_group, cqg_error };
+            string instruments_groupKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(instruments_groupKey, instruments_group);
+            string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_errorKey, cqg_error);
+            var args = new object[] { instruments_groupKey, cqg_errorKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQGInstrument cqg_instrument)
+        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler";
-            var args = new object[] { symbol_, cqg_instrument };
+            string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
+            DataDictionaries.PutObjectToTheDictionary(cqg_instrumentKey, cqg_instrument);
+            var args = new object[] { symbol_, cqg_instrumentKey };
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 

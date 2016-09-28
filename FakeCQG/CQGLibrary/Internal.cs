@@ -19,8 +19,6 @@ namespace FakeCQG
     {
         #region Helper objects
 
-        static bool EventsCheckingON = false;
-
         static string Log;
         public static object LogLock = new object();
 
@@ -52,13 +50,6 @@ namespace FakeCQG
                 Handshaking.Subscriber.ListenForHanshaking();
 
                 FirstCall = false;
-            }
-
-            if (!EventsCheckingON)
-            {
-                
-
-                EventsCheckingON = true;
             }
 
             var argKeys = new Dictionary<string, string>();
