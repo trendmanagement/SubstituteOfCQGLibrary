@@ -137,26 +137,37 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
+						try
+                        {
+                        	object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
 
-                        if (!object.ReferenceEquals(returnV, null))
-                        {
-                            if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
-                            {
-                                var returnKey = "value";
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
-                            }
-                            else
-                            {
-                                var returnKey = FakeCQG.CQG.CreateUniqueKey();
-                                DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                            }
+                        	if (!object.ReferenceEquals(returnV, null))
+                        	{
+                        	    if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                            	{
+                            	    var returnKey = "value";
+                            	    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
+                            	}
+                            	else
+                            	{
+                            	    var returnKey = FakeCQG.CQG.CreateUniqueKey();
+                            	    DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
+                            	    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                          	  }
+                        	}
+                        	else
+                        	{
+                            	var returnKey = "true";
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                        	}
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            var returnKey = "true";
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
                         }
 
                         PushAnswerAndDeleteQuery(answer);
