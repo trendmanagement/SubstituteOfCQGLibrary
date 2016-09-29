@@ -16,7 +16,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_PushOneQueryItem()
         {
             // arrange
-            var qType = QueryInfo.QueryType.SetProperty;
+            var qType = QueryType.SetProperty;
             string idTrue = "keyTrue";
             string idFalse = "keyFalse";
             bool isQuery = default(bool);
@@ -50,7 +50,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_RemoveOneQueryItem()
         {
             // arrange
-            var qType = QueryInfo.QueryType.CallMethod;
+            var qType = QueryType.CallMethod;
             string id = "key";
             bool isQuery = default(bool);
             string name = "name";
@@ -80,7 +80,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_ReadInfoQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.SetProperty;
+            var qType = QueryType.SetProperty;
             string[] idTrue = { "key1True", "key2True", "key3True" };
             string idFalse = "keyFalse";
             string name = "name";
@@ -118,7 +118,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_GetAllQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.SetProperty;
+            var qType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4", "key5" };
             string name = "name";
             CQG.LogChange += CQG_LogChange_Mock;
@@ -145,7 +145,7 @@ namespace UnitTestFakeCQG
             Assert.AreEqual(answers.Count, 5);
             for (int i = 0; i < answers.Count; i++)
             {
-                Assert.AreEqual((answers[i].Key == keys[i]), true);
+                Assert.AreEqual((answers[i].QueryKey == keys[i]), true);
             }
         }
 
@@ -154,7 +154,7 @@ namespace UnitTestFakeCQG
         public void MethodAsync_RemoveAllQueries()
         {
             // arrange
-            var qType = QueryInfo.QueryType.SetProperty;
+            var qType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4", "key5" };
             string name = "name";
             CQG.LogChange += CQG_LogChange_For_RemoveAll;
@@ -266,7 +266,7 @@ namespace UnitTestFakeCQG
 
             // assert
             Assert.IsTrue(isAnswer);
-            Assert.AreEqual(id, answer.Key);
+            Assert.AreEqual(id, answer.AnswerKey);
         }
 
         [TestMethod]
@@ -276,7 +276,7 @@ namespace UnitTestFakeCQG
             string id = "keyDCEventHandler";
             bool isAnswer = default(bool);
             string name = "name";
-            object[] arguments = { "value1", "value2" };
+            var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
             CQG.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
             Task.Run(async () =>
@@ -290,12 +290,12 @@ namespace UnitTestFakeCQG
                 await answerHelper.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
 
             }).GetAwaiter().GetResult();
-            answerHelper.CommonEventHandler(name, arguments);
+            answerHelper.CommonEventHandler(name, serArgs: argValues);
             var answer = answerHelper.GetAnswerData(id, out isAnswer);
 
             // assert
             Assert.IsTrue(isAnswer);
-            Assert.AreEqual(id, answer.Key);
+            Assert.AreEqual(id, answer.AnswerKey);
             //TODO: uncomment after completes deserialize from dictionary to bson
             //Assert.IsNotNull(answer.ArgValues);
             //Assert.AreEqual(arguments, answer.ArgValues[1]);
@@ -357,12 +357,12 @@ namespace UnitTestFakeCQG
         public void Method_CreateQuery_Properties()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.SetProperty;
+            var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4" };
             string objectKey = default(string);
             string queryName = "name";
-            var argumentKeys = new Dictionary<string, string>() { { "1", "argumentKey" } };
-            var argumentValues = new Dictionary<string, object>() { { "1", "argumentValue" } };
+            var argumentKeys = new Dictionary<int, string>() { { 1, "argumentKey" } };
+            var argumentValues = new Dictionary<int, object>() { { 1, "argumentValue" } };
             var queryList = new List<QueryInfo>();
 
             //act
@@ -372,19 +372,19 @@ namespace UnitTestFakeCQG
             queryList.Add(CQG.CreateQuery(queryType, keys[3], objectKey, queryName, null, null));
 
             //assert
-            Assert.AreEqual(keys[0], queryList[0].Key);
-            Assert.AreEqual(argumentKeys["1"], queryList[0].ArgKeys["1"]);
-            Assert.AreEqual(argumentValues["1"], queryList[0].ArgValues["1"]);
+            Assert.AreEqual(keys[0], queryList[0].QueryKey);
+            Assert.AreEqual(argumentKeys[1], queryList[0].ArgKeys[1]);
+            Assert.AreEqual(argumentValues[1], queryList[0].ArgValues[1]);
 
-            Assert.AreEqual(keys[1], queryList[1].Key);
-            Assert.AreEqual(argumentKeys["1"], queryList[1].ArgKeys["1"]);
+            Assert.AreEqual(keys[1], queryList[1].QueryKey);
+            Assert.AreEqual(argumentKeys[1], queryList[1].ArgKeys[1]);
             Assert.AreEqual(null, queryList[1].ArgValues);
 
-            Assert.AreEqual(keys[2], queryList[2].Key);
+            Assert.AreEqual(keys[2], queryList[2].QueryKey);
             Assert.AreEqual(null, queryList[2].ArgKeys);
-            Assert.AreEqual(argumentValues["1"], queryList[2].ArgValues["1"]);
+            Assert.AreEqual(argumentValues[1], queryList[2].ArgValues[1]);
 
-            Assert.AreEqual(keys[3], queryList[3].Key);
+            Assert.AreEqual(keys[3], queryList[3].QueryKey);
             Assert.AreEqual(null, queryList[3].ArgKeys);
             Assert.AreEqual(null, queryList[3].ArgValues);
         }
@@ -410,11 +410,11 @@ namespace UnitTestFakeCQG
                 await answerHelper.PushAnswerAsync(answerInput);
             }).GetAwaiter().GetResult();
 
-            answerOutput = CQG.WaitingForAnAnswer(id, QueryInfo.QueryType.GetProperty);
+            answerOutput = CQG.WaitingForAnAnswer(id, QueryType.GetProperty);
 
             // assert
-            Assert.AreEqual(answerInput.Key, answerOutput.Key);
-            Assert.AreEqual(answerInput.QueryName, answerOutput.QueryName);
+            Assert.AreEqual(answerInput.AnswerKey, answerOutput.AnswerKey);
+            Assert.AreEqual(answerInput.MemberName, answerOutput.MemberName);
         }
 
         string NoAnswerMessage = string.Empty;
@@ -423,7 +423,7 @@ namespace UnitTestFakeCQG
         public void Method_ExecuteTheQuery_TimerElapsed()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.SetProperty;
+            var queryType = QueryType.SetProperty;
             string name = "name";
             Timer timer = new Timer();
             bool isThrownException = false;

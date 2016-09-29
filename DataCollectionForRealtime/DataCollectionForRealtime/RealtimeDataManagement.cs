@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using FakeCQG.Handshaking;
+using FakeCQG.Models;
 
 namespace DataCollectionForRealtime
 {
@@ -39,7 +39,7 @@ namespace DataCollectionForRealtime
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            FakeCQG.DataDictionaries.ClearAllDictionaris();
+            FakeCQG.ServerDictionaries.ClearAllDictionaries();
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
@@ -61,12 +61,11 @@ namespace DataCollectionForRealtime
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
-            FakeCQG.DataDictionaries.RealTimeIds = new HashSet<Guid>();
             if (!args.NoSubscribers)
             {
-                foreach (var subscriber in args.Subscribers)
+                foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    FakeCQG.DataDictionaries.RealTimeIds.Add(subscriber.ID);
+                    FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
                 }
                 HandshakingTimer.Stop();
             }

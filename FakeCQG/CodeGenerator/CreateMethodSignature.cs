@@ -86,7 +86,7 @@ namespace CodeGenerator
 
                 string typeName = TypeToString(pinfo.ParameterType);
 
-                if (isDCEventHandler && !IsSerializableType(pinfo.ParameterType))
+                if (isDCEventHandler && (!IsSerializableType(pinfo.ParameterType) || pinfo.ParameterType.IsEnum))
                 {
                     typeName = "CQG." + typeName;
                 }

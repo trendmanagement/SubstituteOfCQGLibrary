@@ -92,7 +92,7 @@ namespace CodeGenerator
                     {
                         // Write a line of code that collects all the index parameters into object[] as following:
                         // var args = new object[] { arg1, arg2, ..., argn }
-                        CreateArgsObjectArray(File, Indent3, indexParams);
+                        CreateArgsObjectArray(Indent3, indexParams);
 
                         args = "dcObjKey, name, args";
                     }

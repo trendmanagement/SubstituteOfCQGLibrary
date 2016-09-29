@@ -57,7 +57,7 @@ namespace CodeGenerator
             {
                 // Write a line of code that collects all the arguments into object[] as following:
                 // var args = new object[] { arg1, arg2, ..., argn }
-                CreateArgsObjectArray(File, Indent2, minfo.GetParameters());
+                CreateArgsObjectArray(Indent2, minfo.GetParameters());
             }
 
             if (IsSerializableType(minfo.ReturnType))

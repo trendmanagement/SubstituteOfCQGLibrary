@@ -71,7 +71,7 @@ namespace FakeCQG.Helpers
         {
             return Task.Run(() =>
             {
-                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, Id);
+                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, Id);
 
                 AnswerInfo result = null;
                 try
@@ -89,12 +89,12 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id, out bool isAns)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             try
             {
                 AnswerInfo answer = Collection.Find(filter).First();
-                CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.Key);
+                CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                RemoveAnswerAsync(answer.AnswerKey);
                 isAns = true;
                 //if (answer.Key == "value")
                 //{
@@ -118,16 +118,16 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             AnswerInfo answer = null;
-            while (!DataDictionaries.IsAnswer[id])
+            while (!ClientDictionaries.IsAnswer[id])
             {
                 try
                 {
                     answer = Collection.Find(filter).First();
-                    CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                    RemoveAnswerAsync(answer.Key);
-                    DataDictionaries.IsAnswer[id] = true;
+                    CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    RemoveAnswerAsync(answer.AnswerKey);
+                    ClientDictionaries.IsAnswer[id] = true;
                 }
                 catch (Exception)
                 {
@@ -168,7 +168,7 @@ namespace FakeCQG.Helpers
 
         public Task RemoveAnswerAsync(string key)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, key);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, key);
             return Task.Run(() =>
             {
                 try
@@ -199,17 +199,33 @@ namespace FakeCQG.Helpers
             }
         }
 
-        public void CommonEventHandler(string name, object[] args = null)
+        public void CommonEventHandler(
+            string eventName,
+            Dictionary<int, object> serArgs = null,
+            Dictionary<int, object> nonSerArgs = null)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
+            var argValues = serArgs;
+
+            // Create unique keys for all the non-serializable objects
+            // and put the objects into the data collector key-to-object dictionary
+            Dictionary<int, string> argKeys = null;
+            if (nonSerArgs != null && nonSerArgs.Count != 0)
+            {
+                argKeys = new Dictionary<int, string>();
+                foreach (KeyValuePair<int, object> pair in nonSerArgs)
+                {
+                    string paramKey = CQG.CreateUniqueKey();
+                    argKeys[pair.Key] = paramKey;
+                    ServerDictionaries.PutObjectToTheDictionary(paramKey, pair.Value);
+                }
+            }
+
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, eventName);
             try
             {
                 //AnswerInfo answer = Collection.Find(filter).First();
-                
-                var argValues = new Dictionary<int, object>();
-                argValues.Add(0, args);
 
-                AnswerInfo answer = new AnswerInfo(eventFiringId, "", name, argValues);
+                var answer = new AnswerInfo(eventFiringId, string.Empty, eventName, argKeys, argValues);
                 PushAnswer(answer);
                 //var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
 

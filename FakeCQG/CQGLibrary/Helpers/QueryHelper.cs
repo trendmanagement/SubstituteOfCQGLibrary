@@ -46,7 +46,7 @@ namespace FakeCQG.Helpers
                 try
                 {
                     Collection.InsertOne(query);
-                    CQG.OnLogChange(query.Key, query.QueryName, true);
+                    CQG.OnLogChange(query.QueryKey, query.MemberName, true);
                 }
                 catch (Exception ex)
                 {
@@ -59,7 +59,7 @@ namespace FakeCQG.Helpers
         {
             return Task.Run(() =>
             {
-                var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, Id);
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, Id);
                 QueryInfo result = null;
                 try
                 {
@@ -81,12 +81,12 @@ namespace FakeCQG.Helpers
                 try
                 {
                     // Select only the queries that are not being processed
-                    var queries = Collection.Find(filter).ToEnumerable().Where(query => !keysOfQueriesInProcess.Contains(query.Key)).ToList();
-                    
+                    var queries = Collection.Find(filter).ToEnumerable().Where(query => !keysOfQueriesInProcess.Contains(query.QueryKey)).ToList();
+
                     if (queries.Count != 0)
                     {
                         // Mark them as being processed
-                        keysOfQueriesInProcess.UnionWith(queries.Select(query => query.Key));
+                        keysOfQueriesInProcess.UnionWith(queries.Select(query => query.QueryKey));
 
                         // Fire the event
                         NewQueriesReady(queries);
@@ -130,7 +130,7 @@ namespace FakeCQG.Helpers
         {
             return Task.Run(() =>
             {
-                var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, key);
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
                 try
                 {
                     Collection.DeleteOne(filter);
@@ -144,7 +144,7 @@ namespace FakeCQG.Helpers
 
         public void DeleteProcessedQuery(string key)
         {
-            var filter = Builders<QueryInfo>.Filter.Eq(Keys.IdName, key);
+            var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
             try
             {
                 Collection.DeleteOneAsync(filter);

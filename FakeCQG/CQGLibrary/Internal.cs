@@ -9,6 +9,8 @@ namespace FakeCQG
 {
     static class Keys
     {
+        public const string QueryKey = "QueryKey";
+        public const string AnswerKey = "AnswerKey";
         public const string IdName = "Key";
         public const string QueryName = "QueryName";
         public const string ArgValues = "ArgValues";
@@ -38,22 +40,21 @@ namespace FakeCQG
 
         #region MongoDB communication methods
 
-        public static object ExecuteTheQuery(QueryInfo.QueryType qType, string objKey, string name, object[] args = null)
+        public static object ExecuteTheQuery(
+            QueryType queryType,
+            string dcObjKey = null,
+            string memName = null,
+            object[] args = null)
         {
             if (FirstCall)
             {
                 // Lazy connection to MongoDB
                 QueryHelper = new QueryHelper();
                 AnswerHelper = new AnswerHelper();
-
-                // Start handshaking
-                Handshaking.Subscriber.ListenForHanshaking();
-
-                FirstCall = false;
             }
 
-            var argKeys = new Dictionary<string, string>();
-            var argVals = new Dictionary<string, object>();
+            var argKeys = new Dictionary<int, string>();
+            var argVals = new Dictionary<int, object>();
 
             string queryKey = CreateUniqueKey();
 
@@ -66,19 +67,27 @@ namespace FakeCQG
 
                     if (IsSerializableType(argType))
                     {
-                        argVals.Add(i.ToString(), arg);
+                        argVals.Add(i, arg);
                     }
                     else
                     {
-                        argKeys.Add(i.ToString(), argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg).ToString());
+                        argKeys.Add(i, argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg).ToString());
                     }
                 }
             }
 
-            QueryInfo qInfo = CreateQuery(qType, queryKey, objKey, name, argKeys, argVals);
-            Task.Run(() => QueryHelper.PushQueryAsync(qInfo));
+            QueryInfo queryInfo = CreateQuery(queryType, queryKey, dcObjKey, memName, argKeys, argVals);
+            Task.Run(() => QueryHelper.PushQueryAsync(queryInfo));
 
-            AnswerInfo result = WaitingForAnAnswer(queryKey, qType);
+            AnswerInfo result = WaitingForAnAnswer(queryKey, queryType);
+
+            if (FirstCall)
+            {
+                // Start handshaking
+                Handshaking.Subscriber.ListenForHanshaking();
+
+                FirstCall = false;
+            }
 
             if (result.ValueKey == "value")
             {
@@ -94,17 +103,17 @@ namespace FakeCQG
             }
         }
 
-        public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryInfo.QueryType qType)
+        public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
         {
             AnswerInfo answer = null;
             Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
             bool success = task.Wait(QueryTimeout);
             if (success)
             {
-                DataDictionaries.IsAnswer.Remove(queryKey);
-                if (qType == QueryInfo.QueryType.CallCtor)
+                ClientDictionaries.IsAnswer.Remove(queryKey);
+                if (queryType == QueryType.CallCtor)
                 {
-                    DataDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.QueryName);
+                    ClientDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.MemberName);
                 }
                 return answer;
             }
@@ -117,43 +126,46 @@ namespace FakeCQG
         }
 
         public static QueryInfo CreateQuery(
-            QueryInfo.QueryType qType,
-            string key,
+            QueryType qType,
+            string qKey,
             string objKey,
-            string name,
-            Dictionary<string, string> argKeys = null,
-            Dictionary<string, object> argVals = null)
+            string memName,
+            Dictionary<int, string> argKeys = null,
+            Dictionary<int, object> argVals = null)
         {
             QueryInfo model;
 
             switch (qType)
             {
-                case QueryInfo.QueryType.CallCtor:
-                case QueryInfo.QueryType.CallDtor:
-                case QueryInfo.QueryType.GetProperty:
-                case QueryInfo.QueryType.SetProperty:
-                case QueryInfo.QueryType.CallMethod:
-
+                case QueryType.CallCtor:
+                    model = new QueryInfo(qType, qKey, memberName: memName);
+                    break;
+                case QueryType.CallDtor:
+                    model = new QueryInfo(qType, qKey, objectKey: objKey);
+                    break;
+                case QueryType.GetProperty:
+                case QueryType.SetProperty:
+                case QueryType.CallMethod:
                     if (argKeys.Count == 0 && argVals.Count == 0)
                     {
-                        model = new QueryInfo(qType, key, objKey, name);
+                        model = new QueryInfo(qType, qKey, objKey, memName);
                     }
                     else if (argKeys.Count == 0)
                     {
-                        model = new QueryInfo(qType, key, objKey, name, argVals: argVals);
+                        model = new QueryInfo(qType, qKey, objKey, memName, argValues: argVals);
                     }
                     else if (argVals.Count == 0)
                     {
-                        model = new QueryInfo(qType, key, objKey, name, argKeys);
+                        model = new QueryInfo(qType, qKey, objKey, memName, argKeys);
                     }
                     else
                     {
-                        model = new QueryInfo(qType, key, objKey, name, argKeys, argVals);
+                        model = new QueryInfo(qType, qKey, objKey, memName, argKeys, argVals);
                     }
                     break;
-                case QueryInfo.QueryType.SubscribeToEvent:
-                case QueryInfo.QueryType.UnsubscribeFromEvent:
-                    model = new QueryInfo(qType, key, objKey, name);
+                case QueryType.SubscribeToEvent:
+                case QueryType.UnsubscribeFromEvent:
+                    model = new QueryInfo(qType, qKey, objKey, memName);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -161,7 +173,7 @@ namespace FakeCQG
 
             OnLogChange(model.ToString());
 
-            DataDictionaries.IsAnswer.Add(key, false);
+            ClientDictionaries.IsAnswer.Add(qKey, false);
 
             return model;
         }
@@ -201,13 +213,13 @@ namespace FakeCQG
         {
             if (isUnsubscriptionRequired)
             {
-                ExecuteTheQuery(QueryInfo.QueryType.UnsubscribeFromEvent, objKey, name);
-                DataDictionaries.EventCheckingDictionary[objKey][name] = false;
+                ExecuteTheQuery(QueryType.UnsubscribeFromEvent, objKey, name);
+                ClientDictionaries.EventCheckingDictionary[objKey][name] = false;
             }
             else if (isSubscriptionRequired)
             {
-                ExecuteTheQuery(QueryInfo.QueryType.SubscribeToEvent, objKey, name);
-                DataDictionaries.EventCheckingDictionary[objKey][name] = true;
+                ExecuteTheQuery(QueryType.SubscribeToEvent, objKey, name);
+                ClientDictionaries.EventCheckingDictionary[objKey][name] = true;
             }
         }
 

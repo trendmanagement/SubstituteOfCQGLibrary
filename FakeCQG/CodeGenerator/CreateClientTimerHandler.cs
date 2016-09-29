@@ -5,14 +5,14 @@ namespace CodeGenerator
 {
     partial class Program
     {
-        static void EventChecking(EventInfo einfo)
+        static void CreateClientTimerHandler(EventInfo einfo)
         {
             File.WriteLine(Indent2 + "CQG.SubscriberChecking(\"" + einfo.Name + "\", dcObjKey, " + Environment.NewLine +
-                Indent3 + einfo.Name + " != null && !DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
-                + Environment.NewLine + Indent3 + einfo.Name + " == null && DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
+                Indent3 + einfo.Name + " != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
+                + Environment.NewLine + Indent3 + einfo.Name + " == null && ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
                 "\"]);" + Environment.NewLine);
 
-            File.WriteLine(Indent2 + "if (DataDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"] == true)" +
+            File.WriteLine(Indent2 + "if (ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"] == true)" +
                 Environment.NewLine + Indent2 + "{");
             File.WriteLine(Indent3 + "try" + Environment.NewLine + Indent3 + "{");
             File.WriteLine(Indent4 + "object[] args = CQG.AnswerHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\");");
@@ -25,7 +25,6 @@ namespace CodeGenerator
             {
                 string paramType = TypeToString(pinfo.ParameterType);
                 string arg = "args[" + pinfo.Position + "]";
-                
 
                 if (paramType.Substring(paramType.Length - 1, 1) == "&")
                 {
@@ -88,7 +87,7 @@ namespace CodeGenerator
                     }      
                 }
             }
-               
+
             File.WriteLine(Indent3 + "}");
             File.WriteLine(Indent3 + "catch (Exception)" + Environment.NewLine + Indent3 + "{ }");
             File.WriteLine(Indent2 + "}" + Environment.NewLine);

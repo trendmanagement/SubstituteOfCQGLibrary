@@ -89,7 +89,7 @@ namespace DataCollectionForRealtime
                 m_CEL = (CQG.CQGCEL)CQGAssm.CreateInstance(typeName);
 
                 m_CEL_key = FakeCQG.CQG.CreateUniqueKey();
-                FakeCQG.DataDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
+                FakeCQG.ServerDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
 
                 m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);

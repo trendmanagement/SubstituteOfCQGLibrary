@@ -105,14 +105,14 @@ namespace CodeGenerator
 
             if (eventsChecking)
             {
-                UpdateRegion(RegionType.TimerTickHandler);
+                UpdateRegion(RegionType.TimerTickHandlers);
 
                 File.WriteLine(Indent1 + "private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)" +
                     Environment.NewLine + Indent1 + "{");
 
                 foreach (EventInfo einfo in SortEvents(type.GetEvents()))
                 {
-                    EventChecking(einfo);
+                    CreateClientTimerHandler(einfo);
                 }
 
                 MemberEnd();

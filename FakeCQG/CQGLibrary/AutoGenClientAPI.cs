@@ -15571,15 +15571,15 @@ namespace FakeCQG
 
         #endregion
 
-        #region TimerTickHandler
+        #region TimerTickHandlers
 
         private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
         {
             CQG.SubscriberChecking("AccountChanged", dcObjKey, 
-                AccountChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"], 
-                AccountChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"]);
+                AccountChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"], 
+                AccountChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AccountChanged"] == true)
             {
                 try
                 {
@@ -15593,10 +15593,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyAdded", dcObjKey, 
-                AdvancedStudyAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"], 
-                AdvancedStudyAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"]);
+                AdvancedStudyAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"], 
+                AdvancedStudyAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyAdded"] == true)
             {
                 try
                 {
@@ -15609,10 +15609,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyDefinitionsResolved", dcObjKey, 
-                AdvancedStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"], 
-                AdvancedStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"]);
+                AdvancedStudyDefinitionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"], 
+                AdvancedStudyDefinitionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -15626,10 +15626,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyInserted", dcObjKey, 
-                AdvancedStudyInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"], 
-                AdvancedStudyInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"]);
+                AdvancedStudyInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"], 
+                AdvancedStudyInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyInserted"] == true)
             {
                 try
                 {
@@ -15642,10 +15642,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyRemoved", dcObjKey, 
-                AdvancedStudyRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"], 
-                AdvancedStudyRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"]);
+                AdvancedStudyRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"], 
+                AdvancedStudyRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyRemoved"] == true)
             {
                 try
                 {
@@ -15658,10 +15658,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyResolved", dcObjKey, 
-                AdvancedStudyResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"], 
-                AdvancedStudyResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"]);
+                AdvancedStudyResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"], 
+                AdvancedStudyResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyResolved"] == true)
             {
                 try
                 {
@@ -15675,10 +15675,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AdvancedStudyUpdated", dcObjKey, 
-                AdvancedStudyUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"], 
-                AdvancedStudyUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"]);
+                AdvancedStudyUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"], 
+                AdvancedStudyUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AdvancedStudyUpdated"] == true)
             {
                 try
                 {
@@ -15691,10 +15691,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AlgorithmicOrderPlaced", dcObjKey, 
-                AlgorithmicOrderPlaced != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"], 
-                AlgorithmicOrderPlaced == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"]);
+                AlgorithmicOrderPlaced != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"], 
+                AlgorithmicOrderPlaced == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderPlaced"] == true)
             {
                 try
                 {
@@ -15708,10 +15708,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AlgorithmicOrderRegistrationComplete", dcObjKey, 
-                AlgorithmicOrderRegistrationComplete != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"], 
-                AlgorithmicOrderRegistrationComplete == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"]);
+                AlgorithmicOrderRegistrationComplete != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"], 
+                AlgorithmicOrderRegistrationComplete == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AlgorithmicOrderRegistrationComplete"] == true)
             {
                 try
                 {
@@ -15724,10 +15724,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AllOrdersCanceled", dcObjKey, 
-                AllOrdersCanceled != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"], 
-                AllOrdersCanceled == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"]);
+                AllOrdersCanceled != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"], 
+                AllOrdersCanceled == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AllOrdersCanceled"] == true)
             {
                 try
                 {
@@ -15741,10 +15741,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("AuthenticationStatusChanged", dcObjKey, 
-                AuthenticationStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"], 
-                AuthenticationStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"]);
+                AuthenticationStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"], 
+                AuthenticationStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["AuthenticationStatusChanged"] == true)
             {
                 try
                 {
@@ -15757,10 +15757,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("BarsTimestampsResolved", dcObjKey, 
-                BarsTimestampsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"], 
-                BarsTimestampsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"]);
+                BarsTimestampsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"], 
+                BarsTimestampsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["BarsTimestampsResolved"] == true)
             {
                 try
                 {
@@ -15774,10 +15774,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CELStarted", dcObjKey, 
-                CELStarted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
-                CELStarted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
+                CELStarted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
+                CELStarted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
             {
                 try
                 {
@@ -15789,10 +15789,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CommodityInstrumentsResolved", dcObjKey, 
-                CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
-                CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
+                CommodityInstrumentsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
+                CommodityInstrumentsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
             {
                 try
                 {
@@ -15805,10 +15805,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionAdded", dcObjKey, 
-                ConditionAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"], 
-                ConditionAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"]);
+                ConditionAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"], 
+                ConditionAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionAdded"] == true)
             {
                 try
                 {
@@ -15821,10 +15821,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionDefinitionsResolved", dcObjKey, 
-                ConditionDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"], 
-                ConditionDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"]);
+                ConditionDefinitionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"], 
+                ConditionDefinitionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -15838,10 +15838,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionInserted", dcObjKey, 
-                ConditionInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"], 
-                ConditionInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"]);
+                ConditionInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"], 
+                ConditionInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionInserted"] == true)
             {
                 try
                 {
@@ -15854,10 +15854,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionRemoved", dcObjKey, 
-                ConditionRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"], 
-                ConditionRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"]);
+                ConditionRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"], 
+                ConditionRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionRemoved"] == true)
             {
                 try
                 {
@@ -15870,10 +15870,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionResolved", dcObjKey, 
-                ConditionResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"], 
-                ConditionResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"]);
+                ConditionResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"], 
+                ConditionResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionResolved"] == true)
             {
                 try
                 {
@@ -15887,10 +15887,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConditionUpdated", dcObjKey, 
-                ConditionUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"], 
-                ConditionUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"]);
+                ConditionUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"], 
+                ConditionUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConditionUpdated"] == true)
             {
                 try
                 {
@@ -15903,10 +15903,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConstantVolumeBarsAdded", dcObjKey, 
-                ConstantVolumeBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"], 
-                ConstantVolumeBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"]);
+                ConstantVolumeBarsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"], 
+                ConstantVolumeBarsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsAdded"] == true)
             {
                 try
                 {
@@ -15919,10 +15919,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConstantVolumeBarsInserted", dcObjKey, 
-                ConstantVolumeBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"], 
-                ConstantVolumeBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"]);
+                ConstantVolumeBarsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"], 
+                ConstantVolumeBarsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsInserted"] == true)
             {
                 try
                 {
@@ -15935,10 +15935,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConstantVolumeBarsRemoved", dcObjKey, 
-                ConstantVolumeBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"], 
-                ConstantVolumeBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"]);
+                ConstantVolumeBarsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"], 
+                ConstantVolumeBarsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsRemoved"] == true)
             {
                 try
                 {
@@ -15951,10 +15951,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConstantVolumeBarsResolved", dcObjKey, 
-                ConstantVolumeBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"], 
-                ConstantVolumeBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"]);
+                ConstantVolumeBarsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"], 
+                ConstantVolumeBarsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsResolved"] == true)
             {
                 try
                 {
@@ -15968,10 +15968,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ConstantVolumeBarsUpdated", dcObjKey, 
-                ConstantVolumeBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"], 
-                ConstantVolumeBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"]);
+                ConstantVolumeBarsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"], 
+                ConstantVolumeBarsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ConstantVolumeBarsUpdated"] == true)
             {
                 try
                 {
@@ -15984,10 +15984,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CurrencyRatesChanged", dcObjKey, 
-                CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
-                CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
+                CurrencyRatesChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
+                CurrencyRatesChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
             {
                 try
                 {
@@ -16000,10 +16000,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomSessionsResolved", dcObjKey, 
-                CustomSessionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"], 
-                CustomSessionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"]);
+                CustomSessionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"], 
+                CustomSessionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomSessionsResolved"] == true)
             {
                 try
                 {
@@ -16017,10 +16017,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyAdded", dcObjKey, 
-                CustomStudyAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"], 
-                CustomStudyAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"]);
+                CustomStudyAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"], 
+                CustomStudyAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyAdded"] == true)
             {
                 try
                 {
@@ -16033,10 +16033,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyDefinitionsResolved", dcObjKey, 
-                CustomStudyDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"], 
-                CustomStudyDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"]);
+                CustomStudyDefinitionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"], 
+                CustomStudyDefinitionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -16050,10 +16050,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyInserted", dcObjKey, 
-                CustomStudyInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"], 
-                CustomStudyInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"]);
+                CustomStudyInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"], 
+                CustomStudyInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyInserted"] == true)
             {
                 try
                 {
@@ -16066,10 +16066,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyRemoved", dcObjKey, 
-                CustomStudyRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"], 
-                CustomStudyRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"]);
+                CustomStudyRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"], 
+                CustomStudyRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyRemoved"] == true)
             {
                 try
                 {
@@ -16082,10 +16082,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyResolved", dcObjKey, 
-                CustomStudyResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"], 
-                CustomStudyResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"]);
+                CustomStudyResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"], 
+                CustomStudyResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyResolved"] == true)
             {
                 try
                 {
@@ -16099,10 +16099,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CustomStudyUpdated", dcObjKey, 
-                CustomStudyUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"], 
-                CustomStudyUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"]);
+                CustomStudyUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"], 
+                CustomStudyUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CustomStudyUpdated"] == true)
             {
                 try
                 {
@@ -16115,10 +16115,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataConnectionStatusChanged", dcObjKey, 
-                DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
-                DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
+                DataConnectionStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
+                DataConnectionStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16130,10 +16130,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataError", dcObjKey, 
-                DataError != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
-                DataError == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
+                DataError != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
+                DataError == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
             {
                 try
                 {
@@ -16145,10 +16145,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataSourcesResolved", dcObjKey, 
-                DataSourcesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"], 
-                DataSourcesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"]);
+                DataSourcesResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"], 
+                DataSourcesResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourcesResolved"] == true)
             {
                 try
                 {
@@ -16162,10 +16162,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataSourceSymbolsResolved", dcObjKey, 
-                DataSourceSymbolsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"], 
-                DataSourceSymbolsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"]);
+                DataSourceSymbolsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"], 
+                DataSourceSymbolsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataSourceSymbolsResolved"] == true)
             {
                 try
                 {
@@ -16179,10 +16179,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ExpressionAdded", dcObjKey, 
-                ExpressionAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"], 
-                ExpressionAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"]);
+                ExpressionAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"], 
+                ExpressionAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionAdded"] == true)
             {
                 try
                 {
@@ -16195,10 +16195,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ExpressionInserted", dcObjKey, 
-                ExpressionInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"], 
-                ExpressionInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"]);
+                ExpressionInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"], 
+                ExpressionInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionInserted"] == true)
             {
                 try
                 {
@@ -16211,10 +16211,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ExpressionRemoved", dcObjKey, 
-                ExpressionRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"], 
-                ExpressionRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"]);
+                ExpressionRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"], 
+                ExpressionRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionRemoved"] == true)
             {
                 try
                 {
@@ -16227,10 +16227,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ExpressionResolved", dcObjKey, 
-                ExpressionResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"], 
-                ExpressionResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"]);
+                ExpressionResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"], 
+                ExpressionResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionResolved"] == true)
             {
                 try
                 {
@@ -16244,10 +16244,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ExpressionUpdated", dcObjKey, 
-                ExpressionUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"], 
-                ExpressionUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"]);
+                ExpressionUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"], 
+                ExpressionUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ExpressionUpdated"] == true)
             {
                 try
                 {
@@ -16260,10 +16260,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("GWConnectionStatusChanged", dcObjKey, 
-                GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
-                GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
+                GWConnectionStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
+                GWConnectionStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16275,10 +16275,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("GWEnvironmentChanged", dcObjKey, 
-                GWEnvironmentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"], 
-                GWEnvironmentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"]);
+                GWEnvironmentChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"], 
+                GWEnvironmentChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWEnvironmentChanged"] == true)
             {
                 try
                 {
@@ -16290,10 +16290,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("HistoricalSessionsResolved", dcObjKey, 
-                HistoricalSessionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"], 
-                HistoricalSessionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"]);
+                HistoricalSessionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"], 
+                HistoricalSessionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["HistoricalSessionsResolved"] == true)
             {
                 try
                 {
@@ -16308,10 +16308,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ICConnectionStatusChanged", dcObjKey, 
-                ICConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"], 
-                ICConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"]);
+                ICConnectionStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"], 
+                ICConnectionStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ICConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -16323,10 +16323,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("IncorrectSymbol", dcObjKey, 
-                IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
-                IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
+                IncorrectSymbol != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
+                IncorrectSymbol == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
             {
                 try
                 {
@@ -16338,10 +16338,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentChanged", dcObjKey, 
-                InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
-                InstrumentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
+                InstrumentChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
+                InstrumentChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
             {
                 try
                 {
@@ -16356,10 +16356,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentDOMChanged", dcObjKey, 
-                InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
-                InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
+                InstrumentDOMChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
+                InstrumentDOMChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
             {
                 try
                 {
@@ -16374,10 +16374,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentsGroupChanged", dcObjKey, 
-                InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
-                InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
+                InstrumentsGroupChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
+                InstrumentsGroupChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
             {
                 try
                 {
@@ -16391,10 +16391,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentsGroupResolved", dcObjKey, 
-                InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
-                InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
+                InstrumentsGroupResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
+                InstrumentsGroupResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
             {
                 try
                 {
@@ -16408,10 +16408,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentSubscribed", dcObjKey, 
-                InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
-                InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
+                InstrumentSubscribed != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
+                InstrumentSubscribed == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
             {
                 try
                 {
@@ -16424,10 +16424,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("IsReady", dcObjKey, 
-                IsReady != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
-                IsReady == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
+                IsReady != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
+                IsReady == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
             {
                 try
                 {
@@ -16440,10 +16440,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("LineTimeChanged", dcObjKey, 
-                LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
-                LineTimeChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
+                LineTimeChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
+                LineTimeChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
             {
                 try
                 {
@@ -16455,10 +16455,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ManualFillChanged", dcObjKey, 
-                ManualFillChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"], 
-                ManualFillChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"]);
+                ManualFillChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"], 
+                ManualFillChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillChanged"] == true)
             {
                 try
                 {
@@ -16471,10 +16471,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ManualFillsResolved", dcObjKey, 
-                ManualFillsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"], 
-                ManualFillsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"]);
+                ManualFillsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"], 
+                ManualFillsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillsResolved"] == true)
             {
                 try
                 {
@@ -16488,10 +16488,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("ManualFillUpdateResolved", dcObjKey, 
-                ManualFillUpdateResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"], 
-                ManualFillUpdateResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"]);
+                ManualFillUpdateResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"], 
+                ManualFillUpdateResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["ManualFillUpdateResolved"] == true)
             {
                 try
                 {
@@ -16505,10 +16505,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("OnIdle", dcObjKey, 
-                OnIdle != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
-                OnIdle == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
+                OnIdle != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
+                OnIdle == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
             {
                 try
                 {
@@ -16520,10 +16520,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("OnQueryProgress", dcObjKey, 
-                OnQueryProgress != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"], 
-                OnQueryProgress == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"]);
+                OnQueryProgress != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"], 
+                OnQueryProgress == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnQueryProgress"] == true)
             {
                 try
                 {
@@ -16537,10 +16537,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("OrderChanged", dcObjKey, 
-                OrderChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"], 
-                OrderChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"]);
+                OrderChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"], 
+                OrderChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["OrderChanged"] == true)
             {
                 try
                 {
@@ -16556,10 +16556,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PasswordChanged", dcObjKey, 
-                PasswordChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"], 
-                PasswordChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"]);
+                PasswordChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"], 
+                PasswordChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PasswordChanged"] == true)
             {
                 try
                 {
@@ -16572,10 +16572,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PointAndFigureBarsAdded", dcObjKey, 
-                PointAndFigureBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"], 
-                PointAndFigureBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"]);
+                PointAndFigureBarsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"], 
+                PointAndFigureBarsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsAdded"] == true)
             {
                 try
                 {
@@ -16588,10 +16588,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PointAndFigureBarsInserted", dcObjKey, 
-                PointAndFigureBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"], 
-                PointAndFigureBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"]);
+                PointAndFigureBarsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"], 
+                PointAndFigureBarsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsInserted"] == true)
             {
                 try
                 {
@@ -16604,10 +16604,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PointAndFigureBarsRemoved", dcObjKey, 
-                PointAndFigureBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"], 
-                PointAndFigureBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"]);
+                PointAndFigureBarsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"], 
+                PointAndFigureBarsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsRemoved"] == true)
             {
                 try
                 {
@@ -16620,10 +16620,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PointAndFigureBarsResolved", dcObjKey, 
-                PointAndFigureBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"], 
-                PointAndFigureBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"]);
+                PointAndFigureBarsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"], 
+                PointAndFigureBarsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsResolved"] == true)
             {
                 try
                 {
@@ -16637,10 +16637,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PointAndFigureBarsUpdated", dcObjKey, 
-                PointAndFigureBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"], 
-                PointAndFigureBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"]);
+                PointAndFigureBarsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"], 
+                PointAndFigureBarsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PointAndFigureBarsUpdated"] == true)
             {
                 try
                 {
@@ -16653,10 +16653,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("PositionsStatementResolved", dcObjKey, 
-                PositionsStatementResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"], 
-                PositionsStatementResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"]);
+                PositionsStatementResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"], 
+                PositionsStatementResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["PositionsStatementResolved"] == true)
             {
                 try
                 {
@@ -16670,10 +16670,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("QFormulaDefinitionsResolved", dcObjKey, 
-                QFormulaDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"], 
-                QFormulaDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"]);
+                QFormulaDefinitionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"], 
+                QFormulaDefinitionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["QFormulaDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -16687,10 +16687,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("StrategyDefinitionProgress", dcObjKey, 
-                StrategyDefinitionProgress != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"], 
-                StrategyDefinitionProgress == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"]);
+                StrategyDefinitionProgress != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"], 
+                StrategyDefinitionProgress == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["StrategyDefinitionProgress"] == true)
             {
                 try
                 {
@@ -16704,10 +16704,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SubMinuteBarsAdded", dcObjKey, 
-                SubMinuteBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"], 
-                SubMinuteBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"]);
+                SubMinuteBarsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"], 
+                SubMinuteBarsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsAdded"] == true)
             {
                 try
                 {
@@ -16720,10 +16720,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SubMinuteBarsInserted", dcObjKey, 
-                SubMinuteBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"], 
-                SubMinuteBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"]);
+                SubMinuteBarsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"], 
+                SubMinuteBarsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsInserted"] == true)
             {
                 try
                 {
@@ -16736,10 +16736,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SubMinuteBarsRemoved", dcObjKey, 
-                SubMinuteBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"], 
-                SubMinuteBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"]);
+                SubMinuteBarsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"], 
+                SubMinuteBarsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsRemoved"] == true)
             {
                 try
                 {
@@ -16752,10 +16752,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SubMinuteBarsResolved", dcObjKey, 
-                SubMinuteBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"], 
-                SubMinuteBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"]);
+                SubMinuteBarsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"], 
+                SubMinuteBarsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsResolved"] == true)
             {
                 try
                 {
@@ -16769,10 +16769,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SubMinuteBarsUpdated", dcObjKey, 
-                SubMinuteBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"], 
-                SubMinuteBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"]);
+                SubMinuteBarsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"], 
+                SubMinuteBarsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SubMinuteBarsUpdated"] == true)
             {
                 try
                 {
@@ -16785,10 +16785,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("SummariesStatementResolved", dcObjKey, 
-                SummariesStatementResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"], 
-                SummariesStatementResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"]);
+                SummariesStatementResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"], 
+                SummariesStatementResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["SummariesStatementResolved"] == true)
             {
                 try
                 {
@@ -16802,10 +16802,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TFlowBarsAdded", dcObjKey, 
-                TFlowBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"], 
-                TFlowBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"]);
+                TFlowBarsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"], 
+                TFlowBarsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsAdded"] == true)
             {
                 try
                 {
@@ -16818,10 +16818,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TFlowBarsInserted", dcObjKey, 
-                TFlowBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"], 
-                TFlowBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"]);
+                TFlowBarsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"], 
+                TFlowBarsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsInserted"] == true)
             {
                 try
                 {
@@ -16834,10 +16834,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TFlowBarsRemoved", dcObjKey, 
-                TFlowBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"], 
-                TFlowBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"]);
+                TFlowBarsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"], 
+                TFlowBarsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsRemoved"] == true)
             {
                 try
                 {
@@ -16850,10 +16850,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TFlowBarsResolved", dcObjKey, 
-                TFlowBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"], 
-                TFlowBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"]);
+                TFlowBarsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"], 
+                TFlowBarsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsResolved"] == true)
             {
                 try
                 {
@@ -16867,10 +16867,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TFlowBarsUpdated", dcObjKey, 
-                TFlowBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"], 
-                TFlowBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"]);
+                TFlowBarsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"], 
+                TFlowBarsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TFlowBarsUpdated"] == true)
             {
                 try
                 {
@@ -16883,10 +16883,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TicksAdded", dcObjKey, 
-                TicksAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"], 
-                TicksAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"]);
+                TicksAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"], 
+                TicksAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksAdded"] == true)
             {
                 try
                 {
@@ -16899,10 +16899,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TicksResolved", dcObjKey, 
-                TicksResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"], 
-                TicksResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"]);
+                TicksResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"], 
+                TicksResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TicksResolved"] == true)
             {
                 try
                 {
@@ -16916,10 +16916,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TimedBarsAdded", dcObjKey, 
-                TimedBarsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"], 
-                TimedBarsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"]);
+                TimedBarsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"], 
+                TimedBarsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsAdded"] == true)
             {
                 try
                 {
@@ -16932,10 +16932,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TimedBarsInserted", dcObjKey, 
-                TimedBarsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"], 
-                TimedBarsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"]);
+                TimedBarsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"], 
+                TimedBarsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsInserted"] == true)
             {
                 try
                 {
@@ -16948,10 +16948,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TimedBarsRemoved", dcObjKey, 
-                TimedBarsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"], 
-                TimedBarsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"]);
+                TimedBarsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"], 
+                TimedBarsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsRemoved"] == true)
             {
                 try
                 {
@@ -16964,10 +16964,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TimedBarsResolved", dcObjKey, 
-                TimedBarsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"], 
-                TimedBarsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"]);
+                TimedBarsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"], 
+                TimedBarsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsResolved"] == true)
             {
                 try
                 {
@@ -16981,10 +16981,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TimedBarsUpdated", dcObjKey, 
-                TimedBarsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"], 
-                TimedBarsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"]);
+                TimedBarsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"], 
+                TimedBarsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TimedBarsUpdated"] == true)
             {
                 try
                 {
@@ -16997,10 +16997,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradableCommoditiesResolved", dcObjKey, 
-                TradableCommoditiesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"], 
-                TradableCommoditiesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"]);
+                TradableCommoditiesResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"], 
+                TradableCommoditiesResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableCommoditiesResolved"] == true)
             {
                 try
                 {
@@ -17014,10 +17014,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradableExchangesResolved", dcObjKey, 
-                TradableExchangesResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"], 
-                TradableExchangesResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"]);
+                TradableExchangesResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"], 
+                TradableExchangesResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradableExchangesResolved"] == true)
             {
                 try
                 {
@@ -17031,10 +17031,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemAddNotification", dcObjKey, 
-                TradingSystemAddNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"], 
-                TradingSystemAddNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"]);
+                TradingSystemAddNotification != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"], 
+                TradingSystemAddNotification == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemAddNotification"] == true)
             {
                 try
                 {
@@ -17048,10 +17048,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemDefinitionsResolved", dcObjKey, 
-                TradingSystemDefinitionsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"], 
-                TradingSystemDefinitionsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"]);
+                TradingSystemDefinitionsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"], 
+                TradingSystemDefinitionsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemDefinitionsResolved"] == true)
             {
                 try
                 {
@@ -17065,10 +17065,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemInsertNotification", dcObjKey, 
-                TradingSystemInsertNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"], 
-                TradingSystemInsertNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"]);
+                TradingSystemInsertNotification != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"], 
+                TradingSystemInsertNotification == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemInsertNotification"] == true)
             {
                 try
                 {
@@ -17082,10 +17082,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemRemoveNotification", dcObjKey, 
-                TradingSystemRemoveNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"], 
-                TradingSystemRemoveNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"]);
+                TradingSystemRemoveNotification != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"], 
+                TradingSystemRemoveNotification == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemRemoveNotification"] == true)
             {
                 try
                 {
@@ -17099,10 +17099,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemResolved", dcObjKey, 
-                TradingSystemResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"], 
-                TradingSystemResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"]);
+                TradingSystemResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"], 
+                TradingSystemResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemResolved"] == true)
             {
                 try
                 {
@@ -17116,10 +17116,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemTradeRelationAddNotification", dcObjKey, 
-                TradingSystemTradeRelationAddNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"], 
-                TradingSystemTradeRelationAddNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"]);
+                TradingSystemTradeRelationAddNotification != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"], 
+                TradingSystemTradeRelationAddNotification == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemTradeRelationAddNotification"] == true)
             {
                 try
                 {
@@ -17133,10 +17133,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("TradingSystemUpdateNotification", dcObjKey, 
-                TradingSystemUpdateNotification != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"], 
-                TradingSystemUpdateNotification == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"]);
+                TradingSystemUpdateNotification != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"], 
+                TradingSystemUpdateNotification == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["TradingSystemUpdateNotification"] == true)
             {
                 try
                 {
@@ -17150,10 +17150,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("YieldsAdded", dcObjKey, 
-                YieldsAdded != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"], 
-                YieldsAdded == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"]);
+                YieldsAdded != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"], 
+                YieldsAdded == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsAdded"] == true)
             {
                 try
                 {
@@ -17166,10 +17166,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("YieldsInserted", dcObjKey, 
-                YieldsInserted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"], 
-                YieldsInserted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"]);
+                YieldsInserted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"], 
+                YieldsInserted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsInserted"] == true)
             {
                 try
                 {
@@ -17182,10 +17182,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("YieldsRemoved", dcObjKey, 
-                YieldsRemoved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"], 
-                YieldsRemoved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"]);
+                YieldsRemoved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"], 
+                YieldsRemoved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsRemoved"] == true)
             {
                 try
                 {
@@ -17198,10 +17198,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("YieldsResolved", dcObjKey, 
-                YieldsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"], 
-                YieldsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"]);
+                YieldsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"], 
+                YieldsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsResolved"] == true)
             {
                 try
                 {
@@ -17215,10 +17215,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("YieldsUpdated", dcObjKey, 
-                YieldsUpdated != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"], 
-                YieldsUpdated == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"]);
+                YieldsUpdated != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"], 
+                YieldsUpdated == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["YieldsUpdated"] == true)
             {
                 try
                 {
@@ -20722,15 +20722,15 @@ namespace FakeCQG
 
         #endregion
 
-        #region TimerTickHandler
+        #region TimerTickHandlers
 
         private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
         {
             CQG.SubscriberChecking("CELStarted", dcObjKey, 
-                CELStarted != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
-                CELStarted == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
+                CELStarted != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"], 
+                CELStarted == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CELStarted"] == true)
             {
                 try
                 {
@@ -20742,10 +20742,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CurrencyRatesChanged", dcObjKey, 
-                CurrencyRatesChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
-                CurrencyRatesChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
+                CurrencyRatesChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"], 
+                CurrencyRatesChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CurrencyRatesChanged"] == true)
             {
                 try
                 {
@@ -20758,10 +20758,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataConnectionStatusChanged", dcObjKey, 
-                DataConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
-                DataConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
+                DataConnectionStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"], 
+                DataConnectionStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -20773,10 +20773,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("DataError", dcObjKey, 
-                DataError != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
-                DataError == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
+                DataError != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"], 
+                DataError == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["DataError"] == true)
             {
                 try
                 {
@@ -20788,10 +20788,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("GWConnectionStatusChanged", dcObjKey, 
-                GWConnectionStatusChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
-                GWConnectionStatusChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
+                GWConnectionStatusChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"], 
+                GWConnectionStatusChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["GWConnectionStatusChanged"] == true)
             {
                 try
                 {
@@ -20803,10 +20803,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("IsReady", dcObjKey, 
-                IsReady != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
-                IsReady == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
+                IsReady != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"], 
+                IsReady == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["IsReady"] == true)
             {
                 try
                 {
@@ -20819,10 +20819,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("LineTimeChanged", dcObjKey, 
-                LineTimeChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
-                LineTimeChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
+                LineTimeChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"], 
+                LineTimeChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["LineTimeChanged"] == true)
             {
                 try
                 {
@@ -20834,10 +20834,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("OnIdle", dcObjKey, 
-                OnIdle != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
-                OnIdle == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
+                OnIdle != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"], 
+                OnIdle == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["OnIdle"] == true)
             {
                 try
                 {
@@ -20849,10 +20849,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("CommodityInstrumentsResolved", dcObjKey, 
-                CommodityInstrumentsResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
-                CommodityInstrumentsResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
+                CommodityInstrumentsResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"], 
+                CommodityInstrumentsResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["CommodityInstrumentsResolved"] == true)
             {
                 try
                 {
@@ -20865,10 +20865,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("IncorrectSymbol", dcObjKey, 
-                IncorrectSymbol != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
-                IncorrectSymbol == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
+                IncorrectSymbol != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"], 
+                IncorrectSymbol == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["IncorrectSymbol"] == true)
             {
                 try
                 {
@@ -20880,10 +20880,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentChanged", dcObjKey, 
-                InstrumentChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
-                InstrumentChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
+                InstrumentChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"], 
+                InstrumentChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentChanged"] == true)
             {
                 try
                 {
@@ -20898,10 +20898,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentDOMChanged", dcObjKey, 
-                InstrumentDOMChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
-                InstrumentDOMChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
+                InstrumentDOMChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"], 
+                InstrumentDOMChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentDOMChanged"] == true)
             {
                 try
                 {
@@ -20916,10 +20916,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentsGroupChanged", dcObjKey, 
-                InstrumentsGroupChanged != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
-                InstrumentsGroupChanged == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
+                InstrumentsGroupChanged != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"], 
+                InstrumentsGroupChanged == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupChanged"] == true)
             {
                 try
                 {
@@ -20933,10 +20933,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentsGroupResolved", dcObjKey, 
-                InstrumentsGroupResolved != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
-                InstrumentsGroupResolved == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
+                InstrumentsGroupResolved != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"], 
+                InstrumentsGroupResolved == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentsGroupResolved"] == true)
             {
                 try
                 {
@@ -20950,10 +20950,10 @@ namespace FakeCQG
             }
 
             CQG.SubscriberChecking("InstrumentSubscribed", dcObjKey, 
-                InstrumentSubscribed != null && !DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
-                InstrumentSubscribed == null && DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
+                InstrumentSubscribed != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"], 
+                InstrumentSubscribed == null && ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"]);
 
-            if (DataDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
+            if (ClientDictionaries.EventCheckingDictionary[dcObjKey]["InstrumentSubscribed"] == true)
             {
                 try
                 {
