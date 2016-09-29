@@ -19,7 +19,7 @@ namespace FakeCQG.Handshaking
                 CQG.OnLogChange("Listerning handshacking is started");
 
                 const string key = "HANDSHAKING";
-                MongoHelper mongo = new MongoHelper();
+                HandshakingHelper mongo = new HandshakingHelper();
                 var collection = mongo.GetCollection;
                 var filterKey = Builders<HandshakerModel>.Filter.Eq(Keys.IdName, key);
                 var filterId = Builders<HandshakerModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);

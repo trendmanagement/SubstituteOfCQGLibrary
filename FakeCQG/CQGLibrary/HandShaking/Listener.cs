@@ -21,7 +21,7 @@ namespace FakeCQG.Handshaking
         public static Task StartHandshaking()
         {
             // !! Do not create this object once again for each handshaking
-            MongoHelper mongo = new MongoHelper();
+            HandshakingHelper mongo = new HandshakingHelper();
             var collection = mongo.GetCollection;
 
             return Task.Run(() => 
