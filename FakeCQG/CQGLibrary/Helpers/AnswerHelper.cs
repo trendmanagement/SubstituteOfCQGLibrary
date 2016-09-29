@@ -8,6 +8,8 @@ namespace FakeCQG.Helpers
 {
     public class AnswerHelper
     {
+        private const string eventFiringId = "!EventHappened";
+
         protected IMongoClient Client;
         protected IMongoDatabase Database;
         protected IMongoCollection<AnswerInfo> Collection;
@@ -25,6 +27,14 @@ namespace FakeCQG.Helpers
             get
             {
                 return Database;
+            }
+        }
+
+        public string EventFiringId
+        {
+            get
+            {
+                return eventFiringId;
             }
         }
 
@@ -135,6 +145,7 @@ namespace FakeCQG.Helpers
                     //throw new Exception("No answer in MongoDB");
                 }
             }
+
             return answer;
         }
 
@@ -173,12 +184,13 @@ namespace FakeCQG.Helpers
 
         public object[] CheckWhetherEventHappened(string name)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
+            string handlerName = string.Format("_ICQGCELEvents_{0}EventHandler", name);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, handlerName);
             try
             {
                 AnswerInfo answer = Collection.Find(filter).First();
                 var argValues = answer.ArgValues;
-                return (object[])argValues[1];
+                return (object[])argValues[0];
             }
             catch (Exception ex)
             {
@@ -192,11 +204,15 @@ namespace FakeCQG.Helpers
             var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
             try
             {
-                AnswerInfo answer = Collection.Find(filter).First();
+                //AnswerInfo answer = Collection.Find(filter).First();
+                
                 var argValues = new Dictionary<int, object>();
-                argValues.Add(0, "!");
-                argValues.Add(1, args);
-                var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
+                argValues.Add(0, args);
+
+                AnswerInfo answer = new AnswerInfo(eventFiringId, null, name, argValues);
+                PushAnswer(answer);
+                //var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
+
                 //TODO: deserialize argValues from dictionary to bson
                 //allAnswers.UpdateOne(filter, update);
             }

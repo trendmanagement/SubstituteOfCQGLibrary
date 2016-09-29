@@ -9,17 +9,33 @@ namespace CodeGenerator
         /// Write a line of code that collects all the arguments into object[] as following:
         /// var args = new object[] { arg1, arg2, ..., argn }
         /// </summary>
-        static void CreateArgsObjectArray(StreamWriter file, string indent, ParameterInfo[] pinfos, bool addExclamation = false)
+        static void CreateArgsObjectArray(StreamWriter file, string indent, ParameterInfo[] pinfos)
         {
-            file.Write(indent + "var args = new object[] { ");
-            if (addExclamation)
+            string paramName;
+            foreach(var pinfo in pinfos)
             {
-                file.Write("\"!\", ");
+                if(!IsSerializableType(pinfo.ParameterType))
+                {
+                    paramName = GetParamName(pinfo);
+                    file.WriteLine(indent + "string " + paramName + "Key = FakeCQG.CQG.CreateUniqueKey();");
+                    file.WriteLine(indent + "DataDictionaries.PutObjectToTheDictionary(" + 
+                        paramName + "Key, " + paramName + ");");
+                }
             }
+            
+            file.Write(indent + "var args = new object[] { ");
+
             for (int i = 0; i < pinfos.Length; i++)
             {
                 ParameterInfo pinfo = pinfos[i];
-                string paramName = GetParamName(pinfo);
+                if (!IsSerializableType(pinfo.ParameterType))
+                {
+                    paramName = GetParamName(pinfo) + "Key";
+                }
+                else
+                {
+                    paramName = GetParamName(pinfo);
+                }
                 file.Write(paramName);
                 if (i != pinfos.Length - 1)
                 {

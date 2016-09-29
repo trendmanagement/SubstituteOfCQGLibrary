@@ -19,8 +19,6 @@ namespace FakeCQG
     {
         #region Helper objects
 
-        static bool EventsCheckingON = false;
-
         static string Log;
         public static object LogLock = new object();
 
@@ -54,13 +52,6 @@ namespace FakeCQG
                 FirstCall = false;
             }
 
-            if (!EventsCheckingON)
-            {
-                DataDictionaries.FillEventCheckingDictionary();
-
-                EventsCheckingON = true;
-            }
-
             var argKeys = new Dictionary<string, string>();
             var argVals = new Dictionary<string, object>();
 
@@ -87,7 +78,7 @@ namespace FakeCQG
             QueryInfo qInfo = CreateQuery(qType, queryKey, objKey, name, argKeys, argVals);
             Task.Run(() => QueryHelper.PushQueryAsync(qInfo));
 
-            AnswerInfo result = WaitingForAnAnswer(queryKey);
+            AnswerInfo result = WaitingForAnAnswer(queryKey, qType);
 
             if (result.ValueKey == "value")
             {
@@ -103,7 +94,7 @@ namespace FakeCQG
             }
         }
 
-        public static AnswerInfo WaitingForAnAnswer(string queryKey)
+        public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryInfo.QueryType qType)
         {
             AnswerInfo answer = null;
             Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
@@ -111,6 +102,10 @@ namespace FakeCQG
             if (success)
             {
                 DataDictionaries.IsAnswer.Remove(queryKey);
+                if (qType == QueryInfo.QueryType.CallCtor)
+                {
+                    DataDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.QueryName);
+                }
                 return answer;
             }
             else
@@ -138,6 +133,7 @@ namespace FakeCQG
                 case QueryInfo.QueryType.GetProperty:
                 case QueryInfo.QueryType.SetProperty:
                 case QueryInfo.QueryType.CallMethod:
+
                     if (argKeys.Count == 0 && argVals.Count == 0)
                     {
                         model = new QueryInfo(qType, key, objKey, name);
@@ -155,8 +151,9 @@ namespace FakeCQG
                         model = new QueryInfo(qType, key, objKey, name, argKeys, argVals);
                     }
                     break;
-                case QueryInfo.QueryType.Event:
-                    model = new QueryInfo(qType, key, objKey, name, argVals: argVals);
+                case QueryInfo.QueryType.SubscribeToEvent:
+                case QueryInfo.QueryType.UnsubscribeFromEvent:
+                    model = new QueryInfo(qType, key, objKey, name);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -199,6 +196,20 @@ namespace FakeCQG
         }
 
         #endregion
+
+        public static void SubscriberChecking(string name, string objKey, bool isSubscriptionRequired, bool isUnsubscriptionRequired)
+        {
+            if (isUnsubscriptionRequired)
+            {
+                ExecuteTheQuery(QueryInfo.QueryType.UnsubscribeFromEvent, objKey, name);
+                DataDictionaries.EventCheckingDictionary[objKey][name] = false;
+            }
+            else if (isSubscriptionRequired)
+            {
+                ExecuteTheQuery(QueryInfo.QueryType.SubscribeToEvent, objKey, name);
+                DataDictionaries.EventCheckingDictionary[objKey][name] = true;
+            }
+        }
 
         public static bool IsSerializableType(Type type)
         {

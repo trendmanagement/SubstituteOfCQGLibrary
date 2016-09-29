@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
@@ -27,43 +26,20 @@ namespace DataCollectionForRealtime
             }
         }
 
-        public QueryHandler(RealtimeDataManagement rdm)
-        {
-            CqgDataManagement = new CQGDataManagement(rdm);
-            QueryList = new List<QueryInfo>();
-            KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
         public QueryHandler(CQGDataManagement cqgDM)
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>();
             KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
+            CQGAssm = cqgDM.CQGAssm;
         }
 
-        public QueryHandler(RealtimeDataManagement rdm, IList<QueryInfo> ql)
-        {
-            CqgDataManagement = new CQGDataManagement(rdm);
-            QueryList = new List<QueryInfo>(ql);
-            KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
-        public QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
+        internal QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>(ql);
             KeysOfQueriesInProcess = new HashSet<string>();
-            LoadCQGAssembly();
-        }
-
-        public void LoadCQGAssembly()
-        {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assmPath = Path.Combine(path, "Interop.CQG.dll");
-            CQGAssm = Assembly.LoadFile(assmPath);
+            CQGAssm = cqgDM.CQGAssm;
         }
 
         public void SetQueryList(List<QueryInfo> queries)
@@ -215,21 +191,15 @@ namespace DataCollectionForRealtime
                             };
                         }
 
-                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                         PushAnswerAndDeleteQuery(answer);
                     }
                     break;
 
-                case QueryInfo.QueryType.Event:
+                case QueryInfo.QueryType.SubscribeToEvent:
+                case QueryInfo.QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                         EventInfo ei = qObj.GetType().GetEvent(query.QueryName);
-
-                        if ((string)query.ArgValues["0"] != "+" || (string)query.ArgValues["0"] != " - ")
-                        {
-                            AsyncTaskListener.LogMessage("Argument that describes event subtype is not valid.");
-                            break;
-                        }
 
                         // Find corresponding CQG delegate
                         Type delType = FindDelegateType(CQGAssm, query.QueryName);
@@ -240,24 +210,26 @@ namespace DataCollectionForRealtime
                         MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                         Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
 
-                        if ((string)query.ArgValues["0"] == " + ")
+                        if (query.TypeOfQuery == QueryInfo.QueryType.SubscribeToEvent)
                         {
                             // Subscribe our handler to CQG event
                             ei.AddEventHandler(qObj, d);
-                            //qObj.GetType().InvokeMember("add_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
                         }
-                        else if ((string)query.ArgValues["0"] == " - ")
+                        else if (query.TypeOfQuery == QueryInfo.QueryType.UnsubscribeFromEvent)
                         {
-                            // Unsubscribe our handler to CQG event
+                            // Unsubscribe our handler from CQG event
                             ei.RemoveEventHandler(qObj, d);
-                            //qObj.GetType().InvokeMember("remove_" + query.QueryName, BindingFlags.InvokeMethod, null, qObj, new object[] { d });
                         }
 
-                        DataDictionaries.PutObjectToTheDictionary(query.ObjectKey, qObj);
                         answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
                         PushAnswerAndDeleteQuery(answer);
                     }
                     break;
+
+                default:
+                    {
+                        throw new ArgumentOutOfRangeException();
+                    }
             }
         }
 
