@@ -410,7 +410,7 @@ namespace UnitTestFakeCQG
                 await answerHelper.PushAnswerAsync(answerInput);
             }).GetAwaiter().GetResult();
 
-            answerOutput = CQG.WaitingForAnAnswer(id);
+            answerOutput = CQG.WaitingForAnAnswer(id, QueryInfo.QueryType.GetProperty);
 
             // assert
             Assert.AreEqual(answerInput.Key, answerOutput.Key);
