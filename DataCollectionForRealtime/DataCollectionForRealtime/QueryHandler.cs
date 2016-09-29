@@ -189,8 +189,13 @@ namespace DataCollectionForRealtime
                             ei.RemoveEventHandler(qObj, d);
                         }
 
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true, isEventQ: true);
                         PushAnswerAndDeleteQuery(answer);
+
+                        if(query.QueryName == "DataConnectionStatusChanged")
+                        {
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl((FakeCQG.eConnectionStatus)CQG.eConnectionStatus.csConnectionUp);
+                        }
                     }
                     break;
 

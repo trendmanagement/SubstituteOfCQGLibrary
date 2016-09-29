@@ -209,7 +209,7 @@ namespace FakeCQG.Helpers
                 var argValues = new Dictionary<int, object>();
                 argValues.Add(0, args);
 
-                AnswerInfo answer = new AnswerInfo(eventFiringId, null, name, argValues);
+                AnswerInfo answer = new AnswerInfo(eventFiringId, "", name, argValues);
                 PushAnswer(answer);
                 //var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
 
