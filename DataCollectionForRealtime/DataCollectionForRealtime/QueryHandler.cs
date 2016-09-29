@@ -196,6 +196,10 @@ namespace DataCollectionForRealtime
                     break;
 
                 case QueryInfo.QueryType.SubscribeToEvent:
+                    {
+                        FakeCQG.CQG.QueryHelper.RemoveQueryAsync(query.Key);
+                    }
+                    break;
                 case QueryInfo.QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
