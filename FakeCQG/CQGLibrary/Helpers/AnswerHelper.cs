@@ -225,7 +225,8 @@ namespace FakeCQG.Helpers
             {
                 //AnswerInfo answer = Collection.Find(filter).First();
 
-                var answer = new AnswerInfo(eventFiringId, string.Empty, eventName, argKeys, argValues);
+                string eventKey = eventFiringId + CQG.CreateUniqueKey();
+                var answer = new AnswerInfo(eventKey, string.Empty, eventName, argKeys, argValues);
                 PushAnswer(answer);
                 //var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
 
