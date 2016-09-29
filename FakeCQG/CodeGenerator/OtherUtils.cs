@@ -12,23 +12,26 @@ namespace CodeGenerator
         static void CreateArgsObjectArray(StreamWriter file, string indent, ParameterInfo[] pinfos)
         {
             string paramName;
-            foreach(var pinfo in pinfos)
+            if(file == DCEvHndlrFile)
             {
-                if(!IsSerializableType(pinfo.ParameterType))
+                foreach (var pinfo in pinfos)
                 {
-                    paramName = GetParamName(pinfo);
-                    file.WriteLine(indent + "string " + paramName + "Key = FakeCQG.CQG.CreateUniqueKey();");
-                    file.WriteLine(indent + "DataDictionaries.PutObjectToTheDictionary(" + 
-                        paramName + "Key, " + paramName + ");");
+                    if (!IsSerializableType(pinfo.ParameterType))
+                    {
+                        paramName = GetParamName(pinfo);
+                        file.WriteLine(indent + "string " + paramName + "Key = FakeCQG.CQG.CreateUniqueKey();");
+                        file.WriteLine(indent + "DataDictionaries.PutObjectToTheDictionary(" +
+                            paramName + "Key, " + paramName + ");");
+                    }
                 }
-            }
+            }   
             
             file.Write(indent + "var args = new object[] { ");
 
             for (int i = 0; i < pinfos.Length; i++)
             {
                 ParameterInfo pinfo = pinfos[i];
-                if (!IsSerializableType(pinfo.ParameterType))
+                if (file == DCEvHndlrFile && !IsSerializableType(pinfo.ParameterType))
                 {
                     paramName = GetParamName(pinfo) + "Key";
                 }
