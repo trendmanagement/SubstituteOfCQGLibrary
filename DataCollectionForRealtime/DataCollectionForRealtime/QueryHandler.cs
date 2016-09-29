@@ -101,19 +101,19 @@ namespace DataCollectionForRealtime
 
                         try
                         {
-                            var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
+                        	var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
 
-                            if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
-                            {
-                                string answerKey = "value";
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
-                            }
-                            else
-                            {
-                                string answerKey = FakeCQG.CQG.CreateUniqueKey();
-                                DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
-                            }
+                        	if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
+                        	{
+                            	string answerKey = "value";
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                        	}
+                        	else
+                        	{
+                            	string answerKey = FakeCQG.CQG.CreateUniqueKey();
+                            	DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                        	}
                         }
                         catch(Exception ex)
                         {
@@ -158,29 +158,29 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        try
+						try
                         {
-                            object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
+                        	object returnV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.InvokeMethod, null, qObj, args);
 
-                            if (!object.ReferenceEquals(returnV, null))
-                            {
-                                if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
-                                {
-                                    var returnKey = "value";
-                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
-                                }
-                                else
-                                {
-                                    var returnKey = FakeCQG.CQG.CreateUniqueKey();
-                                    DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
-                                    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                                }
-                            }
-                            else
-                            {
-                                var returnKey = "true";
-                                answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
-                            }
+                        	if (!object.ReferenceEquals(returnV, null))
+                        	{
+                        	    if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                            	{
+                            	    var returnKey = "value";
+                            	    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey, val: returnV);
+                            	}
+                            	else
+                            	{
+                            	    var returnKey = FakeCQG.CQG.CreateUniqueKey();
+                            	    DataDictionaries.PutObjectToTheDictionary(returnKey, returnV);
+                            	    answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                          	  }
+                        	}
+                        	else
+                        	{
+                            	var returnKey = "true";
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: returnKey);
+                        	}
                         }
                         catch (Exception ex)
                         {
@@ -221,8 +221,13 @@ namespace DataCollectionForRealtime
                             ei.RemoveEventHandler(qObj, d);
                         }
 
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true, isEventQ: true);
                         PushAnswerAndDeleteQuery(answer);
+
+                        if(query.QueryName == "DataConnectionStatusChanged")
+                        {
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl((FakeCQG.eConnectionStatus)CQG.eConnectionStatus.csConnectionUp);
+                        }
                     }
                     break;
 
