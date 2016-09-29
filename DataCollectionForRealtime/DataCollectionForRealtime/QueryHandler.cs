@@ -99,18 +99,29 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
+                        try
+                        {
+                        	var propV = qObj.GetType().InvokeMember(query.QueryName, BindingFlags.GetProperty, null, qObj, args);
 
-                        if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
-                        {
-                            string answerKey = "value";
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                        	if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
+                        	{
+                            	string answerKey = "value";
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey, val: propV);
+                        	}
+                        	else
+                        	{
+                            	string answerKey = FakeCQG.CQG.CreateUniqueKey();
+                            	DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
+                            	answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                        	}
                         }
-                        else
+                        catch(Exception ex)
                         {
-                            string answerKey = FakeCQG.CQG.CreateUniqueKey();
-                            DataDictionaries.PutObjectToTheDictionary(answerKey, propV);
-                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, vKey: answerKey);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
                         }
 
                         PushAnswerAndDeleteQuery(answer);
@@ -123,9 +134,19 @@ namespace DataCollectionForRealtime
 
                         object[] args = ParseInputArgsFromQuery(query);
 
-                        qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, args);
-
-                        answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        try
+                        {
+                            qObj.GetType().InvokeMember(query.QueryName, BindingFlags.SetProperty, null, qObj, args);
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName, val: true);
+                        }
+                        catch(Exception ex)
+                        {
+                            answer = new AnswerInfo(query.Key, query.ObjectKey, query.QueryName)
+                            {
+                                IsCQGException = true,
+                                CQGException = new Action(() => { throw ex; })
+                            };
+                        }
 
                         PushAnswerAndDeleteQuery(answer);
                     }
