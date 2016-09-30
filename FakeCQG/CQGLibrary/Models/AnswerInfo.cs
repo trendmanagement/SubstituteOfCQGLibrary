@@ -43,8 +43,6 @@ namespace FakeCQG.Models
 
         public object Value { get; set; }
 
-        public bool IsEventQuery { get; set; }
-
         public Action CQGException
         {
             set
@@ -68,8 +66,7 @@ namespace FakeCQG.Models
             Dictionary<int, string> argKeys = null,
             Dictionary<int, object> argValues = null,
             string valueKey = null,
-            object value = null,
-            bool isEventQuery = false)
+            object value = null)
         {
             AnswerKey = answerKey;
             ObjectKey = objectKey;
@@ -78,7 +75,6 @@ namespace FakeCQG.Models
             ArgValues = argValues;
             ValueKey = valueKey;
             Value = value;
-            IsEventQuery = isEventQuery;
         }
 
         public override string ToString()
@@ -91,9 +87,8 @@ namespace FakeCQG.Models
                 "    ArgKeys = {3}" + Environment.NewLine +
                 "    ArgValues = {4}" + Environment.NewLine +
                 "    ValueKey = {5}" + Environment.NewLine +
-                "    Value = {6}" + Environment.NewLine +
-                "    IsEventQuery = {7}",
-                AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value, IsEventQuery);
+                "    Value = {6}",
+                AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
         }
     }
 }

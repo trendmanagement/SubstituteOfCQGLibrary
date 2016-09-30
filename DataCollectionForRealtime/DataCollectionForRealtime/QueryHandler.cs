@@ -221,7 +221,7 @@ namespace DataCollectionForRealtime
                             ei.RemoveEventHandler(qObj, d);
                         }
 
-                        answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true, isEventQuery: true);
+                        answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
                         PushAnswerAndDeleteQuery(answer);
 
                         if (query.QueryType == QueryType.SubscribeToEvent && query.MemberName == "DataConnectionStatusChanged")
