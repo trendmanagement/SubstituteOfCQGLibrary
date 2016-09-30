@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace CodeGenerator
@@ -15,20 +16,53 @@ namespace CodeGenerator
             // Create dictionaries for serializable and non-serializable input arguments
             // and put the arguments into the dictionaries
             ParameterInfo[] pinfos = minfo.GetParameters();
-            bool serArgsFound, nonSerArgsFound;
-            CreateAndPopulateDictionaries(pinfos, out serArgsFound, out nonSerArgsFound);
 
-            // Call the utility method
-            DCEvHndlrFile.Write(Indent3 + "FakeCQG.CQG.AnswerHelper.CommonEventHandler(name");
-            if (serArgsFound)
+            string args, nonSerParPos;
+            if (minfo.GetParameters().Length != 0)
             {
-                DCEvHndlrFile.Write(", serArgs: serArgs");
+                // Write a line of code that collects all the arguments into object[] as following:
+                // var args = new object[] { "!", arg1, arg2, ..., argn }
+                CreateArgsObjectArray(DCEvHndlrFile, Indent3, pinfos);
+
+                args = ", args";
             }
-            if (nonSerArgsFound)
+            else
             {
-                DCEvHndlrFile.Write(", nonSerArgs: nonSerArgs");
+                args = string.Empty;
             }
-            DCEvHndlrFile.WriteLine(");");
+            
+            
+            bool firstNSPP = true, isNSPP = false;
+            foreach (var pinfo in pinfos)
+            {
+                if (!IsSerializableType(pinfo.ParameterType))
+                {
+                    if(firstNSPP)
+                    {
+                        DCEvHndlrFile.Write(Indent3 + "int[] nonSerParPos = new int[] {");
+                        firstNSPP = false;
+                        isNSPP = true;
+                    }
+                    else
+                    {
+                        DCEvHndlrFile.Write(" ,");
+                    }
+                    DCEvHndlrFile.Write(pinfo.Position);
+                }
+            }
+
+            if(isNSPP)
+            {
+                DCEvHndlrFile.WriteLine("};");
+                nonSerParPos = ", nonSerParPos";
+            }
+            else
+            {
+                nonSerParPos = string.Empty;
+            }
+
+            DCEvHndlrFile.WriteLine(Indent3 + "FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name" + 
+                args + nonSerParPos + ");");
 
             DCEvHndlrFile.WriteLine(Indent2 + "}" + Environment.NewLine);
         }

@@ -15,7 +15,7 @@ namespace CodeGenerator
             File.WriteLine(Indent2 + "if (ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"] == true)" +
                 Environment.NewLine + Indent2 + "{");
             File.WriteLine(Indent3 + "try" + Environment.NewLine + Indent3 + "{");
-            File.WriteLine(Indent4 + "object[] args = CQG.AnswerHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\");");
+            File.WriteLine(Indent4 + "object[] args = CQG.EventHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\");");
 
             ParameterInfo[] pinfos = einfo.EventHandlerType.GetMethod("Invoke").GetParameters();
 

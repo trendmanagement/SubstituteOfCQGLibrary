@@ -11,8 +11,10 @@ namespace FakeCQG
     {
         public const string QueryKey = "QueryKey";
         public const string AnswerKey = "AnswerKey";
+        public const string EventKey = "EventKey";
         public const string IdName = "Key";
         public const string QueryName = "QueryName";
+        public const string EventName = "EventName";
         public const string ArgValues = "ArgValues";
         public const string HandshakerId = "_id";
     }
@@ -33,6 +35,7 @@ namespace FakeCQG
 
         public static QueryHelper QueryHelper;
         public static AnswerHelper AnswerHelper;
+        public static EventHelper EventHelper;
 
         static bool FirstCall = true;
 
@@ -51,6 +54,7 @@ namespace FakeCQG
                 // Lazy connection to MongoDB
                 QueryHelper = new QueryHelper();
                 AnswerHelper = new AnswerHelper();
+                EventHelper = new EventHelper();
             }
 
             var argKeys = new Dictionary<int, string>();

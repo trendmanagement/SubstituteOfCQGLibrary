@@ -227,7 +227,8 @@ namespace DataCollectionForRealtime
                         if (query.QueryType == QueryType.SubscribeToEvent && query.MemberName == "DataConnectionStatusChanged")
                         {
                             // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus.csConnectionUp);
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(
+                                CqgDataManagement.CEL.IsStarted ? CQG.eConnectionStatus.csConnectionUp: CQG.eConnectionStatus.csConnectionDown);
                         }
                     }
                     break;

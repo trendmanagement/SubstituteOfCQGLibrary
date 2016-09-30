@@ -290,7 +290,6 @@ namespace UnitTestFakeCQG
                 await answerHelper.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
 
             }).GetAwaiter().GetResult();
-            answerHelper.CommonEventHandler(name, serArgs: argValues);
             var answer = answerHelper.GetAnswerData(id, out isAnswer);
 
             // assert

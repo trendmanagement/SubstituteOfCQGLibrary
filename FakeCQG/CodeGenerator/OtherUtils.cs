@@ -1,3 +1,4 @@
+using System.IO;
 using System.Reflection;
 
 namespace CodeGenerator
@@ -8,21 +9,21 @@ namespace CodeGenerator
         /// Write a line of code that collects all the arguments into object[] as following:
         /// var args = new object[] { arg1, arg2, ..., argn }
         /// </summary>
-        static void CreateArgsObjectArray(string indent, ParameterInfo[] pinfos)
+        static void CreateArgsObjectArray(StreamWriter file, string indent, ParameterInfo[] pinfos)
         {
-            File.Write(indent + "var args = new object[] { ");
+            file.Write(indent + "var args = new object[] { ");
 
             for (int i = 0; i < pinfos.Length; i++)
             {
                 ParameterInfo pinfo = pinfos[i];
                 string paramName = GetParamName(pinfo);
-                File.Write(paramName);
+                file.Write(paramName);
                 if (i != pinfos.Length - 1)
                 {
-                    File.Write(", ");
+                    file.Write(", ");
                 }
             }
-            File.WriteLine(" };");
+            file.WriteLine(" };");
         }
 
         /// <summary>

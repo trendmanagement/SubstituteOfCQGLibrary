@@ -7,6 +7,7 @@
 
         public const string QueryCollectionName = "Queries";
         public const string AnswerCollectionName = "Answers";
+        public const string EventCollectionName = "Events";
         public const string HandshakingCollectionName = "Handshaking";
     }
 }
