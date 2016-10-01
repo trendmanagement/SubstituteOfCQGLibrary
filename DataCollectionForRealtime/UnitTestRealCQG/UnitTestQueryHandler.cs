@@ -36,7 +36,7 @@ namespace UnitTestRealCQG
         public void Ctor_InputCQGDataManagmentWithQueriesList()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.SetProperty;
+            var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3" };
             var list = new List<QueryInfo>()
             {
@@ -56,7 +56,7 @@ namespace UnitTestRealCQG
             Assert.AreEqual(list.Count, QueryHandler.QueryList.Count);
             for (int i = 0; i < list.Count; i++)
             {
-                Assert.AreEqual(list[i].Key, QueryHandler.QueryList[i].Key);
+                Assert.AreEqual(list[i].QueryKey, QueryHandler.QueryList[i].QueryKey);
             }
         }
 
@@ -68,7 +68,7 @@ namespace UnitTestRealCQG
         public void Method_SetQueryList()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.SetProperty;
+            var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3" };
             var list = new List<QueryInfo>()
             {
@@ -86,7 +86,7 @@ namespace UnitTestRealCQG
             Assert.AreEqual(list.Count, QueryHandler.QueryList.Count);
             for (int i = 0; i < list.Count; i++)
             {
-                Assert.AreEqual(list[i].Key, QueryHandler.QueryList[i].Key);
+                Assert.AreEqual(list[i].QueryKey, QueryHandler.QueryList[i].QueryKey);
             }
         }
 
@@ -170,7 +170,7 @@ namespace UnitTestRealCQG
             // act 1
             Task.Run(async () =>
             {
-                await queryHelper.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.SetProperty, id, string.Empty, name, null, null));
+                await queryHelper.PushQueryAsync(new QueryInfo(QueryType.SetProperty, id, string.Empty, name, null, null));
                 isQueryTrue = await queryHelper.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
@@ -194,7 +194,7 @@ namespace UnitTestRealCQG
             string name = "name";
             bool isQueryTrue = default(bool);
             bool isQueryFalse = default(bool);
-            var query = new QueryInfo(QueryInfo.QueryType.SetProperty, id, string.Empty, name, null, null);
+            var query = new QueryInfo(QueryType.SetProperty, id, string.Empty, name, null, null);
             var answer = new AnswerInfo(id, string.Empty, name, null, null);
             FakeCQG.CQG.LogChange += CQG_LogChange;
             var queryHelper = new QueryHelper();

@@ -1736,13 +1736,34 @@ namespace TimedBars
                 modErrorHandler.ShowError("frmTimedBars", "CEL_DataError", ex);
             }
         }
-        
+
         /// <summary>
         /// This event is fired, when some changes occur in the connection with CQG data server.
         /// </summary>
         /// <param name="newStatus">
         /// The current status of the connection with the data server.
         /// </param>
+        /// 
+        delegate void RefreshFormItemsCallback(System.Drawing.Color BackCol, string sInfo);
+        private void RefreshFormItems(System.Drawing.Color BackCol, string sInfo)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (lblDataConnection.InvokeRequired)
+            {
+                RefreshFormItemsCallback d = new RefreshFormItemsCallback(RefreshFormItems);
+                Invoke(d, new object[] { BackCol, sInfo });
+            }
+            else
+            {
+                lblDataConnection.BackColor = BackCol;
+                lblDataConnection.Text = sInfo;
+
+                ChangeControlsStatuses();
+            }
+        }
+
         private void CEL_DataConnectionStatusChanged(CQG.eConnectionStatus new_status)
         {
             string sInfo;
@@ -1765,11 +1786,8 @@ namespace TimedBars
                     BackCol = System.Drawing.Color.FromArgb(255, 114, 0);
                     sInfo = "DATA Connection is Down";
                 }
-                
-                lblDataConnection.BackColor = BackCol;
-                lblDataConnection.Text = sInfo;
-                
-                ChangeControlsStatuses();
+
+                RefreshFormItems(BackCol, sInfo);
             }
             catch (Exception ex)
             {

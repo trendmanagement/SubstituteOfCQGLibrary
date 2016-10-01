@@ -28,7 +28,7 @@ namespace CodeGenerator
             Delegates,
             Events,
             Methods,
-            TimerTickHandler
+            TimerTickHandlers
         }
 
         static List<RegionType> CurrentRegionTypes = new List<RegionType> { RegionType.None };

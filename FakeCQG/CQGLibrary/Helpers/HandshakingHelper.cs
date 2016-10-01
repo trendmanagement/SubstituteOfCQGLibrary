@@ -3,13 +3,13 @@ using MongoDB.Driver;
 
 namespace FakeCQG.Helpers
 {
-    public class MongoHelper
+    public class HandshakingHelper
     {
         protected IMongoClient _client;
         protected IMongoDatabase _database;
-        protected IMongoCollection<HandshakerModel> _collection;
+        protected IMongoCollection<HandshakingModel> _collection;
 
-        public IMongoCollection<HandshakerModel> GetCollection
+        public IMongoCollection<HandshakingModel> GetCollection
         {
             get
             {
@@ -25,11 +25,11 @@ namespace FakeCQG.Helpers
             }
         }
 
-        public MongoHelper()
+        public HandshakingHelper()
         {
             _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<HandshakerModel>(ConnectionSettings.HandshakingCollectionName);
+            _collection = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
         }
     }
 }

@@ -64,19 +64,22 @@
   <ItemGroup>
     <Compile Include="AutoGenClientAPI.cs" />
     <Compile Include="ClientAPIHelpers.cs" />
-    <Compile Include="DataDictionaries.cs" />
+    <Compile Include="ClientDictionaries.cs" />
     <Compile Include="Handshaking\HandshakingEventArgs.cs" />
     <Compile Include="Handshaking\Listener.cs" />
     <Compile Include="Handshaking\Subscriber.cs" />
     <Compile Include="Helpers\AnswerHelper.cs" />
     <Compile Include="Helpers\ConnectionSettings.cs" />
-    <Compile Include="Helpers\MongoHelper.cs" />
+    <Compile Include="Helpers\EventHelper.cs" />
+    <Compile Include="Helpers\HandshakingHelper.cs" />
     <Compile Include="Helpers\QueryHelper.cs" />
     <Compile Include="Internal.cs" />
     <Compile Include="Models\AnswerInfo.cs" />
-    <Compile Include="Models\HandshakerModel.cs" />
+    <Compile Include="Models\EventInfo.cs" />
+    <Compile Include="Models\HandshakingModel.cs" />
     <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerDictionaries.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

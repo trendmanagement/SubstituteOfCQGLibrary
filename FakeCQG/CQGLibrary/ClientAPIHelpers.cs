@@ -4,38 +4,38 @@ namespace FakeCQG
 {
     public static partial class CQG
     {
-        public static string CallCtor(string name)
+        public static string CallCtor(string typeName)
         {
-            string dcObjKey = (string)ExecuteTheQuery(QueryInfo.QueryType.CallCtor, null, name);
+            string dcObjKey = (string)ExecuteTheQuery(QueryType.CallCtor, memName: typeName);
             return dcObjKey;
         }
 
         public static void CallDtor(string dcObjKey)
         {
-            ExecuteTheQuery(QueryInfo.QueryType.CallDtor, dcObjKey, null);
+            ExecuteTheQuery(QueryType.CallDtor, dcObjKey: dcObjKey);
         }
 
-        public static T GetProperty<T>(string dcObjKey, string name, object[] args = null)
+        public static T GetProperty<T>(string dcObjKey, string propName, object[] args = null)
         {
-            T value = (T)ExecuteTheQuery(QueryInfo.QueryType.GetProperty, dcObjKey, name, args);
+            T value = (T)ExecuteTheQuery(QueryType.GetProperty, dcObjKey, propName, args);
             return value;
         }
 
-        public static void SetProperty(string dcObjKey, string name, object value)
+        public static void SetProperty(string dcObjKey, string propName, object value)
         {
             var args = new object[] { value };
-            ExecuteTheQuery(QueryInfo.QueryType.SetProperty, dcObjKey, name, args);
+            ExecuteTheQuery(QueryType.SetProperty, dcObjKey, propName, args);
         }
 
-        public static T CallMethod<T>(string dcObjKey, string name, object[] args = null)
+        public static T CallMethod<T>(string dcObjKey, string methodName, object[] args = null)
         {
-            T obj = (T)ExecuteTheQuery(QueryInfo.QueryType.CallMethod, dcObjKey, name, args);
+            T obj = (T)ExecuteTheQuery(QueryType.CallMethod, dcObjKey, methodName, args);
             return obj;
         }
 
-        public static void CallVoidMethod(string dcObjKey, string name, object[] args = null)
+        public static void CallVoidMethod(string dcObjKey, string methodName, object[] args = null)
         {
-            ExecuteTheQuery(QueryInfo.QueryType.CallMethod, dcObjKey, name, args);
+            ExecuteTheQuery(QueryType.CallMethod, dcObjKey, methodName, args);
         }
     }
 }
