@@ -243,9 +243,6 @@ namespace DataCollectionForRealtime
 
         internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
         {
-            //FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
-            //FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.AnswerKey);
-
             if (!Task.Run(() => FakeCQG.CQG.AnswerHelper.CheckAnswerAsync(answer.AnswerKey)).GetAwaiter().GetResult())
             {
                 FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
