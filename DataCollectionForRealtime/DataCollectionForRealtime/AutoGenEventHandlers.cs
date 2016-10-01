@@ -49,7 +49,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyInsertedEventHandler";
             string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -58,7 +58,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyRemovedEventHandler";
             string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -78,7 +78,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
+        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyUpdatedEventHandler";
             string cqg_advanced_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -87,7 +87,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(string guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
+        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(String guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderPlacedEventHandler";
             string main_paramsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -98,7 +98,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(string guid_, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(String guid_, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler";
             string cqg_errorKey = FakeCQG.CQG.CreateUniqueKey();
@@ -144,7 +144,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELEvents_CommodityInstrumentsResolvedEventHandler";
             string cqg_commodity_intrumentsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -173,7 +173,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConditionInsertedEventHandler";
             string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -182,7 +182,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConditionRemovedEventHandler";
             string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -202,7 +202,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
+        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConditionUpdatedEventHandler";
             string cqg_conditionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -220,7 +220,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler";
             string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -229,7 +229,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler";
             string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -249,7 +249,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler";
             string cqg_constant_volume_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -298,7 +298,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_CustomStudyInsertedEventHandler";
             string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -307,7 +307,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_CustomStudyRemovedEventHandler";
             string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -327,7 +327,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
+        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
             string name = "_ICQGCELEvents_CustomStudyUpdatedEventHandler";
             string cqg_custom_studyKey = FakeCQG.CQG.CreateUniqueKey();
@@ -343,7 +343,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
+        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
             string name = "_ICQGCELEvents_DataErrorEventHandler";
             var args = new object[] { cqg_error, error_description };
@@ -361,7 +361,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(string data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(String data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_DataSourceSymbolsResolvedEventHandler";
             string cqg_data_source_symbolsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -381,7 +381,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
             string name = "_ICQGCELEvents_ExpressionInsertedEventHandler";
             string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -390,7 +390,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
             string name = "_ICQGCELEvents_ExpressionRemovedEventHandler";
             string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -410,7 +410,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
+        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
             string name = "_ICQGCELEvents_ExpressionUpdatedEventHandler";
             string cqg_expressionKey = FakeCQG.CQG.CreateUniqueKey();
@@ -426,7 +426,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(eGWEnvChangeCode event_code, int account_id, int phase_)
+        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_)
         {
             string name = "_ICQGCELEvents_GWEnvironmentChangedEventHandler";
             var args = new object[] { event_code, account_id, phase_ };
@@ -453,7 +453,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
+        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
             string name = "_ICQGCELEvents_IncorrectSymbolEventHandler";
             var args = new object[] { symbol_ };
@@ -508,7 +508,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
+        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELEvents_InstrumentSubscribedEventHandler";
             string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();
@@ -614,7 +614,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsInsertedEventHandler";
             string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -623,7 +623,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsRemovedEventHandler";
             string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -643,7 +643,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler";
             string cqg_point_and_figure_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -694,7 +694,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsInsertedEventHandler";
             string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -703,7 +703,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsRemovedEventHandler";
             string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -723,7 +723,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
+        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsUpdatedEventHandler";
             string cqg_subminute_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -752,7 +752,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsInsertedEventHandler";
             string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -761,7 +761,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsRemovedEventHandler";
             string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -781,7 +781,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
+        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsUpdatedEventHandler";
             string cqg_tflow_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -790,7 +790,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, int added_ticks_count)
+        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, Int32 added_ticks_count)
         {
             string name = "_ICQGCELEvents_TicksAddedEventHandler";
             string cqg_ticksKey = FakeCQG.CQG.CreateUniqueKey();
@@ -819,7 +819,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TimedBarsInsertedEventHandler";
             string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -828,7 +828,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TimedBarsRemovedEventHandler";
             string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -848,7 +848,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
+        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
             string name = "_ICQGCELEvents_TimedBarsUpdatedEventHandler";
             string cqg_timed_barsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -857,7 +857,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableCommoditiesResolvedEventHandler";
             string cqg_commoditiesKey = FakeCQG.CQG.CreateUniqueKey();
@@ -868,7 +868,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableExchangesResolvedEventHandler";
             string cqg_exchangesKey = FakeCQG.CQG.CreateUniqueKey();
@@ -965,7 +965,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
             string name = "_ICQGCELEvents_YieldsInsertedEventHandler";
             string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -974,7 +974,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
             string name = "_ICQGCELEvents_YieldsRemovedEventHandler";
             string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -994,7 +994,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
+        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
             string name = "_ICQGCELEvents_YieldsUpdatedEventHandler";
             string cqg_yieldsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -1025,7 +1025,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
+        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
             string name = "_ICQGCELGeneralEvents_DataErrorEventHandler";
             var args = new object[] { cqg_error, error_description };
@@ -1061,7 +1061,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler";
             string cqg_commodity_intrumentsKey = FakeCQG.CQG.CreateUniqueKey();
@@ -1070,7 +1070,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
+        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
             string name = "_ICQGCELInstrumentEvents_IncorrectSymbolEventHandler";
             var args = new object[] { symbol_ };
@@ -1125,7 +1125,7 @@ namespace DataCollectionForRealtime
             FakeCQG.CQG.AnswerHelper.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
+        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler";
             string cqg_instrumentKey = FakeCQG.CQG.CreateUniqueKey();

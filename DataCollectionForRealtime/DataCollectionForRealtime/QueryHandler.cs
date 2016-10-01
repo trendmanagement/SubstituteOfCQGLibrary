@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
 using FakeCQG.Models;
+using System.Threading.Tasks;
 
 [assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
@@ -196,10 +197,6 @@ namespace DataCollectionForRealtime
                     break;
 
                 case QueryInfo.QueryType.SubscribeToEvent:
-                    {
-                        FakeCQG.CQG.QueryHelper.RemoveQueryAsync(query.Key);
-                    }
-                    break;
                 case QueryInfo.QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = DataDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
@@ -244,8 +241,11 @@ namespace DataCollectionForRealtime
 
         internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
         {
-            FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
-            FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.Key);
+            if(!Task.Run(() => FakeCQG.CQG.AnswerHelper.CheckAnswerAsync(answer.Key)).GetAwaiter().GetResult())
+            {
+                FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
+                FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.Key);
+            }
         }
 
         public void ProcessEntireQueryList()
