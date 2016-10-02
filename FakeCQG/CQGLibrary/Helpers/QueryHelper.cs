@@ -44,7 +44,7 @@ namespace FakeCQG.Helpers
 
         private void Disconnect()
         {
-            Client.DropDatabase(ConnectionSettings.MongoDBName);
+            Client?.DropDatabase(ConnectionSettings.MongoDBName);
         }
 
         public bool Connect()

@@ -7,7 +7,7 @@ namespace FakeCQG.Helpers
     {
         protected static IMongoClient _client;
         protected static IMongoDatabase _database;
-        protected static IMongoCollection<HandshakerModel> _collection;
+        protected static IMongoCollection<HandshakingModel> _collection;
 
         public IMongoCollection<HandshakingModel> GetCollection
         {
