@@ -32,11 +32,6 @@ namespace FakeCQG.Helpers
             Connect();
         }
 
-        ~AnswerHelper()
-        {
-            Disconnect();
-        }
-
         private void Disconnect()
         {
             Client?.DropDatabase(ConnectionSettings.MongoDBName);
