@@ -8,7 +8,7 @@ namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
-        const int AutoWorkTimerInterval = 1000;
+        const int AutoWorkTimerInterval = 30;      // ms
         const int HandshakingTimerInterval = 15000;
         const int DictionaryClearingInterval = 30000;
 
@@ -52,6 +52,9 @@ namespace DataCollectionForRealtime
 
             FakeCQG.CQG.AnswerHelper = new FakeCQG.Helpers.AnswerHelper();
             FakeCQG.CQG.AnswerHelper.ClearAnswersListAsync();
+
+            FakeCQG.CQG.EventHelper = new FakeCQG.Helpers.EventHelper();
+            FakeCQG.CQG.EventHelper.ClearEventsListAsync();
 
             AutoWorkTimer = new System.Timers.Timer();
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
@@ -192,6 +195,7 @@ namespace DataCollectionForRealtime
         {
             QueryHandler.CheckRequestsQueue();
             QueryHandler.ProcessEntireQueryList();
+
             if (checkBoxAuto.Checked)
             {
                 AutoWorkTimer.Start();

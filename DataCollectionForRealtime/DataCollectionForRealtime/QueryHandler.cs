@@ -4,7 +4,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using FakeCQG;
 using FakeCQG.Models;
-using System.Threading.Tasks;
 
 [assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
@@ -16,8 +15,9 @@ namespace DataCollectionForRealtime
 
         Assembly CQGAssm;
 
+        object QueriesProcessingLock = new object();
+
         public List<QueryInfo> QueryList;
-        HashSet<string> KeysOfQueriesInProcess;
 
         public Assembly CQGAssembly
         {
@@ -31,7 +31,6 @@ namespace DataCollectionForRealtime
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>();
-            KeysOfQueriesInProcess = new HashSet<string>();
             CQGAssm = cqgDM.CQGAssm;
         }
 
@@ -39,7 +38,6 @@ namespace DataCollectionForRealtime
         {
             CqgDataManagement = cqgDM;
             QueryList = new List<QueryInfo>(ql);
-            KeysOfQueriesInProcess = new HashSet<string>();
             CQGAssm = cqgDM.CQGAssm;
         }
 
@@ -50,7 +48,7 @@ namespace DataCollectionForRealtime
 
         public void CheckRequestsQueue()
         {
-            FakeCQG.CQG.QueryHelper.ReadQueriesAsync(KeysOfQueriesInProcess);
+            FakeCQG.CQG.QueryHelper.ReadQueries();
         }
 
         public void ProcessQuery(QueryInfo query)
@@ -98,7 +96,7 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = ParseInputArgsFromQuery(query);
+                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
@@ -133,7 +131,7 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = ParseInputArgsFromQuery(query);
+                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
@@ -157,7 +155,7 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = ParseInputArgsFromQuery(query);
+                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
@@ -200,7 +198,7 @@ namespace DataCollectionForRealtime
                 case QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                        EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
+                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
 
                         // Find corresponding CQG delegate
                         Type delType = FindDelegateType(CQGAssm, query.MemberName);
@@ -225,11 +223,12 @@ namespace DataCollectionForRealtime
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
                         PushAnswerAndDeleteQuery(answer);
 
-                        if (query.QueryType == QueryType.SubscribeToEvent && query.MemberName == "DataConnectionStatusChanged")
+                        if (query.QueryType == QueryType.SubscribeToEvent &&
+                            query.MemberName == "DataConnectionStatusChanged" &&
+                            CqgDataManagement.CEL.IsStarted)
                         {
                             // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(
-                                CqgDataManagement.CEL.IsStarted ? CQG.eConnectionStatus.csConnectionUp: CQG.eConnectionStatus.csConnectionDown);
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus.csConnectionUp);
                         }
                     }
                     break;
@@ -243,19 +242,19 @@ namespace DataCollectionForRealtime
 
         internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
         {
-            if (!Task.Run(() => FakeCQG.CQG.AnswerHelper.CheckAnswerAsync(answer.AnswerKey)).GetAwaiter().GetResult())
-            {
-                FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
-                FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.AnswerKey);
-            }
+            FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
+            FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.AnswerKey);
         }
 
         public void ProcessEntireQueryList()
         {
-            foreach (QueryInfo query in QueryList)
+            lock (QueriesProcessingLock)
             {
-                ProcessQuery(query);
-                KeysOfQueriesInProcess.Remove(query.QueryKey);
+                foreach (QueryInfo query in QueryList)
+                {
+                    ProcessQuery(query);
+                }
+                QueryList.Clear();
             }
         }
 
@@ -279,33 +278,6 @@ namespace DataCollectionForRealtime
         internal static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
-        }
-
-        static object[] ParseInputArgsFromQuery(QueryInfo query)
-        {
-            int numArgs = (query.ArgKeys != null ? query.ArgKeys.Count : 0) + (query.ArgValues != null ? query.ArgValues.Count : 0);
-            var args = new object[numArgs];
-
-            if (numArgs != 0)
-            {
-                if (query.ArgKeys != null)
-                {
-                    foreach (KeyValuePair<int, string> argPair in query.ArgKeys)
-                    {
-                        args[argPair.Key] = ServerDictionaries.GetObjectFromTheDictionary(argPair.Value);
-                    }
-                }
-
-                if (query.ArgValues != null)
-                {
-                    foreach (KeyValuePair<int, object> argPair in query.ArgValues)
-                    {
-                        args[argPair.Key] = argPair.Value;
-                    }
-                }
-            }
-
-            return args;
         }
     }
 }

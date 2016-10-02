@@ -52,8 +52,9 @@ namespace FakeCQG.Helpers
             Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
             Collection = Database.GetCollection<QueryInfo>(ConnectionSettings.QueryCollectionName);
-            return (Collection != null) ? false : true;
+            return Collection != null;
         }
+
         public Task PushQueryAsync(QueryInfo query)
         {
             return Task.Run(() =>
@@ -96,44 +97,38 @@ namespace FakeCQG.Helpers
             });
         }
 
-        public Task ReadQueriesAsync(HashSet<string> keysOfQueriesInProcess)
+        public void ReadQueries()
         {
-            return Task.Run(() =>
+            var filter = Builders<QueryInfo>.Filter.Empty;
+            try
             {
-                var filter = Builders<QueryInfo>.Filter.Empty;
-                try
+                // Select all the queries
+                var queries = Collection.Find(filter).ToList();
+
+                if (queries.Count != 0)
                 {
-                    // Select only the queries that are not being processed
-                    var queries = Collection.Find(filter).ToEnumerable().Where(query => !keysOfQueriesInProcess.Contains(query.QueryKey)).ToList();
+                    // Process the queries (fire event of this class)
+                    NewQueriesReady(queries);
+                }
 
-                    if (queries.Count != 0)
+                lock (CQG.LogLock)
+                {
+                    CQG.OnLogChange("************************************************************");
+                    CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
+                    foreach (QueryInfo query in queries)
                     {
-                        // Mark them as being processed
-                        keysOfQueriesInProcess.UnionWith(queries.Select(query => query.QueryKey));
-
-                        // Fire the event
-                        NewQueriesReady(queries);
-                    }
-
-                    lock (CQG.LogLock)
-                    {
-                        CQG.OnLogChange("************************************************************");
-                        CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
-                        foreach (QueryInfo query in queries)
-                        {
-                            CQG.OnLogChange(query.ToString());
-                        }
+                        CQG.OnLogChange(query.ToString());
                     }
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                CQG.OnLogChange(ex.Message);
+                if (Connect())
                 {
-                    CQG.OnLogChange(ex.Message);
-                    if (Connect())
-                    {
-                        ReadQueriesAsync(keysOfQueriesInProcess);
-                    }
+                    ReadQueries();
                 }
-            });
+            }
         }
 
         public Task ClearQueriesListAsync()
@@ -182,7 +177,7 @@ namespace FakeCQG.Helpers
             var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
             try
             {
-                Collection.DeleteOneAsync(filter);
+                Collection.DeleteOne(filter);
             }
             catch (Exception ex)
             {

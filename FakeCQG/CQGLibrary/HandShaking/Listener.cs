@@ -11,7 +11,7 @@ namespace FakeCQG.Handshaking
     public static class Listener
     {
         const string key = "HANDSHAKING";
-        const int timeForQuery = 500; // 0.5 s
+        const int HandshakingQueryInterval = 500;   // 0.5 s
         static HandshakingModel handshaking = new HandshakingModel(key);
         static Timer timer;
 
@@ -65,7 +65,7 @@ namespace FakeCQG.Handshaking
         {
             var filter = Builders<HandshakingModel>.Filter.Eq(Keys.IdName, key);
             collection.InsertOne(handshaking);
-            Task.Delay(timeForQuery).GetAwaiter().GetResult();
+            Task.Delay(HandshakingQueryInterval).GetAwaiter().GetResult();
             collection.DeleteOne(filter);
         }
 

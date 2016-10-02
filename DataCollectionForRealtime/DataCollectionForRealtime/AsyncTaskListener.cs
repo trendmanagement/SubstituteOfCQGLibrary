@@ -18,7 +18,7 @@
             catch
             {
                 //TODO: If control not available 
-            }        
+            }
         }
 
         public static void LogMessageFormat(string msgPat, params object[] args)

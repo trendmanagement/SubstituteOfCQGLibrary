@@ -57,30 +57,14 @@ namespace FakeCQG
                 EventHelper = new EventHelper();
             }
 
-            var argKeys = new Dictionary<int, string>();
-            var argVals = new Dictionary<int, object>();
+            Dictionary<int, string> argKeys;
+            Dictionary<int, object> argVals;
+            PutArgsFromArrayIntoTwoDicts(args, true, out argKeys, out argVals);
 
             string queryKey = CreateUniqueKey();
 
-            if (args != null)
-            {
-                for (int i = 0; i < args.Length; i++)
-                {
-                    object arg = args[i];
-                    Type argType = arg.GetType();
-
-                    if (IsSerializableType(argType))
-                    {
-                        argVals.Add(i, arg);
-                    }
-                    else
-                    {
-                        argKeys.Add(i, argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg).ToString());
-                    }
-                }
-            }
-
             QueryInfo queryInfo = CreateQuery(queryType, queryKey, dcObjKey, memName, argKeys, argVals);
+
             Task.Run(() => QueryHelper.PushQueryAsync(queryInfo));
 
             AnswerInfo result = WaitingForAnAnswer(queryKey, queryType);
@@ -186,6 +170,21 @@ namespace FakeCQG
 
         #region Handlers
 
+        public static void CommonEventHandler(
+            string name,
+            object[] args = null)
+        {
+            Dictionary<int, string> argKeys;
+            Dictionary<int, object> argVals;
+            PutArgsFromArrayIntoTwoDicts(args, false, out argKeys, out argVals);
+
+            string eventKey = CreateUniqueKey();
+
+            var eventInfo = new Models.EventInfo(eventKey, name, argKeys, argVals);
+
+            Task.Run(() => EventHelper.FireEvent(eventInfo));
+        }
+
         internal static void OnLogChange(string key, string value, bool isQuery)
         {
             if (isQuery)
@@ -212,6 +211,83 @@ namespace FakeCQG
         }
 
         #endregion
+
+        public static void PutArgsFromArrayIntoTwoDicts(
+            object[] args,
+            bool isClientOrServer,
+            out Dictionary<int, string> argKeys,
+            out Dictionary<int, object> argVals)
+        {
+            argKeys = new Dictionary<int, string>();
+            argVals = new Dictionary<int, object>();
+
+            if (args != null)
+            {
+                for (int i = 0; i < args.Length; i++)
+                {
+                    object arg = args[i];
+                    Type argType = arg.GetType();
+
+                    if (IsSerializableType(argType))
+                    {
+                        argVals.Add(i, arg);
+                    }
+                    else
+                    {
+                        string argKey;
+                        if (isClientOrServer)
+                        {
+                            argKey = (string)argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg);
+                        }
+                        else
+                        {
+                            argKey = CQG.CreateUniqueKey();
+                            ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
+                        }
+                        argKeys.Add(i, argKey);
+                    }
+                }
+            }
+        }
+
+        private static object[] GetArgsIntoArrayFromTwoDicts(
+            Dictionary<int, string> argKeys = null,
+            Dictionary<int, object> argValues = null)
+        {
+            int numArgs = (argKeys != null ? argKeys.Count : 0) + (argValues != null ? argValues.Count : 0);
+            var args = new object[numArgs];
+
+            if (numArgs != 0)
+            {
+                if (argKeys != null)
+                {
+                    foreach (KeyValuePair<int, string> argPair in argKeys)
+                    {
+                        args[argPair.Key] = ServerDictionaries.GetObjectFromTheDictionary(argPair.Value);
+                    }
+                }
+
+                if (argValues != null)
+                {
+                    foreach (KeyValuePair<int, object> argPair in argValues)
+                    {
+                        args[argPair.Key] = argPair.Value;
+                    }
+                }
+            }
+
+            return args;
+        }
+
+        public static object[] ParseInputArgsFromQueryInfo(QueryInfo queryInfo)
+        {
+            return GetArgsIntoArrayFromTwoDicts(queryInfo.ArgKeys, queryInfo.ArgValues);
+        }
+
+        public static object[] ParseInputArgsFromEventInfo(Models.EventInfo eventInfo)
+        {
+            return GetArgsIntoArrayFromTwoDicts(eventInfo.ArgKeys, eventInfo.ArgValues);
+        }
 
         public static void SubscriberChecking(string name, string objKey, bool isSubscriptionRequired, bool isUnsubscriptionRequired)
         {

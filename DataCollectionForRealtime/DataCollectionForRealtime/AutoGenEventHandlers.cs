@@ -12,7 +12,6 @@
 #pragma warning disable 3003, 3008
 
 using System;
-using System.Collections.Generic;
 
 namespace DataCollectionForRealtime
 {
@@ -22,908 +21,808 @@ namespace DataCollectionForRealtime
         {
             string name = "_ICQGCELEvents_AccountChangedEventHandler";
             var args = new object[] { change_type, cqg_account, cqg_position };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study)
         {
             string name = "_ICQGCELEvents_AdvancedStudyAddedEventHandler";
             var args = new object[] { cqg_advanced_study };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler";
             var args = new object[] { cqg_advanced_study_definitions, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
+        public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyInsertedEventHandler";
             var args = new object[] { cqg_advanced_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
+        public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyRemovedEventHandler";
             var args = new object[] { cqg_advanced_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AdvancedStudyResolvedEventHandler";
             var args = new object[] { cqg_advanced_study, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
+        public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, int index_)
         {
             string name = "_ICQGCELEvents_AdvancedStudyUpdatedEventHandler";
             var args = new object[] { cqg_advanced_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(String guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
+        public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(string guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderPlacedEventHandler";
             var args = new object[] { guid_, main_params, custom_props };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(String guid_, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(string guid_, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler";
             var args = new object[] { guid_, cqg_error };
-            int[] nonSerParPos = new int[] {1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AllOrdersCanceledEventHandlerImpl(CQG.eOrderSideFilter order_side, CQG.CQGIntegerCollection gw_account_ids, CQG.CQGStringCollection instrument_names)
         {
             string name = "_ICQGCELEvents_AllOrdersCanceledEventHandler";
             var args = new object[] { order_side, gw_account_ids, instrument_names };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl(CQG.eSessionStatus new_status, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_AuthenticationStatusChangedEventHandler";
             var args = new object[] { new_status, cqg_error };
-            int[] nonSerParPos = new int[] {1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl(CQG.CQGBarsTimestamps cqg_bars_timestamps, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_BarsTimestampsResolvedEventHandler";
             var args = new object[] { cqg_bars_timestamps, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CELStartedEventHandlerImpl()
         {
             string name = "_ICQGCELEvents_CELStartedEventHandler";
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name);
+            FakeCQG.CQG.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELEvents_CommodityInstrumentsResolvedEventHandler";
             var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
-            int[] nonSerParPos = new int[] {2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionAddedEventHandlerImpl(CQG.CQGCondition cqg_condition)
         {
             string name = "_ICQGCELEvents_ConditionAddedEventHandler";
             var args = new object[] { cqg_condition };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl(CQG.CQGConditionDefinitions cqg_condition_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConditionDefinitionsResolvedEventHandler";
             var args = new object[] { cqg_condition_definitions, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
+        public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionInsertedEventHandler";
             var args = new object[] { cqg_condition, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
+        public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionRemovedEventHandler";
             var args = new object[] { cqg_condition, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionResolvedEventHandlerImpl(CQG.CQGCondition cqg_condition, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConditionResolvedEventHandler";
             var args = new object[] { cqg_condition, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
+        public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, int index_)
         {
             string name = "_ICQGCELEvents_ConditionUpdatedEventHandler";
             var args = new object[] { cqg_condition, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsAddedEventHandler";
             var args = new object[] { cqg_constant_volume_bars };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler";
             var args = new object[] { cqg_constant_volume_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler";
             var args = new object[] { cqg_constant_volume_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler";
             var args = new object[] { cqg_constant_volume_bars, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
+        public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, int index_)
         {
             string name = "_ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler";
             var args = new object[] { cqg_constant_volume_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
             string name = "_ICQGCELEvents_CurrencyRatesChangedEventHandler";
             var args = new object[] { cqg_currency_rates };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_sessions_collection, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomSessionsResolvedEventHandler";
             var args = new object[] { cqg_sessions_collection, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyAddedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study)
         {
             string name = "_ICQGCELEvents_CustomStudyAddedEventHandler";
             var args = new object[] { cqg_custom_study };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGCustomStudyDefinitions cqg_custom_study_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler";
             var args = new object[] { cqg_custom_study_definitions, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
+        public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyInsertedEventHandler";
             var args = new object[] { cqg_custom_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
+        public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyRemovedEventHandler";
             var args = new object[] { cqg_custom_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyResolvedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_CustomStudyResolvedEventHandler";
             var args = new object[] { cqg_custom_study, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
+        public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, int index_)
         {
             string name = "_ICQGCELEvents_CustomStudyUpdatedEventHandler";
             var args = new object[] { cqg_custom_study, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
             string name = "_ICQGCELEvents_DataConnectionStatusChangedEventHandler";
             var args = new object[] { new_status };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
+        public static void _ICQGCELEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
         {
             string name = "_ICQGCELEvents_DataErrorEventHandler";
             var args = new object[] { cqg_error, error_description };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataSourcesResolvedEventHandlerImpl(CQG.CQGDataSources cqg_data_sources, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_DataSourcesResolvedEventHandler";
             var args = new object[] { cqg_data_sources, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(String data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(string data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_DataSourceSymbolsResolvedEventHandler";
             var args = new object[] { data_source_abbreviation, cqg_data_source_symbols, cqg_error };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionAddedEventHandlerImpl(CQG.CQGExpression cqg_expression)
         {
             string name = "_ICQGCELEvents_ExpressionAddedEventHandler";
             var args = new object[] { cqg_expression };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
+        public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionInsertedEventHandler";
             var args = new object[] { cqg_expression, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
+        public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionRemovedEventHandler";
             var args = new object[] { cqg_expression, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionResolvedEventHandlerImpl(CQG.CQGExpression cqg_expression, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ExpressionResolvedEventHandler";
             var args = new object[] { cqg_expression, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
+        public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, int index_)
         {
             string name = "_ICQGCELEvents_ExpressionUpdatedEventHandler";
             var args = new object[] { cqg_expression, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_GWConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
             string name = "_ICQGCELEvents_GWConnectionStatusChangedEventHandler";
             var args = new object[] { new_status };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(CQG.eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_)
+        public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(CQG.eGWEnvChangeCode event_code, int account_id, int phase_)
         {
             string name = "_ICQGCELEvents_GWEnvironmentChangedEventHandler";
             var args = new object[] { event_code, account_id, phase_ };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_historical_sessions, CQG.CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_HistoricalSessionsResolvedEventHandler";
             var args = new object[] { cqg_historical_sessions, cqg_historical_sessions_request, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ICConnectionStatusChangedEventHandlerImpl(CQG.eICConnectionStatus new_status)
         {
             string name = "_ICQGCELEvents_ICConnectionStatusChangedEventHandler";
             var args = new object[] { new_status };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
+        public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
         {
             string name = "_ICQGCELEvents_IncorrectSymbolEventHandler";
             var args = new object[] { symbol_ };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
             string name = "_ICQGCELEvents_InstrumentChangedEventHandler";
             var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
-            int[] nonSerParPos = new int[] {0 ,1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
             string name = "_ICQGCELEvents_InstrumentDOMChangedEventHandler";
             var args = new object[] { cqg_instrument, prev_asks, prev_bids };
-            int[] nonSerParPos = new int[] {0 ,1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
             string name = "_ICQGCELEvents_InstrumentsGroupChangedEventHandler";
             var args = new object[] { change_type, instruments_group, instruments_names };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_InstrumentsGroupResolvedEventHandler";
             var args = new object[] { instruments_group, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
+        public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELEvents_InstrumentSubscribedEventHandler";
             var args = new object[] { symbol_, cqg_instrument };
-            int[] nonSerParPos = new int[] {1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
             string name = "_ICQGCELEvents_IsReadyEventHandler";
             var args = new object[] { ready_status };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_LineTimeChangedEventHandlerImpl(DateTime new_line_time)
         {
             string name = "_ICQGCELEvents_LineTimeChangedEventHandler";
             var args = new object[] { new_line_time };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillChangedEventHandlerImpl(CQG.CQGManualFill cqg_manual_fill, CQG.eManualFillUpdateType modify_type)
         {
             string name = "_ICQGCELEvents_ManualFillChangedEventHandler";
             var args = new object[] { cqg_manual_fill, modify_type };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillsResolvedEventHandlerImpl(CQG.CQGManualFills cqg_manual_fills, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ManualFillsResolvedEventHandler";
             var args = new object[] { cqg_manual_fills, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl(CQG.CQGManualFillRequest cqg_manual_fill_request, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_ManualFillUpdateResolvedEventHandler";
             var args = new object[] { cqg_manual_fill_request, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_OnIdleEventHandlerImpl()
         {
             string name = "_ICQGCELEvents_OnIdleEventHandler";
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name);
+            FakeCQG.CQG.CommonEventHandler(name);
         }
 
         public static void _ICQGCELEvents_OnQueryProgressEventHandlerImpl(CQG.CQGOrdersQuery cqg_orders_query, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_OnQueryProgressEventHandler";
             var args = new object[] { cqg_orders_query, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_OrderChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGOrder cqg_order, CQG.CQGOrderProperties old_properties, CQG.CQGFill cqg_fill, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_OrderChangedEventHandler";
             var args = new object[] { change_type, cqg_order, old_properties, cqg_fill, cqg_error };
-            int[] nonSerParPos = new int[] {1 ,2 ,3 ,4};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PasswordChangedEventHandlerImpl(CQG.eSessionStatus request_status, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PasswordChangedEventHandler";
             var args = new object[] { request_status, cqg_error };
-            int[] nonSerParPos = new int[] {1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsAddedEventHandler";
             var args = new object[] { cqg_point_and_figure_bars };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsInsertedEventHandler";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsRemovedEventHandler";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsResolvedEventHandler";
             var args = new object[] { cqg_point_and_figure_bars, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
+        public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, int index_)
         {
             string name = "_ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl(CQG.CQGPositionsStatement cqg_positions_statement, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_PositionsStatementResolvedEventHandler";
             var args = new object[] { cqg_positions_statement, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl(CQG.CQGQFormulaDefinitions cqg_qformula_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_QFormulaDefinitionsResolvedEventHandler";
             var args = new object[] { cqg_qformula_definitions, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl(CQG.CQGStrategyDefinition cqg_definition, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_StrategyDefinitionProgressEventHandler";
             var args = new object[] { cqg_definition, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_submintue_bars)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsAddedEventHandler";
             var args = new object[] { cqg_submintue_bars };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
+        public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsInsertedEventHandler";
             var args = new object[] { cqg_subminute_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
+        public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsRemovedEventHandler";
             var args = new object[] { cqg_subminute_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminte_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsResolvedEventHandler";
             var args = new object[] { cqg_subminte_bars, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
+        public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, int index_)
         {
             string name = "_ICQGCELEvents_SubMinuteBarsUpdatedEventHandler";
             var args = new object[] { cqg_subminute_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl(CQG.CQGSummariesStatement cqg_summaries_statement, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_SummariesStatementResolvedEventHandler";
             var args = new object[] { cqg_summaries_statement, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsAddedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars)
         {
             string name = "_ICQGCELEvents_TFlowBarsAddedEventHandler";
             var args = new object[] { cqg_tflow_bars };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
+        public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsInsertedEventHandler";
             var args = new object[] { cqg_tflow_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
+        public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsRemovedEventHandler";
             var args = new object[] { cqg_tflow_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TFlowBarsResolvedEventHandler";
             var args = new object[] { cqg_tflow_bars, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
+        public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, int index_)
         {
             string name = "_ICQGCELEvents_TFlowBarsUpdatedEventHandler";
             var args = new object[] { cqg_tflow_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, Int32 added_ticks_count)
+        public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, int added_ticks_count)
         {
             string name = "_ICQGCELEvents_TicksAddedEventHandler";
             var args = new object[] { cqg_ticks, added_ticks_count };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TicksResolvedEventHandlerImpl(CQG.CQGTicks cqg_ticks, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TicksResolvedEventHandler";
             var args = new object[] { cqg_ticks, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsAddedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars)
         {
             string name = "_ICQGCELEvents_TimedBarsAddedEventHandler";
             var args = new object[] { cqg_timed_bars };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
+        public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsInsertedEventHandler";
             var args = new object[] { cqg_timed_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
+        public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsRemovedEventHandler";
             var args = new object[] { cqg_timed_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsResolvedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TimedBarsResolvedEventHandler";
             var args = new object[] { cqg_timed_bars, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
+        public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, int index_)
         {
             string name = "_ICQGCELEvents_TimedBarsUpdatedEventHandler";
             var args = new object[] { cqg_timed_bars, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableCommoditiesResolvedEventHandler";
             var args = new object[] { gw_account_id, cqg_commodities, cqg_error };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
+        public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(int gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradableExchangesResolvedEventHandler";
             var args = new object[] { gw_account_id, cqg_exchanges, cqg_error };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemAddInfo cqg_trading_system_add_info)
         {
             string name = "_ICQGCELEvents_TradingSystemAddNotificationEventHandler";
             var args = new object[] { cqg_trading_system, cqg_trading_system_add_info };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl(CQG.CQGTradingSystemDefinitions cqg_trading_system_definitions, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandler";
             var args = new object[] { cqg_trading_system_definitions, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemInsertInfo cqg_trading_system_insert_info)
         {
             string name = "_ICQGCELEvents_TradingSystemInsertNotificationEventHandler";
             var args = new object[] { cqg_trading_system, cqg_trading_system_insert_info };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRemoveInfo cqg_trading_system_remove_info)
         {
             string name = "_ICQGCELEvents_TradingSystemRemoveNotificationEventHandler";
             var args = new object[] { cqg_trading_system, cqg_trading_system_remove_info };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemResolvedEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_TradingSystemResolvedEventHandler";
             var args = new object[] { cqg_trading_system, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRelationAddInfo cqg_trading_system_relation_add_info)
         {
             string name = "_ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandler";
             var args = new object[] { cqg_trading_system, cqg_trading_system_relation_add_info };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemUpdateInfo cqg_trading_system_update_info)
         {
             string name = "_ICQGCELEvents_TradingSystemUpdateNotificationEventHandler";
             var args = new object[] { cqg_trading_system, cqg_trading_system_update_info };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsAddedEventHandlerImpl(CQG.CQGYields cqg_yields)
         {
             string name = "_ICQGCELEvents_YieldsAddedEventHandler";
             var args = new object[] { cqg_yields };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
+        public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsInsertedEventHandler";
             var args = new object[] { cqg_yields, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
+        public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsRemovedEventHandler";
             var args = new object[] { cqg_yields, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsResolvedEventHandlerImpl(CQG.CQGYields cqg_yields, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELEvents_YieldsResolvedEventHandler";
             var args = new object[] { cqg_yields, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
+        public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, int index_)
         {
             string name = "_ICQGCELEvents_YieldsUpdatedEventHandler";
             var args = new object[] { cqg_yields, index_ };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_CELStartedEventHandlerImpl()
         {
             string name = "_ICQGCELGeneralEvents_CELStartedEventHandler";
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name);
+            FakeCQG.CQG.CommonEventHandler(name);
         }
 
         public static void _ICQGCELGeneralEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
             string name = "_ICQGCELGeneralEvents_CurrencyRatesChangedEventHandler";
             var args = new object[] { cqg_currency_rates };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
             string name = "_ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler";
             var args = new object[] { new_status };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
+        public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(object cqg_error, string error_description)
         {
             string name = "_ICQGCELGeneralEvents_DataErrorEventHandler";
             var args = new object[] { cqg_error, error_description };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
             string name = "_ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler";
             var args = new object[] { new_status };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
             string name = "_ICQGCELGeneralEvents_IsReadyEventHandler";
             var args = new object[] { ready_status };
-            int[] nonSerParPos = new int[] {0};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_LineTimeChangedEventHandlerImpl(DateTime new_line_time)
         {
             string name = "_ICQGCELGeneralEvents_LineTimeChangedEventHandler";
             var args = new object[] { new_line_time };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_OnIdleEventHandlerImpl()
         {
             string name = "_ICQGCELGeneralEvents_OnIdleEventHandler";
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name);
+            FakeCQG.CQG.CommonEventHandler(name);
         }
 
-        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
+        public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(string commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
             string name = "_ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler";
             var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
-            int[] nonSerParPos = new int[] {2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
+        public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(string symbol_)
         {
             string name = "_ICQGCELInstrumentEvents_IncorrectSymbolEventHandler";
             var args = new object[] { symbol_ };
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentChangedEventHandler";
             var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
-            int[] nonSerParPos = new int[] {0 ,1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandler";
             var args = new object[] { cqg_instrument, prev_asks, prev_bids };
-            int[] nonSerParPos = new int[] {0 ,1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandler";
             var args = new object[] { change_type, instruments_group, instruments_names };
-            int[] nonSerParPos = new int[] {1 ,2};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler";
             var args = new object[] { instruments_group, cqg_error };
-            int[] nonSerParPos = new int[] {0 ,1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
-        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
+        public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(string symbol_, CQG.CQGInstrument cqg_instrument)
         {
             string name = "_ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler";
             var args = new object[] { symbol_, cqg_instrument };
-            int[] nonSerParPos = new int[] {1};
-            FakeCQG.Helpers.EventHelper fireEvent = new FakeCQG.Helpers.EventHelper(name, args, nonSerParPos);
+            FakeCQG.CQG.CommonEventHandler(name, args);
         }
 
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using FakeCQG.Models;
 using MongoDB.Driver;
@@ -8,13 +7,11 @@ namespace FakeCQG.Helpers
 {
     public class EventHelper
     {
-        private const string eventFiringId = "!EventHappened";
-
         protected IMongoClient Client;
         protected IMongoDatabase Database;
-        protected IMongoCollection<EventAnswerInfo> Collection;
+        protected IMongoCollection<EventInfo> Collection;
 
-        public IMongoCollection<EventAnswerInfo> GetCollection
+        public IMongoCollection<EventInfo> GetCollection
         {
             get
             {
@@ -30,27 +27,14 @@ namespace FakeCQG.Helpers
             }
         }
 
-        public string EventFiringId
-        {
-            get
-            {
-                return eventFiringId;
-            }
-        }
-
         public EventHelper()
         {
             Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<EventAnswerInfo>(ConnectionSettings.EventCollectionName);
+            Collection = Database.GetCollection<EventInfo>(ConnectionSettings.EventCollectionName);
         }
 
-        public Task FireEventAsync(EventAnswerInfo eventInfo)
-        {
-            return Task.Run(() => FireEvent(eventInfo));
-        }
-
-        public void FireEvent(EventAnswerInfo eventInfo)
+        public void FireEvent(EventInfo eventInfo)
         {
             try
             {
@@ -67,15 +51,15 @@ namespace FakeCQG.Helpers
             }
         }
 
-        public Task ClearAnswersListAsync()
+        public Task ClearEventsListAsync()
         {
-            var filter = Builders<EventAnswerInfo>.Filter.Empty;
+            var filter = Builders<EventInfo>.Filter.Empty;
             return Task.Run(() =>
             {
                 try
                 {
                     Collection.DeleteMany(filter);
-                    CQG.OnLogChange("Answers list was cleared successfully");
+                    CQG.OnLogChange("Events list was cleared successfully");
                 }
                 catch (Exception ex)
                 {
@@ -83,68 +67,36 @@ namespace FakeCQG.Helpers
                 }
             });
         }
-
-        public Task RemoveAnswerAsync(string key)
+        
+        public void RemoveEvent(string key)
         {
-            var filter = Builders<EventAnswerInfo>.Filter.Eq(Keys.EventKey, key);
-            return Task.Run(() =>
+            var filter = Builders<EventInfo>.Filter.Eq(Keys.EventKey, key);
+            try
             {
-                try
-                {
-                    Collection.DeleteOne(filter);
-                }
-                catch (Exception ex)
-                {
-                    CQG.OnLogChange(ex.Message);
-                }
-            });
+                Collection.DeleteOne(filter);
+            }
+            catch (Exception ex)
+            {
+                CQG.OnLogChange(ex.Message);
+            }
         }
 
-        public object[] CheckWhetherEventHappened(string name)
+        public bool CheckWhetherEventHappened(string name, out object[] args)
         {
             string handlerName = string.Format("_ICQGCELEvents_{0}EventHandler", name);
-            var filter = Builders<EventAnswerInfo>.Filter.Eq(Keys.EventName, handlerName);
+            var filter = Builders<EventInfo>.Filter.Eq(Keys.EventName, handlerName);
             try
             {
-                EventAnswerInfo answer = Collection.Find(filter).First();
-                var args = answer.Args;
-                RemoveAnswerAsync(answer.EventKey);
-                return args;
+                EventInfo eventInfo = Collection.Find(filter).First();
+                args = CQG.ParseInputArgsFromEventInfo(eventInfo);
+                RemoveEvent(eventInfo.EventKey);
+                return true;
             }
             catch (Exception ex)
             {
                 CQG.OnLogChange(ex.Message);
-                return null;
-            }
-        }
-
-        public EventHelper(
-            string name,
-            object[] args = null,
-            int[] nonSerArgsPos = null) :this()
-        {
-            var argValues = args;
-            
-            if(nonSerArgsPos != null)
-            {
-                foreach (int i in nonSerArgsPos)
-                {
-                    string paramKey = CQG.CreateUniqueKey();
-                    ServerDictionaries.PutObjectToTheDictionary(paramKey, args[i]);
-                    args[i] = paramKey;
-                }
-            }
-            
-            try
-            {
-                string eventKey = eventFiringId + CQG.CreateUniqueKey();
-                var answer = new EventAnswerInfo(eventKey, name, args);
-                FireEvent(answer);
-
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
+                args = null;
+                return false;
             }
         }
     }

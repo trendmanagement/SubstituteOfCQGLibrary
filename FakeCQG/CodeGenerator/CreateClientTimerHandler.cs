@@ -12,10 +12,13 @@ namespace CodeGenerator
                 + Environment.NewLine + Indent3 + einfo.Name + " == null && ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
                 "\"]);" + Environment.NewLine);
 
-            File.WriteLine(Indent2 + "if (ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"] == true)" +
+            File.WriteLine(Indent2 + "if (ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"])" +
                 Environment.NewLine + Indent2 + "{");
-            File.WriteLine(Indent3 + "try" + Environment.NewLine + Indent3 + "{");
-            File.WriteLine(Indent4 + "object[] args = CQG.EventHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\");");
+            File.WriteLine(Indent3 + "object[] args;");
+            File.WriteLine(Indent3 + "bool happened = CQG.EventHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\", out args);");
+
+            File.WriteLine(Indent3 + "if (happened)");
+            File.WriteLine(Indent3 + "{");
 
             ParameterInfo[] pinfos = einfo.EventHandlerType.GetMethod("Invoke").GetParameters();
 
@@ -33,7 +36,7 @@ namespace CodeGenerator
                 }
 
                 if (!IsSerializableType(pinfo.ParameterType) && paramType != "eReadyStatus")
-                { 
+                {
                     File.WriteLine(Indent4 + "var arg" + pinfo.Position + " = new " +
                         paramType + "Class((string)args[" + pinfo.Position + "]);");
                     arg = "arg" + pinfo.Position;
@@ -43,7 +46,7 @@ namespace CodeGenerator
                 {
                     File.WriteLine(Indent4 + paramType + " rArg" + pinfo.Position +
                         " = (" + paramType + ")" + arg + ";");
-                }            
+                }
             }
 
             File.Write(Indent4 + einfo.Name + ".Invoke(");
@@ -89,7 +92,6 @@ namespace CodeGenerator
             }
 
             File.WriteLine(Indent3 + "}");
-            File.WriteLine(Indent3 + "catch (Exception)" + Environment.NewLine + Indent3 + "{ }");
             File.WriteLine(Indent2 + "}" + Environment.NewLine);
         }
     }

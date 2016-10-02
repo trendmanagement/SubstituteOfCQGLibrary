@@ -115,6 +115,8 @@ namespace CodeGenerator
                     CreateClientTimerHandler(einfo);
                 }
 
+                File.WriteLine(Indent2 + "eventCheckingTimer.Start();");
+
                 MemberEnd();
             }
 

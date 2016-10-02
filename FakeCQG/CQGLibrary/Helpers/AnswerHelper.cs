@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using FakeCQG.Models;
 using MongoDB.Driver;
@@ -8,8 +7,6 @@ namespace FakeCQG.Helpers
 {
     public class AnswerHelper
     {
-        private const string eventFiringId = "!EventHappened";
-
         protected IMongoClient Client;
         protected IMongoDatabase Database;
         protected IMongoCollection<AnswerInfo> Collection;
@@ -27,14 +24,6 @@ namespace FakeCQG.Helpers
             get
             {
                 return Database;
-            }
-        }
-
-        public string EventFiringId
-        {
-            get
-            {
-                return eventFiringId;
             }
         }
 
@@ -57,9 +46,10 @@ namespace FakeCQG.Helpers
         {
             Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.QueryCollectionName);
-            return (Collection != null) ? false : true;
+            Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.AnswerCollectionName);
+            return Collection != null;
         }
+
         public Task PushAnswerAsync(AnswerInfo answer)
         {
             return Task.Run(() => PushAnswer(answer));
@@ -200,52 +190,6 @@ namespace FakeCQG.Helpers
                     }
                 }
             });
-        }
-
-        public object[] CheckWhetherEventHappened(string name)
-        {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
-            try
-            {
-                AnswerInfo answer = Collection.Find(filter).First();
-                var argValues = answer.ArgValues;
-                return (object[])argValues[1];
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-                if (Connect())
-                {
-                    return CheckWhetherEventHappened(name);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
-
-        public void CommonEventHandler(string name, object[] args = null)
-        {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
-            try
-            {
-                AnswerInfo answer = Collection.Find(filter).First();
-                var argValues = new Dictionary<int, object>();
-                argValues.Add(0, "!");
-                argValues.Add(1, args);
-                var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
-                //TODO: deserialize argValues from dictionary to bson
-                //allAnswers.UpdateOne(filter, update);
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-                if (Connect())
-                {
-                    CommonEventHandler(name, args);
-                }
-            }
         }
     }
 }

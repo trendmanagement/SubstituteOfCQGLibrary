@@ -6,7 +6,7 @@ using MongoDB.Bson.Serialization.Options;
 
 namespace FakeCQG.Models
 {
-    public class EventAnswerInfo
+    public class EventInfo
     {
         #region Serialized properties
 
@@ -16,8 +16,11 @@ namespace FakeCQG.Models
 
         public string EventName { get; set; }
 
-        //[BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
-        public object[] Args { get; set; }
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        public Dictionary<int, string> ArgKeys { get; set; }
+
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        public Dictionary<int, object> ArgValues { get; set; }
 
         public Action CQGException
         {
@@ -29,30 +32,31 @@ namespace FakeCQG.Models
 
         #endregion
 
-        private string _valueKey;
-
         public bool IsCQGException;
 
         private Action _exception;
 
-        public EventAnswerInfo(
+        public EventInfo(
             string eventKey,
             string eventName,
-            object[] args = null)
+            Dictionary<int, string> argKeys = null,
+            Dictionary<int, object> argValues = null)
         {
             EventKey = eventKey;
             EventName = eventName;
-            Args = args;
+            ArgKeys = argKeys;
+            ArgValues = argValues;
         }
 
         public override string ToString()
         {
             return string.Format(
-                "ANSWER:" + Environment.NewLine +
+                "EVENT:" + Environment.NewLine +
                 "    EventKey = {0}" + Environment.NewLine +
                 "    EventName = {1}" + Environment.NewLine +
-                "    Args = {2}",
-                EventKey, EventName, Args);
+                "    ArgKeys: {2}" + Environment.NewLine +
+                "    ArgValues: {3}",
+                EventKey, EventName, ArgKeys, ArgValues);
         }
     }
 }

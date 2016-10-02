@@ -5,6 +5,8 @@ namespace CodeGenerator
 {
     partial class Program
     {
+        const int EventCheckingTimerInterval = 30;  // ms
+
         static void CreateCtors(Type type, bool eventsChecking)
         {
             UpdateRegion(RegionType.Constructors);
@@ -49,9 +51,9 @@ namespace CodeGenerator
             if (eventsChecking)
             {
                 File.WriteLine(Indent2 + "eventCheckingTimer = new System.Timers.Timer();");
-                File.WriteLine(Indent2 + "eventCheckingTimer.Interval = 30;");
+                File.WriteLine(Indent2 + "eventCheckingTimer.Interval = " + EventCheckingTimerInterval.ToString() + ";");
                 File.WriteLine(Indent2 + "eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;");
-                File.WriteLine(Indent2 + "eventCheckingTimer.AutoReset = true;");
+                File.WriteLine(Indent2 + "eventCheckingTimer.AutoReset = false;");
                 File.WriteLine(Indent2 + "eventCheckingTimer.Enabled = true;");
             }
 

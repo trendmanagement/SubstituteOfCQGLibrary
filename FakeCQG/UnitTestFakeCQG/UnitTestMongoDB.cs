@@ -100,8 +100,7 @@ namespace UnitTestFakeCQG
                 {
                     await queryHelper.PushQueryAsync(new QueryInfo(qType, idTrue[i], string.Empty, name, null, null));
                 }
-                var keysOfQueriesInProgress = new HashSet<string>();
-                await queryHelper.ReadQueriesAsync(keysOfQueriesInProgress);
+                queryHelper.ReadQueries();
             }).GetAwaiter().GetResult();
 
             // assert
@@ -137,8 +136,7 @@ namespace UnitTestFakeCQG
                 {
                     await queryHelper.PushQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
                 }
-                var keysOfQueriesInProgress = new HashSet<string>();
-                await queryHelper.ReadQueriesAsync(keysOfQueriesInProgress);
+                queryHelper.ReadQueries();
             }).GetAwaiter().GetResult();
 
             // assert
@@ -174,8 +172,7 @@ namespace UnitTestFakeCQG
                     await queryHelper.PushQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
                 }
                 await queryHelper.ClearQueriesListAsync();
-                var keysOfQueriesInProgress = new HashSet<string>();
-                await queryHelper.ReadQueriesAsync(keysOfQueriesInProgress);
+                queryHelper.ReadQueries();
             }).GetAwaiter().GetResult();
 
             // assert
