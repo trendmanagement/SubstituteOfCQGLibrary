@@ -12,7 +12,7 @@ namespace FakeCQG.Handshaking
     {
         const string key = "HANDSHAKING";
         const int timeForQuery = 500; // 0.5 s
-        static HandshakerModel handshaking = new HandshakerModel(key);
+        static HandshakingModel handshaking = new HandshakingModel(key);
         static Timer timer;
 
         public delegate void ListenerEventHandler(HandshakingEventArgs args);
@@ -21,31 +21,31 @@ namespace FakeCQG.Handshaking
         public static Task StartHandshaking()
         {
             // !! Do not create this object once again for each handshaking
-            HandshakingrHelper mongo = new HandshakingrHelper();
+            HandshakingHelper mongo = new HandshakingHelper();
             var collection = mongo.GetCollection;
 
             return Task.Run(() => 
             {
-                //Clear collection
+                // Clear collection
                 ClearCollection(collection);
 
-                //Send handshaking query
-                SendHandshakerQuery(collection);
+                // Send handshaking query
+                SendHandshakingQuery(collection);
 
-                //Check subscribers
+                // Check subscribers
                 CheckSubscribers(collection);
             });
         }
 
-        private static void CheckSubscribers(IMongoCollection<HandshakerModel> collection)
+        private static void CheckSubscribers(IMongoCollection<HandshakingModel> collection)
         {
-            var filter = Builders<HandshakerModel>.Filter.Empty;
-            List<HandshakerModel> subscribers = new List<HandshakerModel>();
+            var filter = Builders<HandshakingModel>.Filter.Empty;
+            List<HandshakingModel> subscribers = new List<HandshakingModel>();
             subscribers = collection.Find(filter).ToList();
             OnSubscribersAdded(subscribers);
         }
 
-        private static void OnSubscribersAdded(List<HandshakerModel> subscribers)
+        private static void OnSubscribersAdded(List<HandshakingModel> subscribers)
         {
             //TODO: Implement logic for variant without subscribers and for only one suscriber
             if (subscribers.Count == 0)
@@ -61,17 +61,17 @@ namespace FakeCQG.Handshaking
             timer.Start();
         }
 
-        private static void SendHandshakerQuery(IMongoCollection<HandshakerModel> collection)
+        private static void SendHandshakingQuery(IMongoCollection<HandshakingModel> collection)
         {
-            var filter = Builders<HandshakerModel>.Filter.Eq(Keys.IdName, key);
+            var filter = Builders<HandshakingModel>.Filter.Eq(Keys.IdName, key);
             collection.InsertOne(handshaking);
             Task.Delay(timeForQuery).GetAwaiter().GetResult();
             collection.DeleteOne(filter);
         }
 
-        static void ClearCollection(IMongoCollection<HandshakerModel> collection)
+        static void ClearCollection(IMongoCollection<HandshakingModel> collection)
         {
-            var filter = Builders<HandshakerModel>.Filter.Empty;
+            var filter = Builders<HandshakingModel>.Filter.Empty;
             collection.DeleteMany(filter);
         }
 

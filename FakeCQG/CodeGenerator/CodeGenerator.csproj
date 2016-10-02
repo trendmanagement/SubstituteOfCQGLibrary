@@ -42,23 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateClientTimerHandler.cs" />
     <Compile Include="CreateCtors.cs" />
     <Compile Include="CreateDelegate.cs" />
     <Compile Include="CreateDtor.cs" />
     <Compile Include="CreateEnum.cs" />
-    <Compile Include="CreateEventHandler.cs" />
     <Compile Include="CreateEvents.cs" />
     <Compile Include="CreateFields.cs" />
     <Compile Include="CreateMethods.cs" />
     <Compile Include="CreateMethodSignature.cs" />
     <Compile Include="CreateProperties.cs" />
     <Compile Include="CreateClassInterfaceStruct.cs" />
+    <Compile Include="CreateServerEventHandler.cs" />
     <Compile Include="CreateTypes.cs" />
     <Compile Include="LayoutUtils.cs" />
     <Compile Include="OtherUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimerTickHandler.cs" />
     <Compile Include="TypeUtils.cs" />
   </ItemGroup>
   <ItemGroup>

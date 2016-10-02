@@ -2,57 +2,70 @@
 using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Options;
 
 namespace FakeCQG.Models
 {
+    public enum QueryType
+    {
+        CallCtor,
+        CallDtor,
+        GetProperty,
+        SetProperty,
+        CallMethod,
+        SubscribeToEvent,
+        UnsubscribeFromEvent
+    }
+
     public class QueryInfo
     {
-        public enum QueryType
-        {
-            CallCtor,
-            CallDtor,
-            GetProperty,
-            SetProperty,
-            CallMethod,
-            Event
-        }
+        #region Serialized properties
 
         [BsonId]
         [BsonRepresentation(BsonType.String)]
-        public string Key { get; set; }
+        public string QueryKey { get; set; }
+
+        public QueryType QueryType { get; set; }
+
+        public string MemberName { get; set; }
+
         public string ObjectKey { get; set; }
-        public string QueryName { get; set; }
-        public Dictionary<string, string> ArgKeys { get; set; }
-        public Dictionary<string, object> ArgValues { get; set; }
-        public QueryType TypeOfQuery { get; set; }
+
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        public Dictionary<int, string> ArgKeys { get; set; }
+
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        public Dictionary<int, object> ArgValues { get; set; }
+
+        #endregion
 
         public QueryInfo(
-            QueryType qType,
-            string key,
-            string objKey,
-            string qName, 
-            Dictionary<string, string> argKeys = null,
-            Dictionary<string, object> argVals = null)
+            QueryType queryType,
+            string queryKey,
+            string objectKey = null,
+            string memberName = null,
+            Dictionary<int, string> argKeys = null,
+            Dictionary<int, object> argValues = null)
         {
-            Key = key;
-            ObjectKey = objKey;
-            QueryName = qName;
+            QueryType = queryType;
+            QueryKey = queryKey;
+            MemberName = memberName;
+            ObjectKey = objectKey;
             ArgKeys = argKeys;
-            ArgValues = argVals;
-            TypeOfQuery = qType;
+            ArgValues = argValues;
         }
 
         public override string ToString()
         {
             return string.Format(
                 "QUERY:" + Environment.NewLine +
-                "    Key: {0}" + Environment.NewLine +
-                "    ObjectKey: {1}" + Environment.NewLine +
-                "    QueryName: {2}" + Environment.NewLine +
-                "    ArgKeys: {3}" + Environment.NewLine +
-                "    ArgValues: {4}" + Environment.NewLine +
-                "    TypeOfQuery: {5}",
-                Key, ObjectKey, QueryName, ArgKeys, ArgValues, TypeOfQuery);
+                "    QueryType: {0}" + Environment.NewLine +
+                "    QueryKey: {1}" + Environment.NewLine +
+                "    MemberName: {2}" + Environment.NewLine +
+                "    ObjectKey: {3}" + Environment.NewLine +
+                "    ArgKeys: {4}" + Environment.NewLine +
+                "    ArgValues: {5}",
+                QueryType, QueryKey, MemberName, ObjectKey, ArgKeys, ArgValues);
         }
     }
 }

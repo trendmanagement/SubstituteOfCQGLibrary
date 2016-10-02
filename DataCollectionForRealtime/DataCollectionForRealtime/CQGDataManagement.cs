@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using CQG;
@@ -11,7 +13,11 @@ namespace DataCollectionForRealtime
         public CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
         {
             this.realtimeDataManagement = realtimeDataManagement;
-            
+
+            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string assmPath = Path.Combine(path, "Interop.CQG.dll");
+            this.CQGAssm = Assembly.LoadFile(assmPath);
+
             ThreadPool.QueueUserWorkItem(new WaitCallback(initializeCQGAndCallbacks));
         }
 
@@ -22,7 +28,8 @@ namespace DataCollectionForRealtime
         private const int SUBSCRIPTION_TIMEDELAY_CONSTANT = 125;
 
         private RealtimeDataManagement realtimeDataManagement;
-        
+        public Assembly CQGAssm;
+
         private CQG.CQGCEL m_CEL;
         private string m_CEL_key;
 
@@ -77,9 +84,12 @@ namespace DataCollectionForRealtime
             try
             {
                 // Create real CQGCEL object and put it into the dictionary
-                m_CEL = new CQG.CQGCEL();
+                // Remark: we do not use "m_CEL = new CQG.CQGCEL();" to facilitate further reflection on this COM object
+                string typeName = "CQG.CQGCELClass";
+                m_CEL = (CQG.CQGCEL)CQGAssm.CreateInstance(typeName);
+
                 m_CEL_key = FakeCQG.CQG.CreateUniqueKey();
-                FakeCQG.DataDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
+                FakeCQG.ServerDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
 
                 m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);

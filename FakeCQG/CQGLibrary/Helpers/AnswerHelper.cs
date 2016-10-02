@@ -8,6 +8,8 @@ namespace FakeCQG.Helpers
 {
     public class AnswerHelper
     {
+        private const string eventFiringId = "!EventHappened";
+
         protected IMongoClient Client;
         protected IMongoDatabase Database;
         protected IMongoCollection<AnswerInfo> Collection;
@@ -25,6 +27,14 @@ namespace FakeCQG.Helpers
             get
             {
                 return Database;
+            }
+        }
+
+        public string EventFiringId
+        {
+            get
+            {
+                return eventFiringId;
             }
         }
 
@@ -80,7 +90,7 @@ namespace FakeCQG.Helpers
         {
             return Task.Run(() =>
             {
-                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, Id);
+                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, Id);
 
                 AnswerInfo result = null;
                 try
@@ -102,12 +112,12 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id, out bool isAns)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             try
             {
                 AnswerInfo answer = Collection.Find(filter).First();
-                CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.Key);
+                CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                RemoveAnswerAsync(answer.AnswerKey);
                 isAns = true;
                 return answer;
             }
@@ -128,16 +138,16 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             AnswerInfo answer = null;
-            while (!DataDictionaries.IsAnswer[id])
+            while (!ClientDictionaries.IsAnswer[id])
             {
                 try
                 {
                     answer = Collection.Find(filter).First();
-                    CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                    RemoveAnswerAsync(answer.Key);
-                    DataDictionaries.IsAnswer[id] = true;
+                    CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    RemoveAnswerAsync(answer.AnswerKey);
+                    ClientDictionaries.IsAnswer[id] = true;
                 }
                 catch (Exception)
                 {
@@ -147,6 +157,7 @@ namespace FakeCQG.Helpers
                     }
                 }
             }
+
             return answer;
         }
 
@@ -173,7 +184,7 @@ namespace FakeCQG.Helpers
 
         public Task RemoveAnswerAsync(string key)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, key);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, key);
             return Task.Run(() =>
             {
                 try

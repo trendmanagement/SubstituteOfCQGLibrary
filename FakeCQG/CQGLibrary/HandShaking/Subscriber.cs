@@ -10,19 +10,19 @@ namespace FakeCQG.Handshaking
     public static class Subscriber
     {
         static string key = CQG.CreateUniqueKey();
-        static HandshakerModel handshaker = new HandshakerModel(key);
+        static HandshakingModel handshaker = new HandshakingModel(key);
 
         public static Task ListenForHanshaking()
         {
             return Task.Run(() =>
             {
-                CQG.OnLogChange("Listerning handshacking is started");
+                CQG.OnLogChange("Listening for handshacking is started");
 
                 const string key = "HANDSHAKING";
-                HandshakingrHelper mongo = new HandshakingrHelper();
+                HandshakingHelper mongo = new HandshakingHelper();
                 var collection = mongo.GetCollection;
-                var filterKey = Builders<HandshakerModel>.Filter.Eq(Keys.IdName, key);
-                var filterId = Builders<HandshakerModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
+                var filterKey = Builders<HandshakingModel>.Filter.Eq(Keys.IdName, key);
+                var filterId = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
                 while (true)
                 {
                     try

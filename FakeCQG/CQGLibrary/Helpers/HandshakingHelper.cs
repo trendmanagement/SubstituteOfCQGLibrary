@@ -3,17 +3,17 @@ using MongoDB.Driver;
 
 namespace FakeCQG.Helpers
 {
-    public class HandshakingrHelper
+    public class HandshakingHelper
     {
-        protected IMongoClient Client;
-        protected IMongoDatabase Database;
-        protected IMongoCollection<HandshakerModel> Collection;
+        protected static IMongoClient _client;
+        protected static IMongoDatabase _database;
+        protected static IMongoCollection<HandshakerModel> _collection;
 
-        public IMongoCollection<HandshakerModel> GetCollection
+        public IMongoCollection<HandshakingModel> GetCollection
         {
             get
             {
-                return Collection;
+                return _collection;
             }
         }
 
@@ -21,31 +21,16 @@ namespace FakeCQG.Helpers
         {
             get
             {
-                return Database;
+                return _database;
             }
         }
 
-        public HandshakingrHelper()
+        static HandshakingHelper()
         {
-            Connect();
+            _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
+            _collection = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
         }
 
-        ~HandshakingrHelper()
-        {
-            Disconnect();
-        }
-
-        private void Disconnect()
-        {
-            Client.DropDatabase(ConnectionSettings.MongoDBName);
-        }
-
-        public bool Connect()
-        {
-            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
-            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<HandshakerModel>(ConnectionSettings.HandshakingCollectionName);
-            return (Collection != null) ? false : true;
-        }
     }
 }
