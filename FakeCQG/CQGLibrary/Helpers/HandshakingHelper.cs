@@ -9,7 +9,7 @@ namespace FakeCQG.Helpers
         protected static IMongoDatabase _database;
         protected static IMongoCollection<HandshakerModel> _collection;
 
-        public IMongoCollection<HandshakerModel> GetCollection
+        public IMongoCollection<HandshakingModel> GetCollection
         {
             get
             {
@@ -29,7 +29,7 @@ namespace FakeCQG.Helpers
         {
             _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<HandshakerModel>(ConnectionSettings.HandshakingCollectionName);
+            _collection = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
         }
 
     }

@@ -2,20 +2,28 @@
 using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
+using MongoDB.Bson.Serialization.Options;
 
 namespace FakeCQG.Models
 {
     public class AnswerInfo
     {
+        #region Serialized properties
+
         [BsonId]
         [BsonRepresentation(BsonType.String)]
-        public string Key { get; set; }
+        public string AnswerKey { get; set; }
+
         public string ObjectKey { get; set; }
-        public string QueryName { get; set; }
+
+        public string MemberName { get; set; }
+
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        public Dictionary<int, string> ArgKeys { get; set; }
+
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<int, object> ArgValues { get; set; }
 
-        private string _valueKey;
         public string ValueKey
         {
             get
@@ -32,12 +40,8 @@ namespace FakeCQG.Models
                 _valueKey = value;
             }
         }
+
         public object Value { get; set; }
-        public bool isEventQuery { get; set; }
-
-        public bool IsCQGException;
-
-        private Action _exception;
 
         public Action CQGException
         {
@@ -47,36 +51,44 @@ namespace FakeCQG.Models
             }
         }
 
+        #endregion
+
+        private string _valueKey;
+
+        public bool IsCQGException;
+
+        private Action _exception;
 
         public AnswerInfo(
-            string key,
-            string objKey,
-            string name,
-            Dictionary<int, object> argVals = null,
-            string vKey = null,
-            object val = null,            bool isEventQ = false)
+            string answerKey,
+            string objectKey,
+            string memberName,
+            Dictionary<int, string> argKeys = null,
+            Dictionary<int, object> argValues = null,
+            string valueKey = null,
+            object value = null)
         {
-            Key = key;
-            ObjectKey = objKey;
-            QueryName = name;
-            ArgValues = argVals;
-            ValueKey = vKey;
-            Value = val;
-            isEventQuery = isEventQ;
+            AnswerKey = answerKey;
+            ObjectKey = objectKey;
+            MemberName = memberName;
+            ArgKeys = argKeys;
+            ArgValues = argValues;
+            ValueKey = valueKey;
+            Value = value;
         }
 
         public override string ToString()
         {
             return string.Format(
                 "ANSWER:" + Environment.NewLine +
-                "    Key = {0}" + Environment.NewLine +
+                "    AnswerKey = {0}" + Environment.NewLine +
                 "    ObjectKey = {1}" + Environment.NewLine +
-                "    QueryName = {2}" + Environment.NewLine +
-                "    ArgValues = {3}" + Environment.NewLine +
-                "    ValueKey = {4}" + Environment.NewLine +
-                "    Value = {5}" + Environment.NewLine +
-                "    isEventQuery = {6}",
-                Key, ObjectKey, QueryName, ArgValues, ValueKey, Value, isEventQuery);
+                "    MemberName = {2}" + Environment.NewLine +
+                "    ArgKeys = {3}" + Environment.NewLine +
+                "    ArgValues = {4}" + Environment.NewLine +
+                "    ValueKey = {5}" + Environment.NewLine +
+                "    Value = {6}",
+                AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
         }
     }
 }

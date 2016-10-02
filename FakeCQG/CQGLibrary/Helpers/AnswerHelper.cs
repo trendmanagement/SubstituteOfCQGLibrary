@@ -71,7 +71,7 @@ namespace FakeCQG.Helpers
         {
             return Task.Run(() =>
             {
-                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, Id);
+                var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, Id);
 
                 AnswerInfo result = null;
                 try
@@ -89,12 +89,12 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id, out bool isAns)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             try
             {
                 AnswerInfo answer = Collection.Find(filter).First();
-                CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.Key);
+                CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                RemoveAnswerAsync(answer.AnswerKey);
                 isAns = true;
                 //if (answer.Key == "value")
                 //{
@@ -118,16 +118,16 @@ namespace FakeCQG.Helpers
 
         public AnswerInfo GetAnswerData(string id)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, id);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             AnswerInfo answer = null;
-            while (!DataDictionaries.IsAnswer[id])
+            while (!ClientDictionaries.IsAnswer[id])
             {
                 try
                 {
                     answer = Collection.Find(filter).First();
-                    CQG.OnLogChange(answer.Key, answer.ValueKey, false);
-                    RemoveAnswerAsync(answer.Key);
-                    DataDictionaries.IsAnswer[id] = true;
+                    CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    RemoveAnswerAsync(answer.AnswerKey);
+                    ClientDictionaries.IsAnswer[id] = true;
                 }
                 catch (Exception)
                 {
@@ -168,7 +168,7 @@ namespace FakeCQG.Helpers
 
         public Task RemoveAnswerAsync(string key)
         {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.IdName, key);
+            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, key);
             return Task.Run(() =>
             {
                 try
@@ -180,46 +180,6 @@ namespace FakeCQG.Helpers
                     CQG.OnLogChange(ex.Message);
                 }
             });
-        }
-
-        public object[] CheckWhetherEventHappened(string name)
-        {
-            string handlerName = string.Format("_ICQGCELEvents_{0}EventHandler", name);
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, handlerName);
-            try
-            {
-                AnswerInfo answer = Collection.Find(filter).First();
-                var argValues = answer.ArgValues;
-                return (object[])argValues[0];
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-                return null;
-            }
-        }
-
-        public void CommonEventHandler(string name, object[] args = null)
-        {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.QueryName, name);
-            try
-            {
-                //AnswerInfo answer = Collection.Find(filter).First();
-                
-                var argValues = new Dictionary<int, object>();
-                argValues.Add(0, args);
-
-                AnswerInfo answer = new AnswerInfo(eventFiringId, "", name, argValues);
-                PushAnswer(answer);
-                //var update = Builders<AnswerInfo>.Update.Set(Keys.ArgValues, argValues);
-
-                //TODO: deserialize argValues from dictionary to bson
-                //allAnswers.UpdateOne(filter, update);
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-            }
         }
     }
 }

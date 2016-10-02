@@ -24,12 +24,17 @@ namespace CodeGenerator
 
         static void CreateField(FieldInfo finfo)
         {
+            Type fieldType = finfo.FieldType;
+            if (!fieldType.IsValueType && !IsDelegate(fieldType))
+            {
+                throw new NotImplementedException();
+            }
             File.Write(Indent1 + "public ");
             if (finfo.IsStatic)
             {
                 File.Write("static ");
             }
-            File.WriteLine(TypeToString(finfo.FieldType) + " " + finfo.Name + ";" + Environment.NewLine);
+            File.WriteLine(TypeToString(fieldType) + " " + finfo.Name + ";" + Environment.NewLine);
         }
 
         static IEnumerable<FieldInfo> SortFields(FieldInfo[] finfos)

@@ -9,7 +9,7 @@ namespace CodeGenerator
         static StreamWriter DCEvHndlrFile;
 
         // Set this to False to get type names in short form, e.g. "int" instead of "Int32"
-        static bool QuickTestMode = false;
+        static bool QuickTestMode = true;
 
         static void Main(string[] args)
         {
@@ -38,7 +38,7 @@ namespace CodeGenerator
                 CreateWarningHeader(DCEvHndlrFile);
 
                 DCEvHndlrFile.WriteLine("using System;");
-                DCEvHndlrFile.WriteLine("using FakeCQG;");
+                DCEvHndlrFile.WriteLine("using System.Collections.Generic;");
                 DCEvHndlrFile.WriteLine("");
                 DCEvHndlrFile.WriteLine("namespace DataCollectionForRealtime");
                 DCEvHndlrFile.WriteLine("{");

@@ -3,8 +3,10 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FakeCQG.Models
 {
-    public class HandshakerModel
+    public class HandshakingModel
     {
+        #region Serialized properties
+
         [BsonId]
         Guid _id;
         public Guid ID
@@ -12,15 +14,17 @@ namespace FakeCQG.Models
             get { return _id; }
         }
 
-        private string _key;
-
         public string Key
         {
             get { return _key; }
             private set { _key = value; }
         }
 
-        public HandshakerModel(string key)
+        #endregion
+
+        private string _key;
+
+        public HandshakingModel(string key)
         {
             _id = Guid.NewGuid();
             _key = key;
