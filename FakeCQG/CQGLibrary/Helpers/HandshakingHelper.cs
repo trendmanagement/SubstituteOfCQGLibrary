@@ -5,9 +5,9 @@ namespace FakeCQG.Helpers
 {
     public class HandshakingHelper
     {
-        protected IMongoClient _client;
-        protected IMongoDatabase _database;
-        protected IMongoCollection<HandshakingModel> _collection;
+        protected static IMongoClient _client;
+        protected static IMongoDatabase _database;
+        protected static IMongoCollection<HandshakerModel> _collection;
 
         public IMongoCollection<HandshakingModel> GetCollection
         {
@@ -25,11 +25,12 @@ namespace FakeCQG.Helpers
             }
         }
 
-        public HandshakingHelper()
+        static HandshakingHelper()
         {
             _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
             _collection = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
         }
+
     }
 }
