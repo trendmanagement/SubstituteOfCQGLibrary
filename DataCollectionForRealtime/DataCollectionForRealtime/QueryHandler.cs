@@ -64,17 +64,15 @@ namespace DataCollectionForRealtime
                     {
                         string key;
 
-                        switch (query.MemberName)
+                        if (query.MemberName == "CQG.CQGCELClass")
                         {
-                            case "CQG.CQGCELClass":
-                                key = CqgDataManagement.CEL_key;
-                                break;
-                            default:
-                                //TODO: Make sure, that correct name of real CQG assembly passed to the CreateInstance method as arg below
-                                object qObj = CQGAssm.CreateInstance(query.MemberName);
-                                key = FakeCQG.CQG.CreateUniqueKey();
-                                ServerDictionaries.PutObjectToTheDictionary(key, qObj);
-                                break;
+                            key = CqgDataManagement.CEL_key;
+                        }
+                        else
+                        {
+                            object qObj = CQGAssm.CreateInstance(query.MemberName);
+                            key = FakeCQG.CQG.CreateUniqueKey();
+                            ServerDictionaries.PutObjectToTheDictionary(key, qObj);
                         }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key);
@@ -84,7 +82,10 @@ namespace DataCollectionForRealtime
 
                 case QueryType.CallDtor:
                     {
-                        ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+                        if (query.ObjectKey != CqgDataManagement.CEL_key)
+                        {
+                            ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+                        }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
 
