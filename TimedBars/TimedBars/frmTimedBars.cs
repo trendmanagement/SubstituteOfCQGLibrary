@@ -1943,10 +1943,10 @@ namespace TimedBars
                 lblRPDaysBeforeExpiration.Text = req.DaysBeforeExpiration.ToString();
                 lblRPSessionFlags.Text = req.SessionFlags.ToString();
                 
-                if (m_CurTimedBars.LastError != null)
-                {
-                    lblError.Text = m_CurTimedBars.LastError.Description;
-                }
+                //if (m_CurTimedBars.LastError != null)
+                //{
+                //    lblError.Text = m_CurTimedBars.LastError.Description;
+                //}
             }
             catch (Exception ex)
             {

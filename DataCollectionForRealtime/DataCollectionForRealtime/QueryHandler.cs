@@ -159,7 +159,15 @@ namespace DataCollectionForRealtime
 
                         try
                         {
-                            object returnV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.InvokeMethod, null, qObj, args);
+                            object returnV;
+                            if (query.MemberName == "get_ItemById")
+                            {
+                                returnV = qObj.GetType().InvokeMember("ItemById", BindingFlags.GetProperty, null, qObj, args);
+                            }
+                            else
+                            {
+                                returnV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.InvokeMethod, null, qObj, args);
+                            }      
 
                             if (!object.ReferenceEquals(returnV, null))
                             {
