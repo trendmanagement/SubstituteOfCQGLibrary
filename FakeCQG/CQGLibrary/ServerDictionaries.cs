@@ -29,5 +29,18 @@ namespace FakeCQG
         {
             objDictionary.Clear();
         }
+
+        public static void UnsubscribeOneEntity(Models.HandshakingModel subscriber)
+        {
+            try
+            {
+                RealtimeIds.Remove(subscriber.ID);
+                objDictionary.Remove(subscriber.Key);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }

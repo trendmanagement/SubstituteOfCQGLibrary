@@ -68,6 +68,10 @@ namespace DataCollectionForRealtime
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
+                    if (subscriber.UnSubscribe)
+                    {
+                        FakeCQG.ServerDictionaries.UnsubscribeOneEntity(subscriber);
+                    }
                     FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
                 }
                 HandshakingTimer.Stop();

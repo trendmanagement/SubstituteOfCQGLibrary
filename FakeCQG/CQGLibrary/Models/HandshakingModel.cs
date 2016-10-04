@@ -23,6 +23,7 @@ namespace FakeCQG.Models
         #endregion
 
         private string _key;
+        public bool UnSubscribe { get; set; }
 
         public HandshakingModel(string key)
         {

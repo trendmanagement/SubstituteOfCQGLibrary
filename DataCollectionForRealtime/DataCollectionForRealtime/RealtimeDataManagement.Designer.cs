@@ -154,6 +154,8 @@
             // checkBoxAuto
             // 
             this.checkBoxAuto.AutoSize = true;
+            this.checkBoxAuto.Checked = true;
+            this.checkBoxAuto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxAuto.Location = new System.Drawing.Point(444, 12);
             this.checkBoxAuto.Name = "checkBoxAuto";
             this.checkBoxAuto.Size = new System.Drawing.Size(99, 17);

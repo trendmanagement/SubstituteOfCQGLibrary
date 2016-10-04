@@ -9,8 +9,13 @@ namespace FakeCQG.Handshaking
 {
     public static class Subscriber
     {
+        const string handshakingKey = "HANDSHAKING";
+
         static string key = CQG.CreateUniqueKey();
         static HandshakingModel handshaker = new HandshakingModel(key);
+
+        static HandshakingHelper mongo;
+        static IMongoCollection<HandshakingModel> collection;
 
         public static Task ListenForHanshaking()
         {
@@ -18,10 +23,7 @@ namespace FakeCQG.Handshaking
             {
                 CQG.OnLogChange("Listening for handshacking is started");
 
-                const string key = "HANDSHAKING";
-                HandshakingHelper mongo = new HandshakingHelper();
-                var collection = mongo.GetCollection;
-                var filterKey = Builders<HandshakingModel>.Filter.Eq(Keys.IdName, key);
+                var filterKey = Builders<HandshakingModel>.Filter.Eq(Keys.IdName, handshakingKey);
                 var filterId = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
                 while (true)
                 {
@@ -44,5 +46,28 @@ namespace FakeCQG.Handshaking
                 }
             });
         }
+
+        static Subscriber()
+        {
+            mongo = new HandshakingHelper();
+            collection = mongo.GetCollection;
+            AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit; ;
+        }
+
+        public static void CurrentDomain_ProcessExit(object sender, EventArgs e)
+        {
+            try
+            {
+                handshaker.UnSubscribe = true;
+                collection.InsertOne(handshaker);
+                CQG.OnLogChange(key);
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
     }
 }
+
