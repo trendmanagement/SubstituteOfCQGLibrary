@@ -44,6 +44,7 @@ namespace DataCollectionForRealtime
         public void SetQueryList(List<QueryInfo> queries)
         {
             QueryList = queries;
+            Program.miniMonitor.SetNumberOfQueriesInLine(QueryList.Count);
         }
 
         public void CheckRequestsQueue()

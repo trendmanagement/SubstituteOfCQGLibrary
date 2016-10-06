@@ -36,6 +36,8 @@
             this.dataStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainRealtimeMenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemListern = new System.Windows.Forms.ToolStripMenuItem();
+            this.minimizeWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeURLOfMongoDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMongo = new System.Windows.Forms.TabPage();
@@ -43,6 +45,9 @@
             this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
             this.buttonRespond = new System.Windows.Forms.Button();
             this.buttonCheck = new System.Windows.Forms.Button();
+            this.MongoDBURLLabel = new System.Windows.Forms.Label();
+            this.MongoDBURL = new System.Windows.Forms.TextBox();
+            this.ChangeDBURLBtn = new System.Windows.Forms.Button();
             this.statusStripOptionMonitor.SuspendLayout();
             this.mainRealtimeMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -80,7 +85,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -103,7 +108,9 @@
             // 
             this.mainRealtimeMenuStrip.BackColor = System.Drawing.SystemColors.Control;
             this.mainRealtimeMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemListern});
+            this.toolStripMenuItemListern,
+            this.minimizeWindowToolStripMenuItem,
+            this.changeURLOfMongoDBToolStripMenuItem});
             this.mainRealtimeMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainRealtimeMenuStrip.Name = "mainRealtimeMenuStrip";
             this.mainRealtimeMenuStrip.Size = new System.Drawing.Size(795, 24);
@@ -114,6 +121,20 @@
             // 
             this.toolStripMenuItemListern.Name = "toolStripMenuItemListern";
             this.toolStripMenuItemListern.Size = new System.Drawing.Size(12, 20);
+            // 
+            // minimizeWindowToolStripMenuItem
+            // 
+            this.minimizeWindowToolStripMenuItem.Name = "minimizeWindowToolStripMenuItem";
+            this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.minimizeWindowToolStripMenuItem.Text = "MiniMonitor";
+            this.minimizeWindowToolStripMenuItem.Click += new System.EventHandler(this.minimizeWindowToolStripMenuItem_Click);
+            // 
+            // changeURLOfMongoDBToolStripMenuItem
+            // 
+            this.changeURLOfMongoDBToolStripMenuItem.Name = "changeURLOfMongoDBToolStripMenuItem";
+            this.changeURLOfMongoDBToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.changeURLOfMongoDBToolStripMenuItem.Text = "Change URL of MongoDB";
+            this.changeURLOfMongoDBToolStripMenuItem.Click += new System.EventHandler(this.changeURLOfMongoDBToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -190,11 +211,43 @@
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
+            // MongoDBURLLabel
+            // 
+            this.MongoDBURLLabel.AutoSize = true;
+            this.MongoDBURLLabel.Location = new System.Drawing.Point(9, 28);
+            this.MongoDBURLLabel.Name = "MongoDBURLLabel";
+            this.MongoDBURLLabel.Size = new System.Drawing.Size(83, 13);
+            this.MongoDBURLLabel.TabIndex = 11;
+            this.MongoDBURLLabel.Text = "MongoDB URL:";
+            this.MongoDBURLLabel.Visible = false;
+            // 
+            // MongoDBURL
+            // 
+            this.MongoDBURL.Location = new System.Drawing.Point(101, 21);
+            this.MongoDBURL.Name = "MongoDBURL";
+            this.MongoDBURL.Size = new System.Drawing.Size(274, 20);
+            this.MongoDBURL.TabIndex = 12;
+            this.MongoDBURL.Visible = false;
+            // 
+            // ChangeDBURLBtn
+            // 
+            this.ChangeDBURLBtn.Location = new System.Drawing.Point(381, 20);
+            this.ChangeDBURLBtn.Name = "ChangeDBURLBtn";
+            this.ChangeDBURLBtn.Size = new System.Drawing.Size(96, 21);
+            this.ChangeDBURLBtn.TabIndex = 13;
+            this.ChangeDBURLBtn.Text = "Change DB URL";
+            this.ChangeDBURLBtn.UseVisualStyleBackColor = true;
+            this.ChangeDBURLBtn.Visible = false;
+            this.ChangeDBURLBtn.Click += new System.EventHandler(this.ChangeDBURLBtn_Click);
+            // 
             // RealtimeDataManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 413);
+            this.Controls.Add(this.ChangeDBURLBtn);
+            this.Controls.Add(this.MongoDBURL);
+            this.Controls.Add(this.MongoDBURLLabel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.mainRealtimeMenuStrip);
             this.Controls.Add(this.statusStripOptionMonitor);
@@ -232,6 +285,11 @@
         private System.Windows.Forms.RichTextBox richTextBoxLog;
         private System.Windows.Forms.Button buttonRespond;
         private System.Windows.Forms.Button buttonCheck;
+        private System.Windows.Forms.ToolStripMenuItem minimizeWindowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeURLOfMongoDBToolStripMenuItem;
+        private System.Windows.Forms.Label MongoDBURLLabel;
+        private System.Windows.Forms.TextBox MongoDBURL;
+        private System.Windows.Forms.Button ChangeDBURLBtn;
     }
 }
 

@@ -73,6 +73,12 @@
     <Compile Include="AsyncTaskListener.cs" />
     <Compile Include="AutoGenEventHandlers.cs" />
     <Compile Include="CQGDataManagement.cs" />
+    <Compile Include="DCMiniMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCMiniMonitor.Designer.cs">
+      <DependentUpon>DCMiniMonitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="QueryHandler.cs" />
     <Compile Include="RealtimeDataManagement.cs">
       <SubType>Form</SubType>
@@ -83,6 +89,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TSErrorCatch.cs" />
+    <EmbeddedResource Include="DCMiniMonitor.resx">
+      <DependentUpon>DCMiniMonitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RealtimeDataManagement.resx">
       <DependentUpon>RealtimeDataManagement.cs</DependentUpon>
     </EmbeddedResource>

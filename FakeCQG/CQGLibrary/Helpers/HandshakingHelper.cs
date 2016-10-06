@@ -44,7 +44,7 @@ namespace FakeCQG.Helpers
 
         static bool Connect()
         {
-            _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            _client = new MongoClient(ConnectionSettings.ConnectionString);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
             _collectionSubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
             _collectionUnsubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.UnsubscribeHandshakingCollectionName);

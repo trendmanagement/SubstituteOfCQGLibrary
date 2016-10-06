@@ -24,9 +24,10 @@ namespace DataCollectionForRealtime
         public RealtimeDataManagement()
         {
             InitializeComponent();
+            CenterToScreen();
 
-            CqgDataManagement = new CQGDataManagement(this);
-
+            CqgDataManagement = new CQGDataManagement(this, Program.miniMonitor);
+            
             QueryHandler = new QueryHandler(CqgDataManagement);
 
             Listener.StartListening(HandshakingTimerInterval);
@@ -48,6 +49,21 @@ namespace DataCollectionForRealtime
         {
             FakeCQG.CQG.LogChange += CQG_LogChange;
 
+            HelpersInit();
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+        }
+
+        private void HelpersInit(string connectionString = "")
+        {
+            if(connectionString != "")
+            {
+                FakeCQG.Helpers.ConnectionSettings.ConnectionString = connectionString;
+            }
+
             FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
             FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
             FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
@@ -57,12 +73,6 @@ namespace DataCollectionForRealtime
 
             FakeCQG.CQG.EventHelper = new FakeCQG.Helpers.EventHelper();
             FakeCQG.CQG.EventHelper.ClearEventsListAsync();
-
-            AutoWorkTimer = new System.Timers.Timer();
-            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
-            AutoWorkTimer.Interval = AutoWorkTimerInterval;
-            AutoWorkTimer.AutoReset = false;
-            checkBoxAuto.Checked = true;
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
@@ -116,16 +126,21 @@ namespace DataCollectionForRealtime
             if (this.InvokeRequired)
             {
                 this.BeginInvoke((MethodInvoker)delegate()
-                { 
-                    connectionStatus.Text = connectionStatusLabel;
-                    connectionStatus.ForeColor = connColor;
+                {
+                    ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
                 });
             }
             else
             {
-                connectionStatus.Text = connectionStatusLabel;
-                connectionStatus.ForeColor = connColor;
+                ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
             }
+        }
+
+        internal void ConnectionStatusUpdateEffects(string connectionStatusLabel, Color connColor)
+        {
+            connectionStatus.Text = connectionStatusLabel;
+            connectionStatus.ForeColor = connColor;
+            Program.miniMonitor.BackColor = connColor;
         }
 
         internal void updateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
@@ -233,6 +248,30 @@ namespace DataCollectionForRealtime
             {
                 AutoWorkTimer.Start();
             }
+        }
+
+        private void minimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.miniMonitor.Show();
+        }
+
+        private void changeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MongoDBURL.Visible = true;
+            MongoDBURLLabel.Visible = true;
+            ChangeDBURLBtn.Visible = true;
+            MongoDBURL.Text = FakeCQG.Helpers.ConnectionSettings.ConnectionString;
+            changeURLOfMongoDBToolStripMenuItem.Enabled = false;
+        }
+
+        private void ChangeDBURLBtn_Click(object sender, EventArgs e)
+        {
+            FakeCQG.Helpers.ConnectionSettings.ConnectionString = MongoDBURL.Text;
+            changeURLOfMongoDBToolStripMenuItem.Enabled = true;
+            MongoDBURL.Visible = false;
+            MongoDBURLLabel.Visible = false;
+            ChangeDBURLBtn.Visible = false; 
         }
     }
 }
