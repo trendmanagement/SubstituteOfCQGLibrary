@@ -12,6 +12,7 @@ namespace FakeCQG
 
         static Dictionary<string, Dictionary<string, bool>> eventCheckingDictionary = new Dictionary<string, Dictionary<string, bool>>();
 
+        public static HashSet<string> ObjectNames = new HashSet<string>(); 
         public static Dictionary<string, bool> IsAnswer
         {
             get
@@ -19,6 +20,7 @@ namespace FakeCQG
                 return isAnswer;
             }
         }
+
 
         public static Dictionary<string, Dictionary<string, bool>> EventCheckingDictionary
         {

@@ -127,9 +127,11 @@ namespace FakeCQG
             {
                 case QueryType.CallCtor:
                     model = new QueryInfo(qType, qKey, memberName: memName);
+                    ClientDictionaries.ObjectNames.Add(objKey);
                     break;
                 case QueryType.CallDtor:
                     model = new QueryInfo(qType, qKey, objectKey: objKey);
+                    ClientDictionaries.ObjectNames.Remove(objKey);
                     break;
                 case QueryType.GetProperty:
                 case QueryType.SetProperty:

@@ -30,17 +30,13 @@ namespace FakeCQG
             objDictionary.Clear();
         }
 
-        public static void UnsubscribeOneEntity(Models.HandshakingModel subscriber)
+        public static void DeleteFromServerDictionaries(Models.HandshakingModel subscriber)
         {
-            try
+            foreach(var obj in subscriber.ObjectKeys)
             {
-                RealtimeIds.Remove(subscriber.ID);
-                objDictionary.Remove(subscriber.Key);
+                objDictionary.Remove(obj);
             }
-            catch (Exception)
-            {
-
-            }
+            RealtimeIds.Remove(subscriber.ID);
         }
     }
 }
