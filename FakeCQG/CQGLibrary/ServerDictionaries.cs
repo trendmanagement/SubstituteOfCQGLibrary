@@ -29,5 +29,14 @@ namespace FakeCQG
         {
             objDictionary.Clear();
         }
+
+        public static void DeleteFromServerDictionaries(Models.HandshakingModel subscriber)
+        {
+            foreach(var obj in subscriber.ObjectKeys)
+            {
+                objDictionary.Remove(obj);
+            }
+            RealtimeIds.Remove(subscriber.ID);
+        }
     }
 }

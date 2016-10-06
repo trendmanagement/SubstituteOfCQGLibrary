@@ -3,13 +3,15 @@ using System.Drawing;
 using System.Windows.Forms;
 using FakeCQG.Handshaking;
 using FakeCQG.Models;
+using FakeCQG;
+using System.Reflection;
 
 namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
         const int AutoWorkTimerInterval = 30;      // ms
-        const int HandshakingTimerInterval = 15000;
+        const int HandshakingTimerInterval = 10000;
         const int DictionaryClearingInterval = 30000;
 
         System.Timers.Timer AutoWorkTimer;
@@ -60,6 +62,7 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
+            checkBoxAuto.Checked = true;
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
@@ -68,13 +71,43 @@ namespace DataCollectionForRealtime
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    if (subscriber.UnSubscribe)
+                    {
+                        UnsubscribeEvents(subscriber);
+                        FakeCQG.ServerDictionaries.DeleteFromServerDictionaries(subscriber);
+                        Listener.DeleteUnsubscriber(subscriber.ID);
+                    }
+                    else
+                    {
+                        FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    }
                 }
                 HandshakingTimer.Stop();
             }
             else
             {
                 HandshakingTimer.Start();
+            }
+        }
+
+        private void UnsubscribeEvents(HandshakingModel subscriber)
+        {
+            foreach(var eventInfor in subscriber.UnsubscribeEventList)
+            {
+                object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                System.Reflection.EventInfo ei = qObj.GetType().GetEvent(eventInfor.Value);
+
+                // Find corresponding CQG delegate
+                Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, eventInfor.Value);
+
+                // Instantiate the delegate with our own handler
+                string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
+
+                MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                // Unsubscribe our handler from CQG event
+                ei.RemoveEventHandler(qObj, d);
             }
         }
 
