@@ -319,7 +319,7 @@ namespace DataCollectionForRealtime
             catch (Exception ex)
             {
                 TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
-                DialogResult result = MessageBox.Show(ex.Message, "Failed connection to CQG", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(ex.Message + Environment.NewLine + "Reconnect?" , "Failed connection to CQG", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
                 {
