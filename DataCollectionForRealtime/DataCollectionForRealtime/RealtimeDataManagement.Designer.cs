@@ -43,6 +43,8 @@
             this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
             this.buttonRespond = new System.Windows.Forms.Button();
             this.buttonCheck = new System.Windows.Forms.Button();
+            this.logSettingsLabel = new System.Windows.Forms.Label();
+            this.logSettingsComboBox = new System.Windows.Forms.ComboBox();
             this.statusStripOptionMonitor.SuspendLayout();
             this.mainRealtimeMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -190,11 +192,30 @@
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
+            // logSettingsLabel
+            // 
+            this.logSettingsLabel.AutoSize = true;
+            this.logSettingsLabel.Location = new System.Drawing.Point(224, 355);
+            this.logSettingsLabel.Name = "logSettingsLabel";
+            this.logSettingsLabel.Size = new System.Drawing.Size(66, 13);
+            this.logSettingsLabel.TabIndex = 11;
+            this.logSettingsLabel.Text = "Log Settings";
+            // 
+            // logSettingsComboBox
+            // 
+            this.logSettingsComboBox.FormattingEnabled = true;
+            this.logSettingsComboBox.Location = new System.Drawing.Point(296, 352);
+            this.logSettingsComboBox.Name = "logSettingsComboBox";
+            this.logSettingsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.logSettingsComboBox.TabIndex = 12;
+            // 
             // RealtimeDataManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 413);
+            this.Controls.Add(this.logSettingsComboBox);
+            this.Controls.Add(this.logSettingsLabel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.mainRealtimeMenuStrip);
             this.Controls.Add(this.statusStripOptionMonitor);
@@ -232,6 +253,8 @@
         private System.Windows.Forms.RichTextBox richTextBoxLog;
         private System.Windows.Forms.Button buttonRespond;
         private System.Windows.Forms.Button buttonCheck;
+        private System.Windows.Forms.Label logSettingsLabel;
+        private System.Windows.Forms.ComboBox logSettingsComboBox;
     }
 }
 

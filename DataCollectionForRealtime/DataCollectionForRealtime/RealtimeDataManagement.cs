@@ -60,6 +60,17 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
+
+            logSettingsComboBox.Items.Add("Off  log");
+            logSettingsComboBox.Items.Add("Separate log");
+            logSettingsComboBox.Items.Add("All log");
+            logSettingsComboBox.SelectedIndex = 1;
+            logSettingsComboBox.SelectedIndexChanged += LogSettingsComboBox_SelectedIndexChanged;
+        }
+
+        private void LogSettingsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FakeCQG.CQG.LoGSettings = logSettingsComboBox.SelectedIndex;
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)

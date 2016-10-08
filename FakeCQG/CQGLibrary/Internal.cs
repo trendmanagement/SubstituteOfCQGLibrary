@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
+using System.Timers;
 
 namespace FakeCQG
 {
@@ -25,6 +26,12 @@ namespace FakeCQG
 
         static string Log;
         public static object LogLock = new object();
+        static HashSet<string> LogHash = new HashSet<string>();
+        static bool isMessageOnHashSet;
+        public static int LoGSettings = 2;
+        static Timer CleanLogTimer = new Timer();
+        static int CleanLogInterval = 60000;  //1 min
+        static bool IsClearLogTimerStart;
 
         public delegate void LogHandler(string message);
         public static event LogHandler LogChange;
@@ -195,18 +202,36 @@ namespace FakeCQG
             {
                 Log = string.Format("Answer - key {0}, value {1}", key, value);
             }
-            if (LogChange != null)
-            {
-                LogChange(Log);
-            }
+            LogChange?.Invoke(Log);
         }
 
         internal static void OnLogChange(string message)
         {
-            Log = message;
-            if (LogChange != null)
+            if (!IsClearLogTimerStart)
             {
-                LogChange(Log);
+                InitCleanLogTimer();
+            }
+            Log = message;
+            isMessageOnHashSet = LogHash.Contains(message);
+            if (!isMessageOnHashSet)
+            {
+                LogHash.Add(message);
+            }
+            switch (LoGSettings)
+            {
+                case 0:
+                    break;
+                case 1:
+                    if (!isMessageOnHashSet)
+                    {
+                        LogChange?.Invoke(Log);
+                    }
+                    break;
+                case 2:
+                    LogChange?.Invoke(Log);
+                    break;
+                default:
+                    throw new NotImplementedException();
             }
         }
 
@@ -312,6 +337,21 @@ namespace FakeCQG
         public static string CreateUniqueKey()
         {
             return Guid.NewGuid().ToString("N");
+        }
+
+        public static void InitCleanLogTimer()
+        {
+            IsClearLogTimerStart = true;
+            CleanLogTimer.Interval = CleanLogInterval;
+            CleanLogTimer.Elapsed += CleanLogTimer_Elapsed;
+            CleanLogTimer.AutoReset = true;
+            CleanLogTimer.Start();
+        }
+
+        private static void CleanLogTimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            LogHash.Clear();
+            CleanLogTimer.Start();
         }
     }
 }

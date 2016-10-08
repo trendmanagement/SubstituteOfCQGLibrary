@@ -109,7 +109,7 @@ namespace FakeCQG.Helpers
                 lock (CQG.LogLock)
                 {
                     CQG.OnLogChange("************************************************************");
-                    CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
+                    CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database", queries.Count));
                     foreach (QueryInfo query in queries)
                     {
                         CQG.OnLogChange(query.ToString());
