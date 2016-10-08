@@ -44,6 +44,7 @@ namespace DataCollectionForRealtime
         public void SetQueryList(List<QueryInfo> queries)
         {
             QueryList = queries;
+            Program.miniMonitor.SetNumberOfQueriesInLine(QueryList.Count);
         }
 
         public void CheckRequestsQueue()
@@ -161,14 +162,20 @@ namespace DataCollectionForRealtime
                         try
                         {
                             object returnV;
-                            if (query.MemberName == "get_ItemById")
+
+                            bool isGetter = query.MemberName.StartsWith("get_");
+                            bool isSetter = query.MemberName.StartsWith("set_");
+                            if (isGetter || isSetter)
                             {
-                                returnV = qObj.GetType().InvokeMember("ItemById", BindingFlags.GetProperty, null, qObj, args);
+                                // Access property instead of calling method
+                                string propName = query.MemberName.Substring(4);
+                                BindingFlags invokeAttr = isGetter ? BindingFlags.GetProperty : BindingFlags.SetProperty;
+                                returnV = qObj.GetType().InvokeMember(propName, invokeAttr, null, qObj, args);
                             }
                             else
                             {
                                 returnV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.InvokeMethod, null, qObj, args);
-                            }      
+                            }
 
                             if (!object.ReferenceEquals(returnV, null))
                             {

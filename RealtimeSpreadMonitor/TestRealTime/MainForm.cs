@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FakeCQG.Models;
-using CQGLibrary.HandShaking;
+using FakeCQG.Handshaking;
 
 namespace TestRealTime
 {
@@ -15,7 +15,6 @@ namespace TestRealTime
             InitializeComponent();
             Subscriber.ListenForHanshaking();
             FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += CQG_GetQueries;
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
         }
 
@@ -58,9 +57,9 @@ namespace TestRealTime
 
         private void buttonRead_Click(object sender, EventArgs e)
         {
-            bool test = FakeCQG.CQG.CheckAnswerAsync("key").GetAwaiter().GetResult();
+            bool test = FakeCQG.CQG.AnswerHelper.CheckAnswerAsync("key").GetAwaiter().GetResult();
             AsyncTaskListener.LogMessage(test.ToString());
-            FakeCQG.CQG.ReadQueriesAsync();
+            FakeCQG.CQG.QueryHelper.ReadQueries();
         }
 
         private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
@@ -70,14 +69,13 @@ namespace TestRealTime
 
         private void buttonClean_Click(object sender, EventArgs e)
         {
-            FakeCQG.CQG.ClearQueriesListAsync();
+            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
         }
 
-        private async void buttonCall_Click(object sender, EventArgs e)
+        private void buttonCall_Click(object sender, EventArgs e)
         {
             bool isStarted = cqgcel.IsStarted;
             cqgcel.Shutdown();
-            await FakeCQG.CQG.PushQueryAsync(new QueryInfo(QueryInfo.QueryType.SetProperty, "key", string.Empty, "name", null, null));
         }
     }
 }

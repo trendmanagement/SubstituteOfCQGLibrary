@@ -9,5 +9,8 @@
         public const string AnswerCollectionName = "Answers";
         public const string EventCollectionName = "Events";
         public const string HandshakingCollectionName = "Handshaking";
+        public const string UnsubscribeHandshakingCollectionName = "UnsubscribeHandshaking";
+		
+		public static string ConnectionString = ConnectionStringDefault;
     }
 }

@@ -3,13 +3,14 @@ using System.Drawing;
 using System.Windows.Forms;
 using FakeCQG.Handshaking;
 using FakeCQG.Models;
+using FakeCQG;
+using System.Reflection;
 
 namespace DataCollectionForRealtime
 {
     public partial class RealtimeDataManagement : Form
     {
         const int AutoWorkTimerInterval = 30;      // ms
-        const int HandshakingTimerInterval = 15000;
         const int DictionaryClearingInterval = 30000;
 
         System.Timers.Timer AutoWorkTimer;
@@ -22,9 +23,10 @@ namespace DataCollectionForRealtime
         public RealtimeDataManagement()
         {
             InitializeComponent();
+            CenterToScreen();
 
-            CqgDataManagement = new CQGDataManagement(this);
-
+            CqgDataManagement = new CQGDataManagement(this, Program.miniMonitor);
+            
             QueryHandler = new QueryHandler(CqgDataManagement);
 
             Listener.StartListening(HandshakingTimerInterval);
@@ -46,6 +48,21 @@ namespace DataCollectionForRealtime
         {
             FakeCQG.CQG.LogChange += CQG_LogChange;
 
+            HelpersInit();
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+        }
+
+        private void HelpersInit(string connectionString = "")
+        {
+            if(connectionString != "")
+            {
+                FakeCQG.Helpers.ConnectionSettings.ConnectionString = connectionString;
+            }
+
             FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
             FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
             FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
@@ -55,11 +72,6 @@ namespace DataCollectionForRealtime
 
             FakeCQG.CQG.EventHelper = new FakeCQG.Helpers.EventHelper();
             FakeCQG.CQG.EventHelper.ClearEventsListAsync();
-
-            AutoWorkTimer = new System.Timers.Timer();
-            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
-            AutoWorkTimer.Interval = AutoWorkTimerInterval;
-            AutoWorkTimer.AutoReset = false;
 
             logSettingsComboBox.Items.Add("Off  log");
             logSettingsComboBox.Items.Add("Separate log");
@@ -79,7 +91,16 @@ namespace DataCollectionForRealtime
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    if (subscriber.UnSubscribe)
+                    {
+                        UnsubscribeEvents(subscriber);
+                        FakeCQG.ServerDictionaries.DeleteFromServerDictionaries(subscriber);
+                        Listener.DeleteUnsubscriber(subscriber.ID);
+                    }
+                    else
+                    {
+                        FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    }
                 }
                 HandshakingTimer.Stop();
             }
@@ -89,21 +110,47 @@ namespace DataCollectionForRealtime
             }
         }
 
+        private void UnsubscribeEvents(HandshakingModel subscriber)
+        {
+            foreach(var eventInfor in subscriber.UnsubscribeEventList)
+            {
+                object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                System.Reflection.EventInfo ei = qObj.GetType().GetEvent(eventInfor.Value);
+
+                // Find corresponding CQG delegate
+                Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, eventInfor.Value);
+
+                // Instantiate the delegate with our own handler
+                string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
+
+                MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                // Unsubscribe our handler from CQG event
+                ei.RemoveEventHandler(qObj, d);
+            }
+        }
+
         internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
             if (this.InvokeRequired)
             {
                 this.BeginInvoke((MethodInvoker)delegate()
-                { 
-                    connectionStatus.Text = connectionStatusLabel;
-                    connectionStatus.ForeColor = connColor;
+                {
+                    ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
                 });
             }
             else
             {
-                connectionStatus.Text = connectionStatusLabel;
-                connectionStatus.ForeColor = connColor;
+                ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
             }
+        }
+
+        internal void ConnectionStatusUpdateEffects(string connectionStatusLabel, Color connColor)
+        {
+            connectionStatus.Text = connectionStatusLabel;
+            connectionStatus.ForeColor = connColor;
+            Program.miniMonitor.BackColor = connColor;
         }
 
         internal void updateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
@@ -211,6 +258,30 @@ namespace DataCollectionForRealtime
             {
                 AutoWorkTimer.Start();
             }
+        }
+
+        private void minimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.miniMonitor.Show();
+        }
+
+        private void changeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MongoDBURL.Visible = true;
+            MongoDBURLLabel.Visible = true;
+            ChangeDBURLBtn.Visible = true;
+            MongoDBURL.Text = FakeCQG.Helpers.ConnectionSettings.ConnectionString;
+            changeURLOfMongoDBToolStripMenuItem.Enabled = false;
+        }
+
+        private void ChangeDBURLBtn_Click(object sender, EventArgs e)
+        {
+            FakeCQG.Helpers.ConnectionSettings.ConnectionString = MongoDBURL.Text;
+            changeURLOfMongoDBToolStripMenuItem.Enabled = true;
+            MongoDBURL.Visible = false;
+            MongoDBURLLabel.Visible = false;
+            ChangeDBURLBtn.Visible = false; 
         }
     }
 }

@@ -10,10 +10,10 @@ namespace DataCollectionForRealtime
 {
     class CQGDataManagement
     {
-        public CQGDataManagement(RealtimeDataManagement realtimeDataManagement)
+        public CQGDataManagement(RealtimeDataManagement realtimeDataManagement, DCMiniMonitor miniMonitor)
         {
             this.realtimeDataManagement = realtimeDataManagement;
-
+            miniMonitorForm = miniMonitor;
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string assmPath = Path.Combine(path, "Interop.CQG.dll");
             this.CQGAssm = Assembly.LoadFile(assmPath);
@@ -28,6 +28,7 @@ namespace DataCollectionForRealtime
         private const int SUBSCRIPTION_TIMEDELAY_CONSTANT = 125;
 
         private RealtimeDataManagement realtimeDataManagement;
+        private DCMiniMonitor miniMonitorForm;
         public Assembly CQGAssm;
 
         private CQG.CQGCEL m_CEL;

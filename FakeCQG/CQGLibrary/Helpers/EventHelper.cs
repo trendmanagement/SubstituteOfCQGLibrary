@@ -29,9 +29,15 @@ namespace FakeCQG.Helpers
 
         public EventHelper()
         {
-            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Connect();
+        }
+
+        public bool Connect(string connectionString = "")
+        {
+            Client = new MongoClient(ConnectionSettings.ConnectionString);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
             Collection = Database.GetCollection<EventInfo>(ConnectionSettings.EventCollectionName);
+            return Collection != null;
         }
 
         public void FireEvent(EventInfo eventInfo)

@@ -8,6 +8,9 @@ namespace DataCollectionForRealtime
 {
     static class Program
     {
+        public static RealtimeDataManagement mainMonitor;
+        public static DCMiniMonitor miniMonitor;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,9 @@ namespace DataCollectionForRealtime
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RealtimeDataManagement());
+            mainMonitor = new RealtimeDataManagement();
+            miniMonitor = new DCMiniMonitor();
+            Application.Run(mainMonitor);
         }
     }
 }

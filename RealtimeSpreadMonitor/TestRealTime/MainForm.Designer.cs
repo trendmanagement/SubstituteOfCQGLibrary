@@ -1,5 +1,5 @@
 ﻿using System;
-using CQGLibrary.Models;
+using FakeCQG.Models;
 
 namespace TestRealTime
 {
