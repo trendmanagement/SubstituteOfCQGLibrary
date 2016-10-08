@@ -68,7 +68,7 @@ namespace DataCollectionForRealtime
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    if (subscriber.UnSubscribe)
+                    if (subscriber.Unsubscribe)
                     {
                         UnsubscribeEvents(subscriber);
                         ServerDictionaries.DeleteFromServerDictionaries(subscriber);

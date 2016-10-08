@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
 using MongoDB.Driver;
-using System.Collections.Generic;
 
 namespace FakeCQG.Handshaking
 {
@@ -56,7 +56,7 @@ namespace FakeCQG.Handshaking
         {
             try
             {
-                handshaker.UnSubscribe = true;
+                handshaker.Unsubscribe = true;
                 handshaker.ObjectKeys = ClientDictionaries.ObjectNames.ToList();
                 handshaker.UnsubscribeEventList = ConvertDictionary(ClientDictionaries.EventCheckingDictionary);
                 mongo.GetCollectionUnsubscribers.InsertOne(handshaker);
@@ -66,13 +66,12 @@ namespace FakeCQG.Handshaking
             {
 
             }
-
         }
 
         static Dictionary<string, string> ConvertDictionary(Dictionary<string, Dictionary<string, bool>> fullEventsDictionary)
         {
             Dictionary<string, string> selectedEventDictionary = new Dictionary<string, string>();
-            foreach(var dics in fullEventsDictionary)
+            foreach (var dics in fullEventsDictionary)
             {
                 string key = dics.Key;
 

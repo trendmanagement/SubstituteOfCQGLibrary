@@ -10922,6 +10922,13 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void GWConnectionStatusChanged(eConnectionStatus arg1)
         {
             string name = "GWConnectionStatusChanged";
@@ -11236,6 +11243,13 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void TradableCommoditiesResolved(int arg1, CQGCommodities arg2, CQGError arg3)
         {
             string name = "TradableCommoditiesResolved";
@@ -11411,6 +11425,13 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void GWConnectionStatusChanged(eConnectionStatus arg1)
         {
             string name = "GWConnectionStatusChanged";
@@ -11436,6 +11457,13 @@ namespace FakeCQG
         {
             string name = "OnIdle";
             CQG.CallVoidMethod(dcObjKey, name);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -11493,6 +11521,13 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void IncorrectSymbol(string arg1)
         {
             string name = "IncorrectSymbol";
@@ -11533,6 +11568,13 @@ namespace FakeCQG
             string name = "InstrumentSubscribed";
             var args = new object[] { arg1, arg2 };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -11831,6 +11873,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -11932,6 +11988,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -11992,6 +12062,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -12085,6 +12169,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual double InitialMargin(int day_ = 1)
         {
             string name = "InitialMargin";
@@ -12130,6 +12221,13 @@ namespace FakeCQG
             string name = "ProfitLoss";
             var args = new object[] { day_ };
             var result = CQG.CallMethod<double>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -12223,6 +12321,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -12406,6 +12518,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -12419,6 +12538,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -12498,6 +12624,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -12590,6 +12730,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -12886,6 +13040,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void IncludeCurve(object curve_key)
         {
             string name = "IncludeCurve";
@@ -12906,6 +13067,13 @@ namespace FakeCQG
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -13039,6 +13207,20 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name, args);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -13114,6 +13296,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -13325,6 +13521,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -13388,6 +13598,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -13442,6 +13666,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -13469,6 +13707,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -14103,6 +14355,20 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -14196,6 +14462,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -15058,6 +15338,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void GWLogoff()
         {
             string name = "GWLogoff";
@@ -15559,6 +15846,13 @@ namespace FakeCQG
             string name = "TerminateCQGIC";
             var args = new object[] { start_again };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         public virtual void UnregisterAlgorithmicOrder(string guid_)
@@ -17205,6 +17499,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -17260,6 +17568,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -17314,6 +17636,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -17386,6 +17722,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -17462,6 +17812,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -17532,6 +17896,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -17703,6 +18081,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -17716,6 +18101,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -17772,6 +18164,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -17855,6 +18261,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -18151,11 +18571,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Parameter(object key_, object pVal)
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -18211,6 +18645,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -18294,6 +18742,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -18516,6 +18978,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -18672,11 +19148,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Tag(string tag_name, object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -18761,6 +19251,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -19036,6 +19540,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -19146,6 +19664,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -19209,6 +19741,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -19251,6 +19797,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -19337,6 +19897,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -19396,6 +19970,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -19483,6 +20071,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -19565,6 +20167,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -19748,6 +20364,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -19761,6 +20384,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -19840,6 +20470,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -19932,6 +20576,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -20228,6 +20886,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void IncludeCurve(object curve_key)
         {
             string name = "IncludeCurve";
@@ -20248,6 +20913,13 @@ namespace FakeCQG
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -20325,6 +20997,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -20411,6 +21097,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -20475,6 +21175,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -20550,6 +21264,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -20618,6 +21346,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -20937,6 +21679,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -21115,6 +21871,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -21179,6 +21949,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -21253,6 +22037,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -21307,6 +22105,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -21390,6 +22202,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -21462,11 +22288,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void Remove(object index_)
         {
             string name = "Remove";
             var args = new object[] { index_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -21637,6 +22477,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -21650,6 +22497,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -21711,6 +22565,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -21795,6 +22663,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -22084,6 +22966,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -22166,6 +23062,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -22388,6 +23298,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -22470,6 +23394,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -22638,6 +23576,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -22720,6 +23672,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -22819,6 +23785,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -22883,6 +23863,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -22956,6 +23950,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -23626,6 +24634,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual double GetNearestTradeablePrice(double price_)
         {
             string name = "GetNearestTradeablePrice";
@@ -23662,6 +24677,13 @@ namespace FakeCQG
             string name = "ToDisplayPrice";
             var args = new object[] { correct_price };
             var result = CQG.CallMethod<string>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -23725,6 +24747,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -23827,6 +24863,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -23887,6 +24937,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -23956,6 +25020,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -24069,6 +25147,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -24129,6 +25221,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -24244,6 +25350,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -24306,6 +25426,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -24350,11 +25484,25 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void Log(string content_, eLogSeverity severity_ = eLogSeverity.lsInfo)
         {
             string name = "Log";
             var args = new object[] { content_, severity_ };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -24498,6 +25646,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -24675,6 +25837,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -24769,6 +25945,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -24838,6 +26028,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -24923,6 +26127,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -25012,6 +26230,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -25159,6 +26391,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -25239,6 +26485,20 @@ namespace FakeCQG
             string name = "AddOrder";
             var args = new object[] { cqg_order };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -25772,6 +27032,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void Modify(CQGOrderModify cqg_order_modify)
         {
             string name = "Modify";
@@ -25804,6 +27071,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -25849,6 +27123,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -25910,6 +27198,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -26028,6 +27330,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -26106,6 +27422,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual CQGOrders SelectByInstrumentName(string instrument_name)
         {
             string name = "SelectByInstrumentName";
@@ -26157,6 +27480,13 @@ namespace FakeCQG
             var args = new object[] { tag_name, tag_value };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGOrdersClass(key);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -26302,6 +27632,20 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -26368,6 +27712,20 @@ namespace FakeCQG
             string name = "get_StatisticsOnSend";
             var args = new object[] { i_GUID };
             var result = CQG.CallMethod<object>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -26459,6 +27817,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -26541,6 +27913,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -26663,6 +28049,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -26820,11 +28220,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Tag(string tag_name, object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -26909,6 +28323,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -27200,6 +28628,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -27401,6 +28843,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -27486,6 +28942,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -27552,6 +29022,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -27616,6 +29100,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -27699,6 +29197,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -27834,6 +29346,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -27894,6 +29420,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -27961,6 +29501,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -28149,11 +29703,25 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
             var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -28287,11 +29855,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual bool IsTimeInSession(DateTime date_time, bool use_session_valid_times = false)
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
             var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -28355,6 +29937,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -28457,6 +30053,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -28542,6 +30152,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -28619,6 +30243,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -28684,6 +30322,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -28743,6 +30395,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -28965,6 +30631,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -29121,11 +30801,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Tag(string tag_name, object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -29210,6 +30904,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -29485,6 +31193,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -29562,6 +31284,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -29799,6 +31535,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -29955,11 +31705,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Tag(string tag_name, object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -30044,6 +31808,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -30335,6 +32113,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -30476,6 +32268,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -30644,6 +32450,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -30664,6 +32477,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -30748,6 +32568,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -30878,6 +32712,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -31164,6 +33012,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -31320,6 +33182,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -31333,6 +33202,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -31417,6 +33293,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -31682,6 +33572,13 @@ namespace FakeCQG
             CQG.CallVoidMethod(dcObjKey, name);
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void IncludeOutput(eTimedBarsRequestOutputs timed_bar_output, bool include_output)
         {
             string name = "IncludeOutput";
@@ -31694,6 +33591,13 @@ namespace FakeCQG
             string name = "IsOutputIncluded";
             var args = new object[] { timed_bar_output };
             var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -31806,6 +33710,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -31866,6 +33784,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -31992,6 +33924,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32056,6 +34002,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -32180,6 +34140,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32255,6 +34229,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -32338,6 +34326,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -32426,6 +34428,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32489,6 +34505,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32516,6 +34546,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -32587,6 +34631,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32647,6 +34705,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -32789,11 +34861,25 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void set_Tag(string tag_name, object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -32896,6 +34982,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -32990,6 +35090,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -33032,6 +35146,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -33111,6 +35239,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -33153,6 +35295,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -33465,6 +35621,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual void IncludeStatistic(eTradingSystemStatistic trading_system_statistic)
         {
             string name = "IncludeStatistic";
@@ -33485,6 +35648,13 @@ namespace FakeCQG
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -33572,6 +35742,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -33616,11 +35800,25 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual bool IsStatisticChanged(eTradingSystemStatistic trading_system_statistic)
         {
             string name = "IsStatisticChanged";
             var args = new object[] { trading_system_statistic };
             var result = CQG.CallMethod<bool>(dcObjKey, name, args);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -33984,6 +36182,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -34047,6 +36259,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -34060,6 +36279,13 @@ namespace FakeCQG
             string name = "IndicesForDates";
             var args = new object[] { date_1, date_2, start_index, end_index };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -34175,6 +36401,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -34252,6 +36492,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
@@ -34335,6 +36589,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -34445,6 +36713,20 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -34505,6 +36787,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -34578,6 +36874,20 @@ namespace FakeCQG
             var args = new object[] { change_filter };
             string key = CQG.CallMethod<string>(dcObjKey, name, args);
             var result = new CQGChangedTradeExitsClass(key);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -34750,6 +37060,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -34832,6 +37156,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -34999,6 +37337,20 @@ namespace FakeCQG
 
         #region Methods
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
+
         #endregion
 
     }
@@ -35155,6 +37507,13 @@ namespace FakeCQG
             return result;
         }
 
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
         public virtual int IndexForDate(DateTime date_)
         {
             string name = "IndexForDate";
@@ -35168,6 +37527,13 @@ namespace FakeCQG
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
             CQG.CallVoidMethod(dcObjKey, name, args);
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
         }
 
         #endregion
@@ -35252,6 +37618,20 @@ namespace FakeCQG
         {
             string name = "GetEnumerator";
             var result = CQG.CallMethod<IEnumerator>(dcObjKey, name);
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
             return result;
         }
 
@@ -35510,6 +37890,20 @@ namespace FakeCQG
         #endregion
 
         #region Methods
+
+        public override int GetHashCode()
+        {
+            string name = "GetHashCode";
+            var result = CQG.CallMethod<int>(dcObjKey, name);
+            return result;
+        }
+
+        public override string ToString()
+        {
+            string name = "ToString";
+            var result = CQG.CallMethod<string>(dcObjKey, name);
+            return result;
+        }
 
         #endregion
 
