@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
+using FakeCQG;
 using FakeCQG.Handshaking;
 using FakeCQG.Models;
-using FakeCQG;
-using System.Reflection;
 
 namespace DataCollectionForRealtime
 {
-    public partial class RealtimeDataManagement : Form
+    public partial class DCMainForm : Form
     {
         const int AutoWorkTimerInterval = 30;      // ms
         const int HandshakingTimerInterval = 10000;
@@ -21,12 +21,12 @@ namespace DataCollectionForRealtime
 
         QueryHandler QueryHandler;
 
-        public RealtimeDataManagement()
+        public DCMainForm()
         {
             InitializeComponent();
             CenterToScreen();
 
-            CqgDataManagement = new CQGDataManagement(this, Program.miniMonitor);
+            CqgDataManagement = new CQGDataManagement(this, Program.MiniMonitor);
             
             QueryHandler = new QueryHandler(CqgDataManagement);
 
@@ -42,7 +42,7 @@ namespace DataCollectionForRealtime
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            FakeCQG.ServerDictionaries.ClearAllDictionaries();
+            ServerDictionaries.ClearAllDictionaries();
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
@@ -59,20 +59,7 @@ namespace DataCollectionForRealtime
 
         private void HelpersInit(string connectionString = "")
         {
-            if(connectionString != "")
-            {
-                FakeCQG.Helpers.ConnectionSettings.ConnectionString = connectionString;
-            }
-
-            FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
-            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
-            FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
-
-            FakeCQG.CQG.AnswerHelper = new FakeCQG.Helpers.AnswerHelper();
-            FakeCQG.CQG.AnswerHelper.ClearAnswersListAsync();
-
-            FakeCQG.CQG.EventHelper = new FakeCQG.Helpers.EventHelper();
-            FakeCQG.CQG.EventHelper.ClearEventsListAsync();
+            FakeCQG.CQG.InitializeServer(connectionString, QueryHandler.SetQueryList);
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
@@ -84,12 +71,12 @@ namespace DataCollectionForRealtime
                     if (subscriber.UnSubscribe)
                     {
                         UnsubscribeEvents(subscriber);
-                        FakeCQG.ServerDictionaries.DeleteFromServerDictionaries(subscriber);
+                        ServerDictionaries.DeleteFromServerDictionaries(subscriber);
                         Listener.DeleteUnsubscriber(subscriber.ID);
                     }
                     else
                     {
-                        FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                        ServerDictionaries.RealtimeIds.Add(subscriber.ID);
                     }
                 }
                 HandshakingTimer.Stop();
@@ -121,7 +108,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-        internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
+        internal void UpdateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
             if (this.InvokeRequired)
             {
@@ -140,10 +127,10 @@ namespace DataCollectionForRealtime
         {
             connectionStatus.Text = connectionStatusLabel;
             connectionStatus.ForeColor = connColor;
-            Program.miniMonitor.BackColor = connColor;
+            Program.MiniMonitor.BackColor = connColor;
         }
 
-        internal void updateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
+        internal void UpdateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
         {
 #if DEBUG
             try
@@ -173,7 +160,7 @@ namespace DataCollectionForRealtime
 #endif
         }
 
-        public void updateStatusSubscribeData(String subcriptionMessage)
+        public void UpdateStatusSubscribeData(String subcriptionMessage)
         {
             if (this.InvokeRequired)
             {
@@ -211,12 +198,12 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void buttonCheck_Click(object sender, EventArgs e)
+        private void ButtonCheck_Click(object sender, EventArgs e)
         {
             QueryHandler.CheckRequestsQueue();
         }
 
-        private void buttonRespond_Click(object sender, EventArgs e)
+        private void ButtonRespond_Click(object sender, EventArgs e)
         {
             QueryHandler.ProcessEntireQueryList();
         }
@@ -226,7 +213,7 @@ namespace DataCollectionForRealtime
             AsyncTaskListener.LogMessage(message);
         }
 
-        private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxAuto_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = sender as CheckBox;
             if (cb.Checked)
@@ -250,13 +237,13 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void minimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MinimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.miniMonitor.Show();
+            Program.MiniMonitor.Show();
         }
 
-        private void changeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MongoDBURL.Visible = true;
             MongoDBURLLabel.Visible = true;
@@ -272,6 +259,11 @@ namespace DataCollectionForRealtime
             MongoDBURL.Visible = false;
             MongoDBURLLabel.Visible = false;
             ChangeDBURLBtn.Visible = false; 
+        }
+
+        private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CqgDataManagement.shutDownCQGConn();
         }
     }
 }

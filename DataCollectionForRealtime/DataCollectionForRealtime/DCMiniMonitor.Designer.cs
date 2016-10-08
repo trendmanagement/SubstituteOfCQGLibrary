@@ -35,11 +35,11 @@
             // 
             // MainFormCall
             // 
-            this.MainFormCall.Location = new System.Drawing.Point(12, 11);
+            this.MainFormCall.Location = new System.Drawing.Point(50, 12);
             this.MainFormCall.Name = "MainFormCall";
-            this.MainFormCall.Size = new System.Drawing.Size(183, 23);
+            this.MainFormCall.Size = new System.Drawing.Size(100, 23);
             this.MainFormCall.TabIndex = 0;
-            this.MainFormCall.Text = "Main monitor";
+            this.MainFormCall.Text = "Main Monitor";
             this.MainFormCall.UseVisualStyleBackColor = true;
             this.MainFormCall.Click += new System.EventHandler(this.MainFormCall_Click);
             // 
@@ -69,8 +69,9 @@
             this.Controls.Add(this.queriesNumDsplLbl);
             this.Controls.Add(this.queriesNumLbl);
             this.Controls.Add(this.MainFormCall);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DCMiniMonitor";
-            this.Text = "DCMiniMonitor";
+            this.Text = "Mini Monitor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DCMiniMonitor_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

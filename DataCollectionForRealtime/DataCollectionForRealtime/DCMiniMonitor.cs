@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataCollectionForRealtime
@@ -34,13 +28,13 @@ namespace DataCollectionForRealtime
 
         private void DCMiniMonitor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.mainMonitor.Close();
+            Program.MainForm.Close();
         }
 
         private void MainFormCall_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.mainMonitor.Show();
+            Program.MainForm.Show();
         }
 
         public void SetNumberOfQueriesInLine(int num)
@@ -59,7 +53,7 @@ namespace DataCollectionForRealtime
                     queriesNumDsplLbl.Text = num.ToString();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 SetNumberOfQueriesInLine(num);
             }

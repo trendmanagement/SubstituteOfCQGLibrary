@@ -1,6 +1,6 @@
 ﻿namespace DataCollectionForRealtime
 {
-    partial class RealtimeDataManagement
+    partial class DCMainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealtimeDataManagement));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DCMainForm));
             this.statusStripOptionMonitor = new System.Windows.Forms.StatusStrip();
             this.statusOfUpdatedInstruments = new System.Windows.Forms.ToolStripStatusLabel();
             this.connectionStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -126,15 +126,15 @@
             // 
             this.minimizeWindowToolStripMenuItem.Name = "minimizeWindowToolStripMenuItem";
             this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.minimizeWindowToolStripMenuItem.Text = "MiniMonitor";
-            this.minimizeWindowToolStripMenuItem.Click += new System.EventHandler(this.minimizeWindowToolStripMenuItem_Click);
+            this.minimizeWindowToolStripMenuItem.Text = "Mini Monitor";
+            this.minimizeWindowToolStripMenuItem.Click += new System.EventHandler(this.MinimizeWindowToolStripMenuItem_Click);
             // 
             // changeURLOfMongoDBToolStripMenuItem
             // 
             this.changeURLOfMongoDBToolStripMenuItem.Name = "changeURLOfMongoDBToolStripMenuItem";
             this.changeURLOfMongoDBToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
             this.changeURLOfMongoDBToolStripMenuItem.Text = "Change URL of MongoDB";
-            this.changeURLOfMongoDBToolStripMenuItem.Click += new System.EventHandler(this.changeURLOfMongoDBToolStripMenuItem_Click);
+            this.changeURLOfMongoDBToolStripMenuItem.Click += new System.EventHandler(this.ChangeURLOfMongoDBToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -181,7 +181,7 @@
             this.checkBoxAuto.TabIndex = 3;
             this.checkBoxAuto.Text = "Automatic work";
             this.checkBoxAuto.UseVisualStyleBackColor = true;
-            this.checkBoxAuto.CheckedChanged += new System.EventHandler(this.checkBoxAuto_CheckedChanged);
+            this.checkBoxAuto.CheckedChanged += new System.EventHandler(this.CheckBoxAuto_CheckedChanged);
             // 
             // richTextBoxLog
             // 
@@ -199,7 +199,7 @@
             this.buttonRespond.TabIndex = 1;
             this.buttonRespond.Text = "Process the request and send a response to the DB";
             this.buttonRespond.UseVisualStyleBackColor = true;
-            this.buttonRespond.Click += new System.EventHandler(this.buttonRespond_Click);
+            this.buttonRespond.Click += new System.EventHandler(this.ButtonRespond_Click);
             // 
             // buttonCheck
             // 
@@ -209,12 +209,12 @@
             this.buttonCheck.TabIndex = 0;
             this.buttonCheck.Text = "Check queries in MongoDB";
             this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            this.buttonCheck.Click += new System.EventHandler(this.ButtonCheck_Click);
             // 
             // MongoDBURLLabel
             // 
             this.MongoDBURLLabel.AutoSize = true;
-            this.MongoDBURLLabel.Location = new System.Drawing.Point(9, 28);
+            this.MongoDBURLLabel.Location = new System.Drawing.Point(9, 24);
             this.MongoDBURLLabel.Name = "MongoDBURLLabel";
             this.MongoDBURLLabel.Size = new System.Drawing.Size(83, 13);
             this.MongoDBURLLabel.TabIndex = 11;
@@ -233,14 +233,14 @@
             // 
             this.ChangeDBURLBtn.Location = new System.Drawing.Point(381, 20);
             this.ChangeDBURLBtn.Name = "ChangeDBURLBtn";
-            this.ChangeDBURLBtn.Size = new System.Drawing.Size(96, 21);
+            this.ChangeDBURLBtn.Size = new System.Drawing.Size(75, 21);
             this.ChangeDBURLBtn.TabIndex = 13;
-            this.ChangeDBURLBtn.Text = "Change DB URL";
+            this.ChangeDBURLBtn.Text = "Apply";
             this.ChangeDBURLBtn.UseVisualStyleBackColor = true;
             this.ChangeDBURLBtn.Visible = false;
             this.ChangeDBURLBtn.Click += new System.EventHandler(this.ChangeDBURLBtn_Click);
             // 
-            // RealtimeDataManagement
+            // DCMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -251,8 +251,9 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.mainRealtimeMenuStrip);
             this.Controls.Add(this.statusStripOptionMonitor);
-            this.Name = "RealtimeDataManagement";
-            this.Text = "RealtimeDataManagement";
+            this.Name = "DCMainForm";
+            this.Text = "Data Collector for Realtime";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DCMainForm_FormClosing);
             this.Load += new System.EventHandler(this.RealtimeDataManagement_Load);
             this.statusStripOptionMonitor.ResumeLayout(false);
             this.statusStripOptionMonitor.PerformLayout();

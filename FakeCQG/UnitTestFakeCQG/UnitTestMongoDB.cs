@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG;
@@ -75,7 +76,7 @@ namespace UnitTestFakeCQG
             Assert.AreEqual(isQuery, false);
         }
 
-        List<string> answersInfo;
+        List<string> loggedInfo;
         [TestMethod]
         public void MethodAsync_ReadInfoQueries()
         {
@@ -87,7 +88,7 @@ namespace UnitTestFakeCQG
             CQG.LogChange += CQG_LogChange_ReadAll;
             var queryHelper = new QueryHelper();
             queryHelper.NewQueriesReady += CQG_GetQueries_Mock;
-            answersInfo = new List<string>();
+            loggedInfo = new List<string>();
             Task.Run(async () =>
             {
                 await queryHelper.ClearQueriesListAsync();
@@ -104,11 +105,11 @@ namespace UnitTestFakeCQG
             }).GetAwaiter().GetResult();
 
             // assert
-            Assert.AreEqual(answersInfo.Count, 3);
-            for (int i = 0; i < answersInfo.Count; i++)
+            Assert.AreEqual(loggedInfo.Count, 3);
+            for (int i = 0; i < loggedInfo.Count; i++)
             {
-                Assert.AreEqual(answersInfo[i].Contains(idTrue[i]), true);
-                Assert.AreEqual(answersInfo[i].Contains(idFalse), false);
+                Assert.AreEqual(loggedInfo[i].Contains(idTrue[i]), true);
+                Assert.AreEqual(loggedInfo[i].Contains(idFalse), false);
             }
         }
 
@@ -297,15 +298,6 @@ namespace UnitTestFakeCQG
             //Assert.AreEqual(arguments, answer.ArgValues[1]);
         }
 
-        #region Extra lines in log message
-        List<string> extraFields = new List<string>()
-        {
-            "queries in collection at",
-            "**********************************************************",
-            "Query"
-        };
-        #endregion
-
         private void CQG_LogChange_For_RemoveAll(string message)
         {
             removedAnswersInfo.Add(message);
@@ -316,24 +308,20 @@ namespace UnitTestFakeCQG
             answers = queries;
         }
 
+        // Parts of log messages to skip
+        List<string> skippedMsgParts = new List<string>()
+        {
+            "Queries list was cleared successfully",
+            "**********************************************************",
+            " new quer(y/ies) in database at ",
+            "QUERY"
+        };
+
         private void CQG_LogChange_ReadAll(string message)
         {
-            bool contains = false;
-            foreach (string field in extraFields)
+            if (skippedMsgParts.All(skippedMsgPart => !message.Contains(skippedMsgPart)))
             {
-                if (message.Contains(field))
-                {
-                    contains = false;
-                    break;
-                }
-                else
-                {
-                    contains = true;
-                }
-            }
-            if (contains)
-            {
-                answersInfo.Add(message);
+                loggedInfo.Add(message);
             }
         }
 
@@ -356,24 +344,24 @@ namespace UnitTestFakeCQG
             var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4" };
             string objectKey = default(string);
-            string queryName = "name";
-            var argumentKeys = new Dictionary<int, string>() { { 1, "argumentKey" } };
+            string memberName = "name";
+            var argumentKeys = new Dictionary<int, string>() { { 0, "argumentKey" } };
             var argumentValues = new Dictionary<int, object>() { { 1, "argumentValue" } };
             var queryList = new List<QueryInfo>();
 
-            //act
-            queryList.Add(CQG.CreateQuery(queryType, keys[0], objectKey, queryName, argumentKeys, argumentValues));
-            queryList.Add(CQG.CreateQuery(queryType, keys[1], objectKey, queryName, argumentKeys, null));
-            queryList.Add(CQG.CreateQuery(queryType, keys[2], objectKey, queryName, null, argumentValues));
-            queryList.Add(CQG.CreateQuery(queryType, keys[3], objectKey, queryName, null, null));
+            // act
+            queryList.Add(CQG.CreateQuery(queryType, keys[0], objectKey, memberName, argumentKeys, argumentValues));
+            queryList.Add(CQG.CreateQuery(queryType, keys[1], objectKey, memberName, argumentKeys, null));
+            queryList.Add(CQG.CreateQuery(queryType, keys[2], objectKey, memberName, null, argumentValues));
+            queryList.Add(CQG.CreateQuery(queryType, keys[3], objectKey, memberName, null, null));
 
-            //assert
+            // assert
             Assert.AreEqual(keys[0], queryList[0].QueryKey);
-            Assert.AreEqual(argumentKeys[1], queryList[0].ArgKeys[1]);
+            Assert.AreEqual(argumentKeys[0], queryList[0].ArgKeys[0]);
             Assert.AreEqual(argumentValues[1], queryList[0].ArgValues[1]);
 
             Assert.AreEqual(keys[1], queryList[1].QueryKey);
-            Assert.AreEqual(argumentKeys[1], queryList[1].ArgKeys[1]);
+            Assert.AreEqual(argumentKeys[0], queryList[1].ArgKeys[0]);
             Assert.AreEqual(null, queryList[1].ArgValues);
 
             Assert.AreEqual(keys[2], queryList[2].QueryKey);
@@ -392,20 +380,21 @@ namespace UnitTestFakeCQG
             string id = "key";
             string name = "name";
             CQG.LogChange += CQG_LogChange_Mock;
-            var answerHelper = new AnswerHelper();
+            CQG.InitializeServer(null, null);
             var answerInput = new AnswerInfo(id, string.Empty, name, null, null);
             AnswerInfo answerOutput = null;
             Task.Run(async () =>
             {
-                await answerHelper.ClearAnswersListAsync();
+                await CQG.AnswerHelper.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await answerHelper.PushAnswerAsync(answerInput);
+                await CQG.AnswerHelper.PushAnswerAsync(answerInput);
             }).GetAwaiter().GetResult();
 
+            ClientDictionaries.IsAnswer.Add(id, false);
             answerOutput = CQG.WaitingForAnAnswer(id, QueryType.GetProperty);
 
             // assert
