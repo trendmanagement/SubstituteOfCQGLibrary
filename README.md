@@ -30,7 +30,7 @@ MongoDB content is also nothing to think about. Data collector and fake CQG libr
         using CQG = FakeCQG;
     ```
 
-2. FL is not a COM assembly, therefore, you cannot instantiate interfaces contained in it. Instantiation of RL interface named "SomeName" should be replaced with instantiation of FL class named "SomeName*Class*". All constructor arguments will be the same.
+2. FL is not a COM assembly, therefore, you cannot instantiate interfaces contained in it. Instantiation of RL interface named "SomeName" should be replaced with instantiation of FL class named "SomeName*Class*".
 
 3. FL provides some extra APIs that are not present in RL. This staff maintains working of FL with MongoDB and other internal operations. The extra APIs are encapsulated into FakeCQG.Internal namespace. It's unlikely that you will need to use them while developing new realtime with FL.
 
