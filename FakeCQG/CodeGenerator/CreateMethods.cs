@@ -68,11 +68,11 @@ namespace CodeGenerator
                 
                 if (isNonVoid)
                 {
-                    File.Write(Indent2 + "var result = CQG.CallMethod<" + TypeToString(minfo.ReturnType) + ">");
+                    File.Write(Indent2 + "var result = Internal.Core.CallMethod<" + TypeToString(minfo.ReturnType) + ">");
                 }
                 else
                 {
-                    File.Write(Indent2 + "CQG.CallVoidMethod");
+                    File.Write(Indent2 + "Internal.Core.CallVoidMethod");
                 }
 
                 // Add arguments
@@ -90,7 +90,7 @@ namespace CodeGenerator
             }
             else
             {
-                File.Write(Indent2 + "string key = CQG.CallMethod<string>(dcObjKey, name");
+                File.Write(Indent2 + "string key = Internal.Core.CallMethod<string>(dcObjKey, name");
                 if (minfo.GetParameters().Length != 0)
                 {
                     File.Write(", args");

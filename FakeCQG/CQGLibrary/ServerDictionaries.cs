@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FakeCQG
+namespace FakeCQG.Internal
 {
     // Here placed all dictionaries with data that transferred by the key and methods for its managing
     public class ServerDictionaries

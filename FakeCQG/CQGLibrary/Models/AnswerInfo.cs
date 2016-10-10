@@ -4,7 +4,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.Options;
 
-namespace FakeCQG.Models
+namespace FakeCQG.Internal.Models
 {
     public class AnswerInfo
     {

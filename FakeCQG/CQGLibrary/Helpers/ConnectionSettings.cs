@@ -1,4 +1,4 @@
-﻿namespace FakeCQG.Helpers
+﻿namespace FakeCQG.Internal.Helpers
 {
     public static class ConnectionSettings
     {

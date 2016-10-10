@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using FakeCQG;
-using FakeCQG.Models;
+using System.Threading.Tasks;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
+using MongoDB.Driver;
 
 [assembly: InternalsVisibleTo("UnitTestRealCQG")]
 
@@ -18,6 +21,9 @@ namespace DataCollectionForRealtime
         object QueriesProcessingLock = new object();
 
         public List<QueryInfo> QueryList;
+
+        public delegate void NewQueriesReadyHandler(List<QueryInfo> queries);
+        public event NewQueriesReadyHandler NewQueriesReady;
 
         public Assembly CQGAssembly
         {
@@ -43,16 +49,12 @@ namespace DataCollectionForRealtime
 
         public void SetQueryList(List<QueryInfo> queries)
         {
-            QueryList = queries;
-            if (Program.MiniMonitor != null)
-            {
-                Program.MiniMonitor.SetNumberOfQueriesInLine(QueryList.Count);
-            }
+            QueryList = queries;          
         }
 
         public void CheckRequestsQueue()
         {
-            FakeCQG.CQG.QueryHelper.ReadQueries();
+            ReadQueries();
         }
 
         public void ProcessQuery(QueryInfo query)
@@ -76,9 +78,9 @@ namespace DataCollectionForRealtime
                             }
                             else
                             {
-                                object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
+                                object[] args = Core.ParseInputArgsFromQueryInfo(query);
                                 object qObj = CQGAssm.CreateInstance(query.MemberName, false, BindingFlags.CreateInstance, null, args, null, null);
-                                key = FakeCQG.CQG.CreateUniqueKey();
+                                key = Core.CreateUniqueKey();
                                 ServerDictionaries.PutObjectToTheDictionary(key, qObj);
                             }
 
@@ -110,20 +112,20 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
                             var propV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
 
-                            if (FakeCQG.CQG.IsSerializableType(propV.GetType()))
+                            if (Core.IsSerializableType(propV.GetType()))
                             {
                                 string answerKey = "value";
                                 answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: answerKey, value: propV);
                             }
                             else
                             {
-                                string answerKey = FakeCQG.CQG.CreateUniqueKey();
+                                string answerKey = Core.CreateUniqueKey();
                                 ServerDictionaries.PutObjectToTheDictionary(answerKey, propV);
                                 answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: answerKey);
                             }
@@ -141,7 +143,7 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
@@ -161,7 +163,7 @@ namespace DataCollectionForRealtime
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
 
                         try
                         {
@@ -183,14 +185,14 @@ namespace DataCollectionForRealtime
 
                             if (!object.ReferenceEquals(returnV, null))
                             {
-                                if (FakeCQG.CQG.IsSerializableType(returnV.GetType()))
+                                if (Core.IsSerializableType(returnV.GetType()))
                                 {
                                     var returnKey = "value";
                                     answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey, value: returnV);
                                 }
                                 else
                                 {
-                                    var returnKey = FakeCQG.CQG.CreateUniqueKey();
+                                    var returnKey = Core.CreateUniqueKey();
                                     ServerDictionaries.PutObjectToTheDictionary(returnKey, returnV);
                                     answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
                                 }
@@ -267,8 +269,8 @@ namespace DataCollectionForRealtime
 
         internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
         {
-            FakeCQG.CQG.AnswerHelper.PushAnswer(answer);
-            FakeCQG.CQG.QueryHelper.DeleteProcessedQuery(answer.AnswerKey);
+            Core.AnswerHelper.PushAnswer(answer);
+            DeleteProcessedQuery(answer.AnswerKey);
         }
 
         public void ProcessEntireQueryList()
@@ -280,6 +282,143 @@ namespace DataCollectionForRealtime
                     ProcessQuery(query);
                 }
                 QueryList.Clear();
+            }
+        }
+
+        public void HelpersInit(string connectionString = "")
+        {
+            if (!string.IsNullOrWhiteSpace(connectionString))
+            {
+                ConnectionSettings.ConnectionString = connectionString;
+            }
+
+            Core.QueryHelper = new QueryHelper();
+            ClearQueriesListAsync();
+            NewQueriesReady += SetQueryList;
+
+            Core.AnswerHelper = new AnswerHelper();
+            Core.AnswerHelper.ClearAnswersListAsync();
+
+            Core.EventHelper = new EventHelper();
+            Core.EventHelper.ClearEventsListAsync();
+        }
+
+        public Task<bool> CheckQueryAsync(string Id)
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, Id);
+                QueryInfo result = null;
+                try
+                {
+                    result = Core.QueryHelper.GetCollection.Find(filter).SingleOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    AsyncTaskListener.LogMessage(ex.Message);
+                    if (Core.QueryHelper.Connect())
+                    {
+                        CheckQueryAsync(Id);
+                    }
+                }
+                return (result != null);
+            });
+        }
+
+        public void ReadQueries()
+        {
+            var filter = Builders<QueryInfo>.Filter.Empty;
+            try
+            {
+                // Select all the queries
+                var queries = Core.QueryHelper.GetCollection.Find(filter).ToList();
+
+                if (queries.Count != 0)
+                { 
+                    if (Program.MiniMonitor != null)
+                    {
+                        Program.MiniMonitor.SetNumberOfQueriesInLine(queries.Count);
+                    }
+
+                    // Process the queries (fire event of this class)
+                    NewQueriesReady(queries);
+                }
+
+                lock (Core.LogLock)
+                {
+                    //AsyncTaskListener.LogMessage("************************************************************");
+                    //AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
+                    foreach (QueryInfo query in queries)
+                    {
+                        //AsyncTaskListener.LogMessage(query.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //AsyncTaskListener.LogMessage(ex.Message);
+                if (Core.QueryHelper.Connect())
+                {
+                    ReadQueries();
+                }
+            }
+        }
+
+        public Task ClearQueriesListAsync()
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Empty;
+                try
+                {
+                    Core.QueryHelper.GetCollection.DeleteMany(filter);
+                    //AsyncTaskListener.LogMessage("Queries list was cleared successfully");
+                }
+                catch (Exception ex)
+                {
+                    //AsyncTaskListener.LogMessage(ex.Message);
+                    if (Core.QueryHelper.Connect())
+                    {
+                        ClearQueriesListAsync();
+                    }
+                }
+            });
+        }
+
+        public Task RemoveQueryAsync(string key)
+        {
+            return Task.Run(() =>
+            {
+                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
+                try
+                {
+                    Core.QueryHelper.GetCollection.DeleteOne(filter);
+                }
+                catch (Exception ex)
+                {
+                    AsyncTaskListener.LogMessage(ex.Message);
+                    if (Core.QueryHelper.Connect())
+                    {
+                        RemoveQueryAsync(key);
+                    }
+                }
+            });
+        }
+
+        public void DeleteProcessedQuery(string key)
+        {
+            var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
+            try
+            {
+                Core.QueryHelper.GetCollection.DeleteOne(filter);
+            }
+            catch (Exception ex)
+            {
+                AsyncTaskListener.LogMessage(ex.Message);
+                if (Core.QueryHelper.Connect())
+                {
+                    DeleteProcessedQuery(key);
+                }
             }
         }
 

@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
-using FakeCQG.Helpers;
-using FakeCQG.Models;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Handshaking;
+using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
-namespace FakeCQG.Handshaking
+namespace DataCollectionForRealtime
 {
-    public static class Listener
+    class Listener
     {
         static bool isStartedListenUnsubscribers = false;
 
@@ -26,7 +29,7 @@ namespace FakeCQG.Handshaking
             isStartedListenUnsubscribers = true;
             return Task.Run(() =>
             {
-                CQG.OnLogChange("Listening for unsubscribers is started");
+                AsyncTaskListener.LogMessage("Listening for unsubscribers is started");
 
                 var filter = Builders<HandshakingModel>.Filter.Empty;
                 while (true)
@@ -38,12 +41,12 @@ namespace FakeCQG.Handshaking
                     catch (Exception ex)
                     {
                         string message = ex.Message;
-                        CQG.OnLogChange(message);
+                        AsyncTaskListener.LogMessage(message);
                     }
                 }
             });
         }
-        
+
         public static Task StartHandshaking()
         {
             var collectionSubscribers = mongo.GetCollectionSubscribers;
@@ -52,7 +55,7 @@ namespace FakeCQG.Handshaking
                 ListenForUnsubscribers(mongo.GetCollectionUnsubscribers);
             }
 
-            return Task.Run(() => 
+            return Task.Run(() =>
             {
                 // Clear collection
                 ClearCollection(collectionSubscribers);
@@ -65,7 +68,7 @@ namespace FakeCQG.Handshaking
             });
         }
 
-        
+
         private static void CheckUnsubscribers(IMongoCollection<HandshakingModel> collection)
         {
             var filter = Builders<HandshakingModel>.Filter.Empty;
@@ -95,7 +98,7 @@ namespace FakeCQG.Handshaking
             }
             else
             {
-                CQG.OnLogChange(string.Format("DC was unsubscribe {0} item(s)", subscribers.Count));
+                AsyncTaskListener.LogMessage(string.Format("DC was unsubscribe {0} item(s)", subscribers.Count));
                 SubscribersAdded(new HandshakingEventArgs(subscribers));
             }
         }
@@ -107,12 +110,12 @@ namespace FakeCQG.Handshaking
             //TODO: Implement logic for variant without subscribers and for only one suscriber
             if (subscribers.Count == 0)
             {
-                CQG.OnLogChange("No subscribers for handshaking");
+                AsyncTaskListener.LogMessage("No subscribers for handshaking");
                 SubscribersAdded(new HandshakingEventArgs());
             }
             else
             {
-                CQG.OnLogChange(string.Format("DC has {0} subscriber(s)", subscribers.Count));
+                AsyncTaskListener.LogMessage(string.Format("DC has {0} subscriber(s)", subscribers.Count));
                 SubscribersAdded(new HandshakingEventArgs(subscribers));
             }
             timer.Start();

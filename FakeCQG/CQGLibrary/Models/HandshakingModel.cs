@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace FakeCQG.Models
+namespace FakeCQG.Internal.Models
 {
     public class HandshakingModel
     {

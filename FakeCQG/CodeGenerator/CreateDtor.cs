@@ -8,7 +8,7 @@
 
             File.WriteLine(Indent1 + "~" + typeName + "()");
             File.WriteLine(Indent1 + "{");
-            File.WriteLine(Indent2 + "CQG.CallDtor(dcObjKey);");
+            File.WriteLine(Indent2 + "Internal.Core.CallDtor(dcObjKey);");
 
             MemberEnd();
         }

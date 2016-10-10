@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace FakeCQG
+namespace FakeCQG.Internal
 {
     public class ClientDictionaries
     {
