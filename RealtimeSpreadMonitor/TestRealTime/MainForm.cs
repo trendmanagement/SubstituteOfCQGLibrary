@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FakeCQG.Models;
-using FakeCQG.Handshaking;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Models;
+using FakeCQG.Internal.Handshaking;
 
 namespace TestRealTime
 {
@@ -14,12 +15,8 @@ namespace TestRealTime
         {
             InitializeComponent();
             Subscriber.ListenForHanshaking();
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Core.LogChange += CQG_LogChange;
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
-        }
-
-        private void CQG_GetQueries(System.Collections.Generic.List<QueryInfo> queries)
-        {
         }
 
         private void AsyncTaskListener_Updated(string msg)
@@ -57,9 +54,9 @@ namespace TestRealTime
 
         private void buttonRead_Click(object sender, EventArgs e)
         {
-            bool test = FakeCQG.CQG.AnswerHelper.CheckAnswerAsync("key").GetAwaiter().GetResult();
+            bool test = Core.AnswerHelper.CheckAnswerAsync("key").GetAwaiter().GetResult();
             AsyncTaskListener.LogMessage(test.ToString());
-            FakeCQG.CQG.QueryHelper.ReadQueries();
+            Core.QueryHelper.ReadQueries();
         }
 
         private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
@@ -69,7 +66,7 @@ namespace TestRealTime
 
         private void buttonClean_Click(object sender, EventArgs e)
         {
-            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
+            Core.QueryHelper.ClearQueriesListAsync();
         }
 
         private void buttonCall_Click(object sender, EventArgs e)

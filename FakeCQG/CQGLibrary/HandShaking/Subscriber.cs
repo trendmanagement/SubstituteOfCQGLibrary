@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FakeCQG.Helpers;
-using FakeCQG.Models;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
-namespace FakeCQG.Handshaking
+namespace FakeCQG.Internal.Handshaking
 {
     public static class Subscriber
     {
@@ -19,7 +19,7 @@ namespace FakeCQG.Handshaking
         {
             return Task.Run(() =>
             {
-                CQG.OnLogChange("Listening for handshacking is started");
+                Core.OnLogChange("Listening for handshacking is started");
 
                 var filter = Builders<HandshakingModel>.Filter.Empty;
                 var filterId = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
@@ -33,13 +33,13 @@ namespace FakeCQG.Handshaking
                         if (isHandshakingQuery && !isAnswer)
                         {
                             collection.InsertOne(handshaker);
-                            CQG.OnLogChange(handshaker.ID.ToString());
+                            Core.OnLogChange(handshaker.ID.ToString());
                         }
                     }
                     catch (Exception ex)
                     {
                         string message = ex.Message;
-                        CQG.OnLogChange(message);
+                        Core.OnLogChange(message);
                     }
                 }
             });
@@ -60,7 +60,7 @@ namespace FakeCQG.Handshaking
                 handshaker.ObjectKeys = ClientDictionaries.ObjectNames.ToList();
                 handshaker.UnsubscribeEventList = ConvertDictionary(ClientDictionaries.EventCheckingDictionary);
                 mongo.GetCollectionUnsubscribers.InsertOne(handshaker);
-                CQG.OnLogChange(handshaker.ID.ToString());
+                Core.OnLogChange(handshaker.ID.ToString());
             }
             catch (Exception)
             {

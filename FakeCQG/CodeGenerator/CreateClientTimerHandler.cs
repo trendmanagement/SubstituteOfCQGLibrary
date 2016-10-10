@@ -7,15 +7,15 @@ namespace CodeGenerator
     {
         static void CreateClientTimerHandler(EventInfo einfo)
         {
-            File.WriteLine(Indent2 + "CQG.SubscriberChecking(\"" + einfo.Name + "\", dcObjKey, " + Environment.NewLine +
-                Indent3 + einfo.Name + " != null && !ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
-                + Environment.NewLine + Indent3 + einfo.Name + " == null && ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
+            File.WriteLine(Indent2 + "Internal.Core.SubscriberChecking(\"" + einfo.Name + "\", dcObjKey, " + Environment.NewLine +
+                Indent3 + einfo.Name + " != null && !Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
+                + Environment.NewLine + Indent3 + einfo.Name + " == null && Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
                 "\"]);" + Environment.NewLine);
 
-            File.WriteLine(Indent2 + "if (ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"])" +
+            File.WriteLine(Indent2 + "if (Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"])" +
                 Environment.NewLine + Indent2 + "{");
             File.WriteLine(Indent3 + "object[] args;");
-            File.WriteLine(Indent3 + "bool happened = CQG.EventHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\", out args);");
+            File.WriteLine(Indent3 + "bool happened = Internal.Core.EventHelper.CheckWhetherEventHappened(\"" + einfo.Name + "\", out args);");
 
             File.WriteLine(Indent3 + "if (happened)");
             File.WriteLine(Indent3 + "{");

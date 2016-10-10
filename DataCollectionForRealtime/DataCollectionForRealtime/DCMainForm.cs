@@ -2,9 +2,10 @@
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
-using FakeCQG;
-using FakeCQG.Handshaking;
-using FakeCQG.Models;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Handshaking;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
 
 namespace DataCollectionForRealtime
 {
@@ -13,6 +14,8 @@ namespace DataCollectionForRealtime
         const int AutoWorkTimerInterval = 30;      // ms
         const int HandshakingTimerInterval = 10000;
         const int DictionaryClearingInterval = 30000;
+		
+		bool enteringMongoDBURL = false;
 
         System.Timers.Timer AutoWorkTimer;
         Timer HandshakingTimer = new Timer();
@@ -47,20 +50,15 @@ namespace DataCollectionForRealtime
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
         {
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Core.LogChange += CQG_LogChange;
 
-            HelpersInit();
+            QueryHandler.HelpersInit();
 
             AutoWorkTimer = new System.Timers.Timer();
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
-        }
-
-        private void HelpersInit(string connectionString = "")
-        {
-            FakeCQG.CQG.InitializeServer(connectionString, QueryHandler.SetQueryList);
-        }
+        }        
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
@@ -245,20 +243,25 @@ namespace DataCollectionForRealtime
 
         private void ChangeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MongoDBURL.Visible = true;
-            MongoDBURLLabel.Visible = true;
-            ChangeDBURLBtn.Visible = true;
-            MongoDBURL.Text = FakeCQG.Helpers.ConnectionSettings.ConnectionString;
-            changeURLOfMongoDBToolStripMenuItem.Enabled = false;
+            enteringMongoDBURL = enteringMongoDBURL ? false : true;
+            MongoDBURL.Visible = enteringMongoDBURL;
+            MongoDBURLLabel.Visible = enteringMongoDBURL;
+            ChangeDBURLBtn.Visible = enteringMongoDBURL;
+            MongoDBURL.Text = FakeCQG.Internal.Helpers.ConnectionSettings.ConnectionString;
         }
 
         private void ChangeDBURLBtn_Click(object sender, EventArgs e)
         {
-            FakeCQG.Helpers.ConnectionSettings.ConnectionString = MongoDBURL.Text;
-            changeURLOfMongoDBToolStripMenuItem.Enabled = true;
+            if (ConnectionSettings.ConnectionString != MongoDBURL.Text && MongoDBURL.Text != "")
+            {
+                ConnectionSettings.ConnectionString = MongoDBURL.Text;
+                QueryHandler.HelpersInit();
+            }
+
             MongoDBURL.Visible = false;
             MongoDBURLLabel.Visible = false;
-            ChangeDBURLBtn.Visible = false; 
+            ChangeDBURLBtn.Visible = false;
+            enteringMongoDBURL = false;
         }
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)

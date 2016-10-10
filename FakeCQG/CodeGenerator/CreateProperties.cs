@@ -99,11 +99,11 @@ namespace CodeGenerator
 
                     if (IsSerializableType(pinfo.PropertyType))
                     {
-                        File.WriteLine(Indent3 + "var value = CQG.GetProperty<" + propTypeStr + ">(" + args + ");");
+                        File.WriteLine(Indent3 + "var value = Internal.Core.GetProperty<" + propTypeStr + ">(" + args + ");");
                     }
                     else
                     {
-                        File.WriteLine(Indent3 + "string key = CQG.GetProperty<string>(" + args + ");");
+                        File.WriteLine(Indent3 + "string key = Internal.Core.GetProperty<string>(" + args + ");");
                         File.Write(Indent3 + "var value = new " + propTypeStr);
                         if (pinfo.PropertyType.IsInterface)
                         {
@@ -130,7 +130,7 @@ namespace CodeGenerator
                     }
                     File.WriteLine(Indent2 + "{");
                     File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                    File.WriteLine(Indent3 + "CQG.SetProperty(dcObjKey, name, value);");
+                    File.WriteLine(Indent3 + "Internal.Core.SetProperty(dcObjKey, name, value);");
                     File.WriteLine(Indent2 + "}");
                 }
             }

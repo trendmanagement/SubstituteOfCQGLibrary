@@ -71,6 +71,7 @@
     <Compile Include="DCMiniMonitor.Designer.cs">
       <DependentUpon>DCMiniMonitor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listener.cs" />
     <Compile Include="QueryHandler.cs" />
     <Compile Include="DCMainForm.cs">
       <SubType>Form</SubType>

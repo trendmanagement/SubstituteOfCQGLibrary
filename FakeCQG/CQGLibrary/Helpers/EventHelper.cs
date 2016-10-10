@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FakeCQG.Models;
+using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
-namespace FakeCQG.Helpers
+namespace FakeCQG.Internal.Helpers
 {
     public class EventHelper
     {
@@ -45,15 +45,15 @@ namespace FakeCQG.Helpers
             try
             {
                 Collection.InsertOne(eventInfo);
-                lock (CQG.LogLock)
+                lock (Core.LogLock)
                 {
-                    CQG.OnLogChange("************************************************************");
-                    CQG.OnLogChange(eventInfo.ToString());
+                    Core.OnLogChange("************************************************************");
+                    Core.OnLogChange(eventInfo.ToString());
                 }
             }
             catch (Exception ex)
             {
-                CQG.OnLogChange(ex.Message);
+                Core.OnLogChange(ex.Message);
             }
         }
 
@@ -65,11 +65,11 @@ namespace FakeCQG.Helpers
                 try
                 {
                     Collection.DeleteMany(filter);
-                    CQG.OnLogChange("Events list was cleared successfully");
+                    Core.OnLogChange("Events list was cleared successfully");
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                 }
             });
         }
@@ -83,7 +83,7 @@ namespace FakeCQG.Helpers
             }
             catch (Exception ex)
             {
-                CQG.OnLogChange(ex.Message);
+                Core.OnLogChange(ex.Message);
             }
         }
 
@@ -94,13 +94,13 @@ namespace FakeCQG.Helpers
             try
             {
                 EventInfo eventInfo = Collection.Find(filter).First();
-                args = CQG.ParseInputArgsFromEventInfo(eventInfo);
+                args = Core.ParseInputArgsFromEventInfo(eventInfo);
                 RemoveEvent(eventInfo.EventKey);
                 return true;
             }
             catch (Exception ex)
             {
-                CQG.OnLogChange(ex.Message);
+                Core.OnLogChange(ex.Message);
                 args = null;
                 return false;
             }

@@ -1,9 +1,9 @@
-﻿using FakeCQG.Models;
+﻿using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 using System;
 using System.Threading.Tasks;
 
-namespace FakeCQG.Helpers
+namespace FakeCQG.Internal.Helpers
 {
     public class HandshakingHelper
     {
@@ -60,11 +60,11 @@ namespace FakeCQG.Helpers
                 try
                 {
                     _collectionSubscribers.DeleteMany(filter);
-                    CQG.OnLogChange("Handshacking list was cleared successfully");
+                    Core.OnLogChange("Handshacking list was cleared successfully");
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                     if (Connect())
                     {
                         ClearHandShackingListAsync();

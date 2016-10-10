@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using FakeCQG.Models;
+using FakeCQG.Internal.Models;
 
-namespace FakeCQG.Handshaking
+namespace FakeCQG.Internal.Handshaking
 {
     public class HandshakingEventArgs
     {
