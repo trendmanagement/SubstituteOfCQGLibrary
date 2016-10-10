@@ -10,10 +10,10 @@ namespace DataCollectionForRealtime
 {
     class CQGDataManagement
     {
-        public CQGDataManagement(RealtimeDataManagement realtimeDataManagement, DCMiniMonitor miniMonitor)
+        public CQGDataManagement(DCMainForm mainForm, DCMiniMonitor miniMonitor)
         {
-            this.realtimeDataManagement = realtimeDataManagement;
-            miniMonitorForm = miniMonitor;
+            this.mainForm = mainForm;
+            this.miniMonitor = miniMonitor;
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string assmPath = Path.Combine(path, "Interop.CQG.dll");
             this.CQGAssm = Assembly.LoadFile(assmPath);
@@ -21,20 +21,14 @@ namespace DataCollectionForRealtime
             ThreadPool.QueueUserWorkItem(new WaitCallback(initializeCQGAndCallbacks));
         }
 
-        //private DataManagementUtility dataManagementUtility = new DataManagementUtility();
-
-        //private Thread subscriptionThread;
-        //private bool subscriptionThreadShouldStop = false;
-        private const int SUBSCRIPTION_TIMEDELAY_CONSTANT = 125;
-
-        private RealtimeDataManagement realtimeDataManagement;
-        private DCMiniMonitor miniMonitorForm;
+        private DCMainForm mainForm;
+        private DCMiniMonitor miniMonitor;
         public Assembly CQGAssm;
 
-        private CQG.CQGCEL m_CEL;
+        private CQGCEL m_CEL;
         private string m_CEL_key;
 
-        public CQG.CQGCEL CEL
+        public CQGCEL CEL
         {
             get { return m_CEL; }
         }
@@ -44,29 +38,11 @@ namespace DataCollectionForRealtime
             get { return m_CEL_key; }
         }
 
-        //List<OptionSpreadExpression> optionSpreadExpressionList = new List<OptionSpreadExpression>();
-
-        //private ConcurrentDictionary<string, OptionSpreadExpression> optionSpreadExpressionHashTable_keySymbol
-        //    = new ConcurrentDictionary<string, OptionSpreadExpression>();
-
-        //private ConcurrentDictionary<string, OptionSpreadExpression> optionSpreadExpressionHashTable_keyCQGInId
-        //    = new ConcurrentDictionary<string, OptionSpreadExpression>();
-
-        //private ConcurrentDictionary<string, OptionSpreadExpression> optionSpreadExpressionHashTable_keyFullName
-        //    = new ConcurrentDictionary<string, OptionSpreadExpression>();
-
-        //internal ConcurrentDictionary<long, Instrument> instrumentHashTable
-        //    = new ConcurrentDictionary<long, Instrument>();
-
-        //internal List<Instrument> instrumentList = new List<Instrument>();
-
-
         internal void connectCQG()
         {
             if (m_CEL != null)
             {
                 m_CEL.Startup();
-                Type t = m_CEL.GetType();
             }
         }
 
@@ -74,9 +50,7 @@ namespace DataCollectionForRealtime
         {
             if (m_CEL != null)
             {
-                if (m_CEL.IsStarted)
-                    m_CEL.RemoveAllInstruments();
-                //m_CEL.Shutdown();
+                m_CEL.Shutdown();
             }
         }
 
@@ -87,32 +61,22 @@ namespace DataCollectionForRealtime
                 // Create real CQGCEL object and put it into the dictionary
                 // Remark: we do not use "m_CEL = new CQG.CQGCEL();" to facilitate further reflection on this COM object
                 string typeName = "CQG.CQGCELClass";
-                m_CEL = (CQG.CQGCEL)CQGAssm.CreateInstance(typeName);
+                m_CEL = (CQGCEL)CQGAssm.CreateInstance(typeName);
 
                 m_CEL_key = FakeCQG.CQG.CreateUniqueKey();
                 FakeCQG.ServerDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
 
-                m_CEL_CELDataConnectionChg(CQG.eConnectionStatus.csConnectionDown);
-                //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);
-                m_CEL.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
+                m_CEL_CELDataConnectionChg(eConnectionStatus.csConnectionDown);
 
-                //m_CEL.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(m_CEL_TimedBarResolved);
-                //m_CEL.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(m_CEL_TimedBarsAdded);
-                //m_CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(m_CEL_TimedBarsUpdated);
-
-                ////m_CEL.IncorrectSymbol += new _ICQGCELEvents_IncorrectSymbolEventHandler(CEL_IncorrectSymbol);
-                //m_CEL.InstrumentSubscribed += new _ICQGCELEvents_InstrumentSubscribedEventHandler(m_CEL_InstrumentSubscribed);
-                //m_CEL.InstrumentChanged += new _ICQGCELEvents_InstrumentChangedEventHandler(m_CEL_InstrumentChanged);
+                m_CEL.DataConnectionStatusChanged += new _ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
 
                 m_CEL.DataError += new _ICQGCELEvents_DataErrorEventHandler(m_CEL_DataError);
 
-                //m_CEL.APIConfiguration.NewInstrumentMode = true;
-
-                m_CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
+                m_CEL.APIConfiguration.ReadyStatusCheck = eReadyStatusCheck.rscOff;
 
                 m_CEL.APIConfiguration.CollectionsThrowException = false;
 
-                m_CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzPacific;
+                m_CEL.APIConfiguration.TimeZoneCode = eTimeZone.tzPacific;
 
                 connectCQG();
             }
@@ -137,9 +101,9 @@ namespace DataCollectionForRealtime
         {
             try
             {
-                if (realtimeDataManagement != null)
+                if (mainForm != null)
                 {
-                    realtimeDataManagement.updateCQGDataStatus(
+                    mainForm.UpdateCQGDataStatus(
                         "CQG ERROR", Color.Yellow, Color.Red);
                 }
             }
@@ -149,164 +113,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-//        public void sendSubscribeRequest(bool sendOnlyUnsubscribed)
-//        {
-
-//#if DEBUG
-//            try
-//#endif
-//            {
-//                subscriptionThread = new Thread(new ParameterizedThreadStart(sendSubscribeRequestRun));
-//                subscriptionThread.IsBackground = true;
-//                subscriptionThread.Start(sendOnlyUnsubscribed);
-
-//            }
-//#if DEBUG
-//            catch (Exception ex)
-//            {
-//                TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
-//            }
-//#endif
-
-//        }
-
-        //public void sendSubscribeRequestRun(Object obj)
-        //{
-        //    dataManagementUtility.openThread(null, null);
-
-        //    try
-        //    {
-        //        //m_CEL.RemoveAllTimedBars();
-        //        //Thread.Sleep(3000);
-
-        //        if (m_CEL.IsStarted)
-        //        {
-        //            bool sendOnlyUnsubscribed = (bool)obj;
-
-        //            int i = 0;
-
-        //            //m_CEL.NewInstrument("C.US.EPN1312600");
-
-        //            while (!subscriptionThreadShouldStop && i < optionSpreadExpressionList.Count)
-        //            {
-
-        //                //TSErrorCatch.debugWriteOut("SUBSCRIBE " + optionSpreadExpressionList[i].cqgSymbol);
-
-        //                if (sendOnlyUnsubscribed)
-        //                {
-
-
-        //                    if (!optionSpreadExpressionList[i].setSubscriptionLevel)
-        //                    {
-        //                        Thread.Sleep(SUBSCRIPTION_TIMEDELAY_CONSTANT);
-
-        //                        realtimeDataManagement.updateStatusSubscribeData(
-        //                            "SUBSCRIBE " + optionSpreadExpressionList[i].cqgSymbol
-        //                            + " : " + i + " OF " +
-        //                            optionSpreadExpressionList.Count);
-
-        //                        m_CEL.NewInstrument(optionSpreadExpressionList[i].cqgSymbol);
-
-        //                    }
-
-        //                    if (optionSpreadExpressionList[i].callPutOrFuture == OPTION_SPREAD_CONTRACT_TYPE.FUTURE)
-        //                    {
-        //                        if (!optionSpreadExpressionList[i].requestedMinuteBars
-        //                            && optionSpreadExpressionList[i].normalSubscriptionRequest)
-        //                        {
-        //                            requestFutureContractTimeBars(optionSpreadExpressionList[i]);
-        //                        }
-        //                    }
-
-        //                }
-        //                else
-        //                {
-        //                    optionSpreadExpressionList[i].setSubscriptionLevel = false;
-
-        //                    Thread.Sleep(SUBSCRIPTION_TIMEDELAY_CONSTANT);
-
-        //                    realtimeDataManagement.updateStatusSubscribeData(
-        //                            "SUBSCRIBE " + optionSpreadExpressionList[i].cqgSymbol
-        //                            + " : " + i + " OF " +
-        //                            optionSpreadExpressionList.Count);
-
-        //                    m_CEL.NewInstrument(optionSpreadExpressionList[i].cqgSymbol);
-
-        //                    if (optionSpreadExpressionList[i].callPutOrFuture == OPTION_SPREAD_CONTRACT_TYPE.FUTURE)
-        //                    {
-        //                        optionSpreadExpressionList[i].requestedMinuteBars = false;                                
-
-        //                        if (optionSpreadExpressionList[i].normalSubscriptionRequest)
-        //                        {
-        //                            requestFutureContractTimeBars(optionSpreadExpressionList[i]);
-        //                        }
-
-        //                    }
-        //                }
-
-
-
-        //                i++;
-        //            }
-
-        //            Thread.Sleep(SUBSCRIPTION_TIMEDELAY_CONSTANT);
-
-        //            realtimeDataManagement.updateStatusSubscribeData("");
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
-        //    }
-
-        //    dataManagementUtility.closeThread(null, null);
-        //}
-
-        //public void requestFutureContractTimeBars(OptionSpreadExpression optionSpreadExpression)
-        //{
-        //    try
-        //    {
-
-        //        CQGTimedBarsRequest timedBarsRequest = m_CEL.CreateTimedBarsRequest();
-
-        //        timedBarsRequest.Symbol = optionSpreadExpression.cqgSymbol;
-
-        //        timedBarsRequest.SessionsFilter = 31;
-
-        //        timedBarsRequest.IntradayPeriod = 1;
-
-        //        timedBarsRequest.Continuation = CQG.eTimeSeriesContinuationType.tsctNoContinuation;
-        //        //do not want continuation bars
-
-        //        DateTime rangeStart = optionSpreadExpression.previousDateTimeBoundaryStart;
-
-        //        DateTime rangeEnd = m_CEL.Environment.LineTime;
-
-        //        timedBarsRequest.RangeStart = rangeStart;
-
-        //        timedBarsRequest.RangeEnd = rangeEnd;
-
-        //        timedBarsRequest.IncludeEnd = true;
-
-        //        timedBarsRequest.UpdatesEnabled = true;
-
-        //        optionSpreadExpression.futureTimedBars = m_CEL.RequestTimedBars(timedBarsRequest);
-
-
-        //        optionSpreadExpressionHashTable_keyCQGInId.AddOrUpdate(
-        //            optionSpreadExpression.futureTimedBars.Id,
-        //            optionSpreadExpression, (oldKey, oldValue) => optionSpreadExpression);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
-        //    }
-        //}
-
-        
-
-        private void m_CEL_CELDataConnectionChg(CQG.eConnectionStatus new_status)
+        private void m_CEL_CELDataConnectionChg(eConnectionStatus new_status)
         {
             StringBuilder connStatusString = new StringBuilder();
             StringBuilder connStatusShortString = new StringBuilder();
@@ -320,9 +127,9 @@ namespace DataCollectionForRealtime
                     connStatusString.Append(m_CEL.Environment.CELVersion);
                     connStatusShortString.Append("CQG:");
 
-                    if (new_status != CQG.eConnectionStatus.csConnectionUp)
+                    if (new_status != eConnectionStatus.csConnectionUp)
                     {
-                        if (new_status == CQG.eConnectionStatus.csConnectionDelayed)
+                        if (new_status == eConnectionStatus.csConnectionDelayed)
                         {
                             connColor = Color.BlanchedAlmond;
                             connStatusString.Append(" - CONNECTION IS DELAYED");
@@ -348,9 +155,9 @@ namespace DataCollectionForRealtime
                     connStatusShortString.Append("WAITING");
                 }
 
-                if (realtimeDataManagement != null)
+                if (mainForm != null)
                 {
-                    realtimeDataManagement.updateConnectionStatus(
+                    mainForm.UpdateConnectionStatus(
                         connStatusString.ToString(), connColor);
                 }
             }

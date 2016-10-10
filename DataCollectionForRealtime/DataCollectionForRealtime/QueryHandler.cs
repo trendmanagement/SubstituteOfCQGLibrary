@@ -44,7 +44,10 @@ namespace DataCollectionForRealtime
         public void SetQueryList(List<QueryInfo> queries)
         {
             QueryList = queries;
-            Program.miniMonitor.SetNumberOfQueriesInLine(QueryList.Count);
+            if (Program.MiniMonitor != null)
+            {
+                Program.MiniMonitor.SetNumberOfQueriesInLine(QueryList.Count);
+            }
         }
 
         public void CheckRequestsQueue()
@@ -54,29 +57,38 @@ namespace DataCollectionForRealtime
 
         public void ProcessQuery(QueryInfo query)
         {
-            //Object where the data obtained after query execution is placed
-            //This object will be sent to the DB
+            // Object where the data obtained after query execution is placed
+            // This object will be sent to the DB
             AnswerInfo answer;
 
-            //Handling of a request depending on its kind
+            // Handling of the request depending on its kind
             switch (query.QueryType)
             {
                 case QueryType.CallCtor:
                     {
-                        string key;
-
-                        if (query.MemberName == "CQG.CQGCELClass")
+                        try
                         {
-                            key = CqgDataManagement.CEL_key;
+                            string key;
+
+                            if (query.MemberName == "CQG.CQGCELClass")
+                            {
+                                key = CqgDataManagement.CEL_key;
+                            }
+                            else
+                            {
+                                object[] args = FakeCQG.CQG.ParseInputArgsFromQueryInfo(query);
+                                object qObj = CQGAssm.CreateInstance(query.MemberName, false, BindingFlags.CreateInstance, null, args, null, null);
+                                key = FakeCQG.CQG.CreateUniqueKey();
+                                ServerDictionaries.PutObjectToTheDictionary(key, qObj);
+                            }
+
+                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key);
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            object qObj = CQGAssm.CreateInstance(query.MemberName);
-                            key = FakeCQG.CQG.CreateUniqueKey();
-                            ServerDictionaries.PutObjectToTheDictionary(key, qObj);
+                            answer = CreateExceptionAnswer(ex, query);
                         }
 
-                        answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key);
                         PushAnswerAndDeleteQuery(answer);
                     }
                     break;
@@ -118,11 +130,7 @@ namespace DataCollectionForRealtime
                         }
                         catch (Exception ex)
                         {
-                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
-                            {
-                                IsCQGException = true,
-                                CQGException = new Action(() => { throw ex; })
-                            };
+                            answer = CreateExceptionAnswer(ex, query);
                         }
 
                         PushAnswerAndDeleteQuery(answer);
@@ -142,11 +150,7 @@ namespace DataCollectionForRealtime
                         }
                         catch (Exception ex)
                         {
-                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
-                            {
-                                IsCQGException = true,
-                                CQGException = new Action(() => { throw ex; })
-                            };
+                            answer = CreateExceptionAnswer(ex, query);
                         }
 
                         PushAnswerAndDeleteQuery(answer);
@@ -199,11 +203,7 @@ namespace DataCollectionForRealtime
                         }
                         catch (Exception ex)
                         {
-                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
-                            {
-                                IsCQGException = true,
-                                CQGException = new Action(() => { throw ex; })
-                            };
+                            answer = CreateExceptionAnswer(ex, query);
                         }
 
                         PushAnswerAndDeleteQuery(answer);
@@ -214,29 +214,38 @@ namespace DataCollectionForRealtime
                 case QueryType.UnsubscribeFromEvent:
                     {
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
 
-                        // Find corresponding CQG delegate
-                        Type delType = FindDelegateType(CQGAssm, query.MemberName);
-
-                        // Instantiate the delegate with our own handler
-                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", query.MemberName);
-
-                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
-                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
-
-                        if (query.QueryType == QueryType.SubscribeToEvent)
+                        try
                         {
-                            // Subscribe our handler to CQG event
-                            ei.AddEventHandler(qObj, d);
+                            System.Reflection.EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
+
+                            // Find corresponding CQG delegate
+                            Type delType = FindDelegateType(CQGAssm, query.MemberName);
+
+                            // Instantiate the delegate with our own handler
+                            string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", query.MemberName);
+
+                            MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                            Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                            if (query.QueryType == QueryType.SubscribeToEvent)
+                            {
+                                // Subscribe our handler to CQG event
+                                ei.AddEventHandler(qObj, d);
+                            }
+                            else if (query.QueryType == QueryType.UnsubscribeFromEvent)
+                            {
+                                // Unsubscribe our handler from CQG event
+                                ei.RemoveEventHandler(qObj, d);
+                            }
+
+                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
                         }
-                        else if (query.QueryType == QueryType.UnsubscribeFromEvent)
+                        catch (Exception ex)
                         {
-                            // Unsubscribe our handler from CQG event
-                            ei.RemoveEventHandler(qObj, d);
+                            answer = CreateExceptionAnswer(ex, query);
                         }
 
-                        answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
                         PushAnswerAndDeleteQuery(answer);
 
                         if (query.QueryType == QueryType.SubscribeToEvent &&
@@ -294,6 +303,21 @@ namespace DataCollectionForRealtime
         internal static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);
+        }
+
+        AnswerInfo CreateExceptionAnswer(Exception ex, QueryInfo query)
+        {
+            var tiex = ex as TargetInvocationException;
+            if (tiex != null)
+            {
+                ex = tiex.InnerException;
+            }
+
+            return new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
+            {
+                IsCQGException = true,
+                CQGException = new Action(() => { throw ex; })
+            };
         }
     }
 }

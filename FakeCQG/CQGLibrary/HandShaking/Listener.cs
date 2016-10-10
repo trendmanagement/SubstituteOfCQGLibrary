@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG.Helpers;
 using FakeCQG.Models;
 using MongoDB.Driver;
-using System;
 
 namespace FakeCQG.Handshaking
 {
@@ -46,7 +46,6 @@ namespace FakeCQG.Handshaking
         
         public static Task StartHandshaking()
         {
-            // !! Do not create this object once again for each handshaking
             var collectionSubscribers = mongo.GetCollectionSubscribers;
             if (!isStartedListenUnsubscribers)
             {

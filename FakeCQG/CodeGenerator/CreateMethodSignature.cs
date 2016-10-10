@@ -11,8 +11,7 @@ namespace CodeGenerator
             string retTypeName = null,
             string delegateName = null,
             bool isInterface = false,
-            bool isStruct = false,
-            bool isNew = false)
+            bool isStruct = false)
         {
             string public_ = !isInterface ? "public " : string.Empty;
             File.Write(Indent1 + public_);
@@ -20,10 +19,9 @@ namespace CodeGenerator
             {
                 File.Write("static ");
             }
-
-            if (isNew)
+            else if (ObjectOverridableMethods.Contains(mb.Name))
             {
-                File.Write("new ");
+                File.Write("override ");
             }
             else if (mb.IsVirtual && delegateName == null && !isInterface && !isStruct)
             {

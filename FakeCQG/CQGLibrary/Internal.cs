@@ -48,6 +48,30 @@ namespace FakeCQG
 
         #endregion
 
+        #region Initialization methods
+
+        public static void InitializeServer(
+            string connectionString,
+            QueryHelper.NewQueriesReadyHandler newQueriesReadyHandler)
+        {
+            if (!string.IsNullOrWhiteSpace(connectionString))
+            {
+                ConnectionSettings.ConnectionString = connectionString;
+            }
+
+            QueryHelper = new QueryHelper();
+            QueryHelper.ClearQueriesListAsync();
+            QueryHelper.NewQueriesReady += newQueriesReadyHandler;
+
+            AnswerHelper = new AnswerHelper();
+            AnswerHelper.ClearAnswersListAsync();
+
+            EventHelper = new EventHelper();
+            EventHelper.ClearEventsListAsync();
+        }
+
+        #endregion
+
         #region MongoDB communication methods
 
         public static object ExecuteTheQuery(
@@ -130,10 +154,19 @@ namespace FakeCQG
         {
             QueryInfo model;
 
+            if (argKeys != null && argKeys.Count == 0)
+            {
+                argKeys = null;
+            }
+            if (argVals != null && argVals.Count == 0)
+            {
+                argVals = null;
+            }
+
             switch (qType)
             {
                 case QueryType.CallCtor:
-                    model = new QueryInfo(qType, qKey, memberName: memName);
+                    model = new QueryInfo(qType, qKey, memberName: memName, argKeys: argKeys, argValues: argVals);
                     ClientDictionaries.ObjectNames.Add(objKey);
                     break;
                 case QueryType.CallDtor:
@@ -143,22 +176,7 @@ namespace FakeCQG
                 case QueryType.GetProperty:
                 case QueryType.SetProperty:
                 case QueryType.CallMethod:
-                    if (argKeys.Count == 0 && argVals.Count == 0)
-                    {
-                        model = new QueryInfo(qType, qKey, objKey, memName);
-                    }
-                    else if (argKeys.Count == 0)
-                    {
-                        model = new QueryInfo(qType, qKey, objKey, memName, argValues: argVals);
-                    }
-                    else if (argVals.Count == 0)
-                    {
-                        model = new QueryInfo(qType, qKey, objKey, memName, argKeys);
-                    }
-                    else
-                    {
-                        model = new QueryInfo(qType, qKey, objKey, memName, argKeys, argVals);
-                    }
+                    model = new QueryInfo(qType, qKey, objKey, memName, argKeys, argVals);
                     break;
                 case QueryType.SubscribeToEvent:
                 case QueryType.UnsubscribeFromEvent:
@@ -238,6 +256,8 @@ namespace FakeCQG
         }
 
         #endregion
+
+        #region Utilities
 
         public static void PutArgsFromArrayIntoTwoDicts(
             object[] args,
@@ -340,6 +360,8 @@ namespace FakeCQG
         {
             return Guid.NewGuid().ToString("N");
         }
+
+        #endregion
 
         public static void InitCleanLogTimer()
         {

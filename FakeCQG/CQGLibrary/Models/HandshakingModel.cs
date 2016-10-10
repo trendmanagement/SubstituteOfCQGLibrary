@@ -1,6 +1,6 @@
 ﻿using System;
-using MongoDB.Bson.Serialization.Attributes;
 using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace FakeCQG.Models
 {
@@ -21,7 +21,7 @@ namespace FakeCQG.Models
 
         public Dictionary<string, string> UnsubscribeEventList;
 
-        public bool UnSubscribe { get; set; }
+        public bool Unsubscribe { get; set; }
 
         public HandshakingModel(List<string> keys, Dictionary<string, string> unsubscribeEventList)
         {

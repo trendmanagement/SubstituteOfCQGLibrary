@@ -17,7 +17,8 @@ namespace CodeGenerator
         // (otherwise, only corresponding properties will be created)
         static Tuple<string, int>[] SkippedMethodsPrefixesNumArgs = new Tuple<string, int>[] { Tuple.Create("get_", 0), Tuple.Create("set_", 1) };
 
-        static HashSet<string> ObjectMethods = new HashSet<string>() { "Equals", "GetHashCode", "GetType", "ToString" };
+        static HashSet<string> ObjectNonOverridableMethods = new HashSet<string>() { "Equals", "GetType" };
+        static HashSet<string> ObjectOverridableMethods = new HashSet<string>() { "GetHashCode", "ToString" };
 
         static HashSet<string> IEnumerableMethods = new HashSet<string>() { "GetEnumerator" };
 
@@ -36,7 +37,8 @@ namespace CodeGenerator
             UpdateRegion(RegionType.Methods);
 
             if (ComMethods.Contains(minfo.Name) ||
-                ObjectMethods.Contains(minfo.Name) ||
+                ObjectNonOverridableMethods.Contains(minfo.Name) ||
+                (isStruct && ObjectOverridableMethods.Contains(minfo.Name)) ||
                 (isInterface && IEnumerableMethods.Contains(minfo.Name)))
             {
                 // Skip this method

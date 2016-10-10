@@ -36,10 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MongoDB.Bson, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.2.4\lib\net45\MongoDB.Bson.dll</HintPath>
       <Private>True</Private>
@@ -51,10 +47,6 @@
     <Reference Include="MongoDB.Driver.Core, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Driver.Core.2.2.4\lib\net45\MongoDB.Driver.Core.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -80,11 +72,11 @@
       <DependentUpon>DCMiniMonitor.cs</DependentUpon>
     </Compile>
     <Compile Include="QueryHandler.cs" />
-    <Compile Include="RealtimeDataManagement.cs">
+    <Compile Include="DCMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RealtimeDataManagement.Designer.cs">
-      <DependentUpon>RealtimeDataManagement.cs</DependentUpon>
+    <Compile Include="DCMainForm.Designer.cs">
+      <DependentUpon>DCMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,8 +84,8 @@
     <EmbeddedResource Include="DCMiniMonitor.resx">
       <DependentUpon>DCMiniMonitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealtimeDataManagement.resx">
-      <DependentUpon>RealtimeDataManagement.cs</DependentUpon>
+    <EmbeddedResource Include="DCMainForm.resx">
+      <DependentUpon>DCMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

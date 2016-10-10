@@ -38,8 +38,6 @@ namespace FakeCQG
 
             Type objT = assm.GetType(objTName, true);
 
-            //foreach (Type type in assm.ExportedTypes.Where(type => type.IsClass))
-            //{
             IEnumerable<EventInfo> einfos = objT.GetEvents();
 
             if (einfos != null)

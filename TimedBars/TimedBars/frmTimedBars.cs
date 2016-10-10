@@ -1349,10 +1349,14 @@ namespace TimedBars
                 CEL.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(CEL_TimedBarsUpdated);
                 CEL.TimedBarsInserted += new CQG._ICQGCELEvents_TimedBarsInsertedEventHandler(CEL_TimedBarsInserted);
                 CEL.TimedBarsRemoved += new CQG._ICQGCELEvents_TimedBarsRemovedEventHandler(CEL_TimedBarsRemoved);
-                // !!
-                //CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
-                //CEL.APIConfiguration.CollectionsThrowException = false;
-                //CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzCentral;
+
+                // The next three properties cannot be assigned for fake CQG, because real CQG is already started.
+                // It will throw the next exception on an attempt to assign them:
+                //     CQGAPIConfig: Failed to set the value of property 'ReadyStatusCheck'. CQG API is running.
+                //     The parameter's value cannot be changed on the fly.
+                // CEL.APIConfiguration.ReadyStatusCheck = CQG.eReadyStatusCheck.rscOff;
+                // CEL.APIConfiguration.CollectionsThrowException = false;
+                // CEL.APIConfiguration.TimeZoneCode = CQG.eTimeZone.tzCentral;
 
                 // Disables the controls
                 CEL_DataConnectionStatusChanged(CQG.eConnectionStatus.csConnectionDown);

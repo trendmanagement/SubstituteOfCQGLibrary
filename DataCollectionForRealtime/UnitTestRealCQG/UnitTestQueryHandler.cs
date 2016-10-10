@@ -13,7 +13,7 @@ namespace UnitTestRealCQG
     {
         QueryHandler QueryHandler;
         CQGDataManagement CQGDataManagment;
-        RealtimeDataManagement RealtimeDataManagement;
+        DCMainForm DCMainForm;
 
         #region ctors
 
@@ -21,8 +21,8 @@ namespace UnitTestRealCQG
         public void Ctor_InputCQGDataManagment()
         {
             // arrange
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
 
             // act
             QueryHandler = new QueryHandler(CQGDataManagment);
@@ -44,8 +44,8 @@ namespace UnitTestRealCQG
                 new QueryInfo(queryType, keys[1], string.Empty, string.Empty, null, null),
                 new QueryInfo(queryType, keys[2], string.Empty, string.Empty, null, null)
             };
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
 
             // act
             QueryHandler = new QueryHandler(CQGDataManagment, list);
@@ -236,8 +236,9 @@ namespace UnitTestRealCQG
 
         void StartUp()
         {
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
+            FakeCQG.CQG.InitializeServer(null, null);
             QueryHandler = new QueryHandler(CQGDataManagment);
         }
     }
