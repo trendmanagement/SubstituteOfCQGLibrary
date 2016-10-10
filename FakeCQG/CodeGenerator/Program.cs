@@ -37,6 +37,7 @@ namespace CodeGenerator
                 CreateWarningHeader(DCEvHndlrFile);
 
                 DCEvHndlrFile.WriteLine("using System;");
+                DCEvHndlrFile.WriteLine("using FakeCQG.Internal;");
                 DCEvHndlrFile.WriteLine("");
                 DCEvHndlrFile.WriteLine("namespace DataCollectionForRealtime");
                 DCEvHndlrFile.WriteLine("{");

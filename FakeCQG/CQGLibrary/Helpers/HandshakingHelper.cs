@@ -1,21 +1,33 @@
-﻿using FakeCQG.Models;
+﻿using FakeCQG.Internal.Models;
 using MongoDB.Driver;
+using System;
+using System.Threading.Tasks;
 
-namespace FakeCQG.Helpers
+namespace FakeCQG.Internal.Helpers
 {
     public class HandshakingHelper
     {
         protected static IMongoClient _client;
         protected static IMongoDatabase _database;
-        protected static IMongoCollection<HandshakingModel> _collection;
+        protected static IMongoCollection<HandshakingModel> _collectionSubscribers;
+        protected static IMongoCollection<HandshakingModel> _collectionUnsubscribers;
 
-        public IMongoCollection<HandshakingModel> GetCollection
+        public IMongoCollection<HandshakingModel> GetCollectionSubscribers
         {
             get
             {
-                return _collection;
+                return _collectionSubscribers;
             }
         }
+
+        public IMongoCollection<HandshakingModel> GetCollectionUnsubscribers
+        {
+            get
+            {
+                return _collectionUnsubscribers;
+            }
+        }
+
 
         public IMongoDatabase GetDefaultDB
         {
@@ -27,9 +39,38 @@ namespace FakeCQG.Helpers
 
         static HandshakingHelper()
         {
-            _client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Connect();
+        }
+
+        static bool Connect()
+        {
+            _client = new MongoClient(ConnectionSettings.ConnectionString);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collection = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
+            _collectionSubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
+            _collectionUnsubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.UnsubscribeHandshakingCollectionName);
+            return _collectionSubscribers != null;
+        }
+
+
+        public Task ClearHandShackingListAsync()
+        {
+            var filter = Builders<HandshakingModel>.Filter.Empty;
+            return Task.Run(() =>
+            {
+                try
+                {
+                    _collectionSubscribers.DeleteMany(filter);
+                    Core.OnLogChange("Handshacking list was cleared successfully");
+                }
+                catch (Exception ex)
+                {
+                    Core.OnLogChange(ex.Message);
+                    if (Connect())
+                    {
+                        ClearHandShackingListAsync();
+                    }
+                }
+            });
         }
 
     }

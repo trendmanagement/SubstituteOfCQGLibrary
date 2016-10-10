@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
-using FakeCQG.Handshaking;
-using FakeCQG.Models;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Handshaking;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
 
 namespace DataCollectionForRealtime
 {
-    public partial class RealtimeDataManagement : Form
+    public partial class DCMainForm : Form
     {
         const int AutoWorkTimerInterval = 30;      // ms
-        const int HandshakingTimerInterval = 15000;
+        const int HandshakingTimerInterval = 10000;
         const int DictionaryClearingInterval = 30000;
+		
+		bool enteringMongoDBURL = false;
 
         System.Timers.Timer AutoWorkTimer;
         Timer HandshakingTimer = new Timer();
@@ -19,12 +24,13 @@ namespace DataCollectionForRealtime
 
         QueryHandler QueryHandler;
 
-        public RealtimeDataManagement()
+        public DCMainForm()
         {
             InitializeComponent();
+            CenterToScreen();
 
-            CqgDataManagement = new CQGDataManagement(this);
-
+            CqgDataManagement = new CQGDataManagement(this, Program.MiniMonitor);
+            
             QueryHandler = new QueryHandler(CqgDataManagement);
 
             Listener.StartListening(HandshakingTimerInterval);
@@ -39,28 +45,20 @@ namespace DataCollectionForRealtime
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            FakeCQG.ServerDictionaries.ClearAllDictionaries();
+            ServerDictionaries.ClearAllDictionaries();
         }
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
         {
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Core.LogChange += CQG_LogChange;
 
-            FakeCQG.CQG.QueryHelper = new FakeCQG.Helpers.QueryHelper();
-            FakeCQG.CQG.QueryHelper.ClearQueriesListAsync();
-            FakeCQG.CQG.QueryHelper.NewQueriesReady += QueryHandler.SetQueryList;
-
-            FakeCQG.CQG.AnswerHelper = new FakeCQG.Helpers.AnswerHelper();
-            FakeCQG.CQG.AnswerHelper.ClearAnswersListAsync();
-
-            FakeCQG.CQG.EventHelper = new FakeCQG.Helpers.EventHelper();
-            FakeCQG.CQG.EventHelper.ClearEventsListAsync();
+            QueryHandler.HelpersInit();
 
             AutoWorkTimer = new System.Timers.Timer();
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
-        }
+        }        
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
@@ -68,7 +66,16 @@ namespace DataCollectionForRealtime
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    FakeCQG.ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    if (subscriber.Unsubscribe)
+                    {
+                        UnsubscribeEvents(subscriber);
+                        ServerDictionaries.DeleteFromServerDictionaries(subscriber);
+                        Listener.DeleteUnsubscriber(subscriber.ID);
+                    }
+                    else
+                    {
+                        ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                    }
                 }
                 HandshakingTimer.Stop();
             }
@@ -78,24 +85,50 @@ namespace DataCollectionForRealtime
             }
         }
 
-        internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
+        private void UnsubscribeEvents(HandshakingModel subscriber)
+        {
+            foreach(var eventInfor in subscriber.UnsubscribeEventList)
+            {
+                object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                System.Reflection.EventInfo ei = qObj.GetType().GetEvent(eventInfor.Value);
+
+                // Find corresponding CQG delegate
+                Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, eventInfor.Value);
+
+                // Instantiate the delegate with our own handler
+                string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
+
+                MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                // Unsubscribe our handler from CQG event
+                ei.RemoveEventHandler(qObj, d);
+            }
+        }
+
+        internal void UpdateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
             if (this.InvokeRequired)
             {
                 this.BeginInvoke((MethodInvoker)delegate()
-                { 
-                    connectionStatus.Text = connectionStatusLabel;
-                    connectionStatus.ForeColor = connColor;
+                {
+                    ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
                 });
             }
             else
             {
-                connectionStatus.Text = connectionStatusLabel;
-                connectionStatus.ForeColor = connColor;
+                ConnectionStatusUpdateEffects(connectionStatusLabel, connColor);
             }
         }
 
-        internal void updateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
+        internal void ConnectionStatusUpdateEffects(string connectionStatusLabel, Color connColor)
+        {
+            connectionStatus.Text = connectionStatusLabel;
+            connectionStatus.ForeColor = connColor;
+            Program.MiniMonitor.BackColor = connColor;
+        }
+
+        internal void UpdateCQGDataStatus(String dataStatus, Color backColor, Color foreColor)
         {
 #if DEBUG
             try
@@ -125,7 +158,7 @@ namespace DataCollectionForRealtime
 #endif
         }
 
-        public void updateStatusSubscribeData(String subcriptionMessage)
+        public void UpdateStatusSubscribeData(String subcriptionMessage)
         {
             if (this.InvokeRequired)
             {
@@ -163,12 +196,12 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void buttonCheck_Click(object sender, EventArgs e)
+        private void ButtonCheck_Click(object sender, EventArgs e)
         {
             QueryHandler.CheckRequestsQueue();
         }
 
-        private void buttonRespond_Click(object sender, EventArgs e)
+        private void ButtonRespond_Click(object sender, EventArgs e)
         {
             QueryHandler.ProcessEntireQueryList();
         }
@@ -178,7 +211,7 @@ namespace DataCollectionForRealtime
             AsyncTaskListener.LogMessage(message);
         }
 
-        private void checkBoxAuto_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxAuto_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = sender as CheckBox;
             if (cb.Checked)
@@ -200,6 +233,40 @@ namespace DataCollectionForRealtime
             {
                 AutoWorkTimer.Start();
             }
+        }
+
+        private void MinimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.MiniMonitor.Show();
+        }
+
+        private void ChangeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            enteringMongoDBURL = enteringMongoDBURL ? false : true;
+            MongoDBURL.Visible = enteringMongoDBURL;
+            MongoDBURLLabel.Visible = enteringMongoDBURL;
+            ChangeDBURLBtn.Visible = enteringMongoDBURL;
+            MongoDBURL.Text = FakeCQG.Internal.Helpers.ConnectionSettings.ConnectionString;
+        }
+
+        private void ChangeDBURLBtn_Click(object sender, EventArgs e)
+        {
+            if (ConnectionSettings.ConnectionString != MongoDBURL.Text && MongoDBURL.Text != "")
+            {
+                ConnectionSettings.ConnectionString = MongoDBURL.Text;
+                QueryHandler.HelpersInit();
+            }
+
+            MongoDBURL.Visible = false;
+            MongoDBURLLabel.Visible = false;
+            ChangeDBURLBtn.Visible = false;
+            enteringMongoDBURL = false;
+        }
+
+        private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CqgDataManagement.shutDownCQGConn();
         }
     }
 }

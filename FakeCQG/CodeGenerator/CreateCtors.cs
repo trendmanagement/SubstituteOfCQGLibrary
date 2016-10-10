@@ -31,7 +31,7 @@ namespace CodeGenerator
             CreateMethodSignature(cinfo);
 
             File.WriteLine(Indent2 + "string name = \"" + cinfo.DeclaringType + "\";");
-            File.WriteLine(Indent2 + "dcObjKey = CQG.CallCtor(name);");
+            File.WriteLine(Indent2 + "dcObjKey = Internal.Core.CallCtor(name);");
 
             CtorEnd(eventsChecking);
         }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FakeCQG.Models;
+using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
-namespace FakeCQG.Helpers
+namespace FakeCQG.Internal.Helpers
 {
     public class AnswerHelper
     {
@@ -39,7 +39,7 @@ namespace FakeCQG.Helpers
 
         public bool Connect()
         {
-            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Client = new MongoClient(ConnectionSettings.ConnectionString);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
             Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.AnswerCollectionName);
             return Collection != null;
@@ -55,15 +55,15 @@ namespace FakeCQG.Helpers
             try
             {
                 Collection.InsertOne(answer);
-                lock (CQG.LogLock)
+                lock (Core.LogLock)
                 {
-                    CQG.OnLogChange("************************************************************");
-                    CQG.OnLogChange(answer.ToString());
+                    Core.OnLogChange("************************************************************");
+                    Core.OnLogChange(answer.ToString());
                 }
             }
             catch (Exception ex)
             {
-                CQG.OnLogChange(ex.Message);
+                Core.OnLogChange(ex.Message);
                 if (Connect())
                 {
                     PushAnswer(answer);
@@ -84,7 +84,7 @@ namespace FakeCQG.Helpers
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                     if (Connect())
                     {
                         CheckAnswerAsync(Id);
@@ -101,7 +101,7 @@ namespace FakeCQG.Helpers
             try
             {
                 AnswerInfo answer = Collection.Find(filter).First();
-                CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
                 RemoveAnswerAsync(answer.AnswerKey);
                 isAns = true;
                 return answer;
@@ -114,7 +114,7 @@ namespace FakeCQG.Helpers
                 }
                 else
                 {
-                    CQG.OnLogChange(id, "null", false);
+                    Core.OnLogChange(id, "null", false);
                     isAns = false;
                     return null;
                 }
@@ -130,7 +130,7 @@ namespace FakeCQG.Helpers
                 try
                 {
                     answer = Collection.Find(filter).First();
-                    CQG.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
                     RemoveAnswerAsync(answer.AnswerKey);
                     ClientDictionaries.IsAnswer[id] = true;
                 }
@@ -154,11 +154,11 @@ namespace FakeCQG.Helpers
                 try
                 {
                     Collection.DeleteMany(filter);
-                    CQG.OnLogChange("Answers list was cleared successfully");
+                    Core.OnLogChange("Answers list was cleared successfully");
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                     if (Connect())
                     {
                         ClearAnswersListAsync();
@@ -178,7 +178,7 @@ namespace FakeCQG.Helpers
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                     if (Connect())
                     {
                         RemoveAnswerAsync(key);

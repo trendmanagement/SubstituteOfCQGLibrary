@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FakeCQG.Models;
+using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
-namespace FakeCQG.Helpers
+namespace FakeCQG.Internal.Helpers
 {
     public class QueryHelper
     {
-        public delegate void NewQueriesReadyHandler(List<QueryInfo> queries);
-        public event NewQueriesReadyHandler NewQueriesReady;
-
         protected IMongoClient Client;
         protected IMongoDatabase Database;
         protected IMongoCollection<QueryInfo> Collection;
@@ -44,7 +41,7 @@ namespace FakeCQG.Helpers
 
         public bool Connect()
         {
-            Client = new MongoClient(ConnectionSettings.ConnectionStringDefault);
+            Client = new MongoClient(ConnectionSettings.ConnectionString);
             Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
             Collection = Database.GetCollection<QueryInfo>(ConnectionSettings.QueryCollectionName);
             return Collection != null;
@@ -57,11 +54,11 @@ namespace FakeCQG.Helpers
                 try
                 {
                     Collection.InsertOne(query);
-                    CQG.OnLogChange(query.QueryKey, query.MemberName, true);
+                    Core.OnLogChange(query.QueryKey, query.MemberName, true);
                 }
                 catch (Exception ex)
                 {
-                    CQG.OnLogChange(ex.Message);
+                    Core.OnLogChange(ex.Message);
                     if (Connect())
                     {
                         PushQueryAsync(query);
@@ -69,119 +66,6 @@ namespace FakeCQG.Helpers
                 }
             });
         }
-
-        public Task<bool> CheckQueryAsync(string Id)
-        {
-            return Task.Run(() =>
-            {
-                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, Id);
-                QueryInfo result = null;
-                try
-                {
-                    result = Collection.Find(filter).SingleOrDefault();
-                }
-                catch (Exception ex)
-                {
-                    CQG.OnLogChange(ex.Message);
-                    if (Connect())
-                    {
-                        CheckQueryAsync(Id);
-                    }
-                }
-                return (result != null);
-            });
-        }
-
-        public void ReadQueries()
-        {
-            var filter = Builders<QueryInfo>.Filter.Empty;
-            try
-            {
-                // Select all the queries
-                var queries = Collection.Find(filter).ToList();
-
-                if (queries.Count != 0)
-                {
-                    // Process the queries (fire event of this class)
-                    NewQueriesReady(queries);
-                }
-
-                lock (CQG.LogLock)
-                {
-                    CQG.OnLogChange("************************************************************");
-                    CQG.OnLogChange(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count, DateTime.Now));
-                    foreach (QueryInfo query in queries)
-                    {
-                        CQG.OnLogChange(query.ToString());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-                if (Connect())
-                {
-                    ReadQueries();
-                }
-            }
-        }
-
-        public Task ClearQueriesListAsync()
-        {
-            return Task.Run(() =>
-            {
-                var filter = Builders<QueryInfo>.Filter.Empty;
-                try
-                {
-                    Collection.DeleteMany(filter);
-                    CQG.OnLogChange("Queries list was cleared successfully");
-                }
-                catch (Exception ex)
-                {
-                    CQG.OnLogChange(ex.Message);
-                    if (Connect())
-                    {
-                        ClearQueriesListAsync();
-                    }
-                }
-            });
-        }
-
-        public Task RemoveQueryAsync(string key)
-        {
-            return Task.Run(() =>
-            {
-                var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
-                try
-                {
-                    Collection.DeleteOne(filter);
-                }
-                catch (Exception ex)
-                {
-                    CQG.OnLogChange(ex.Message);
-                    if (Connect())
-                    {
-                        RemoveQueryAsync(key);
-                    }
-                }
-            });
-        }
-
-        public void DeleteProcessedQuery(string key)
-        {
-            var filter = Builders<QueryInfo>.Filter.Eq(Keys.QueryKey, key);
-            try
-            {
-                Collection.DeleteOne(filter);
-            }
-            catch (Exception ex)
-            {
-                CQG.OnLogChange(ex.Message);
-                if (Connect())
-                {
-                    DeleteProcessedQuery(key);
-                }
-            }
-        }
+      
     }
 }

@@ -1,8 +1,8 @@
-using FakeCQG.Models;
+using FakeCQG.Internal.Models;
 
-namespace FakeCQG
+namespace FakeCQG.Internal
 {
-    public static partial class CQG
+    public static partial class Core
     {
         public static string CallCtor(string typeName)
         {

@@ -17,7 +17,8 @@ namespace CodeGenerator
         // (otherwise, only corresponding properties will be created)
         static Tuple<string, int>[] SkippedMethodsPrefixesNumArgs = new Tuple<string, int>[] { Tuple.Create("get_", 0), Tuple.Create("set_", 1) };
 
-        static HashSet<string> ObjectMethods = new HashSet<string>() { "Equals", "GetHashCode", "GetType", "ToString" };
+        static HashSet<string> ObjectNonOverridableMethods = new HashSet<string>() { "Equals", "GetType" };
+        static HashSet<string> ObjectOverridableMethods = new HashSet<string>() { "GetHashCode", "ToString" };
 
         static HashSet<string> IEnumerableMethods = new HashSet<string>() { "GetEnumerator" };
 
@@ -36,7 +37,8 @@ namespace CodeGenerator
             UpdateRegion(RegionType.Methods);
 
             if (ComMethods.Contains(minfo.Name) ||
-                ObjectMethods.Contains(minfo.Name) ||
+                ObjectNonOverridableMethods.Contains(minfo.Name) ||
+                (isStruct && ObjectOverridableMethods.Contains(minfo.Name)) ||
                 (isInterface && IEnumerableMethods.Contains(minfo.Name)))
             {
                 // Skip this method
@@ -66,11 +68,11 @@ namespace CodeGenerator
                 
                 if (isNonVoid)
                 {
-                    File.Write(Indent2 + "var result = CQG.CallMethod<" + TypeToString(minfo.ReturnType) + ">");
+                    File.Write(Indent2 + "var result = Internal.Core.CallMethod<" + TypeToString(minfo.ReturnType) + ">");
                 }
                 else
                 {
-                    File.Write(Indent2 + "CQG.CallVoidMethod");
+                    File.Write(Indent2 + "Internal.Core.CallVoidMethod");
                 }
 
                 // Add arguments
@@ -88,7 +90,7 @@ namespace CodeGenerator
             }
             else
             {
-                File.Write(Indent2 + "string key = CQG.CallMethod<string>(dcObjKey, name");
+                File.Write(Indent2 + "string key = Internal.Core.CallMethod<string>(dcObjKey, name");
                 if (minfo.GetParameters().Length != 0)
                 {
                     File.Write(", args");

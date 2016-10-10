@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace FakeCQG.Models
+namespace FakeCQG.Internal.Models
 {
     public class HandshakingModel
     {
@@ -14,20 +15,26 @@ namespace FakeCQG.Models
             get { return _id; }
         }
 
-        public string Key
-        {
-            get { return _key; }
-            private set { _key = value; }
-        }
-
         #endregion
 
-        private string _key;
+        public List<string> ObjectKeys;
 
-        public HandshakingModel(string key)
+        public Dictionary<string, string> UnsubscribeEventList;
+
+        public bool Unsubscribe { get; set; }
+
+        public HandshakingModel(List<string> keys, Dictionary<string, string> unsubscribeEventList)
         {
             _id = Guid.NewGuid();
-            _key = key;
+            ObjectKeys = keys;
+            UnsubscribeEventList = unsubscribeEventList;
+        }
+
+        public HandshakingModel()
+        {
+            _id = Guid.NewGuid();
+            ObjectKeys = new List<string>();
+            UnsubscribeEventList = new Dictionary<string, string>();
         }
     }
 }

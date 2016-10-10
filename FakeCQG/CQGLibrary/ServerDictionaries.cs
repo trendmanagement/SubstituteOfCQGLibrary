@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FakeCQG
+namespace FakeCQG.Internal
 {
     // Here placed all dictionaries with data that transferred by the key and methods for its managing
     public class ServerDictionaries
@@ -28,6 +28,15 @@ namespace FakeCQG
         public static void ClearAllDictionaries()
         {
             objDictionary.Clear();
+        }
+
+        public static void DeleteFromServerDictionaries(Models.HandshakingModel subscriber)
+        {
+            foreach(var obj in subscriber.ObjectKeys)
+            {
+                objDictionary.Remove(obj);
+            }
+            RealtimeIds.Remove(subscriber.ID);
         }
     }
 }

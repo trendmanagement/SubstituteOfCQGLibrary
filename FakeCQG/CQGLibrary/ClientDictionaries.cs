@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace FakeCQG
+namespace FakeCQG.Internal
 {
     public class ClientDictionaries
     {
@@ -12,6 +12,7 @@ namespace FakeCQG
 
         static Dictionary<string, Dictionary<string, bool>> eventCheckingDictionary = new Dictionary<string, Dictionary<string, bool>>();
 
+        public static HashSet<string> ObjectNames = new HashSet<string>(); 
         public static Dictionary<string, bool> IsAnswer
         {
             get
@@ -19,6 +20,7 @@ namespace FakeCQG
                 return isAnswer;
             }
         }
+
 
         public static Dictionary<string, Dictionary<string, bool>> EventCheckingDictionary
         {
@@ -36,8 +38,6 @@ namespace FakeCQG
 
             Type objT = assm.GetType(objTName, true);
 
-            //foreach (Type type in assm.ExportedTypes.Where(type => type.IsClass))
-            //{
             IEnumerable<EventInfo> einfos = objT.GetEvents();
 
             if (einfos != null)
