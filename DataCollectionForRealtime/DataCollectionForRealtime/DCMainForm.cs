@@ -58,7 +58,7 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
-        }        
+        }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
@@ -266,7 +266,25 @@ namespace DataCollectionForRealtime
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CqgDataManagement.shutDownCQGConn();
+            if (!Program.MiniMonitor.Visible)
+            {
+                string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
+                ServerDictionaries.RealtimeIds.Count);
+                string caption = "Data collector";
+                if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    CqgDataManagement.shutDownCQGConn();
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                CqgDataManagement.shutDownCQGConn();
+            }
         }
     }
 }

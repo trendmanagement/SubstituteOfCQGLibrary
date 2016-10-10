@@ -85,7 +85,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -125,7 +125,7 @@
             // minimizeWindowToolStripMenuItem
             // 
             this.minimizeWindowToolStripMenuItem.Name = "minimizeWindowToolStripMenuItem";
-            this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.minimizeWindowToolStripMenuItem.Text = "Mini Monitor";
             this.minimizeWindowToolStripMenuItem.Click += new System.EventHandler(this.MinimizeWindowToolStripMenuItem_Click);
             // 
