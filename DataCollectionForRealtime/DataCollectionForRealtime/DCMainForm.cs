@@ -68,11 +68,7 @@ namespace DataCollectionForRealtime
 
         private void LogSettingsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           FakeCQG.CQG.LoGSettings = logSettingsComboBox.SelectedIndex;
-        }
-private void HelpersInit(string connectionString = "")
-        {
-            FakeCQG.CQG.InitializeServer(connectionString, QueryHandler.SetQueryList);
+           Core.LogSettings = logSettingsComboBox.SelectedIndex;
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
