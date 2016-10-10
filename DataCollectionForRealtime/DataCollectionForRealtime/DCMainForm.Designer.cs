@@ -48,6 +48,8 @@
             this.MongoDBURLLabel = new System.Windows.Forms.Label();
             this.MongoDBURL = new System.Windows.Forms.TextBox();
             this.ChangeDBURLBtn = new System.Windows.Forms.Button();
+            this.logSettingsLabel = new System.Windows.Forms.Label();
+            this.logSettingsComboBox = new System.Windows.Forms.ComboBox();
             this.statusStripOptionMonitor.SuspendLayout();
             this.mainRealtimeMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -85,7 +87,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -125,7 +127,7 @@
             // minimizeWindowToolStripMenuItem
             // 
             this.minimizeWindowToolStripMenuItem.Name = "minimizeWindowToolStripMenuItem";
-            this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.minimizeWindowToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.minimizeWindowToolStripMenuItem.Text = "Mini Monitor";
             this.minimizeWindowToolStripMenuItem.Click += new System.EventHandler(this.MinimizeWindowToolStripMenuItem_Click);
             // 
@@ -240,11 +242,30 @@
             this.ChangeDBURLBtn.Visible = false;
             this.ChangeDBURLBtn.Click += new System.EventHandler(this.ChangeDBURLBtn_Click);
             // 
+            // logSettingsLabel
+            // 
+            this.logSettingsLabel.AutoSize = true;
+            this.logSettingsLabel.Location = new System.Drawing.Point(228, 359);
+            this.logSettingsLabel.Name = "logSettingsLabel";
+            this.logSettingsLabel.Size = new System.Drawing.Size(64, 13);
+            this.logSettingsLabel.TabIndex = 14;
+            this.logSettingsLabel.Text = "Log settings";
+            // 
+            // logSettingsComboBox
+            // 
+            this.logSettingsComboBox.FormattingEnabled = true;
+            this.logSettingsComboBox.Location = new System.Drawing.Point(298, 356);
+            this.logSettingsComboBox.Name = "logSettingsComboBox";
+            this.logSettingsComboBox.Size = new System.Drawing.Size(87, 21);
+            this.logSettingsComboBox.TabIndex = 15;
+            // 
             // DCMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 413);
+            this.Controls.Add(this.logSettingsComboBox);
+            this.Controls.Add(this.logSettingsLabel);
             this.Controls.Add(this.ChangeDBURLBtn);
             this.Controls.Add(this.MongoDBURL);
             this.Controls.Add(this.MongoDBURLLabel);
@@ -291,6 +312,8 @@
         private System.Windows.Forms.Label MongoDBURLLabel;
         private System.Windows.Forms.TextBox MongoDBURL;
         private System.Windows.Forms.Button ChangeDBURLBtn;
+        private System.Windows.Forms.Label logSettingsLabel;
+        private System.Windows.Forms.ComboBox logSettingsComboBox;
     }
 }
 
