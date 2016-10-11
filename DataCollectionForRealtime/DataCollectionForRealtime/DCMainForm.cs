@@ -6,13 +6,15 @@ using FakeCQG.Internal;
 using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace DataCollectionForRealtime
 {
     public partial class DCMainForm : Form
     {
         const int AutoWorkTimerInterval = 30;      // ms
-        const int HandshakingTimerInterval = 10000;
+        const int HandshakingTimerInterval = 3000;
         const int DictionaryClearingInterval = 30000;
 		
 		bool enteringMongoDBURL = false;
@@ -62,19 +64,27 @@ namespace DataCollectionForRealtime
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
+            var subscribersList = ServerDictionaries.RealtimeIds;
+            ServerDictionaries.RealtimeIds.Clear();
             if (!args.NoSubscribers)
             {
                 foreach (HandshakingModel subscriber in args.Subscribers)
                 {
-                    if (subscriber.Unsubscribe)
+                    subscribersList.Remove(subscriber);
+                    ServerDictionaries.RealtimeIds.Add(subscriber);
+                }
+
+                if (subscribersList.Count > 0)
+                {
+                    // Handle last queries for unsubscribe items
+                    QueryHandler.CheckRequestsQueue();
+                    QueryHandler.ProcessEntireQueryList();
+
+                    foreach (var item in subscribersList)
                     {
-                        UnsubscribeEvents(subscriber);
-                        ServerDictionaries.DeleteFromServerDictionaries(subscriber);
-                        Listener.DeleteUnsubscriber(subscriber.ID);
-                    }
-                    else
-                    {
-                        ServerDictionaries.RealtimeIds.Add(subscriber.ID);
+                        UnsubscribeEvents(item);
+                        ServerDictionaries.DeleteFromServerDictionaries(item);
+                        Listener.DeleteUnsubscriber(item.ID);
                     }
                 }
                 HandshakingTimer.Stop();
@@ -89,20 +99,26 @@ namespace DataCollectionForRealtime
         {
             foreach(var eventInfor in subscriber.UnsubscribeEventList)
             {
-                object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
-                System.Reflection.EventInfo ei = qObj.GetType().GetEvent(eventInfor.Value);
+                foreach(var dic in eventInfor.Value)
+                {
+                    if (dic.Value)
+                    {
+                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
 
-                // Find corresponding CQG delegate
-                Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, eventInfor.Value);
+                        // Find corresponding CQG delegate
+                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, (dic.Key));
 
-                // Instantiate the delegate with our own handler
-                string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
+                        // Instantiate the delegate with our own handler
+                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
 
-                MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
-                Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
 
-                // Unsubscribe our handler from CQG event
-                ei.RemoveEventHandler(qObj, d);
+                        // Unsubscribe our handler from CQG event
+                        ei.RemoveEventHandler(qObj, d);
+                    }
+                }
             }
         }
 
