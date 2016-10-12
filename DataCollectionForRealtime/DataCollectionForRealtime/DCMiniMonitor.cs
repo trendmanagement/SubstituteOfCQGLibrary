@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FakeCQG.Internal;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -28,7 +29,18 @@ namespace DataCollectionForRealtime
 
         private void DCMiniMonitor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.MainForm.Close();
+            string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
+                ServerDictionaries.RealtimeIds.Count);
+            string caption = "Data collector";
+            if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Program.MainForm.Close();
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void MainFormCall_Click(object sender, EventArgs e)

@@ -32,6 +32,8 @@ namespace FakeCQG.Internal.Handshaking
 
                         if (isHandshakingQuery && !isAnswer)
                         {
+                            handshaker.ObjectKeys = ClientDictionaries.ObjectNames.ToList();
+                            handshaker.UnsubscribeEventList = ClientDictionaries.EventCheckingDictionary;
                             collection.InsertOne(handshaker);
                             Core.OnLogChange(handshaker.ID.ToString());
                         }
@@ -49,23 +51,6 @@ namespace FakeCQG.Internal.Handshaking
         {
             mongo = new HandshakingHelper();
             collection = mongo.GetCollectionSubscribers;
-            AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit; ;
-        }
-
-        public static void CurrentDomain_ProcessExit(object sender, EventArgs e)
-        {
-            try
-            {
-                handshaker.Unsubscribe = true;
-                handshaker.ObjectKeys = ClientDictionaries.ObjectNames.ToList();
-                handshaker.UnsubscribeEventList = ConvertDictionary(ClientDictionaries.EventCheckingDictionary);
-                mongo.GetCollectionUnsubscribers.InsertOne(handshaker);
-                Core.OnLogChange(handshaker.ID.ToString());
-            }
-            catch (Exception)
-            {
-
-            }
         }
 
         static Dictionary<string, string> ConvertDictionary(Dictionary<string, Dictionary<string, bool>> fullEventsDictionary)

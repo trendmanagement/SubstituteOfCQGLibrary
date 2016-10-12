@@ -19,11 +19,9 @@ namespace FakeCQG.Internal.Models
 
         public List<string> ObjectKeys;
 
-        public Dictionary<string, string> UnsubscribeEventList;
+        public Dictionary<string, Dictionary<string, bool>> UnsubscribeEventList;
 
-        public bool Unsubscribe { get; set; }
-
-        public HandshakingModel(List<string> keys, Dictionary<string, string> unsubscribeEventList)
+        public HandshakingModel(List<string> keys, Dictionary<string, Dictionary<string, bool>> unsubscribeEventList)
         {
             _id = Guid.NewGuid();
             ObjectKeys = keys;
@@ -34,7 +32,7 @@ namespace FakeCQG.Internal.Models
         {
             _id = Guid.NewGuid();
             ObjectKeys = new List<string>();
-            UnsubscribeEventList = new Dictionary<string, string>();
+            UnsubscribeEventList = new Dictionary<string, Dictionary<string, bool>>();
         }
     }
 }
