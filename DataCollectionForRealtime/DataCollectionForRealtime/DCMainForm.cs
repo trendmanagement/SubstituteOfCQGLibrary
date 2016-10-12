@@ -64,8 +64,8 @@ namespace DataCollectionForRealtime
             logSettingsComboBox.Items.Add("Off  log");
             logSettingsComboBox.Items.Add("Separate log");
             logSettingsComboBox.Items.Add("All log");
-            logSettingsComboBox.SelectedIndex = 1;
             logSettingsComboBox.SelectedIndexChanged += LogSettingsComboBox_SelectedIndexChanged;
+            logSettingsComboBox.SelectedIndex = 1;
         }
 
         private void LogSettingsComboBox_SelectedIndexChanged(object sender, EventArgs e)

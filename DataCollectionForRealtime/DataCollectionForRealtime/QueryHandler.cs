@@ -343,7 +343,7 @@ namespace DataCollectionForRealtime
 
                 lock (Core.LogLock)
                 {
-                    AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database at {1}", queries.Count));
+                    AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database", queries.Count));
                     foreach (QueryInfo query in queries)
                     {
                         AsyncTaskListener.LogMessage(query.ToString());

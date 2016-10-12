@@ -80,6 +80,7 @@ namespace FakeCQG.Internal.Models
         public override string ToString()
         {
             return string.Format(
+                "************************************************************" + Environment.NewLine +
                 "ANSWER:" + Environment.NewLine +
                 "    AnswerKey = {0}" + Environment.NewLine +
                 "    ObjectKey = {1}" + Environment.NewLine +
@@ -87,7 +88,8 @@ namespace FakeCQG.Internal.Models
                 "    ArgKeys = {3}" + Environment.NewLine +
                 "    ArgValues = {4}" + Environment.NewLine +
                 "    ValueKey = {5}" + Environment.NewLine +
-                "    Value = {6}",
+                "    Value = {6}" + Environment.NewLine +
+                "************************************************************",
                 AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
         }
     }

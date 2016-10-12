@@ -51,11 +51,13 @@ namespace FakeCQG.Internal.Models
         public override string ToString()
         {
             return string.Format(
+                "************************************************************" + Environment.NewLine +
                 "EVENT:" + Environment.NewLine +
                 "    EventKey = {0}" + Environment.NewLine +
                 "    EventName = {1}" + Environment.NewLine +
                 "    ArgKeys: {2}" + Environment.NewLine +
-                "    ArgValues: {3}",
+                "    ArgValues: {3}" + Environment.NewLine +
+                "************************************************************",
                 EventKey, EventName, ArgKeys, ArgValues);
         }
     }

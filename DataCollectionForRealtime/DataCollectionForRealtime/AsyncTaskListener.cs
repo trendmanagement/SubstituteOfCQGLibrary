@@ -23,7 +23,7 @@ namespace DataCollectionForRealtime
         static AsyncTaskListener()
         {
             templatesOfLogMessage.Add(new string[] { "No subscribers for handshaking", "DC has" });
-            templatesOfLogMessage.Add(new string[] { "new quer(y/ies) in database at" });
+            templatesOfLogMessage.Add(new string[] { "new quer(y/ies) in database" });
             templatesOfLogMessage.Add(new string[] { "Events list was cleared successfully" });
             templatesOfLogMessage.Add(new string[] { "Queries list was cleared successfully" });
         }
@@ -38,7 +38,7 @@ namespace DataCollectionForRealtime
                 }
                 else
                 {
-                    lastLogMessages.Add(template, msg);
+                    lastLogMessages[template] = msg;
                     return true;
                 }
             }
@@ -69,7 +69,7 @@ namespace DataCollectionForRealtime
             try
             {
                 // Update text box
-                Updated.Invoke("************************************************************\n" + msg);
+                Updated.Invoke(msg);
             }
             catch
             {
@@ -95,8 +95,6 @@ namespace DataCollectionForRealtime
                 default:
                     throw new NotImplementedException();
             }
-
-
         }
 
         public static void LogMessageFormat(string msgPat, params object[] args)
