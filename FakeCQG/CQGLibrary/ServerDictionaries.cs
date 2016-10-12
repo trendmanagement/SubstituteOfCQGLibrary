@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FakeCQG.Internal.Models;
+using System;
 using System.Collections.Generic;
 
 namespace FakeCQG.Internal
@@ -8,7 +9,7 @@ namespace FakeCQG.Internal
     {
         static Dictionary<string, object> objDictionary = new Dictionary<string, object>();
 
-        public static HashSet<Guid> RealtimeIds = new HashSet<Guid>();
+        public static List<HandshakingModel> RealtimeIds = new List<HandshakingModel>();
 
         public static void PutObjectToTheDictionary(string key, object obj)
         {
@@ -30,13 +31,13 @@ namespace FakeCQG.Internal
             objDictionary.Clear();
         }
 
-        public static void DeleteFromServerDictionaries(Models.HandshakingModel subscriber)
+        public static void DeleteFromServerDictionaries(HandshakingModel subscriber)
         {
             foreach(var obj in subscriber.ObjectKeys)
             {
                 objDictionary.Remove(obj);
             }
-            RealtimeIds.Remove(subscriber.ID);
+            RealtimeIds.Remove(subscriber);
         }
     }
 }

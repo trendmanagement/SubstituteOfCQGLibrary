@@ -45,32 +45,6 @@ namespace FakeCQG.Internal.Helpers
             return Collection != null;
         }
 
-        public Task PushAnswerAsync(AnswerInfo answer)
-        {
-            return Task.Run(() => PushAnswer(answer));
-        }
-
-        public void PushAnswer(AnswerInfo answer)
-        {
-            try
-            {
-                Collection.InsertOne(answer);
-                lock (Core.LogLock)
-                {
-                    Core.OnLogChange("************************************************************");
-                    Core.OnLogChange(answer.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                Core.OnLogChange(ex.Message);
-                if (Connect())
-                {
-                    PushAnswer(answer);
-                }
-            }
-        }
-
         public Task<bool> CheckAnswerAsync(string Id)
         {
             return Task.Run(() =>

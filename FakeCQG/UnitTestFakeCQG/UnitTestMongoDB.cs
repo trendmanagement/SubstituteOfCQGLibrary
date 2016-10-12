@@ -18,7 +18,6 @@ namespace UnitTestFakeCQG
             // arrange
             var qType = QueryType.SetProperty;
             string idTrue = "keyTrue";
-            string idFalse = "keyFalse";
             bool isTrue = default(bool);
             string name = "name";
             Core.LogChange += CQG_LogChange_Mock;
@@ -36,129 +35,9 @@ namespace UnitTestFakeCQG
                     isTrue = false;
                 }
                 
-                Assert.AreEqual(isTrue, false);
+                Assert.AreEqual(isTrue, true);
 
             }).GetAwaiter().GetResult();
-        }
-
-        
-
-        [TestMethod]
-        public void MethodAsync_PushOneAnswerItem()
-        {
-            // arrange
-            string idTrue = "keyTrue";
-            string idFalse = "keyFalse";
-            string name = "name";
-            bool isAnswer = default(bool);
-            Core.LogChange += CQG_LogChange_Mock;
-            var answerHelper = new AnswerHelper();
-            Task.Run(async () =>
-            {
-                await answerHelper.ClearAnswersListAsync();
-            }).GetAwaiter().GetResult();
-            Task.Run(async () =>
-            {
-                // act 1
-                await answerHelper.PushAnswerAsync(new AnswerInfo(idTrue, string.Empty, name, null, null));
-                isAnswer = await answerHelper.CheckAnswerAsync(idTrue);
-
-                // assert 1
-                Assert.AreEqual(isAnswer, true);
-
-                // act 2
-                isAnswer = await answerHelper.CheckAnswerAsync(idFalse);
-
-                // assert 2
-                Assert.AreEqual(isAnswer, false);
-
-            }).GetAwaiter().GetResult();
-        }
-
-        [TestMethod]
-        public void MethodAsync_RemoveOneAnswerItem()
-        {
-            // arrange
-            string id = "key";
-            bool isAnswer = default(bool);
-            string name = "name";
-            Core.LogChange += CQG_LogChange_Mock;
-            var answerHelper = new AnswerHelper();
-            Task.Run(async () =>
-            {
-                await answerHelper.ClearAnswersListAsync();
-            }).GetAwaiter().GetResult();
-
-            Task.Run(async () =>
-            {
-                // act
-                await answerHelper.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
-                isAnswer = await answerHelper.CheckAnswerAsync(id);
-                await answerHelper.RemoveAnswerAsync(id);
-                isAnswer = await answerHelper.CheckAnswerAsync(id);
-
-            }).GetAwaiter().GetResult();
-
-            // assert
-            Assert.AreEqual(isAnswer, false);
-        }
-
-        [TestMethod]
-        public void Method_GetAnswerData()
-        {
-            // arrange
-            string id = "key";
-            bool isAnswer = default(bool);
-            string name = "name";
-            Core.LogChange += CQG_LogChange_Mock;
-            var answerHelper = new AnswerHelper();
-            Task.Run(async () =>
-            {
-                await answerHelper.ClearAnswersListAsync();
-            }).GetAwaiter().GetResult();
-
-            // act
-            Task.Run(async () =>
-            {
-                await answerHelper.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
-
-            }).GetAwaiter().GetResult();
-            var answer = answerHelper.GetAnswerData(id, out isAnswer);
-
-            // assert
-            Assert.IsTrue(isAnswer);
-            Assert.AreEqual(id, answer.AnswerKey);
-        }
-
-        [TestMethod]
-        public void Method_DCEventHandler()
-        {
-            // arrange
-            string id = "keyDCEventHandler";
-            bool isAnswer = default(bool);
-            string name = "name";
-            var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
-            Core.LogChange += CQG_LogChange_Mock;
-            var answerHelper = new AnswerHelper();
-            Task.Run(async () =>
-            {
-                await answerHelper.ClearAnswersListAsync();
-            }).GetAwaiter().GetResult();
-
-            // act
-            Task.Run(async () =>
-            {
-                await answerHelper.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
-
-            }).GetAwaiter().GetResult();
-            var answer = answerHelper.GetAnswerData(id, out isAnswer);
-
-            // assert
-            Assert.IsTrue(isAnswer);
-            Assert.AreEqual(id, answer.AnswerKey);
-            //TODO: uncomment after completes deserialize from dictionary to bson
-            //Assert.IsNotNull(answer.ArgValues);
-            //Assert.AreEqual(arguments, answer.ArgValues[1]);
         }
 
         private void CQG_LogChange_Mock(string message)

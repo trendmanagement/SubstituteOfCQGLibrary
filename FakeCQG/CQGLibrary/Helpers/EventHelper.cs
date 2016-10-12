@@ -39,40 +39,6 @@ namespace FakeCQG.Internal.Helpers
             Collection = Database.GetCollection<EventInfo>(ConnectionSettings.EventCollectionName);
             return Collection != null;
         }
-
-        public void FireEvent(EventInfo eventInfo)
-        {
-            try
-            {
-                Collection.InsertOne(eventInfo);
-                lock (Core.LogLock)
-                {
-                    Core.OnLogChange("************************************************************");
-                    Core.OnLogChange(eventInfo.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                Core.OnLogChange(ex.Message);
-            }
-        }
-
-        public Task ClearEventsListAsync()
-        {
-            var filter = Builders<EventInfo>.Filter.Empty;
-            return Task.Run(() =>
-            {
-                try
-                {
-                    Collection.DeleteMany(filter);
-                    Core.OnLogChange("Events list was cleared successfully");
-                }
-                catch (Exception ex)
-                {
-                    Core.OnLogChange(ex.Message);
-                }
-            });
-        }
         
         public void RemoveEvent(string key)
         {
