@@ -32,7 +32,6 @@ namespace DataCollectionForRealtime
                 Core.EventHelper.GetCollection.InsertOne(eventInfo);
                 lock (Core.LogLock)
                 {
-                    AsyncTaskListener.LogMessage("************************************************************");
                     AsyncTaskListener.LogMessage(eventInfo.ToString());
                 }
             }

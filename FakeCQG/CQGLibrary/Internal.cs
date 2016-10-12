@@ -30,7 +30,7 @@ namespace FakeCQG
             public static object LogLock = new object();
             static HashSet<string> LogHash = new HashSet<string>();
             static bool isMessageOnHashSet;
-            public static int LogSettings = 2;
+            public static int LogSettings = 1;
             static Timer CleanLogTimer = new Timer();
             static int CleanLogInterval = 60000;  //1 min
             static bool IsClearLogTimerStart;
