@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerHandler.cs" />
     <Compile Include="AsyncTaskListener.cs" />
     <Compile Include="AutoGenEventHandlers.cs" />
     <Compile Include="CQGDataManagement.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="DCMiniMonitor.Designer.cs">
       <DependentUpon>DCMiniMonitor.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventHandler.cs" />
     <Compile Include="Listener.cs" />
     <Compile Include="QueryHandler.cs" />
     <Compile Include="DCMainForm.cs">

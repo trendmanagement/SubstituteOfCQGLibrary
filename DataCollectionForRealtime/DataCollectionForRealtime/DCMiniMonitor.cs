@@ -29,18 +29,26 @@ namespace DataCollectionForRealtime
 
         private void DCMiniMonitor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
-                ServerDictionaries.RealtimeIds.Count);
-            string caption = "Data collector";
-            if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (ServerDictionaries.RealtimeIds.Count > 0)
             {
-                Program.MainForm.Close();
-                e.Cancel = false;
+                string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
+                ServerDictionaries.RealtimeIds.Count);
+                string caption = "Data collector";
+                if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Program.MainForm.Close();
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
             else
             {
-                e.Cancel = true;
+                Program.MainForm.Close();
             }
+            
         }
 
         private void MainFormCall_Click(object sender, EventArgs e)

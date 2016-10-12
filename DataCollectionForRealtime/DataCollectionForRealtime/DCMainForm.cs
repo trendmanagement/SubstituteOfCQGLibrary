@@ -77,7 +77,7 @@ namespace DataCollectionForRealtime
                 if (subscribersList.Count > 0)
                 {
                     // Handle last queries for unsubscribe items
-                    QueryHandler.CheckRequestsQueue();
+                    QueryHandler.ReadQueries();
                     QueryHandler.ProcessEntireQueryList();
 
                     foreach (var item in subscribersList)
@@ -204,7 +204,10 @@ namespace DataCollectionForRealtime
 
             try
             {
-                Invoke(action);
+                if (Program.MainForm.IsHandleCreated)
+                {
+                    Invoke(action);
+                }
             }
             catch (ObjectDisposedException)
             {
@@ -214,7 +217,7 @@ namespace DataCollectionForRealtime
 
         private void ButtonCheck_Click(object sender, EventArgs e)
         {
-            QueryHandler.CheckRequestsQueue();
+            QueryHandler.ReadQueries();
         }
 
         private void ButtonRespond_Click(object sender, EventArgs e)
@@ -240,9 +243,10 @@ namespace DataCollectionForRealtime
             }
         }
 
+        //Automatic processing of queries
         private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
-            QueryHandler.CheckRequestsQueue();
+            QueryHandler.ReadQueries();
             QueryHandler.ProcessEntireQueryList();
 
             if (checkBoxAuto.Checked)
@@ -263,7 +267,7 @@ namespace DataCollectionForRealtime
             MongoDBURL.Visible = enteringMongoDBURL;
             MongoDBURLLabel.Visible = enteringMongoDBURL;
             ChangeDBURLBtn.Visible = enteringMongoDBURL;
-            MongoDBURL.Text = FakeCQG.Internal.Helpers.ConnectionSettings.ConnectionString;
+            MongoDBURL.Text = ConnectionSettings.ConnectionString;
         }
 
         private void ChangeDBURLBtn_Click(object sender, EventArgs e)
@@ -282,7 +286,7 @@ namespace DataCollectionForRealtime
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!Program.MiniMonitor.Visible)
+            if (!Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
             {
                 string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
                 ServerDictionaries.RealtimeIds.Count);

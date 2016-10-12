@@ -35,6 +35,7 @@ namespace FakeCQG
             public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
             public const string NoAnswerMessage = "Timer elapsed. No answer.";
 
+			// Main helper objects of each database collection
             public static QueryHelper QueryHelper;
             public static AnswerHelper AnswerHelper;
             public static EventHelper EventHelper;
@@ -167,21 +168,6 @@ namespace FakeCQG
             #endregion
 
             #region Handlers
-
-            public static void CommonEventHandler(
-                string name,
-                object[] args = null)
-            {
-                Dictionary<int, string> argKeys;
-                Dictionary<int, object> argVals;
-                PutArgsFromArrayIntoTwoDicts(args, false, out argKeys, out argVals);
-
-                string eventKey = CreateUniqueKey();
-
-                var eventInfo = new Models.EventInfo(eventKey, name, argKeys, argVals);
-
-                Task.Run(() => EventHelper.FireEvent(eventInfo));
-            }
 
             internal static void OnLogChange(string key, string value, bool isQuery)
             {
