@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using CQG;
+using System.Windows.Forms;
 
 namespace DataCollectionForRealtime
 {
@@ -113,7 +114,7 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void m_CEL_CELDataConnectionChg(eConnectionStatus new_status)
+        private void m_CEL_CELDataConnectionChg(CQG.eConnectionStatus new_status)
         {
             StringBuilder connStatusString = new StringBuilder();
             StringBuilder connStatusShortString = new StringBuilder();
@@ -121,49 +122,63 @@ namespace DataCollectionForRealtime
 
             try
             {
-                if (m_CEL.IsStarted)
-                {
-                    connStatusString.Append("CQG API:");
-                    connStatusString.Append(m_CEL.Environment.CELVersion);
-                    connStatusShortString.Append("CQG:");
-
-                    if (new_status != eConnectionStatus.csConnectionUp)
-                    {
-                        if (new_status == eConnectionStatus.csConnectionDelayed)
-                        {
-                            connColor = Color.BlanchedAlmond;
-                            connStatusString.Append(" - CONNECTION IS DELAYED");
-                            connStatusShortString.Append("DELAYED");
-                        }
-                        else
-                        {
-                            connStatusString.Append(" - CONNECTION IS DOWN");
-                            connStatusShortString.Append("DOWN");
-                        }
-                    }
-                    else
-                    {
-                        connColor = Color.LawnGreen;
-                        connStatusString.Append(" - CONNECTION IS UP");
-                        connStatusShortString.Append("UP");
-                    }
-                }
-                else
-                {
-                    connStatusString.Append("WAITING FOR API CONNECTION");
-
-                    connStatusShortString.Append("WAITING");
-                }
-
-                if (mainForm != null)
-                {
-                    mainForm.UpdateConnectionStatus(
-                        connStatusString.ToString(), connColor);
-                }
+                ConnectToCQG(new_status, connStatusString, connStatusShortString, connColor);
             }
             catch (Exception ex)
             {
                 TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
+                DialogResult result = MessageBox.Show(ex.Message + Environment.NewLine + "Reconnect?", "Failed connection to CQG", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    ConnectToCQG(new_status, connStatusString, connStatusShortString, connColor);
+                }
+            }
+        }
+
+        void ConnectToCQG(CQG.eConnectionStatus new_status,
+                            StringBuilder connStatusString,
+                            StringBuilder connStatusShortString,
+                            Color connColor)
+        {
+            if (m_CEL.IsStarted)
+            {
+                connStatusString.Append("CQG API:");
+                connStatusString.Append(m_CEL.Environment.CELVersion);
+                connStatusShortString.Append("CQG:");
+
+                if (new_status != CQG.eConnectionStatus.csConnectionUp)
+                {
+                    if (new_status == CQG.eConnectionStatus.csConnectionDelayed)
+                    {
+                        connColor = Color.BlanchedAlmond;
+                        connStatusString.Append(" - CONNECTION IS DELAYED");
+                        connStatusShortString.Append("DELAYED");
+                    }
+                    else
+                    {
+                        connStatusString.Append(" - CONNECTION IS DOWN");
+                        connStatusShortString.Append("DOWN");
+                    }
+                }
+                else
+                {
+                    connColor = Color.LawnGreen;
+                    connStatusString.Append(" - CONNECTION IS UP");
+                    connStatusShortString.Append("UP");
+                }
+            }
+            else
+            {
+                connStatusString.Append("WAITING FOR API CONNECTION");
+
+                connStatusShortString.Append("WAITING");
+            }
+
+            if (mainForm != null)
+            {
+                mainForm.UpdateConnectionStatus(
+                    connStatusString.ToString(), connColor);
             }
         }
     }
