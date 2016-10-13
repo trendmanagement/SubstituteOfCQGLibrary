@@ -22,6 +22,9 @@ namespace DataCollectionForRealtime
         System.Timers.Timer AutoWorkTimer;
         Timer HandshakingTimer = new Timer();
 
+        bool canClose;
+        int closingOperationInterval = 10000;
+
         CQGDataManagement CqgDataManagement;
 
         QueryHandler QueryHandler;
@@ -304,6 +307,10 @@ namespace DataCollectionForRealtime
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
+                    if(!canClose || ServerDictionaries.RealtimeIds.Count > 0)
+                    {
+                        ClosingOperation();
+                    }
                     CqgDataManagement.shutDownCQGConn();
                     e.Cancel = false;
                 }
@@ -316,6 +323,32 @@ namespace DataCollectionForRealtime
             {
                 CqgDataManagement.shutDownCQGConn();
             }
+        }
+
+        void ClosingOperation()
+        {
+            this.Visible = false;
+
+            #region Timer inits
+            Timer timerClose = new Timer();
+            timerClose.Interval = closingOperationInterval;
+            timerClose.Disposed += TimerClose_Disposed;
+            timerClose.Start();
+            #endregion
+
+            while (ServerDictionaries.RealtimeIds.Count != 0)
+            {
+                QueryHandler.ReadQueries();
+                QueryHandler.ProcessEntireQueryList();
+            }
+            canClose = true;
+            Close();
+        }
+
+        private void TimerClose_Disposed(object sender, EventArgs e)
+        {
+            canClose = true;
+            Close();
         }
     }
 }
