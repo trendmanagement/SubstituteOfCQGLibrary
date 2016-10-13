@@ -60,6 +60,17 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
+
+            logSettingsComboBox.Items.Add("Off  log");
+            logSettingsComboBox.Items.Add("Separate log");
+            logSettingsComboBox.Items.Add("All log");
+            logSettingsComboBox.SelectedIndexChanged += LogSettingsComboBox_SelectedIndexChanged;
+            logSettingsComboBox.SelectedIndex = 1;
+        }
+
+        private void LogSettingsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           Core.LogSettings = logSettingsComboBox.SelectedIndex;
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)

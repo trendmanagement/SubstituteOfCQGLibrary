@@ -20,7 +20,6 @@ namespace DataCollectionForRealtime
                 Core.AnswerHelper.GetCollection.InsertOne(answer);
                 lock (Core.LogLock)
                 {
-                    AsyncTaskListener.LogMessage("************************************************************");
                     AsyncTaskListener.LogMessage(answer.ToString());
                 }
             }
