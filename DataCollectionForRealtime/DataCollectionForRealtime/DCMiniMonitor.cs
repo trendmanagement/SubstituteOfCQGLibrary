@@ -1,5 +1,6 @@
 ﻿using FakeCQG.Internal;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,9 +8,12 @@ namespace DataCollectionForRealtime
 {
     public partial class DCMiniMonitor : Form
     {
+        public static List<string> instrumentList;
+
         public DCMiniMonitor()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            instrumentList = new List<string>();
         }
 
         internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
@@ -80,5 +84,34 @@ namespace DataCollectionForRealtime
             queriesNumDsplLbl.Text = num.ToString();
         }
 
+        internal void InstrumentListUpdate()
+        {
+            Action action = new Action(
+                () =>
+                {
+                    instrumentListTextBox.Clear();
+                    foreach (var instrument in instrumentList)
+                    {
+                        if (!string.IsNullOrWhiteSpace(instrument))
+                        {
+                            instrumentListTextBox.Text += instrument + "\n";
+                            instrumentListTextBox.Select(instrumentListTextBox.Text.Length, instrumentListTextBox.Text.Length);
+                        }
+                    }
+                    
+                });
+
+            try
+            {
+                if (Program.MainForm.IsHandleCreated)
+                {
+                    Invoke(action);
+                }
+            }
+            catch (ObjectDisposedException)
+            {
+                // User closed the form
+            }
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.MainFormCall = new System.Windows.Forms.Button();
             this.queriesNumLbl = new System.Windows.Forms.Label();
             this.queriesNumDsplLbl = new System.Windows.Forms.Label();
+            this.instrumentListTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // MainFormCall
@@ -46,7 +47,7 @@
             // queriesNumLbl
             // 
             this.queriesNumLbl.AutoSize = true;
-            this.queriesNumLbl.Location = new System.Drawing.Point(9, 130);
+            this.queriesNumLbl.Location = new System.Drawing.Point(10, 149);
             this.queriesNumLbl.Name = "queriesNumLbl";
             this.queriesNumLbl.Size = new System.Drawing.Size(84, 13);
             this.queriesNumLbl.TabIndex = 1;
@@ -55,10 +56,18 @@
             // queriesNumDsplLbl
             // 
             this.queriesNumDsplLbl.AutoSize = true;
-            this.queriesNumDsplLbl.Location = new System.Drawing.Point(105, 128);
+            this.queriesNumDsplLbl.Location = new System.Drawing.Point(106, 147);
             this.queriesNumDsplLbl.Name = "queriesNumDsplLbl";
             this.queriesNumDsplLbl.Size = new System.Drawing.Size(0, 13);
             this.queriesNumDsplLbl.TabIndex = 2;
+            // 
+            // instrumentListTextBox
+            // 
+            this.instrumentListTextBox.Location = new System.Drawing.Point(13, 41);
+            this.instrumentListTextBox.Name = "instrumentListTextBox";
+            this.instrumentListTextBox.Size = new System.Drawing.Size(182, 96);
+            this.instrumentListTextBox.TabIndex = 4;
+            this.instrumentListTextBox.Text = "";
             // 
             // DCMiniMonitor
             // 
@@ -66,6 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(207, 170);
+            this.Controls.Add(this.instrumentListTextBox);
             this.Controls.Add(this.queriesNumDsplLbl);
             this.Controls.Add(this.queriesNumLbl);
             this.Controls.Add(this.MainFormCall);
@@ -83,5 +93,6 @@
         private System.Windows.Forms.Button MainFormCall;
         private System.Windows.Forms.Label queriesNumLbl;
         private System.Windows.Forms.Label queriesNumDsplLbl;
+        private System.Windows.Forms.RichTextBox instrumentListTextBox;
     }
 }

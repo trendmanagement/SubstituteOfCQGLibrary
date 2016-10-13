@@ -14,8 +14,6 @@ namespace DataCollectionForRealtime
 {
     class Listener
     {
-        static bool isStartedListenUnsubscribers = false;
-
         const int HandshakingQueryInterval = 1500;   // 1.5 s
         static HandshakingModel handshaking = new HandshakingModel();
         static Timer timer;

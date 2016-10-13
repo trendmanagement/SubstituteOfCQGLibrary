@@ -79,6 +79,17 @@ namespace DataCollectionForRealtime
                                     object qObj = CQGAssm.CreateInstance(query.MemberName, false,
                                         BindingFlags.CreateInstance, null, args, null, null);
                                     key = Core.CreateUniqueKey();
+
+                                    // Get name of an instrument if it's CQG.CQGInstrumentClass object creation
+                                    // and show it in MiniMonitor form
+                                    if (query.MemberName == "CQG.CQGInstrumentClass")
+                                    {
+                                        string instrName = (string)qObj.GetType().InvokeMember("FullName", 
+                                            BindingFlags.GetProperty, null, qObj, null);
+                                        DCMiniMonitor.instrumentList.Add(instrName);
+                                        Program.MiniMonitor.InstrumentListUpdate();
+                                    }
+
                                     ServerDictionaries.PutObjectToTheDictionary(key, qObj);
                                     break;
                             }
@@ -99,6 +110,17 @@ namespace DataCollectionForRealtime
                         if (query.ObjectKey != CqgDataManagement.CEL_key)
                         {
                             ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+                        }
+
+                        // Remove name of an instrument if it's CQG.CQGInstrumentClass object creation
+                        // from MiniMonitor form
+                        if (query.MemberName == "CQG.CQGInstrumentClass")
+                        {
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                            string instrName = (string)qObj.GetType().InvokeMember("FullName",
+                                BindingFlags.GetProperty, null, qObj, null);
+                            DCMiniMonitor.instrumentList.Remove(instrName);
+                            Program.MiniMonitor.InstrumentListUpdate();
                         }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);

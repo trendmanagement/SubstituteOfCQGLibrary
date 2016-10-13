@@ -33,6 +33,7 @@ namespace UnitTestFakeCQG
                 catch(Exception ex)
                 {
                     isTrue = false;
+                    CQG_LogChange_Mock(ex.ToString());
                 }
                 
                 Assert.AreEqual(isTrue, true);
