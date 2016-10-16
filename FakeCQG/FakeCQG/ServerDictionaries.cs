@@ -1,6 +1,5 @@
-﻿using FakeCQG.Internal.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FakeCQG.Internal.Models;
 
 namespace FakeCQG.Internal
 {
@@ -9,7 +8,7 @@ namespace FakeCQG.Internal
     {
         static Dictionary<string, object> objDictionary = new Dictionary<string, object>();
 
-        public static List<HandshakingModel> RealtimeIds = new List<HandshakingModel>();
+        public static List<HandshakingInfo> RealtimeIds = new List<HandshakingInfo>();
 
         public static void PutObjectToTheDictionary(string key, object obj)
         {
@@ -31,11 +30,11 @@ namespace FakeCQG.Internal
             objDictionary.Clear();
         }
 
-        public static void DeleteFromServerDictionaries(HandshakingModel subscriber)
+        public static void DeleteFromServerDictionaries(HandshakingInfo subscriber)
         {
-            foreach(var obj in subscriber.ObjectKeys)
+            foreach (string key in subscriber.ObjectKeys)
             {
-                objDictionary.Remove(obj);
+                objDictionary.Remove(key);
             }
             RealtimeIds.Remove(subscriber);
         }

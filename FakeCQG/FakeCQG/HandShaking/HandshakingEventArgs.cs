@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FakeCQG.Internal.Models;
-using System;
 
 namespace FakeCQG.Internal.Handshaking
 {
     public class HandshakingEventArgs
     {
-        private List<HandshakingModel> _subscribers;
+        private List<HandshakingInfo> _subscribers;
         public bool NoSubscribers { get; set; }
-        public List<HandshakingModel> Subscribers { get { return _subscribers; } }
+        public List<HandshakingInfo> Subscribers { get { return _subscribers; } }
 
         public List<Guid> Ids { get; set; }
 
@@ -17,7 +17,7 @@ namespace FakeCQG.Internal.Handshaking
             NoSubscribers = true;
         }
 
-        public HandshakingEventArgs(List<HandshakingModel> subscribers)
+        public HandshakingEventArgs(List<HandshakingInfo> subscribers)
         {
             Ids = new List<Guid>();
             foreach (var item in subscribers)

@@ -1,6 +1,6 @@
-﻿using FakeCQG.Internal;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FakeCQG.Internal;
 
 namespace DataCollectionForRealtime
 {
@@ -79,21 +79,21 @@ namespace DataCollectionForRealtime
 
         public static void LogMessage(string msg)
         {
-            switch (Core.LogSettings)
+            switch (Core.LogMode)
             {
-                case 0:
+                case LogModeEnum.Muted:
                     break;
-                case 1:
+                case LogModeEnum.Filtered:
                     if (NeedUpdate(msg))
                     {
                         Update(msg);
                     }
                     break;
-                case 2:
+                case LogModeEnum.Unfiltered:
                     Update(msg);
                     break;
                 default:
-                    throw new NotImplementedException();
+                    throw new ArgumentException();
             }
         }
 

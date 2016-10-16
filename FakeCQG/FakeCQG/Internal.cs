@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Timers;
+using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
-using System.Timers;
 
 namespace FakeCQG
 {
@@ -22,6 +23,13 @@ namespace FakeCQG
             public const string HandshakerId = "_id";
         }
 
+        public enum LogModeEnum
+        {
+            Muted,
+            Filtered,
+            Unfiltered
+        }
+
         public static partial class Core
         {
             #region Helper objects
@@ -29,10 +37,9 @@ namespace FakeCQG
             static string Log;
             public static object LogLock = new object();
             static HashSet<string> LogHash = new HashSet<string>();
-            static bool isMessageOnHashSet;
-            public static int LogSettings = 1;
+            public static LogModeEnum LogMode = LogModeEnum.Filtered;
             static Timer CleanLogTimer = new Timer();
-            static int CleanLogInterval = 60000;  //1 min
+            static int CleanLogInterval = 60000;    // 1 min
             static bool IsClearLogTimerStart;
 
             public delegate void LogHandler(string message);
@@ -42,7 +49,7 @@ namespace FakeCQG
             public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
             public const string NoAnswerMessage = "Timer elapsed. No answer.";
 
-			// Main helper objects of each database collection
+            // Main helper objects of each database collection
             public static QueryHelper QueryHelper;
             public static AnswerHelper AnswerHelper;
             public static EventHelper EventHelper;
@@ -82,7 +89,7 @@ namespace FakeCQG
                 if (FirstCall)
                 {
                     // Start handshaking
-                    Handshaking.Subscriber.ListenForHanshaking();
+                    Subscriber.ListenForHanshaking();
 
                     FirstCall = false;
                 }
@@ -196,26 +203,22 @@ namespace FakeCQG
                     InitCleanLogTimer();
                 }
                 Log = message;
-                isMessageOnHashSet = LogHash.Contains(message);
-                if (!isMessageOnHashSet)
+                bool isMessageInHashSet = LogHash.Add(message);
+                switch (LogMode)
                 {
-                    LogHash.Add(message);
-                }
-                switch (LogSettings)
-                {
-                    case 0:
+                    case LogModeEnum.Muted:
                         break;
-                    case 1:
-                        if (!isMessageOnHashSet)
+                    case LogModeEnum.Filtered:
+                        if (!isMessageInHashSet)
                         {
                             LogChange?.Invoke(Log);
                         }
                         break;
-                    case 2:
+                    case LogModeEnum.Unfiltered:
                         LogChange?.Invoke(Log);
                         break;
                     default:
-                        throw new NotImplementedException();
+                        throw new ArgumentException();
                 }
             }
 
@@ -331,7 +334,7 @@ namespace FakeCQG
 
             public static bool IsSerializableType(Type type)
             {
-                // Keep this method in sync the same method in CodeGenerator project
+                // Keep this method in sync with the same method in CodeGenerator project
                 return type.IsValueType || (type.Assembly.FullName.Substring(0, 8) == "mscorlib" && type.Name != "__ComObject");
             }
 
@@ -342,7 +345,5 @@ namespace FakeCQG
 
             #endregion
         }
-
     }
-    
 }

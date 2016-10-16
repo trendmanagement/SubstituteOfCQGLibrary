@@ -65,7 +65,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\Interop.CQG.dll">
+    <Content Include="..\..\ThirdParty\Interop.CQG.dll">
       <Link>Interop.CQG.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

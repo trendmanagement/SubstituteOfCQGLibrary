@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FakeCQG\CQGLibrary\CQGLibrary.csproj">
+    <ProjectReference Include="..\..\FakeCQG\FakeCQG\FakeCQG.csproj">
       <Project>{282d7bb6-5cc3-44ef-9c47-8edd337462ea}</Project>
-      <Name>CQGLibrary</Name>
+      <Name>FakeCQG</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataCollectionForRealtime\DataCollectionForRealtime.csproj">
       <Project>{1c0b34b2-9dee-4bfd-8064-789acc00a162}</Project>

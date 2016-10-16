@@ -7,8 +7,8 @@
     <ProjectGuid>{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CQGLibrary</RootNamespace>
-    <AssemblyName>CQGLibrary</AssemblyName>
+    <RootNamespace>FakeCQG</RootNamespace>
+    <AssemblyName>FakeCQG</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -75,19 +75,13 @@
     <Compile Include="Internal.cs" />
     <Compile Include="Models\AnswerInfo.cs" />
     <Compile Include="Models\EventInfo.cs" />
-    <Compile Include="Models\HandshakingModel.cs" />
+    <Compile Include="Models\HandshakingInfo.cs" />
     <Compile Include="Models\QueryInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerDictionaries.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\Interop.CQG.dll">
-      <Link>Interop.CQG.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

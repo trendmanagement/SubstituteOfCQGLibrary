@@ -1,7 +1,7 @@
-﻿using FakeCQG.Internal.Models;
-using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using FakeCQG.Internal.Models;
+using MongoDB.Driver;
 
 namespace FakeCQG.Internal.Helpers
 {
@@ -9,10 +9,10 @@ namespace FakeCQG.Internal.Helpers
     {
         protected static IMongoClient _client;
         protected static IMongoDatabase _database;
-        protected static IMongoCollection<HandshakingModel> _collectionSubscribers;
-        protected static IMongoCollection<HandshakingModel> _collectionUnsubscribers;
+        protected static IMongoCollection<HandshakingInfo> _collectionSubscribers;
+        protected static IMongoCollection<HandshakingInfo> _collectionUnsubscribers;
 
-        public IMongoCollection<HandshakingModel> GetCollectionSubscribers
+        public IMongoCollection<HandshakingInfo> GetCollectionSubscribers
         {
             get
             {
@@ -20,7 +20,7 @@ namespace FakeCQG.Internal.Helpers
             }
         }
 
-        public IMongoCollection<HandshakingModel> GetCollectionUnsubscribers
+        public IMongoCollection<HandshakingInfo> GetCollectionUnsubscribers
         {
             get
             {
@@ -46,15 +46,14 @@ namespace FakeCQG.Internal.Helpers
         {
             _client = new MongoClient(ConnectionSettings.ConnectionString);
             _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collectionSubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.HandshakingCollectionName);
-            _collectionUnsubscribers = _database.GetCollection<HandshakingModel>(ConnectionSettings.UnsubscribeHandshakingCollectionName);
+            _collectionSubscribers = _database.GetCollection<HandshakingInfo>(ConnectionSettings.HandshakingCollectionName);
+            _collectionUnsubscribers = _database.GetCollection<HandshakingInfo>(ConnectionSettings.UnsubscribeHandshakingCollectionName);
             return _collectionSubscribers != null;
         }
 
-
         public Task ClearHandShackingListAsync()
         {
-            var filter = Builders<HandshakingModel>.Filter.Empty;
+            var filter = Builders<HandshakingInfo>.Filter.Empty;
             return Task.Run(() =>
             {
                 try
@@ -72,6 +71,5 @@ namespace FakeCQG.Internal.Helpers
                 }
             });
         }
-
     }
 }

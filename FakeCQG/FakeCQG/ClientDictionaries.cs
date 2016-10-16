@@ -21,7 +21,6 @@ namespace FakeCQG.Internal
             }
         }
 
-
         public static Dictionary<string, Dictionary<string, bool>> EventCheckingDictionary
         {
             get
@@ -30,15 +29,18 @@ namespace FakeCQG.Internal
             }
         }
 
-        public static void FillEventCheckingDictionary(string objKey, string objTName)
+        public static void FillEventCheckingDictionary(string objKey, string objTypeName)
         {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assmPath = Path.Combine(path, "Interop.CQG.dll");
-            var assm = Assembly.LoadFrom(assmPath);
+            // Load fake assembly
+            string fakeAssmDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string fakeAssmPath = Path.Combine(fakeAssmDir, "FakeCQG.dll");
+            var fakeAssm = Assembly.LoadFrom(fakeAssmPath);
 
-            Type objT = assm.GetType(objTName, true);
+            // Get fake object type
+            string fakeObjTypeName = "Fake" + objTypeName;
+            Type fakeObjType = fakeAssm.GetType(fakeObjTypeName, true);
 
-            IEnumerable<EventInfo> einfos = objT.GetEvents();
+            IEnumerable<EventInfo> einfos = fakeObjType.GetEvents();
 
             if (einfos != null)
             {

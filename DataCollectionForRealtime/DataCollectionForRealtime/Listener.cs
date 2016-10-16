@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG.Internal;
-using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Handshaking;
+using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
 using MongoDB.Driver;
 
@@ -15,7 +14,7 @@ namespace DataCollectionForRealtime
     class Listener
     {
         const int HandshakingQueryInterval = 1500;   // 1.5 s
-        static HandshakingModel handshaking = new HandshakingModel();
+        static HandshakingInfo handshaking = new HandshakingInfo();
         static Timer timer;
         static HandshakingHelper mongo = new HandshakingHelper();
 
@@ -39,17 +38,17 @@ namespace DataCollectionForRealtime
             });
         }
 
-        private static void CheckSubscribers(IMongoCollection<HandshakingModel> collection)
+        private static void CheckSubscribers(IMongoCollection<HandshakingInfo> collection)
         {
-            var filter = Builders<HandshakingModel>.Filter.Empty;
-            List<HandshakingModel> subscribers = new List<HandshakingModel>();
+            var filter = Builders<HandshakingInfo>.Filter.Empty;
+            List<HandshakingInfo> subscribers = new List<HandshakingInfo>();
             subscribers = collection.Find(filter).ToList();
             OnSubscribersAdded(subscribers);
         }
 
-        private static void OnSubscribersAdded(List<HandshakingModel> subscribers)
+        private static void OnSubscribersAdded(List<HandshakingInfo> subscribers)
         {
-            //TODO: Implement logic for variant without subscribers and for only one suscriber
+            //TODO: Implement logic for variant without subscribers and for only one subscriber
             if (subscribers.Count == 0)
             {
                 AsyncTaskListener.LogMessage("No subscribers for handshaking");
@@ -63,23 +62,23 @@ namespace DataCollectionForRealtime
             timer.Start();
         }
 
-        private static void SendHandshakingQuery(IMongoCollection<HandshakingModel> collection)
+        private static void SendHandshakingQuery(IMongoCollection<HandshakingInfo> collection)
         {
-            var filter = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, handshaking.ID);
+            var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, handshaking.ID);
             collection.InsertOne(handshaking);
             Task.Delay(HandshakingQueryInterval).GetAwaiter().GetResult();
             collection.DeleteOne(filter);
         }
 
-        static void ClearCollection(IMongoCollection<HandshakingModel> collection)
+        static void ClearCollection(IMongoCollection<HandshakingInfo> collection)
         {
-            var filter = Builders<HandshakingModel>.Filter.Empty;
+            var filter = Builders<HandshakingInfo>.Filter.Empty;
             collection.DeleteMany(filter);
         }
 
         public static void DeleteUnsubscriber(Guid id)
         {
-            var filter = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, id);
+            var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, id);
             mongo.GetCollectionUnsubscribers.DeleteOne(filter);
         }
 
