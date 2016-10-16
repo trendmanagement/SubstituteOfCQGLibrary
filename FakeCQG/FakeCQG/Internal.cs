@@ -203,13 +203,13 @@ namespace FakeCQG
                     InitCleanLogTimer();
                 }
                 Log = message;
-                bool isMessageInHashSet = LogHash.Add(message);
+                bool isNewMessage = LogHash.Add(message);
                 switch (LogMode)
                 {
                     case LogModeEnum.Muted:
                         break;
                     case LogModeEnum.Filtered:
-                        if (!isMessageInHashSet)
+                        if (isNewMessage)
                         {
                             LogChange?.Invoke(Log);
                         }
