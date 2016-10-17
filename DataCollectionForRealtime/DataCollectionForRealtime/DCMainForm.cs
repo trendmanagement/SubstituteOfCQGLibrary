@@ -8,6 +8,7 @@ using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
 using System.Collections.Generic;
 using System.Collections;
+using System.Threading.Tasks;
 
 namespace DataCollectionForRealtime
 {
@@ -300,7 +301,7 @@ namespace DataCollectionForRealtime
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
+            if (!canClose || this.Visible || !Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
             {
                 string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
                 ServerDictionaries.RealtimeIds.Count);
@@ -330,25 +331,27 @@ namespace DataCollectionForRealtime
             this.Visible = false;
 
             #region Timer inits
-            Timer timerClose = new Timer();
+
+            System.Timers.Timer timerClose = new System.Timers.Timer();
             timerClose.Interval = closingOperationInterval;
-            timerClose.Disposed += TimerClose_Disposed;
+            timerClose.Elapsed += TimerClose_Elapsed;
             timerClose.Start();
+
             #endregion
 
-            while (ServerDictionaries.RealtimeIds.Count != 0)
+            while (!canClose || ServerDictionaries.RealtimeIds.Count != 0)
             {
                 QueryHandler.ReadQueries();
                 QueryHandler.ProcessEntireQueryList();
             }
             canClose = true;
-            Close();
+            Application.Exit();
         }
 
-        private void TimerClose_Disposed(object sender, EventArgs e)
+        private void TimerClose_Elapsed(object sender, EventArgs e)
         {
             canClose = true;
-            Close();
+            Application.Exit();
         }
     }
 }
