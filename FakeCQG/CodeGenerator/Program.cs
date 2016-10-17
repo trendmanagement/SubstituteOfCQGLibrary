@@ -17,7 +17,7 @@ namespace CodeGenerator
             string assmPath = Path.Combine(path, "Interop.CQG.dll");
             var assm = Assembly.LoadFrom(assmPath);
 
-            string outPath = Path.GetFullPath(path + @"..\..\..\..\CQGLibrary\AutoGenClientAPI.cs");
+            string outPath = Path.GetFullPath(path + @"..\..\..\..\FakeCQG\AutoGenClientAPI.cs");
             string dcOutPath = Path.GetFullPath(path + @"..\..\..\..\..\DataCollectionForRealtime\DataCollectionForRealtime\AutoGenEventHandlers.cs");
 
             CurrentIndent = 1;

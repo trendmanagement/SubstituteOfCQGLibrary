@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FakeCQG.Internal.Models
 {
-    public class HandshakingModel
+    public class HandshakingInfo
     {
         #region Serialized properties
 
@@ -21,14 +21,14 @@ namespace FakeCQG.Internal.Models
 
         public Dictionary<string, Dictionary<string, bool>> UnsubscribeEventList;
 
-        public HandshakingModel(List<string> keys, Dictionary<string, Dictionary<string, bool>> unsubscribeEventList)
+        public HandshakingInfo(List<string> keys, Dictionary<string, Dictionary<string, bool>> unsubscribeEventList)
         {
             _id = Guid.NewGuid();
             ObjectKeys = keys;
             UnsubscribeEventList = unsubscribeEventList;
         }
 
-        public HandshakingModel()
+        public HandshakingInfo()
         {
             _id = Guid.NewGuid();
             ObjectKeys = new List<string>();

@@ -10,10 +10,10 @@ namespace FakeCQG.Internal.Handshaking
 {
     public static class Subscriber
     {
-        static HandshakingModel handshaker = new HandshakingModel();
+        static HandshakingInfo handshaker = new HandshakingInfo();
 
         static HandshakingHelper mongo;
-        static IMongoCollection<HandshakingModel> collection;
+        static IMongoCollection<HandshakingInfo> collection;
 
         public static Task ListenForHanshaking()
         {
@@ -21,8 +21,8 @@ namespace FakeCQG.Internal.Handshaking
             {
                 Core.OnLogChange("Listening for handshacking is started");
 
-                var filter = Builders<HandshakingModel>.Filter.Empty;
-                var filterId = Builders<HandshakingModel>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
+                var filter = Builders<HandshakingInfo>.Filter.Empty;
+                var filterId = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
                 while (true)
                 {
                     try

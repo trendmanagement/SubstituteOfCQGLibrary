@@ -6,8 +6,6 @@ using FakeCQG.Internal;
 using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
-using System.Collections.Generic;
-using System.Collections;
 using System.Threading.Tasks;
 
 namespace DataCollectionForRealtime
@@ -17,8 +15,8 @@ namespace DataCollectionForRealtime
         const int AutoWorkTimerInterval = 30;      // ms
         const int HandshakingTimerInterval = 3000;
         const int DictionaryClearingInterval = 30000;
-		
-		bool enteringMongoDBURL = false;
+
+        bool enteringMongoDBURL = false;
 
         System.Timers.Timer AutoWorkTimer;
         Timer HandshakingTimer = new Timer();
@@ -65,16 +63,17 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
 
-            logSettingsComboBox.Items.Add("Off  log");
-            logSettingsComboBox.Items.Add("Separate log");
-            logSettingsComboBox.Items.Add("All log");
-            logSettingsComboBox.SelectedIndexChanged += LogSettingsComboBox_SelectedIndexChanged;
-            logSettingsComboBox.SelectedIndex = 1;
+            foreach (string name in Enum.GetNames(typeof(LogModeEnum)))
+            {
+                comboBoxLogMode.Items.Add(name);
+            }
+            comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
+            comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
         }
 
-        private void LogSettingsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void LogModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           Core.LogSettings = logSettingsComboBox.SelectedIndex;
+           Core.LogMode = (LogModeEnum)Enum.GetValues(typeof(LogModeEnum)).GetValue(comboBoxLogMode.SelectedIndex);
         }
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
@@ -83,7 +82,7 @@ namespace DataCollectionForRealtime
             ServerDictionaries.RealtimeIds.Clear();
             if (!args.NoSubscribers)
             {
-                foreach (HandshakingModel subscriber in args.Subscribers)
+                foreach (HandshakingInfo subscriber in args.Subscribers)
                 {
                     subscribersList.Remove(subscriber);
                     ServerDictionaries.RealtimeIds.Add(subscriber);
@@ -110,11 +109,11 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void UnsubscribeEvents(HandshakingModel subscriber)
+        private void UnsubscribeEvents(HandshakingInfo subscriber)
         {
-            foreach(var eventInfor in subscriber.UnsubscribeEventList)
+            foreach (var eventInfor in subscriber.UnsubscribeEventList)
             {
-                foreach(var dic in eventInfor.Value)
+                foreach (var dic in eventInfor.Value)
                 {
                     if (dic.Value)
                     {
@@ -122,7 +121,7 @@ namespace DataCollectionForRealtime
                         System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
 
                         // Find corresponding CQG delegate
-                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, (dic.Key));
+                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
 
                         // Instantiate the delegate with our own handler
                         string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
@@ -279,23 +278,23 @@ namespace DataCollectionForRealtime
         private void ChangeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             enteringMongoDBURL = enteringMongoDBURL ? false : true;
-            MongoDBURL.Visible = enteringMongoDBURL;
-            MongoDBURLLabel.Visible = enteringMongoDBURL;
-            ChangeDBURLBtn.Visible = enteringMongoDBURL;
-            MongoDBURL.Text = ConnectionSettings.ConnectionString;
+            textBoxMongoDbUrl.Visible = enteringMongoDBURL;
+            labelMongoDbUrl.Visible = enteringMongoDBURL;
+            buttonChangeMongoDbUrl.Visible = enteringMongoDBURL;
+            textBoxMongoDbUrl.Text = ConnectionSettings.ConnectionString;
         }
 
         private void ChangeDBURLBtn_Click(object sender, EventArgs e)
         {
-            if (ConnectionSettings.ConnectionString != MongoDBURL.Text && MongoDBURL.Text != "")
+            if (ConnectionSettings.ConnectionString != textBoxMongoDbUrl.Text && textBoxMongoDbUrl.Text != "")
             {
-                ConnectionSettings.ConnectionString = MongoDBURL.Text;
+                ConnectionSettings.ConnectionString = textBoxMongoDbUrl.Text;
                 QueryHandler.HelpersInit();
             }
 
-            MongoDBURL.Visible = false;
-            MongoDBURLLabel.Visible = false;
-            ChangeDBURLBtn.Visible = false;
+            textBoxMongoDbUrl.Visible = false;
+            labelMongoDbUrl.Visible = false;
+            buttonChangeMongoDbUrl.Visible = false;
             enteringMongoDBURL = false;
         }
 

@@ -134,9 +134,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FakeCQG\CQGLibrary\CQGLibrary.csproj">
+    <ProjectReference Include="..\..\FakeCQG\FakeCQG\FakeCQG.csproj">
       <Project>{282d7bb6-5cc3-44ef-9c47-8edd337462ea}</Project>
-      <Name>CQGLibrary</Name>
+      <Name>FakeCQG</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

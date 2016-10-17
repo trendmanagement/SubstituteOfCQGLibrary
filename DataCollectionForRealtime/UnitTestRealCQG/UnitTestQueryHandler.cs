@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestRealCQG
 {
     [TestClass]
+    [DeploymentItem("Interop.CQG.dll")]
     public class UnitTestQueryHandler
     {
         QueryHandler QueryHandler;
@@ -374,6 +375,7 @@ namespace UnitTestRealCQG
             string name = "name";
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
+            StartUp();
             Task.Run(async () =>
             {
                 await answerHelper.ClearAnswersListAsync();
@@ -411,7 +413,6 @@ namespace UnitTestRealCQG
             Task.Run(async () =>
             {
                 await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
-
             }).GetAwaiter().GetResult();
             var answer = answerHelper.GetAnswerData(id, out isAnswer);
 
@@ -430,6 +431,7 @@ namespace UnitTestRealCQG
             var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
+            StartUp();
             Task.Run(async () =>
             {
                 await answerHelper.ClearAnswersListAsync();
@@ -438,17 +440,16 @@ namespace UnitTestRealCQG
             // act
             Task.Run(async () =>
             {
-                await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
-
+                await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, argValues));
             }).GetAwaiter().GetResult();
             var answer = answerHelper.GetAnswerData(id, out isAnswer);
 
             // assert
             Assert.IsTrue(isAnswer);
             Assert.AreEqual(id, answer.AnswerKey);
-            //TODO: uncomment after completes deserialize from dictionary to bson
-            //Assert.IsNotNull(answer.ArgValues);
-            //Assert.AreEqual(arguments, answer.ArgValues[1]);
+            Assert.IsNotNull(answer.ArgValues);
+            Assert.AreEqual("value1", answer.ArgValues[0]);
+            Assert.AreEqual("value2", answer.ArgValues[1]);
         }
 
         // Parts of log messages to skip
@@ -482,11 +483,8 @@ namespace UnitTestRealCQG
         private void CQG_GetQueries_Mock(List<QueryInfo> queries)
         {
         }
-
     }
-
 }
-
 
 
 internal class MyClass

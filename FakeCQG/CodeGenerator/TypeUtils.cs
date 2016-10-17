@@ -42,7 +42,7 @@ namespace CodeGenerator
 
         static bool IsSerializableType(Type type)
         {
-            // Keep this method in sync the same method in CQGLibrary project
+            // Keep this method in sync with the same method in FakeCQG project
             return type.IsValueType || (type.Assembly.FullName.Substring(0, 8) == "mscorlib" && type.Name != "__ComObject");
         }
     }

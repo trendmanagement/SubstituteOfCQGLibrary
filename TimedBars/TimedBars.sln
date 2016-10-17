@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedBars", "TimedBars\Time
 		{282D7BB6-5CC3-44EF-9C47-8EDD337462EA} = {282D7BB6-5CC3-44EF-9C47-8EDD337462EA}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQGLibrary", "..\FakeCQG\CQGLibrary\CQGLibrary.csproj", "{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeCQG", "..\FakeCQG\FakeCQG\FakeCQG.csproj", "{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
