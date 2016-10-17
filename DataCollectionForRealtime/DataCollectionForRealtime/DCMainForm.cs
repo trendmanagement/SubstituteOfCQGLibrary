@@ -7,6 +7,7 @@ using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DataCollectionForRealtime
 {
@@ -78,10 +79,12 @@ namespace DataCollectionForRealtime
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
-            var subscribersList = ServerDictionaries.RealtimeIds;
+            var subscribersArray = new HandshakingInfo[ServerDictionaries.RealtimeIds.Count];
+            ServerDictionaries.RealtimeIds.CopyTo(subscribersArray);
             ServerDictionaries.RealtimeIds.Clear();
             if (!args.NoSubscribers)
             {
+                var subscribersList = new List<HandshakingInfo>(subscribersArray);
                 foreach (HandshakingInfo subscriber in args.Subscribers)
                 {
                     subscribersList.Remove(subscriber);
@@ -300,17 +303,14 @@ namespace DataCollectionForRealtime
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!canClose || this.Visible || !Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
+            if (!Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
             {
                 string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
                 ServerDictionaries.RealtimeIds.Count);
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    if(!canClose || ServerDictionaries.RealtimeIds.Count > 0)
-                    {
-                        ClosingOperation();
-                    }
+                    this.WindowState = FormWindowState.Minimized;
                     CqgDataManagement.shutDownCQGConn();
                     e.Cancel = false;
                 }
@@ -325,32 +325,43 @@ namespace DataCollectionForRealtime
             }
         }
 
+        private void DCMainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            if (ServerDictionaries.RealtimeIds.Count > 0)
+            {
+                ClosingOperation();
+            }
+            else
+            {
+                CqgDataManagement.shutDownCQGConn();
+            }
+        }
+
         void ClosingOperation()
         {
-            this.Visible = false;
-
             #region Timer inits
 
             System.Timers.Timer timerClose = new System.Timers.Timer();
             timerClose.Interval = closingOperationInterval;
             timerClose.Elapsed += TimerClose_Elapsed;
+            timerClose.AutoReset = false;
             timerClose.Start();
 
             #endregion
 
-            while (!canClose || ServerDictionaries.RealtimeIds.Count != 0)
+            while (!canClose)
             {
                 QueryHandler.ReadQueries();
                 QueryHandler.ProcessEntireQueryList();
             }
             canClose = true;
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void TimerClose_Elapsed(object sender, EventArgs e)
         {
             canClose = true;
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }
