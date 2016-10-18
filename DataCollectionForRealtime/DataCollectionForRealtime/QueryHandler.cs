@@ -344,7 +344,7 @@ namespace DataCollectionForRealtime
         // reading information from queries collection
         #region Check and read info about queries from DB
         // Checking of queries in DB and reading them if exist
-        public void ReadQueries()
+        public void ReadQueries(bool isLog = true)
         {
             var filter = Builders<QueryInfo>.Filter.Empty;
             try
@@ -363,14 +363,17 @@ namespace DataCollectionForRealtime
                     NewQueriesReady(queries);
                 }
 
-                lock (Core.LogLock)
+                if(isLog)
                 {
-                    AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database", queries.Count));
-                    foreach (QueryInfo query in queries)
+                    lock (Core.LogLock)
                     {
-                        AsyncTaskListener.LogMessage(query.ToString());
+                        AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database", queries.Count));
+                        foreach (QueryInfo query in queries)
+                        {
+                            AsyncTaskListener.LogMessage(query.ToString());
+                        }
                     }
-                }
+                } 
             }
             catch (Exception ex)
             {

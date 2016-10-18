@@ -7,7 +7,7 @@ using RealtimeSpreadMonitor.Forms;
 using System.Drawing;
 using System.Threading;
 using System.Collections.Concurrent;
-using CQGLibrary;
+using CQGLibrary = FakeCQG;
 
 namespace RealtimeSpreadMonitor
 {
@@ -23,7 +23,7 @@ namespace RealtimeSpreadMonitor
         ConcurrentDictionary<string, int> optionSpreadExpressionListHashTableIdx = new ConcurrentDictionary<string, int>();
 
         //CQG.CQGCEL m_CEL;
-        CQGLibrary.CQG.CQGCEL m_CEL_fake;
+        CQGLibrary.CQGCELClass m_CEL_fake;
 
         private bool resetOrderPageOnceAllDataIn = false;
 
@@ -123,12 +123,12 @@ namespace RealtimeSpreadMonitor
             try
             {
 
-                m_CEL_fake = new CQGLibrary.CQG.CQGCEL();
+                m_CEL_fake = new CQGLibrary.CQGCELClass();
 
-                m_CEL_CELDataConnectionChg(CQGLibrary.CQG.eConnectionStatus.csConnectionDown);
+                m_CEL_CELDataConnectionChg(CQGLibrary.eConnectionStatus.csConnectionDown);
                 //(callsFromCQG,&CallsFromCQG.m_CEL_CELDataConnectionChg);
 
-                m_CEL_fake.DataConnectionStatusChanged += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
+                m_CEL_fake.DataConnectionStatusChanged += new CQGLibrary._ICQGCELEvents_DataConnectionStatusChangedEventHandler(m_CEL_CELDataConnectionChg);
 
                 //m_CEL.LineTimeChanged += new CQG._ICQGCELEvents_LineTimeChangedEventHandler(m_CEL_LineTimeChanged);
 
@@ -136,23 +136,23 @@ namespace RealtimeSpreadMonitor
                 //m_CEL.InstrumentsGroupResolved += new CQG._ICQGCELEvents_InstrumentsGroupResolvedEventHandler(m_CEL_InstrumentsGroupResolved);
                 // 		m_CEL.InstrumentsGroupChanged += new _ICQGCELEvents_InstrumentsGroupChangedEventHandler(m_CEL_InstrumentsGroupChanged);
 
-                m_CEL_fake.TimedBarsResolved += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_TimedBarsResolvedEventHandler(m_CEL_TimedBarResolved);
-                m_CEL_fake.TimedBarsAdded += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_TimedBarsAddedEventHandler(m_CEL_TimedBarsAdded);
-                m_CEL_fake.TimedBarsUpdated += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_TimedBarsUpdatedEventHandler(m_CEL_TimedBarsUpdated);
+                m_CEL_fake.TimedBarsResolved += new CQGLibrary._ICQGCELEvents_TimedBarsResolvedEventHandler(m_CEL_TimedBarResolved);
+                m_CEL_fake.TimedBarsAdded += new CQGLibrary._ICQGCELEvents_TimedBarsAddedEventHandler(m_CEL_TimedBarsAdded);
+                m_CEL_fake.TimedBarsUpdated += new CQGLibrary._ICQGCELEvents_TimedBarsUpdatedEventHandler(m_CEL_TimedBarsUpdated);
 
                 //m_CEL.IncorrectSymbol += new _ICQGCELEvents_IncorrectSymbolEventHandler(CEL_IncorrectSymbol);
-                m_CEL_fake.InstrumentSubscribed += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_InstrumentSubscribedEventHandler(m_CEL_InstrumentSubscribed);
-                m_CEL_fake.InstrumentChanged += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_InstrumentChangedEventHandler(m_CEL_InstrumentChanged);
+                m_CEL_fake.InstrumentSubscribed += new CQGLibrary._ICQGCELEvents_InstrumentSubscribedEventHandler(m_CEL_InstrumentSubscribed);
+                m_CEL_fake.InstrumentChanged += new CQGLibrary._ICQGCELEvents_InstrumentChangedEventHandler(m_CEL_InstrumentChanged);
 
-                m_CEL_fake.DataError += new CQGLibrary.CQG.CQGCEL._ICQGCELEvents_DataErrorEventHandler(m_CEL_DataError);
+                m_CEL_fake.DataError += new CQGLibrary._ICQGCELEvents_DataErrorEventHandler(m_CEL_DataError);
 
                 //m_CEL.APIConfiguration.NewInstrumentMode = true;
 
-                m_CEL_fake.APIConfiguration.ReadyStatusCheck = CQGLibrary.CQG.eReadyStatusCheck.rscOff;
+                m_CEL_fake.APIConfiguration.ReadyStatusCheck = CQGLibrary.eReadyStatusCheck.rscOff;
 
                 m_CEL_fake.APIConfiguration.CollectionsThrowException = false;
 
-                m_CEL_fake.APIConfiguration.TimeZoneCode = CQGLibrary.CQG.eTimeZone.tzPacific;
+                m_CEL_fake.APIConfiguration.TimeZoneCode = CQGLibrary.eTimeZone.tzPacific;
                 //m_CEL.Startup();
 
                 connectCQG();
@@ -163,7 +163,7 @@ namespace RealtimeSpreadMonitor
             }
         }
         
-        private void m_CEL_CELDataConnectionChg(CQGLibrary.CQG.eConnectionStatus new_status)
+        private void m_CEL_CELDataConnectionChg(CQGLibrary.eConnectionStatus new_status)
         {
             StringBuilder connStatusString = new StringBuilder();
             StringBuilder connStatusShortString = new StringBuilder();
@@ -182,10 +182,10 @@ namespace RealtimeSpreadMonitor
                     connStatusString.Append(m_CEL_fake.Environment.CELVersion);
                     connStatusShortString.Append("CQG:");
 
-                    if (new_status != CQGLibrary.CQG.eConnectionStatus.csConnectionUp)
-                    if (new_status != CQGLibrary.CQG.eConnectionStatus.csConnectionUp)
+                    if (new_status != CQGLibrary.eConnectionStatus.csConnectionUp)
+                    if (new_status != CQGLibrary.eConnectionStatus.csConnectionUp)
                     {
-                        if (new_status == CQGLibrary.CQG.eConnectionStatus.csConnectionDelayed)
+                        if (new_status == CQGLibrary.eConnectionStatus.csConnectionDelayed)
                         {
                             connColor = Color.BlanchedAlmond;
                             connStatusString.Append(" - CONNECTION IS DELAYED");
@@ -314,15 +314,15 @@ namespace RealtimeSpreadMonitor
                                     OPTION_SPREAD_CONTRACT_TYPE.FUTURE)
                             {
                                 optionSpreadExpressionList[expressionCounter].cqgInstrument.DataSubscriptionLevel
-                                    = CQGLibrary.CQG.eDataSubscriptionLevel.dsQuotes;
+                                    = CQGLibrary.eDataSubscriptionLevel.dsQuotes;
                             }
                             else
                             {
                                 optionSpreadExpressionList[expressionCounter].cqgInstrument.DataSubscriptionLevel
-                                    = CQGLibrary.CQG.eDataSubscriptionLevel.dsQuotesAndBBA;
+                                    = CQGLibrary.eDataSubscriptionLevel.dsQuotesAndBBA;
 
                                 optionSpreadExpressionList[expressionCounter].cqgInstrument.BBAType
-                                     = CQGLibrary.CQG.eDOMandBBAType.dbtCombined;
+                                     = CQGLibrary.eDOMandBBAType.dbtCombined;
                             }
 
                         }
@@ -332,7 +332,7 @@ namespace RealtimeSpreadMonitor
 
                             //set updates for interest rate to stop
                             optionSpreadExpressionList[expressionCounter].cqgInstrument.DataSubscriptionLevel
-                                = CQGLibrary.CQG.eDataSubscriptionLevel.dsNone;
+                                = CQGLibrary.eDataSubscriptionLevel.dsNone;
 
                         }
 
@@ -350,7 +350,7 @@ namespace RealtimeSpreadMonitor
 
         private void m_CEL_InstrumentChanged(CQGLibrary.CQGInstrument cqgInstrument,
                                  CQGLibrary.CQGQuotes quotes,
-                                 CQGLibrary.CQG.CQGInstrumentProperties props)
+                                 CQGLibrary.CQGInstrumentProperties props)
         {
             try
             {
@@ -388,11 +388,11 @@ namespace RealtimeSpreadMonitor
                         //foreach (DictionaryEntry item in m_QuoteTypeToData)
                         {
 
-                            CQGLibrary.CQGQuote quoteAsk = quotes[CQGLibrary.CQG.eQuoteType.qtAsk];
-                            CQGLibrary.CQGQuote quoteBid = quotes[CQGLibrary.CQG.eQuoteType.qtBid];
-                            CQGLibrary.CQGQuote quoteTrade = quotes[CQGLibrary.CQG.eQuoteType.qtTrade];
-                            CQGLibrary.CQGQuote quoteSettlement = quotes[CQGLibrary.CQG.eQuoteType.qtSettlement];
-                            CQGLibrary.CQGQuote quoteYestSettlement = quotes[CQGLibrary.CQG.eQuoteType.qtYesterdaySettlement];
+                            CQGLibrary.CQGQuote quoteAsk = quotes[CQGLibrary.eQuoteType.qtAsk];
+                            CQGLibrary.CQGQuote quoteBid = quotes[CQGLibrary.eQuoteType.qtBid];
+                            CQGLibrary.CQGQuote quoteTrade = quotes[CQGLibrary.eQuoteType.qtTrade];
+                            CQGLibrary.CQGQuote quoteSettlement = quotes[CQGLibrary.eQuoteType.qtSettlement];
+                            CQGLibrary.CQGQuote quoteYestSettlement = quotes[CQGLibrary.eQuoteType.qtYesterdaySettlement];
 
                             if ((quoteAsk != null)
                                 || (quoteBid != null)
@@ -449,7 +449,7 @@ namespace RealtimeSpreadMonitor
         /// </summary>
         /// <param name="cqg_TimedBarsIn">The CQG_ timed bars in.</param>
         /// <param name="cqg_error">The cqg_error.</param>
-        private void m_CEL_TimedBarResolved(CQGLibrary.CQGTimedBars cqg_TimedBarsIn, CQGLibrary.CQG.CQGError cqg_error)
+        private void m_CEL_TimedBarResolved(CQGLibrary.CQGTimedBars cqg_TimedBarsIn, CQGLibrary.CQGError cqg_error)
         {
             //Debug.WriteLine("m_CEL_ExpressionResolved" + cqg_expression.Count);
             try
@@ -1555,7 +1555,7 @@ namespace RealtimeSpreadMonitor
                 //}
                 //else
                 //{
-                timedBarsRequest.Continuation = CQGLibrary.CQG.eTimeSeriesContinuationType.tsctNoContinuation;
+                timedBarsRequest.Continuation = CQGLibrary.eTimeSeriesContinuationType.tsctNoContinuation;
                 //}
 
                 //timedBarsRequest.Continuation = CQG.eTimeSeriesContinuationType.tsctNoContinuation;
@@ -1669,11 +1669,11 @@ namespace RealtimeSpreadMonitor
             //CQGQuote quoteSettlement = optionSpreadExpression.cqgInstrument.Quotes[eQuoteType.qtSettlement];
             //CQGQuote quoteYestSettlement = optionSpreadExpression.cqgInstrument.Quotes[eQuoteType.qtYesterdaySettlement];
 
-            CQGLibrary.CQGQuote quoteAsk = quotes[CQGLibrary.CQG.eQuoteType.qtAsk];
-            CQGLibrary.CQGQuote quoteBid = quotes[CQGLibrary.CQG.eQuoteType.qtBid];
-            CQGLibrary.CQGQuote quoteTrade = quotes[CQGLibrary.CQG.eQuoteType.qtTrade];
-            CQGLibrary.CQGQuote quoteSettlement = quotes[CQGLibrary.CQG.eQuoteType.qtSettlement];
-            CQGLibrary.CQGQuote quoteYestSettlement = quotes[CQGLibrary.CQG.eQuoteType.qtYesterdaySettlement];
+            CQGLibrary.CQGQuote quoteAsk = quotes[CQGLibrary.eQuoteType.qtAsk];
+            CQGLibrary.CQGQuote quoteBid = quotes[CQGLibrary.eQuoteType.qtBid];
+            CQGLibrary.CQGQuote quoteTrade = quotes[CQGLibrary.eQuoteType.qtTrade];
+            CQGLibrary.CQGQuote quoteSettlement = quotes[CQGLibrary.eQuoteType.qtSettlement];
+            CQGLibrary.CQGQuote quoteYestSettlement = quotes[CQGLibrary.eQuoteType.qtYesterdaySettlement];
 
             if (optionSpreadExpression.callPutOrFuture != OPTION_SPREAD_CONTRACT_TYPE.FUTURE)
             {

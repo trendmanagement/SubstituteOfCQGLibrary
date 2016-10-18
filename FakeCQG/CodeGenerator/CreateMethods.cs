@@ -53,6 +53,12 @@ namespace CodeGenerator
                 return;
             }
 
+            if(minfo.Name == "Shutdown")
+            {
+                File.WriteLine(Indent2 + "if(!isDCClosed)" + Environment.NewLine + Indent2 + "{");
+                Indent2 = Indent3;
+            }
+
             File.WriteLine(Indent2 + "string name = \"" + minfo.Name + "\";");
 
             if (minfo.GetParameters().Length != 0)
@@ -105,7 +111,13 @@ namespace CodeGenerator
                 File.WriteLine("(key);");
                 File.WriteLine(Indent2 + "return result;");
             }
-            
+
+            if (minfo.Name == "Shutdown")
+            {
+                InitIndents();
+                File.WriteLine(Indent2 + "}");
+            }
+
             MemberEnd();
         }
 

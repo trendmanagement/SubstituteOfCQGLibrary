@@ -372,7 +372,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FakeCQG\FakeCQG.csproj">
+    <ProjectReference Include="..\..\FakeCQG\FakeCQG\FakeCQG.csproj">
       <Project>{282d7bb6-5cc3-44ef-9c47-8edd337462ea}</Project>
       <Name>FakeCQG</Name>
     </ProjectReference>

@@ -81,6 +81,15 @@ namespace CodeGenerator
                 if (!isInterface)
                 {
                     File.WriteLine(Indent2 + "{");
+
+                    if(pinfo.Name == "IsStarted")
+                    {
+                        File.WriteLine(Indent3 + "if(isDCClosed)" + Environment.NewLine + Indent3 +
+                            "{" + Environment.NewLine + Indent4 + "return false;" + Environment.NewLine + Indent3 + "}" +
+                            Environment.NewLine + Indent3 + "else" + Environment.NewLine + Indent3 + "{");
+                        Indent3 = Indent4;
+                    }
+
                     File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
 
                     string args;
@@ -113,6 +122,13 @@ namespace CodeGenerator
                     }
 
                     File.WriteLine(Indent3 + "return value;");
+
+                    if (pinfo.Name == "IsStarted")
+                    {
+                        InitIndents();
+                        File.WriteLine(Indent3 + "}");                
+                    }
+
                     File.WriteLine(Indent2 + "}" + Environment.NewLine);
                 }
             }

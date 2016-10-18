@@ -275,6 +275,7 @@
             this.Name = "DCMainForm";
             this.Text = "Data Collector for Realtime";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DCMainForm_FormClosing);
+            this.FormClosed += DCMainForm_FormClosed;
             this.Load += new System.EventHandler(this.RealtimeDataManagement_Load);
             this.statusStripOptionMonitor.ResumeLayout(false);
             this.statusStripOptionMonitor.PerformLayout();
@@ -290,6 +291,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

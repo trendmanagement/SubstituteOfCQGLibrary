@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Text;
+using CQGLibrary = FakeCQG;
 
 namespace RealtimeSpreadMonitor
 {
@@ -501,8 +502,8 @@ namespace RealtimeSpreadMonitor
 
     public class OptionSpreadExpression
     {
-        public CQGLibrary.CQGInstrument cqgInstrument = new CQGLibrary.CQG();
-        public CQGLibrary.CQGTimedBars futureTimedBars = new CQGLibrary.CQG();
+        public CQGLibrary.CQGInstrument cqgInstrument;
+        public CQGLibrary.CQGTimedBars futureTimedBars;
 
         public bool stopUpdating = false;
 

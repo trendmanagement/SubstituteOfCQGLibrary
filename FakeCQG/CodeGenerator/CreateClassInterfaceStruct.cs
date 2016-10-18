@@ -79,6 +79,11 @@ namespace CodeGenerator
                 File.WriteLine(Indent1 + "private System.Timers.Timer eventCheckingTimer;" + Environment.NewLine);
             }
 
+            if (typeName == "CQGCELClass")
+            {
+                File.WriteLine(Indent1 + "private bool isDCClosed = false;" + Environment.NewLine);
+            }
+
             if (!type.IsInterface)
             {
                 // Add fields
@@ -109,6 +114,15 @@ namespace CodeGenerator
 
                 File.WriteLine(Indent1 + "private void eventCheckingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)" +
                     Environment.NewLine + Indent1 + "{");
+
+                if (typeName == "CQGCELClass")
+                {
+                    File.WriteLine(Indent2 + "object[] isDCClosedArg;");
+                    File.WriteLine(Indent2 + "if (Internal.Core.EventHelper.CheckWhetherEventHappened(\"DCClosed\", out isDCClosedArg))" +
+                    Environment.NewLine + Indent2 + "{");
+                    File.WriteLine(Indent3 + "isDCClosed = true;" +
+                    Environment.NewLine + Indent2 + "}" + Environment.NewLine);
+                }
 
                 foreach (EventInfo einfo in SortEvents(type.GetEvents()))
                 {

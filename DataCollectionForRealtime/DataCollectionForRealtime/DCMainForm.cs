@@ -6,6 +6,8 @@ using FakeCQG.Internal;
 using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DataCollectionForRealtime
 {
@@ -28,6 +30,7 @@ namespace DataCollectionForRealtime
         {
             InitializeComponent();
             CenterToScreen();
+            MinimumSize = Size;
 
             CqgDataManagement = new CQGDataManagement(this, Program.MiniMonitor);
             
@@ -74,10 +77,12 @@ namespace DataCollectionForRealtime
 
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
-            var subscribersList = ServerDictionaries.RealtimeIds;
+            var subscribersArray = new HandshakingInfo[ServerDictionaries.RealtimeIds.Count];
+            ServerDictionaries.RealtimeIds.CopyTo(subscribersArray);
             ServerDictionaries.RealtimeIds.Clear();
             if (!args.NoSubscribers)
             {
+                var subscribersList = new List<HandshakingInfo>(subscribersArray);
                 foreach (HandshakingInfo subscriber in args.Subscribers)
                 {
                     subscribersList.Remove(subscriber);
@@ -120,7 +125,7 @@ namespace DataCollectionForRealtime
                         Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
 
                         // Instantiate the delegate with our own handler
-                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", eventInfor.Value);
+                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
 
                         MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                         Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
@@ -303,6 +308,7 @@ namespace DataCollectionForRealtime
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
+                    this.WindowState = FormWindowState.Minimized;
                     CqgDataManagement.shutDownCQGConn();
                     e.Cancel = false;
                 }
@@ -310,6 +316,30 @@ namespace DataCollectionForRealtime
                 {
                     e.Cancel = true;
                 }
+            }
+            else
+            {
+                CqgDataManagement.shutDownCQGConn();
+            }
+        }
+
+        private void DCMainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            if (ServerDictionaries.RealtimeIds.Count > 0)
+            {
+                string eventKey = Core.CreateUniqueKey();
+
+                var eventInfo = new FakeCQG.Internal.Models.EventInfo(eventKey, "DCClosed");
+
+                Task.Run(() => EventHandler.FireEvent(eventInfo));
+
+                QueryHandler.ReadQueries(false);
+                if (QueryHandler.QueryList.Count > 0)
+                {
+                    QueryHandler.ProcessEntireQueryList();
+                }
+
+                Environment.Exit(0);
             }
             else
             {

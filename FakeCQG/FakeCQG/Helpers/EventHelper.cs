@@ -54,8 +54,13 @@ namespace FakeCQG.Internal.Helpers
 
         public bool CheckWhetherEventHappened(string name, out object[] args)
         {
-            string handlerName = string.Format("_ICQGCELEvents_{0}EventHandler", name);
-            var filter = Builders<EventInfo>.Filter.Eq(Keys.EventName, handlerName);
+            if(name != "DCClosed")
+            {
+                name = string.Format("_ICQGCELEvents_{0}EventHandler", name);      
+            }
+
+            var filter = Builders<EventInfo>.Filter.Eq(Keys.EventName, name);
+
             try
             {
                 EventInfo eventInfo = Collection.Find(filter).First();
