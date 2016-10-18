@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FakeCQG.Internal.Models;
+using System;
 
 namespace FakeCQG.Internal
 {
@@ -17,12 +18,24 @@ namespace FakeCQG.Internal
 
         public static object GetObjectFromTheDictionary(string key)
         {
-            return objDictionary[key];
+            object objectValue = default(object);
+            try
+            {
+                objectValue = objDictionary[key];
+            }
+            catch(KeyNotFoundException ex)
+            {
+                Core.OnLogChange(string.Format("{0}, with key: {1}", ex.Message, key));
+            }
+            return objectValue;
         }
 
         public static void RemoveObjectFromTheDictionary(string key)
         {
-            objDictionary.Remove(key);
+            if (!string.IsNullOrEmpty(key))
+            {
+                objDictionary.Remove(key);
+            }
         }
 
         public static void ClearAllDictionaries()
@@ -34,7 +47,7 @@ namespace FakeCQG.Internal
         {
             foreach (string key in subscriber.ObjectKeys)
             {
-                objDictionary.Remove(key);
+                RemoveObjectFromTheDictionary(key);
             }
             RealtimeIds.Remove(subscriber);
         }
