@@ -60,6 +60,7 @@ namespace FakeCQG
 
             #region MongoDB communication methods
 
+            //Method wich implemented logic for push query and pull answer
             public static object ExecuteTheQuery(
                 QueryType queryType,
                 string dcObjKey = null,
@@ -108,6 +109,7 @@ namespace FakeCQG
                 }
             }
 
+            //Logic for checking answer
             public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
             {
                 AnswerInfo answer = null;
@@ -130,6 +132,7 @@ namespace FakeCQG
                 }
             }
 
+            //Creating query method
             public static QueryInfo CreateQuery(
                 QueryType qType,
                 string qKey,

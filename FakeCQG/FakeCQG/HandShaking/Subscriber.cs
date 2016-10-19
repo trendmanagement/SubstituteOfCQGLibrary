@@ -15,6 +15,7 @@ namespace FakeCQG.Internal.Handshaking
         static HandshakingHelper mongo;
         static IMongoCollection<HandshakingInfo> collection;
 
+        //Task for start listening 
         public static Task ListenForHanshaking()
         {
             return Task.Run(() =>
@@ -23,6 +24,7 @@ namespace FakeCQG.Internal.Handshaking
 
                 var filter = Builders<HandshakingInfo>.Filter.Empty;
                 var filterId = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, handshaker.ID);
+                //Circles listening for handshaking
                 while (true)
                 {
                     try
@@ -53,6 +55,7 @@ namespace FakeCQG.Internal.Handshaking
             collection = mongo.GetCollectionSubscribers;
         }
 
+        //Converting to simplest dictionary
         static Dictionary<string, string> ConvertDictionary(Dictionary<string, Dictionary<string, bool>> fullEventsDictionary)
         {
             Dictionary<string, string> selectedEventDictionary = new Dictionary<string, string>();
