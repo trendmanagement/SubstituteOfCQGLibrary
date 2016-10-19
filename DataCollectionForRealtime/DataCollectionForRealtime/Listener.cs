@@ -48,7 +48,6 @@ namespace DataCollectionForRealtime
 
         private static void OnSubscribersAdded(List<HandshakingInfo> subscribers)
         {
-            //TODO: Implement logic for variant without subscribers and for only one subscriber
             if (subscribers.Count == 0)
             {
                 AsyncTaskListener.LogMessage("No subscribers for handshaking");
@@ -88,7 +87,6 @@ namespace DataCollectionForRealtime
             timer = new Timer(time);
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
-            //TODO: Implement periodic push handshaking queries
         }
 
         private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
