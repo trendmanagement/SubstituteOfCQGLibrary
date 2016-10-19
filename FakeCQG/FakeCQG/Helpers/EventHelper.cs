@@ -65,7 +65,18 @@ namespace FakeCQG.Internal.Helpers
             {
                 EventInfo eventInfo = Collection.Find(filter).First();
                 args = Core.ParseInputArgsFromEventInfo(eventInfo);
-                RemoveEvent(eventInfo.EventKey);
+
+                eventInfo.NumOfSubscribers -= 1;
+
+                if(eventInfo.NumOfSubscribers < 1)
+                {
+                    RemoveEvent(eventInfo.EventKey);
+                }
+                else
+                {
+                    Collection.ReplaceOne(filter, eventInfo);
+                }
+
                 return true;
             }
             catch (Exception ex)

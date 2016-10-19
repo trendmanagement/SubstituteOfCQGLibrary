@@ -25,6 +25,8 @@ namespace DataCollectionForRealtime
         private DCMiniMonitor miniMonitor;
         public Assembly CQGAssm;
 
+        public eConnectionStatus currConnStat = eConnectionStatus.csConnectionDown;
+
         private CQGCEL m_CEL;
         private string m_CEL_key;
 
@@ -134,11 +136,17 @@ namespace DataCollectionForRealtime
                             connColor = Color.BlanchedAlmond;
                             connStatusString.Append(" - CONNECTION IS DELAYED");
                             connStatusShortString.Append("DELAYED");
+
+                            currConnStat = eConnectionStatus.csConnectionDelayed;
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(eConnectionStatus.csConnectionDelayed);
                         }
                         else
                         {
                             connStatusString.Append(" - CONNECTION IS DOWN");
                             connStatusShortString.Append("DOWN");
+
+                            currConnStat = eConnectionStatus.csConnectionDown;
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(eConnectionStatus.csConnectionDelayed);
                         }
                     }
                     else
@@ -146,6 +154,9 @@ namespace DataCollectionForRealtime
                         connColor = Color.LawnGreen;
                         connStatusString.Append(" - CONNECTION IS UP");
                         connStatusShortString.Append("UP");
+
+                        currConnStat = eConnectionStatus.csConnectionUp;
+                        CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(eConnectionStatus.csConnectionUp);
                     }
                 }
                 else

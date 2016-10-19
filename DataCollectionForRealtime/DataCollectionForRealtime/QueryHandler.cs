@@ -257,6 +257,22 @@ namespace DataCollectionForRealtime
                         {
                             System.Reflection.EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
 
+                            if(EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))
+                            {
+                                if (query.QueryType == QueryType.SubscribeToEvent)
+                                {
+                                    EventHandler.EventAppsSubscribersNum[query.MemberName] += 1;
+                                }
+                                if (query.QueryType == QueryType.UnsubscribeFromEvent)
+                                {
+                                    EventHandler.EventAppsSubscribersNum[query.MemberName] -= 1;
+                                }
+                            }
+                            else
+                            {
+                                EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);
+                            }
+
                             // Find corresponding CQG delegate
                             Type delType = FindDelegateType(CQGAssm, query.MemberName);
 
@@ -285,13 +301,14 @@ namespace DataCollectionForRealtime
                         }
 
                         PushAnswerAndDeleteQuery(answer);
-
+                        
                         if (query.QueryType == QueryType.SubscribeToEvent &&
-                            query.MemberName == "DataConnectionStatusChanged" &&
-                            CqgDataManagement.CEL.IsStarted)
+                            query.MemberName == "DataConnectionStatusChanged" )
+                            //&&
+                            //CqgDataManagement.CEL.IsStarted)
                         {
                             // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus.csConnectionUp);
+                            CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
                         }
                     }
                     break;

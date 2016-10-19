@@ -8,6 +8,8 @@ namespace DataCollectionForRealtime
 {
     static class EventHandler
     {
+        public static Dictionary<string, int> EventAppsSubscribersNum { get; set; }
+
         // Common handler of CQG events
         // Handler make record in DB and passing args with it for Invoke method
         public static void CommonEventHandler(
@@ -29,7 +31,20 @@ namespace DataCollectionForRealtime
         {
             try
             {
+                string eventName = eventInfo.EventName;
+
+                if (eventInfo.EventName != "DCClosed")
+                {
+                    string substr = "_ICQGCELEvents_";
+                    eventName = eventName.Remove(eventName.IndexOf(substr), substr.Length);
+                    substr = "EventHandler";
+                    eventName = eventName.Remove(eventName.IndexOf(substr), substr.Length);
+                }
+
+                eventInfo.NumOfSubscribers = EventAppsSubscribersNum[eventName];
+
                 Core.EventHelper.GetCollection.InsertOne(eventInfo);
+
                 lock (Core.LogLock)
                 {
                     AsyncTaskListener.LogMessage(eventInfo.ToString());

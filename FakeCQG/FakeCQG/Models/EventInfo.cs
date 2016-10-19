@@ -22,6 +22,8 @@ namespace FakeCQG.Internal.Models
         [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<int, object> ArgValues { get; set; }
 
+        public int NumOfSubscribers { get; set; }
+
         public Action CQGException
         {
             set
@@ -40,12 +42,14 @@ namespace FakeCQG.Internal.Models
             string eventKey,
             string eventName,
             Dictionary<int, string> argKeys = null,
-            Dictionary<int, object> argValues = null)
+            Dictionary<int, object> argValues = null,
+            int numOfSubscribers = default(int))
         {
             EventKey = eventKey;
             EventName = eventName;
             ArgKeys = argKeys;
             ArgValues = argValues;
+            NumOfSubscribers = numOfSubscribers;
         }
 
         public override string ToString()

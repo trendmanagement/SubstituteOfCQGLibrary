@@ -44,6 +44,8 @@ namespace DataCollectionForRealtime
 
             HandshakingTimer.Disposed += HandshakingTimer_Disposed;
             HandshakingTimer.Interval = DictionaryClearingInterval;
+
+            EventHandler.EventAppsSubscribersNum = new Dictionary<string, int>();
         }
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
@@ -329,7 +331,9 @@ namespace DataCollectionForRealtime
             {
                 string eventKey = Core.CreateUniqueKey();
 
-                var eventInfo = new FakeCQG.Internal.Models.EventInfo(eventKey, "DCClosed");
+                EventHandler.EventAppsSubscribersNum.Add("DCClosed", Listener.SubscribersCount);
+
+                var eventInfo = new FakeCQG.Internal.Models.EventInfo(eventKey, "DCClosed", numOfSubscribers: Listener.SubscribersCount);
 
                 Task.Run(() => EventHandler.FireEvent(eventInfo));
 

@@ -18,6 +18,8 @@ namespace DataCollectionForRealtime
         static Timer timer;
         static HandshakingHelper mongo = new HandshakingHelper();
 
+        public static int SubscribersCount { get; set; }
+
         public delegate void ListenerEventHandler(HandshakingEventArgs args);
         public static event ListenerEventHandler SubscribersAdded;
 
@@ -50,11 +52,13 @@ namespace DataCollectionForRealtime
         {
             if (subscribers.Count == 0)
             {
+                SubscribersCount = 0;
                 AsyncTaskListener.LogMessage("No subscribers for handshaking");
                 SubscribersAdded(new HandshakingEventArgs());
             }
             else
             {
+                SubscribersCount = subscribers.Count;
                 AsyncTaskListener.LogMessage(string.Format("DC has {0} subscriber(s)", subscribers.Count));
                 SubscribersAdded(new HandshakingEventArgs(subscribers));
             }
