@@ -13,6 +13,8 @@ namespace DataCollectionForRealtime
 {
     public partial class DCMainForm : Form
     {
+        #region Private fields
+
         const int AutoWorkTimerInterval = 30;      // ms
         const int HandshakingTimerInterval = 3000;
         const int DictionaryClearingInterval = 30000;
@@ -25,6 +27,10 @@ namespace DataCollectionForRealtime
         CQGDataManagement CqgDataManagement;
 
         QueryHandler QueryHandler;
+
+        #endregion
+
+        #region Constructors
 
         public DCMainForm()
         {
@@ -46,96 +52,9 @@ namespace DataCollectionForRealtime
             HandshakingTimer.Interval = DictionaryClearingInterval;
         }
 
-        private void HandshakingTimer_Disposed(object sender, EventArgs e)
-        {
-            ServerDictionaries.ClearAllDictionaries();
-        }
+        #endregion
 
-        private void RealtimeDataManagement_Load(object sender, EventArgs e)
-        {
-            Core.LogChange += CQG_LogChange;
-
-            QueryHandler.HelpersInit();
-
-            AutoWorkTimer = new System.Timers.Timer();
-            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
-            AutoWorkTimer.Interval = AutoWorkTimerInterval;
-            AutoWorkTimer.AutoReset = false;
-
-            foreach (string name in Enum.GetNames(typeof(LogModeEnum)))
-            {
-                comboBoxLogMode.Items.Add(name);
-            }
-            comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
-            comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
-        }
-
-        private void LogModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           Core.LogMode = (LogModeEnum)Enum.GetValues(typeof(LogModeEnum)).GetValue(comboBoxLogMode.SelectedIndex);
-        }
-
-        private void Listener_SubscribersAdded(HandshakingEventArgs args)
-        {
-            var subscribersArray = new HandshakingInfo[ServerDictionaries.RealtimeIds.Count];
-            ServerDictionaries.RealtimeIds.CopyTo(subscribersArray);
-            ServerDictionaries.RealtimeIds.Clear();
-            if (!args.NoSubscribers)
-            {
-                var subscribersList = new List<HandshakingInfo>(subscribersArray);
-                foreach (HandshakingInfo subscriber in args.Subscribers)
-                {
-                    subscribersList.Remove(subscriber);
-                    ServerDictionaries.RealtimeIds.Add(subscriber);
-                }
-
-                if (subscribersList.Count > 0)
-                {
-                    // Handle last queries for unsubscribe items
-                    QueryHandler.ReadQueries();
-                    QueryHandler.ProcessEntireQueryList();
-
-                    foreach (var item in subscribersList)
-                    {
-                        UnsubscribeEvents(item);
-                        ServerDictionaries.DeleteFromServerDictionaries(item);
-                        Listener.DeleteUnsubscriber(item.ID);
-                    }
-                }
-                HandshakingTimer.Stop();
-            }
-            else
-            {
-                HandshakingTimer.Start();
-            }
-        }
-
-        private void UnsubscribeEvents(HandshakingInfo subscriber)
-        {
-            foreach (var eventInfor in subscriber.UnsubscribeEventList)
-            {
-                foreach (var dic in eventInfor.Value)
-                {
-                    if (dic.Value)
-                    {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
-                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
-
-                        // Find corresponding CQG delegate
-                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
-
-                        // Instantiate the delegate with our own handler
-                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
-
-                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
-                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
-
-                        // Unsubscribe our handler from CQG event
-                        ei.RemoveEventHandler(qObj, d);
-                    }
-                }
-            }
-        }
+        #region CQG helper methods
 
         internal void UpdateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
@@ -204,6 +123,77 @@ namespace DataCollectionForRealtime
             }
         }
 
+        #endregion
+
+        #region Helpers DC event handlers and methods
+
+        private void UnsubscribeEvents(HandshakingInfo subscriber)
+        {
+            foreach (var eventInfor in subscriber.UnsubscribeEventList)
+            {
+                foreach (var dic in eventInfor.Value)
+                {
+                    if (dic.Value)
+                    {
+                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
+
+                        // Find corresponding CQG delegate
+                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
+
+                        // Instantiate the delegate with our own handler
+                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
+
+                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                        // Unsubscribe our handler from CQG event
+                        ei.RemoveEventHandler(qObj, d);
+                    }
+                }
+            }
+        }
+
+        private void Listener_SubscribersAdded(HandshakingEventArgs args)
+        {
+            var subscribersArray = new HandshakingInfo[ServerDictionaries.RealtimeIds.Count];
+            ServerDictionaries.RealtimeIds.CopyTo(subscribersArray);
+            ServerDictionaries.RealtimeIds.Clear();
+            if (!args.NoSubscribers)
+            {
+                var subscribersList = new List<HandshakingInfo>(subscribersArray);
+                foreach (HandshakingInfo subscriber in args.Subscribers)
+                {
+                    subscribersList.Remove(subscriber);
+                    ServerDictionaries.RealtimeIds.Add(subscriber);
+                }
+
+                if (subscribersList.Count > 0)
+                {
+                    // Handle last queries for unsubscribe items
+                    QueryHandler.ReadQueries();
+                    QueryHandler.ProcessEntireQueryList();
+
+                    foreach (var item in subscribersList)
+                    {
+                        UnsubscribeEvents(item);
+                        ServerDictionaries.DeleteFromServerDictionaries(item);
+                        Listener.DeleteUnsubscriber(item.ID);
+                    }
+                }
+                HandshakingTimer.Stop();
+            }
+            else
+            {
+                HandshakingTimer.Start();
+            }
+        }
+
+        private void CQG_LogChange(string message)
+        {
+            AsyncTaskListener.LogMessage(message);
+        }
+
         private void AsyncTaskListener_Updated(string message = null)
         {
             Action action = new Action(
@@ -230,6 +220,54 @@ namespace DataCollectionForRealtime
             }
         }
 
+        #endregion
+
+        #region Timers elapsed handlers
+
+        //Automatic processing of queries
+        private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
+
+            if (checkBoxAuto.Checked)
+            {
+                AutoWorkTimer.Start();
+            }
+        }
+        private void HandshakingTimer_Disposed(object sender, EventArgs e)
+        {
+            ServerDictionaries.ClearAllDictionaries();
+        }
+
+        #endregion
+
+        #region Controls event handlers
+
+        private void RealtimeDataManagement_Load(object sender, EventArgs e)
+        {
+            Core.LogChange += CQG_LogChange;
+
+            QueryHandler.HelpersInit();
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+
+            foreach (string name in Enum.GetNames(typeof(LogModeEnum)))
+            {
+                comboBoxLogMode.Items.Add(name);
+            }
+            comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
+            comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
+        }
+
+        private void LogModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Core.LogMode = (LogModeEnum)Enum.GetValues(typeof(LogModeEnum)).GetValue(comboBoxLogMode.SelectedIndex);
+        }
+
         private void ButtonCheck_Click(object sender, EventArgs e)
         {
             QueryHandler.ReadQueries();
@@ -238,11 +276,6 @@ namespace DataCollectionForRealtime
         private void ButtonRespond_Click(object sender, EventArgs e)
         {
             QueryHandler.ProcessEntireQueryList();
-        }
-
-        private void CQG_LogChange(string message)
-        {
-            AsyncTaskListener.LogMessage(message);
         }
 
         private void CheckBoxAuto_CheckedChanged(object sender, EventArgs e)
@@ -255,18 +288,6 @@ namespace DataCollectionForRealtime
             else
             {
                 AutoWorkTimer.Stop();
-            }
-        }
-
-        //Automatic processing of queries
-        private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
-        {
-            QueryHandler.ReadQueries();
-            QueryHandler.ProcessEntireQueryList();
-
-            if (checkBoxAuto.Checked)
-            {
-                AutoWorkTimer.Start();
             }
         }
 
@@ -346,5 +367,7 @@ namespace DataCollectionForRealtime
                 CqgDataManagement.shutDownCQGConn();
             }
         }
+
+        #endregion
     }
 }

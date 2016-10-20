@@ -55,6 +55,7 @@ namespace DataCollectionForRealtime
             {
                 AsyncTaskListener.LogMessage("No subscribers for handshaking");
                 SubscribersAdded(new HandshakingEventArgs());
+                AsyncTaskListener.AllLog.Clear();
             }
             else
             {

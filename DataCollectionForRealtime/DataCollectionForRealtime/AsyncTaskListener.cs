@@ -18,6 +18,8 @@ namespace DataCollectionForRealtime
 
         static Dictionary<string[], string> lastLogMessages = new Dictionary<string[], string>();
 
+        public static HashSet<string> AllLog = new HashSet<string>();
+
         #endregion
 
         static AsyncTaskListener()
@@ -58,6 +60,7 @@ namespace DataCollectionForRealtime
         //Checking for need update log
         static bool NeedUpdate(string msg)
         {
+            bool hadMessage = AllLog.Add(msg);
             foreach (var template in templatesOfLogMessage)
             {
                 foreach (var message in template)
@@ -68,7 +71,7 @@ namespace DataCollectionForRealtime
                     }
                 }
             }
-            return true;
+            return hadMessage;
         }
 
         static void Update(string msg)
@@ -86,6 +89,7 @@ namespace DataCollectionForRealtime
         //Handlers of log message
         public static void LogMessage(string msg)
         {
+
             switch (Core.LogMode)
             {
                 case LogModeEnum.Muted:
