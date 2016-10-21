@@ -18,16 +18,24 @@ namespace DataCollectionForRealtime
 
         static Dictionary<string[], string> lastLogMessages = new Dictionary<string[], string>();
 
+        public static HashSet<string> AllLog = new HashSet<string>();
+
         #endregion
 
         static AsyncTaskListener()
         {
+            //Initalize templates
             templatesOfLogMessage.Add(new string[] { "No subscribers for handshaking", "DC has" });
             templatesOfLogMessage.Add(new string[] { "new quer(y/ies) in database" });
             templatesOfLogMessage.Add(new string[] { "Events list was cleared successfully" });
             templatesOfLogMessage.Add(new string[] { "Queries list was cleared successfully" });
+            templatesOfLogMessage.Add(new string[] { "Timer elapsed. No answer." });
+            templatesOfLogMessage.Add(new string[] { "QUERY" });
+            templatesOfLogMessage.Add(new string[] { "ANSWER" });
+            templatesOfLogMessage.Add(new string[] { "EVENT" });
         }
 
+        //Checing for last message in template and update it
         static bool HasData(string [] template, string msg)
         {
             if (lastLogMessages.ContainsKey(template))
@@ -49,8 +57,10 @@ namespace DataCollectionForRealtime
             }
         }
 
+        //Checking for need update log
         static bool NeedUpdate(string msg)
         {
+            bool hadMessage = AllLog.Add(msg);
             foreach (var template in templatesOfLogMessage)
             {
                 foreach (var message in template)
@@ -61,7 +71,7 @@ namespace DataCollectionForRealtime
                     }
                 }
             }
-            return true;
+            return hadMessage;
         }
 
         static void Update(string msg)
@@ -73,12 +83,13 @@ namespace DataCollectionForRealtime
             }
             catch
             {
-                //TODO: If control not available 
             }
         }
 
+        //Handlers of log message
         public static void LogMessage(string msg)
         {
+
             switch (Core.LogMode)
             {
                 case LogModeEnum.Muted:
