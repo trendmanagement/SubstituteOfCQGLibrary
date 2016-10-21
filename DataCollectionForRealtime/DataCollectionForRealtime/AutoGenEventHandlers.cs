@@ -20,808 +20,808 @@ namespace DataCollectionForRealtime
     {
         public static void _ICQGCELEvents_AccountChangedEventHandlerImpl(CQG.eAccountChangeType change_type, CQG.CQGAccount cqg_account, CQG.CQGPosition cqg_position)
         {
-            string name = "_ICQGCELEvents_AccountChangedEventHandler";
+            string name = "AccountChanged";
             var args = new object[] { change_type, cqg_account, cqg_position };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyAddedEventHandler";
+            string name = "AdvancedStudyAdded";
             var args = new object[] { cqg_advanced_study };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGAdvancedStudyDefinitions cqg_advanced_study_definitions, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler";
+            string name = "AdvancedStudyDefinitionsResolved";
             var args = new object[] { cqg_advanced_study_definitions, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyInsertedEventHandler";
+            string name = "AdvancedStudyInserted";
             var args = new object[] { cqg_advanced_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyRemovedEventHandler";
+            string name = "AdvancedStudyRemoved";
             var args = new object[] { cqg_advanced_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyResolvedEventHandler";
+            string name = "AdvancedStudyResolved";
             var args = new object[] { cqg_advanced_study, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl(CQG.CQGAdvancedStudy cqg_advanced_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_AdvancedStudyUpdatedEventHandler";
+            string name = "AdvancedStudyUpdated";
             var args = new object[] { cqg_advanced_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl(String guid_, CQG.CQGAlgorithmicOrderParameters main_params, CQG.CQGAlgorithmicOrderProperties custom_props)
         {
-            string name = "_ICQGCELEvents_AlgorithmicOrderPlacedEventHandler";
+            string name = "AlgorithmicOrderPlaced";
             var args = new object[] { guid_, main_params, custom_props };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl(String guid_, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler";
+            string name = "AlgorithmicOrderRegistrationComplete";
             var args = new object[] { guid_, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AllOrdersCanceledEventHandlerImpl(CQG.eOrderSideFilter order_side, CQG.CQGIntegerCollection gw_account_ids, CQG.CQGStringCollection instrument_names)
         {
-            string name = "_ICQGCELEvents_AllOrdersCanceledEventHandler";
+            string name = "AllOrdersCanceled";
             var args = new object[] { order_side, gw_account_ids, instrument_names };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl(CQG.eSessionStatus new_status, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_AuthenticationStatusChangedEventHandler";
+            string name = "AuthenticationStatusChanged";
             var args = new object[] { new_status, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl(CQG.CQGBarsTimestamps cqg_bars_timestamps, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_BarsTimestampsResolvedEventHandler";
+            string name = "BarsTimestampsResolved";
             var args = new object[] { cqg_bars_timestamps, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CELStartedEventHandlerImpl()
         {
-            string name = "_ICQGCELEvents_CELStartedEventHandler";
+            string name = "CELStarted";
             EventHandler.CommonEventHandler(name);
         }
 
         public static void _ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
-            string name = "_ICQGCELEvents_CommodityInstrumentsResolvedEventHandler";
+            string name = "CommodityInstrumentsResolved";
             var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionAddedEventHandlerImpl(CQG.CQGCondition cqg_condition)
         {
-            string name = "_ICQGCELEvents_ConditionAddedEventHandler";
+            string name = "ConditionAdded";
             var args = new object[] { cqg_condition };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl(CQG.CQGConditionDefinitions cqg_condition_definitions, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ConditionDefinitionsResolvedEventHandler";
+            string name = "ConditionDefinitionsResolved";
             var args = new object[] { cqg_condition_definitions, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionInsertedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConditionInsertedEventHandler";
+            string name = "ConditionInserted";
             var args = new object[] { cqg_condition, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionRemovedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConditionRemovedEventHandler";
+            string name = "ConditionRemoved";
             var args = new object[] { cqg_condition, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionResolvedEventHandlerImpl(CQG.CQGCondition cqg_condition, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ConditionResolvedEventHandler";
+            string name = "ConditionResolved";
             var args = new object[] { cqg_condition, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConditionUpdatedEventHandlerImpl(CQG.CQGCondition cqg_condition, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConditionUpdatedEventHandler";
+            string name = "ConditionUpdated";
             var args = new object[] { cqg_condition, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars)
         {
-            string name = "_ICQGCELEvents_ConstantVolumeBarsAddedEventHandler";
+            string name = "ConstantVolumeBarsAdded";
             var args = new object[] { cqg_constant_volume_bars };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler";
+            string name = "ConstantVolumeBarsInserted";
             var args = new object[] { cqg_constant_volume_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler";
+            string name = "ConstantVolumeBarsRemoved";
             var args = new object[] { cqg_constant_volume_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler";
+            string name = "ConstantVolumeBarsResolved";
             var args = new object[] { cqg_constant_volume_bars, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl(CQG.CQGConstantVolumeBars cqg_constant_volume_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler";
+            string name = "ConstantVolumeBarsUpdated";
             var args = new object[] { cqg_constant_volume_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
-            string name = "_ICQGCELEvents_CurrencyRatesChangedEventHandler";
+            string name = "CurrencyRatesChanged";
             var args = new object[] { cqg_currency_rates };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_sessions_collection, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_CustomSessionsResolvedEventHandler";
+            string name = "CustomSessionsResolved";
             var args = new object[] { cqg_sessions_collection, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyAddedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study)
         {
-            string name = "_ICQGCELEvents_CustomStudyAddedEventHandler";
+            string name = "CustomStudyAdded";
             var args = new object[] { cqg_custom_study };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl(CQG.CQGCustomStudyDefinitions cqg_custom_study_definitions, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler";
+            string name = "CustomStudyDefinitionsResolved";
             var args = new object[] { cqg_custom_study_definitions, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyInsertedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_CustomStudyInsertedEventHandler";
+            string name = "CustomStudyInserted";
             var args = new object[] { cqg_custom_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyRemovedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_CustomStudyRemovedEventHandler";
+            string name = "CustomStudyRemoved";
             var args = new object[] { cqg_custom_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyResolvedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_CustomStudyResolvedEventHandler";
+            string name = "CustomStudyResolved";
             var args = new object[] { cqg_custom_study, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl(CQG.CQGCustomStudy cqg_custom_study, Int32 index_)
         {
-            string name = "_ICQGCELEvents_CustomStudyUpdatedEventHandler";
+            string name = "CustomStudyUpdated";
             var args = new object[] { cqg_custom_study, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
-            string name = "_ICQGCELEvents_DataConnectionStatusChangedEventHandler";
+            string name = "DataConnectionStatusChanged";
             var args = new object[] { new_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
-            string name = "_ICQGCELEvents_DataErrorEventHandler";
+            string name = "DataError";
             var args = new object[] { cqg_error, error_description };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataSourcesResolvedEventHandlerImpl(CQG.CQGDataSources cqg_data_sources, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_DataSourcesResolvedEventHandler";
+            string name = "DataSourcesResolved";
             var args = new object[] { cqg_data_sources, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl(String data_source_abbreviation, CQG.CQGDataSourceSymbols cqg_data_source_symbols, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_DataSourceSymbolsResolvedEventHandler";
+            string name = "DataSourceSymbolsResolved";
             var args = new object[] { data_source_abbreviation, cqg_data_source_symbols, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionAddedEventHandlerImpl(CQG.CQGExpression cqg_expression)
         {
-            string name = "_ICQGCELEvents_ExpressionAddedEventHandler";
+            string name = "ExpressionAdded";
             var args = new object[] { cqg_expression };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionInsertedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ExpressionInsertedEventHandler";
+            string name = "ExpressionInserted";
             var args = new object[] { cqg_expression, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionRemovedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ExpressionRemovedEventHandler";
+            string name = "ExpressionRemoved";
             var args = new object[] { cqg_expression, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionResolvedEventHandlerImpl(CQG.CQGExpression cqg_expression, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ExpressionResolvedEventHandler";
+            string name = "ExpressionResolved";
             var args = new object[] { cqg_expression, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ExpressionUpdatedEventHandlerImpl(CQG.CQGExpression cqg_expression, Int32 index_)
         {
-            string name = "_ICQGCELEvents_ExpressionUpdatedEventHandler";
+            string name = "ExpressionUpdated";
             var args = new object[] { cqg_expression, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_GWConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
-            string name = "_ICQGCELEvents_GWConnectionStatusChangedEventHandler";
+            string name = "GWConnectionStatusChanged";
             var args = new object[] { new_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl(CQG.eGWEnvChangeCode event_code, Int32 account_id, Int32 phase_)
         {
-            string name = "_ICQGCELEvents_GWEnvironmentChangedEventHandler";
+            string name = "GWEnvironmentChanged";
             var args = new object[] { event_code, account_id, phase_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl(CQG.CQGSessionsCollection cqg_historical_sessions, CQG.CQGHistoricalSessionsRequest cqg_historical_sessions_request, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_HistoricalSessionsResolvedEventHandler";
+            string name = "HistoricalSessionsResolved";
             var args = new object[] { cqg_historical_sessions, cqg_historical_sessions_request, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ICConnectionStatusChangedEventHandlerImpl(CQG.eICConnectionStatus new_status)
         {
-            string name = "_ICQGCELEvents_ICConnectionStatusChangedEventHandler";
+            string name = "ICConnectionStatusChanged";
             var args = new object[] { new_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
-            string name = "_ICQGCELEvents_IncorrectSymbolEventHandler";
+            string name = "IncorrectSymbol";
             var args = new object[] { symbol_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
-            string name = "_ICQGCELEvents_InstrumentChangedEventHandler";
+            string name = "InstrumentChanged";
             var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
-            string name = "_ICQGCELEvents_InstrumentDOMChangedEventHandler";
+            string name = "InstrumentDOMChanged";
             var args = new object[] { cqg_instrument, prev_asks, prev_bids };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
-            string name = "_ICQGCELEvents_InstrumentsGroupChangedEventHandler";
+            string name = "InstrumentsGroupChanged";
             var args = new object[] { change_type, instruments_group, instruments_names };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_InstrumentsGroupResolvedEventHandler";
+            string name = "InstrumentsGroupResolved";
             var args = new object[] { instruments_group, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
         {
-            string name = "_ICQGCELEvents_InstrumentSubscribedEventHandler";
+            string name = "InstrumentSubscribed";
             var args = new object[] { symbol_, cqg_instrument };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
-            string name = "_ICQGCELEvents_IsReadyEventHandler";
+            string name = "IsReady";
             var args = new object[] { ready_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_LineTimeChangedEventHandlerImpl(DateTime new_line_time)
         {
-            string name = "_ICQGCELEvents_LineTimeChangedEventHandler";
+            string name = "LineTimeChanged";
             var args = new object[] { new_line_time };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillChangedEventHandlerImpl(CQG.CQGManualFill cqg_manual_fill, CQG.eManualFillUpdateType modify_type)
         {
-            string name = "_ICQGCELEvents_ManualFillChangedEventHandler";
+            string name = "ManualFillChanged";
             var args = new object[] { cqg_manual_fill, modify_type };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillsResolvedEventHandlerImpl(CQG.CQGManualFills cqg_manual_fills, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ManualFillsResolvedEventHandler";
+            string name = "ManualFillsResolved";
             var args = new object[] { cqg_manual_fills, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl(CQG.CQGManualFillRequest cqg_manual_fill_request, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_ManualFillUpdateResolvedEventHandler";
+            string name = "ManualFillUpdateResolved";
             var args = new object[] { cqg_manual_fill_request, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_OnIdleEventHandlerImpl()
         {
-            string name = "_ICQGCELEvents_OnIdleEventHandler";
+            string name = "OnIdle";
             EventHandler.CommonEventHandler(name);
         }
 
         public static void _ICQGCELEvents_OnQueryProgressEventHandlerImpl(CQG.CQGOrdersQuery cqg_orders_query, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_OnQueryProgressEventHandler";
+            string name = "OnQueryProgress";
             var args = new object[] { cqg_orders_query, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_OrderChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGOrder cqg_order, CQG.CQGOrderProperties old_properties, CQG.CQGFill cqg_fill, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_OrderChangedEventHandler";
+            string name = "OrderChanged";
             var args = new object[] { change_type, cqg_order, old_properties, cqg_fill, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PasswordChangedEventHandlerImpl(CQG.eSessionStatus request_status, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_PasswordChangedEventHandler";
+            string name = "PasswordChanged";
             var args = new object[] { request_status, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
-            string name = "_ICQGCELEvents_PointAndFigureBarsAddedEventHandler";
+            string name = "PointAndFigureBarsAdded";
             var args = new object[] { cqg_point_and_figure_bars };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_PointAndFigureBarsInsertedEventHandler";
+            string name = "PointAndFigureBarsInserted";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_PointAndFigureBarsRemovedEventHandler";
+            string name = "PointAndFigureBarsRemoved";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_PointAndFigureBarsResolvedEventHandler";
+            string name = "PointAndFigureBarsResolved";
             var args = new object[] { cqg_point_and_figure_bars, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl(CQG.CQGPointAndFigureBars cqg_point_and_figure_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler";
+            string name = "PointAndFigureBarsUpdated";
             var args = new object[] { cqg_point_and_figure_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl(CQG.CQGPositionsStatement cqg_positions_statement, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_PositionsStatementResolvedEventHandler";
+            string name = "PositionsStatementResolved";
             var args = new object[] { cqg_positions_statement, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl(CQG.CQGQFormulaDefinitions cqg_qformula_definitions, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_QFormulaDefinitionsResolvedEventHandler";
+            string name = "QFormulaDefinitionsResolved";
             var args = new object[] { cqg_qformula_definitions, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl(CQG.CQGStrategyDefinition cqg_definition, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_StrategyDefinitionProgressEventHandler";
+            string name = "StrategyDefinitionProgress";
             var args = new object[] { cqg_definition, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_submintue_bars)
         {
-            string name = "_ICQGCELEvents_SubMinuteBarsAddedEventHandler";
+            string name = "SubMinuteBarsAdded";
             var args = new object[] { cqg_submintue_bars };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_SubMinuteBarsInsertedEventHandler";
+            string name = "SubMinuteBarsInserted";
             var args = new object[] { cqg_subminute_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_SubMinuteBarsRemovedEventHandler";
+            string name = "SubMinuteBarsRemoved";
             var args = new object[] { cqg_subminute_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminte_bars, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_SubMinuteBarsResolvedEventHandler";
+            string name = "SubMinuteBarsResolved";
             var args = new object[] { cqg_subminte_bars, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl(CQG.CQGSubMinuteBars cqg_subminute_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_SubMinuteBarsUpdatedEventHandler";
+            string name = "SubMinuteBarsUpdated";
             var args = new object[] { cqg_subminute_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl(CQG.CQGSummariesStatement cqg_summaries_statement, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_SummariesStatementResolvedEventHandler";
+            string name = "SummariesStatementResolved";
             var args = new object[] { cqg_summaries_statement, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsAddedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars)
         {
-            string name = "_ICQGCELEvents_TFlowBarsAddedEventHandler";
+            string name = "TFlowBarsAdded";
             var args = new object[] { cqg_tflow_bars };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TFlowBarsInsertedEventHandler";
+            string name = "TFlowBarsInserted";
             var args = new object[] { cqg_tflow_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TFlowBarsRemovedEventHandler";
+            string name = "TFlowBarsRemoved";
             var args = new object[] { cqg_tflow_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TFlowBarsResolvedEventHandler";
+            string name = "TFlowBarsResolved";
             var args = new object[] { cqg_tflow_bars, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl(CQG.CQGTFlowBars cqg_tflow_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TFlowBarsUpdatedEventHandler";
+            string name = "TFlowBarsUpdated";
             var args = new object[] { cqg_tflow_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TicksAddedEventHandlerImpl(CQG.CQGTicks cqg_ticks, Int32 added_ticks_count)
         {
-            string name = "_ICQGCELEvents_TicksAddedEventHandler";
+            string name = "TicksAdded";
             var args = new object[] { cqg_ticks, added_ticks_count };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TicksResolvedEventHandlerImpl(CQG.CQGTicks cqg_ticks, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TicksResolvedEventHandler";
+            string name = "TicksResolved";
             var args = new object[] { cqg_ticks, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsAddedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars)
         {
-            string name = "_ICQGCELEvents_TimedBarsAddedEventHandler";
+            string name = "TimedBarsAdded";
             var args = new object[] { cqg_timed_bars };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsInsertedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TimedBarsInsertedEventHandler";
+            string name = "TimedBarsInserted";
             var args = new object[] { cqg_timed_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsRemovedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TimedBarsRemovedEventHandler";
+            string name = "TimedBarsRemoved";
             var args = new object[] { cqg_timed_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsResolvedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TimedBarsResolvedEventHandler";
+            string name = "TimedBarsResolved";
             var args = new object[] { cqg_timed_bars, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl(CQG.CQGTimedBars cqg_timed_bars, Int32 index_)
         {
-            string name = "_ICQGCELEvents_TimedBarsUpdatedEventHandler";
+            string name = "TimedBarsUpdated";
             var args = new object[] { cqg_timed_bars, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGCommodities cqg_commodities, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TradableCommoditiesResolvedEventHandler";
+            string name = "TradableCommoditiesResolved";
             var args = new object[] { gw_account_id, cqg_commodities, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl(Int32 gw_account_id, CQG.CQGExchanges cqg_exchanges, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TradableExchangesResolvedEventHandler";
+            string name = "TradableExchangesResolved";
             var args = new object[] { gw_account_id, cqg_exchanges, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemAddInfo cqg_trading_system_add_info)
         {
-            string name = "_ICQGCELEvents_TradingSystemAddNotificationEventHandler";
+            string name = "TradingSystemAddNotification";
             var args = new object[] { cqg_trading_system, cqg_trading_system_add_info };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl(CQG.CQGTradingSystemDefinitions cqg_trading_system_definitions, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandler";
+            string name = "TradingSystemDefinitionsResolved";
             var args = new object[] { cqg_trading_system_definitions, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemInsertInfo cqg_trading_system_insert_info)
         {
-            string name = "_ICQGCELEvents_TradingSystemInsertNotificationEventHandler";
+            string name = "TradingSystemInsertNotification";
             var args = new object[] { cqg_trading_system, cqg_trading_system_insert_info };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRemoveInfo cqg_trading_system_remove_info)
         {
-            string name = "_ICQGCELEvents_TradingSystemRemoveNotificationEventHandler";
+            string name = "TradingSystemRemoveNotification";
             var args = new object[] { cqg_trading_system, cqg_trading_system_remove_info };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemResolvedEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_TradingSystemResolvedEventHandler";
+            string name = "TradingSystemResolved";
             var args = new object[] { cqg_trading_system, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemRelationAddInfo cqg_trading_system_relation_add_info)
         {
-            string name = "_ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandler";
+            string name = "TradingSystemTradeRelationAddNotification";
             var args = new object[] { cqg_trading_system, cqg_trading_system_relation_add_info };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl(CQG.CQGTradingSystem cqg_trading_system, CQG.CQGTradingSystemUpdateInfo cqg_trading_system_update_info)
         {
-            string name = "_ICQGCELEvents_TradingSystemUpdateNotificationEventHandler";
+            string name = "TradingSystemUpdateNotification";
             var args = new object[] { cqg_trading_system, cqg_trading_system_update_info };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsAddedEventHandlerImpl(CQG.CQGYields cqg_yields)
         {
-            string name = "_ICQGCELEvents_YieldsAddedEventHandler";
+            string name = "YieldsAdded";
             var args = new object[] { cqg_yields };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsInsertedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
-            string name = "_ICQGCELEvents_YieldsInsertedEventHandler";
+            string name = "YieldsInserted";
             var args = new object[] { cqg_yields, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsRemovedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
-            string name = "_ICQGCELEvents_YieldsRemovedEventHandler";
+            string name = "YieldsRemoved";
             var args = new object[] { cqg_yields, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsResolvedEventHandlerImpl(CQG.CQGYields cqg_yields, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELEvents_YieldsResolvedEventHandler";
+            string name = "YieldsResolved";
             var args = new object[] { cqg_yields, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELEvents_YieldsUpdatedEventHandlerImpl(CQG.CQGYields cqg_yields, Int32 index_)
         {
-            string name = "_ICQGCELEvents_YieldsUpdatedEventHandler";
+            string name = "YieldsUpdated";
             var args = new object[] { cqg_yields, index_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_CELStartedEventHandlerImpl()
         {
-            string name = "_ICQGCELGeneralEvents_CELStartedEventHandler";
+            string name = "CELStarted";
             EventHandler.CommonEventHandler(name);
         }
 
         public static void _ICQGCELGeneralEvents_CurrencyRatesChangedEventHandlerImpl(CQG.CQGCurrencyRates cqg_currency_rates)
         {
-            string name = "_ICQGCELGeneralEvents_CurrencyRatesChangedEventHandler";
+            string name = "CurrencyRatesChanged";
             var args = new object[] { cqg_currency_rates };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
-            string name = "_ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler";
+            string name = "DataConnectionStatusChanged";
             var args = new object[] { new_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_DataErrorEventHandlerImpl(Object cqg_error, String error_description)
         {
-            string name = "_ICQGCELGeneralEvents_DataErrorEventHandler";
+            string name = "DataError";
             var args = new object[] { cqg_error, error_description };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandlerImpl(CQG.eConnectionStatus new_status)
         {
-            string name = "_ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler";
+            string name = "GWConnectionStatusChanged";
             var args = new object[] { new_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_IsReadyEventHandlerImpl(ref CQG.eReadyStatus ready_status)
         {
-            string name = "_ICQGCELGeneralEvents_IsReadyEventHandler";
+            string name = "IsReady";
             var args = new object[] { ready_status };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_LineTimeChangedEventHandlerImpl(DateTime new_line_time)
         {
-            string name = "_ICQGCELGeneralEvents_LineTimeChangedEventHandler";
+            string name = "LineTimeChanged";
             var args = new object[] { new_line_time };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELGeneralEvents_OnIdleEventHandlerImpl()
         {
-            string name = "_ICQGCELGeneralEvents_OnIdleEventHandler";
+            string name = "OnIdle";
             EventHandler.CommonEventHandler(name);
         }
 
         public static void _ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl(String commodity_name, CQG.eInstrumentType instrument_types, CQG.CQGCommodityInstruments cqg_commodity_intruments)
         {
-            string name = "_ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler";
+            string name = "CommodityInstrumentsResolved";
             var args = new object[] { commodity_name, instrument_types, cqg_commodity_intruments };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl(String symbol_)
         {
-            string name = "_ICQGCELInstrumentEvents_IncorrectSymbolEventHandler";
+            string name = "IncorrectSymbol";
             var args = new object[] { symbol_ };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGQuotes cqg_quotes, CQG.CQGInstrumentProperties cqg_instrument_properties)
         {
-            string name = "_ICQGCELInstrumentEvents_InstrumentChangedEventHandler";
+            string name = "InstrumentChanged";
             var args = new object[] { cqg_instrument, cqg_quotes, cqg_instrument_properties };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl(CQG.CQGInstrument cqg_instrument, CQG.CQGDOMQuotes prev_asks, CQG.CQGDOMQuotes prev_bids)
         {
-            string name = "_ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandler";
+            string name = "InstrumentDOMChanged";
             var args = new object[] { cqg_instrument, prev_asks, prev_bids };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl(CQG.eChangeType change_type, CQG.CQGInstrumentsGroup instruments_group, CQG.CQGStringCollection instruments_names)
         {
-            string name = "_ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandler";
+            string name = "InstrumentsGroupChanged";
             var args = new object[] { change_type, instruments_group, instruments_names };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl(CQG.CQGInstrumentsGroup instruments_group, CQG.CQGError cqg_error)
         {
-            string name = "_ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler";
+            string name = "InstrumentsGroupResolved";
             var args = new object[] { instruments_group, cqg_error };
             EventHandler.CommonEventHandler(name, args);
         }
 
         public static void _ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl(String symbol_, CQG.CQGInstrument cqg_instrument)
         {
-            string name = "_ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler";
+            string name = "InstrumentSubscribed";
             var args = new object[] { symbol_, cqg_instrument };
             EventHandler.CommonEventHandler(name, args);
         }

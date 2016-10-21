@@ -15,18 +15,18 @@ namespace DataCollectionForRealtime
     {
         #region Private fields
 
-        const int AutoWorkTimerInterval = 30;      // ms
-        const int HandshakingTimerInterval = 3000;
-        const int DictionaryClearingInterval = 30000;
+        private const int AutoWorkTimerInterval = 30;      // ms
+        private const int HandshakingTimerInterval = 3000;
+        private const int DictionaryClearingInterval = 30000;
 
-        bool enteringMongoDBURL = false;
+        private bool enteringMongoDBURL = false;
 
-        System.Timers.Timer AutoWorkTimer;
-        Timer HandshakingTimer = new Timer();
+        private System.Timers.Timer AutoWorkTimer;
+        private Timer HandshakingTimer = new Timer();
 
-        CQGDataManagement CqgDataManagement;
+        private CQGDataManagement CqgDataManagement;
 
-        QueryHandler QueryHandler;
+        private QueryHandler QueryHandler;
 
         #endregion
 
@@ -129,33 +129,6 @@ namespace DataCollectionForRealtime
 
         #region Helpers DC event handlers and methods
 
-        private void UnsubscribeEvents(HandshakingInfo subscriber)
-        {
-            foreach (var eventInfor in subscriber.UnsubscribeEventList)
-            {
-                foreach (var dic in eventInfor.Value)
-                {
-                    if (dic.Value)
-                    {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
-                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
-
-                        // Find corresponding CQG delegate
-                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
-
-                        // Instantiate the delegate with our own handler
-                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
-
-                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
-                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
-
-                        // Unsubscribe our handler from CQG event
-                        ei.RemoveEventHandler(qObj, d);
-                    }
-                }
-            }
-        }
-
         private void Listener_SubscribersAdded(HandshakingEventArgs args)
         {
             var subscribersArray = new HandshakingInfo[ServerDictionaries.RealtimeIds.Count];
@@ -191,9 +164,31 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void CQG_LogChange(string message)
+        private void UnsubscribeEvents(HandshakingInfo subscriber)
         {
-            AsyncTaskListener.LogMessage(message);
+            foreach (var eventInfor in subscriber.UnsubscribeEventList)
+            {
+                foreach (var dic in eventInfor.Value)
+                {
+                    if (dic.Value)
+                    {
+                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(eventInfor.Key);
+                        System.Reflection.EventInfo ei = qObj.GetType().GetEvent(dic.Key);
+
+                        // Find corresponding CQG delegate
+                        Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
+
+                        // Instantiate the delegate with our own handler
+                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
+
+                        MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
+                        Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
+
+                        // Unsubscribe our handler from CQG event
+                        ei.RemoveEventHandler(qObj, d);
+                    }
+                }
+            }
         }
 
         private void AsyncTaskListener_Updated(string message = null)
@@ -222,6 +217,11 @@ namespace DataCollectionForRealtime
             }
         }
 
+        private void CQG_LogChange(string message)
+        {
+            AsyncTaskListener.LogMessage(message);
+        }
+
         #endregion
 
         #region Timers elapsed handlers
@@ -237,12 +237,14 @@ namespace DataCollectionForRealtime
                 AutoWorkTimer.Start();
             }
         }
+
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
             ServerDictionaries.ClearAllDictionaries();
         }
 
         #endregion
+
 
         #region Controls event handlers
 
@@ -373,5 +375,6 @@ namespace DataCollectionForRealtime
         }
 
         #endregion
+
     }
 }

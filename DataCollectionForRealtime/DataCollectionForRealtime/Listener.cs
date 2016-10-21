@@ -13,11 +13,10 @@ namespace DataCollectionForRealtime
 {
     class Listener
     {
-        //Private fields
-        const int HandshakingQueryInterval = 1500;   // 1.5 s
-        static HandshakingInfo handshaking = new HandshakingInfo();
-        static Timer timer;
-        static HandshakingHelper mongo = new HandshakingHelper();
+        private const int HandshakingQueryInterval = 1500;   // 1.5 s
+        private static HandshakingInfo handshaking = new HandshakingInfo();
+        private static Timer timer;
+        private static HandshakingHelper mongo = new HandshakingHelper();
 
         public static int SubscribersCount { get; set; }
 
@@ -41,7 +40,7 @@ namespace DataCollectionForRealtime
             });
         }
 
-        //Checking for subscribers and call OnSubscribersAdded event
+        // Checking for subscribers and firing of OnSubscribersAdded event
         private static void CheckSubscribers(IMongoCollection<HandshakingInfo> collection)
         {
             var filter = Builders<HandshakingInfo>.Filter.Empty;
@@ -68,7 +67,7 @@ namespace DataCollectionForRealtime
             timer.Start();
         }
 
-        //Send and delete handshaking model
+        // Sending of handshaking model and deleting it 
         private static void SendHandshakingQuery(IMongoCollection<HandshakingInfo> collection)
         {
             var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, handshaking.ID);

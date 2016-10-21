@@ -17,14 +17,14 @@ namespace DataCollectionForRealtime
         static List<string[]> templatesOfLogMessage = new List<string[]>();
 
         static Dictionary<string[], string> lastLogMessages = new Dictionary<string[], string>();
-
+        
         public static HashSet<string> AllLog = new HashSet<string>();
 
         #endregion
 
         static AsyncTaskListener()
         {
-            //Initalize templates
+            // Initialization of templates
             templatesOfLogMessage.Add(new string[] { "No subscribers for handshaking", "DC has" });
             templatesOfLogMessage.Add(new string[] { "new quer(y/ies) in database" });
             templatesOfLogMessage.Add(new string[] { "Events list was cleared successfully" });
@@ -35,7 +35,7 @@ namespace DataCollectionForRealtime
             templatesOfLogMessage.Add(new string[] { "EVENT" });
         }
 
-        //Checing for last message in template and update it
+        // Checking whether last message matches with incoming template
         static bool HasData(string [] template, string msg)
         {
             if (lastLogMessages.ContainsKey(template))
@@ -57,10 +57,10 @@ namespace DataCollectionForRealtime
             }
         }
 
-        //Checking for need update log
-        static bool NeedUpdate(string msg)
+        // Check whether log update is required 
+        static bool LogUpdateRequired(string msg)
         {
-            bool hadMessage = AllLog.Add(msg);
+            bool doesLogContainMessage = AllLog.Add(msg);
             foreach (var template in templatesOfLogMessage)
             {
                 foreach (var message in template)
@@ -71,7 +71,7 @@ namespace DataCollectionForRealtime
                     }
                 }
             }
-            return hadMessage;
+            return doesLogContainMessage;
         }
 
         static void Update(string msg)
@@ -86,16 +86,14 @@ namespace DataCollectionForRealtime
             }
         }
 
-        //Handlers of log message
         public static void LogMessage(string msg)
         {
-
             switch (Core.LogMode)
             {
                 case LogModeEnum.Muted:
                     break;
                 case LogModeEnum.Filtered:
-                    if (NeedUpdate(msg))
+                    if (LogUpdateRequired(msg))
                     {
                         Update(msg);
                     }

@@ -82,7 +82,7 @@ namespace CodeGenerator
                 {
                     File.WriteLine(Indent2 + "{");
 
-                    if(pinfo.Name == "IsStarted")
+                    if (pinfo.Name == "IsStarted")
                     {
                         File.WriteLine(Indent3 + "if(isDCClosed)" + Environment.NewLine + Indent3 +
                             "{" + Environment.NewLine + Indent4 + "return false;" + Environment.NewLine + Indent3 + "}" +
@@ -126,7 +126,7 @@ namespace CodeGenerator
                     if (pinfo.Name == "IsStarted")
                     {
                         InitIndents();
-                        File.WriteLine(Indent3 + "}");                
+                        File.WriteLine(Indent3 + "}");
                     }
 
                     File.WriteLine(Indent2 + "}" + Environment.NewLine);

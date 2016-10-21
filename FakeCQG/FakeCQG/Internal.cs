@@ -54,13 +54,17 @@ namespace FakeCQG
             public static AnswerHelper AnswerHelper;
             public static EventHelper EventHelper;
 
+            static bool isDCClosed = false;
+            static Timer isDCClosedChekingTimer = new Timer();
+            static int isDCClosedChekingInterval = 30;
+
             static bool FirstCall = true;
 
             #endregion
 
             #region MongoDB communication methods
 
-            //Method wich implemented logic for push query and pull answer
+            // Main method that contains all parts of executing the query on application side
             public static object ExecuteTheQuery(
                 QueryType queryType,
                 string dcObjKey = null,
@@ -73,6 +77,12 @@ namespace FakeCQG
                     QueryHelper = new QueryHelper();
                     AnswerHelper = new AnswerHelper();
                     EventHelper = new EventHelper();
+
+                    isDCClosedChekingTimer.Interval = isDCClosedChekingInterval;
+                    isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
+                    isDCClosedChekingTimer.AutoReset = true;
+                    isDCClosedChekingTimer.Enabled = true;
+                    CleanLogTimer.Start();
                 }
 
                 Dictionary<int, string> argKeys;
@@ -109,12 +119,18 @@ namespace FakeCQG
                 }
             }
 
-            //Logic for checking answer
             public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
             {
                 AnswerInfo answer = null;
                 Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
-                bool success = task.Wait(QueryTimeout);
+
+                bool success = task.Wait(isDCClosedChekingInterval * isDCClosedChekingInterval);
+                if(isDCClosed)
+                {
+                    return answer;
+                }
+
+                success = task.Wait(QueryTimeout);
                 if (success)
                 {
                     ClientDictionaries.IsAnswer.Remove(queryKey);
@@ -132,7 +148,6 @@ namespace FakeCQG
                 }
             }
 
-            //Creating query method
             public static QueryInfo CreateQuery(
                 QueryType qType,
                 string qKey,
@@ -185,6 +200,15 @@ namespace FakeCQG
             #endregion
 
             #region Handlers
+
+            private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
+            {
+                object[] isDCClosedArg;
+                if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                {
+                    isDCClosed = true;
+                }
+            }
 
             internal static void OnLogChange(string key, string value, bool isQuery)
             {

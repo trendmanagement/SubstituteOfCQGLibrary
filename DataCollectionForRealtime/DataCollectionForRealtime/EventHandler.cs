@@ -31,23 +31,24 @@ namespace DataCollectionForRealtime
         {
             try
             {
-                string eventName = eventInfo.EventName;
-
-                if (eventInfo.EventName != "DCClosed")
+                if(EventAppsSubscribersNum.ContainsKey(eventInfo.EventName))
                 {
-                    string substr = "_ICQGCELEvents_";
-                    eventName = eventName.Remove(eventName.IndexOf(substr), substr.Length);
-                    substr = "EventHandler";
-                    eventName = eventName.Remove(eventName.IndexOf(substr), substr.Length);
+                    eventInfo.NumOfSubscribers = EventAppsSubscribersNum[eventInfo.EventName];
                 }
-
-                eventInfo.NumOfSubscribers = EventAppsSubscribersNum[eventName];
+                else
+                {
+                    EventAppsSubscribersNum.Add(eventInfo.EventName, 0);
+                    eventInfo.NumOfSubscribers = 0;
+                }
 
                 Core.EventHelper.GetCollection.InsertOne(eventInfo);
 
-                lock (Core.LogLock)
+                if (Program.MainForm.Visible)
                 {
-                    AsyncTaskListener.LogMessage(eventInfo.ToString());
+                    lock (Core.LogLock)
+                    {
+                        AsyncTaskListener.LogMessage(eventInfo.ToString());
+                    }
                 }
             }
             catch (Exception ex)

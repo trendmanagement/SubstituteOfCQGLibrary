@@ -53,7 +53,7 @@ namespace CodeGenerator
                 return;
             }
 
-            if(minfo.Name == "Shutdown")
+            if (minfo.Name == "Shutdown")
             {
                 File.WriteLine(Indent2 + "if(!isDCClosed)" + Environment.NewLine + Indent2 + "{");
                 Indent2 = Indent3;

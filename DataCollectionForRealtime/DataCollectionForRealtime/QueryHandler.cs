@@ -277,9 +277,17 @@ namespace DataCollectionForRealtime
                             Type delType = FindDelegateType(CQGAssm, query.MemberName);
 
                             // Instantiate the delegate with our own handler
-                            string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", query.MemberName);
+                            var eventHandlersMethods = typeof(CQGEventHandlers).GetMethods();
+                            MethodInfo handlerInfo = null;
+                            
+                            foreach(var mi in eventHandlersMethods)
+                            {
+                                if(mi.Name.Contains(query.MemberName))
+                                {
+                                    handlerInfo = mi;
+                                }
+                            }
 
-                            MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                             Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
 
                             if (query.QueryType == QueryType.SubscribeToEvent)
@@ -304,8 +312,6 @@ namespace DataCollectionForRealtime
                         
                         if (query.QueryType == QueryType.SubscribeToEvent &&
                             query.MemberName == "DataConnectionStatusChanged" )
-                            //&&
-                            //CqgDataManagement.CEL.IsStarted)
                         {
                             // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
                             CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);

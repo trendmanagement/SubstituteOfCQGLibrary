@@ -22,7 +22,7 @@ namespace FakeCQG.Internal
             {
                 objectValue = objDictionary[key];
             }
-            catch(KeyNotFoundException ex)
+            catch (KeyNotFoundException ex)
             {
                 Core.OnLogChange(string.Format("{0}, with key: {1}", ex.Message, key));
             }

@@ -18,10 +18,13 @@ namespace DataCollectionForRealtime
             try
             {
                 Core.AnswerHelper.GetCollection.InsertOne(answer);
-                lock (Core.LogLock)
+                if (Program.MainForm.Visible)
                 {
-                    AsyncTaskListener.LogMessage(answer.ToString());
-                }
+                    lock (Core.LogLock)
+                    {
+                        AsyncTaskListener.LogMessage(answer.ToString());
+                    }
+                } 
             }
             catch (Exception ex)
             {

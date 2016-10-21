@@ -10,7 +10,17 @@ namespace CodeGenerator
             CreateEventHandlerSignature(type.Name, minfo.GetParameters());
 
             DCEvHndlrFile.WriteLine(Indent2 + "{");
-            DCEvHndlrFile.WriteLine(Indent3 + "string name = \"" + type.Name + "\";");
+
+            string eventName = type.Name;
+            string afterEventName = "EventHandler";
+
+            //Searching of second '_' position and deleting characters from the start of a string till the start of event name
+            eventName = eventName.Remove(0, eventName.IndexOf("_", 1) + 1);
+
+            //Removing characters following after event name
+            eventName = eventName.Remove(eventName.IndexOf(afterEventName), afterEventName.Length);
+
+            DCEvHndlrFile.WriteLine(Indent3 + "string name = \"" + eventName + "\";");
 
             ParameterInfo[] pinfos = minfo.GetParameters();
 
