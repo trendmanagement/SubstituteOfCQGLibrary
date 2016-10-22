@@ -16,7 +16,7 @@ namespace DataCollectionForRealtime
         #region Private fields
 
         private const int AutoWorkTimerInterval = 30;      // ms
-        private const int HandshakingTimerInterval = 3000;
+        private const int HandshakingInterval = 3000;
         private const int DictionaryClearingInterval = 30000;
 
         private bool enteringMongoDBURL = false;
@@ -42,7 +42,7 @@ namespace DataCollectionForRealtime
             
             QueryHandler = new QueryHandler(CqgDataManagement);
 
-            Listener.StartListening(HandshakingTimerInterval);
+            Listener.StartListening(HandshakingInterval);
 
             Listener.SubscribersAdded += Listener_SubscribersAdded;
 
@@ -244,7 +244,6 @@ namespace DataCollectionForRealtime
         }
 
         #endregion
-
 
         #region Controls event handlers
 

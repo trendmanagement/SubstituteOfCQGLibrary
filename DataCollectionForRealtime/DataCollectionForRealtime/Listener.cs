@@ -15,7 +15,6 @@ namespace DataCollectionForRealtime
     {
         private const int HandshakingQueryInterval = 1500;   // 1.5 s
         private static HandshakingInfo handshaking = new HandshakingInfo();
-        private static Timer timer;
         private static HandshakingHelper mongo = new HandshakingHelper();
 
         public static int SubscribersCount { get; set; }
@@ -23,21 +22,25 @@ namespace DataCollectionForRealtime
         public delegate void ListenerEventHandler(HandshakingEventArgs args);
         public static event ListenerEventHandler SubscribersAdded;
 
-        public static Task StartHandshaking()
+        public static Task StartHandshaking(int time)
         {
-            var collectionSubscribers = mongo.GetCollectionSubscribers;
+                var collectionSubscribers = mongo.GetCollectionSubscribers;
+                return Task.Run(() =>
+                {
+                    while (true)
+                    {
+                        Task.Delay(time).GetAwaiter().GetResult();
 
-            return Task.Run(() =>
-            {
-                // Clear collection
-                ClearCollection(collectionSubscribers);
+                        // Clear collection
+                        ClearCollection(collectionSubscribers);
 
-                // Send handshaking query
-                SendHandshakingQuery(collectionSubscribers);
+                        // Send handshaking query
+                        SendHandshakingQuery(collectionSubscribers);
 
-                // Check subscribers
-                CheckSubscribers(collectionSubscribers);
-            });
+                        // Check subscribers
+                        CheckSubscribers(collectionSubscribers);
+                    }
+                });
         }
 
         // Checking for subscribers and firing of OnSubscribersAdded event
@@ -64,7 +67,6 @@ namespace DataCollectionForRealtime
                 AsyncTaskListener.LogMessage(string.Format("DC has {0} subscriber(s)", subscribers.Count));
                 SubscribersAdded(new HandshakingEventArgs(subscribers));
             }
-            timer.Start();
         }
 
         // Sending of handshaking model and deleting it 
@@ -88,17 +90,9 @@ namespace DataCollectionForRealtime
             mongo.GetCollectionUnsubscribers.DeleteOne(filter);
         }
 
-
-        public static void StartListening(int time)
+        public async static void StartListening(int time)
         {
-            timer = new Timer(time);
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
-        }
-
-        private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            StartHandshaking();
+            await StartHandshaking(time);
         }
     }
 }
