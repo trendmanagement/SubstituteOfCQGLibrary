@@ -17,12 +17,13 @@ namespace DataCollectionForRealtime
 
         private const int AutoWorkTimerInterval = 30;      // ms
         private const int HandshakingInterval = 3000;
-        private const int DictionaryClearingInterval = 30000;
+        private int NoSubscribersCount = 0;
+        //if there will be no handshake consecutive 2 times dictionaries will be cleaned
+        private int NoSubscriberCountForCleanDictionaries = 2;
 
         private bool enteringMongoDBURL = false;
 
         private System.Timers.Timer AutoWorkTimer;
-        private Timer HandshakingTimer = new Timer();
 
         private CQGDataManagement CqgDataManagement;
 
@@ -47,9 +48,6 @@ namespace DataCollectionForRealtime
             Listener.SubscribersAdded += Listener_SubscribersAdded;
 
             AsyncTaskListener.Updated += AsyncTaskListener_Updated;
-
-            HandshakingTimer.Disposed += HandshakingTimer_Disposed;
-            HandshakingTimer.Interval = DictionaryClearingInterval;
 
             EventHandler.EventAppsSubscribersNum = new Dictionary<string, int>();
         }
@@ -156,11 +154,15 @@ namespace DataCollectionForRealtime
                         Listener.DeleteUnsubscriber(item.ID);
                     }
                 }
-                HandshakingTimer.Stop();
+                NoSubscribersCount = 0;
             }
             else
             {
-                HandshakingTimer.Start();
+                NoSubscribersCount++;
+                if(NoSubscribersCount >= 2)
+                {
+                    ServerDictionaries.ClearAllDictionaries();
+                }
             }
         }
 
@@ -236,11 +238,6 @@ namespace DataCollectionForRealtime
             {
                 AutoWorkTimer.Start();
             }
-        }
-
-        private void HandshakingTimer_Disposed(object sender, EventArgs e)
-        {
-            ServerDictionaries.ClearAllDictionaries();
         }
 
         #endregion
