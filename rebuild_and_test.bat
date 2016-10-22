@@ -32,9 +32,9 @@ for %%s in (FakeCQG DataCollectionForRealtime TimedBars) do (
     rem Rebuild this solution
     msbuild /t:Rebuild /p:Configuration=%configuration%;Platform=%platform% /v:%verbosity%
     
-    cd ..
-    
     if ErrorLevel 1 goto exit
+    
+    cd ..
 )
 
 rem Run all tests
