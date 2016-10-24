@@ -141,7 +141,7 @@ namespace DataCollectionForRealtime
                             var propV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
 
                             // Checking type of property value and returning value or value key 
-                            // if it's not able to be transmitted through the database
+                            // (second, if it's not able to be transmitted through the database)
                             if (Core.IsSerializableType(propV.GetType()))
                             {
                                 string answerKey = "value";

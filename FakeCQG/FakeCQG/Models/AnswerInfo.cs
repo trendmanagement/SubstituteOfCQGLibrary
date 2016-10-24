@@ -65,8 +65,8 @@ namespace FakeCQG.Internal.Models
             string memberName,
             Dictionary<int, string> argKeys = null,
             Dictionary<int, object> argValues = null,
-            string valueKey = null,
-            object value = null)
+            string valueKey = default(string),
+            object value = default(object))
         {
             AnswerKey = answerKey;
             ObjectKey = objectKey;

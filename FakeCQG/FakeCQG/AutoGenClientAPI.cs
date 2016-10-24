@@ -14836,9 +14836,16 @@ namespace FakeCQG
                 }
                 else
                 {
-                    string name = "IsStarted";
-                    var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
-                    return value;
+                    try
+                    {
+                        string name = "IsStarted";
+                        var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                        return value;
+                    }
+                    catch
+                    {
+                        return false;
+                    }
                 }
             }
 
