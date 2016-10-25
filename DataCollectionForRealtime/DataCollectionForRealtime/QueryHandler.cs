@@ -531,7 +531,7 @@ namespace DataCollectionForRealtime
             return new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
             {
                 IsCQGException = true,
-                CQGException = new Action(() => { throw ex; })
+                CQGException = ex
             };
         }
         #endregion

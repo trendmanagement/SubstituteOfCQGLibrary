@@ -43,7 +43,7 @@ namespace FakeCQG.Internal.Models
 
         public object Value { get; set; }
 
-        public Action CQGException
+        public Exception CQGException
         {
             set
             {
@@ -61,7 +61,7 @@ namespace FakeCQG.Internal.Models
 
         public bool IsCQGException;
 
-        private Action _exception;
+        private Exception _exception;
 
         public AnswerInfo(
             string answerKey,
