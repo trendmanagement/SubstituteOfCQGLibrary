@@ -110,6 +110,10 @@ namespace FakeCQG
                     return default(object);
                 }
 
+                if (result.IsCQGException)
+                {
+                    result.CQGException.Invoke();
+                }
                 if (result.ValueKey == "value")
                 {
                     return result.Value;

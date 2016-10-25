@@ -28,11 +28,11 @@ namespace FakeCQG.Internal.Models
         {
             get
             {
-                if (IsCQGException)
-                {
-                    _exception.Invoke();
-                    return string.Empty;
-                }
+                //if (IsCQGException)
+                //{
+                //    _exception.Invoke();
+                //    return string.Empty;
+                //}
                 return _valueKey;
             }
             set
@@ -48,6 +48,10 @@ namespace FakeCQG.Internal.Models
             set
             {
                 _exception = value;
+            }
+            get
+            {
+                return _exception;
             }
         }
 
