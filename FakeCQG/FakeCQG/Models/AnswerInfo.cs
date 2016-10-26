@@ -43,25 +43,14 @@ namespace FakeCQG.Internal.Models
 
         public object Value { get; set; }
 
-        public Exception CQGException
-        {
-            set
-            {
-                _exception = value;
-            }
-            get
-            {
-                return _exception;
-            }
-        }
-
         #endregion
 
         private string _valueKey;
 
+
         public bool IsCQGException;
 
-        private Exception _exception;
+        public ExceptionInfo CQGException { get; set; }
 
         public AnswerInfo(
             string answerKey,
@@ -96,5 +85,12 @@ namespace FakeCQG.Internal.Models
                 "************************************************************",
                 AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
         }
+    }
+
+    public class ExceptionInfo
+    {
+        public string Message { get; set; }
+        public string Type { get; set; }
+        public string Sourse { get; set; }
     }
 }
