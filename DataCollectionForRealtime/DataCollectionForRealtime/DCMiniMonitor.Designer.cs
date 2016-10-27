@@ -56,7 +56,7 @@
             // queriesNumDsplLbl
             // 
             this.queriesNumDsplLbl.AutoSize = true;
-            this.queriesNumDsplLbl.Location = new System.Drawing.Point(106, 147);
+            this.queriesNumDsplLbl.Location = new System.Drawing.Point(98, 149);
             this.queriesNumDsplLbl.Name = "queriesNumDsplLbl";
             this.queriesNumDsplLbl.Size = new System.Drawing.Size(0, 13);
             this.queriesNumDsplLbl.TabIndex = 2;

@@ -28,11 +28,11 @@ namespace FakeCQG.Internal.Models
         {
             get
             {
-                if (IsCQGException)
-                {
-                    _exception.Invoke();
-                    return string.Empty;
-                }
+                //if (IsCQGException)
+                //{
+                //    _exception.Invoke();
+                //    return string.Empty;
+                //}
                 return _valueKey;
             }
             set
@@ -43,21 +43,14 @@ namespace FakeCQG.Internal.Models
 
         public object Value { get; set; }
 
-        public Action CQGException
-        {
-            set
-            {
-                _exception = value;
-            }
-        }
-
         #endregion
 
         private string _valueKey;
 
+
         public bool IsCQGException;
 
-        private Action _exception;
+        public ExceptionInfo CQGException { get; set; }
 
         public AnswerInfo(
             string answerKey,
@@ -65,8 +58,8 @@ namespace FakeCQG.Internal.Models
             string memberName,
             Dictionary<int, string> argKeys = null,
             Dictionary<int, object> argValues = null,
-            string valueKey = null,
-            object value = null)
+            string valueKey = default(string),
+            object value = default(object))
         {
             AnswerKey = answerKey;
             ObjectKey = objectKey;
@@ -92,5 +85,12 @@ namespace FakeCQG.Internal.Models
                 "************************************************************",
                 AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
         }
+    }
+
+    public class ExceptionInfo
+    {
+        public string Message { get; set; }
+        public string Type { get; set; }
+        public string Sourse { get; set; }
     }
 }

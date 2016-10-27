@@ -105,6 +105,17 @@ namespace FakeCQG
                     FirstCall = false;
                 }
 
+                if (result == null)
+                {
+                    return default(object);
+                }
+
+                if (result.IsCQGException)
+                {
+                    var exception = new Exception(result.CQGException.Message);
+                    exception.Source = result.CQGException.Sourse;
+                    throw exception;
+                }
                 if (result.ValueKey == "value")
                 {
                     return result.Value;
@@ -125,7 +136,7 @@ namespace FakeCQG
                 Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
 
                 bool success = task.Wait(isDCClosedChekingInterval * isDCClosedChekingInterval);
-                if(isDCClosed)
+                if(!success && isDCClosed)
                 {
                     return answer;
                 }
