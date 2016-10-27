@@ -54,7 +54,6 @@ namespace FakeCQG
             public static EventHelper EventHelper;
 
             static bool isDCClosed = false;
-            static Timer isDCClosedChekingTimer = new Timer();
             static int isDCClosedChekingInterval = 30;
 
             static bool FirstCall = true;
@@ -77,11 +76,7 @@ namespace FakeCQG
                     AnswerHelper = new AnswerHelper();
                     EventHelper = new EventHelper();
 
-                    isDCClosedChekingTimer.Interval = isDCClosedChekingInterval;
-                    isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
-                    isDCClosedChekingTimer.AutoReset = true;
-                    isDCClosedChekingTimer.Enabled = true;
-
+                    DCClosedCheckingStart(isDCClosedChekingInterval);
                 }
 
                 Dictionary<int, string> argKeys;
@@ -207,34 +202,25 @@ namespace FakeCQG
                 return model;
             }
 
-            //static void DCClosedCheckingStart(int interval)
-            //{
-            //    Task.Run(async () =>
-            //    {
-            //        while (true)
-            //        {
-            //            await Task.Delay(interval);
-            //            object[] isDCClosedArg;
-            //            if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
-            //            {
-            //                isDCClosed = true;
-            //            }
-            //        }
-            //    });
-            //}
+            static void DCClosedCheckingStart(int interval)
+            {
+                Task.Run(async () =>
+                {
+                    while (true)
+                    {
+                        await Task.Delay(interval);
+                        object[] isDCClosedArg;
+                        if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                        {
+                            isDCClosed = true;
+                        }
+                    }
+                });
+            }
 
             #endregion
 
             #region Handlers
-
-            private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
-            {
-                object[] isDCClosedArg;
-                if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
-                {
-                    isDCClosed = true;
-                }
-            }
 
             internal static void OnLogChange(string key, string value, bool isQuery)
             {
@@ -269,10 +255,10 @@ namespace FakeCQG
                     default:
                         throw new ArgumentException();
                 }
-                //if (LogRepository?.Count > CountMessageForNeedToClearRepository)
-                //{
-                //    LogRepository.Clear();
-                //}
+                if (LogRepository?.Count > CountMessageForNeedToClearRepository)
+                {
+                    LogRepository.Clear();
+                }
             }
 
             #endregion
