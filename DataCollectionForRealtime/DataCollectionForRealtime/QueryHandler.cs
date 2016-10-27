@@ -522,16 +522,14 @@ namespace DataCollectionForRealtime
 
         AnswerInfo CreateExceptionAnswer(Exception ex, QueryInfo query)
         {
-            var tiex = ex as TargetInvocationException;
-            if (tiex != null)
-            {
-                ex = tiex.InnerException;
-            }
-
             return new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
             {
                 IsCQGException = true,
-                CQGException = new Action(() => { throw ex; })
+                CQGException = new ExceptionInfo()
+                {
+                    Message = ex.InnerException == null? ex.Message : ex.InnerException.Message,
+                    Sourse = ex.Source, 
+                }
             };
         }
         #endregion
