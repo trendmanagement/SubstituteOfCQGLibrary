@@ -4,7 +4,7 @@ This is a repository with CQG library substitute system that allows one to use s
 
 ### PREREQUISITES ###
 
-1. CQG Integrated Client must be installed on the machine where data collector runs. It's necessary to download and install file "16x14880_NET_b1.exe" from [this](ftp://ftp.cqg.com/CQGIC/) FTP server.
+1. CQG Integrated Client must be installed on the machine where data collector is built or launched. It's necessary to download and install file "16x14880_NET_b1.exe" from [this](ftp://ftp.cqg.com/CQGIC/) FTP server.
 
 2. MongoDB Server must be installed and set up on the machine where data collector runs. You can download and install the community version from [this](https://www.mongodb.com/download-center?jmp=nav#community) site. After the installation, you need to configure a windows service for MongoDB according to [these](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#configure-a-windows-service-for-mongodb-community-edition) instructions.
 

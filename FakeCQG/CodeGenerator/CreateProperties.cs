@@ -87,7 +87,8 @@ namespace CodeGenerator
                         File.WriteLine(Indent3 + "if(isDCClosed)" + Environment.NewLine + Indent3 +
                             "{" + Environment.NewLine + Indent4 + "return false;" + Environment.NewLine + Indent3 + "}" +
                             Environment.NewLine + Indent3 + "else" + Environment.NewLine + Indent3 + "{");
-                        Indent3 = Indent4;
+                        File.WriteLine(Indent4 + "try" + Environment.NewLine + Indent4 + "{");
+                        Indent3 = Indent3 + Indent1;
                     }
 
                     File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
@@ -126,6 +127,9 @@ namespace CodeGenerator
                     if (pinfo.Name == "IsStarted")
                     {
                         InitIndents();
+                        File.WriteLine(Indent4 + "}" + Environment.NewLine + Indent4 + "catch" + Environment.NewLine +
+                            Indent4 + "{" + Environment.NewLine  + Indent3 + Indent1 + "return false;" + Environment.NewLine + 
+                            Indent4 + "}");
                         File.WriteLine(Indent3 + "}");
                     }
 

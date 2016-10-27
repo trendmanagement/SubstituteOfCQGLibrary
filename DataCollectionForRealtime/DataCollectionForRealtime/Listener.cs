@@ -73,21 +73,21 @@ namespace DataCollectionForRealtime
         private static void SendHandshakingQuery(IMongoCollection<HandshakingInfo> collection)
         {
             var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, handshaking.ID);
-            collection.InsertOne(handshaking);
+            collection.InsertOneAsync(handshaking);
             Task.Delay(HandshakingQueryInterval).GetAwaiter().GetResult();
-            collection.DeleteOne(filter);
+            collection.DeleteOneAsync(filter);
         }
 
         static void ClearCollection(IMongoCollection<HandshakingInfo> collection)
         {
             var filter = Builders<HandshakingInfo>.Filter.Empty;
-            collection.DeleteMany(filter);
+            collection.DeleteManyAsync(filter);
         }
 
         public static void DeleteUnsubscriber(Guid id)
         {
             var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, id);
-            mongo.GetCollectionUnsubscribers.DeleteOne(filter);
+            mongo.GetCollectionUnsubscribers.DeleteOneAsync(filter);
         }
 
         public async static void StartListening(int time)

@@ -36,11 +36,10 @@ namespace FakeCQG
 
             static string Log;
             public static object LogLock = new object();
-            static HashSet<string> LogHash = new HashSet<string>();
+            //Count messages in log repository after which achievement need to clean repository
+            static int CountMessageForNeedToClearRepository = 100;
+            static HashSet<string> LogRepository = new HashSet<string>();
             public static LogModeEnum LogMode = LogModeEnum.Filtered;
-            static Timer CleanLogTimer = new Timer();
-            static int CleanLogInterval = 60000;    // 1 min
-            static bool IsClearLogTimerStart;
 
             public delegate void LogHandler(string message);
             public static event LogHandler LogChange;
@@ -82,7 +81,7 @@ namespace FakeCQG
                     isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
                     isDCClosedChekingTimer.AutoReset = true;
                     isDCClosedChekingTimer.Enabled = true;
-                    CleanLogTimer.Start();
+
                 }
 
                 Dictionary<int, string> argKeys;
@@ -105,6 +104,17 @@ namespace FakeCQG
                     FirstCall = false;
                 }
 
+                if (result == null)
+                {
+                    return default(object);
+                }
+
+                if (result.IsCQGException)
+                {
+                    var exception = new Exception(result.CQGException.Message);
+                    exception.Source = result.CQGException.Sourse;
+                    throw exception;
+                }
                 if (result.ValueKey == "value")
                 {
                     return result.Value;
@@ -125,7 +135,7 @@ namespace FakeCQG
                 Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
 
                 bool success = task.Wait(isDCClosedChekingInterval * isDCClosedChekingInterval);
-                if(isDCClosed)
+                if(!success && isDCClosed)
                 {
                     return answer;
                 }
@@ -197,6 +207,22 @@ namespace FakeCQG
                 return model;
             }
 
+            //static void DCClosedCheckingStart(int interval)
+            //{
+            //    Task.Run(async () =>
+            //    {
+            //        while (true)
+            //        {
+            //            await Task.Delay(interval);
+            //            object[] isDCClosedArg;
+            //            if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+            //            {
+            //                isDCClosed = true;
+            //            }
+            //        }
+            //    });
+            //}
+
             #endregion
 
             #region Handlers
@@ -225,12 +251,8 @@ namespace FakeCQG
 
             internal static void OnLogChange(string message)
             {
-                if (!IsClearLogTimerStart)
-                {
-                    InitCleanLogTimer();
-                }
                 Log = message;
-                bool isNewMessage = LogHash.Add(message);
+                bool isNewMessage = LogRepository.Add(message);
                 switch (LogMode)
                 {
                     case LogModeEnum.Muted:
@@ -247,21 +269,10 @@ namespace FakeCQG
                     default:
                         throw new ArgumentException();
                 }
-            }
-
-            public static void InitCleanLogTimer()
-            {
-                IsClearLogTimerStart = true;
-                CleanLogTimer.Interval = CleanLogInterval;
-                CleanLogTimer.Elapsed += CleanLogTimer_Elapsed;
-                CleanLogTimer.AutoReset = true;
-                CleanLogTimer.Start();
-            }
-
-            private static void CleanLogTimer_Elapsed(object sender, ElapsedEventArgs e)
-            {
-                LogHash.Clear();
-                CleanLogTimer.Start();
+                //if (LogRepository?.Count > CountMessageForNeedToClearRepository)
+                //{
+                //    LogRepository.Clear();
+                //}
             }
 
             #endregion
