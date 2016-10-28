@@ -352,13 +352,15 @@ namespace DataCollectionForRealtime
         {
             if (ServerDictionaries.RealtimeIds.Count > 0)
             {
+                Program.MainForm.Visible = false;
+
                 string eventKey = Core.CreateUniqueKey();
 
                 EventHandler.EventAppsSubscribersNum.Add("DCClosed", Listener.SubscribersCount);
 
                 var eventInfo = new FakeCQG.Internal.Models.EventInfo(eventKey, "DCClosed", numOfSubscribers: Listener.SubscribersCount);
 
-                Task.Run(() => EventHandler.FireEvent(eventInfo));
+                EventHandler.FireEvent(eventInfo);
 
                 QueryHandler.ReadQueries(false);
                 if (QueryHandler.QueryList.Count > 0)

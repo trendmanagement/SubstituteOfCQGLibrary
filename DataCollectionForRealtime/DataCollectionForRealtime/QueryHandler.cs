@@ -341,7 +341,7 @@ namespace DataCollectionForRealtime
             }
 
             Core.QueryHelper = new QueryHelper();
-            ClearQueriesListAsync();
+            ClearQueriesList();
             NewQueriesReady += SetQueryList;
 
             Core.AnswerHelper = new AnswerHelper();
@@ -439,6 +439,24 @@ namespace DataCollectionForRealtime
 
         // Instruments of cleaning information about queries from DB
         #region Cleaning
+        public void ClearQueriesList()
+        {
+            var filter = Builders<QueryInfo>.Filter.Empty;
+            try
+            {
+                Core.QueryHelper.GetCollection.DeleteMany(filter);
+                AsyncTaskListener.LogMessage("Queries list was cleared successfully");
+            }
+            catch (Exception ex)
+            {
+                AsyncTaskListener.LogMessage(ex.Message);
+                if (Core.QueryHelper.Connect())
+                {
+                    ClearQueriesList();
+                }
+            }
+        }
+
         public Task ClearQueriesListAsync()
         {
             return Task.Run(() =>
@@ -522,13 +540,19 @@ namespace DataCollectionForRealtime
 
         AnswerInfo CreateExceptionAnswer(Exception ex, QueryInfo query)
         {
+            var tiex = ex as TargetInvocationException;
+            if (tiex != null)
+            {
+                ex = tiex.InnerException;
+            }
+
             return new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
             {
                 IsCQGException = true,
                 CQGException = new ExceptionInfo()
                 {
-                    Message = ex.InnerException == null? ex.Message : ex.InnerException.Message,
-                    Sourse = ex.Source, 
+                    Message = ex.InnerException == null ? ex.Message : ex.InnerException.Message,
+                    Sourse = ex.Source,
                 }
             };
         }

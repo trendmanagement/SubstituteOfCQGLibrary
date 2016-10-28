@@ -47,7 +47,6 @@ namespace FakeCQG.Internal.Models
 
         private string _valueKey;
 
-
         public bool IsCQGException;
 
         public ExceptionInfo CQGException { get; set; }

@@ -23,21 +23,19 @@ namespace DataCollectionForRealtime
         public delegate void ListenerEventHandler(HandshakingEventArgs args);
         public static event ListenerEventHandler SubscribersAdded;
 
-        public static Task StartHandshaking()
+        public static void StartHandshaking()
         {
             var collectionSubscribers = mongo.GetCollectionSubscribers;
+            
+            // Clear collection
+            ClearCollection(collectionSubscribers);
 
-            return Task.Run(() =>
-            {
-                // Clear collection
-                ClearCollection(collectionSubscribers);
+            // Send handshaking query
+            SendHandshakingQuery(collectionSubscribers);
 
-                // Send handshaking query
-                SendHandshakingQuery(collectionSubscribers);
+            // Check subscribers
+            CheckSubscribers(collectionSubscribers);
 
-                // Check subscribers
-                CheckSubscribers(collectionSubscribers);
-            });
         }
 
         // Checking for subscribers and firing of OnSubscribersAdded event

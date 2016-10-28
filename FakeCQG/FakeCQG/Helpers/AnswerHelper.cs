@@ -69,6 +69,8 @@ namespace FakeCQG.Internal.Helpers
             });
         }
 
+        // Recursive checking DB for a ready answer while connection exists.
+        // Getting object with answer data if there's coincidence by query id.
         public AnswerInfo GetAnswerData(string id, out bool isAns)
         {
             var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
@@ -103,13 +105,17 @@ namespace FakeCQG.Internal.Helpers
             {
                 try
                 {
-                    answer = Collection.Find(filter).First();
-                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    answer = Collection.Find(filter).First();                   
                     RemoveAnswerAsync(answer.AnswerKey);
                     ClientDictionaries.IsAnswer[id] = true;
+                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
                 }
                 catch (Exception)
                 {
+                    if (Core.isDCClosed)
+                    {
+                        break;
+                    }
                     if (Connect())
                     {
                         return GetAnswerData(id);

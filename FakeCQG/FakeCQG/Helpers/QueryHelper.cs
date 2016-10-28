@@ -47,6 +47,23 @@ namespace FakeCQG.Internal.Helpers
             return Collection != null;
         }
 
+        public void PushQuery(QueryInfo query)
+        {
+            try
+            {
+                Collection.InsertOne(query);
+                Core.OnLogChange(query.QueryKey, query.MemberName, true);
+            }
+            catch (Exception ex)
+            {
+                Core.OnLogChange(ex.Message);
+                if (Connect())
+                {
+                    PushQuery(query);
+                }
+            }
+        }
+
         public Task PushQueryAsync(QueryInfo query)
         {
             return Task.Run(() =>

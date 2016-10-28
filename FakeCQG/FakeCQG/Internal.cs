@@ -54,7 +54,8 @@ namespace FakeCQG
             public static AnswerHelper AnswerHelper;
             public static EventHelper EventHelper;
 
-            static bool isDCClosed = false;
+            // Variable that contains information about is data collector form closed or not.
+            public static bool isDCClosed = false;
             static Timer isDCClosedChekingTimer = new Timer();
             static int isDCClosedChekingInterval = 30;
 
@@ -93,7 +94,7 @@ namespace FakeCQG
 
                 QueryInfo queryInfo = CreateQuery(queryType, queryKey, dcObjKey, memName, argKeys, argVals);
 
-                Task.Run(() => QueryHelper.PushQueryAsync(queryInfo));
+                QueryHelper.PushQuery(queryInfo);
 
                 AnswerInfo result = WaitingForAnAnswer(queryKey, queryType);
 
@@ -116,6 +117,7 @@ namespace FakeCQG
                     exception.Source = result.CQGException.Sourse;
                     throw exception;
                 }
+
                 if (result.ValueKey == "value")
                 {
                     return result.Value;
@@ -133,30 +135,25 @@ namespace FakeCQG
             public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
             {
                 AnswerInfo answer = null;
-                Task task = Task.Run(() => { answer = AnswerHelper.GetAnswerData(queryKey); });
+                answer = AnswerHelper.GetAnswerData(queryKey);
 
-                bool success = task.Wait(isDCClosedChekingInterval * isDCClosedChekingInterval);
-                if(!success && isDCClosed)
-                {
-                    return answer;
-                }
-
-                success = task.Wait(QueryTimeout);
-                if (success)
+                if (answer != null)
                 {
                     ClientDictionaries.IsAnswer.Remove(queryKey);
+
+                    // If query type of successfully extracted non empty answer tells about creation of new object
+                    // own dictionary of event checking must be created, filled for that object and added 
+                    // to the common dictionary of current application
                     if (queryType == QueryType.CallCtor)
                     {
                         ClientDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.MemberName);
                     }
-                    return answer;
                 }
                 else
                 {
                     OnLogChange(NoAnswerMessage);
-                    task = null;
-                    throw new TimeoutException();
                 }
+                return answer;
             }
 
             public static QueryInfo CreateQuery(
@@ -212,6 +209,7 @@ namespace FakeCQG
 
             #region Handlers
 
+            // Check by timer, whether the form of data collector is closed
             private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
             {
                 object[] isDCClosedArg;
