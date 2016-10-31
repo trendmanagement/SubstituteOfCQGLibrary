@@ -23,6 +23,8 @@ namespace DataCollectionForRealtime
 
         private System.Timers.Timer AutoWorkTimer;
         private Timer HandshakingTimer = new Timer();
+        private bool lockedAutoWorking;
+        private bool lockedClearDictionaries;
 
         private CQGDataManagement CqgDataManagement;
 
@@ -229,22 +231,52 @@ namespace DataCollectionForRealtime
         //Automatic processing of queries
         private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
-            QueryHandler.ReadQueries();
-            QueryHandler.ProcessEntireQueryList();
-
-            if (checkBoxAuto.Checked)
+            if (lockedAutoWorking)
             {
-                AutoWorkTimer.Start();
+                return;
+            }
+            else
+            {
+                lockedAutoWorking = true;
+                try
+                {
+                    QueryHandler.ReadQueries();
+                    QueryHandler.ProcessEntireQueryList();
+
+                    if (checkBoxAuto.Checked)
+                    {
+                        AutoWorkTimer.Start();
+                    }
+
+                }
+                finally
+                {
+                    lockedAutoWorking = false;
+                }
             }
         }
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            ServerDictionaries.ClearAllDictionaries();
+            if (lockedClearDictionaries)
+            {
+                return;
+            }
+            else
+            {
+                lockedClearDictionaries = true;
+                try
+                {
+                    ServerDictionaries.ClearAllDictionaries();
+                }
+                finally
+                {
+                    lockedClearDictionaries = false;
+                }
+            }
         }
 
         #endregion
-
 
         #region Controls event handlers
 

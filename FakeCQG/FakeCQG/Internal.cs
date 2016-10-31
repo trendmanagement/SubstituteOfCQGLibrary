@@ -38,9 +38,6 @@ namespace FakeCQG
             public static object LogLock = new object();
             static HashSet<string> LogHash = new HashSet<string>();
             public static LogModeEnum LogMode = LogModeEnum.Filtered;
-            static Timer CleanLogTimer = new Timer();
-            static int CleanLogInterval = 60000;    // 1 min
-            static bool IsClearLogTimerStart;
 
             public delegate void LogHandler(string message);
             public static event LogHandler LogChange;
@@ -58,6 +55,7 @@ namespace FakeCQG
             public static bool isDCClosed = false;
             static Timer isDCClosedChekingTimer = new Timer();
             static int isDCClosedChekingInterval = 30;
+            static bool locked;
 
             static bool FirstCall = true;
 
@@ -83,7 +81,6 @@ namespace FakeCQG
                     isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
                     isDCClosedChekingTimer.AutoReset = true;
                     isDCClosedChekingTimer.Enabled = true;
-                    CleanLogTimer.Start();
                 }
 
                 Dictionary<int, string> argKeys;
@@ -212,10 +209,25 @@ namespace FakeCQG
             // Check by timer, whether the form of data collector is closed
             private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
             {
-                object[] isDCClosedArg;
-                if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                if (locked)
                 {
-                    isDCClosed = true;
+                    return;
+                }
+                else
+                {
+                    locked = true;
+                    try
+                    {
+                        object[] isDCClosedArg;
+                        if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                        {
+                            isDCClosed = true;
+                        }
+                    }
+                    finally
+                    {
+                        locked = false;
+                    }
                 }
             }
 
@@ -234,10 +246,6 @@ namespace FakeCQG
 
             internal static void OnLogChange(string message)
             {
-                if (!IsClearLogTimerStart)
-                {
-                    InitCleanLogTimer();
-                }
                 Log = message;
                 bool isNewMessage = LogHash.Add(message);
                 switch (LogMode)
@@ -256,21 +264,6 @@ namespace FakeCQG
                     default:
                         throw new ArgumentException();
                 }
-            }
-
-            public static void InitCleanLogTimer()
-            {
-                IsClearLogTimerStart = true;
-                CleanLogTimer.Interval = CleanLogInterval;
-                CleanLogTimer.Elapsed += CleanLogTimer_Elapsed;
-                CleanLogTimer.AutoReset = true;
-                CleanLogTimer.Start();
-            }
-
-            private static void CleanLogTimer_Elapsed(object sender, ElapsedEventArgs e)
-            {
-                LogHash.Clear();
-                CleanLogTimer.Start();
             }
 
             #endregion
