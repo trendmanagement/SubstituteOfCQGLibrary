@@ -479,6 +479,7 @@ namespace UnitTestRealCQG
         }
 
         [TestMethod]
+        //10 sec act test 
         public void ProcessedQuery_WithLongAct()
         {
             // arrange
