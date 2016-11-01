@@ -16,6 +16,7 @@ namespace DataCollectionForRealtime
         private const int HandshakingQueryInterval = 1500;   // 1.5 s
         private static HandshakingInfo handshaking = new HandshakingInfo();
         private static Timer timer;
+        private static bool locked;
         private static HandshakingHelper mongo = new HandshakingHelper();
 
         public static int SubscribersCount { get; set; }
@@ -96,7 +97,22 @@ namespace DataCollectionForRealtime
 
         private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            StartHandshaking();
+            if (locked)
+            {
+                return;
+            }
+            else
+            {
+                locked = true;
+                try
+                {
+                    StartHandshaking();
+                }
+                finally
+                {
+                    locked = false;
+                }
+            }
         }
     }
 }
