@@ -18,7 +18,7 @@ namespace DataCollectionForRealtime
             try
             {
                 Core.AnswerHelper.GetCollection.InsertOne(answer);
-                if (Program.MainForm.Visible)
+                if (Program.MainForm != null && Program.MainForm.Visible)
                 {
                     lock (Core.LogLock)
                     {
