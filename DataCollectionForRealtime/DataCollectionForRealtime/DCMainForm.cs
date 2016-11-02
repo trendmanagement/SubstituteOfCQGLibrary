@@ -22,9 +22,7 @@ namespace DataCollectionForRealtime
         private bool enteringMongoDBURL = false;
 
         private System.Timers.Timer AutoWorkTimer;
-        private Timer HandshakingTimer = new Timer();
-        private bool lockedAutoWorking;
-        private bool lockedClearDictionaries;
+        private System.Timers.Timer HandshakingTimer = new System.Timers.Timer();
 
         private CQGDataManagement CqgDataManagement;
 
@@ -52,6 +50,7 @@ namespace DataCollectionForRealtime
 
             HandshakingTimer.Disposed += HandshakingTimer_Disposed;
             HandshakingTimer.Interval = DictionaryClearingInterval;
+            HandshakingTimer.AutoReset = false;
 
             EventHandler.EventAppsSubscribersNum = new Dictionary<string, int>();
         }
@@ -231,48 +230,31 @@ namespace DataCollectionForRealtime
         //Automatic processing of queries
         private void AutoWorkTimer_Elapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
-            if (lockedAutoWorking)
+            try
             {
-                return;
+                QueryHandler.ReadQueries();
+                QueryHandler.ProcessEntireQueryList();
+
             }
-            else
+            finally
             {
-                lockedAutoWorking = true;
-                try
+                if (checkBoxAuto.Checked)
                 {
-                    QueryHandler.ReadQueries();
-                    QueryHandler.ProcessEntireQueryList();
-
-                    if (checkBoxAuto.Checked)
-                    {
-                        AutoWorkTimer.Start();
-                    }
-
+                    AutoWorkTimer.Start();
                 }
-                finally
-                {
-                    lockedAutoWorking = false;
-                }
+
             }
         }
 
         private void HandshakingTimer_Disposed(object sender, EventArgs e)
         {
-            if (lockedClearDictionaries)
+            try
             {
-                return;
+                ServerDictionaries.ClearAllDictionaries();
             }
-            else
+            finally
             {
-                lockedClearDictionaries = true;
-                try
-                {
-                    ServerDictionaries.ClearAllDictionaries();
-                }
-                finally
-                {
-                    lockedClearDictionaries = false;
-                }
+                HandshakingTimer.Start();
             }
         }
 

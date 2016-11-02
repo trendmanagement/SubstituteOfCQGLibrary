@@ -55,7 +55,6 @@ namespace FakeCQG
             public static bool isDCClosed = false;
             static Timer isDCClosedChekingTimer = new Timer();
             static int isDCClosedChekingInterval = 30;
-            static bool locked;
 
             static bool FirstCall = true;
 
@@ -79,7 +78,7 @@ namespace FakeCQG
 
                     isDCClosedChekingTimer.Interval = isDCClosedChekingInterval;
                     isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
-                    isDCClosedChekingTimer.AutoReset = true;
+                    isDCClosedChekingTimer.AutoReset = false;
                     isDCClosedChekingTimer.Enabled = true;
                 }
 
@@ -209,25 +208,17 @@ namespace FakeCQG
             // Check by timer, whether the form of data collector is closed
             private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
             {
-                if (locked)
+                try
                 {
-                    return;
+                    object[] isDCClosedArg;
+                    if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                    {
+                        isDCClosed = true;
+                    }
                 }
-                else
+                finally
                 {
-                    locked = true;
-                    try
-                    {
-                        object[] isDCClosedArg;
-                        if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
-                        {
-                            isDCClosed = true;
-                        }
-                    }
-                    finally
-                    {
-                        locked = false;
-                    }
+                    isDCClosedChekingTimer.Start();
                 }
             }
 
