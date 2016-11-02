@@ -80,14 +80,14 @@ namespace DataCollectionForRealtime
                                         BindingFlags.CreateInstance, null, args, null, null);
                                     key = Core.CreateUniqueKey();
 
-                                    // Get name of an instrument if it's CQG.CQGInstrumentClass object creation
+                                    // Get name of an instrument if it's CQG.CQGInstrument object creation
                                     // and show it in MiniMonitor form
-                                    if (query.MemberName == "CQG.CQGInstrumentClass")
+                                    if (query.MemberName == "CQG.CQGInstrument")
                                     {
                                         string instrName = (string)qObj.GetType().InvokeMember("FullName", 
                                             BindingFlags.GetProperty, null, qObj, null);
-                                        DCMiniMonitor.instrumentList.Add(instrName);
-                                        Program.MiniMonitor.InstrumentListUpdate();
+                                        DCMiniMonitor.instrumentsList.Add(instrName);
+                                        Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
                                     }
 
                                     ServerDictionaries.PutObjectToTheDictionary(key, qObj);
@@ -112,15 +112,26 @@ namespace DataCollectionForRealtime
                             ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
                         }
 
-                        // Remove name of an instrument if it's CQG.CQGInstrumentClass object creation
+                        // Remove name of a symbol if it's CQG.CQGTimedBarsRequest object deleting
                         // from MiniMonitor form
-                        if (query.MemberName == "CQG.CQGInstrumentClass")
+                        if (query.MemberName == "CQG.CQGTimedBarsRequest")
+                        {
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                            string symbName = (string)qObj.GetType().InvokeMember("Symbol",
+                                BindingFlags.GetProperty, null, qObj, null);
+                            DCMiniMonitor.symbolsList.Remove(symbName);
+                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                        }
+
+                        // Remove name of an instrument if it's CQG.CQGInstrument object deleting
+                        // from MiniMonitor form
+                        if (query.MemberName == "CQG.CQGInstrument")
                         {
                             object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                             string instrName = (string)qObj.GetType().InvokeMember("FullName",
                                 BindingFlags.GetProperty, null, qObj, null);
-                            DCMiniMonitor.instrumentList.Remove(instrName);
-                            Program.MiniMonitor.InstrumentListUpdate();
+                            DCMiniMonitor.instrumentsList.Remove(instrName);
+                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
                         }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
@@ -142,17 +153,9 @@ namespace DataCollectionForRealtime
 
                             // Checking type of property value and returning value or value key 
                             // (second, if it's not able to be transmitted through the database)
-                            if (Core.IsSerializableType(propV.GetType()))
-                            {
-                                string answerKey = "value";
-                                answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: answerKey, value: propV);
-                            }
-                            else
-                            {
-                                string answerKey = Core.CreateUniqueKey();
-                                ServerDictionaries.PutObjectToTheDictionary(answerKey, propV);
-                                answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: answerKey);
-                            }
+                            answer = Core.IsSerializableType(propV.GetType()) ?
+                                CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
+                                CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
                         }
                         catch (Exception ex)
                         {
@@ -168,6 +171,12 @@ namespace DataCollectionForRealtime
                         object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
                         object[] args = Core.ParseInputArgsFromQueryInfo(query);
+
+                        if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
+                        {
+                            DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
+                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                        }
 
                         try
                         {
@@ -220,17 +229,9 @@ namespace DataCollectionForRealtime
                             if (!object.ReferenceEquals(returnV, null))
                             {
                                 // Handling method call request depending of return value type
-                                if (Core.IsSerializableType(returnV.GetType()))
-                                {
-                                    var returnKey = "value";
-                                    answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey, value: returnV);
-                                }
-                                else
-                                {
-                                    var returnKey = Core.CreateUniqueKey();
-                                    ServerDictionaries.PutObjectToTheDictionary(returnKey, returnV);
-                                    answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
-                                }
+                                answer = Core.IsSerializableType(returnV.GetType()) ? 
+                                    CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, returnV) :
+                                    CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, returnV);
                             }
                             else
                             {
@@ -259,14 +260,10 @@ namespace DataCollectionForRealtime
 
                             if(EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))
                             {
-                                if (query.QueryType == QueryType.SubscribeToEvent)
-                                {
-                                    EventHandler.EventAppsSubscribersNum[query.MemberName] += 1;
-                                }
-                                if (query.QueryType == QueryType.UnsubscribeFromEvent)
-                                {
-                                    EventHandler.EventAppsSubscribersNum[query.MemberName] -= 1;
-                                }
+                                EventHandler.EventAppsSubscribersNum[query.MemberName] =
+                                    query.QueryType == QueryType.SubscribeToEvent ?
+                                    EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :
+                                    EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;
                             }
                             else
                             {
@@ -280,11 +277,11 @@ namespace DataCollectionForRealtime
                             var eventHandlersMethods = typeof(CQGEventHandlers).GetMethods();
                             MethodInfo handlerInfo = null;
                             
-                            foreach(var mi in eventHandlersMethods)
+                            for(int i = 0; i < eventHandlersMethods.Length; i++)
                             {
-                                if(mi.Name.Contains(query.MemberName))
+                                if(eventHandlersMethods[i].Name.Contains(query.MemberName))
                                 {
-                                    handlerInfo = mi;
+                                    handlerInfo = eventHandlersMethods[i];
                                 }
                             }
 
@@ -327,6 +324,7 @@ namespace DataCollectionForRealtime
         }
 
         #region Helper methods
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetQueryList(List<QueryInfo> queries)
         {
             QueryList = queries;
@@ -355,9 +353,9 @@ namespace DataCollectionForRealtime
         {
             lock (QueriesProcessingLock)
             {
-                foreach (QueryInfo query in QueryList)
+                for(int i = 0; i < QueryList.Count; i++)
                 {
-                    ProcessQuery(query);
+                    ProcessQuery(QueryList[i]);
                 }
                 QueryList.Clear();
             }
@@ -390,10 +388,10 @@ namespace DataCollectionForRealtime
                 {
                     lock (Core.LogLock)
                     {
-                        AsyncTaskListener.LogMessage(string.Format("{0} new quer(y/ies) in database", queries.Count));
-                        foreach (QueryInfo query in queries)
+                        AsyncTaskListener.LogMessage(string.Concat(queries.Count, " new quer(y/ies) in database"));
+                        for (int i = 0; i < queries.Count; i++)
                         {
-                            AsyncTaskListener.LogMessage(query.ToString());
+                            AsyncTaskListener.LogMessage(queries[i].ToString());
                         }
                     }
                 } 
@@ -431,6 +429,22 @@ namespace DataCollectionForRealtime
         }
         #endregion
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal AnswerInfo CreateValAnswer(string qKey, string objKey, string memberName, object val)
+        {
+            var returnKey = "value";
+            return new AnswerInfo(qKey, objKey, memberName, valueKey: returnKey, value: val);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal AnswerInfo CreateKeyAnswer(string qKey, string objKey, string memberName, object val)
+        {
+            var returnKey = Core.CreateUniqueKey();
+            ServerDictionaries.PutObjectToTheDictionary(returnKey, val);
+            return new AnswerInfo(qKey, objKey, memberName, valueKey: returnKey);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal void PushAnswerAndDeleteQuery(AnswerInfo answer)
         {
             AnswerHandler.PushAnswer(answer);
@@ -533,6 +547,7 @@ namespace DataCollectionForRealtime
             return null;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static bool IsDelegate(Type type)
         {
             return type.BaseType == typeof(MulticastDelegate);

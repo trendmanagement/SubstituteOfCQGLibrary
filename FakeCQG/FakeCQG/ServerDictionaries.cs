@@ -24,7 +24,7 @@ namespace FakeCQG.Internal
             }
             catch (KeyNotFoundException ex)
             {
-                Core.OnLogChange(string.Format("{0}, with key: {1}", ex.Message, key));
+                Core.OnLogChange(string.Concat(ex.Message, ", with key: ", key));
             }
             return objectValue;
         }

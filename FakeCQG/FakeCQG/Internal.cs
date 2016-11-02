@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 using System.Timers;
 using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
@@ -138,8 +138,8 @@ namespace FakeCQG
                 {
                     ClientDictionaries.IsAnswer.Remove(queryKey);
 
-                    // If query type of successfully extracted non empty answer tells about creation of new object
-                    // own dictionary of event checking must be created, filled for that object and added 
+                    // If query type of successfully extracted non empty answer tells about creation of new object,
+                    // then own dictionary of event checking must be created, filled for that object and added 
                     // to the common dictionary of current application
                     if (queryType == QueryType.CallCtor)
                     {
@@ -233,14 +233,10 @@ namespace FakeCQG
 
             internal static void OnLogChange(string key, string value, bool isQuery)
             {
-                if (isQuery)
-                {
-                    Log = string.Format("Query - key {0}, parameter name {1}", key, value);
-                }
-                else
-                {
-                    Log = string.Format("Answer - key {0}, value {1}", key, value);
-                }
+                Log = isQuery ?
+                    string.Concat("Query - key ", key, ", parameter name ", value):
+                    string.Concat("Answer - key ", key, ", value ", value);
+
                 LogChange?.Invoke(Log);
             }
 
@@ -281,10 +277,12 @@ namespace FakeCQG
 
                 if (args != null)
                 {
+                    object arg;
+                    Type argType;
                     for (int i = 0; i < args.Length; i++)
                     {
-                        object arg = args[i];
-                        Type argType = arg.GetType();
+                        arg = args[i];
+                        argType = arg.GetType();
 
                         if (IsSerializableType(argType))
                         {
@@ -292,20 +290,38 @@ namespace FakeCQG
                         }
                         else
                         {
-                            string argKey;
-                            if (isClientOrServer)
-                            {
-                                argKey = (string)argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg);
-                            }
-                            else
-                            {
-                                argKey = Core.CreateUniqueKey();
-                                ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
-                            }
-                            argKeys.Add(i, argKey);
+                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));
+                            //if (isClientOrServer)
+                            //{
+                            //    // Add to arguments list the key of object that saved in DC
+                            //    argKeys.Add(i, (string)argType.GetField("dcObjKey", BindingFlags.NonPublic 
+                            //        | BindingFlags.Instance).GetValue(arg));
+                            //}
+                            //else
+                            //{
+                            //    string argKey = CreateUniqueKey();
+                            //    ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
+                            //    argKeys.Add(i, argKey);
+                            //}                           
                         }
                     }
                 }
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static string GetObjKeyForArgKeysList(object arg, Type argType)
+            {
+                // Returns the key of object that saved in DC. It will be added to arguments list
+                return (string)argType.GetField("dcObjKey", BindingFlags.NonPublic
+                    | BindingFlags.Instance).GetValue(arg);
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static string SetNewObjKeyForArgKeysList(object arg)
+            {
+                string argKey = CreateUniqueKey();
+                ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
+                return argKey;
             }
 
             private static object[] GetArgsIntoArrayFromTwoDicts(
@@ -369,7 +385,7 @@ namespace FakeCQG
 
             public static string CreateUniqueKey()
             {
-                return Guid.NewGuid().ToString("N");
+                return string.Concat(Guid.NewGuid());//.ToString("N");
             }
 
             #endregion

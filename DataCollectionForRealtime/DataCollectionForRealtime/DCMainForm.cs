@@ -107,7 +107,7 @@ namespace DataCollectionForRealtime
 #if DEBUG
             catch (Exception ex)
             {
-                TSErrorCatch.errorCatchOut(Convert.ToString(this), ex);
+                TSErrorCatch.errorCatchOut(string.Concat(this), ex);
             }
 #endif
         }
@@ -139,10 +139,10 @@ namespace DataCollectionForRealtime
             if (!args.NoSubscribers)
             {
                 var subscribersList = new List<HandshakingInfo>(subscribersArray);
-                foreach (HandshakingInfo subscriber in args.Subscribers)
+                for (int i = 0; i < args.Subscribers.Count; i++)
                 {
-                    subscribersList.Remove(subscriber);
-                    ServerDictionaries.RealtimeIds.Add(subscriber);
+                    subscribersList.Remove(args.Subscribers[i]);
+                    ServerDictionaries.RealtimeIds.Add(args.Subscribers[i]);
                 }
 
                 if (subscribersList.Count > 0)
@@ -151,11 +151,11 @@ namespace DataCollectionForRealtime
                     QueryHandler.ReadQueries();
                     QueryHandler.ProcessEntireQueryList();
 
-                    foreach (var item in subscribersList)
+                    for (int i = 0; i < subscribersList.Count; i++)
                     {
-                        UnsubscribeEvents(item);
-                        ServerDictionaries.DeleteFromServerDictionaries(item);
-                        Listener.DeleteUnsubscriber(item.ID);
+                        UnsubscribeEvents(subscribersList[i]);
+                        ServerDictionaries.DeleteFromServerDictionaries(subscribersList[i]);
+                        Listener.DeleteUnsubscriber(subscribersList[i].ID);
                     }
                 }
                 HandshakingTimer.Stop();
@@ -181,7 +181,7 @@ namespace DataCollectionForRealtime
                         Type delType = QueryHandler.FindDelegateType(QueryHandler.CQGAssembly, dic.Key);
 
                         // Instantiate the delegate with our own handler
-                        string handlerName = string.Format("_ICQGCELEvents_{0}EventHandlerImpl", dic.Key);
+                        string handlerName = string.Concat("_ICQGCELEvents_", dic.Key, "EventHandlerImpl");
 
                         MethodInfo handlerInfo = typeof(CQGEventHandlers).GetMethod(handlerName);
                         Delegate d = Delegate.CreateDelegate(delType, handlerInfo);
@@ -291,9 +291,11 @@ namespace DataCollectionForRealtime
             AutoWorkTimer.Interval = AutoWorkTimerInterval;
             AutoWorkTimer.AutoReset = false;
 
-            foreach (string name in Enum.GetNames(typeof(LogModeEnum)))
+            var names = Enum.GetNames(typeof(LogModeEnum));
+
+            for (int i = 0; i < names.Length; i++)
             {
-                comboBoxLogMode.Items.Add(name);
+                comboBoxLogMode.Items.Add(names[i]);
             }
             comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
             comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
@@ -360,8 +362,8 @@ namespace DataCollectionForRealtime
         {
             if (!Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
             {
-                string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
-                ServerDictionaries.RealtimeIds.Count);
+                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ", 
+                    ServerDictionaries.RealtimeIds.Count, " client(s) is/are connected to it.");
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

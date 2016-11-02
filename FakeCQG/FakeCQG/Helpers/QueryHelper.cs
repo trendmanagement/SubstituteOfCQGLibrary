@@ -52,7 +52,7 @@ namespace FakeCQG.Internal.Helpers
             try
             {
                 Collection.InsertOne(query);
-                Core.OnLogChange(query.QueryKey, query.MemberName, true);
+                //Core.OnLogChange(query.QueryKey, query.MemberName, true);
             }
             catch (Exception ex)
             {
@@ -71,7 +71,7 @@ namespace FakeCQG.Internal.Helpers
                 try
                 {
                     Collection.InsertOne(query);
-                    Core.OnLogChange(query.QueryKey, query.MemberName, true);
+                    //Core.OnLogChange(query.QueryKey, query.MemberName, true);
                 }
                 catch (Exception ex)
                 {

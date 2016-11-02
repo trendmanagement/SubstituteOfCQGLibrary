@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG.Internal;
@@ -50,20 +51,28 @@ namespace DataCollectionForRealtime
 
         private static void OnSubscribersAdded(List<HandshakingInfo> subscribers)
         {
-            if (subscribers.Count == 0)
-            {
-                SubscribersCount = 0;
-                AsyncTaskListener.LogMessage("No subscribers for handshaking");
-                SubscribersAdded(new HandshakingEventArgs());
-                AsyncTaskListener.AllLog.Clear();
-            }
-            else
-            {
-                SubscribersCount = subscribers.Count;
-                AsyncTaskListener.LogMessage(string.Format("DC has {0} subscriber(s)", subscribers.Count));
-                SubscribersAdded(new HandshakingEventArgs(subscribers));
-            }
+            SubscribersCount = subscribers.Count == 0 ?
+                SetToZeroNumberOfSubscribers() :
+                SetTheNumberOfSubscribers(subscribers);
+
             timer.Start();
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static int SetToZeroNumberOfSubscribers()
+        {
+            AsyncTaskListener.LogMessage("No subscribers for handshaking");
+            SubscribersAdded(new HandshakingEventArgs());
+            AsyncTaskListener.AllLog.Clear();
+            return 0;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static int SetTheNumberOfSubscribers(List<HandshakingInfo> subs)
+        {
+            AsyncTaskListener.LogMessage(string.Concat("DC has", subs.Count, " subscriber(s)"));
+            SubscribersAdded(new HandshakingEventArgs(subs));
+            return subs.Count;
         }
 
         // Sending of handshaking model and deleting it 
@@ -75,19 +84,21 @@ namespace DataCollectionForRealtime
             collection.DeleteOne(filter);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static void ClearCollection(IMongoCollection<HandshakingInfo> collection)
         {
             var filter = Builders<HandshakingInfo>.Filter.Empty;
             collection.DeleteMany(filter);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteUnsubscriber(Guid id)
         {
             var filter = Builders<HandshakingInfo>.Filter.Eq(Keys.HandshakerId, id);
             mongo.GetCollectionUnsubscribers.DeleteOne(filter);
         }
 
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StartListening(int time)
         {
             timer = new Timer(time);
