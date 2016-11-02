@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataCollectionForRealtime;
+using FakeCQG;
 using FakeCQG.Internal;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
@@ -567,6 +568,34 @@ namespace UnitTestRealCQG
             }
         }
 
+        public string status = string.Empty;
+        [TestMethod]
+        //This test should run if CQG client is connected
+        public void FackeCQG_EventHandlersWork()
+        {
+            // arrange
+            StartUp();
+            string typeName = "CQG.CQGCELClass";
+            string statusConnectionUp = "csConnectionUp";
+            string statusConnectionDown = "csConnectionDown";
+            CQGCEL fakeCQGCel = new CQGCELClass();
+            fakeCQGCel = (CQGCEL)CQGDataManagment.CQGAssm.CreateInstance(typeName);
+            fakeCQGCel.DataConnectionStatusChanged += Cell_DataConnectionStatusChanged;
+            Core.LogChange += CQG_LogChange;
+
+            // act 1
+            fakeCQGCel.Startup();
+
+            // assert 1
+            Assert.AreEqual(statusConnectionUp, status);
+
+            // act 2
+            fakeCQGCel.Shutdown();
+
+            // assert 1
+            Assert.AreEqual(statusConnectionDown, status);
+        }
+
         #endregion
 
         #region Helpers
@@ -618,6 +647,11 @@ namespace UnitTestRealCQG
 
         private void CQG_GetQueries_Mock(List<QueryInfo> queries)
         {
+        }
+
+        private void Cell_DataConnectionStatusChanged(eConnectionStatus new_status)
+        {
+            status = new_status.ToString();
         }
 
         #endregion
