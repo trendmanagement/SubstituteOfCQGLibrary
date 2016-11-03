@@ -105,10 +105,14 @@ namespace FakeCQG.Internal.Helpers
             {
                 try
                 {
-                    answer = Collection.Find(filter).First();                   
-                    RemoveAnswerAsync(answer.AnswerKey);
-                    ClientDictionaries.IsAnswer[id] = true;
-                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    var collection = Collection.Find(filter);
+                    if(collection.Any())
+                    {
+                        answer = collection.First();
+                        RemoveAnswerAsync(answer.AnswerKey);
+                        ClientDictionaries.IsAnswer[id] = true;
+                        Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    }
                 }
                 catch (Exception)
                 {
