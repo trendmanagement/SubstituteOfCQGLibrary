@@ -102,27 +102,20 @@ namespace DataCollectionForRealtime
         public static void StartListening(int time)
         {
             timer = new Timer(time);
+            timer.AutoReset = false;
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
         }
 
         private static void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            if (locked)
+            try
             {
-                return;
+                StartHandshaking();
             }
-            else
+            finally
             {
-                locked = true;
-                try
-                {
-                    StartHandshaking();
-                }
-                finally
-                {
-                    locked = false;
-                }
+                timer.Start();
             }
         }
     }
