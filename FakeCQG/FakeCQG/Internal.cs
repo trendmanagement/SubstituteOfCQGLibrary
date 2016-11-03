@@ -42,9 +42,7 @@ namespace FakeCQG
             public delegate void LogHandler(string message);
             public static event LogHandler LogChange;
 
-            // Changed the access level of visibility for testing
-            public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
-            public const string NoAnswerMessage = "Timer elapsed. No answer.";
+            public const string NoAnswerMessage = "No answer";
 
             // Main helper objects of each database collection
             public static QueryHelper QueryHelper;

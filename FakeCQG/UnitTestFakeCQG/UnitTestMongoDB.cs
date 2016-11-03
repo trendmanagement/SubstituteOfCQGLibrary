@@ -85,45 +85,6 @@ namespace UnitTestFakeCQG
             Assert.AreEqual(null, queryList[3].ArgValues);
         }
 
-        string NoAnswerMessage = string.Empty;
-        //TODO: uncomment if not - const int QueryTemeout = int.MaxValue
-        [TestMethod]
-        public void Method_ExecuteTheQuery_TimerElapsed()
-        {
-            // arrange
-            var queryType = QueryType.SetProperty;
-            string name = "name";
-            Timer timer = new Timer();
-            bool isThrownException = false;
-            Core.QueryTimeout = 1000;
-            Core.LogChange += CQG_LogChange_NoAnswer;
-            var answerHelper = new AnswerHelper();
-            var queryHelper = new QueryHelper();
-            Task.Run(async () =>
-            {
-                await answerHelper.ClearAnswersListAsync();
-            }).GetAwaiter().GetResult();
-
-            // act
-            try
-            {
-                var answer = Core.ExecuteTheQuery(queryType, string.Empty, name, null);
-                Assert.Fail("An exception should have been thrown");
-            }
-            catch (TimeoutException ex)
-            {
-                isThrownException = (ex == null) ? false : true;
-            }
-
-            // assert
-            Assert.IsTrue(isThrownException);
-        }
-
-        private void CQG_LogChange_NoAnswer(string message)
-        {
-            NoAnswerMessage = message;
-        }
-
         private void CQG_LogChange_Mock(string message)
         {
         }

@@ -481,7 +481,7 @@ namespace UnitTestRealCQG
 
         [TestMethod]
         //10 sec act test 
-        public void ProcessedQuery_WithLongAct()
+        public async void ProcessedQuery_WithLongAct()
         {
             // arrange
             string id = "key";
@@ -494,14 +494,11 @@ namespace UnitTestRealCQG
 
             // act
             var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name);
-            Task.Run(async () =>
-            {
-                await queryHelper.PushQueryAsync(query);
-                isQuery = await QueryHandler.CheckQueryAsync(id);
+            await queryHelper.PushQueryAsync(query);
+            isQuery = await QueryHandler.CheckQueryAsync(id);
 
-                // assert 1
-                Assert.IsTrue(isQuery);
-            }).GetAwaiter().GetResult();
+            // assert 1
+            Assert.IsTrue(isQuery);
 
             QueryHandler.ProcessQuery(query);
 
@@ -610,6 +607,7 @@ namespace UnitTestRealCQG
             Task.Run(async () =>
             {
                 await QueryHandler.ClearQueriesListAsync();
+                await Core.AnswerHelper.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
         }
 
