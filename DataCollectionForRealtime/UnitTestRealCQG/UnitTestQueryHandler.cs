@@ -568,7 +568,7 @@ namespace UnitTestRealCQG
         public string status = string.Empty;
         [TestMethod]
         //This test should run if CQG client is connected
-        public void FackeCQG_EventHandlersWork()
+        public void FakeCQG_EventHandlersWork()
         {
             // arrange
             StartUp();

@@ -109,7 +109,7 @@ namespace FakeCQG
                 if (result.IsCQGException)
                 {
                     var exception = new Exception(result.CQGException.Message);
-                    exception.Source = result.CQGException.Sourse;
+                    exception.Source = result.CQGException.Source;
                     throw exception;
                 }
 
