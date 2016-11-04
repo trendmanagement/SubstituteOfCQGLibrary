@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Timers;
 using DataCollectionForRealtime;
 using FakeCQG;
 using FakeCQG.Internal;
@@ -572,25 +573,28 @@ namespace UnitTestRealCQG
         {
             // arrange
             StartUp();
-            string typeName = "CQG.CQGCELClass";
             string statusConnectionUp = "csConnectionUp";
-            string statusConnectionDown = "csConnectionDown";
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.AutoReset = true;
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
             CQGCEL fakeCQGCel = new CQGCELClass();
-            fakeCQGCel = (CQGCEL)CQGDataManagment.CQGAssm.CreateInstance(typeName);
-            fakeCQGCel.DataConnectionStatusChanged += Cell_DataConnectionStatusChanged;
+            fakeCQGCel.DataConnectionStatusChanged += new _ICQGCELEvents_DataConnectionStatusChangedEventHandler(Cell_DataConnectionStatusChanged);
             Core.LogChange += CQG_LogChange;
 
-            // act 1
+            // act
             fakeCQGCel.Startup();
+            Task.Delay(300).GetAwaiter().GetResult();
 
-            // assert 1
+            // assert
             Assert.AreEqual(statusConnectionUp, status);
+        }
 
-            // act 2
-            fakeCQGCel.Shutdown();
-
-            // assert 1
-            Assert.AreEqual(statusConnectionDown, status);
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
         }
 
         #endregion
