@@ -71,32 +71,6 @@ namespace FakeCQG.Internal.Helpers
 
         // Recursive checking DB for a ready answer while connection exists.
         // Getting object with answer data if there's coincidence by query id.
-        public AnswerInfo GetAnswerData(string id, out bool isAns)
-        {
-            var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
-            try
-            {
-                AnswerInfo answer = Collection.Find(filter).First();
-                Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.AnswerKey);
-                isAns = true;
-                return answer;
-            }
-            catch (Exception)
-            {
-                if (Connect())
-                {
-                    return GetAnswerData(id, out isAns);
-                }
-                else
-                {
-                    Core.OnLogChange(id, "null", false);
-                    isAns = false;
-                    return null;
-                }
-            }
-        }
-
         public AnswerInfo GetAnswerData(string id)
         {
             var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
