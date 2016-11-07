@@ -72,6 +72,6 @@ namespace FakeCQG.Internal.Models
     {
         public string Message { get; set; }
         public string Type { get; set; }
-        public string Sourse { get; set; }
+        public string Source { get; set; }
     }
 }

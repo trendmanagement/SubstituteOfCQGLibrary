@@ -567,7 +567,7 @@ namespace DataCollectionForRealtime
                 CQGException = new ExceptionInfo()
                 {
                     Message = ex.InnerException == null ? ex.Message : ex.InnerException.Message,
-                    Sourse = ex.Source,
+                    Source = ex.Source,
                 }
             };
         }
