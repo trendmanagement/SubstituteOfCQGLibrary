@@ -57,17 +57,16 @@ namespace FakeCQG.Internal.Models
 
         public override string ToString()
         {
-            return string.Format(
-                "************************************************************" + Environment.NewLine +
-                "QUERY:" + Environment.NewLine +
-                "    QueryType: {0}" + Environment.NewLine +
-                "    QueryKey: {1}" + Environment.NewLine +
-                "    MemberName: {2}" + Environment.NewLine +
-                "    ObjectKey: {3}" + Environment.NewLine +
-                "    ArgKeys: {4}" + Environment.NewLine +
-                "    ArgValues: {5}" + Environment.NewLine +
-                "************************************************************",
-                QueryType, QueryKey, MemberName, ObjectKey, ArgKeys, ArgValues);
+            return string.Concat(
+                "************************************************************", Environment.NewLine,
+                "QUERY:", Environment.NewLine,
+                "    QueryType: ", QueryType, Environment.NewLine,
+                "    QueryKey: ", QueryKey, Environment.NewLine,
+                "    MemberName: ", MemberName, Environment.NewLine,
+                "    ObjectKey: ", ObjectKey, Environment.NewLine,
+                "    ArgKeys: ", ArgKeys, Environment.NewLine,
+                "    ArgValues: ", ArgValues, Environment.NewLine,
+                "************************************************************");
         }
     }
 }

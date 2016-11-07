@@ -54,15 +54,14 @@ namespace FakeCQG.Internal.Models
 
         public override string ToString()
         {
-            return string.Format(
-                "************************************************************" + Environment.NewLine +
-                "EVENT:" + Environment.NewLine +
-                "    EventKey = {0}" + Environment.NewLine +
-                "    EventName = {1}" + Environment.NewLine +
-                "    ArgKeys: {2}" + Environment.NewLine +
-                "    ArgValues: {3}" + Environment.NewLine +
-                "************************************************************",
-                EventKey, EventName, ArgKeys, ArgValues);
+            return string.Concat(
+                "************************************************************", Environment.NewLine,
+                "EVENT:", Environment.NewLine,
+                "    EventKey = ", EventKey, Environment.NewLine,
+                "    EventName = ", EventName, Environment.NewLine,
+                "    ArgKeys: ", ArgKeys, Environment.NewLine,
+                "    ArgValues: ", ArgValues, Environment.NewLine,
+                "************************************************************");
         }
     }
 }

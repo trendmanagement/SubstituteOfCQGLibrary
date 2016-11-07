@@ -8,12 +8,14 @@ namespace DataCollectionForRealtime
 {
     public partial class DCMiniMonitor : Form
     {
-        public static List<string> instrumentList;
+        public static List<string> instrumentsList;
+        public static List<string> symbolsList;
 
         public DCMiniMonitor()
         {
             InitializeComponent();
-            instrumentList = new List<string>();
+            instrumentsList = new List<string>();
+            symbolsList = new List<string>();
         }
 
         internal void updateConnectionStatus(string connectionStatusLabel, Color connColor)
@@ -35,8 +37,8 @@ namespace DataCollectionForRealtime
         {
             if (ServerDictionaries.RealtimeIds.Count > 0)
             {
-                string message = string.Format("Are you sure that you want to stop fake CQG server? \nCurrently {0} client(s) is/are connected to it.",
-                ServerDictionaries.RealtimeIds.Count);
+                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ", 
+                    ServerDictionaries.RealtimeIds.Count, " client(s) is/are connected to it.");
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -84,23 +86,34 @@ namespace DataCollectionForRealtime
             queriesNumDsplLbl.Text = num.ToString();
         }
 
-        internal void InstrumentListUpdate()
+        internal void SymbolsAndInstrumentsListsUpdate()
         {
             Action action = new Action(
                 () =>
                 {
-                    instrumentListTextBox.Clear();
-                    foreach (var instrument in instrumentList)
+                    instrumentsListTextBox.Clear();
+                    symbolsListTextBox.Clear();
+
+                    for (int i = 0; i < symbolsList.Count; i++)
                     {
-                        if (!string.IsNullOrWhiteSpace(instrument))
+                        if (!string.IsNullOrWhiteSpace(symbolsList[i]))
                         {
-                            instrumentListTextBox.Text += instrument + "\n";
-                            instrumentListTextBox.Select(instrumentListTextBox.Text.Length, instrumentListTextBox.Text.Length);
+                            symbolsListTextBox.Text += symbolsList[i] + "\n";
+                            symbolsListTextBox.Select(symbolsListTextBox.Text.Length, symbolsListTextBox.Text.Length);
                         }
                     }
-                    
-                });
 
+                    for (int i = 0; i < instrumentsList.Count; i++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(instrumentsList[i]))
+                        {
+                            instrumentsListTextBox.Text += instrumentsList[i] + "\n";
+                            instrumentsListTextBox.Select(instrumentsListTextBox.Text.Length, instrumentsListTextBox.Text.Length);
+                        }
+                    }
+
+                });
+            
             try
             {
                 if (Program.MainForm.IsHandleCreated)

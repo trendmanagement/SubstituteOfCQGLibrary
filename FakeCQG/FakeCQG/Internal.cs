@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 using System.Timers;
 using FakeCQG.Internal.Handshaking;
 using FakeCQG.Internal.Helpers;
@@ -38,16 +38,11 @@ namespace FakeCQG
             public static object LogLock = new object();
             static HashSet<string> LogHash = new HashSet<string>();
             public static LogModeEnum LogMode = LogModeEnum.Filtered;
-            static Timer CleanLogTimer = new Timer();
-            static int CleanLogInterval = 60000;    // 1 min
-            static bool IsClearLogTimerStart;
 
             public delegate void LogHandler(string message);
             public static event LogHandler LogChange;
 
-            // Changed the access level of visibility for testing
-            public static int QueryTimeout = int.MaxValue;  // Currently set to the max value for debugging
-            public const string NoAnswerMessage = "Timer elapsed. No answer.";
+            public const string NoAnswerMessage = "No answer";
 
             // Main helper objects of each database collection
             public static QueryHelper QueryHelper;
@@ -81,9 +76,8 @@ namespace FakeCQG
 
                     isDCClosedChekingTimer.Interval = isDCClosedChekingInterval;
                     isDCClosedChekingTimer.Elapsed += isDCClosedChekingTimer_Tick;
-                    isDCClosedChekingTimer.AutoReset = true;
+                    isDCClosedChekingTimer.AutoReset = false;
                     isDCClosedChekingTimer.Enabled = true;
-                    CleanLogTimer.Start();
                 }
 
                 Dictionary<int, string> argKeys;
@@ -114,7 +108,7 @@ namespace FakeCQG
                 if (result.IsCQGException)
                 {
                     var exception = new Exception(result.CQGException.Message);
-                    exception.Source = result.CQGException.Sourse;
+                    exception.Source = result.CQGException.Source;
                     throw exception;
                 }
 
@@ -141,8 +135,8 @@ namespace FakeCQG
                 {
                     ClientDictionaries.IsAnswer.Remove(queryKey);
 
-                    // If query type of successfully extracted non empty answer tells about creation of new object
-                    // own dictionary of event checking must be created, filled for that object and added 
+                    // If query type of successfully extracted non empty answer tells about creation of new object,
+                    // then own dictionary of event checking must be created, filled for that object and added 
                     // to the common dictionary of current application
                     if (queryType == QueryType.CallCtor)
                     {
@@ -212,32 +206,31 @@ namespace FakeCQG
             // Check by timer, whether the form of data collector is closed
             private static void isDCClosedChekingTimer_Tick(Object source, System.Timers.ElapsedEventArgs e)
             {
-                object[] isDCClosedArg;
-                if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                try
                 {
-                    isDCClosed = true;
+                    object[] isDCClosedArg;
+                    if (EventHelper.CheckWhetherEventHappened("DCClosed", out isDCClosedArg))
+                    {
+                        isDCClosed = true;
+                    }
+                }
+                finally
+                {
+                    isDCClosedChekingTimer.Start();
                 }
             }
 
             internal static void OnLogChange(string key, string value, bool isQuery)
             {
-                if (isQuery)
-                {
-                    Log = string.Format("Query - key {0}, parameter name {1}", key, value);
-                }
-                else
-                {
-                    Log = string.Format("Answer - key {0}, value {1}", key, value);
-                }
+                Log = isQuery ?
+                    string.Concat("Query - key ", key, ", parameter name ", value):
+                    string.Concat("Answer - key ", key, ", value ", value);
+
                 LogChange?.Invoke(Log);
             }
 
             internal static void OnLogChange(string message)
             {
-                if (!IsClearLogTimerStart)
-                {
-                    InitCleanLogTimer();
-                }
                 Log = message;
                 bool isNewMessage = LogHash.Add(message);
                 switch (LogMode)
@@ -258,21 +251,6 @@ namespace FakeCQG
                 }
             }
 
-            public static void InitCleanLogTimer()
-            {
-                IsClearLogTimerStart = true;
-                CleanLogTimer.Interval = CleanLogInterval;
-                CleanLogTimer.Elapsed += CleanLogTimer_Elapsed;
-                CleanLogTimer.AutoReset = true;
-                CleanLogTimer.Start();
-            }
-
-            private static void CleanLogTimer_Elapsed(object sender, ElapsedEventArgs e)
-            {
-                LogHash.Clear();
-                CleanLogTimer.Start();
-            }
-
             #endregion
 
             #region Utilities
@@ -288,10 +266,12 @@ namespace FakeCQG
 
                 if (args != null)
                 {
+                    object arg;
+                    Type argType;
                     for (int i = 0; i < args.Length; i++)
                     {
-                        object arg = args[i];
-                        Type argType = arg.GetType();
+                        arg = args[i];
+                        argType = arg.GetType();
 
                         if (IsSerializableType(argType))
                         {
@@ -299,20 +279,38 @@ namespace FakeCQG
                         }
                         else
                         {
-                            string argKey;
-                            if (isClientOrServer)
-                            {
-                                argKey = (string)argType.GetField("dcObjKey", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(arg);
-                            }
-                            else
-                            {
-                                argKey = Core.CreateUniqueKey();
-                                ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
-                            }
-                            argKeys.Add(i, argKey);
+                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));
+                            //if (isClientOrServer)
+                            //{
+                            //    // Add to arguments list the key of object that saved in DC
+                            //    argKeys.Add(i, (string)argType.GetField("dcObjKey", BindingFlags.NonPublic 
+                            //        | BindingFlags.Instance).GetValue(arg));
+                            //}
+                            //else
+                            //{
+                            //    string argKey = CreateUniqueKey();
+                            //    ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
+                            //    argKeys.Add(i, argKey);
+                            //}                           
                         }
                     }
                 }
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static string GetObjKeyForArgKeysList(object arg, Type argType)
+            {
+                // Returns the key of object that saved in DC. It will be added to arguments list
+                return (string)argType.GetField("dcObjKey", BindingFlags.NonPublic
+                    | BindingFlags.Instance).GetValue(arg);
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static string SetNewObjKeyForArgKeysList(object arg)
+            {
+                string argKey = CreateUniqueKey();
+                ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
+                return argKey;
             }
 
             private static object[] GetArgsIntoArrayFromTwoDicts(
@@ -376,7 +374,7 @@ namespace FakeCQG
 
             public static string CreateUniqueKey()
             {
-                return Guid.NewGuid().ToString("N");
+                return string.Concat(Guid.NewGuid());//.ToString("N");
             }
 
             #endregion

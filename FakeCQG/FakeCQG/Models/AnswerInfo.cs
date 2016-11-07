@@ -24,28 +24,11 @@ namespace FakeCQG.Internal.Models
         [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<int, object> ArgValues { get; set; }
 
-        public string ValueKey
-        {
-            get
-            {
-                //if (IsCQGException)
-                //{
-                //    _exception.Invoke();
-                //    return string.Empty;
-                //}
-                return _valueKey;
-            }
-            set
-            {
-                _valueKey = value;
-            }
-        }
+        public string ValueKey { get; set; }
 
         public object Value { get; set; }
 
         #endregion
-
-        private string _valueKey;
 
         public bool IsCQGException;
 
@@ -71,18 +54,17 @@ namespace FakeCQG.Internal.Models
 
         public override string ToString()
         {
-            return string.Format(
-                "************************************************************" + Environment.NewLine +
-                "ANSWER:" + Environment.NewLine +
-                "    AnswerKey = {0}" + Environment.NewLine +
-                "    ObjectKey = {1}" + Environment.NewLine +
-                "    MemberName = {2}" + Environment.NewLine +
-                "    ArgKeys = {3}" + Environment.NewLine +
-                "    ArgValues = {4}" + Environment.NewLine +
-                "    ValueKey = {5}" + Environment.NewLine +
-                "    Value = {6}" + Environment.NewLine +
-                "************************************************************",
-                AnswerKey, ObjectKey, MemberName, ArgKeys, ArgValues, ValueKey, Value);
+            return string.Concat(
+                "************************************************************", Environment.NewLine,
+                "ANSWER:", Environment.NewLine,
+                "    AnswerKey = ", AnswerKey, Environment.NewLine,
+                "    ObjectKey = ", ObjectKey, Environment.NewLine,
+                "    MemberName = ", MemberName, Environment.NewLine,
+                "    ArgKeys = ", ArgKeys, Environment.NewLine,
+                "    ArgValues = ", ArgValues, Environment.NewLine,
+                "    ValueKey = ", ValueKey, Environment.NewLine,
+                "    Value = ", Value, Environment.NewLine,
+                "************************************************************");
         }
     }
 
@@ -90,6 +72,6 @@ namespace FakeCQG.Internal.Models
     {
         public string Message { get; set; }
         public string Type { get; set; }
-        public string Sourse { get; set; }
+        public string Source { get; set; }
     }
 }
