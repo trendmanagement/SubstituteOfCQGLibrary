@@ -105,11 +105,14 @@ namespace FakeCQG.Internal.Helpers
             {
                 try
                 {
+                    //Get a selection by filter
                     var collection = Collection.Find(filter);
-                    if(collection.Any())
+                    //If we have any item in selection answer proceed else repeat getting selection
+                    if (collection.Any())
                     {
                         answer = collection.First();
                         RemoveAnswerAsync(answer.AnswerKey);
+                        //Set value that answer is got
                         ClientDictionaries.IsAnswer[id] = true;
                         Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
                     }
@@ -126,7 +129,6 @@ namespace FakeCQG.Internal.Helpers
                     }
                 }
             }
-
             return answer;
         }
 
