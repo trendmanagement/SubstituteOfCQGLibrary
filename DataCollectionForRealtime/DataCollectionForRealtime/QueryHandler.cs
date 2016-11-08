@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -107,47 +108,57 @@ namespace DataCollectionForRealtime
 
                 case QueryType.CallDtor:
                     {
-                        if (query.ObjectKey != CqgDataManagement.CEL_key)
+                        try
                         {
-                            ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
-                        }
 
-                        // Remove name of a symbol if it's CQG.CQGTimedBarsRequest object deleting
-                        // from MiniMonitor form
-                        if (query.MemberName == "CQG.CQGTimedBarsRequest")
+                            if (query.ObjectKey != CqgDataManagement.CEL_key)
+                            {
+                                ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+                            }
+
+                            // Remove name of a symbol if it's CQG.CQGTimedBarsRequest object deleting
+                            // from MiniMonitor form
+                            if (query.MemberName == "CQG.CQGTimedBarsRequest")
+                            {
+                                object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                                string symbName = (string)qObj.GetType().InvokeMember("Symbol",
+                                    BindingFlags.GetProperty, null, qObj, null);
+                                DCMiniMonitor.symbolsList.Remove(symbName);
+                                Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            }
+
+                            // Remove name of an instrument if it's CQG.CQGInstrument object deleting
+                            // from MiniMonitor form
+                            if (query.MemberName == "CQG.CQGInstrument")
+                            {
+                                object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                                string instrName = (string)qObj.GetType().InvokeMember("FullName",
+                                    BindingFlags.GetProperty, null, qObj, null);
+                                DCMiniMonitor.instrumentsList.Remove(instrName);
+                                Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            }
+
+                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
+
+                        }
+                        catch (Exception ex)
                         {
-                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                            string symbName = (string)qObj.GetType().InvokeMember("Symbol",
-                                BindingFlags.GetProperty, null, qObj, null);
-                            DCMiniMonitor.symbolsList.Remove(symbName);
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            answer = CreateExceptionAnswer(ex, query);
                         }
-
-                        // Remove name of an instrument if it's CQG.CQGInstrument object deleting
-                        // from MiniMonitor form
-                        if (query.MemberName == "CQG.CQGInstrument")
-                        {
-                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                            string instrName = (string)qObj.GetType().InvokeMember("FullName",
-                                BindingFlags.GetProperty, null, qObj, null);
-                            DCMiniMonitor.instrumentsList.Remove(instrName);
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
-                        }
-
-                        answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
 
                         PushAnswerAndDeleteQuery(answer);
+
                     }
                     break;
 
                 case QueryType.GetProperty:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
-
                         try
                         {
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                            object[] args = Core.ParseInputArgsFromQueryInfo(query);
+
                             // Getting of property value
                             var propV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
 
@@ -168,18 +179,18 @@ namespace DataCollectionForRealtime
 
                 case QueryType.SetProperty:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
-
-                        if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
-                        {
-                            DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
-                        }
-
                         try
                         {
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                            object[] args = Core.ParseInputArgsFromQueryInfo(query);
+
+                            if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
+                            {
+                                DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
+                                Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            }
+
                             // Setting of property value
                             qObj.GetType().InvokeMember(query.MemberName, BindingFlags.SetProperty, null, qObj, args);
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
@@ -195,21 +206,21 @@ namespace DataCollectionForRealtime
 
                 case QueryType.CallMethod:
                     {
-                        // Handling of Shutdown method calling by CQGCEL object. This method has not be called from client applications
-                        if (query.MemberName == "Shutdown")
-                        {
-                            var returnKey = "true";
-                            answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
-                            PushAnswerAndDeleteQuery(answer);
-                            break;
-                        }
-
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
-
                         try
                         {
+                            // Handling of Shutdown method calling by CQGCEL object. This method has not be called from client applications
+                            if (query.MemberName == "Shutdown")
+                            {
+                                var returnKey = "true";
+                                answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
+                                PushAnswerAndDeleteQuery(answer);
+                                break;
+                            }
+
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
+                            object[] args = Core.ParseInputArgsFromQueryInfo(query);
+
                             object returnV;
 
                             bool isGetter = query.MemberName.StartsWith("get_");
@@ -252,10 +263,10 @@ namespace DataCollectionForRealtime
                 case QueryType.SubscribeToEvent:
                 case QueryType.UnsubscribeFromEvent:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-
                         try
                         {
+                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+
                             System.Reflection.EventInfo ei = qObj.GetType().GetEvent(query.MemberName);
 
                             if(EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))
@@ -327,7 +338,14 @@ namespace DataCollectionForRealtime
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetQueryList(List<QueryInfo> queries)
         {
-            QueryList = queries;
+            if(QueryList.Count == 0)
+            {
+                QueryList = queries;
+            }
+            else
+            {
+                QueryList.AddRange(queries);
+            }
         }
 
         // Initialization of databases access helpers
@@ -351,13 +369,12 @@ namespace DataCollectionForRealtime
 
         public void ProcessEntireQueryList()
         {
-            lock (QueriesProcessingLock)
+                                           lock (QueriesProcessingLock)
             {
-                for(int i = 0; i < QueryList.Count; i++)
+                while(QueryList.Count > 0)
                 {
-                    ProcessQuery(QueryList[i]);
+                    ProcessQuery(QueryList[0]);
                 }
-                QueryList.Clear();
             }
         }
 
@@ -498,6 +515,7 @@ namespace DataCollectionForRealtime
             try
             {
                 Core.QueryHelper.GetCollection.DeleteOne(filter);
+                QueryList.Remove(QueryList[0]);
             }
             catch (Exception ex)
             {
