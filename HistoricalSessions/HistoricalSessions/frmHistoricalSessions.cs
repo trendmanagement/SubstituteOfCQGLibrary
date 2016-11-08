@@ -6,11 +6,11 @@ using CQG = FakeCQG;
 
 namespace HistoricalSessions
 {
-	/// <summary>
-	/// Summary description for frmHistoricalSessions.
-	/// </summary>
-	public class frmHistoricalSessions : System.Windows.Forms.Form
-	{
+    /// <summary>
+    /// Summary description for frmHistoricalSessions.
+    /// </summary>
+    public class frmHistoricalSessions : System.Windows.Forms.Form
+    {
       internal System.Windows.Forms.Label lblRPRangeEnd;
       internal System.Windows.Forms.Label Label12;
       internal System.Windows.Forms.Label lblRPType;
@@ -53,45 +53,45 @@ namespace HistoricalSessions
       internal System.Windows.Forms.ColumnHeader ColumnHeader11;
       internal System.Windows.Forms.ColumnHeader ColumnHeader12;
       internal System.Windows.Forms.ColumnHeader columnHeader13;
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.Container components = null;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.Container components = null;
 
-		public frmHistoricalSessions()
-		{
-			//
-			// Required for Windows Form Designer support
-			//
-			InitializeComponent();
+        public frmHistoricalSessions()
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
 
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-		}
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if (components != null) 
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
+        {
+            if( disposing )
+            {
+                if (components != null) 
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose( disposing );
+        }
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
          this.gbRequestParams = new System.Windows.Forms.GroupBox();
          this.lblRPRangeStart = new System.Windows.Forms.Label();
          this.Label8 = new System.Windows.Forms.Label();
@@ -540,19 +540,19 @@ namespace HistoricalSessions
          this.ResumeLayout(false);
 
       }
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// The main entry point for the application.
-		/// </summary>
-		[STAThread]
-		static void Main() 
-		{
-			Application.Run(new frmHistoricalSessions());
-		}
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main() 
+        {
+            Application.Run(new frmHistoricalSessions());
+        }
 
       // The CQGCEL object, which encapsulates the main functionality of CQG API
-      [field:System.CLSCompliant(false)]		
+      [field:System.CLSCompliant(false)]        
       public FakeCQG.CQGCELClass m_CEL;
 
       // Specifies the not available string
@@ -586,7 +586,7 @@ namespace HistoricalSessions
             CEL_DataConnectionStatusChanged(FakeCQG.eConnectionStatus.csConnectionDown);
             // Starts up the CQGCEL
             m_CEL.Startup();
-				
+                
             ClearAllData();
          }
          catch (Exception ex)
@@ -616,7 +616,7 @@ namespace HistoricalSessions
          }
          catch (System.Exception ex)
          {
-         	modErrorHandler.ShowError("frmHistoricalSessions", "frmHistoricalSessions_Closing", ex);
+             modErrorHandler.ShowError("frmHistoricalSessions", "frmHistoricalSessions_Closing", ex);
          }
       }
 
@@ -676,7 +676,7 @@ namespace HistoricalSessions
          }
          catch (System.Exception ex)
          {
-         	modErrorHandler.ShowError("frmHistoricalSessions", "btnRequest_Click", ex);
+             modErrorHandler.ShowError("frmHistoricalSessions", "btnRequest_Click", ex);
          }
       }
 
@@ -696,7 +696,7 @@ namespace HistoricalSessions
             if (cqg_error is FakeCQG.CQGError)
             {
                FakeCQG.CQGError cqgErr = (FakeCQG.CQGError) cqg_error;
-					
+                    
                if (cqgErr.Code == 102)
                {
                   error_description += " Restart the application.";
@@ -706,7 +706,7 @@ namespace HistoricalSessions
                   error_description += " Turn on CQG Client and restart the application.";
                }
             }
-				
+                
             MessageBox.Show(error_description, "HistoricalSessions", MessageBoxButtons.OK, MessageBoxIcon.Information);
          }
          catch (Exception ex)
@@ -749,7 +749,7 @@ namespace HistoricalSessions
          {
             string sInfo;
             Color backCol;
-				
+                
             if (new_status == FakeCQG.eConnectionStatus.csConnectionUp)
             {
                backCol = Color.FromArgb(192, 209, 205);
@@ -823,7 +823,7 @@ namespace HistoricalSessions
             long sessIndex = 1;
             long holidayIndex = 1;
 
-	         // Dump all data
+             // Dump all data
             foreach (FakeCQG.CQGSessions sessions in historicalSessions)
             {
                DumpSessions(sessions, sessIndex);
@@ -919,7 +919,7 @@ namespace HistoricalSessions
       private void ClearAllData()
       {
          try
-         {		
+         {        
             ClearRequestParams();
             ClearRecords();
          }
@@ -981,7 +981,7 @@ namespace HistoricalSessions
       private string GetValueAsString(object val, bool withTime)
       {
          string sResult = N_A;
-			
+            
          try
          {
             if (m_CEL.IsValid(val))
@@ -1008,7 +1008,7 @@ namespace HistoricalSessions
             sResult = N_A;
             return sResult;
          }
-			
+            
          return sResult;
       }
 
@@ -1056,5 +1056,5 @@ namespace HistoricalSessions
             modErrorHandler.ShowError("frmInstrumentProperties", "llWeb_LinkClicked", ex);
          }
       }
-	}
+    }
 }

@@ -17,7 +17,7 @@ rem Set path to "msbuild.exe" and "mstest.exe"
 call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat"
 
 rem Rebuild all solutions
-for %%s in (FakeCQG DataCollectionForRealtime TimedBars) do (
+for %%s in (FakeCQG DataCollectionForRealtime TimedBars HistoricalSessions) do (
     cd %%s
     
     rem Restore all NuGet packages for this solution

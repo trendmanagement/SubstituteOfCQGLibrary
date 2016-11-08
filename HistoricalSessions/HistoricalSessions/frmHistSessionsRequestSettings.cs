@@ -8,11 +8,11 @@ using CQG = FakeCQG;
 
 namespace HistoricalSessions
 {
-	/// <summary>
-	/// Summary description for frmHistSessionsRequestSettings.
-	/// </summary>
-	public class frmHistSessionsRequestSettings : System.Windows.Forms.Form
-	{
+    /// <summary>
+    /// Summary description for frmHistSessionsRequestSettings.
+    /// </summary>
+    public class frmHistSessionsRequestSettings : System.Windows.Forms.Form
+    {
       internal System.Windows.Forms.Label Label1;
       internal System.Windows.Forms.TextBox txtSymbol;
       internal System.Windows.Forms.Button btnOK;
@@ -26,41 +26,41 @@ namespace HistoricalSessions
       internal System.Windows.Forms.Label Label2;
       internal System.Windows.Forms.RadioButton optTimeRange;
       internal System.Windows.Forms.RadioButton optAll;
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.Container components = null;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.Container components = null;
 
-		public frmHistSessionsRequestSettings()
-		{
-			// Required for Windows Form Designer support
-			InitializeComponent();
+        public frmHistSessionsRequestSettings()
+        {
+            // Required for Windows Form Designer support
+            InitializeComponent();
 
-			// Add any constructor code after InitializeComponent call
-		}
+            // Add any constructor code after InitializeComponent call
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if(components != null)
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
+        {
+            if( disposing )
+            {
+                if(components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose( disposing );
+        }
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
          this.Label1 = new System.Windows.Forms.Label();
          this.txtSymbol = new System.Windows.Forms.TextBox();
          this.btnOK = new System.Windows.Forms.Button();
@@ -233,7 +233,7 @@ namespace HistoricalSessions
          this.ResumeLayout(false);
 
       }
-		#endregion
+        #endregion
 
       // Current request
       private FakeCQG.CQGHistoricalSessionsRequest m_HistSessionsRequest;
@@ -251,7 +251,7 @@ namespace HistoricalSessions
       /// An EventArgs that contains the event data.
       /// </param>
       private void btnOK_Click(object sender, System.EventArgs e)
-      {	
+      {    
          try
          {
             FakeCQG.eHistoricalSessionsRequestType histSessionsReqType;
@@ -277,7 +277,7 @@ namespace HistoricalSessions
 
             m_HistSessionsRequest.Type = histSessionsReqType;
             m_HistSessionsRequest.Symbol = txtSymbol.Text;
-				
+                
             if (histSessionsReqType != FakeCQG.eHistoricalSessionsRequestType.hsrtAll)
             {
                m_HistSessionsRequest.RangeStart = dtpStartRange.Value;
@@ -293,7 +293,7 @@ namespace HistoricalSessions
                   return;
                }
             }
-				
+                
             this.DialogResult = DialogResult.OK;
             this.Close();
          }
@@ -320,7 +320,7 @@ namespace HistoricalSessions
          }
          catch (System.Exception ex)
          {
-         	modErrorHandler.ShowError("frmHistSesssionsRequestSettings", "btnCancel_Click", ex);
+             modErrorHandler.ShowError("frmHistSesssionsRequestSettings", "btnCancel_Click", ex);
          }
       }
 
@@ -336,7 +336,7 @@ namespace HistoricalSessions
       private void frmRequest_Load(System.Object sender, System.EventArgs e)
       {
          try
-         {	
+         {    
             RequestTypeChanged();
          }
          catch (Exception ex)
@@ -379,7 +379,7 @@ namespace HistoricalSessions
             {
                dtpStartRange.Enabled = ! optAll.Checked;
                dtpEndRange.Enabled = optTimeRange.Checked;
-					
+                    
                if (dtpStartRange.Enabled)
                {
                   dtpStartRange.Value = m_LineTime.AddDays(-1);
@@ -410,7 +410,7 @@ namespace HistoricalSessions
       /// <returns>
       /// New reference of CQGHistoricalSessionsRequest
       /// </returns>
-      [property:System.CLSCompliant(false)]		
+      [property:System.CLSCompliant(false)]        
       public FakeCQG.CQGHistoricalSessionsRequest HistoricalSessionsRequest
       {
          set
@@ -418,7 +418,7 @@ namespace HistoricalSessions
             m_HistSessionsRequest = value;
          }
       }
-		
+        
       /// <summary>
       /// Sets the new time
       /// </summary>
@@ -433,5 +433,5 @@ namespace HistoricalSessions
             m_LineTime = value;
          }
       }
-	}
+    }
 }

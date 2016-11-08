@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Historical Sessions Sample")]
 [assembly: AssemblyCopyright("(c) 2010 by CQG, Inc. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
-[assembly:CLSCompliant(true)]	
+[assembly:CLSCompliant(true)]    
 
 //The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly:Guid("B58D6F50-5FB2-454A-B69C-0FD6B1AFEECC")]

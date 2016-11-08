@@ -5,7 +5,7 @@ namespace HistoricalSessions
 {
    sealed class modErrorHandler
    {
-		
+        
       /// <summary>
       /// Handles the error and shows a message box.
       /// </summary>
@@ -21,16 +21,16 @@ namespace HistoricalSessions
       public static void ShowError(string modName, string funcName, Exception ex)
       {
          string sMsg;
-			
+            
          sMsg = "Module : " + modName + Environment.NewLine;
          sMsg += "Function : " + funcName + Environment.NewLine;
          sMsg += "Source : " + ex.Source + Environment.NewLine;
          sMsg += "Status : " + ex.GetType().ToString() + Environment.NewLine;
          sMsg += "Description : " + ex.Message;
-			
+            
          MessageBox.Show(sMsg, "HistoricalSessions", MessageBoxButtons.OK, MessageBoxIcon.Error);
       }
-		
+        
    }
-	
+    
 }
