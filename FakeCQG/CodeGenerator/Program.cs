@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Reflection;
 
 namespace CodeGenerator
@@ -7,6 +8,7 @@ namespace CodeGenerator
     {
         static StreamWriter File;
         static StreamWriter DCEvHndlrFile;
+        static StreamWriter DCQProcFile;
 
         // Set this to False to get type names in short form, e.g. "int" instead of "Int32"
         static bool QuickTestMode = true;
@@ -18,13 +20,15 @@ namespace CodeGenerator
             var assm = Assembly.LoadFrom(assmPath);
 
             string outPath = Path.GetFullPath(path + @"..\..\..\..\FakeCQG\AutoGenClientAPI.cs");
-            string dcOutPath = Path.GetFullPath(path + @"..\..\..\..\..\DataCollectionForRealtime\DataCollectionForRealtime\AutoGenEventHandlers.cs");
+            string dcEHOutPath = Path.GetFullPath(path + @"..\..\..\..\..\DataCollectionForRealtime\DataCollectionForRealtime\AutoGenEventHandlers.cs");
+            string dcQPOutPath = Path.GetFullPath(path + @"..\..\..\..\..\DataCollectionForRealtime\DataCollectionForRealtime\AutoGenQueryProcessing.cs");
 
             CurrentIndent = 1;
             InitIndents();
 
             using (File = new StreamWriter(outPath))
-            using (DCEvHndlrFile = new StreamWriter(dcOutPath))
+            using (DCEvHndlrFile = new StreamWriter(dcEHOutPath))
+            using (DCQProcFile = new StreamWriter(dcQPOutPath))
             {
                 CreateWarningHeader(File);
 
@@ -44,12 +48,53 @@ namespace CodeGenerator
                 DCEvHndlrFile.WriteLine(Indent1 + "class CQGEventHandlers");
                 DCEvHndlrFile.WriteLine(Indent1 + "{");
 
+                CreateWarningHeader(DCQProcFile);
+
+                DCQProcFile.WriteLine("using CQG;");
+                DCQProcFile.WriteLine("using FakeCQG.Internal;");
+                DCQProcFile.WriteLine("using FakeCQG.Internal.Models;");
+                DCQProcFile.WriteLine("using MongoDB.Driver;");
+                DCQProcFile.WriteLine("");
+                DCQProcFile.WriteLine("namespace DataCollectionForRealtime");
+                DCQProcFile.WriteLine("{");
+                DCQProcFile.WriteLine(Indent1 + "partial class QueryHandler");
+                DCQProcFile.WriteLine(Indent1 + "{");
+                DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
+                DCQProcFile.WriteLine(Indent2 + "{");
+                DCQProcFile.WriteLine(Indent3 + "object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
+                DCQProcFile.WriteLine(Indent3 + "string qObjType = qObj.GetType().ToString();");
+                DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
+                DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
+                DCQProcFile.WriteLine(Indent3 + "{");
+
+                getProp.Append(Indent5 + "switch (qObjType)" +
+                    Environment.NewLine + Indent5 + "{" + Environment.NewLine);     
+
+                setProp.Append(Indent5 + "switch (qObjType)" +
+                    Environment.NewLine + Indent5 + "{" + Environment.NewLine);     
+
                 CreateTypes(assm.ExportedTypes);
 
                 File.WriteLine("}");
 
                 DCEvHndlrFile.WriteLine(Indent1 + "}");
                 DCEvHndlrFile.WriteLine("}");
+
+                getProp.Append(Indent5 + "}" + Environment.NewLine);
+                setProp.Append(Indent5 + "}" + Environment.NewLine);
+
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.GetProperty:");
+                DCQProcFile.Write(getProp.ToString());
+                DCQProcFile.WriteLine(Indent5 + "break;");
+
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.SetProperty:");
+                DCQProcFile.Write(setProp);
+                DCQProcFile.WriteLine(Indent5 + "break;");
+
+                DCQProcFile.WriteLine(Indent3 + "}");
+                DCQProcFile.WriteLine(Indent2 + "}");
+                DCQProcFile.WriteLine(Indent1 + "}");
+                DCQProcFile.WriteLine("}");
             }
         }
 

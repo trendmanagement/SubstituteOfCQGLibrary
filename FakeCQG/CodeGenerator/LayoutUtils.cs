@@ -12,6 +12,10 @@ namespace CodeGenerator
         static string Indent2;
         static string Indent3;
         static string Indent4;
+        static string Indent5;
+        static string Indent6;
+        static string Indent7;
+        static string Indent8;
         static int CurrentIndent;
 
         enum RegionType
@@ -47,6 +51,14 @@ namespace CodeGenerator
             Indent3 = sb.ToString();
             sb.Append(Indent);
             Indent4 = sb.ToString();
+            sb.Append(Indent);
+            Indent5 = sb.ToString();
+            sb.Append(Indent);
+            Indent6 = sb.ToString();
+            sb.Append(Indent);
+            Indent7 = sb.ToString();
+            sb.Append(Indent);
+            Indent8 = sb.ToString();
         }
 
         static void IncreaseIndent()

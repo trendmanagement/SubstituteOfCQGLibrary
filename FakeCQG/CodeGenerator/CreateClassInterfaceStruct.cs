@@ -100,7 +100,7 @@ namespace CodeGenerator
             }
 
             // Add properies
-            CreateProperties(type.GetProperties(), type.IsInterface);
+            CreateProperties(type.GetProperties(), type.IsInterface, type.Name);
 
             // Add events
             CreateEvents(type.GetEvents(), type.IsInterface);

@@ -12,7 +12,7 @@ using MongoDB.Driver;
 
 namespace DataCollectionForRealtime
 {
-    class QueryHandler
+    partial class QueryHandler
     {
         CQGDataManagement CqgDataManagement;
 
@@ -355,7 +355,15 @@ namespace DataCollectionForRealtime
             {
                 for(int i = 0; i < QueryList.Count; i++)
                 {
-                    ProcessQuery(QueryList[i]);
+                    if(QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty)
+                    {
+                        AutoGenQueryProcessing(QueryList[i]);
+                    }
+                    else
+                    {
+                        ProcessQuery(QueryList[i]);
+                    }
+                    
                 }
                 QueryList.Clear();
             }

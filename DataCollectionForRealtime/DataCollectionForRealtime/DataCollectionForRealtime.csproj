@@ -65,6 +65,7 @@
     <Compile Include="AnswerHandler.cs" />
     <Compile Include="AsyncTaskListener.cs" />
     <Compile Include="AutoGenEventHandlers.cs" />
+    <Compile Include="AutoGenQueryProcessing.cs" />
     <Compile Include="CQGDataManagement.cs" />
     <Compile Include="DCMiniMonitor.cs">
       <SubType>Form</SubType>

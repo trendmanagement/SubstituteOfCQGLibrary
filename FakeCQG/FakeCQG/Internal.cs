@@ -279,19 +279,7 @@ namespace FakeCQG
                         }
                         else
                         {
-                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));
-                            //if (isClientOrServer)
-                            //{
-                            //    // Add to arguments list the key of object that saved in DC
-                            //    argKeys.Add(i, (string)argType.GetField("dcObjKey", BindingFlags.NonPublic 
-                            //        | BindingFlags.Instance).GetValue(arg));
-                            //}
-                            //else
-                            //{
-                            //    string argKey = CreateUniqueKey();
-                            //    ServerDictionaries.PutObjectToTheDictionary(argKey, arg);
-                            //    argKeys.Add(i, argKey);
-                            //}                           
+                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));                         
                         }
                     }
                 }
@@ -342,11 +330,13 @@ namespace FakeCQG
                 return args;
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static object[] ParseInputArgsFromQueryInfo(QueryInfo queryInfo)
             {
                 return GetArgsIntoArrayFromTwoDicts(queryInfo.ArgKeys, queryInfo.ArgValues);
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static object[] ParseInputArgsFromEventInfo(Models.EventInfo eventInfo)
             {
                 return GetArgsIntoArrayFromTwoDicts(eventInfo.ArgKeys, eventInfo.ArgValues);
@@ -366,15 +356,17 @@ namespace FakeCQG
                 }
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static bool IsSerializableType(Type type)
             {
                 // Keep this method in sync with the same method in CodeGenerator project
                 return type.IsValueType || (type.Assembly.FullName.Substring(0, 8) == "mscorlib" && type.Name != "__ComObject");
             }
 
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static string CreateUniqueKey()
             {
-                return string.Concat(Guid.NewGuid());//.ToString("N");
+                return string.Concat(Guid.NewGuid());
             }
 
             #endregion

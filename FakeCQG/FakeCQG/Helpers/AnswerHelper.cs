@@ -76,11 +76,21 @@ namespace FakeCQG.Internal.Helpers
             var filter = Builders<AnswerInfo>.Filter.Eq(Keys.AnswerKey, id);
             try
             {
-                AnswerInfo answer = Collection.Find(filter).First();
-                Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
-                RemoveAnswerAsync(answer.AnswerKey);
-                isAns = true;
-                return answer;
+                var fluent = Collection.Find(filter);
+                AnswerInfo answer = null;
+                if (fluent.Any())
+                {
+                    answer = Collection.Find(filter).First();
+                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    RemoveAnswerAsync(answer.AnswerKey);
+                    isAns = true;
+                    return answer;
+                }
+                else
+                {
+                    isAns = false;
+                    return answer;
+                }
             }
             catch (Exception)
             {
@@ -105,10 +115,14 @@ namespace FakeCQG.Internal.Helpers
             {
                 try
                 {
-                    answer = Collection.Find(filter).First();                   
-                    RemoveAnswerAsync(answer.AnswerKey);
-                    ClientDictionaries.IsAnswer[id] = true;
-                    Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    var fluent = Collection.Find(filter);
+                    if (fluent.Any())
+                    {
+                        answer = fluent.First();
+                        RemoveAnswerAsync(answer.AnswerKey);
+                        ClientDictionaries.IsAnswer[id] = true;
+                        Core.OnLogChange(answer.AnswerKey, answer.ValueKey, false);
+                    }
                 }
                 catch (Exception)
                 {
