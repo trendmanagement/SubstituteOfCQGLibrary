@@ -369,13 +369,12 @@ namespace DataCollectionForRealtime
 
         public void ProcessEntireQueryList()
         {
-            lock (QueriesProcessingLock)
+                                           lock (QueriesProcessingLock)
             {
-                for(int i = 0; i < QueryList.Count; i++)
+                while(QueryList.Count > 0)
                 {
-                    ProcessQuery(QueryList[i]);
+                    ProcessQuery(QueryList[0]);
                 }
-                QueryList.Clear();
             }
         }
 
@@ -516,7 +515,7 @@ namespace DataCollectionForRealtime
             try
             {
                 Core.QueryHelper.GetCollection.DeleteOne(filter);
-                QueryList.Remove(QueryList.First(item => item.ObjectKey == key));
+                QueryList.Remove(QueryList[0]);
             }
             catch (Exception ex)
             {

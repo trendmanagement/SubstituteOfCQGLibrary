@@ -383,7 +383,6 @@ namespace UnitTestRealCQG
             // arrange
             AnswerInfo answer = default(AnswerInfo);
             string id = "key";
-            bool isAnswer = default(bool);
             string name = "name";
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
@@ -397,11 +396,10 @@ namespace UnitTestRealCQG
             Task.Run(async () =>
             {
                 await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name));
-                answer = answerHelper.GetAnswerData(id, out isAnswer);
+                answer = answerHelper.GetAnswerData(id);
             }).GetAwaiter().GetResult();
 
             // assert
-            Assert.IsTrue(isAnswer);
             Assert.AreEqual(id, answer.AnswerKey);
         }
 
@@ -410,7 +408,6 @@ namespace UnitTestRealCQG
         {
             // arrange
             string id = "keyDCEventHandler";
-            bool isAnswer = default(bool);
             string name = "name";
             var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
             Core.LogChange += CQG_LogChange_Mock;
@@ -426,10 +423,9 @@ namespace UnitTestRealCQG
             {
                 await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, argValues));
             }).GetAwaiter().GetResult();
-            var answer = answerHelper.GetAnswerData(id, out isAnswer);
+            var answer = answerHelper.GetAnswerData(id);
 
             // assert
-            Assert.IsTrue(isAnswer);
             Assert.AreEqual(id, answer.AnswerKey);
             Assert.IsNotNull(answer.ArgValues);
             Assert.AreEqual("value1", answer.ArgValues[0]);
@@ -525,8 +521,16 @@ namespace UnitTestRealCQG
         public void ProcessedQuery_CheckingQueryAnswerAppropriate()
         {
             // arrange
+            #region Timer
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.AutoReset = true;
+            timer.Elapsed += TimerElapsed_CheckingQueryAnswerAppropriate;
+            timer.Start();
+            #endregion
+
             string[] ids = { "key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8", "key9", "key10" };
-            string[] names = { "name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9", "name10" };
+            string name = "name";
             var queries = new List<QueryInfo>();
             var answers = new List<AnswerInfo>();
             var queryHelper = new QueryHelper();
@@ -537,22 +541,19 @@ namespace UnitTestRealCQG
             // act
             for(int i = 0; i < ids.Length; i++)
             {
-                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, names[i]);
+                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, name);
                 queries.Add(query);
             }
 
             foreach (var query in queries)
             {
-
                 Task.Run(async () =>
                 {
                     await queryHelper.PushQueryAsync(query);
                 }).GetAwaiter().GetResult();
-
-                QueryHandler.ProcessQuery(query);
             }
 
-            foreach(var id in ids)
+            foreach (var id in ids)
             {
                 var answer = answerHelper.GetAnswerData(id);
                 answers.Add(answer);
@@ -591,12 +592,6 @@ namespace UnitTestRealCQG
             Assert.AreEqual(statusConnectionUp, status);
         }
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            QueryHandler.ReadQueries();
-            QueryHandler.ProcessEntireQueryList();
-        }
-
         #endregion
 
         #region Helpers
@@ -606,6 +601,7 @@ namespace UnitTestRealCQG
             DCMainForm = new DCMainForm();
             CQGDataManagment = new CQGDataManagement(DCMainForm, null);
             QueryHandler = new QueryHandler(CQGDataManagment);
+            QueryHandler.QueryList = new List<QueryInfo>();
             QueryHandler.HelpersInit();
 
             Task.Run(async () =>
@@ -655,7 +651,17 @@ namespace UnitTestRealCQG
         {
             status = new_status.ToString();
         }
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
+        }
 
+        private void TimerElapsed_CheckingQueryAnswerAppropriate(object sender, ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
+        }
         #endregion
     }
 
