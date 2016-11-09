@@ -338,14 +338,7 @@ namespace DataCollectionForRealtime
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SetQueryList(List<QueryInfo> queries)
         {
-            if(QueryList.Count == 0)
-            {
-                QueryList = queries;
-            }
-            else
-            {
-                QueryList.AddRange(queries);
-            }
+            QueryList = queries;
         }
 
         // Initialization of databases access helpers
@@ -369,7 +362,7 @@ namespace DataCollectionForRealtime
 
         public void ProcessEntireQueryList()
         {
-                                           lock (QueriesProcessingLock)
+            lock (QueriesProcessingLock)
             {
                 while(QueryList.Count > 0)
                 {
