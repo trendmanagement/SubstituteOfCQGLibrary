@@ -385,7 +385,10 @@ namespace DataCollectionForRealtime
                 {
                     if (Program.MiniMonitor != null)
                     {
-                        Program.MiniMonitor.SetNumberOfQueriesInLine(queries.Count);
+                        Task.Run(() => 
+                        {
+                            Program.MiniMonitor.SetNumberOfQueriesInLine(queries.Count);
+                        });
                     }
 
                     // Process the queries (fire event of this class)
