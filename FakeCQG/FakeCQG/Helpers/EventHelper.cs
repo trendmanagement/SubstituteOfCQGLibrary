@@ -58,21 +58,30 @@ namespace FakeCQG.Internal.Helpers
 
             try
             {
-                EventInfo eventInfo = Collection.Find(filter).First();
-                args = Core.ParseInputArgsFromEventInfo(eventInfo);
+                var fluent = Collection.Find(filter);
 
-                eventInfo.NumOfSubscribers -= 1;
-
-                if(eventInfo.NumOfSubscribers < 1)
+                if (fluent.Any())
                 {
-                    RemoveEvent(eventInfo.EventKey);
+                    EventInfo eventInfo = fluent.First();
+                    args = Core.ParseInputArgsFromEventInfo(eventInfo);
+
+                    eventInfo.NumOfSubscribers -= 1;
+
+                    if (eventInfo.NumOfSubscribers < 1)
+                    {
+                        RemoveEvent(eventInfo.EventKey);
+                    }
+                    else
+                    {
+                        Collection.ReplaceOne(filter, eventInfo);
+                    }
+                    return true;
                 }
                 else
                 {
-                    Collection.ReplaceOne(filter, eventInfo);
+                    args = default(object[]);
+                    return false;
                 }
-
-                return true;
             }
             catch (Exception ex)
             {
