@@ -40,8 +40,8 @@ namespace FakeCQG.Internal.Helpers
         public bool Connect()
         {
             Client = new MongoClient(ConnectionSettings.ConnectionString);
-            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<AnswerInfo>(ConnectionSettings.AnswerCollectionName);
+            Database = Client?.GetDatabase(ConnectionSettings.MongoDBName);
+            Collection = Database?.GetCollection<AnswerInfo>(ConnectionSettings.AnswerCollectionName);
             return Collection != null;
         }
 
@@ -130,7 +130,7 @@ namespace FakeCQG.Internal.Helpers
                     {
                         break;
                     }
-                    if (Connect())
+                    else if (Connect())
                     {
                         return GetAnswerData(id);
                     }

@@ -18,14 +18,12 @@ namespace FakeCQG.Internal
         public static object GetObjectFromTheDictionary(string key)
         {
             object objectValue = default(object);
-            try
+
+            if(!objDictionary.TryGetValue(key, out objectValue))
             {
-                objectValue = objDictionary[key];
+                Core.OnLogChange(string.Concat("Key not found with key: ", key));
             }
-            catch (KeyNotFoundException ex)
-            {
-                Core.OnLogChange(string.Concat(ex.Message, ", with key: ", key));
-            }
+
             return objectValue;
         }
 
