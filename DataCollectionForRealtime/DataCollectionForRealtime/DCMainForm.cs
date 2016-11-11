@@ -39,8 +39,10 @@ namespace DataCollectionForRealtime
             MinimumSize = Size;
 
             CqgDataManagement = new CQGDataManagement(this, Program.MiniMonitor);
-            
+
             QueryHandler = new QueryHandler(CqgDataManagement);
+
+            QueryHandler.InitHMethodDict();
 
             Listener.StartListening(HandshakingTimerInterval);
 
