@@ -7,16 +7,16 @@ namespace FakeCQG.Internal.Helpers
 {
     public class HandshakingHelper
     {
-        protected static IMongoClient _client;
-        protected static IMongoDatabase _database;
-        protected static IMongoCollection<HandshakingInfo> _collectionSubscribers;
-        protected static IMongoCollection<HandshakingInfo> _collectionUnsubscribers;
+        protected static IMongoClient Client;
+        protected static IMongoDatabase Database;
+        protected static IMongoCollection<HandshakingInfo> CollectionSubscribers;
+        protected static IMongoCollection<HandshakingInfo> CollectionUnsubscribers;
 
         public IMongoCollection<HandshakingInfo> GetCollectionSubscribers
         {
             get
             {
-                return _collectionSubscribers;
+                return CollectionSubscribers;
             }
         }
 
@@ -24,16 +24,15 @@ namespace FakeCQG.Internal.Helpers
         {
             get
             {
-                return _collectionUnsubscribers;
+                return CollectionUnsubscribers;
             }
         }
-
 
         public IMongoDatabase GetDefaultDB
         {
             get
             {
-                return _database;
+                return Database;
             }
         }
 
@@ -44,11 +43,11 @@ namespace FakeCQG.Internal.Helpers
 
         static bool Connect()
         {
-            _client = new MongoClient(ConnectionSettings.ConnectionString);
-            _database = _client.GetDatabase(ConnectionSettings.MongoDBName);
-            _collectionSubscribers = _database.GetCollection<HandshakingInfo>(ConnectionSettings.HandshakingCollectionName);
-            _collectionUnsubscribers = _database.GetCollection<HandshakingInfo>(ConnectionSettings.UnsubscribeHandshakingCollectionName);
-            return _collectionSubscribers != null;
+            Client = new MongoClient(ConnectionSettings.ConnectionString);
+            Database = Client?.GetDatabase(ConnectionSettings.MongoDBName);
+            CollectionSubscribers = Database?.GetCollection<HandshakingInfo>(ConnectionSettings.HandshakingCollectionName);
+            CollectionUnsubscribers = Database?.GetCollection<HandshakingInfo>(ConnectionSettings.UnsubscribeHandshakingCollectionName);
+            return CollectionSubscribers != null;
         }
 
         public Task ClearHandShackingListAsync()
@@ -58,7 +57,7 @@ namespace FakeCQG.Internal.Helpers
             {
                 try
                 {
-                    _collectionSubscribers.DeleteMany(filter);
+                    CollectionSubscribers.DeleteMany(filter);
                     Core.OnLogChange("Handshacking list was cleared successfully");
                 }
                 catch (Exception ex)

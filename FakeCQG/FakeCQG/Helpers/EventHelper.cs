@@ -34,8 +34,8 @@ namespace FakeCQG.Internal.Helpers
         public bool Connect(string connectionString = "")
         {
             Client = new MongoClient(ConnectionSettings.ConnectionString);
-            Database = Client.GetDatabase(ConnectionSettings.MongoDBName);
-            Collection = Database.GetCollection<EventInfo>(ConnectionSettings.EventCollectionName);
+            Database = Client?.GetDatabase(ConnectionSettings.MongoDBName);
+            Collection = Database?.GetCollection<EventInfo>(ConnectionSettings.EventCollectionName);
             return Collection != null;
         }
         
