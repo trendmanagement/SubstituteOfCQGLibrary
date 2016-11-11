@@ -82,7 +82,7 @@ namespace CodeGenerator
                 }
 
                 // Add arguments
-                File.Write("(dcObjKey, name");
+                File.Write("(dcObjKey, dcObjType, name");
                 if (minfo.GetParameters().Length != 0)
                 {
                     File.Write(", args");
@@ -96,7 +96,7 @@ namespace CodeGenerator
             }
             else
             {
-                File.Write(Indent2 + "string key = Internal.Core.CallMethod<string>(dcObjKey, name");
+                File.Write(Indent2 + "string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name");
                 if (minfo.GetParameters().Length != 0)
                 {
                     File.Write(", args");

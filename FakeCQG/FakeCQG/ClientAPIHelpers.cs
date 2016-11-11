@@ -15,27 +15,27 @@ namespace FakeCQG.Internal
             ExecuteTheQuery(QueryType.CallDtor, dcObjKey: dcObjKey);
         }
 
-        public static T GetProperty<T>(string dcObjKey, string propName, object[] args = null)
+        public static T GetProperty<T>(string dcObjKey, string dcObjType, string propName, object[] args = null)
         {
-            T value = (T)ExecuteTheQuery(QueryType.GetProperty, dcObjKey, propName, args);
+            T value = (T)ExecuteTheQuery(QueryType.GetProperty, dcObjType, dcObjKey, propName, args);
             return value;
         }
 
-        public static void SetProperty(string dcObjKey, string propName, object value)
+        public static void SetProperty(string dcObjKey, string dcObjType, string propName, object value)
         {
             var args = new object[] { value };
-            ExecuteTheQuery(QueryType.SetProperty, dcObjKey, propName, args);
+            ExecuteTheQuery(QueryType.SetProperty, dcObjType, dcObjKey, propName, args);
         }
 
-        public static T CallMethod<T>(string dcObjKey, string methodName, object[] args = null)
+        public static T CallMethod<T>(string dcObjKey, string dcObjType, string methodName, object[] args = null)
         {
-            T obj = (T)ExecuteTheQuery(QueryType.CallMethod, dcObjKey, methodName, args);
+            T obj = (T)ExecuteTheQuery(QueryType.CallMethod, dcObjType, dcObjKey, methodName, args);
             return obj;
         }
 
-        public static void CallVoidMethod(string dcObjKey, string methodName, object[] args = null)
+        public static void CallVoidMethod(string dcObjKey, string dcObjType, string methodName, object[] args = null)
         {
-            ExecuteTheQuery(QueryType.CallMethod, dcObjKey, methodName, args);
+            ExecuteTheQuery(QueryType.CallMethod, dcObjType, dcObjKey, methodName, args);
         }
     }
 }

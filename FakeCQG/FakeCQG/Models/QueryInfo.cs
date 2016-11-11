@@ -31,6 +31,8 @@ namespace FakeCQG.Internal.Models
 
         public string ObjectKey { get; set; }
 
+        public string ObjectType { get; set; }
+
         [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<int, string> ArgKeys { get; set; }
 
@@ -42,14 +44,16 @@ namespace FakeCQG.Internal.Models
         public QueryInfo(
             QueryType queryType,
             string queryKey,
+            string objectType = null,
             string objectKey = null,
             string memberName = null,
             Dictionary<int, string> argKeys = null,
             Dictionary<int, object> argValues = null)
         {
-            QueryType = queryType;
+            QueryType = queryType;    
             QueryKey = queryKey;
             MemberName = memberName;
+            ObjectType = objectType;
             ObjectKey = objectKey;
             ArgKeys = argKeys;
             ArgValues = argValues;
@@ -63,6 +67,7 @@ namespace FakeCQG.Internal.Models
                 "    QueryType: ", QueryType, Environment.NewLine,
                 "    QueryKey: ", QueryKey, Environment.NewLine,
                 "    MemberName: ", MemberName, Environment.NewLine,
+                "    ObjectType: ", ObjectType, Environment.NewLine,
                 "    ObjectKey: ", ObjectKey, Environment.NewLine,
                 "    ArgKeys: ", ArgKeys, Environment.NewLine,
                 "    ArgValues: ", ArgValues, Environment.NewLine,

@@ -73,6 +73,8 @@ namespace CodeGenerator
             if (type.IsClass)
             {
                 File.WriteLine(Indent1 + "private string dcObjKey;" + Environment.NewLine);
+
+                File.WriteLine(Indent1 + "private string dcObjType;" + Environment.NewLine);
             }
             if (eventsChecking)
             {

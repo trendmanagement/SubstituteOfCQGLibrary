@@ -159,7 +159,7 @@ namespace CodeGenerator
                     string args;
                     if (indexParams.Length == 0)
                     {
-                        args = "dcObjKey, name";
+                        args = "dcObjKey, dcObjType, name";
                     }
                     else
                     {
@@ -167,7 +167,7 @@ namespace CodeGenerator
                         // var args = new object[] { arg1, arg2, ..., argn }
                         CreateArgsObjectArray(File, Indent3, indexParams);
 
-                        args = "dcObjKey, name, args";
+                        args = "dcObjKey, dcObjType, name, args";
                     }
 
                     if (IsSerializableType(pinfo.PropertyType))
@@ -207,27 +207,38 @@ namespace CodeGenerator
                     hMethodsDict.Append(Indent4 + "{ \"Get" + propTypeName + pinfo.Name + "\", this.Get" + propTypeName + pinfo.Name + "}," +
                         Environment.NewLine);
 
-                    getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
-                        ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
-
-                    if (pinfo.Name == "Configuration")
+                    if (pinfo.Name == "IsStarted")
                     {
+                        getProp.Append(Indent3 + "System.Boolean IsStartedpropV = CqgDataManagement.IsCQGStarted;" +
+                            Environment.NewLine);
+                    }
+                    else if (pinfo.Name == "Configuration")
+                    {
+                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
                         getProp.Append(Indent3 + "CQG.CQGCELConfiguration ConfigurationpropV = ConfigurationObj.get_Configuration();" +
                             Environment.NewLine);
                     }
                     else if (pinfo.Name == "Value" && propInterfName == "CQGTradingSystemStatistics")
                     {
+                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
                         getProp.Append(Indent3 + "System.Double ValuepropV = ValueObj[(CQG.eTradingSystemStatistic)args[0]];" +
                             Environment.NewLine);
                     }
                     else if (pins.Length < 1 ||
                         pins.Length >= 1 && pins[0].HasDefaultValue)
                     {
+                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
                         getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "propV = " +
                         pinfo.Name + "Obj." + pinfo.Name + ";" + Environment.NewLine);
                     }
                     else
                     {
+                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
+
                         if (pins.Length == 1 && pinfo.Name == "Item" || pinfo.Name == "Item")
                         {
                             getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "propV = " +
@@ -285,7 +296,7 @@ namespace CodeGenerator
                     }
                     File.WriteLine(Indent2 + "{");
                     File.WriteLine(Indent3 + "string name = \"" + pinfo.Name + "\";");
-                    File.WriteLine(Indent3 + "Internal.Core.SetProperty(dcObjKey, name, value);");
+                    File.WriteLine(Indent3 + "Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);");
                     File.WriteLine(Indent2 + "}");
 
 

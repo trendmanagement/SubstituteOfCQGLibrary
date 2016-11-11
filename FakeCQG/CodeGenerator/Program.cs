@@ -81,7 +81,6 @@ namespace CodeGenerator
                 DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
                 DCQProcFile.WriteLine(Indent2 + "{");
                 DCQProcFile.WriteLine(Indent3 + "object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
-                DCQProcFile.WriteLine(Indent3 + "string qObjType = qObj.GetType().Name;");
                 DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
                 DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
                 DCQProcFile.WriteLine(Indent3 + "{"); 
@@ -94,14 +93,14 @@ namespace CodeGenerator
                 DCEvHndlrFile.WriteLine("}");
 
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.GetProperty:");
-                DCQProcFile.WriteLine(Indent5 + "string getHndlrName = string.Concat(\"Get\", qObjType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "string getHndlrName = string.Concat(\"Get\", query.ObjectType, query.MemberName);");
                 DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(getHndlrName)) " + Environment.NewLine + Indent6 +
                     "throw new System.ArgumentException(string.Concat(\"Operation \", getHndlrName, \" is invalid\"), \"getter name\");" + 
                     Environment.NewLine + Indent5 + "hMethods[getHndlrName](query, args); ");
                 DCQProcFile.WriteLine(Indent5 + "break;");
                 
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.SetProperty:");
-                DCQProcFile.WriteLine(Indent5 + "string setHndlrName = string.Concat(\"Set\", qObjType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "string setHndlrName = string.Concat(\"Set\", query.ObjectType, query.MemberName);");
                 DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(setHndlrName)) " + Environment.NewLine + Indent6 +
                     "throw new System.ArgumentException(string.Concat(\"Operation \", setHndlrName, \" is invalid\"), \"setter name\");" + 
                     Environment.NewLine + Indent5 + "hMethods[setHndlrName](query, args); ");

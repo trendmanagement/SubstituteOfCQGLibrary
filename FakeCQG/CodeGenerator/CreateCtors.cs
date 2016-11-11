@@ -32,6 +32,7 @@ namespace CodeGenerator
 
             File.WriteLine(Indent2 + "string name = \"" + cinfo.DeclaringType + "\";");
             File.WriteLine(Indent2 + "dcObjKey = Internal.Core.CallCtor(name);");
+            File.WriteLine(Indent2 + "this.dcObjType = \"" + cinfo.DeclaringType.Name + "\";");
 
             CtorEnd(eventsChecking);
         }
@@ -42,6 +43,7 @@ namespace CodeGenerator
             File.WriteLine(Indent1 + "{");
 
             File.WriteLine(Indent2 + "this.dcObjKey = dcObjKey;");
+            File.WriteLine(Indent2 + "this.dcObjType = \"" + typeName + "\";");
 
             CtorEnd(eventsChecking);
         }

@@ -1425,18 +1425,17 @@ namespace DataCollectionForRealtime
         public void AutoGenQueryProcessing(QueryInfo query)
         {
             object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-            string qObjType = qObj.GetType().Name;
             object[] args = Core.ParseInputArgsFromQueryInfo(query);
             switch (query.QueryType)
             {
                 case QueryType.GetProperty:
-                    string getHndlrName = string.Concat("Get", qObjType, query.MemberName);
+                    string getHndlrName = string.Concat("Get", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(getHndlrName)) 
                         throw new System.ArgumentException(string.Concat("Operation ", getHndlrName, " is invalid"), "getter name");
                     hMethods[getHndlrName](query, args); 
                     break;
                 case QueryType.SetProperty:
-                    string setHndlrName = string.Concat("Set", qObjType, query.MemberName);
+                    string setHndlrName = string.Concat("Set", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(setHndlrName)) 
                         throw new System.ArgumentException(string.Concat("Operation ", setHndlrName, " is invalid"), "setter name");
                     hMethods[setHndlrName](query, args); 
@@ -2784,8 +2783,7 @@ namespace DataCollectionForRealtime
 
             private void GetCQGCELClassIsStarted(QueryInfo query, object[] args)
             {
-                CQGCEL IsStartedObj = (CQGCEL)ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                System.Boolean IsStartedpropV = IsStartedObj.IsStarted;
+                System.Boolean IsStartedpropV = CqgDataManagement.IsCQGStarted;
                 var IsStartedPropKey = "value";
                 PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: IsStartedPropKey, value: IsStartedpropV));
             }

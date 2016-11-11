@@ -10401,6 +10401,8 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Fields
 
         public _ICQGCELEvents_AccountChangedEventHandler m_AccountChangedDelegate;
@@ -10614,6 +10616,7 @@ namespace FakeCQG
         internal _ICQGCELEvents_SinkHelper(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "_ICQGCELEvents_SinkHelper";
         }
 
         #endregion
@@ -10633,299 +10636,299 @@ namespace FakeCQG
         {
             string name = "AccountChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyAdded(CQGAdvancedStudy arg1)
         {
             string name = "AdvancedStudyAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyDefinitionsResolved(CQGAdvancedStudyDefinitions arg1, CQGError arg2)
         {
             string name = "AdvancedStudyDefinitionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyInserted(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyRemoved(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyResolved(CQGAdvancedStudy arg1, CQGError arg2)
         {
             string name = "AdvancedStudyResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AdvancedStudyUpdated(CQGAdvancedStudy arg1, Int32 arg2)
         {
             string name = "AdvancedStudyUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AlgorithmicOrderPlaced(String arg1, CQGAlgorithmicOrderParameters arg2, CQGAlgorithmicOrderProperties arg3)
         {
             string name = "AlgorithmicOrderPlaced";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AlgorithmicOrderRegistrationComplete(String arg1, CQGError arg2)
         {
             string name = "AlgorithmicOrderRegistrationComplete";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AllOrdersCanceled(eOrderSideFilter arg1, CQGIntegerCollection arg2, CQGStringCollection arg3)
         {
             string name = "AllOrdersCanceled";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void AuthenticationStatusChanged(eSessionStatus arg1, CQGError arg2)
         {
             string name = "AuthenticationStatusChanged";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void BarsTimestampsResolved(CQGBarsTimestamps arg1, CQGError arg2)
         {
             string name = "BarsTimestampsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CELStarted()
         {
             string name = "CELStarted";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void CommodityInstrumentsResolved(String arg1, eInstrumentType arg2, CQGCommodityInstruments arg3)
         {
             string name = "CommodityInstrumentsResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionAdded(CQGCondition arg1)
         {
             string name = "ConditionAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionDefinitionsResolved(CQGConditionDefinitions arg1, CQGError arg2)
         {
             string name = "ConditionDefinitionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionInserted(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionRemoved(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionResolved(CQGCondition arg1, CQGError arg2)
         {
             string name = "ConditionResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConditionUpdated(CQGCondition arg1, Int32 arg2)
         {
             string name = "ConditionUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConstantVolumeBarsAdded(CQGConstantVolumeBars arg1)
         {
             string name = "ConstantVolumeBarsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConstantVolumeBarsInserted(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConstantVolumeBarsRemoved(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConstantVolumeBarsResolved(CQGConstantVolumeBars arg1, CQGError arg2)
         {
             string name = "ConstantVolumeBarsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ConstantVolumeBarsUpdated(CQGConstantVolumeBars arg1, Int32 arg2)
         {
             string name = "ConstantVolumeBarsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             string name = "CurrencyRatesChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomSessionsResolved(CQGSessionsCollection arg1, CQGError arg2)
         {
             string name = "CustomSessionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyAdded(CQGCustomStudy arg1)
         {
             string name = "CustomStudyAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyDefinitionsResolved(CQGCustomStudyDefinitions arg1, CQGError arg2)
         {
             string name = "CustomStudyDefinitionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyInserted(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyRemoved(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyResolved(CQGCustomStudy arg1, CQGError arg2)
         {
             string name = "CustomStudyResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CustomStudyUpdated(CQGCustomStudy arg1, Int32 arg2)
         {
             string name = "CustomStudyUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
             string name = "DataConnectionStatusChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataError(Object arg1, String arg2)
         {
             string name = "DataError";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataSourcesResolved(CQGDataSources arg1, CQGError arg2)
         {
             string name = "DataSourcesResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataSourceSymbolsResolved(String arg1, CQGDataSourceSymbols arg2, CQGError arg3)
         {
             string name = "DataSourceSymbolsResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ExpressionAdded(CQGExpression arg1)
         {
             string name = "ExpressionAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ExpressionInserted(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ExpressionRemoved(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ExpressionResolved(CQGExpression arg1, CQGError arg2)
         {
             string name = "ExpressionResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ExpressionUpdated(CQGExpression arg1, Int32 arg2)
         {
             string name = "ExpressionUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -10933,320 +10936,320 @@ namespace FakeCQG
         {
             string name = "GWConnectionStatusChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void GWEnvironmentChanged(eGWEnvChangeCode arg1, Int32 arg2, Int32 arg3)
         {
             string name = "GWEnvironmentChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void HistoricalSessionsResolved(CQGSessionsCollection arg1, CQGHistoricalSessionsRequest arg2, CQGError arg3)
         {
             string name = "HistoricalSessionsResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ICConnectionStatusChanged(eICConnectionStatus arg1)
         {
             string name = "ICConnectionStatusChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void IncorrectSymbol(String arg1)
         {
             string name = "IncorrectSymbol";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             string name = "InstrumentChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             string name = "InstrumentDOMChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             string name = "InstrumentsGroupChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             string name = "InstrumentsGroupResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             string name = "IsReady";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void LineTimeChanged(DateTime arg1)
         {
             string name = "LineTimeChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ManualFillChanged(CQGManualFill arg1, eManualFillUpdateType arg2)
         {
             string name = "ManualFillChanged";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ManualFillsResolved(CQGManualFills arg1, CQGError arg2)
         {
             string name = "ManualFillsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ManualFillUpdateResolved(CQGManualFillRequest arg1, CQGError arg2)
         {
             string name = "ManualFillUpdateResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void OnIdle()
         {
             string name = "OnIdle";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void OnQueryProgress(CQGOrdersQuery arg1, CQGError arg2)
         {
             string name = "OnQueryProgress";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void OrderChanged(eChangeType arg1, CQGOrder arg2, CQGOrderProperties arg3, CQGFill arg4, CQGError arg5)
         {
             string name = "OrderChanged";
             var args = new object[] { arg1, arg2, arg3, arg4, arg5 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PasswordChanged(eSessionStatus arg1, CQGError arg2)
         {
             string name = "PasswordChanged";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PointAndFigureBarsAdded(CQGPointAndFigureBars arg1)
         {
             string name = "PointAndFigureBarsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PointAndFigureBarsInserted(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PointAndFigureBarsRemoved(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PointAndFigureBarsResolved(CQGPointAndFigureBars arg1, CQGError arg2)
         {
             string name = "PointAndFigureBarsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PointAndFigureBarsUpdated(CQGPointAndFigureBars arg1, Int32 arg2)
         {
             string name = "PointAndFigureBarsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PositionsStatementResolved(CQGPositionsStatement arg1, CQGError arg2)
         {
             string name = "PositionsStatementResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void QFormulaDefinitionsResolved(CQGQFormulaDefinitions arg1, CQGError arg2)
         {
             string name = "QFormulaDefinitionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void StrategyDefinitionProgress(CQGStrategyDefinition arg1, CQGError arg2)
         {
             string name = "StrategyDefinitionProgress";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SubMinuteBarsAdded(CQGSubMinuteBars arg1)
         {
             string name = "SubMinuteBarsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SubMinuteBarsInserted(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SubMinuteBarsRemoved(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SubMinuteBarsResolved(CQGSubMinuteBars arg1, CQGError arg2)
         {
             string name = "SubMinuteBarsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SubMinuteBarsUpdated(CQGSubMinuteBars arg1, Int32 arg2)
         {
             string name = "SubMinuteBarsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void SummariesStatementResolved(CQGSummariesStatement arg1, CQGError arg2)
         {
             string name = "SummariesStatementResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TFlowBarsAdded(CQGTFlowBars arg1)
         {
             string name = "TFlowBarsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TFlowBarsInserted(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TFlowBarsRemoved(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TFlowBarsResolved(CQGTFlowBars arg1, CQGError arg2)
         {
             string name = "TFlowBarsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TFlowBarsUpdated(CQGTFlowBars arg1, Int32 arg2)
         {
             string name = "TFlowBarsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TicksAdded(CQGTicks arg1, Int32 arg2)
         {
             string name = "TicksAdded";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TicksResolved(CQGTicks arg1, CQGError arg2)
         {
             string name = "TicksResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TimedBarsAdded(CQGTimedBars arg1)
         {
             string name = "TimedBarsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TimedBarsInserted(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TimedBarsRemoved(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TimedBarsResolved(CQGTimedBars arg1, CQGError arg2)
         {
             string name = "TimedBarsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TimedBarsUpdated(CQGTimedBars arg1, Int32 arg2)
         {
             string name = "TimedBarsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11254,98 +11257,98 @@ namespace FakeCQG
         {
             string name = "TradableCommoditiesResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradableExchangesResolved(Int32 arg1, CQGExchanges arg2, CQGError arg3)
         {
             string name = "TradableExchangesResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemAddNotification(CQGTradingSystem arg1, CQGTradingSystemAddInfo arg2)
         {
             string name = "TradingSystemAddNotification";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemDefinitionsResolved(CQGTradingSystemDefinitions arg1, CQGError arg2)
         {
             string name = "TradingSystemDefinitionsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemInsertNotification(CQGTradingSystem arg1, CQGTradingSystemInsertInfo arg2)
         {
             string name = "TradingSystemInsertNotification";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemRemoveNotification(CQGTradingSystem arg1, CQGTradingSystemRemoveInfo arg2)
         {
             string name = "TradingSystemRemoveNotification";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemResolved(CQGTradingSystem arg1, CQGError arg2)
         {
             string name = "TradingSystemResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemTradeRelationAddNotification(CQGTradingSystem arg1, CQGTradingSystemRelationAddInfo arg2)
         {
             string name = "TradingSystemTradeRelationAddNotification";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TradingSystemUpdateNotification(CQGTradingSystem arg1, CQGTradingSystemUpdateInfo arg2)
         {
             string name = "TradingSystemUpdateNotification";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void YieldsAdded(CQGYields arg1)
         {
             string name = "YieldsAdded";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void YieldsInserted(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsInserted";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void YieldsRemoved(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsRemoved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void YieldsResolved(CQGYields arg1, CQGError arg2)
         {
             string name = "YieldsResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void YieldsUpdated(CQGYields arg1, Int32 arg2)
         {
             string name = "YieldsUpdated";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         #endregion
@@ -11355,6 +11358,8 @@ namespace FakeCQG
     public class _ICQGCELGeneralEvents_SinkHelper : _ICQGCELGeneralEvents
     {
         private string dcObjKey;
+
+        private string dcObjType;
 
         #region Fields
 
@@ -11383,6 +11388,7 @@ namespace FakeCQG
         internal _ICQGCELGeneralEvents_SinkHelper(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "_ICQGCELGeneralEvents_SinkHelper";
         }
 
         #endregion
@@ -11401,34 +11407,34 @@ namespace FakeCQG
         public virtual void CELStarted()
         {
             string name = "CELStarted";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void CurrencyRatesChanged(CQGCurrencyRates arg1)
         {
             string name = "CurrencyRatesChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataConnectionStatusChanged(eConnectionStatus arg1)
         {
             string name = "DataConnectionStatusChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void DataError(Object arg1, String arg2)
         {
             string name = "DataError";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11436,33 +11442,33 @@ namespace FakeCQG
         {
             string name = "GWConnectionStatusChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void IsReady(ref eReadyStatus arg1)
         {
             string name = "IsReady";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void LineTimeChanged(DateTime arg1)
         {
             string name = "LineTimeChanged";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void OnIdle()
         {
             string name = "OnIdle";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11473,6 +11479,8 @@ namespace FakeCQG
     public class _ICQGCELInstrumentEvents_SinkHelper : _ICQGCELInstrumentEvents
     {
         private string dcObjKey;
+
+        private string dcObjType;
 
         #region Fields
 
@@ -11499,6 +11507,7 @@ namespace FakeCQG
         internal _ICQGCELInstrumentEvents_SinkHelper(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "_ICQGCELInstrumentEvents_SinkHelper";
         }
 
         #endregion
@@ -11518,13 +11527,13 @@ namespace FakeCQG
         {
             string name = "CommodityInstrumentsResolved";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11532,48 +11541,48 @@ namespace FakeCQG
         {
             string name = "IncorrectSymbol";
             var args = new object[] { arg1 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentChanged(CQGInstrument arg1, CQGQuotes arg2, CQGInstrumentProperties arg3)
         {
             string name = "InstrumentChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentDOMChanged(CQGInstrument arg1, CQGDOMQuotes arg2, CQGDOMQuotes arg3)
         {
             string name = "InstrumentDOMChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentsGroupChanged(eChangeType arg1, CQGInstrumentsGroup arg2, CQGStringCollection arg3)
         {
             string name = "InstrumentsGroupChanged";
             var args = new object[] { arg1, arg2, arg3 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentsGroupResolved(CQGInstrumentsGroup arg1, CQGError arg2)
         {
             string name = "InstrumentsGroupResolved";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void InstrumentSubscribed(String arg1, CQGInstrument arg2)
         {
             string name = "InstrumentSubscribed";
             var args = new object[] { arg1, arg2 };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11585,11 +11594,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAccountClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAccountClass";
         }
 
         #endregion
@@ -11610,14 +11622,14 @@ namespace FakeCQG
             get
             {
                 string name = "AccountMarginDetailing";
-                var value = Internal.Core.GetProperty<eAccountMarginDetailing>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eAccountMarginDetailing>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AccountMarginDetailing";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -11626,7 +11638,7 @@ namespace FakeCQG
             get
             {
                 string name = "AuthorizedTraders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStringCollectionClass(key);
                 return value;
             }
@@ -11638,14 +11650,14 @@ namespace FakeCQG
             get
             {
                 string name = "AutoSubscribeInstruments";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AutoSubscribeInstruments";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -11654,7 +11666,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -11666,7 +11678,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencySummaries";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountSummariesClass(key);
                 return value;
             }
@@ -11678,7 +11690,7 @@ namespace FakeCQG
             get
             {
                 string name = "DateOfLastStatement";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11689,7 +11701,7 @@ namespace FakeCQG
             get
             {
                 string name = "FcmAccountID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11700,7 +11712,7 @@ namespace FakeCQG
             get
             {
                 string name = "FcmClass";
-                var value = Internal.Core.GetProperty<eFcmClass>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eFcmClass>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11711,7 +11723,7 @@ namespace FakeCQG
             get
             {
                 string name = "FcmID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11722,7 +11734,7 @@ namespace FakeCQG
             get
             {
                 string name = "FcmName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11733,7 +11745,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11744,7 +11756,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11755,7 +11767,7 @@ namespace FakeCQG
             get
             {
                 string name = "InternalOrders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -11767,7 +11779,7 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -11779,7 +11791,7 @@ namespace FakeCQG
             get
             {
                 string name = "Positions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGPositionsClass(key);
                 return value;
             }
@@ -11791,14 +11803,14 @@ namespace FakeCQG
             get
             {
                 string name = "PositionSubcriptionLevel";
-                var value = Internal.Core.GetProperty<ePositionSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePositionSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "PositionSubcriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -11807,7 +11819,7 @@ namespace FakeCQG
             get
             {
                 string name = "ReportingCurrency";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11818,7 +11830,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11829,7 +11841,7 @@ namespace FakeCQG
             get
             {
                 string name = "Summary";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountSummaryClass(key);
                 return value;
             }
@@ -11841,7 +11853,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11852,7 +11864,7 @@ namespace FakeCQG
             get
             {
                 string name = "TotalMarginValue";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11863,7 +11875,7 @@ namespace FakeCQG
             get
             {
                 string name = "TotalPurchasingPower";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11876,14 +11888,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -11895,11 +11907,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAccountsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAccountsClass";
         }
 
         #endregion
@@ -11920,7 +11935,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -11932,7 +11947,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { gw_account_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -11945,7 +11960,7 @@ namespace FakeCQG
             {
                 string name = "ItemByFCM";
                 var args = new object[] { fcm_account_id, fcm_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -11960,14 +11975,14 @@ namespace FakeCQG
         {
             string name = "Add";
             var args = new object[] { cqg_account };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGAccount get_ItemByFCM(String fcm_account_id, Int32 fcm_id)
         {
             string name = "get_ItemByFCM";
             var args = new object[] { fcm_account_id, fcm_id };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAccountClass(key);
             return result;
         }
@@ -11976,7 +11991,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAccountClass(key);
             return result;
         }
@@ -11984,21 +11999,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12010,11 +12025,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAccountSummariesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAccountSummariesClass";
         }
 
         #endregion
@@ -12035,7 +12053,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12047,7 +12065,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAccountSummaryClass(key);
                 return value;
             }
@@ -12061,21 +12079,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12087,11 +12105,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAccountSummaryClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAccountSummaryClass";
         }
 
         #endregion
@@ -12112,7 +12133,7 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -12124,7 +12145,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencyName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12135,7 +12156,7 @@ namespace FakeCQG
             get
             {
                 string name = "ManualFillsInvolved";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12149,7 +12170,7 @@ namespace FakeCQG
         {
             string name = "Balance";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12157,7 +12178,7 @@ namespace FakeCQG
         {
             string name = "CashExcess";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12165,14 +12186,14 @@ namespace FakeCQG
         {
             string name = "Collaterals";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12180,7 +12201,7 @@ namespace FakeCQG
         {
             string name = "InitialMargin";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12188,7 +12209,7 @@ namespace FakeCQG
         {
             string name = "MaintenanceMargin";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12196,7 +12217,7 @@ namespace FakeCQG
         {
             string name = "MVO";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12204,7 +12225,7 @@ namespace FakeCQG
         {
             string name = "NLV";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12212,7 +12233,7 @@ namespace FakeCQG
         {
             string name = "OTE";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12220,14 +12241,14 @@ namespace FakeCQG
         {
             string name = "ProfitLoss";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12235,7 +12256,7 @@ namespace FakeCQG
         {
             string name = "UPL";
             var args = new object[] { day_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12247,11 +12268,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAdvancedStudiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAdvancedStudiesClass";
         }
 
         #endregion
@@ -12272,7 +12296,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12284,7 +12308,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAdvancedStudyClass(key);
                 return value;
             }
@@ -12297,7 +12321,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAdvancedStudyClass(key);
                 return value;
             }
@@ -12312,7 +12336,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAdvancedStudyClass(key);
             return result;
         }
@@ -12320,21 +12344,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12346,11 +12370,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAdvancedStudyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAdvancedStudyClass";
         }
 
         #endregion
@@ -12371,7 +12398,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12382,7 +12409,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurveHeaders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCurveHeadersClass(key);
                 return value;
             }
@@ -12394,7 +12421,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAdvancedStudyDefinitionClass(key);
                 return value;
             }
@@ -12406,7 +12433,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12417,7 +12444,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12429,7 +12456,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCurvesClass(key);
                 return value;
             }
@@ -12441,7 +12468,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -12453,7 +12480,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAdvancedStudyRequestClass(key);
                 return value;
             }
@@ -12465,7 +12492,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12476,7 +12503,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12488,14 +12515,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12507,21 +12534,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12529,7 +12556,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -12537,13 +12564,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12555,11 +12582,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAdvancedStudyDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAdvancedStudyDefinitionClass";
         }
 
         #endregion
@@ -12580,7 +12610,7 @@ namespace FakeCQG
             get
             {
                 string name = "Abbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12591,7 +12621,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurveDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCurveDefinitionsClass(key);
                 return value;
             }
@@ -12603,7 +12633,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12614,7 +12644,7 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGParameterDefinitionsClass(key);
                 return value;
             }
@@ -12628,14 +12658,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12647,11 +12677,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAdvancedStudyDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAdvancedStudyDefinitionsClass";
         }
 
         #endregion
@@ -12672,7 +12705,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -12684,7 +12717,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAdvancedStudyDefinitionClass(key);
                 return value;
             }
@@ -12697,7 +12730,7 @@ namespace FakeCQG
             {
                 string name = "ItemByAbbreviation";
                 var args = new object[] { advanced_study_abbreviation };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAdvancedStudyDefinitionClass(key);
                 return value;
             }
@@ -12712,7 +12745,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { advanced_study_abbreviation };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAdvancedStudyDefinitionClass(key);
             return result;
         }
@@ -12721,7 +12754,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { advanced_study_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAdvancedStudyDefinitionClass(key);
             return result;
         }
@@ -12729,21 +12762,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -12755,11 +12788,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAdvancedStudyRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAdvancedStudyRequestClass";
         }
 
         #endregion
@@ -12780,14 +12816,14 @@ namespace FakeCQG
             get
             {
                 string name = "BaseExpression";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BaseExpression";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12796,14 +12832,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12812,14 +12848,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12828,7 +12864,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAdvancedStudyDefinitionClass(key);
                 return value;
             }
@@ -12840,14 +12876,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12856,14 +12892,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12872,14 +12908,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12888,14 +12924,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12905,14 +12941,14 @@ namespace FakeCQG
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Parameter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12921,14 +12957,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12937,14 +12973,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12953,14 +12989,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12969,14 +13005,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -12985,14 +13021,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13001,14 +13037,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13017,14 +13053,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13036,14 +13072,14 @@ namespace FakeCQG
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13051,14 +13087,14 @@ namespace FakeCQG
         {
             string name = "IncludeCurve";
             var args = new object[] { curve_key };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             string name = "IsCurveIncluded";
             var args = new object[] { curve_key };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -13066,13 +13102,13 @@ namespace FakeCQG
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13084,11 +13120,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgorithmicOrderDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgorithmicOrderDefinitionClass";
         }
 
         #endregion
@@ -13109,14 +13148,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultValue";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefaultValue";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13125,14 +13164,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultValueIndex";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefaultValueIndex";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13141,14 +13180,14 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Name";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13157,14 +13196,14 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eAlgorithmicOrderPropertyType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eAlgorithmicOrderPropertyType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Type";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13173,14 +13212,14 @@ namespace FakeCQG
             get
             {
                 string name = "Unit";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Unit";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13189,7 +13228,7 @@ namespace FakeCQG
             get
             {
                 string name = "Values";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStringCollectionClass(key);
                 return value;
             }
@@ -13204,20 +13243,20 @@ namespace FakeCQG
         {
             string name = "AddValue";
             var args = new object[] { value_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13229,11 +13268,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgorithmicOrderDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgorithmicOrderDefinitionsClass";
         }
 
         #endregion
@@ -13254,7 +13296,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13266,7 +13308,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAlgorithmicOrderDefinitionClass(key);
                 return value;
             }
@@ -13281,13 +13323,13 @@ namespace FakeCQG
         {
             string name = "Add";
             var args = new object[] { definition_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGAlgorithmicOrderDefinition CreateDefinition()
         {
             string name = "CreateDefinition";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGAlgorithmicOrderDefinitionClass(key);
             return result;
         }
@@ -13295,21 +13337,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13321,11 +13363,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgorithmicOrderParametersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgorithmicOrderParametersClass";
         }
 
         #endregion
@@ -13346,7 +13391,7 @@ namespace FakeCQG
             get
             {
                 string name = "DurationType";
-                var value = Internal.Core.GetProperty<eOrderDuration>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderDuration>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13357,7 +13402,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExecutionInstructions";
-                var value = Internal.Core.GetProperty<eOrderExecutionInstruction>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderExecutionInstruction>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13368,7 +13413,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExecutionPattern";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13379,7 +13424,7 @@ namespace FakeCQG
             get
             {
                 string name = "GTD";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13390,7 +13435,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13401,7 +13446,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13412,7 +13457,7 @@ namespace FakeCQG
             get
             {
                 string name = "Parked";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13423,7 +13468,7 @@ namespace FakeCQG
             get
             {
                 string name = "PreferredTrailingPeg";
-                var value = Internal.Core.GetProperty<eOrderTrailingPeg>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderTrailingPeg>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13434,7 +13479,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13445,7 +13490,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13456,7 +13501,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13467,7 +13512,7 @@ namespace FakeCQG
             get
             {
                 string name = "StopLimitPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13478,7 +13523,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrailingOffset";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13489,7 +13534,7 @@ namespace FakeCQG
             get
             {
                 string name = "TriggerQuantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13500,7 +13545,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13511,7 +13556,7 @@ namespace FakeCQG
             get
             {
                 string name = "VisibleQuantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13524,14 +13569,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13543,11 +13588,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgorithmicOrderPropertiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgorithmicOrderPropertiesClass";
         }
 
         #endregion
@@ -13568,7 +13616,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13580,7 +13628,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGAlgorithmicOrderPropertyClass(key);
                 return value;
             }
@@ -13594,21 +13642,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13620,11 +13668,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgorithmicOrderPropertyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgorithmicOrderPropertyClass";
         }
 
         #endregion
@@ -13645,7 +13696,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13656,7 +13707,7 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -13669,14 +13720,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13688,11 +13739,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAlgoSupplierClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAlgoSupplierClass";
         }
 
         #endregion
@@ -13711,14 +13765,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -13730,11 +13784,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGAPIConfigClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGAPIConfigClass";
         }
 
         #endregion
@@ -13755,14 +13812,14 @@ namespace FakeCQG
             get
             {
                 string name = "AccountMarginAndPositionsThrottleInterval";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AccountMarginAndPositionsThrottleInterval";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13771,14 +13828,14 @@ namespace FakeCQG
             get
             {
                 string name = "AgeToDeleteLogFileDays";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AgeToDeleteLogFileDays";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13787,14 +13844,14 @@ namespace FakeCQG
             get
             {
                 string name = "ApplyDaylightSavingChanges";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "ApplyDaylightSavingChanges";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13803,14 +13860,14 @@ namespace FakeCQG
             get
             {
                 string name = "CollectionsThrowException";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "CollectionsThrowException";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13819,14 +13876,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultAccountMarginDetailing";
-                var value = Internal.Core.GetProperty<eAccountMarginDetailing>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eAccountMarginDetailing>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefaultAccountMarginDetailing";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13835,14 +13892,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultInstrumentBBAType";
-                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefaultInstrumentBBAType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13851,14 +13908,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultInstrumentSubscriptionLevel";
-                var value = Internal.Core.GetProperty<eDataSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDataSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefaultInstrumentSubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13867,14 +13924,14 @@ namespace FakeCQG
             get
             {
                 string name = "DefPositionSubscriptionLevel";
-                var value = Internal.Core.GetProperty<ePositionSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePositionSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DefPositionSubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13883,14 +13940,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMUpdatesMode";
-                var value = Internal.Core.GetProperty<eDOMUpdatesMode>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDOMUpdatesMode>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMUpdatesMode";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13899,14 +13956,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMUpdatesPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMUpdatesPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13915,14 +13972,14 @@ namespace FakeCQG
             get
             {
                 string name = "FireEventOnChangedPrices";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "FireEventOnChangedPrices";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13931,14 +13988,14 @@ namespace FakeCQG
             get
             {
                 string name = "GatewayEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "GatewayEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13947,14 +14004,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeOrderTransactions";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeOrderTransactions";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13963,14 +14020,14 @@ namespace FakeCQG
             get
             {
                 string name = "LogSeverity";
-                var value = Internal.Core.GetProperty<eLogSeverity>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eLogSeverity>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "LogSeverity";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13979,14 +14036,14 @@ namespace FakeCQG
             get
             {
                 string name = "MaxLogFileCount";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "MaxLogFileCount";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -13995,14 +14052,14 @@ namespace FakeCQG
             get
             {
                 string name = "MaxLogFileDuration";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "MaxLogFileDuration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14011,14 +14068,14 @@ namespace FakeCQG
             get
             {
                 string name = "MaxLogFileSize";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "MaxLogFileSize";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14027,14 +14084,14 @@ namespace FakeCQG
             get
             {
                 string name = "MessageProcessingTimeout";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "MessageProcessingTimeout";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14043,14 +14100,14 @@ namespace FakeCQG
             get
             {
                 string name = "MetaDataEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "MetaDataEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14059,14 +14116,14 @@ namespace FakeCQG
             get
             {
                 string name = "NewInstrumentChangeMode";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "NewInstrumentChangeMode";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14075,14 +14132,14 @@ namespace FakeCQG
             get
             {
                 string name = "NewInstrumentMode";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "NewInstrumentMode";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14091,14 +14148,14 @@ namespace FakeCQG
             get
             {
                 string name = "NonsynchronizedData";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "NonsynchronizedData";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14107,14 +14164,14 @@ namespace FakeCQG
             get
             {
                 string name = "PendingOrderActionEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "PendingOrderActionEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14123,14 +14180,14 @@ namespace FakeCQG
             get
             {
                 string name = "PositionDetailing";
-                var value = Internal.Core.GetProperty<ePositionDetailing>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePositionDetailing>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "PositionDetailing";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14139,14 +14196,14 @@ namespace FakeCQG
             get
             {
                 string name = "PriceMode";
-                var value = Internal.Core.GetProperty<ePriceMode>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePriceMode>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "PriceMode";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14155,14 +14212,14 @@ namespace FakeCQG
             get
             {
                 string name = "ProviderPassword";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "ProviderPassword";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14171,14 +14228,14 @@ namespace FakeCQG
             get
             {
                 string name = "QueryAllAuthorizedTraders";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "QueryAllAuthorizedTraders";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14187,14 +14244,14 @@ namespace FakeCQG
             get
             {
                 string name = "ReadyStatusCheck";
-                var value = Internal.Core.GetProperty<eReadyStatusCheck>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eReadyStatusCheck>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "ReadyStatusCheck";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14203,14 +14260,14 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPILoginService";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RemoteOpenAPILoginService";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14219,14 +14276,14 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPIServer";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RemoteOpenAPIServer";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14235,7 +14292,7 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPIServers";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStringCollectionClass(key);
                 return value;
             }
@@ -14247,14 +14304,14 @@ namespace FakeCQG
             get
             {
                 string name = "ReplaceLoginSession";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "ReplaceLoginSession";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14263,14 +14320,14 @@ namespace FakeCQG
             get
             {
                 string name = "SnapshotPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SnapshotPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14279,14 +14336,14 @@ namespace FakeCQG
             get
             {
                 string name = "StrategyManagerEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "StrategyManagerEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14295,14 +14352,14 @@ namespace FakeCQG
             get
             {
                 string name = "TimeZoneCode";
-                var value = Internal.Core.GetProperty<eTimeZone>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeZone>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TimeZoneCode";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14311,14 +14368,14 @@ namespace FakeCQG
             get
             {
                 string name = "UsedFromATLClient";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UsedFromATLClient";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14327,14 +14384,14 @@ namespace FakeCQG
             get
             {
                 string name = "UseOrderSide";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UseOrderSide";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14346,26 +14403,26 @@ namespace FakeCQG
         {
             string name = "AddRemoteOpenAPIServer";
             var args = new object[] { server_address };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ClearRemoteOpenAPIServers()
         {
             string name = "ClearRemoteOpenAPIServers";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -14377,11 +14434,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGBarsTimestampsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGBarsTimestampsClass";
         }
 
         #endregion
@@ -14402,7 +14462,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -14413,7 +14473,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -14425,7 +14485,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -14436,7 +14496,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -14448,7 +14508,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -14461,21 +14521,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -14487,6 +14547,8 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         private System.Timers.Timer eventCheckingTimer;
 
         private bool isDCClosed = false;
@@ -14497,6 +14559,7 @@ namespace FakeCQG
         {
             string name = "CQG.CQGCELClass";
             dcObjKey = Internal.Core.CallCtor(name);
+            this.dcObjType = "CQGCELClass";
             eventCheckingTimer = new System.Timers.Timer();
             eventCheckingTimer.Interval = 30;
             eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;
@@ -14507,6 +14570,7 @@ namespace FakeCQG
         internal CQGCELClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCELClass";
             eventCheckingTimer = new System.Timers.Timer();
             eventCheckingTimer.Interval = 30;
             eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;
@@ -14535,7 +14599,7 @@ namespace FakeCQG
             get
             {
                 string name = "Accounts";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountsClass(key);
                 return value;
             }
@@ -14547,14 +14611,14 @@ namespace FakeCQG
             get
             {
                 string name = "AccountSubscriptionLevel";
-                var value = Internal.Core.GetProperty<eAccountSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eAccountSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AccountSubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14563,7 +14627,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllAdvancedStudies";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAdvancedStudiesClass(key);
                 return value;
             }
@@ -14575,7 +14639,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllConditions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConditionsClass(key);
                 return value;
             }
@@ -14587,7 +14651,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllConstantVolumeBars";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConstantVolumeBarsCollectionClass(key);
                 return value;
             }
@@ -14599,7 +14663,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllCustomStudies";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCustomStudiesClass(key);
                 return value;
             }
@@ -14611,7 +14675,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllExpressions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGExpressionsClass(key);
                 return value;
             }
@@ -14623,7 +14687,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllInstrumentsGroups";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentsGroupsClass(key);
                 return value;
             }
@@ -14635,7 +14699,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllManualFills";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGManualFillsCollectionClass(key);
                 return value;
             }
@@ -14647,7 +14711,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllPointAndFigureBars";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGPointAndFigureBarsCollectionClass(key);
                 return value;
             }
@@ -14659,7 +14723,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllStrategyDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStrategyDefinitionsClass(key);
                 return value;
             }
@@ -14671,7 +14735,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllSubMinuteBars";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGSubMinuteBarsCollectionClass(key);
                 return value;
             }
@@ -14683,7 +14747,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllTFlowBars";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTFlowBarsCollectionClass(key);
                 return value;
             }
@@ -14695,7 +14759,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllTicks";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTicksCollectionClass(key);
                 return value;
             }
@@ -14707,7 +14771,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllTimedBars";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTimedBarsCollectionClass(key);
                 return value;
             }
@@ -14719,7 +14783,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllTradingSystems";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemsClass(key);
                 return value;
             }
@@ -14731,7 +14795,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllYields";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGYieldsCollectionClass(key);
                 return value;
             }
@@ -14743,7 +14807,7 @@ namespace FakeCQG
             get
             {
                 string name = "APIConfiguration";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAPIConfigClass(key);
                 return value;
             }
@@ -14755,14 +14819,14 @@ namespace FakeCQG
             get
             {
                 string name = "Configuration";
-                var value = Internal.Core.GetProperty<CQGCELConfiguration>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<CQGCELConfiguration>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Configuration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -14771,7 +14835,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencyRates";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCurrencyRatesClass(key);
                 return value;
             }
@@ -14783,7 +14847,7 @@ namespace FakeCQG
             get
             {
                 string name = "DirectEventsAccessor";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGDirectEventsAccessorClass(key);
                 return value;
             }
@@ -14795,7 +14859,7 @@ namespace FakeCQG
             get
             {
                 string name = "Environment";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGEnvironmentClass(key);
                 return value;
             }
@@ -14807,7 +14871,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instruments";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentsClass(key);
                 return value;
             }
@@ -14819,7 +14883,7 @@ namespace FakeCQG
             get
             {
                 string name = "InternalOrders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -14839,7 +14903,7 @@ namespace FakeCQG
                     try
                     {
                         string name = "IsStarted";
-                        var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                        var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                         return value;
                     }
                     catch
@@ -14856,7 +14920,7 @@ namespace FakeCQG
             get
             {
                 string name = "Logger";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGLoggerClass(key);
                 return value;
             }
@@ -14868,7 +14932,7 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -14880,7 +14944,7 @@ namespace FakeCQG
             get
             {
                 string name = "OTPRequired";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -15100,48 +15164,48 @@ namespace FakeCQG
         {
             string name = "ActivateAllOrders";
             var args = new object[] { cqg_account, cqg_instrument, from_all_traders, order_side };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ActivateAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             string name = "ActivateAllOrdersEx";
             var args = new object[] { cqg_order_action_request };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CancelAllOrders(CQGAccount cqg_account = null, CQGInstrument cqg_instrument = null, Boolean from_all_traders = false, Boolean parked_ = false, eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "CancelAllOrders";
             var args = new object[] { cqg_account, cqg_instrument, from_all_traders, parked_, order_side };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void CancelAllOrdersEx(CQGOrderActionRequest cqg_order_action_request)
         {
             string name = "CancelAllOrdersEx";
             var args = new object[] { cqg_order_action_request };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ChangePassword(String username_, String old_password, String new_password)
         {
             string name = "ChangePassword";
             var args = new object[] { username_, old_password, new_password };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ChangeRemoteOpenAPIServer(String server_address)
         {
             string name = "ChangeRemoteOpenAPIServer";
             var args = new object[] { server_address };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGAccounts CreateAccountsCollection()
         {
             string name = "CreateAccountsCollection";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGAccountsClass(key);
             return result;
         }
@@ -15150,7 +15214,7 @@ namespace FakeCQG
         {
             string name = "CreateAdvancedStudyRequest";
             var args = new object[] { name_or_abbr };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAdvancedStudyRequestClass(key);
             return result;
         }
@@ -15158,7 +15222,7 @@ namespace FakeCQG
         public virtual CQGAlgorithmicOrderDefinitions CreateAlgorithmicOrderDefinitions()
         {
             string name = "CreateAlgorithmicOrderDefinitions";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGAlgorithmicOrderDefinitionsClass(key);
             return result;
         }
@@ -15167,7 +15231,7 @@ namespace FakeCQG
         {
             string name = "CreateConditionRequest";
             var args = new object[] { condition_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConditionRequestClass(key);
             return result;
         }
@@ -15175,7 +15239,7 @@ namespace FakeCQG
         public virtual CQGConstantVolumeBarsRequest CreateConstantVolumeBarsRequest()
         {
             string name = "CreateConstantVolumeBarsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGConstantVolumeBarsRequestClass(key);
             return result;
         }
@@ -15184,7 +15248,7 @@ namespace FakeCQG
         {
             string name = "CreateCustomStudyRequest";
             var args = new object[] { name_or_abbr };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCustomStudyRequestClass(key);
             return result;
         }
@@ -15193,7 +15257,7 @@ namespace FakeCQG
         {
             string name = "CreateExecutionPattern";
             var args = new object[] { cqg_definition, order_type };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGExecutionPatternClass(key);
             return result;
         }
@@ -15201,7 +15265,7 @@ namespace FakeCQG
         public virtual CQGExpressionRequest CreateExpressionRequest()
         {
             string name = "CreateExpressionRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGExpressionRequestClass(key);
             return result;
         }
@@ -15209,7 +15273,7 @@ namespace FakeCQG
         public virtual CQGHistoricalSessionsRequest CreateHistoricalSessionsRequest()
         {
             string name = "CreateHistoricalSessionsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGHistoricalSessionsRequestClass(key);
             return result;
         }
@@ -15217,7 +15281,7 @@ namespace FakeCQG
         public virtual CQGInstrumentSubscriptionRequest CreateInstrumentRequest()
         {
             string name = "CreateInstrumentRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGInstrumentSubscriptionRequestClass(key);
             return result;
         }
@@ -15225,7 +15289,7 @@ namespace FakeCQG
         public virtual CQGInstrumentsGroupRequest CreateInstrumentsGroupRequest()
         {
             string name = "CreateInstrumentsGroupRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGInstrumentsGroupRequestClass(key);
             return result;
         }
@@ -15234,7 +15298,7 @@ namespace FakeCQG
         {
             string name = "CreateManualFillRequest";
             var args = new object[] { update_type, manual_fill };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGManualFillRequestClass(key);
             return result;
         }
@@ -15243,7 +15307,7 @@ namespace FakeCQG
         {
             string name = "CreateOrder";
             var args = new object[] { order_type, cqg_instrument, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrderClass(key);
             return result;
         }
@@ -15251,7 +15315,7 @@ namespace FakeCQG
         public virtual CQGOrderActionRequest CreateOrderActionRequest()
         {
             string name = "CreateOrderActionRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGOrderActionRequestClass(key);
             return result;
         }
@@ -15260,7 +15324,7 @@ namespace FakeCQG
         {
             string name = "CreateOrderByInstrumentName";
             var args = new object[] { order_type, instrument_name, cqg_account, order_quantity, order_side, limit_price, stop_price, ue_name_part };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrderClass(key);
             return result;
         }
@@ -15268,7 +15332,7 @@ namespace FakeCQG
         public virtual CQGOrderChain CreateOrderChain()
         {
             string name = "CreateOrderChain";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGOrderChainClass(key);
             return result;
         }
@@ -15276,7 +15340,7 @@ namespace FakeCQG
         public virtual CQGPointAndFigureBarsRequest CreatePointAndFigureBarsRequest()
         {
             string name = "CreatePointAndFigureBarsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGPointAndFigureBarsRequestClass(key);
             return result;
         }
@@ -15285,7 +15349,7 @@ namespace FakeCQG
         {
             string name = "CreateStrategyOrder";
             var args = new object[] { order_type, cqg_definition, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrderClass(key);
             return result;
         }
@@ -15294,7 +15358,7 @@ namespace FakeCQG
         {
             string name = "CreateStrategyOrderByExpression";
             var args = new object[] { order_type, expression_string, cqg_account, cqg_accounts, order_quantity, order_side, limit_price, stop_price, ue_name_part };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrderClass(key);
             return result;
         }
@@ -15302,7 +15366,7 @@ namespace FakeCQG
         public virtual CQGSubMinuteBarsRequest CreateSubMinuteBarsRequest()
         {
             string name = "CreateSubMinuteBarsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGSubMinuteBarsRequestClass(key);
             return result;
         }
@@ -15310,7 +15374,7 @@ namespace FakeCQG
         public virtual CQGTFlowBarsRequest CreateTFlowBarsRequest()
         {
             string name = "CreateTFlowBarsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGTFlowBarsRequestClass(key);
             return result;
         }
@@ -15318,7 +15382,7 @@ namespace FakeCQG
         public virtual CQGTicksRequest CreateTicksRequest()
         {
             string name = "CreateTicksRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGTicksRequestClass(key);
             return result;
         }
@@ -15326,7 +15390,7 @@ namespace FakeCQG
         public virtual CQGTimedBarsRequest CreateTimedBarsRequest()
         {
             string name = "CreateTimedBarsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGTimedBarsRequestClass(key);
             return result;
         }
@@ -15335,7 +15399,7 @@ namespace FakeCQG
         {
             string name = "CreateTradingSystemRequest";
             var args = new object[] { name_or_abbr };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemRequestClass(key);
             return result;
         }
@@ -15343,7 +15407,7 @@ namespace FakeCQG
         public virtual CQGYieldsRequest CreateYieldsRequest()
         {
             string name = "CreateYieldsRequest";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGYieldsRequestClass(key);
             return result;
         }
@@ -15352,7 +15416,7 @@ namespace FakeCQG
         {
             string name = "DefineStrategy";
             var args = new object[] { request_string_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGStrategyDefinitionClass(key);
             return result;
         }
@@ -15360,35 +15424,35 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public virtual void GWLogoff()
         {
             string name = "GWLogoff";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void GWLogon(String username_, String password_)
         {
             string name = "GWLogon";
             var args = new object[] { username_, password_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void GWOTPLogon(String username_, String password_, String otpassword_)
         {
             string name = "GWOTPLogon";
             var args = new object[] { username_, password_, otpassword_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual Boolean IsValid(Object value_or_object)
         {
             string name = "IsValid";
             var args = new object[] { value_or_object };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -15396,35 +15460,35 @@ namespace FakeCQG
         {
             string name = "LogOn";
             var args = new object[] { username_, password_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void ModifyCompoundOrder(Int32 compound_order_id, String compound_order_guid, CQGOrderChain order_chain)
         {
             string name = "ModifyCompoundOrder";
             var args = new object[] { compound_order_id, compound_order_guid, order_chain };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void NewInstrument(String symbol_)
         {
             string name = "NewInstrument";
             var args = new object[] { symbol_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void PlaceCompoundOrder(CQGOrderChain order_chain)
         {
             string name = "PlaceCompoundOrder";
             var args = new object[] { order_chain };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGOrdersQuery QueryOrders(CQGAccount cqg_account, CQGInstrument cqg_instrument = null, eOrderStatusFilter status_filter = eOrderStatusFilter.osfAll, DateTime date_ = default(DateTime), eOrderSide order_side = eOrderSide.osdUndefined)
         {
             string name = "QueryOrders";
             var args = new object[] { cqg_account, cqg_instrument, status_filter, date_, order_side };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersQueryClass(key);
             return result;
         }
@@ -15433,204 +15497,204 @@ namespace FakeCQG
         {
             string name = "QueryPositionsStatement";
             var args = new object[] { gw_account_id, date_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void QuerySummariesStatement(Int32 gw_account_id, DateTime date_)
         {
             string name = "QuerySummariesStatement";
             var args = new object[] { gw_account_id, date_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RegisterAlgorithmicOrder(String guid_, String name_, String abbrv_, String description_, CQGAlgorithmicOrderDefinitions definitions_, Int32 icon_index = 0)
         {
             string name = "RegisterAlgorithmicOrder";
             var args = new object[] { guid_, name_, abbrv_, description_, definitions_, icon_index };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveAdvancedStudy(CQGAdvancedStudy cqg_advanced_study)
         {
             string name = "RemoveAdvancedStudy";
             var args = new object[] { cqg_advanced_study };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveAllAdvancedStudies()
         {
             string name = "RemoveAllAdvancedStudies";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllConditions()
         {
             string name = "RemoveAllConditions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllConstantVolumeBars()
         {
             string name = "RemoveAllConstantVolumeBars";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllCustomStudies()
         {
             string name = "RemoveAllCustomStudies";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllExpressions()
         {
             string name = "RemoveAllExpressions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllInstruments()
         {
             string name = "RemoveAllInstruments";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllPointAndFigureBars()
         {
             string name = "RemoveAllPointAndFigureBars";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllSubMinuteBars()
         {
             string name = "RemoveAllSubMinuteBars";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllTFlowBars()
         {
             string name = "RemoveAllTFlowBars";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllTicks()
         {
             string name = "RemoveAllTicks";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllTimedBars()
         {
             string name = "RemoveAllTimedBars";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllTradingSystems()
         {
             string name = "RemoveAllTradingSystems";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveAllYields()
         {
             string name = "RemoveAllYields";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RemoveCondition(CQGCondition cqg_condition)
         {
             string name = "RemoveCondition";
             var args = new object[] { cqg_condition };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveConstantVolumeBars(CQGConstantVolumeBars cqg_constant_volume_bars)
         {
             string name = "RemoveConstantVolumeBars";
             var args = new object[] { cqg_constant_volume_bars };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveCustomStudy(CQGCustomStudy cqg_custom_study)
         {
             string name = "RemoveCustomStudy";
             var args = new object[] { cqg_custom_study };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveExpression(CQGExpression cqg_expression)
         {
             string name = "RemoveExpression";
             var args = new object[] { cqg_expression };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveInstrument(CQGInstrument cqg_instrument)
         {
             string name = "RemoveInstrument";
             var args = new object[] { cqg_instrument };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveInstrumentsGroup(CQGInstrumentsGroup instruments_group)
         {
             string name = "RemoveInstrumentsGroup";
             var args = new object[] { instruments_group };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemovePointAndFigureBars(CQGPointAndFigureBars cqg_point_and_figure_bars)
         {
             string name = "RemovePointAndFigureBars";
             var args = new object[] { cqg_point_and_figure_bars };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveSubMinuteBars(CQGSubMinuteBars cqg_subminute_bars)
         {
             string name = "RemoveSubMinuteBars";
             var args = new object[] { cqg_subminute_bars };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveTFlowBars(CQGTFlowBars cqg_tflow_bars)
         {
             string name = "RemoveTFlowBars";
             var args = new object[] { cqg_tflow_bars };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveTicks(CQGTicks cqg_ticks)
         {
             string name = "RemoveTicks";
             var args = new object[] { cqg_ticks };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveTimedBars(CQGTimedBars cqg_timed_bars)
         {
             string name = "RemoveTimedBars";
             var args = new object[] { cqg_timed_bars };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveTradingSystem(CQGTradingSystem cqg_trading_system)
         {
             string name = "RemoveTradingSystem";
             var args = new object[] { cqg_trading_system };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RemoveYields(CQGYields cqg_yields)
         {
             string name = "RemoveYields";
             var args = new object[] { cqg_yields };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGAdvancedStudy RequestAdvancedStudy(CQGAdvancedStudyRequest cqg_advanced_study_request)
         {
             string name = "RequestAdvancedStudy";
             var args = new object[] { cqg_advanced_study_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGAdvancedStudyClass(key);
             return result;
         }
@@ -15638,14 +15702,14 @@ namespace FakeCQG
         public virtual void RequestAdvancedStudyDefinitions()
         {
             string name = "RequestAdvancedStudyDefinitions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGBarsTimestamps RequestBarsTimestamps(CQGTimedBarsRequest cqg_timestamps_request)
         {
             string name = "RequestBarsTimestamps";
             var args = new object[] { cqg_timestamps_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGBarsTimestampsClass(key);
             return result;
         }
@@ -15654,14 +15718,14 @@ namespace FakeCQG
         {
             string name = "RequestCommodityInstruments";
             var args = new object[] { commodity_name, instrument_types, tradable_only };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGCondition RequestCondition(CQGConditionRequest cqg_condition_request)
         {
             string name = "RequestCondition";
             var args = new object[] { cqg_condition_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConditionClass(key);
             return result;
         }
@@ -15669,14 +15733,14 @@ namespace FakeCQG
         public virtual void RequestConditionDefinitions()
         {
             string name = "RequestConditionDefinitions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGConstantVolumeBars RequestConstantVolumeBars(CQGConstantVolumeBarsRequest cqg_constant_volume_bars_request)
         {
             string name = "RequestConstantVolumeBars";
             var args = new object[] { cqg_constant_volume_bars_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConstantVolumeBarsClass(key);
             return result;
         }
@@ -15684,14 +15748,14 @@ namespace FakeCQG
         public virtual void RequestCustomSessions()
         {
             string name = "RequestCustomSessions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGCustomStudy RequestCustomStudy(CQGCustomStudyRequest cqg_custom_study_request)
         {
             string name = "RequestCustomStudy";
             var args = new object[] { cqg_custom_study_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCustomStudyClass(key);
             return result;
         }
@@ -15699,27 +15763,27 @@ namespace FakeCQG
         public virtual void RequestCustomStudyDefinitions()
         {
             string name = "RequestCustomStudyDefinitions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RequestDataSources()
         {
             string name = "RequestDataSources";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void RequestDataSourceSymbols(String data_source_abbreviation)
         {
             string name = "RequestDataSourceSymbols";
             var args = new object[] { data_source_abbreviation };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGExpression RequestExpression(CQGExpressionRequest cqg_expression_request)
         {
             string name = "RequestExpression";
             var args = new object[] { cqg_expression_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGExpressionClass(key);
             return result;
         }
@@ -15728,35 +15792,35 @@ namespace FakeCQG
         {
             string name = "RequestHistoricalSessions";
             var args = new object[] { cqg_historical_sessions_request };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RequestInstrumentsGroup(CQGInstrumentsGroupRequest group_request, Boolean trace_group_changes)
         {
             string name = "RequestInstrumentsGroup";
             var args = new object[] { group_request, trace_group_changes };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RequestManualFills(Int32 gw_account_id, eManualFillsDataLevel update_level)
         {
             string name = "RequestManualFills";
             var args = new object[] { gw_account_id, update_level };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RequestManualFillUpdate(CQGManualFillRequest cqg_manual_fill_request)
         {
             string name = "RequestManualFillUpdate";
             var args = new object[] { cqg_manual_fill_request };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGPointAndFigureBars RequestPointAndFigureBars(CQGPointAndFigureBarsRequest cqg_point_and_figure_bars_request)
         {
             string name = "RequestPointAndFigureBars";
             var args = new object[] { cqg_point_and_figure_bars_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGPointAndFigureBarsClass(key);
             return result;
         }
@@ -15764,14 +15828,14 @@ namespace FakeCQG
         public virtual void RequestQFormulaDefinitions()
         {
             string name = "RequestQFormulaDefinitions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGSubMinuteBars RequestSubMinuteBars(CQGSubMinuteBarsRequest cqg_subminute_bars_request)
         {
             string name = "RequestSubMinuteBars";
             var args = new object[] { cqg_subminute_bars_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGSubMinuteBarsClass(key);
             return result;
         }
@@ -15780,7 +15844,7 @@ namespace FakeCQG
         {
             string name = "RequestTFlowBars";
             var args = new object[] { cqg_tflow_bars_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTFlowBarsClass(key);
             return result;
         }
@@ -15789,7 +15853,7 @@ namespace FakeCQG
         {
             string name = "RequestTicks";
             var args = new object[] { cqg_ticks_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTicksClass(key);
             return result;
         }
@@ -15798,7 +15862,7 @@ namespace FakeCQG
         {
             string name = "RequestTimedBars";
             var args = new object[] { cqg_timed_bars_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTimedBarsClass(key);
             return result;
         }
@@ -15807,21 +15871,21 @@ namespace FakeCQG
         {
             string name = "RequestTradableCommodities";
             var args = new object[] { gw_account_id };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void RequestTradableExchanges(Int32 gw_account_id = 0)
         {
             string name = "RequestTradableExchanges";
             var args = new object[] { gw_account_id };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual CQGTradingSystem RequestTradingSystem(CQGTradingSystemRequest cqg_trading_system_request)
         {
             string name = "RequestTradingSystem";
             var args = new object[] { cqg_trading_system_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemClass(key);
             return result;
         }
@@ -15829,14 +15893,14 @@ namespace FakeCQG
         public virtual void RequestTradingSystemDefinitions()
         {
             string name = "RequestTradingSystemDefinitions";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGYields RequestYields(CQGYieldsRequest cqg_yields_request)
         {
             string name = "RequestYields";
             var args = new object[] { cqg_yields_request };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGYieldsClass(key);
             return result;
         }
@@ -15846,34 +15910,34 @@ namespace FakeCQG
             if(!isDCClosed)
             {
                 string name = "Shutdown";
-                Internal.Core.CallVoidMethod(dcObjKey, name);
+                Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
             }
         }
 
         public virtual void Startup()
         {
             string name = "Startup";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void SubscribeNewInstrument(CQGInstrumentSubscriptionRequest instrument_request)
         {
             string name = "SubscribeNewInstrument";
             var args = new object[] { instrument_request };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void TerminateCQGIC(Boolean start_again = false)
         {
             string name = "TerminateCQGIC";
             var args = new object[] { start_again };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -15881,7 +15945,7 @@ namespace FakeCQG
         {
             string name = "UnregisterAlgorithmicOrder";
             var args = new object[] { guid_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         #endregion
@@ -17461,11 +17525,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGChangedTradeEntriesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGChangedTradeEntriesClass";
         }
 
         #endregion
@@ -17486,7 +17553,7 @@ namespace FakeCQG
             get
             {
                 string name = "ChangeFilter";
-                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17497,7 +17564,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17509,7 +17576,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGChangedTradeEntryClass(key);
                 return value;
             }
@@ -17523,21 +17590,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17549,11 +17616,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGChangedTradeEntryClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGChangedTradeEntryClass";
         }
 
         #endregion
@@ -17574,7 +17644,7 @@ namespace FakeCQG
             get
             {
                 string name = "ChangeCategory";
-                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17585,7 +17655,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeEntry";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntryClass(key);
                 return value;
             }
@@ -17599,14 +17669,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17618,11 +17688,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGChangedTradeExitClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGChangedTradeExitClass";
         }
 
         #endregion
@@ -17643,7 +17716,7 @@ namespace FakeCQG
             get
             {
                 string name = "ChangeCategory";
-                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17654,7 +17727,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeExit";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitClass(key);
                 return value;
             }
@@ -17668,14 +17741,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17687,11 +17760,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGChangedTradeExitsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGChangedTradeExitsClass";
         }
 
         #endregion
@@ -17712,7 +17788,7 @@ namespace FakeCQG
             get
             {
                 string name = "ChangeFilter";
-                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradeChangeCategory>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17723,7 +17799,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17735,7 +17811,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGChangedTradeExitClass(key);
                 return value;
             }
@@ -17749,21 +17825,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17775,11 +17851,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCommoditiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCommoditiesClass";
         }
 
         #endregion
@@ -17800,7 +17879,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17811,7 +17890,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17823,7 +17902,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -17836,21 +17915,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17862,11 +17941,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCommodityInstrumentsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCommodityInstrumentsClass";
         }
 
         #endregion
@@ -17887,7 +17969,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17898,7 +17980,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsTradableOnly";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17910,7 +17992,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -17923,21 +18005,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -17949,11 +18031,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionClass";
         }
 
         #endregion
@@ -17974,7 +18059,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -17985,7 +18070,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConditionDefinitionClass(key);
                 return value;
             }
@@ -17997,7 +18082,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18008,7 +18093,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18020,7 +18105,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConditionResultClass(key);
                 return value;
             }
@@ -18032,7 +18117,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -18044,7 +18129,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConditionRequestClass(key);
                 return value;
             }
@@ -18056,7 +18141,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18067,7 +18152,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18079,14 +18164,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18098,21 +18183,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18120,7 +18205,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -18128,13 +18213,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18146,11 +18231,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionDefinitionClass";
         }
 
         #endregion
@@ -18171,7 +18259,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18182,7 +18270,7 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGParameterDefinitionsClass(key);
                 return value;
             }
@@ -18196,14 +18284,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18215,11 +18303,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionDefinitionsClass";
         }
 
         #endregion
@@ -18240,7 +18331,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18252,7 +18343,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConditionDefinitionClass(key);
                 return value;
             }
@@ -18265,7 +18356,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { condition_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConditionDefinitionClass(key);
                 return value;
             }
@@ -18280,7 +18371,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { condition_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConditionDefinitionClass(key);
             return result;
         }
@@ -18288,21 +18379,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18314,11 +18405,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionRequestClass";
         }
 
         #endregion
@@ -18339,14 +18433,14 @@ namespace FakeCQG
             get
             {
                 string name = "BaseExpression";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BaseExpression";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18355,14 +18449,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18371,14 +18465,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18387,7 +18481,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConditionDefinitionClass(key);
                 return value;
             }
@@ -18399,14 +18493,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18415,14 +18509,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18431,14 +18525,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18447,14 +18541,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18464,14 +18558,14 @@ namespace FakeCQG
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Parameter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18480,14 +18574,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18496,14 +18590,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18512,14 +18606,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18528,14 +18622,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18544,14 +18638,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18560,14 +18654,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18576,14 +18670,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -18595,14 +18689,14 @@ namespace FakeCQG
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18610,13 +18704,13 @@ namespace FakeCQG
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18628,11 +18722,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionResultClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionResultClass";
         }
 
         #endregion
@@ -18653,7 +18750,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18664,7 +18761,7 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18677,14 +18774,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18696,11 +18793,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConditionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConditionsClass";
         }
 
         #endregion
@@ -18721,7 +18821,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18733,7 +18833,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConditionClass(key);
                 return value;
             }
@@ -18746,7 +18846,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConditionClass(key);
                 return value;
             }
@@ -18761,7 +18861,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConditionClass(key);
             return result;
         }
@@ -18769,21 +18869,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -18795,11 +18895,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConstantVolumeBarClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConstantVolumeBarClass";
         }
 
         #endregion
@@ -18820,7 +18923,7 @@ namespace FakeCQG
             get
             {
                 string name = "ActualVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18831,7 +18934,7 @@ namespace FakeCQG
             get
             {
                 string name = "AskVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18842,7 +18945,7 @@ namespace FakeCQG
             get
             {
                 string name = "Avg";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18853,7 +18956,7 @@ namespace FakeCQG
             get
             {
                 string name = "BidVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18864,7 +18967,7 @@ namespace FakeCQG
             get
             {
                 string name = "Close";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18875,7 +18978,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18886,7 +18989,7 @@ namespace FakeCQG
             get
             {
                 string name = "HLC3";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18897,7 +19000,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18908,7 +19011,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18919,7 +19022,7 @@ namespace FakeCQG
             get
             {
                 string name = "Open";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18930,7 +19033,7 @@ namespace FakeCQG
             get
             {
                 string name = "Range";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18941,7 +19044,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18952,7 +19055,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18963,7 +19066,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18974,7 +19077,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18985,7 +19088,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -18996,7 +19099,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueRange";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19009,14 +19112,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19028,11 +19131,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConstantVolumeBarsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConstantVolumeBarsClass";
         }
 
         #endregion
@@ -19053,7 +19159,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19064,7 +19170,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19075,7 +19181,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19087,7 +19193,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConstantVolumeBarClass(key);
                 return value;
             }
@@ -19099,7 +19205,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -19111,7 +19217,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGConstantVolumeBarsRequestClass(key);
                 return value;
             }
@@ -19123,7 +19229,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19134,7 +19240,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19146,14 +19252,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19165,21 +19271,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19187,13 +19293,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19205,11 +19311,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConstantVolumeBarsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConstantVolumeBarsCollectionClass";
         }
 
         #endregion
@@ -19230,7 +19339,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19242,7 +19351,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConstantVolumeBarsClass(key);
                 return value;
             }
@@ -19255,7 +19364,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGConstantVolumeBarsClass(key);
                 return value;
             }
@@ -19270,7 +19379,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGConstantVolumeBarsClass(key);
             return result;
         }
@@ -19278,21 +19387,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19304,11 +19413,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGConstantVolumeBarsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGConstantVolumeBarsRequestClass";
         }
 
         #endregion
@@ -19329,14 +19441,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19345,14 +19457,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19361,14 +19473,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19377,14 +19489,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19393,14 +19505,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeFlatTicks";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeFlatTicks";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19409,14 +19521,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19425,14 +19537,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19441,14 +19553,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19457,14 +19569,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19473,14 +19585,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19489,14 +19601,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19505,14 +19617,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19521,14 +19633,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19537,14 +19649,14 @@ namespace FakeCQG
             get
             {
                 string name = "VolumeLevel";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "VolumeLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19553,14 +19665,14 @@ namespace FakeCQG
             get
             {
                 string name = "VolumeType";
-                var value = Internal.Core.GetProperty<eCvbVolumeType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eCvbVolumeType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "VolumeType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -19571,14 +19683,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19590,11 +19702,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurrencyRateClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurrencyRateClass";
         }
 
         #endregion
@@ -19615,7 +19730,7 @@ namespace FakeCQG
             get
             {
                 string name = "BaseCurrencyName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19626,7 +19741,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -19638,7 +19753,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencyName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19649,7 +19764,7 @@ namespace FakeCQG
             get
             {
                 string name = "FcmID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19660,7 +19775,7 @@ namespace FakeCQG
             get
             {
                 string name = "Rate";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19671,7 +19786,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19682,7 +19797,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19695,14 +19810,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19714,11 +19829,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurrencyRatesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurrencyRatesClass";
         }
 
         #endregion
@@ -19739,7 +19857,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19751,7 +19869,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { fcm_id, currency_, base_currency };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCurrencyRateClass(key);
                 return value;
             }
@@ -19765,21 +19883,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19791,11 +19909,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurveDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurveDefinitionClass";
         }
 
         #endregion
@@ -19816,7 +19937,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19829,14 +19950,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19848,11 +19969,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurveDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurveDefinitionsClass";
         }
 
         #endregion
@@ -19873,7 +19997,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19885,7 +20009,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCurveDefinitionClass(key);
                 return value;
             }
@@ -19898,7 +20022,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { curve_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCurveDefinitionClass(key);
                 return value;
             }
@@ -19913,7 +20037,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { curve_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCurveDefinitionClass(key);
             return result;
         }
@@ -19921,21 +20045,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -19947,11 +20071,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurveHeadersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurveHeadersClass";
         }
 
         #endregion
@@ -19972,7 +20099,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -19984,7 +20111,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -19997,21 +20124,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20023,11 +20150,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCurvesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCurvesClass";
         }
 
         #endregion
@@ -20048,7 +20178,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20060,7 +20190,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -20071,7 +20201,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20082,7 +20212,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20095,21 +20225,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20121,11 +20251,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCustomStudiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCustomStudiesClass";
         }
 
         #endregion
@@ -20146,7 +20279,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20158,7 +20291,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCustomStudyClass(key);
                 return value;
             }
@@ -20171,7 +20304,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCustomStudyClass(key);
                 return value;
             }
@@ -20186,7 +20319,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCustomStudyClass(key);
             return result;
         }
@@ -20194,21 +20327,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20220,11 +20353,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCustomStudyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCustomStudyClass";
         }
 
         #endregion
@@ -20245,7 +20381,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20256,7 +20392,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurveHeaders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCurveHeadersClass(key);
                 return value;
             }
@@ -20268,7 +20404,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCustomStudyDefinitionClass(key);
                 return value;
             }
@@ -20280,7 +20416,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20291,7 +20427,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20303,7 +20439,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCurvesClass(key);
                 return value;
             }
@@ -20315,7 +20451,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -20327,7 +20463,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCustomStudyRequestClass(key);
                 return value;
             }
@@ -20339,7 +20475,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20350,7 +20486,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20362,14 +20498,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20381,21 +20517,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20403,7 +20539,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -20411,13 +20547,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20429,11 +20565,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCustomStudyDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCustomStudyDefinitionClass";
         }
 
         #endregion
@@ -20454,7 +20593,7 @@ namespace FakeCQG
             get
             {
                 string name = "Abbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20465,7 +20604,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurveDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCurveDefinitionsClass(key);
                 return value;
             }
@@ -20477,7 +20616,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20488,7 +20627,7 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGParameterDefinitionsClass(key);
                 return value;
             }
@@ -20502,14 +20641,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20521,11 +20660,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCustomStudyDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCustomStudyDefinitionsClass";
         }
 
         #endregion
@@ -20546,7 +20688,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20558,7 +20700,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCustomStudyDefinitionClass(key);
                 return value;
             }
@@ -20571,7 +20713,7 @@ namespace FakeCQG
             {
                 string name = "ItemByAbbreviation";
                 var args = new object[] { custom_study_abbreviation };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGCustomStudyDefinitionClass(key);
                 return value;
             }
@@ -20586,7 +20728,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { custom_study_abbreviation };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCustomStudyDefinitionClass(key);
             return result;
         }
@@ -20595,7 +20737,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { custom_study_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGCustomStudyDefinitionClass(key);
             return result;
         }
@@ -20603,21 +20745,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20629,11 +20771,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGCustomStudyRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGCustomStudyRequestClass";
         }
 
         #endregion
@@ -20654,14 +20799,14 @@ namespace FakeCQG
             get
             {
                 string name = "BaseExpression";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BaseExpression";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20670,14 +20815,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20686,14 +20831,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20702,7 +20847,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCustomStudyDefinitionClass(key);
                 return value;
             }
@@ -20714,14 +20859,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20730,14 +20875,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20746,14 +20891,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20762,14 +20907,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20779,14 +20924,14 @@ namespace FakeCQG
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Parameter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20795,14 +20940,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20811,14 +20956,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20827,14 +20972,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20843,14 +20988,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20859,14 +21004,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20875,14 +21020,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20891,14 +21036,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -20910,14 +21055,14 @@ namespace FakeCQG
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20925,14 +21070,14 @@ namespace FakeCQG
         {
             string name = "IncludeCurve";
             var args = new object[] { curve_key };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual Boolean IsCurveIncluded(Object curve_key)
         {
             string name = "IsCurveIncluded";
             var args = new object[] { curve_key };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -20940,13 +21085,13 @@ namespace FakeCQG
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -20958,11 +21103,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGDataSourceClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDataSourceClass";
         }
 
         #endregion
@@ -20983,7 +21131,7 @@ namespace FakeCQG
             get
             {
                 string name = "Abbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -20994,7 +21142,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21005,7 +21153,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eDataSourceStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDataSourceStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21016,7 +21164,7 @@ namespace FakeCQG
             get
             {
                 string name = "SymbolTypes";
-                var value = Internal.Core.GetProperty<eSymbolType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSymbolType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21029,14 +21177,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21048,11 +21196,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGDataSourcesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDataSourcesClass";
         }
 
         #endregion
@@ -21073,7 +21224,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21085,7 +21236,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGDataSourceClass(key);
                 return value;
             }
@@ -21098,7 +21249,7 @@ namespace FakeCQG
             {
                 string name = "ItemByAbbreviation";
                 var args = new object[] { data_source_abbreviation };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGDataSourceClass(key);
                 return value;
             }
@@ -21113,7 +21264,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { data_source_abbreviation };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGDataSourceClass(key);
             return result;
         }
@@ -21121,21 +21272,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21147,11 +21298,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGDataSourceSymbolClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDataSourceSymbolClass";
         }
 
         #endregion
@@ -21172,7 +21326,7 @@ namespace FakeCQG
             get
             {
                 string name = "Abbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21183,7 +21337,7 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21194,7 +21348,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eSymbolType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSymbolType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21207,14 +21361,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21226,11 +21380,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGDataSourceSymbolsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDataSourceSymbolsClass";
         }
 
         #endregion
@@ -21251,7 +21408,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21262,7 +21419,7 @@ namespace FakeCQG
             get
             {
                 string name = "DataSourceAbbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21274,7 +21431,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGDataSourceSymbolClass(key);
                 return value;
             }
@@ -21288,21 +21445,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21314,6 +21471,8 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         private System.Timers.Timer eventCheckingTimer;
 
         #region Constructors
@@ -21321,6 +21480,7 @@ namespace FakeCQG
         internal CQGDirectEventsAccessorClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDirectEventsAccessorClass";
             eventCheckingTimer = new System.Timers.Timer();
             eventCheckingTimer.Interval = 30;
             eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;
@@ -21378,14 +21538,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21630,11 +21790,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGDOMQuotesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGDOMQuotesClass";
         }
 
         #endregion
@@ -21655,7 +21818,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21667,7 +21830,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -21680,7 +21843,7 @@ namespace FakeCQG
             {
                 string name = "ItemByPrice";
                 var args = new object[] { price_, round_to_better };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -21695,7 +21858,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByPrice";
             var args = new object[] { price_, round_to_better };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGQuoteClass(key);
             return result;
         }
@@ -21703,21 +21866,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21729,11 +21892,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGEnvironmentClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGEnvironmentClass";
         }
 
         #endregion
@@ -21754,7 +21920,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -21766,7 +21932,7 @@ namespace FakeCQG
             get
             {
                 string name = "CELVersion";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21777,7 +21943,7 @@ namespace FakeCQG
             get
             {
                 string name = "CQGSerialNumber";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21788,7 +21954,7 @@ namespace FakeCQG
             get
             {
                 string name = "CQGVersion";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21799,7 +21965,7 @@ namespace FakeCQG
             get
             {
                 string name = "DataConnectionStatus";
-                var value = Internal.Core.GetProperty<eConnectionStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eConnectionStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21810,7 +21976,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWConnectionStatus";
-                var value = Internal.Core.GetProperty<eConnectionStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eConnectionStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21821,7 +21987,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWLogonName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21832,7 +21998,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -21844,7 +22010,7 @@ namespace FakeCQG
             get
             {
                 string name = "LineTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21855,7 +22021,7 @@ namespace FakeCQG
             get
             {
                 string name = "LocalTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21866,7 +22032,7 @@ namespace FakeCQG
             get
             {
                 string name = "MessagesPending";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21877,7 +22043,7 @@ namespace FakeCQG
             get
             {
                 string name = "OrdersPending";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21888,7 +22054,7 @@ namespace FakeCQG
             get
             {
                 string name = "RemoteOpenAPISession";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGRemoteOpenAPISessionClass(key);
                 return value;
             }
@@ -21902,14 +22068,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -21921,11 +22087,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGErrorClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGErrorClass";
         }
 
         #endregion
@@ -21946,7 +22115,7 @@ namespace FakeCQG
             get
             {
                 string name = "Code";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21957,7 +22126,7 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21968,7 +22137,7 @@ namespace FakeCQG
             get
             {
                 string name = "Owner";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -21981,14 +22150,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22000,11 +22169,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExchangesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExchangesClass";
         }
 
         #endregion
@@ -22025,7 +22197,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22036,7 +22208,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22048,7 +22220,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -22061,21 +22233,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22087,11 +22259,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExecutionPatternClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExecutionPatternClass";
         }
 
         #endregion
@@ -22112,7 +22287,7 @@ namespace FakeCQG
             get
             {
                 string name = "Parameters";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGExecutionPatternParametersClass(key);
                 return value;
             }
@@ -22124,7 +22299,7 @@ namespace FakeCQG
             get
             {
                 string name = "PatternString";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22137,14 +22312,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22156,11 +22331,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExecutionPatternParameterClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExecutionPatternParameterClass";
         }
 
         #endregion
@@ -22181,7 +22359,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22192,7 +22370,7 @@ namespace FakeCQG
             get
             {
                 string name = "Parameters";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGExecutionPatternParametersClass(key);
                 return value;
             }
@@ -22204,7 +22382,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eExecutionPatternParameterType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eExecutionPatternParameterType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22215,14 +22393,14 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Value";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22233,14 +22411,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22252,11 +22430,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExecutionPatternParametersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExecutionPatternParametersClass";
         }
 
         #endregion
@@ -22277,7 +22458,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22289,7 +22470,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGExecutionPatternParameterClass(key);
                 return value;
             }
@@ -22304,7 +22485,7 @@ namespace FakeCQG
         {
             string name = "Add";
             var args = new object[] { name_, type_, value_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGExecutionPatternParameterClass(key);
             return result;
         }
@@ -22312,14 +22493,14 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22327,13 +22508,13 @@ namespace FakeCQG
         {
             string name = "Remove";
             var args = new object[] { index_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22345,11 +22526,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExpressionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExpressionClass";
         }
 
         #endregion
@@ -22370,7 +22554,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22381,7 +22565,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22392,7 +22576,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22404,7 +22588,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGExpressionOutputsClass(key);
                 return value;
             }
@@ -22416,7 +22600,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -22428,7 +22612,7 @@ namespace FakeCQG
             get
             {
                 string name = "OutputHeaders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGExpressionOutputHeadersClass(key);
                 return value;
             }
@@ -22440,7 +22624,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGExpressionRequestClass(key);
                 return value;
             }
@@ -22452,7 +22636,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22463,7 +22647,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22475,14 +22659,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22494,21 +22678,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22516,7 +22700,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -22524,13 +22708,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22542,11 +22726,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExpressionOutputHeadersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExpressionOutputHeadersClass";
         }
 
         #endregion
@@ -22567,7 +22754,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22579,7 +22766,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -22592,21 +22779,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22618,11 +22805,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExpressionOutputsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExpressionOutputsClass";
         }
 
         #endregion
@@ -22643,7 +22833,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22655,7 +22845,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -22666,7 +22856,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22677,7 +22867,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22690,21 +22880,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -22716,11 +22906,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExpressionRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExpressionRequestClass";
         }
 
         #endregion
@@ -22741,14 +22934,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22757,14 +22950,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22773,14 +22966,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22789,14 +22982,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22805,14 +22998,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22821,14 +23014,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22837,14 +23030,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22853,14 +23046,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22869,14 +23062,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22885,14 +23078,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22901,14 +23094,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22918,7 +23111,7 @@ namespace FakeCQG
             {
                 string name = "SubExpression";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -22929,7 +23122,7 @@ namespace FakeCQG
             get
             {
                 string name = "SubExpressionCount";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -22940,14 +23133,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22956,14 +23149,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -22975,14 +23168,14 @@ namespace FakeCQG
         {
             string name = "AddSubExpression";
             var args = new object[] { sub_expression, alias_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual String get_SubExpression(Int32 index_)
         {
             string name = "get_SubExpression";
             var args = new object[] { index_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -22990,21 +23183,21 @@ namespace FakeCQG
         {
             string name = "get_SubExpressionAlias";
             var args = new object[] { index_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23016,11 +23209,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGExpressionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGExpressionsClass";
         }
 
         #endregion
@@ -23041,7 +23237,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23053,7 +23249,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGExpressionClass(key);
                 return value;
             }
@@ -23066,7 +23262,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGExpressionClass(key);
                 return value;
             }
@@ -23081,7 +23277,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGExpressionClass(key);
             return result;
         }
@@ -23089,21 +23285,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23115,11 +23311,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGFillClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGFillClass";
         }
 
         #endregion
@@ -23141,7 +23340,7 @@ namespace FakeCQG
             {
                 string name = "GWTradesCount";
                 var args = new object[] { leg_ };
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -23152,7 +23351,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23163,7 +23362,7 @@ namespace FakeCQG
             get
             {
                 string name = "LegCount";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23174,7 +23373,7 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderClass(key);
                 return value;
             }
@@ -23186,7 +23385,7 @@ namespace FakeCQG
             get
             {
                 string name = "RefFillId";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23197,7 +23396,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23208,7 +23407,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eFillStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eFillStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23219,7 +23418,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23233,7 +23432,7 @@ namespace FakeCQG
         {
             string name = "get_Aggressive";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23241,7 +23440,7 @@ namespace FakeCQG
         {
             string name = "get_Currency";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23249,7 +23448,7 @@ namespace FakeCQG
         {
             string name = "get_DisplayPrice";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23257,7 +23456,7 @@ namespace FakeCQG
         {
             string name = "get_ExchangeTradeDate";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<DateTime>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<DateTime>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23265,7 +23464,7 @@ namespace FakeCQG
         {
             string name = "get_GWTradeId";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23273,7 +23472,7 @@ namespace FakeCQG
         {
             string name = "get_GWTrades";
             var args = new object[] { leg_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGGWTradesClass(key);
             return result;
         }
@@ -23282,7 +23481,7 @@ namespace FakeCQG
         {
             string name = "get_GWTradesCount";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23290,7 +23489,7 @@ namespace FakeCQG
         {
             string name = "get_InstrumentName";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23298,7 +23497,7 @@ namespace FakeCQG
         {
             string name = "get_Price";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23306,7 +23505,7 @@ namespace FakeCQG
         {
             string name = "get_Quantity";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23314,7 +23513,7 @@ namespace FakeCQG
         {
             string name = "get_Side";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<eOrderSide>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<eOrderSide>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -23322,21 +23521,21 @@ namespace FakeCQG
         {
             string name = "get_StatementDate";
             var args = new object[] { leg_ };
-            var result = Internal.Core.CallMethod<DateTime>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<DateTime>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23348,11 +23547,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGFillsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGFillsClass";
         }
 
         #endregion
@@ -23373,7 +23575,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23385,7 +23587,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { fill_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGFillClass(key);
                 return value;
             }
@@ -23398,7 +23600,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGFillClass(key);
                 return value;
             }
@@ -23413,7 +23615,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGFillClass(key);
             return result;
         }
@@ -23421,21 +23623,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23447,11 +23649,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGGWTradeClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGGWTradeClass";
         }
 
         #endregion
@@ -23472,7 +23677,7 @@ namespace FakeCQG
             get
             {
                 string name = "Aggressive";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23483,7 +23688,7 @@ namespace FakeCQG
             get
             {
                 string name = "Currency";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23494,7 +23699,7 @@ namespace FakeCQG
             get
             {
                 string name = "DisplayPrice";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23505,7 +23710,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExchangeTradeDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23516,7 +23721,7 @@ namespace FakeCQG
             get
             {
                 string name = "Fill";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGFillClass(key);
                 return value;
             }
@@ -23528,7 +23733,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23539,7 +23744,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23550,7 +23755,7 @@ namespace FakeCQG
             get
             {
                 string name = "Leg";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23561,7 +23766,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23572,7 +23777,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23583,7 +23788,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23594,7 +23799,7 @@ namespace FakeCQG
             get
             {
                 string name = "StatementDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23607,14 +23812,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23626,11 +23831,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGGWTradesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGGWTradesClass";
         }
 
         #endregion
@@ -23651,7 +23859,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23663,7 +23871,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { trade_gw_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGGWTradeClass(key);
                 return value;
             }
@@ -23676,7 +23884,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGGWTradeClass(key);
                 return value;
             }
@@ -23691,7 +23899,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGGWTradeClass(key);
             return result;
         }
@@ -23699,21 +23907,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23725,11 +23933,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGHistoricalSessionsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGHistoricalSessionsRequestClass";
         }
 
         #endregion
@@ -23750,14 +23961,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -23766,14 +23977,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -23782,14 +23993,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -23798,14 +24009,14 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eHistoricalSessionsRequestType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalSessionsRequestType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Type";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -23816,14 +24027,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23835,11 +24046,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGHolidayClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGHolidayClass";
         }
 
         #endregion
@@ -23860,7 +24074,7 @@ namespace FakeCQG
             get
             {
                 string name = "HolidayDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23871,7 +24085,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsDaily";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23882,7 +24096,7 @@ namespace FakeCQG
             get
             {
                 string name = "SessionMask";
-                var value = Internal.Core.GetProperty<eSessionWeekDays>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionWeekDays>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23895,14 +24109,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -23914,11 +24128,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGHolidaysClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGHolidaysClass";
         }
 
         #endregion
@@ -23939,7 +24156,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -23951,7 +24168,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGHolidayClass(key);
                 return value;
             }
@@ -23963,7 +24180,7 @@ namespace FakeCQG
             get
             {
                 string name = "Sessions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGSessionsClass(key);
                 return value;
             }
@@ -23977,21 +24194,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24003,11 +24220,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentClass";
         }
 
         #endregion
@@ -24028,7 +24248,7 @@ namespace FakeCQG
             get
             {
                 string name = "Ask";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -24040,14 +24260,14 @@ namespace FakeCQG
             get
             {
                 string name = "BBAType";
-                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BBAType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -24056,7 +24276,7 @@ namespace FakeCQG
             get
             {
                 string name = "Bid";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -24068,7 +24288,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -24080,7 +24300,7 @@ namespace FakeCQG
             get
             {
                 string name = "Commodity";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24091,7 +24311,7 @@ namespace FakeCQG
             get
             {
                 string name = "Country";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24102,7 +24322,7 @@ namespace FakeCQG
             get
             {
                 string name = "Currency";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24113,14 +24333,14 @@ namespace FakeCQG
             get
             {
                 string name = "DataSubscriptionLevel";
-                var value = Internal.Core.GetProperty<eDataSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDataSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DataSubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -24129,7 +24349,7 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24140,7 +24360,7 @@ namespace FakeCQG
             get
             {
                 string name = "DOMAsks";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGDOMQuotesClass(key);
                 return value;
             }
@@ -24152,7 +24372,7 @@ namespace FakeCQG
             get
             {
                 string name = "DOMBids";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGDOMQuotesClass(key);
                 return value;
             }
@@ -24164,14 +24384,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMBookLimit";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMBookLimit";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -24180,14 +24400,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMStatus";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMStatus";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -24196,7 +24416,7 @@ namespace FakeCQG
             get
             {
                 string name = "DTE";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24207,7 +24427,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExchangeAbbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24218,7 +24438,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExchangeID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24229,7 +24449,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExpirationDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24240,7 +24460,7 @@ namespace FakeCQG
             get
             {
                 string name = "FullName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24251,7 +24471,7 @@ namespace FakeCQG
             get
             {
                 string name = "InitialMargin";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24262,7 +24482,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24273,7 +24493,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentType";
-                var value = Internal.Core.GetProperty<eInstrumentType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eInstrumentType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24284,7 +24504,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsDownTick";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24295,7 +24515,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsFastMarket";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24306,7 +24526,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsUpTick";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24317,7 +24537,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaintenanceMargin";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24328,7 +24548,7 @@ namespace FakeCQG
             get
             {
                 string name = "Month";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24339,7 +24559,7 @@ namespace FakeCQG
             get
             {
                 string name = "MonthChar";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24350,7 +24570,7 @@ namespace FakeCQG
             get
             {
                 string name = "NetChange";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24361,7 +24581,7 @@ namespace FakeCQG
             get
             {
                 string name = "PreferredSessionsName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24372,7 +24592,7 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentPropertiesClass(key);
                 return value;
             }
@@ -24384,7 +24604,7 @@ namespace FakeCQG
             get
             {
                 string name = "PropertyLevel";
-                var value = Internal.Core.GetProperty<ePropertySubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePropertySubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24395,7 +24615,7 @@ namespace FakeCQG
             get
             {
                 string name = "QuoteLevel";
-                var value = Internal.Core.GetProperty<eQuoteSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eQuoteSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24406,7 +24626,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quotes";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGQuotesClass(key);
                 return value;
             }
@@ -24418,7 +24638,7 @@ namespace FakeCQG
             get
             {
                 string name = "Scale";
-                var value = Internal.Core.GetProperty<Int16>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int16>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24429,7 +24649,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24440,7 +24660,7 @@ namespace FakeCQG
             get
             {
                 string name = "SessionMask";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24451,7 +24671,7 @@ namespace FakeCQG
             get
             {
                 string name = "SessionNumber";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24462,7 +24682,7 @@ namespace FakeCQG
             get
             {
                 string name = "Sessions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGSessionsClass(key);
                 return value;
             }
@@ -24474,7 +24694,7 @@ namespace FakeCQG
             get
             {
                 string name = "Strike";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24486,14 +24706,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tagName };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -24502,7 +24722,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickSize";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24513,7 +24733,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickSizeFractionDenominator";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24524,7 +24744,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickSizeFractionNumerator";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24535,7 +24755,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickValue";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24546,7 +24766,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24557,7 +24777,7 @@ namespace FakeCQG
             get
             {
                 string name = "TodayCTotalVolume";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24568,7 +24788,7 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -24580,7 +24800,7 @@ namespace FakeCQG
             get
             {
                 string name = "UnderlyingInstrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -24592,7 +24812,7 @@ namespace FakeCQG
             get
             {
                 string name = "UnderlyingInstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24603,7 +24823,7 @@ namespace FakeCQG
             get
             {
                 string name = "YCOI";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24614,7 +24834,7 @@ namespace FakeCQG
             get
             {
                 string name = "Year";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24625,7 +24845,7 @@ namespace FakeCQG
             get
             {
                 string name = "YearString";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24636,7 +24856,7 @@ namespace FakeCQG
             get
             {
                 string name = "YesterdayCTotalVolume";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24650,7 +24870,7 @@ namespace FakeCQG
         {
             string name = "FromDisplayPrice";
             var args = new object[] { display_price };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -24658,14 +24878,14 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tagName };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24673,7 +24893,7 @@ namespace FakeCQG
         {
             string name = "GetNearestTradeablePrice";
             var args = new object[] { price_ };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -24681,7 +24901,7 @@ namespace FakeCQG
         {
             string name = "GetTickSizeFor";
             var args = new object[] { Price };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -24689,7 +24909,7 @@ namespace FakeCQG
         {
             string name = "GetTickValueFor";
             var args = new object[] { Price };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -24697,21 +24917,21 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tagName, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual String ToDisplayPrice(Double correct_price)
         {
             string name = "ToDisplayPrice";
             var args = new object[] { correct_price };
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24723,11 +24943,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentPropertiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentPropertiesClass";
         }
 
         #endregion
@@ -24748,7 +24971,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24760,7 +24983,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { instrument_property };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGInstrumentPropertyClass(key);
                 return value;
             }
@@ -24774,21 +24997,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24800,11 +25023,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentPropertyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentPropertyClass";
         }
 
         #endregion
@@ -24825,7 +25051,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -24837,7 +25063,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24848,7 +25074,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24859,7 +25085,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24870,7 +25096,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eInstrumentProperty>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eInstrumentProperty>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24881,7 +25107,7 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24894,14 +25120,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24913,11 +25139,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentsClass";
         }
 
         #endregion
@@ -24938,7 +25167,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -24950,7 +25179,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -24964,21 +25193,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -24990,11 +25219,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentsGroupClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentsGroupClass";
         }
 
         #endregion
@@ -25015,7 +25247,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25026,7 +25258,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instruments";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentsClass(key);
                 return value;
             }
@@ -25038,7 +25270,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentsGroupRequestClass(key);
                 return value;
             }
@@ -25052,14 +25284,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25071,11 +25303,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentsGroupRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentsGroupRequestClass";
         }
 
         #endregion
@@ -25096,14 +25331,14 @@ namespace FakeCQG
             get
             {
                 string name = "Commodity";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Commodity";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25112,14 +25347,14 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentTypes";
-                var value = Internal.Core.GetProperty<eInstrumentType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eInstrumentType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "InstrumentTypes";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25128,14 +25363,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25144,14 +25379,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25160,14 +25395,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eGroupSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eGroupSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25178,14 +25413,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25197,11 +25432,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentsGroupsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentsGroupsClass";
         }
 
         #endregion
@@ -25222,7 +25460,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25234,7 +25472,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGInstrumentsGroupClass(key);
                 return value;
             }
@@ -25248,21 +25486,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25274,11 +25512,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGInstrumentSubscriptionRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGInstrumentSubscriptionRequestClass";
         }
 
         #endregion
@@ -25299,14 +25540,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMBBAType";
-                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eDOMandBBAType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMBBAType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25315,14 +25556,14 @@ namespace FakeCQG
             get
             {
                 string name = "DOMStatus";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DOMStatus";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25331,14 +25572,14 @@ namespace FakeCQG
             get
             {
                 string name = "PropertyLevel";
-                var value = Internal.Core.GetProperty<ePropertySubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePropertySubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "PropertyLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25347,14 +25588,14 @@ namespace FakeCQG
             get
             {
                 string name = "QuoteLevel";
-                var value = Internal.Core.GetProperty<eQuoteSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eQuoteSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "QuoteLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25363,14 +25604,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25381,14 +25622,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25400,11 +25641,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGIntegerCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGIntegerCollectionClass";
         }
 
         #endregion
@@ -25425,7 +25669,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25437,7 +25681,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -25450,21 +25694,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25476,11 +25720,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGLoggerClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGLoggerClass";
         }
 
         #endregion
@@ -25501,7 +25748,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -25515,7 +25762,7 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25523,13 +25770,13 @@ namespace FakeCQG
         {
             string name = "Log";
             var args = new object[] { content_, severity_ };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25541,11 +25788,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGManualFillClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGManualFillClass";
         }
 
         #endregion
@@ -25566,7 +25816,7 @@ namespace FakeCQG
             get
             {
                 string name = "DisplayPrice";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25577,7 +25827,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25588,7 +25838,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25599,7 +25849,7 @@ namespace FakeCQG
             get
             {
                 string name = "Note";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25610,7 +25860,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25621,7 +25871,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25632,7 +25882,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25643,7 +25893,7 @@ namespace FakeCQG
             get
             {
                 string name = "StatementDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25654,7 +25904,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeId";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25665,7 +25915,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25678,14 +25928,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25697,11 +25947,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGManualFillRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGManualFillRequestClass";
         }
 
         #endregion
@@ -25722,14 +25975,14 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "GWAccountID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25738,14 +25991,14 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "InstrumentName";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25754,14 +26007,14 @@ namespace FakeCQG
             get
             {
                 string name = "Note";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Note";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25770,14 +26023,14 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Price";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25786,14 +26039,14 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Quantity";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25802,14 +26055,14 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Side";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25818,14 +26071,14 @@ namespace FakeCQG
             get
             {
                 string name = "StatementDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "StatementDate";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25834,14 +26087,14 @@ namespace FakeCQG
             get
             {
                 string name = "TradeId";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TradeId";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25850,14 +26103,14 @@ namespace FakeCQG
             get
             {
                 string name = "TradeTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TradeTimestamp";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -25868,14 +26121,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25887,11 +26140,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGManualFillsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGManualFillsClass";
         }
 
         #endregion
@@ -25912,7 +26168,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25923,7 +26179,7 @@ namespace FakeCQG
             get
             {
                 string name = "DataLevel";
-                var value = Internal.Core.GetProperty<eManualFillsDataLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eManualFillsDataLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25934,7 +26190,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -25946,7 +26202,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { trade_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGManualFillClass(key);
                 return value;
             }
@@ -25961,7 +26217,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGManualFillClass(key);
             return result;
         }
@@ -25969,21 +26225,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -25995,11 +26251,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGManualFillsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGManualFillsCollectionClass";
         }
 
         #endregion
@@ -26020,7 +26279,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26032,7 +26291,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { account_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGManualFillsClass(key);
                 return value;
             }
@@ -26047,7 +26306,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGManualFillsClass(key);
             return result;
         }
@@ -26055,21 +26314,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -26081,11 +26340,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGModifiedPropertiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGModifiedPropertiesClass";
         }
 
         #endregion
@@ -26106,7 +26368,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26118,7 +26380,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { property_type };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGModifiedPropertyClass(key);
                 return value;
             }
@@ -26131,7 +26393,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGModifiedPropertyClass(key);
                 return value;
             }
@@ -26146,7 +26408,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGModifiedPropertyClass(key);
             return result;
         }
@@ -26154,21 +26416,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -26180,11 +26442,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGModifiedPropertyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGModifiedPropertyClass";
         }
 
         #endregion
@@ -26205,7 +26470,7 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26216,7 +26481,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26227,7 +26492,7 @@ namespace FakeCQG
             get
             {
                 string name = "NewValue";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26238,7 +26503,7 @@ namespace FakeCQG
             get
             {
                 string name = "PreviousValue";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26249,7 +26514,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eOrderProperty>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderProperty>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26262,14 +26527,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -26281,11 +26546,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderActionRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderActionRequestClass";
         }
 
         #endregion
@@ -26306,7 +26574,7 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -26314,7 +26582,7 @@ namespace FakeCQG
             set
             {
                 string name = "Account";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26323,14 +26591,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmID";
-                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26339,14 +26607,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmStringID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmStringID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26355,14 +26623,14 @@ namespace FakeCQG
             get
             {
                 string name = "FromAllTraders";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "FromAllTraders";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26371,7 +26639,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -26379,7 +26647,7 @@ namespace FakeCQG
             set
             {
                 string name = "Instrument";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26388,14 +26656,14 @@ namespace FakeCQG
             get
             {
                 string name = "OrderSide";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "OrderSide";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26404,14 +26672,14 @@ namespace FakeCQG
             get
             {
                 string name = "Parked";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Parked";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26422,14 +26690,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -26441,11 +26709,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderChainClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderChainClass";
         }
 
         #endregion
@@ -26466,14 +26737,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmID";
-                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26482,14 +26753,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmStringID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmStringID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26498,7 +26769,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26512,20 +26783,20 @@ namespace FakeCQG
         {
             string name = "AddOrder";
             var args = new object[] { cqg_order };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -26537,11 +26808,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderClass";
         }
 
         #endregion
@@ -26562,7 +26836,7 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -26570,7 +26844,7 @@ namespace FakeCQG
             set
             {
                 string name = "Account";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26579,14 +26853,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmID";
-                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<UInt32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26595,14 +26869,14 @@ namespace FakeCQG
             get
             {
                 string name = "AlgorithmStringID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AlgorithmStringID";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26611,7 +26885,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanBeCanceled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26622,7 +26896,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanBeModified";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26633,7 +26907,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanBeReplaced";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26644,14 +26918,14 @@ namespace FakeCQG
             get
             {
                 string name = "CancelationInstruction";
-                var value = Internal.Core.GetProperty<eOrderCancelationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderCancelationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "CancelationInstruction";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26660,14 +26934,14 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Description";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26676,14 +26950,14 @@ namespace FakeCQG
             get
             {
                 string name = "DurationType";
-                var value = Internal.Core.GetProperty<eOrderDuration>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderDuration>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DurationType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26692,7 +26966,7 @@ namespace FakeCQG
             get
             {
                 string name = "FilledQuantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26703,7 +26977,7 @@ namespace FakeCQG
             get
             {
                 string name = "Fills";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGFillsClass(key);
                 return value;
             }
@@ -26715,7 +26989,7 @@ namespace FakeCQG
             get
             {
                 string name = "GUID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26726,7 +27000,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWOrderID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26737,7 +27011,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWStatus";
-                var value = Internal.Core.GetProperty<eOrderStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26748,7 +27022,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -26756,7 +27030,7 @@ namespace FakeCQG
             set
             {
                 string name = "Instrument";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26765,7 +27039,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26776,7 +27050,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsExternal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26787,7 +27061,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsFinal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26798,7 +27072,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -26810,7 +27084,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastEvent";
-                var value = Internal.Core.GetProperty<eOrderEvent>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderEvent>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26821,14 +27095,14 @@ namespace FakeCQG
             get
             {
                 string name = "LimitPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "LimitPrice";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26837,14 +27111,14 @@ namespace FakeCQG
             get
             {
                 string name = "OrderCheckMark";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "OrderCheckMark";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26853,7 +27127,7 @@ namespace FakeCQG
             get
             {
                 string name = "OriginalOrderID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26864,7 +27138,7 @@ namespace FakeCQG
             get
             {
                 string name = "PlaceTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26875,7 +27149,7 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderPropertiesClass(key);
                 return value;
             }
@@ -26887,14 +27161,14 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Quantity";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26903,7 +27177,7 @@ namespace FakeCQG
             get
             {
                 string name = "RemainingQuantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26914,7 +27188,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26925,14 +27199,14 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Side";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26941,7 +27215,7 @@ namespace FakeCQG
             get
             {
                 string name = "State";
-                var value = Internal.Core.GetProperty<eOrderLocalState>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderLocalState>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26952,14 +27226,14 @@ namespace FakeCQG
             get
             {
                 string name = "StopPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "StopPrice";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26969,14 +27243,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -26985,7 +27259,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimeActiveAt";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -26996,7 +27270,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27007,7 +27281,7 @@ namespace FakeCQG
             get
             {
                 string name = "Transactions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTransactionsClass(key);
                 return value;
             }
@@ -27019,7 +27293,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27030,7 +27304,7 @@ namespace FakeCQG
             get
             {
                 string name = "UEName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27043,27 +27317,27 @@ namespace FakeCQG
         public virtual void Activate()
         {
             string name = "Activate";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void Cancel()
         {
             string name = "Cancel";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual Object get_Tag(String tag_name)
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27071,19 +27345,19 @@ namespace FakeCQG
         {
             string name = "Modify";
             var args = new object[] { cqg_order_modify };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void Place()
         {
             string name = "Place";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGOrderModify PrepareModify()
         {
             string name = "PrepareModify";
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name);
             var result = new CQGOrderModifyClass(key);
             return result;
         }
@@ -27091,20 +27365,20 @@ namespace FakeCQG
         public virtual void SendCareOrderAck()
         {
             string name = "SendCareOrderAck";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27116,11 +27390,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderModifyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderModifyClass";
         }
 
         #endregion
@@ -27141,7 +27418,7 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderPropertiesClass(key);
                 return value;
             }
@@ -27155,14 +27432,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27174,11 +27451,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderPropertiesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderPropertiesClass";
         }
 
         #endregion
@@ -27199,7 +27479,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27211,7 +27491,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { order_property };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGOrderPropertyClass(key);
                 return value;
             }
@@ -27225,21 +27505,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27251,11 +27531,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderPropertyClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderPropertyClass";
         }
 
         #endregion
@@ -27276,7 +27559,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanBeSet";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27287,7 +27570,7 @@ namespace FakeCQG
             get
             {
                 string name = "Description";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27298,7 +27581,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27309,7 +27592,7 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderClass(key);
                 return value;
             }
@@ -27321,7 +27604,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27332,7 +27615,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eOrderProperty>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderProperty>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27343,14 +27626,14 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Value";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -27361,14 +27644,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27380,11 +27663,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrdersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrdersClass";
         }
 
         #endregion
@@ -27405,7 +27691,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27417,7 +27703,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { order_id };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGOrderClass(key);
                 return value;
             }
@@ -27431,14 +27717,14 @@ namespace FakeCQG
         public virtual void AddToLiveOrders()
         {
             string name = "AddToLiveOrders";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual CQGOrder get_ItemByGuid(String order_guid)
         {
             string name = "get_ItemByGuid";
             var args = new object[] { order_guid };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrderClass(key);
             return result;
         }
@@ -27446,14 +27732,14 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27461,7 +27747,7 @@ namespace FakeCQG
         {
             string name = "SelectByInstrumentName";
             var args = new object[] { instrument_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27470,7 +27756,7 @@ namespace FakeCQG
         {
             string name = "SelectByOrderStatus";
             var args = new object[] { order_status };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27479,7 +27765,7 @@ namespace FakeCQG
         {
             string name = "SelectByOrderType";
             var args = new object[] { order_type };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27488,7 +27774,7 @@ namespace FakeCQG
         {
             string name = "SelectByProperty";
             var args = new object[] { property_type, property_value };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27497,7 +27783,7 @@ namespace FakeCQG
         {
             string name = "SelectBySide";
             var args = new object[] { order_side };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27506,7 +27792,7 @@ namespace FakeCQG
         {
             string name = "SelectByTag";
             var args = new object[] { tag_name, tag_value };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGOrdersClass(key);
             return result;
         }
@@ -27514,7 +27800,7 @@ namespace FakeCQG
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27526,11 +27812,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrdersQueryClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrdersQueryClass";
         }
 
         #endregion
@@ -27551,7 +27840,7 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -27563,7 +27852,7 @@ namespace FakeCQG
             get
             {
                 string name = "CEL";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGCELClass(key);
                 return value;
             }
@@ -27575,7 +27864,7 @@ namespace FakeCQG
             get
             {
                 string name = "FinalError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -27587,7 +27876,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastChunk";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -27599,7 +27888,7 @@ namespace FakeCQG
             get
             {
                 string name = "Orders";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrdersClass(key);
                 return value;
             }
@@ -27611,7 +27900,7 @@ namespace FakeCQG
             get
             {
                 string name = "QueryID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27622,7 +27911,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27633,7 +27922,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27644,7 +27933,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27657,20 +27946,20 @@ namespace FakeCQG
         public virtual void Cancel()
         {
             string name = "Cancel";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27682,11 +27971,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGOrderStatisticsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGOrderStatisticsClass";
         }
 
         #endregion
@@ -27708,7 +28000,7 @@ namespace FakeCQG
             {
                 string name = "StatisticsOnReceive";
                 var args = new object[] { i_GUID };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -27719,7 +28011,7 @@ namespace FakeCQG
             set
             {
                 string name = "Switch";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -27731,7 +28023,7 @@ namespace FakeCQG
         {
             string name = "get_StatisticsOnReceive";
             var args = new object[] { i_GUID };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -27739,21 +28031,21 @@ namespace FakeCQG
         {
             string name = "get_StatisticsOnSend";
             var args = new object[] { i_GUID };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27765,11 +28057,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGParameterDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGParameterDefinitionClass";
         }
 
         #endregion
@@ -27790,7 +28085,7 @@ namespace FakeCQG
             get
             {
                 string name = "AvailableValues";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStringCollectionClass(key);
                 return value;
             }
@@ -27802,7 +28097,7 @@ namespace FakeCQG
             get
             {
                 string name = "Comment";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27813,7 +28108,7 @@ namespace FakeCQG
             get
             {
                 string name = "DefaultValue";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27824,7 +28119,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27835,7 +28130,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eUserFormulaParameterType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eUserFormulaParameterType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27848,14 +28143,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27867,11 +28162,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGParameterDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGParameterDefinitionsClass";
         }
 
         #endregion
@@ -27892,7 +28190,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -27904,7 +28202,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGParameterDefinitionClass(key);
                 return value;
             }
@@ -27917,7 +28215,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { parameter_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGParameterDefinitionClass(key);
                 return value;
             }
@@ -27932,7 +28230,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { parameter_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGParameterDefinitionClass(key);
             return result;
         }
@@ -27940,21 +28238,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -27966,11 +28264,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPointAndFigureBarClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPointAndFigureBarClass";
         }
 
         #endregion
@@ -27991,7 +28292,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28002,7 +28303,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28013,7 +28314,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28024,7 +28325,7 @@ namespace FakeCQG
             get
             {
                 string name = "PFHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28035,7 +28336,7 @@ namespace FakeCQG
             get
             {
                 string name = "PFLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28046,7 +28347,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28057,7 +28358,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28068,7 +28369,7 @@ namespace FakeCQG
             get
             {
                 string name = "Up";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28081,14 +28382,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28100,11 +28401,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPointAndFigureBarsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPointAndFigureBarsClass";
         }
 
         #endregion
@@ -28125,7 +28429,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28136,7 +28440,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28147,7 +28451,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28159,7 +28463,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGPointAndFigureBarClass(key);
                 return value;
             }
@@ -28171,7 +28475,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -28183,7 +28487,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGPointAndFigureBarsRequestClass(key);
                 return value;
             }
@@ -28195,7 +28499,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28206,7 +28510,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28218,14 +28522,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28237,21 +28541,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28259,13 +28563,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28277,11 +28581,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPointAndFigureBarsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPointAndFigureBarsCollectionClass";
         }
 
         #endregion
@@ -28302,7 +28609,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28314,7 +28621,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGPointAndFigureBarsClass(key);
                 return value;
             }
@@ -28327,7 +28634,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGPointAndFigureBarsClass(key);
                 return value;
             }
@@ -28342,7 +28649,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGPointAndFigureBarsClass(key);
             return result;
         }
@@ -28350,21 +28657,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28376,11 +28683,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPointAndFigureBarsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPointAndFigureBarsRequestClass";
         }
 
         #endregion
@@ -28401,14 +28711,14 @@ namespace FakeCQG
             get
             {
                 string name = "BoxSize";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BoxSize";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28417,14 +28727,14 @@ namespace FakeCQG
             get
             {
                 string name = "BoxUnits";
-                var value = Internal.Core.GetProperty<ePfBoxUnits>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePfBoxUnits>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BoxUnits";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28433,14 +28743,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28449,14 +28759,14 @@ namespace FakeCQG
             get
             {
                 string name = "DataSource";
-                var value = Internal.Core.GetProperty<ePfDataSource>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<ePfDataSource>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DataSource";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28465,14 +28775,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28481,14 +28791,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28497,14 +28807,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28513,14 +28823,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28529,14 +28839,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28545,14 +28855,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28561,14 +28871,14 @@ namespace FakeCQG
             get
             {
                 string name = "Reversal";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Reversal";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28577,14 +28887,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28593,14 +28903,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28609,14 +28919,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28625,14 +28935,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28641,14 +28951,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -28659,14 +28969,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28678,11 +28988,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPositionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPositionClass";
         }
 
         #endregion
@@ -28703,7 +29016,7 @@ namespace FakeCQG
             get
             {
                 string name = "Account";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountClass(key);
                 return value;
             }
@@ -28715,7 +29028,7 @@ namespace FakeCQG
             get
             {
                 string name = "AveragePrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28726,7 +29039,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -28738,7 +29051,7 @@ namespace FakeCQG
             get
             {
                 string name = "InstrumentName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28749,7 +29062,7 @@ namespace FakeCQG
             get
             {
                 string name = "ManualFillsInvolved";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28760,7 +29073,7 @@ namespace FakeCQG
             get
             {
                 string name = "MatchedTrades";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradesClass(key);
                 return value;
             }
@@ -28772,7 +29085,7 @@ namespace FakeCQG
             get
             {
                 string name = "MVO";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28783,7 +29096,7 @@ namespace FakeCQG
             get
             {
                 string name = "OpenTrades";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradesClass(key);
                 return value;
             }
@@ -28795,7 +29108,7 @@ namespace FakeCQG
             get
             {
                 string name = "OTE";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28806,7 +29119,7 @@ namespace FakeCQG
             get
             {
                 string name = "ProfitLoss";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28817,7 +29130,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28828,7 +29141,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28839,7 +29152,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28850,7 +29163,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28861,7 +29174,7 @@ namespace FakeCQG
             get
             {
                 string name = "UPL";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28874,14 +29187,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28893,11 +29206,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPositionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPositionsClass";
         }
 
         #endregion
@@ -28918,7 +29234,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -28930,7 +29246,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { instrument_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGPositionClass(key);
                 return value;
             }
@@ -28943,7 +29259,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGPositionClass(key);
                 return value;
             }
@@ -28958,7 +29274,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGPositionClass(key);
             return result;
         }
@@ -28966,21 +29282,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -28992,11 +29308,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGPositionsStatementClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGPositionsStatementClass";
         }
 
         #endregion
@@ -29017,7 +29336,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29028,7 +29347,7 @@ namespace FakeCQG
             get
             {
                 string name = "Positions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGPositionsClass(key);
                 return value;
             }
@@ -29040,7 +29359,7 @@ namespace FakeCQG
             get
             {
                 string name = "StatementDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29053,14 +29372,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29072,11 +29391,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGQFormulaDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGQFormulaDefinitionClass";
         }
 
         #endregion
@@ -29097,7 +29419,7 @@ namespace FakeCQG
             get
             {
                 string name = "Expression";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29108,7 +29430,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29119,7 +29441,7 @@ namespace FakeCQG
             get
             {
                 string name = "Number";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29132,14 +29454,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29151,11 +29473,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGQFormulaDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGQFormulaDefinitionsClass";
         }
 
         #endregion
@@ -29176,7 +29501,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29188,7 +29513,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGQFormulaDefinitionClass(key);
                 return value;
             }
@@ -29201,7 +29526,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { qformula_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGQFormulaDefinitionClass(key);
                 return value;
             }
@@ -29216,7 +29541,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { qformula_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGQFormulaDefinitionClass(key);
             return result;
         }
@@ -29224,21 +29549,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29250,11 +29575,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGQuoteClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGQuoteClass";
         }
 
         #endregion
@@ -29275,7 +29603,7 @@ namespace FakeCQG
             get
             {
                 string name = "HasVolume";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29286,7 +29614,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -29298,7 +29626,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsValid";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29309,7 +29637,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29320,7 +29648,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29331,7 +29659,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29342,7 +29670,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29353,7 +29681,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eQuoteType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eQuoteType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29364,7 +29692,7 @@ namespace FakeCQG
             get
             {
                 string name = "Volume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29377,14 +29705,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29396,11 +29724,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGQuotesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGQuotesClass";
         }
 
         #endregion
@@ -29421,7 +29752,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29433,7 +29764,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { quote_type };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGQuoteClass(key);
                 return value;
             }
@@ -29447,21 +29778,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29473,11 +29804,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGRemoteOpenAPISessionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGRemoteOpenAPISessionClass";
         }
 
         #endregion
@@ -29498,7 +29832,7 @@ namespace FakeCQG
             get
             {
                 string name = "LogonName";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29509,7 +29843,7 @@ namespace FakeCQG
             get
             {
                 string name = "ROMNumber";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29520,7 +29854,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerAddress";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29533,14 +29867,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29552,11 +29886,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSessionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSessionClass";
         }
 
         #endregion
@@ -29577,7 +29914,7 @@ namespace FakeCQG
             get
             {
                 string name = "ActivationDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29588,7 +29925,7 @@ namespace FakeCQG
             get
             {
                 string name = "DayCloseOffset";
-                var value = Internal.Core.GetProperty<SByte>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<SByte>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29599,7 +29936,7 @@ namespace FakeCQG
             get
             {
                 string name = "DayStartOffset";
-                var value = Internal.Core.GetProperty<SByte>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<SByte>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29610,7 +29947,7 @@ namespace FakeCQG
             get
             {
                 string name = "DayStartsYesterday";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29621,7 +29958,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29632,7 +29969,7 @@ namespace FakeCQG
             get
             {
                 string name = "Instrument";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGInstrumentClass(key);
                 return value;
             }
@@ -29644,7 +29981,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29655,7 +29992,7 @@ namespace FakeCQG
             get
             {
                 string name = "Number";
-                var value = Internal.Core.GetProperty<Int16>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int16>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29666,7 +30003,7 @@ namespace FakeCQG
             get
             {
                 string name = "PrimaryFlag";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29677,7 +30014,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29688,7 +30025,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eSymbolSessionType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSymbolSessionType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29699,7 +30036,7 @@ namespace FakeCQG
             get
             {
                 string name = "ValidEndTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29710,7 +30047,7 @@ namespace FakeCQG
             get
             {
                 string name = "ValidStartTime";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29721,7 +30058,7 @@ namespace FakeCQG
             get
             {
                 string name = "WorkingWeekDays";
-                var value = Internal.Core.GetProperty<eSessionWeekDays>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionWeekDays>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29734,7 +30071,7 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29742,14 +30079,14 @@ namespace FakeCQG
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29761,11 +30098,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSessionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSessionsClass";
         }
 
         #endregion
@@ -29786,7 +30126,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29797,7 +30137,7 @@ namespace FakeCQG
             get
             {
                 string name = "DescriptionEnd";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29808,7 +30148,7 @@ namespace FakeCQG
             get
             {
                 string name = "DescriptionNumber";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29819,7 +30159,7 @@ namespace FakeCQG
             get
             {
                 string name = "DescriptionStart";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29830,7 +30170,7 @@ namespace FakeCQG
             get
             {
                 string name = "Holidays";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGHolidaysClass(key);
                 return value;
             }
@@ -29843,7 +30183,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGSessionClass(key);
                 return value;
             }
@@ -29855,7 +30195,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29866,7 +30206,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eSymbolSessionType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSymbolSessionType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29879,14 +30219,14 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29894,14 +30234,14 @@ namespace FakeCQG
         {
             string name = "IsTimeInSession";
             var args = new object[] { date_time, use_session_valid_times };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29913,11 +30253,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSessionsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSessionsCollectionClass";
         }
 
         #endregion
@@ -29938,7 +30281,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -29950,7 +30293,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGSessionsClass(key);
                 return value;
             }
@@ -29964,21 +30307,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -29990,11 +30333,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGStrategyDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGStrategyDefinitionClass";
         }
 
         #endregion
@@ -30015,7 +30361,7 @@ namespace FakeCQG
             get
             {
                 string name = "ClientId";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30026,7 +30372,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30037,7 +30383,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -30049,7 +30395,7 @@ namespace FakeCQG
             get
             {
                 string name = "RequestString";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30060,7 +30406,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eStrategyRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eStrategyRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30071,7 +30417,7 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30084,14 +30430,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30103,11 +30449,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGStrategyDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGStrategyDefinitionsClass";
         }
 
         #endregion
@@ -30128,7 +30477,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30140,7 +30489,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGStrategyDefinitionClass(key);
                 return value;
             }
@@ -30153,7 +30502,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGStrategyDefinitionClass(key);
                 return value;
             }
@@ -30168,7 +30517,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGStrategyDefinitionClass(key);
             return result;
         }
@@ -30176,21 +30525,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30202,11 +30551,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGStrategyLegFillClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGStrategyLegFillClass";
         }
 
         #endregion
@@ -30227,7 +30579,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExecutionId";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30238,7 +30590,7 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderClass(key);
                 return value;
             }
@@ -30250,7 +30602,7 @@ namespace FakeCQG
             get
             {
                 string name = "OriginalOrderID";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30261,7 +30613,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30274,14 +30626,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30293,11 +30645,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGStrategyLegFillsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGStrategyLegFillsClass";
         }
 
         #endregion
@@ -30318,7 +30673,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30330,7 +30685,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGStrategyLegFillClass(key);
                 return value;
             }
@@ -30345,7 +30700,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGStrategyLegFillClass(key);
             return result;
         }
@@ -30353,14 +30708,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30372,11 +30727,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGStringCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGStringCollectionClass";
         }
 
         #endregion
@@ -30397,7 +30755,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30409,7 +30767,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -30422,21 +30780,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30448,11 +30806,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSubMinuteBarClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSubMinuteBarClass";
         }
 
         #endregion
@@ -30473,7 +30834,7 @@ namespace FakeCQG
             get
             {
                 string name = "AskVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30484,7 +30845,7 @@ namespace FakeCQG
             get
             {
                 string name = "Avg";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30495,7 +30856,7 @@ namespace FakeCQG
             get
             {
                 string name = "BidVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30506,7 +30867,7 @@ namespace FakeCQG
             get
             {
                 string name = "Close";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30517,7 +30878,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30528,7 +30889,7 @@ namespace FakeCQG
             get
             {
                 string name = "HLC3";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30539,7 +30900,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30550,7 +30911,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30561,7 +30922,7 @@ namespace FakeCQG
             get
             {
                 string name = "Open";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30572,7 +30933,7 @@ namespace FakeCQG
             get
             {
                 string name = "Range";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30583,7 +30944,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30594,7 +30955,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30605,7 +30966,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30616,7 +30977,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30627,7 +30988,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30638,7 +30999,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueRange";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30649,7 +31010,7 @@ namespace FakeCQG
             get
             {
                 string name = "Volume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30662,14 +31023,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30681,11 +31042,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSubMinuteBarsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSubMinuteBarsClass";
         }
 
         #endregion
@@ -30706,7 +31070,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30717,7 +31081,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30728,7 +31092,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30740,7 +31104,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGSubMinuteBarClass(key);
                 return value;
             }
@@ -30752,7 +31116,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -30764,7 +31128,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGSubMinuteBarsRequestClass(key);
                 return value;
             }
@@ -30776,7 +31140,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30787,7 +31151,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30799,14 +31163,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -30818,21 +31182,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30840,13 +31204,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30858,11 +31222,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSubMinuteBarsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSubMinuteBarsCollectionClass";
         }
 
         #endregion
@@ -30883,7 +31250,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -30895,7 +31262,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGSubMinuteBarsClass(key);
                 return value;
             }
@@ -30908,7 +31275,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGSubMinuteBarsClass(key);
                 return value;
             }
@@ -30923,7 +31290,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGSubMinuteBarsClass(key);
             return result;
         }
@@ -30931,21 +31298,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -30957,11 +31324,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSubMinuteBarsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSubMinuteBarsRequestClass";
         }
 
         #endregion
@@ -30982,14 +31352,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -30998,14 +31368,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31014,14 +31384,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31030,14 +31400,14 @@ namespace FakeCQG
             get
             {
                 string name = "GapFilter";
-                var value = Internal.Core.GetProperty<eGapFilter>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eGapFilter>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "GapFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31046,14 +31416,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31062,14 +31432,14 @@ namespace FakeCQG
             get
             {
                 string name = "Interval";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Interval";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31078,14 +31448,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31094,14 +31464,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31110,14 +31480,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31126,14 +31496,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31142,14 +31512,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31158,14 +31528,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31174,14 +31544,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31190,14 +31560,14 @@ namespace FakeCQG
             get
             {
                 string name = "TickFilter";
-                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TickFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31206,14 +31576,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31224,14 +31594,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31243,11 +31613,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGSummariesStatementClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGSummariesStatementClass";
         }
 
         #endregion
@@ -31268,7 +31641,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurrencySummaries";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountSummariesClass(key);
                 return value;
             }
@@ -31280,7 +31653,7 @@ namespace FakeCQG
             get
             {
                 string name = "GWAccountID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31291,7 +31664,7 @@ namespace FakeCQG
             get
             {
                 string name = "StatementDate";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31302,7 +31675,7 @@ namespace FakeCQG
             get
             {
                 string name = "Summary";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGAccountSummaryClass(key);
                 return value;
             }
@@ -31316,14 +31689,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31335,11 +31708,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTFlowBarClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTFlowBarClass";
         }
 
         #endregion
@@ -31360,7 +31736,7 @@ namespace FakeCQG
             get
             {
                 string name = "AskVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31371,7 +31747,7 @@ namespace FakeCQG
             get
             {
                 string name = "BestAskPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31382,7 +31758,7 @@ namespace FakeCQG
             get
             {
                 string name = "BestBidPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31393,7 +31769,7 @@ namespace FakeCQG
             get
             {
                 string name = "BidVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31404,7 +31780,7 @@ namespace FakeCQG
             get
             {
                 string name = "Close";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31415,7 +31791,7 @@ namespace FakeCQG
             get
             {
                 string name = "DomAskCount";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31427,7 +31803,7 @@ namespace FakeCQG
             {
                 string name = "DomAskVolume";
                 var args = new object[] { index_ };
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -31438,7 +31814,7 @@ namespace FakeCQG
             get
             {
                 string name = "DomBidCount";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31449,7 +31825,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31460,7 +31836,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31471,7 +31847,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31482,7 +31858,7 @@ namespace FakeCQG
             get
             {
                 string name = "Open";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31493,7 +31869,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31504,7 +31880,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31515,7 +31891,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31526,7 +31902,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31537,7 +31913,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueMid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31551,7 +31927,7 @@ namespace FakeCQG
         {
             string name = "get_DomAskVolume";
             var args = new object[] { index_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -31559,21 +31935,21 @@ namespace FakeCQG
         {
             string name = "get_DomBidVolume";
             var args = new object[] { index_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31585,11 +31961,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTFlowBarsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTFlowBarsClass";
         }
 
         #endregion
@@ -31610,7 +31989,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31621,7 +32000,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31632,7 +32011,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31644,7 +32023,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTFlowBarClass(key);
                 return value;
             }
@@ -31656,7 +32035,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -31668,7 +32047,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTFlowBarsRequestClass(key);
                 return value;
             }
@@ -31680,7 +32059,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31691,7 +32070,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31703,14 +32082,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31722,21 +32101,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31744,13 +32123,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31762,11 +32141,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTFlowBarsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTFlowBarsCollectionClass";
         }
 
         #endregion
@@ -31787,7 +32169,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -31799,7 +32181,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTFlowBarsClass(key);
                 return value;
             }
@@ -31812,7 +32194,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTFlowBarsClass(key);
                 return value;
             }
@@ -31827,7 +32209,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTFlowBarsClass(key);
             return result;
         }
@@ -31835,21 +32217,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -31861,11 +32243,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTFlowBarsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTFlowBarsRequestClass";
         }
 
         #endregion
@@ -31886,14 +32271,14 @@ namespace FakeCQG
             get
             {
                 string name = "Aggregation";
-                var value = Internal.Core.GetProperty<eTfAggregation>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTfAggregation>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Aggregation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31902,14 +32287,14 @@ namespace FakeCQG
             get
             {
                 string name = "AggregationLevel";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "AggregationLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31918,14 +32303,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31934,14 +32319,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31950,14 +32335,14 @@ namespace FakeCQG
             get
             {
                 string name = "DomAskVolumeLevel";
-                var value = Internal.Core.GetProperty<eTFlowRequestDomVolumeLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTFlowRequestDomVolumeLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DomAskVolumeLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31966,14 +32351,14 @@ namespace FakeCQG
             get
             {
                 string name = "DomBidVolumeLevel";
-                var value = Internal.Core.GetProperty<eTFlowRequestDomVolumeLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTFlowRequestDomVolumeLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DomBidVolumeLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31982,14 +32367,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -31998,14 +32383,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32014,14 +32399,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32030,14 +32415,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32046,14 +32431,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32062,14 +32447,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32078,14 +32463,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32094,14 +32479,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32110,14 +32495,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32126,14 +32511,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32144,14 +32529,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32163,11 +32548,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTickClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTickClass";
         }
 
         #endregion
@@ -32188,7 +32576,7 @@ namespace FakeCQG
             get
             {
                 string name = "ContributorId";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32199,7 +32587,7 @@ namespace FakeCQG
             get
             {
                 string name = "ContributorIdCode";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32210,7 +32598,7 @@ namespace FakeCQG
             get
             {
                 string name = "CorrectionType";
-                var value = Internal.Core.GetProperty<eTickCorrectionType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTickCorrectionType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32221,7 +32609,7 @@ namespace FakeCQG
             get
             {
                 string name = "MarketState";
-                var value = Internal.Core.GetProperty<eMarketState>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eMarketState>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32232,7 +32620,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32243,7 +32631,7 @@ namespace FakeCQG
             get
             {
                 string name = "PriceType";
-                var value = Internal.Core.GetProperty<eTickPriceType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTickPriceType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32254,7 +32642,7 @@ namespace FakeCQG
             get
             {
                 string name = "SalesConditionCode";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32265,7 +32653,7 @@ namespace FakeCQG
             get
             {
                 string name = "SalesConditionLabel";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32276,7 +32664,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32287,7 +32675,7 @@ namespace FakeCQG
             get
             {
                 string name = "Volume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32300,14 +32688,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32319,11 +32707,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTicksClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTicksClass";
         }
 
         #endregion
@@ -32344,7 +32735,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32355,7 +32746,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32366,7 +32757,7 @@ namespace FakeCQG
             get
             {
                 string name = "HasUpdates";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32377,7 +32768,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32389,7 +32780,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTickClass(key);
                 return value;
             }
@@ -32401,7 +32792,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -32413,7 +32804,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTicksRequestClass(key);
                 return value;
             }
@@ -32425,7 +32816,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32436,7 +32827,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32448,14 +32839,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32467,21 +32858,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32489,7 +32880,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -32497,20 +32888,20 @@ namespace FakeCQG
         {
             string name = "IndicesForDates";
             var args = new object[] { date_1, date_2, start_index, end_index };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual void set_Tag(String tag_name, Object pVal)
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32522,11 +32913,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTicksCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTicksCollectionClass";
         }
 
         #endregion
@@ -32547,7 +32941,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32559,7 +32953,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTicksClass(key);
                 return value;
             }
@@ -32572,7 +32966,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTicksClass(key);
                 return value;
             }
@@ -32587,7 +32981,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTicksClass(key);
             return result;
         }
@@ -32595,21 +32989,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32621,11 +33015,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTicksRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTicksRequestClass";
         }
 
         #endregion
@@ -32646,14 +33043,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32662,14 +33059,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32678,14 +33075,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32694,14 +33091,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32710,14 +33107,14 @@ namespace FakeCQG
             get
             {
                 string name = "TickFilter";
-                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TickFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32726,14 +33123,14 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eTicksRequestType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTicksRequestType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Type";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -32744,14 +33141,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -32763,11 +33160,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTimedBarClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTimedBarClass";
         }
 
         #endregion
@@ -32788,7 +33188,7 @@ namespace FakeCQG
             get
             {
                 string name = "ActualVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32799,7 +33199,7 @@ namespace FakeCQG
             get
             {
                 string name = "AskVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32810,7 +33210,7 @@ namespace FakeCQG
             get
             {
                 string name = "Avg";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32821,7 +33221,7 @@ namespace FakeCQG
             get
             {
                 string name = "BidVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32832,7 +33232,7 @@ namespace FakeCQG
             get
             {
                 string name = "Close";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32843,7 +33243,7 @@ namespace FakeCQG
             get
             {
                 string name = "CommodityOpenInterest";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32854,7 +33254,7 @@ namespace FakeCQG
             get
             {
                 string name = "CommodityTickVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32865,7 +33265,7 @@ namespace FakeCQG
             get
             {
                 string name = "CommodityVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32876,7 +33276,7 @@ namespace FakeCQG
             get
             {
                 string name = "ContractOpenInterest";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32887,7 +33287,7 @@ namespace FakeCQG
             get
             {
                 string name = "ContractTickVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32898,7 +33298,7 @@ namespace FakeCQG
             get
             {
                 string name = "ContractVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32909,7 +33309,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32920,7 +33320,7 @@ namespace FakeCQG
             get
             {
                 string name = "HLC3";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32931,7 +33331,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32942,7 +33342,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32953,7 +33353,7 @@ namespace FakeCQG
             get
             {
                 string name = "Open";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32964,7 +33364,7 @@ namespace FakeCQG
             get
             {
                 string name = "OpenInterest";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32975,7 +33375,7 @@ namespace FakeCQG
             get
             {
                 string name = "Range";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32986,7 +33386,7 @@ namespace FakeCQG
             get
             {
                 string name = "TickVolume";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -32997,7 +33397,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33008,7 +33408,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33019,7 +33419,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33030,7 +33430,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueRange";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33043,14 +33443,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33062,11 +33462,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTimedBarsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTimedBarsClass";
         }
 
         #endregion
@@ -33087,7 +33490,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33098,7 +33501,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33109,7 +33512,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33121,7 +33524,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTimedBarClass(key);
                 return value;
             }
@@ -33133,7 +33536,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -33145,7 +33548,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTimedBarsRequestClass(key);
                 return value;
             }
@@ -33157,7 +33560,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33168,7 +33571,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33180,14 +33583,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33199,21 +33602,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33221,7 +33624,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -33229,13 +33632,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33247,11 +33650,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTimedBarsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTimedBarsCollectionClass";
         }
 
         #endregion
@@ -33272,7 +33678,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33284,7 +33690,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTimedBarsClass(key);
                 return value;
             }
@@ -33297,7 +33703,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTimedBarsClass(key);
                 return value;
             }
@@ -33312,7 +33718,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTimedBarsClass(key);
             return result;
         }
@@ -33320,21 +33726,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33346,11 +33752,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTimedBarsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTimedBarsRequestClass";
         }
 
         #endregion
@@ -33371,14 +33780,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33387,14 +33796,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33403,14 +33812,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33419,14 +33828,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33435,14 +33844,14 @@ namespace FakeCQG
             get
             {
                 string name = "IgnoreEventsOnHistoricalBars";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IgnoreEventsOnHistoricalBars";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33451,14 +33860,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33467,14 +33876,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33483,14 +33892,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33499,14 +33908,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33515,14 +33924,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33531,14 +33940,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33547,14 +33956,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33563,14 +33972,14 @@ namespace FakeCQG
             get
             {
                 string name = "TickFilter";
-                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTickFilter>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "TickFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33579,14 +33988,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -33597,13 +34006,13 @@ namespace FakeCQG
         public virtual void ExcludeAllOutputs()
         {
             string name = "ExcludeAllOutputs";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33611,21 +34020,21 @@ namespace FakeCQG
         {
             string name = "IncludeOutput";
             var args = new object[] { timed_bar_output, include_output };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual Boolean IsOutputIncluded(eTimedBarsRequestOutputs timed_bar_output)
         {
             string name = "IsOutputIncluded";
             var args = new object[] { timed_bar_output };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33637,11 +34046,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeClass";
         }
 
         #endregion
@@ -33662,7 +34074,7 @@ namespace FakeCQG
             get
             {
                 string name = "GroupID";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33673,7 +34085,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsMatched";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33684,7 +34096,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33695,7 +34107,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33706,7 +34118,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33717,7 +34129,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33728,7 +34140,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33741,14 +34153,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33760,11 +34172,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeEntriesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeEntriesClass";
         }
 
         #endregion
@@ -33785,7 +34200,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33797,7 +34212,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeEntryClass(key);
                 return value;
             }
@@ -33811,21 +34226,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33837,11 +34252,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeEntryClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeEntryClass";
         }
 
         #endregion
@@ -33862,7 +34280,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33873,7 +34291,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntryDefinitionClass(key);
                 return value;
             }
@@ -33885,7 +34303,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33896,7 +34314,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33907,7 +34325,7 @@ namespace FakeCQG
             get
             {
                 string name = "RelatedExits";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitsClass(key);
                 return value;
             }
@@ -33919,7 +34337,7 @@ namespace FakeCQG
             get
             {
                 string name = "Signal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33930,7 +34348,7 @@ namespace FakeCQG
             get
             {
                 string name = "StopLimitPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -33941,7 +34359,7 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradeClass(key);
                 return value;
             }
@@ -33955,14 +34373,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -33974,11 +34392,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeEntryDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeEntryDefinitionClass";
         }
 
         #endregion
@@ -33999,7 +34420,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllowEntryOnExit";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34010,7 +34431,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllowPyramids";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34021,7 +34442,7 @@ namespace FakeCQG
             get
             {
                 string name = "OrderType";
-                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34034,14 +34455,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34053,11 +34474,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeExitClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeExitClass";
         }
 
         #endregion
@@ -34078,7 +34502,7 @@ namespace FakeCQG
             get
             {
                 string name = "CanPlaceOrderSignal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34089,7 +34513,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitDefinitionClass(key);
                 return value;
             }
@@ -34101,7 +34525,7 @@ namespace FakeCQG
             get
             {
                 string name = "Price";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34112,7 +34536,7 @@ namespace FakeCQG
             get
             {
                 string name = "Quantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34123,7 +34547,7 @@ namespace FakeCQG
             get
             {
                 string name = "RelatedEntries";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntriesClass(key);
                 return value;
             }
@@ -34135,7 +34559,7 @@ namespace FakeCQG
             get
             {
                 string name = "Signal";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34146,7 +34570,7 @@ namespace FakeCQG
             get
             {
                 string name = "StopLimitPrice";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34157,7 +34581,7 @@ namespace FakeCQG
             get
             {
                 string name = "Trade";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradeClass(key);
                 return value;
             }
@@ -34171,14 +34595,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34190,11 +34614,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeExitDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeExitDefinitionClass";
         }
 
         #endregion
@@ -34215,7 +34642,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllowExitOnEntry";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34226,7 +34653,7 @@ namespace FakeCQG
             get
             {
                 string name = "AllowMoreThanOnce";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34237,7 +34664,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34248,7 +34675,7 @@ namespace FakeCQG
             get
             {
                 string name = "OrderType";
-                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34261,14 +34688,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34280,11 +34707,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeExitDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeExitDefinitionsClass";
         }
 
         #endregion
@@ -34305,7 +34735,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34317,7 +34747,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeExitDefinitionClass(key);
                 return value;
             }
@@ -34330,7 +34760,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { exit_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeExitDefinitionClass(key);
                 return value;
             }
@@ -34345,7 +34775,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { exit_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradeExitDefinitionClass(key);
             return result;
         }
@@ -34353,21 +34783,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34379,11 +34809,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradeExitsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradeExitsClass";
         }
 
         #endregion
@@ -34404,7 +34837,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34416,7 +34849,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeExitClass(key);
                 return value;
             }
@@ -34429,7 +34862,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { exit_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeExitClass(key);
                 return value;
             }
@@ -34444,7 +34877,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { exit_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradeExitClass(key);
             return result;
         }
@@ -34452,21 +34885,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34478,11 +34911,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradesClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradesClass";
         }
 
         #endregion
@@ -34503,7 +34939,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34515,7 +34951,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradeClass(key);
                 return value;
             }
@@ -34529,21 +34965,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34555,11 +34991,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemAddInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemAddInfoClass";
         }
 
         #endregion
@@ -34578,14 +35017,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34597,11 +35036,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemBaseBarParameterClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemBaseBarParameterClass";
         }
 
         #endregion
@@ -34622,7 +35064,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34633,7 +35075,7 @@ namespace FakeCQG
             get
             {
                 string name = "Type";
-                var value = Internal.Core.GetProperty<eTradingSystemBaseBarParameter>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradingSystemBaseBarParameter>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34644,14 +35086,14 @@ namespace FakeCQG
             get
             {
                 string name = "Value";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Value";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -34662,14 +35104,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34681,11 +35123,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemBaseBarParametersClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemBaseBarParametersClass";
         }
 
         #endregion
@@ -34706,7 +35151,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34718,7 +35163,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { parameter_type };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemBaseBarParameterClass(key);
                 return value;
             }
@@ -34732,21 +35177,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34758,11 +35203,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemClass";
         }
 
         #endregion
@@ -34783,7 +35231,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemDefinitionClass(key);
                 return value;
             }
@@ -34795,7 +35243,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34806,7 +35254,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -34818,7 +35266,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemRequestClass(key);
                 return value;
             }
@@ -34830,7 +35278,7 @@ namespace FakeCQG
             get
             {
                 string name = "Statistics";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemStatisticsCollectionClass(key);
                 return value;
             }
@@ -34842,7 +35290,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34854,14 +35302,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -34870,7 +35318,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradesRows";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradesRowsClass(key);
                 return value;
             }
@@ -34885,14 +35333,14 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34900,13 +35348,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -34918,11 +35366,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemDefinitionClass";
         }
 
         #endregion
@@ -34943,7 +35394,7 @@ namespace FakeCQG
             get
             {
                 string name = "Abbreviation";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34954,7 +35405,7 @@ namespace FakeCQG
             get
             {
                 string name = "Commission";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34965,7 +35416,7 @@ namespace FakeCQG
             get
             {
                 string name = "CommissionType";
-                var value = Internal.Core.GetProperty<eTradingSystemCommissionType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradingSystemCommissionType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34976,7 +35427,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -34987,7 +35438,7 @@ namespace FakeCQG
             get
             {
                 string name = "ParameterDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGParameterDefinitionsClass(key);
                 return value;
             }
@@ -34999,7 +35450,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeDefinitions";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradeDefinitionsClass(key);
                 return value;
             }
@@ -35013,14 +35464,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35032,11 +35483,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemDefinitionsClass";
         }
 
         #endregion
@@ -35057,7 +35511,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35069,7 +35523,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemDefinitionClass(key);
                 return value;
             }
@@ -35082,7 +35536,7 @@ namespace FakeCQG
             {
                 string name = "ItemByAbbreviation";
                 var args = new object[] { trading_system_abbreviation };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemDefinitionClass(key);
                 return value;
             }
@@ -35097,7 +35551,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByAbbreviation";
             var args = new object[] { trading_system_abbreviation };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemDefinitionClass(key);
             return result;
         }
@@ -35106,7 +35560,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { trading_system_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemDefinitionClass(key);
             return result;
         }
@@ -35114,21 +35568,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35140,11 +35594,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemInsertInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemInsertInfoClass";
         }
 
         #endregion
@@ -35165,7 +35622,7 @@ namespace FakeCQG
             get
             {
                 string name = "Index";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35178,14 +35635,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35197,11 +35654,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemRelationAddInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemRelationAddInfoClass";
         }
 
         #endregion
@@ -35222,7 +35682,7 @@ namespace FakeCQG
             get
             {
                 string name = "Entry";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntryClass(key);
                 return value;
             }
@@ -35234,7 +35694,7 @@ namespace FakeCQG
             get
             {
                 string name = "EntryRowIndex";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35245,7 +35705,7 @@ namespace FakeCQG
             get
             {
                 string name = "Exit";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitClass(key);
                 return value;
             }
@@ -35257,7 +35717,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExitRowIndex";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35270,14 +35730,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35289,11 +35749,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemRemoveInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemRemoveInfoClass";
         }
 
         #endregion
@@ -35314,7 +35777,7 @@ namespace FakeCQG
             get
             {
                 string name = "Index";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35327,14 +35790,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35346,11 +35809,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemRequestClass";
         }
 
         #endregion
@@ -35371,7 +35837,7 @@ namespace FakeCQG
             get
             {
                 string name = "BaseBarParameters";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemBaseBarParametersClass(key);
                 return value;
             }
@@ -35383,14 +35849,14 @@ namespace FakeCQG
             get
             {
                 string name = "BaseBarType";
-                var value = Internal.Core.GetProperty<eTradingSystemBaseBar>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradingSystemBaseBar>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BaseBarType";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35399,14 +35865,14 @@ namespace FakeCQG
             get
             {
                 string name = "BaseExpression";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "BaseExpression";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35415,14 +35881,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35431,14 +35897,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35447,7 +35913,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemDefinitionClass(key);
                 return value;
             }
@@ -35459,14 +35925,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35475,14 +35941,14 @@ namespace FakeCQG
             get
             {
                 string name = "HistoricalPeriod";
-                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eHistoricalPeriod>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "HistoricalPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35491,14 +35957,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35507,14 +35973,14 @@ namespace FakeCQG
             get
             {
                 string name = "IntradayPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IntradayPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35524,14 +35990,14 @@ namespace FakeCQG
             {
                 string name = "Parameter";
                 var args = new object[] { key_ };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Parameter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35540,14 +36006,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35556,14 +36022,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35572,14 +36038,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35588,14 +36054,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35604,14 +36070,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35620,14 +36086,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -35638,21 +36104,21 @@ namespace FakeCQG
         public virtual void ExcludeAllStatistics()
         {
             string name = "ExcludeAllStatistics";
-            Internal.Core.CallVoidMethod(dcObjKey, name);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name);
         }
 
         public virtual Object get_Parameter(Object key_)
         {
             string name = "get_Parameter";
             var args = new object[] { key_ };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35660,14 +36126,14 @@ namespace FakeCQG
         {
             string name = "IncludeStatistic";
             var args = new object[] { trading_system_statistic };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public virtual Boolean IsStatisticIncluded(eTradingSystemStatistic trading_system_statistic)
         {
             string name = "IsStatisticIncluded";
             var args = new object[] { trading_system_statistic };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -35675,13 +36141,13 @@ namespace FakeCQG
         {
             string name = "set_Parameter";
             var args = new object[] { key_, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35693,11 +36159,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemsClass";
         }
 
         #endregion
@@ -35718,7 +36187,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35730,7 +36199,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemClass(key);
                 return value;
             }
@@ -35743,7 +36212,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemClass(key);
                 return value;
             }
@@ -35758,7 +36227,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemClass(key);
             return result;
         }
@@ -35766,21 +36235,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35792,11 +36261,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemStatisticsChangeInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemStatisticsChangeInfoClass";
         }
 
         #endregion
@@ -35817,7 +36289,7 @@ namespace FakeCQG
             get
             {
                 string name = "Statistics";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemStatisticsClass(key);
                 return value;
             }
@@ -35831,7 +36303,7 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35839,14 +36311,14 @@ namespace FakeCQG
         {
             string name = "IsStatisticChanged";
             var args = new object[] { trading_system_statistic };
-            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Boolean>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -35858,11 +36330,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemStatisticsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemStatisticsClass";
         }
 
         #endregion
@@ -35883,7 +36358,7 @@ namespace FakeCQG
             get
             {
                 string name = "AverageDuration";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35894,7 +36369,7 @@ namespace FakeCQG
             get
             {
                 string name = "AverageLoss";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35905,7 +36380,7 @@ namespace FakeCQG
             get
             {
                 string name = "AverageProfit";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35916,7 +36391,7 @@ namespace FakeCQG
             get
             {
                 string name = "AverageWin";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35927,7 +36402,7 @@ namespace FakeCQG
             get
             {
                 string name = "ClosedNetProfit";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35938,7 +36413,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurConsecLosses";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35949,7 +36424,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurConsecWins";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35960,7 +36435,7 @@ namespace FakeCQG
             get
             {
                 string name = "CurDrawDown";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35971,7 +36446,7 @@ namespace FakeCQG
             get
             {
                 string name = "LinearRegression";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35982,7 +36457,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaxClosedDraw";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -35993,7 +36468,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaxConsecLosses";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36004,7 +36479,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaxConsecWins";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36015,7 +36490,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaxDrawAmount";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36026,7 +36501,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaxDrawDuration";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36037,7 +36512,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaximumLoss";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36048,7 +36523,7 @@ namespace FakeCQG
             get
             {
                 string name = "MaximumWin";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36059,7 +36534,7 @@ namespace FakeCQG
             get
             {
                 string name = "OpenPosition";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36070,7 +36545,7 @@ namespace FakeCQG
             get
             {
                 string name = "PercentLong";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36081,7 +36556,7 @@ namespace FakeCQG
             get
             {
                 string name = "PercentWinners";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36092,7 +36567,7 @@ namespace FakeCQG
             get
             {
                 string name = "ProfitLossRatio";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36103,7 +36578,7 @@ namespace FakeCQG
             get
             {
                 string name = "ProfitToMaxDraw";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36114,7 +36589,7 @@ namespace FakeCQG
             get
             {
                 string name = "RemoveToNeutral";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36125,7 +36600,7 @@ namespace FakeCQG
             get
             {
                 string name = "ReturnRetracement";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36136,7 +36611,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimePercentage";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36147,7 +36622,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36158,7 +36633,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36169,7 +36644,7 @@ namespace FakeCQG
             get
             {
                 string name = "TotalNetProfit";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36180,7 +36655,7 @@ namespace FakeCQG
             get
             {
                 string name = "TotalTradeCount";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36192,7 +36667,7 @@ namespace FakeCQG
             {
                 string name = "Value";
                 var args = new object[] { ts_statistic };
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
@@ -36206,21 +36681,21 @@ namespace FakeCQG
         {
             string name = "get_Value";
             var args = new object[] { ts_statistic };
-            var result = Internal.Core.CallMethod<Double>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Double>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36232,11 +36707,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemStatisticsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemStatisticsCollectionClass";
         }
 
         #endregion
@@ -36257,7 +36735,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36269,7 +36747,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemStatisticsClass(key);
                 return value;
             }
@@ -36283,14 +36761,14 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36298,7 +36776,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -36306,13 +36784,13 @@ namespace FakeCQG
         {
             string name = "IndicesForDates";
             var args = new object[] { date_1, date_2, start_index, end_index };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36324,11 +36802,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemTradeClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemTradeClass";
         }
 
         #endregion
@@ -36349,7 +36830,7 @@ namespace FakeCQG
             get
             {
                 string name = "Definition";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradeDefinitionClass(key);
                 return value;
             }
@@ -36361,7 +36842,7 @@ namespace FakeCQG
             get
             {
                 string name = "IsActive";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36372,7 +36853,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36383,7 +36864,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36394,7 +36875,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeEntry";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntryClass(key);
                 return value;
             }
@@ -36406,7 +36887,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradeExits";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitsClass(key);
                 return value;
             }
@@ -36418,7 +36899,7 @@ namespace FakeCQG
             get
             {
                 string name = "TradesRow";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemTradesRowClass(key);
                 return value;
             }
@@ -36432,14 +36913,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36451,11 +36932,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemTradeDefinitionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemTradeDefinitionClass";
         }
 
         #endregion
@@ -36476,7 +36960,7 @@ namespace FakeCQG
             get
             {
                 string name = "Entry";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeEntryDefinitionClass(key);
                 return value;
             }
@@ -36488,7 +36972,7 @@ namespace FakeCQG
             get
             {
                 string name = "Exits";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradeExitDefinitionsClass(key);
                 return value;
             }
@@ -36500,7 +36984,7 @@ namespace FakeCQG
             get
             {
                 string name = "Name";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36511,7 +36995,7 @@ namespace FakeCQG
             get
             {
                 string name = "Side";
-                var value = Internal.Core.GetProperty<eTradeSide>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTradeSide>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36524,14 +37008,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36543,11 +37027,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemTradeDefinitionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemTradeDefinitionsClass";
         }
 
         #endregion
@@ -36568,7 +37055,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36580,7 +37067,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemTradeDefinitionClass(key);
                 return value;
             }
@@ -36593,7 +37080,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { trade_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemTradeDefinitionClass(key);
                 return value;
             }
@@ -36608,7 +37095,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { trade_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemTradeDefinitionClass(key);
             return result;
         }
@@ -36616,21 +37103,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36642,11 +37129,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemTradesRowClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemTradesRowClass";
         }
 
         #endregion
@@ -36667,7 +37157,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36679,7 +37169,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemTradeClass(key);
                 return value;
             }
@@ -36692,7 +37182,7 @@ namespace FakeCQG
             {
                 string name = "ItemByName";
                 var args = new object[] { trade_name };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemTradeClass(key);
                 return value;
             }
@@ -36704,7 +37194,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36715,7 +37205,7 @@ namespace FakeCQG
             get
             {
                 string name = "TimestampOffset";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36729,7 +37219,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByName";
             var args = new object[] { trade_name };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTradingSystemTradeClass(key);
             return result;
         }
@@ -36737,21 +37227,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36763,11 +37253,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemTradesRowsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemTradesRowsClass";
         }
 
         #endregion
@@ -36788,7 +37281,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36800,7 +37293,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTradingSystemTradesRowClass(key);
                 return value;
             }
@@ -36814,21 +37307,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36840,11 +37333,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTradingSystemUpdateInfoClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTradingSystemUpdateInfoClass";
         }
 
         #endregion
@@ -36865,7 +37361,7 @@ namespace FakeCQG
             get
             {
                 string name = "Index";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36876,7 +37372,7 @@ namespace FakeCQG
             get
             {
                 string name = "StatisticsChangeInfo";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGTradingSystemStatisticsChangeInfoClass(key);
                 return value;
             }
@@ -36891,7 +37387,7 @@ namespace FakeCQG
         {
             string name = "get_ChangedEntries";
             var args = new object[] { change_filter };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGChangedTradeEntriesClass(key);
             return result;
         }
@@ -36900,7 +37396,7 @@ namespace FakeCQG
         {
             string name = "get_ChangedExits";
             var args = new object[] { change_filter };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGChangedTradeExitsClass(key);
             return result;
         }
@@ -36908,14 +37404,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -36927,11 +37423,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTransactionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTransactionClass";
         }
 
         #endregion
@@ -36952,7 +37451,7 @@ namespace FakeCQG
             get
             {
                 string name = "ExecutionId";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36963,7 +37462,7 @@ namespace FakeCQG
             get
             {
                 string name = "Fill";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGFillClass(key);
                 return value;
             }
@@ -36975,7 +37474,7 @@ namespace FakeCQG
             get
             {
                 string name = "HangOrderIds";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStringCollectionClass(key);
                 return value;
             }
@@ -36987,7 +37486,7 @@ namespace FakeCQG
             get
             {
                 string name = "HangQuantity";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -36998,7 +37497,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37009,7 +37508,7 @@ namespace FakeCQG
             get
             {
                 string name = "Order";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGOrderClass(key);
                 return value;
             }
@@ -37021,7 +37520,7 @@ namespace FakeCQG
             get
             {
                 string name = "Properties";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGModifiedPropertiesClass(key);
                 return value;
             }
@@ -37033,7 +37532,7 @@ namespace FakeCQG
             get
             {
                 string name = "RejectReason";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37044,7 +37543,7 @@ namespace FakeCQG
             get
             {
                 string name = "ServerTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37055,7 +37554,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eOrderEvent>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eOrderEvent>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37066,7 +37565,7 @@ namespace FakeCQG
             get
             {
                 string name = "StrategyLegFills";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGStrategyLegFillsClass(key);
                 return value;
             }
@@ -37078,7 +37577,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37091,14 +37590,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37110,11 +37609,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGTransactionsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGTransactionsClass";
         }
 
         #endregion
@@ -37135,7 +37637,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37147,7 +37649,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTransactionClass(key);
                 return value;
             }
@@ -37160,7 +37662,7 @@ namespace FakeCQG
             {
                 string name = "ItemByIndex";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGTransactionClass(key);
                 return value;
             }
@@ -37175,7 +37677,7 @@ namespace FakeCQG
         {
             string name = "get_ItemByIndex";
             var args = new object[] { index_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGTransactionClass(key);
             return result;
         }
@@ -37183,21 +37685,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37209,11 +37711,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGYieldClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGYieldClass";
         }
 
         #endregion
@@ -37234,7 +37739,7 @@ namespace FakeCQG
             get
             {
                 string name = "Avg";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37245,7 +37750,7 @@ namespace FakeCQG
             get
             {
                 string name = "Close";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37256,7 +37761,7 @@ namespace FakeCQG
             get
             {
                 string name = "High";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37267,7 +37772,7 @@ namespace FakeCQG
             get
             {
                 string name = "HLC3";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37278,7 +37783,7 @@ namespace FakeCQG
             get
             {
                 string name = "Low";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37289,7 +37794,7 @@ namespace FakeCQG
             get
             {
                 string name = "Mid";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37300,7 +37805,7 @@ namespace FakeCQG
             get
             {
                 string name = "Open";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37311,7 +37816,7 @@ namespace FakeCQG
             get
             {
                 string name = "Range";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37322,7 +37827,7 @@ namespace FakeCQG
             get
             {
                 string name = "Timestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37333,7 +37838,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueHigh";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37344,7 +37849,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueLow";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37355,7 +37860,7 @@ namespace FakeCQG
             get
             {
                 string name = "TrueRange";
-                var value = Internal.Core.GetProperty<Double>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Double>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37368,14 +37873,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37387,11 +37892,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGYieldsClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGYieldsClass";
         }
 
         #endregion
@@ -37412,7 +37920,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37423,7 +37931,7 @@ namespace FakeCQG
             get
             {
                 string name = "EndTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37434,7 +37942,7 @@ namespace FakeCQG
             get
             {
                 string name = "Id";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37446,7 +37954,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGYieldClass(key);
                 return value;
             }
@@ -37458,7 +37966,7 @@ namespace FakeCQG
             get
             {
                 string name = "LastError";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGErrorClass(key);
                 return value;
             }
@@ -37470,7 +37978,7 @@ namespace FakeCQG
             get
             {
                 string name = "Request";
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name);
                 var value = new CQGYieldsRequestClass(key);
                 return value;
             }
@@ -37482,7 +37990,7 @@ namespace FakeCQG
             get
             {
                 string name = "StartTimestamp";
-                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<DateTime>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37493,7 +38001,7 @@ namespace FakeCQG
             get
             {
                 string name = "Status";
-                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eRequestStatus>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37505,14 +38013,14 @@ namespace FakeCQG
             {
                 string name = "Tag";
                 var args = new object[] { tag_name };
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name, args);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name, args);
                 return value;
             }
 
             set
             {
                 string name = "Tag";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37524,21 +38032,21 @@ namespace FakeCQG
         {
             string name = "get_Tag";
             var args = new object[] { tag_name };
-            var result = Internal.Core.CallMethod<Object>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Object>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37546,7 +38054,7 @@ namespace FakeCQG
         {
             string name = "IndexForDate";
             var args = new object[] { date_ };
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name, args);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name, args);
             return result;
         }
 
@@ -37554,13 +38062,13 @@ namespace FakeCQG
         {
             string name = "set_Tag";
             var args = new object[] { tag_name, pVal };
-            Internal.Core.CallVoidMethod(dcObjKey, name, args);
+            Internal.Core.CallVoidMethod(dcObjKey, dcObjType, name, args);
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37572,11 +38080,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGYieldsCollectionClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGYieldsCollectionClass";
         }
 
         #endregion
@@ -37597,7 +38108,7 @@ namespace FakeCQG
             get
             {
                 string name = "Count";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
@@ -37609,7 +38120,7 @@ namespace FakeCQG
             {
                 string name = "Item";
                 var args = new object[] { index_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGYieldsClass(key);
                 return value;
             }
@@ -37622,7 +38133,7 @@ namespace FakeCQG
             {
                 string name = "ItemById";
                 var args = new object[] { id_ };
-                string key = Internal.Core.GetProperty<string>(dcObjKey, name, args);
+                string key = Internal.Core.GetProperty<string>(dcObjKey, dcObjType, name, args);
                 var value = new CQGYieldsClass(key);
                 return value;
             }
@@ -37637,7 +38148,7 @@ namespace FakeCQG
         {
             string name = "get_ItemById";
             var args = new object[] { id_ };
-            string key = Internal.Core.CallMethod<string>(dcObjKey, name, args);
+            string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name, args);
             var result = new CQGYieldsClass(key);
             return result;
         }
@@ -37645,21 +38156,21 @@ namespace FakeCQG
         public virtual IEnumerator GetEnumerator()
         {
             string name = "GetEnumerator";
-            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<IEnumerator>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 
@@ -37671,11 +38182,14 @@ namespace FakeCQG
     {
         private string dcObjKey;
 
+        private string dcObjType;
+
         #region Constructors
 
         internal CQGYieldsRequestClass(string dcObjKey)
         {
             this.dcObjKey = dcObjKey;
+            this.dcObjType = "CQGYieldsRequestClass";
         }
 
         #endregion
@@ -37696,14 +38210,14 @@ namespace FakeCQG
             get
             {
                 string name = "Compound";
-                var value = Internal.Core.GetProperty<eYieldCompound>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eYieldCompound>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Compound";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37712,14 +38226,14 @@ namespace FakeCQG
             get
             {
                 string name = "Continuation";
-                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesContinuationType>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Continuation";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37728,14 +38242,14 @@ namespace FakeCQG
             get
             {
                 string name = "DaysBeforeExpiration";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "DaysBeforeExpiration";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37744,14 +38258,14 @@ namespace FakeCQG
             get
             {
                 string name = "EqualizeCloses";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "EqualizeCloses";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37760,14 +38274,14 @@ namespace FakeCQG
             get
             {
                 string name = "IncludeEnd";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "IncludeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37776,14 +38290,14 @@ namespace FakeCQG
             get
             {
                 string name = "Model";
-                var value = Internal.Core.GetProperty<eYieldModel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eYieldModel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Model";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37792,14 +38306,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeEnd";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeEnd";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37808,14 +38322,14 @@ namespace FakeCQG
             get
             {
                 string name = "RangeStart";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RangeStart";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37824,14 +38338,14 @@ namespace FakeCQG
             get
             {
                 string name = "RecalcPeriod";
-                var value = Internal.Core.GetProperty<Int32>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Int32>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "RecalcPeriod";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37840,14 +38354,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionFlags";
-                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eSessionFlag>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionFlags";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37856,14 +38370,14 @@ namespace FakeCQG
             get
             {
                 string name = "SessionsFilter";
-                var value = Internal.Core.GetProperty<Object>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Object>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SessionsFilter";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37872,14 +38386,14 @@ namespace FakeCQG
             get
             {
                 string name = "SubscriptionLevel";
-                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<eTimeSeriesSubscriptionLevel>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "SubscriptionLevel";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37888,14 +38402,14 @@ namespace FakeCQG
             get
             {
                 string name = "Symbol";
-                var value = Internal.Core.GetProperty<String>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<String>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "Symbol";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37904,14 +38418,14 @@ namespace FakeCQG
             get
             {
                 string name = "UpdatesEnabled";
-                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, name);
+                var value = Internal.Core.GetProperty<Boolean>(dcObjKey, dcObjType, name);
                 return value;
             }
 
             set
             {
                 string name = "UpdatesEnabled";
-                Internal.Core.SetProperty(dcObjKey, name, value);
+                Internal.Core.SetProperty(dcObjKey, dcObjType, name, value);
             }
         }
 
@@ -37922,14 +38436,14 @@ namespace FakeCQG
         public override Int32 GetHashCode()
         {
             string name = "GetHashCode";
-            var result = Internal.Core.CallMethod<Int32>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<Int32>(dcObjKey, dcObjType, name);
             return result;
         }
 
         public override String ToString()
         {
             string name = "ToString";
-            var result = Internal.Core.CallMethod<String>(dcObjKey, name);
+            var result = Internal.Core.CallMethod<String>(dcObjKey, dcObjType, name);
             return result;
         }
 

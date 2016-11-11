@@ -63,6 +63,7 @@ namespace FakeCQG
             // Main method that contains all parts of executing the query on application side
             public static object ExecuteTheQuery(
                 QueryType queryType,
+                string dcObjType = null,
                 string dcObjKey = null,
                 string memName = null,
                 object[] args = null)
@@ -86,7 +87,7 @@ namespace FakeCQG
 
                 string queryKey = CreateUniqueKey();
 
-                QueryInfo queryInfo = CreateQuery(queryType, queryKey, dcObjKey, memName, argKeys, argVals);
+                QueryInfo queryInfo = CreateQuery(queryType, queryKey, dcObjType, dcObjKey, memName, argKeys, argVals);
 
                 QueryHelper.PushQuery(queryInfo);
 
@@ -153,6 +154,7 @@ namespace FakeCQG
             public static QueryInfo CreateQuery(
                 QueryType qType,
                 string qKey,
+                string objType,
                 string objKey,
                 string memName,
                 Dictionary<int, string> argKeys = null,
@@ -182,11 +184,11 @@ namespace FakeCQG
                     case QueryType.GetProperty:
                     case QueryType.SetProperty:
                     case QueryType.CallMethod:
-                        model = new QueryInfo(qType, qKey, objKey, memName, argKeys, argVals);
+                        model = new QueryInfo(qType, qKey, objType, objKey, memName, argKeys, argVals);
                         break;
                     case QueryType.SubscribeToEvent:
                     case QueryType.UnsubscribeFromEvent:
-                        model = new QueryInfo(qType, qKey, objKey, memName);
+                        model = new QueryInfo(qType, qKey, objectKey: objKey, memberName: memName);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -346,12 +348,12 @@ namespace FakeCQG
             {
                 if (isUnsubscriptionRequired)
                 {
-                    ExecuteTheQuery(QueryType.UnsubscribeFromEvent, objKey, name);
+                    ExecuteTheQuery(QueryType.UnsubscribeFromEvent, dcObjKey: objKey, memName: name);
                     ClientDictionaries.EventCheckingDictionary[objKey][name] = false;
                 }
                 else if (isSubscriptionRequired)
                 {
-                    ExecuteTheQuery(QueryType.SubscribeToEvent, objKey, name);
+                    ExecuteTheQuery(QueryType.SubscribeToEvent, dcObjKey: objKey, memName: name);
                     ClientDictionaries.EventCheckingDictionary[objKey][name] = true;
                 }
             }
