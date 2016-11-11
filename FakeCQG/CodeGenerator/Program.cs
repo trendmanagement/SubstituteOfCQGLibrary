@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Text;
 
 namespace CodeGenerator
 {
@@ -9,6 +10,8 @@ namespace CodeGenerator
         static StreamWriter File;
         static StreamWriter DCEvHndlrFile;
         static StreamWriter DCQProcFile;
+
+        public static StringBuilder hMethodsDict = new StringBuilder();
 
         // Set this to False to get type names in short form, e.g. "int" instead of "Int32"
         static bool QuickTestMode = true;
@@ -53,46 +56,63 @@ namespace CodeGenerator
                 DCQProcFile.WriteLine("using CQG;");
                 DCQProcFile.WriteLine("using FakeCQG.Internal;");
                 DCQProcFile.WriteLine("using FakeCQG.Internal.Models;");
-                DCQProcFile.WriteLine("using MongoDB.Driver;");
+                DCQProcFile.WriteLine("using MongoDB.Driver;"); 
+                DCQProcFile.WriteLine("using System.Collections.Generic;");
+                DCQProcFile.WriteLine("using System.Reflection;");
                 DCQProcFile.WriteLine("");
                 DCQProcFile.WriteLine("namespace DataCollectionForRealtime");
                 DCQProcFile.WriteLine("{");
                 DCQProcFile.WriteLine(Indent1 + "partial class QueryHandler");
                 DCQProcFile.WriteLine(Indent1 + "{");
+                DCQProcFile.WriteLine(Indent2 + "private delegate void PropDel(QueryInfo query, object[] args);" + Environment.NewLine);
+                DCQProcFile.WriteLine(Indent2 + "private Dictionary<string, PropDel> hMethods; " + 
+                    Environment.NewLine  + Environment.NewLine);
+
+                CreateTypes(assm.ExportedTypes);
+
+                DCQProcFile.WriteLine(Indent2 + "public void InitHMethodDict()");
+                DCQProcFile.WriteLine(Indent2 + "{");
+                DCQProcFile.WriteLine(Indent3 + "hMethods = new Dictionary<string, PropDel> " + 
+                    Environment.NewLine + Indent3 + "{" + Environment.NewLine);
+                hMethodsDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
+                DCQProcFile.Write(hMethodsDict.ToString());
+                DCQProcFile.WriteLine(Indent2 + "}");
+                      
                 DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
                 DCQProcFile.WriteLine(Indent2 + "{");
                 DCQProcFile.WriteLine(Indent3 + "object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
-                DCQProcFile.WriteLine(Indent3 + "string qObjType = qObj.GetType().ToString();");
+                DCQProcFile.WriteLine(Indent3 + "string qObjType = qObj.GetType().Name;");
                 DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
                 DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
-                DCQProcFile.WriteLine(Indent3 + "{");
+                DCQProcFile.WriteLine(Indent3 + "{"); 
 
-                getProp.Append(Indent5 + "switch (qObjType)" +
-                    Environment.NewLine + Indent5 + "{" + Environment.NewLine);     
-
-                setProp.Append(Indent5 + "switch (qObjType)" +
-                    Environment.NewLine + Indent5 + "{" + Environment.NewLine);     
-
-                CreateTypes(assm.ExportedTypes);
+                
 
                 File.WriteLine("}");
 
                 DCEvHndlrFile.WriteLine(Indent1 + "}");
                 DCEvHndlrFile.WriteLine("}");
 
-                getProp.Append(Indent5 + "}" + Environment.NewLine);
-                setProp.Append(Indent5 + "}" + Environment.NewLine);
-
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.GetProperty:");
-                DCQProcFile.Write(getProp.ToString());
+                DCQProcFile.WriteLine(Indent5 + "string getHndlrName = string.Concat(\"Get\", qObjType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(getHndlrName)) " + Environment.NewLine + Indent6 +
+                    "throw new System.ArgumentException(string.Concat(\"Operation \", getHndlrName, \" is invalid\"), \"getter name\");" + 
+                    Environment.NewLine + Indent5 + "hMethods[getHndlrName](query, args); ");
                 DCQProcFile.WriteLine(Indent5 + "break;");
-
+                
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.SetProperty:");
-                DCQProcFile.Write(setProp);
+                DCQProcFile.WriteLine(Indent5 + "string setHndlrName = string.Concat(\"Set\", qObjType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(setHndlrName)) " + Environment.NewLine + Indent6 +
+                    "throw new System.ArgumentException(string.Concat(\"Operation \", setHndlrName, \" is invalid\"), \"setter name\");" + 
+                    Environment.NewLine + Indent5 + "hMethods[setHndlrName](query, args); ");
                 DCQProcFile.WriteLine(Indent5 + "break;");
 
                 DCQProcFile.WriteLine(Indent3 + "}");
-                DCQProcFile.WriteLine(Indent2 + "}");
+                DCQProcFile.WriteLine(Indent2 + "}" + Environment.NewLine);
+
+                DCQProcFile.Write(getProp.ToString());
+                DCQProcFile.Write(setProp.ToString());
+
                 DCQProcFile.WriteLine(Indent1 + "}");
                 DCQProcFile.WriteLine("}");
             }
