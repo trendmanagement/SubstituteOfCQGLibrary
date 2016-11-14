@@ -1,18 +1,24 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataCollectionForRealtime;
 using System.Collections.Generic;
-using FakeCQG.Models;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Timers;
+using DataCollectionForRealtime;
+using FakeCQG;
+using FakeCQG.Internal;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestRealCQG
 {
     [TestClass]
+    [DeploymentItem("Interop.CQG.dll")]
     public class UnitTestQueryHandler
     {
         QueryHandler QueryHandler;
         CQGDataManagement CQGDataManagment;
-        RealtimeDataManagement RealtimeDataManagement;
+        DCMainForm DCMainForm;
 
         #region ctors
 
@@ -20,8 +26,8 @@ namespace UnitTestRealCQG
         public void Ctor_InputCQGDataManagment()
         {
             // arrange
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
 
             // act
             QueryHandler = new QueryHandler(CQGDataManagment);
@@ -35,7 +41,7 @@ namespace UnitTestRealCQG
         public void Ctor_InputCQGDataManagmentWithQueriesList()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.Property;
+            var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3" };
             var list = new List<QueryInfo>()
             {
@@ -43,8 +49,8 @@ namespace UnitTestRealCQG
                 new QueryInfo(queryType, keys[1], string.Empty, string.Empty, null, null),
                 new QueryInfo(queryType, keys[2], string.Empty, string.Empty, null, null)
             };
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
 
             // act
             QueryHandler = new QueryHandler(CQGDataManagment, list);
@@ -55,7 +61,7 @@ namespace UnitTestRealCQG
             Assert.AreEqual(list.Count, QueryHandler.QueryList.Count);
             for (int i = 0; i < list.Count; i++)
             {
-                Assert.AreEqual(list[i].Key, QueryHandler.QueryList[i].Key);
+                Assert.AreEqual(list[i].QueryKey, QueryHandler.QueryList[i].QueryKey);
             }
         }
 
@@ -67,7 +73,7 @@ namespace UnitTestRealCQG
         public void Method_SetQueryList()
         {
             // arrange
-            var queryType = QueryInfo.QueryType.Property;
+            var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3" };
             var list = new List<QueryInfo>()
             {
@@ -85,7 +91,7 @@ namespace UnitTestRealCQG
             Assert.AreEqual(list.Count, QueryHandler.QueryList.Count);
             for (int i = 0; i < list.Count; i++)
             {
-                Assert.AreEqual(list[i].Key, QueryHandler.QueryList[i].Key);
+                Assert.AreEqual(list[i].QueryKey, QueryHandler.QueryList[i].QueryKey);
             }
         }
 
@@ -117,7 +123,6 @@ namespace UnitTestRealCQG
                 Assert.AreEqual(names[i, 1], types[i].Name);
             }
         }
-
 
         delegate void myDelegate1();
         delegate void myDelegate2();
@@ -158,25 +163,22 @@ namespace UnitTestRealCQG
             string name = "name";
             bool isQueryTrue = default(bool);
             bool isQueryFalse = default(bool);
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Core.LogChange += CQG_LogChange;
+            var queryHelper = new QueryHelper();
             StartUp();
-            Task.Run(async () =>
-            {
-                await FakeCQG.CQG.ClearQueriesListAsync();
-            }).GetAwaiter().GetResult();
 
             // act 1
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInQueryAsync(new QueryInfo(QueryInfo.QueryType.Property, id, string.Empty, name, null, null));
-                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+                await queryHelper.PushQueryAsync(new QueryInfo(QueryType.SetProperty, id, string.Empty, name, null, null));
+                isQueryTrue = await QueryHandler.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
             QueryHandler.DeleteProcessedQuery(id);
 
             Task.Run(async () =>
             {
-                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+                isQueryFalse = await QueryHandler.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
             // assert
@@ -185,111 +187,481 @@ namespace UnitTestRealCQG
         }
 
         [TestMethod]
-        public void Method_LoadInAnswer()
+        public void Method_PushAnswer()
         {
             // arrange
             string id = "key";
             string name = "name";
             bool isQueryTrue = default(bool);
             bool isQueryFalse = default(bool);
-            var query = new QueryInfo(QueryInfo.QueryType.Property, id, string.Empty, name, null, null);
+            var query = new QueryInfo(QueryType.SetProperty, id, string.Empty, name, null, null);
             var answer = new AnswerInfo(id, string.Empty, name, null, null);
-            FakeCQG.CQG.LogChange += CQG_LogChange;
+            Core.LogChange += CQG_LogChange;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
             StartUp();
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearQueriesListAsync();
-            }).GetAwaiter().GetResult();
-            Task.Run(async () =>
-            {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                await answerHelper.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInQueryAsync(query);
-                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+                await queryHelper.PushQueryAsync(query);
+                isQueryTrue = await QueryHandler.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
-            QueryHandler.LoadInAnswer(answer);
+            QueryHandler.PushAnswerAndDeleteQuery(answer);
 
             Task.Run(async () =>
             {
-                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+                isQueryFalse = await QueryHandler.CheckQueryAsync(id);
             }).GetAwaiter().GetResult();
 
             // assert
             Assert.IsTrue(isQueryTrue);
             Assert.IsFalse(isQueryFalse);
+        }
+
+        List<string> loggedInfo;
+        [TestMethod]
+        public void MethodAsync_ReadInfoQueries()
+        {
+            // arrange
+            var qType = QueryType.SetProperty;
+            string[] idTrue = { "key1True", "key2True", "key3True" };
+            string idFalse = "keyFalse";
+            string name = "name";
+            Core.LogChange += CQG_LogChange_ReadAll;
+            var queryHelper = new QueryHelper();  
+            StartUp();
+            QueryHandler.NewQueriesReady += CQG_GetQueries_Mock;
+            loggedInfo = new List<string>();
+
+           Task.Run(async () =>
+            {
+                // act
+                for (int i = 0; i < idTrue.Length; i++)
+                {
+                    await queryHelper.PushQueryAsync(new QueryInfo(qType, idTrue[i], string.Empty, name, null, null));
+                }
+                QueryHandler.ReadQueries();
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.AreEqual(loggedInfo.Count, 3);
+            for (int i = 0; i < loggedInfo.Count; i++)
+            {
+                Assert.AreEqual(loggedInfo[i].Contains(idTrue[i]), true);
+                Assert.AreEqual(loggedInfo[i].Contains(idFalse), false);
+            }
+        }
+
+        List<QueryInfo> answers;
+        [TestMethod]
+        public void MethodAsync_GetAllQueries()
+        {
+            // arrange
+            var qType = QueryType.SetProperty;
+            string[] keys = { "key1", "key2", "key3", "key4", "key5" };
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            var queryHelper = new QueryHelper();
+            StartUp();
+            QueryHandler.NewQueriesReady += CQG_GetQueries;
+            answers = new List<QueryInfo>();
+
+            Task.Run(async () =>
+            {
+                // act
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    await queryHelper.PushQueryAsync(new QueryInfo(qType, keys[i], string.Empty, name, null, null));
+                }
+                QueryHandler.ReadQueries();
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.AreEqual(answers.Count, 5);
+            for (int i = 0; i < answers.Count; i++)
+            {
+                Assert.AreEqual((answers[i].QueryKey == keys[i]), true);
+            }
         }
 
         [TestMethod]
-        public void Method_QueryProcessing_QueryTypeConstructor_CQGCELQueryName()
+        public void MethodAsync_RemoveOneQueryItem()
         {
             // arrange
+            var qType = QueryType.CallMethod;
             string id = "key";
-            string objectKey = "objectKey";
-            string name = "CQG.CQGCELClass";
-            bool isQueryTrue = default(bool);
-            bool isQueryFalse = default(bool);
-            var query = new QueryInfo(QueryInfo.QueryType.Constructor, id, objectKey, name, null, null);
-            AnswerInfo answer = default(AnswerInfo);
-            FakeCQG.CQG.LogChange += CQG_LogChange;
-            FakeCQG.CQG.GetQueries += CQG_GetQueries;
+            bool isQuery = default(bool);
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            var queryHelper = new QueryHelper();
             StartUp();
+
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearQueriesListAsync();
+                // act
+                await queryHelper.PushQueryAsync(new QueryInfo(qType, id, string.Empty, name, null, null));
+                isQuery = await QueryHandler.CheckQueryAsync(id);
+                await QueryHandler.RemoveQueryAsync(id);
+                isQuery = await QueryHandler.CheckQueryAsync(id);
+
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.AreEqual(isQuery, false);
+        }
+
+        [TestMethod]
+        public void MethodAsync_PushOneAnswerItem()
+        {
+            // arrange
+            string idTrue = "keyTrue";
+            string idFalse = "keyFalse";
+            string name = "name";
+            bool isAnswer = default(bool);
+            Core.LogChange += CQG_LogChange_Mock;
+            var answerHelper = new AnswerHelper();
+            Task.Run(async () =>
+            {
+                await answerHelper.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.ClearAnswersAsync();
+                // act 1
+                await AnswerHandler.PushAnswerAsync(new AnswerInfo(idTrue, string.Empty, name, null, null));
+                isAnswer = await answerHelper.CheckAnswerAsync(idTrue);
+
+                // assert 1
+                Assert.AreEqual(isAnswer, true);
+
+                // act 2
+                isAnswer = await answerHelper.CheckAnswerAsync(idFalse);
+
+                // assert 2
+                Assert.AreEqual(isAnswer, false);
+
+            }).GetAwaiter().GetResult();
+        }
+
+        [TestMethod]
+        public void MethodAsync_RemoveOneAnswerItem()
+        {
+            // arrange
+            string id = "key";
+            bool isAnswer = default(bool);
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            var answerHelper = new AnswerHelper();
+            StartUp();
+            Task.Run(async () =>
+            {
+                await answerHelper.ClearAnswersListAsync();
+            }).GetAwaiter().GetResult();
+
+            Task.Run(async () =>
+            {
+                // act
+                await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, null));
+                isAnswer = await answerHelper.CheckAnswerAsync(id);
+                await answerHelper.RemoveAnswerAsync(id);
+                isAnswer = await answerHelper.CheckAnswerAsync(id);
+
+            }).GetAwaiter().GetResult();
+
+            // assert
+            Assert.AreEqual(isAnswer, false);
+        }
+
+        [TestMethod]
+        public void Method_GetAnswerData()
+        {
+            // arrange
+            AnswerInfo answer = default(AnswerInfo);
+            string id = "key";
+            bool isAnswer = default(bool);
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            var answerHelper = new AnswerHelper();
+            StartUp();
+            Task.Run(async () =>
+            {
+                await answerHelper.ClearAnswersListAsync();
             }).GetAwaiter().GetResult();
 
             // act
             Task.Run(async () =>
             {
-                await FakeCQG.CQG.LoadInQueryAsync(query);
-                isQueryTrue = await FakeCQG.CQG.CheckQueryAsync(id);
+                await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name));
+                answer = answerHelper.GetAnswerData(id, out isAnswer);
             }).GetAwaiter().GetResult();
 
-            QueryHandler.QueryProcessing(query);
+            // assert
+            Assert.IsTrue(isAnswer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void Method_DCEventHandler()
+        {
+            // arrange
+            string id = "keyDCEventHandler";
+            bool isAnswer = default(bool);
+            string name = "name";
+            var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
+            Core.LogChange += CQG_LogChange_Mock;
+            var answerHelper = new AnswerHelper();
+            StartUp();
+            Task.Run(async () =>
+            {
+                await answerHelper.ClearAnswersListAsync();
+            }).GetAwaiter().GetResult();
+
+            // act
+            Task.Run(async () =>
+            {
+                await AnswerHandler.PushAnswerAsync(new AnswerInfo(id, string.Empty, name, null, argValues));
+            }).GetAwaiter().GetResult();
+            var answer = answerHelper.GetAnswerData(id, out isAnswer);
+
+            // assert
+            Assert.IsTrue(isAnswer);
+            Assert.AreEqual(id, answer.AnswerKey);
+            Assert.IsNotNull(answer.ArgValues);
+            Assert.AreEqual("value1", answer.ArgValues[0]);
+            Assert.AreEqual("value2", answer.ArgValues[1]);
+        }
+
+        #endregion
+
+        #region Logic
+
+        [TestMethod]
+        public void ProcessedQuery_WithFastAct()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            StartUp();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
-                isQueryFalse = await FakeCQG.CQG.CheckQueryAsync(id);
+                isQuery = await QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
             }).GetAwaiter().GetResult();
-            answer = FakeCQG.CQG.GetAnswerData(id);
-            var objectValue = FakeCQG.DataDictionaries.GetObjectFromTheDictionary(objectKey);
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        //10 sec act test 
+        public async void ProcessedQuery_WithLongAct()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            StartUp();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name);
+            await queryHelper.PushQueryAsync(query);
+            isQuery = await QueryHandler.CheckQueryAsync(id);
+
+            // assert 1
+            Assert.IsTrue(isQuery);
+
+            QueryHandler.ProcessQuery(query);
+
+            //Waight some time after procssed query
+            Task.Delay(10000).GetAwaiter().GetResult();
+
+            Task.Run(async () =>
+            {
+                isQuery = await QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void ProcessedQuery_CheckingQueryAnswerAppropriate()
+        {
+            // arrange
+            string[] ids = { "key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8", "key9", "key10" };
+            string[] names = { "name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9", "name10" };
+            var queries = new List<QueryInfo>();
+            var answers = new List<AnswerInfo>();
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            StartUp();
+
+            // act
+            for(int i = 0; i < ids.Length; i++)
+            {
+                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, names[i]);
+                queries.Add(query);
+            }
+
+            foreach (var query in queries)
+            {
+
+                Task.Run(async () =>
+                {
+                    await queryHelper.PushQueryAsync(query);
+                }).GetAwaiter().GetResult();
+
+                QueryHandler.ProcessQuery(query);
+            }
+
+            foreach(var id in ids)
+            {
+                var answer = answerHelper.GetAnswerData(id);
+                answers.Add(answer);
+            }
 
             // assert
-            Assert.AreEqual(name, answer.QueryName);
-            Assert.AreEqual(objectKey, answer.ObjectKey);
-            Assert.IsTrue(isQueryTrue);
-            Assert.IsFalse(isQueryFalse);
-            Assert.IsNull(objectValue);
+            Assert.AreEqual(answers.Count, queries.Count);
+            for(int i = 0; i < answers.Count; i++)
+            {
+                Assert.IsTrue(queries[i].QueryKey == answers[i].AnswerKey);
+            }
         }
 
-        private void CQG_GetQueries(List<QueryInfo> queries)
+        public string status = string.Empty;
+        [TestMethod]
+        //This test should run if CQG client is connected
+        public void FakeCQG_EventHandlersWork()
         {
+            // arrange
+            StartUp();
+            string statusConnectionUp = "csConnectionUp";
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.AutoReset = true;
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
+            CQGCEL fakeCQGCel = new CQGCELClass();
+            fakeCQGCel.DataConnectionStatusChanged += new _ICQGCELEvents_DataConnectionStatusChangedEventHandler(Cell_DataConnectionStatusChanged);
+            Core.LogChange += CQG_LogChange;
+
+            // act
+            fakeCQGCel.Startup();
+            Task.Delay(300).GetAwaiter().GetResult();
+
+            // assert
+            Assert.AreEqual(statusConnectionUp, status);
         }
+
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
+        }
+
+        #endregion
+
+        #region Helpers
+
+        void StartUp()
+        {
+            DCMainForm = new DCMainForm();
+            CQGDataManagment = new CQGDataManagement(DCMainForm, null);
+            QueryHandler = new QueryHandler(CQGDataManagment);
+            QueryHandler.HelpersInit();
+
+            Task.Run(async () =>
+            {
+                await QueryHandler.ClearQueriesListAsync();
+                await Core.AnswerHelper.ClearAnswersListAsync();
+            }).GetAwaiter().GetResult();
+        }
+
+        // Parts of log messages to skip
+        List<string> skippedMsgParts = new List<string>()
+        {
+            "Queries list was cleared successfully",
+            "Answers list was cleared successfully",
+            "Events list was cleared successfully",
+            "**********************************************************",
+            " new quer(y/ies) in database at ",
+            "QUERY"
+        };
 
         private void CQG_LogChange(string message)
         {
         }
 
-        #endregion
-
-        void StartUp()
+        private void CQG_LogChange_ReadAll(string message)
         {
-            RealtimeDataManagement = new RealtimeDataManagement();
-            CQGDataManagment = new CQGDataManagement(RealtimeDataManagement);
-            QueryHandler = new QueryHandler(CQGDataManagment);
+            if (skippedMsgParts.All(skippedMsgPart => !message.Contains(skippedMsgPart)))
+            {
+                loggedInfo.Add(message);
+            }
         }
+
+        private void CQG_GetQueries(List<QueryInfo> queries)
+        {
+            answers = queries;
+        }
+
+        private void CQG_LogChange_Mock(string message)
+        {
+        }
+
+        private void CQG_GetQueries_Mock(List<QueryInfo> queries)
+        {
+        }
+
+        private void Cell_DataConnectionStatusChanged(eConnectionStatus new_status)
+        {
+            status = new_status.ToString();
+        }
+
+        #endregion
     }
-}
-internal class MyClass
+
+    internal class MyClass
     {
     }
+}
+
 

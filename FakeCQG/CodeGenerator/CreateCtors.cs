@@ -5,6 +5,8 @@ namespace CodeGenerator
 {
     partial class Program
     {
+        const int EventCheckingTimerInterval = 30;  // ms
+
         static void CreateCtors(Type type, bool eventsChecking)
         {
             UpdateRegion(RegionType.Constructors);
@@ -14,33 +16,34 @@ namespace CodeGenerator
             // Add public constructors
             foreach (ConstructorInfo cinfo in cinfos)
             {
-                CreateCtor(cinfo, eventsChecking);
+                CreatePublicCtor(cinfo, eventsChecking);
             }
 
-            if (cinfos.Length == 0 && !type.IsValueType)
+            if (!type.IsValueType)
             {
-                // Add a default internal costructor
-                CreateCtor(type.Name, eventsChecking);
+                // Add an internal costructor taking data collector object key
+                CreateInternalCtor(type.Name, eventsChecking);
             }
         }
 
-        static void CreateCtor(ConstructorInfo cinfo, bool eventsChecking)
+        static void CreatePublicCtor(ConstructorInfo cinfo, bool eventsChecking)
         {
             CreateMethodSignature(cinfo);
 
-            File.WriteLine(Indent2 + "thisObjUnqKey = Guid.NewGuid().ToString(\"D\");");
             File.WriteLine(Indent2 + "string name = \"" + cinfo.DeclaringType + "\";");
-            File.WriteLine(Indent2 + "string v = (string)CQG.ExecuteTheQuery(QueryInfo.QueryType.Constructor, thisObjUnqKey, name);");
+            File.WriteLine(Indent2 + "dcObjKey = Internal.Core.CallCtor(name);");
+            File.WriteLine(Indent2 + "this.dcObjType = \"" + cinfo.DeclaringType.Name + "\";");
 
             CtorEnd(eventsChecking);
         }
 
-        static void CreateCtor(string typeName, bool eventsChecking)
+        static void CreateInternalCtor(string typeName, bool eventsChecking)
         {
-            File.WriteLine(Indent1 + "internal " + typeName + "()");
+            File.WriteLine(Indent1 + "internal " + typeName + "(string dcObjKey)");
             File.WriteLine(Indent1 + "{");
 
-            File.WriteLine(Indent2 + "thisObjUnqKey = Guid.NewGuid().ToString(\"D\");");
+            File.WriteLine(Indent2 + "this.dcObjKey = dcObjKey;");
+            File.WriteLine(Indent2 + "this.dcObjType = \"" + typeName + "\";");
 
             CtorEnd(eventsChecking);
         }
@@ -50,9 +53,9 @@ namespace CodeGenerator
             if (eventsChecking)
             {
                 File.WriteLine(Indent2 + "eventCheckingTimer = new System.Timers.Timer();");
-                File.WriteLine(Indent2 + "eventCheckingTimer.Interval = 30;");
+                File.WriteLine(Indent2 + "eventCheckingTimer.Interval = " + EventCheckingTimerInterval.ToString() + ";");
                 File.WriteLine(Indent2 + "eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;");
-                File.WriteLine(Indent2 + "eventCheckingTimer.AutoReset = true;");
+                File.WriteLine(Indent2 + "eventCheckingTimer.AutoReset = false;");
                 File.WriteLine(Indent2 + "eventCheckingTimer.Enabled = true;");
             }
 

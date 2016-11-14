@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.25302.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{40DB2C93-0AE8-4D5B-8CFF-1C41B8767FED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQGLibrary", "CQGLibrary\CQGLibrary.csproj", "{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeCQG", "FakeCQG\FakeCQG.csproj", "{282D7BB6-5CC3-44EF-9C47-8EDD337462EA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{40DB2C93-0AE8-4D5B-8CFF-1C41B8767FED} = {40DB2C93-0AE8-4D5B-8CFF-1C41B8767FED}
 	EndProjectSection

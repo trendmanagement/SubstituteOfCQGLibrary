@@ -11,7 +11,7 @@ namespace CodeGenerator
 
             MethodInfo minfo = type.GetMethod("Invoke");
             CreateMethodSignature(minfo, TypeToString(minfo.ReturnType), type.Name);
-            CreateEventHandler(minfo, type);
+            CreateServerEventHandler(minfo, type);
             File.WriteLine("");
         }
     }

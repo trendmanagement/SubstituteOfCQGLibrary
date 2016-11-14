@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
-//using CQG;
+using CQGLibrary = FakeCQG;
 using System.Diagnostics;
 using System.Threading;
 using System.Collections.Concurrent;

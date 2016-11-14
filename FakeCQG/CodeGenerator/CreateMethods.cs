@@ -8,18 +8,21 @@ namespace CodeGenerator
     partial class Program
     {
         // The methods with the next name will be skipped always
-        static HashSet<string> SkippedMethodsNames = new HashSet<string>() { "get_Item" };
+        static HashSet<string> SkippedMethodsNames = new HashSet<string>() { "get_Item", "Finalize" };
 
         // The methods with the next name prefixes will be skipped always
-        static HashSet<string> SkippedMethodsPrefixes = new HashSet<string>() { "add_", "remove_", "Finalize" };
+        static HashSet<string> SkippedMethodsPrefixes = new HashSet<string>() { "add_", "remove_" };
 
         // The methods with the next name prefixes will be skipped if they have the specified number of input arguments
         // (otherwise, only corresponding properties will be created)
         static Tuple<string, int>[] SkippedMethodsPrefixesNumArgs = new Tuple<string, int>[] { Tuple.Create("get_", 0), Tuple.Create("set_", 1) };
 
-        static HashSet<string> ObjectMethods = new HashSet<string>() { "Equals", "GetHashCode", "GetType", "ToString" };
+        static HashSet<string> ObjectNonOverridableMethods = new HashSet<string>() { "Equals", "GetType" };
+        static HashSet<string> ObjectOverridableMethods = new HashSet<string>() { "GetHashCode", "ToString" };
 
         static HashSet<string> IEnumerableMethods = new HashSet<string>() { "GetEnumerator" };
+
+        static HashSet<string> ComMethods = new HashSet<string>() { "CreateObjRef", "GetLifetimeService", "InitializeLifetimeService" };
 
         public static void CreateMethods(Type type)
         {
@@ -33,76 +36,89 @@ namespace CodeGenerator
         {
             UpdateRegion(RegionType.Methods);
 
-            bool isNew = ObjectMethods.Contains(minfo.Name) ||
-                (isInterface && IEnumerableMethods.Contains(minfo.Name));
-
-            Dictionary<int, string> nameSubstitutes = new Dictionary<int, string>();
-            foreach (var param in minfo.GetParameters())
+            if (ComMethods.Contains(minfo.Name) ||
+                ObjectNonOverridableMethods.Contains(minfo.Name) ||
+                (isStruct && ObjectOverridableMethods.Contains(minfo.Name)) ||
+                (isInterface && IEnumerableMethods.Contains(minfo.Name)))
             {
-                if (param.Name == null || param.Name.Length == 0)
-                {
-                    nameSubstitutes.Add(param.Position, "arg" + (param.Position + 1));
-                }
-            }
-            if(nameSubstitutes.Keys.Count>0)
-            {
-                CreateMethodSignature(minfo, TypeToString(minfo.ReturnType), null, isInterface, isStruct, isNew, nameSubstitutes);
-            }
-            else
-            {
-                CreateMethodSignature(minfo, TypeToString(minfo.ReturnType), null, isInterface, isStruct, isNew);
+                // Skip this method
+                return;
             }
 
-            if (!isInterface)
-            {
-                if (minfo.GetParameters().Length != 0)
-                {
-                    int i = 0;
-                    File.Write(Indent2 + "object[] args = new object[" + minfo.GetParameters().Length + "] {");
-                    foreach (var param in minfo.GetParameters())
-                    {
-                        string paramName = param.Name;
-                        if (paramName == null || paramName.Length == 0)
-                        {
-                            paramName = nameSubstitutes[param.Position];
-                        }
-                        if (i == minfo.GetParameters().Length - 1)
-                        {
-                            File.Write(paramName);
-                        }
-                        else
-                        {
-                            File.Write(paramName + ", ");
-                        }
-                        i++;
-                    }
-                    File.WriteLine("};");
-                }
+            CreateMethodSignature(minfo, TypeToString(minfo.ReturnType), null, isInterface, isStruct);
 
-                File.Write(Indent2 + "string name = \"" + minfo.Name + "\";" + Environment.NewLine + Indent2);
-                if (minfo.ReturnType != typeof(void))
+            if (isInterface)
+            {
+                File.WriteLine(string.Empty);
+                return;
+            }
+
+            if (minfo.Name == "Shutdown")
+            {
+                File.WriteLine(Indent2 + "if(!isDCClosed)" + Environment.NewLine + Indent2 + "{");
+                IncreaseIndent();
+            }
+
+            File.WriteLine(Indent2 + "string name = \"" + minfo.Name + "\";");
+
+            if (minfo.GetParameters().Length != 0)
+            {
+                // Write a line of code that collects all the arguments into object[] as following:
+                // var args = new object[] { arg1, arg2, ..., argn }
+                CreateArgsObjectArray(File, Indent2, minfo.GetParameters());
+            }
+
+            if (IsSerializableType(minfo.ReturnType))
+            {
+                bool isNonVoid = minfo.ReturnType != typeof(void);
+                
+                if (isNonVoid)
                 {
-                    File.Write("var result = (" + TypeToString(minfo.ReturnType) + ")");
-                }
-                if (minfo.GetParameters().Length != 0)
-                {
-                    File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name, args);");
+                    File.Write(Indent2 + "var result = Internal.Core.CallMethod<" + TypeToString(minfo.ReturnType) + ">");
                 }
                 else
                 {
-                    File.WriteLine("CQG.ExecuteTheQuery(QueryInfo.QueryType.Method, thisObjUnqKey, name);");
+                    File.Write(Indent2 + "Internal.Core.CallVoidMethod");
                 }
-                    
-                if (minfo.ReturnType != typeof(void))
+
+                // Add arguments
+                File.Write("(dcObjKey, dcObjType, name");
+                if (minfo.GetParameters().Length != 0)
+                {
+                    File.Write(", args");
+                }
+                File.WriteLine(");");
+
+                if (isNonVoid)
                 {
                     File.WriteLine(Indent2 + "return result;");
                 }
-                MemberEnd();
             }
             else
             {
-                File.WriteLine("");
+                File.Write(Indent2 + "string key = Internal.Core.CallMethod<string>(dcObjKey, dcObjType, name");
+                if (minfo.GetParameters().Length != 0)
+                {
+                    File.Write(", args");
+                }
+                File.WriteLine(");");
+
+                File.Write(Indent2 + "var result = new " + minfo.ReturnType.Name);
+                if (minfo.ReturnType.IsInterface)
+                {
+                    File.Write("Class");
+                }
+                File.WriteLine("(key);");
+                File.WriteLine(Indent2 + "return result;");
             }
+
+            if (minfo.Name == "Shutdown")
+            {
+                DecreaseIndent();
+                File.WriteLine(Indent2 + "}");
+            }
+
+            MemberEnd();
         }
 
         static IEnumerable<MethodInfo> FilterSortMethods(MethodInfo[] minfos)
