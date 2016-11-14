@@ -224,40 +224,6 @@ namespace UnitTestRealCQG
             Assert.IsFalse(isQueryFalse);
         }
 
-        List<string> loggedInfo;
-        [TestMethod]
-        public void MethodAsync_ReadInfoQueries()
-        {
-            // arrange
-            var qType = QueryType.SetProperty;
-            string[] idTrue = { "key1True", "key2True", "key3True" };
-            string idFalse = "keyFalse";
-            string name = "name";
-            Core.LogChange += CQG_LogChange_ReadAll;
-            var queryHelper = new QueryHelper();  
-            StartUp();
-            QueryHandler.NewQueriesReady += CQG_GetQueries_Mock;
-            loggedInfo = new List<string>();
-
-           Task.Run(async () =>
-            {
-                // act
-                for (int i = 0; i < idTrue.Length; i++)
-                {
-                    await queryHelper.PushQueryAsync(new QueryInfo(qType, idTrue[i], string.Empty, name, null, null));
-                }
-                QueryHandler.ReadQueries();
-            }).GetAwaiter().GetResult();
-
-            // assert
-            Assert.AreEqual(loggedInfo.Count, 3);
-            for (int i = 0; i < loggedInfo.Count; i++)
-            {
-                Assert.AreEqual(loggedInfo[i].Contains(idTrue[i]), true);
-                Assert.AreEqual(loggedInfo[i].Contains(idFalse), false);
-            }
-        }
-
         List<QueryInfo> answers;
         [TestMethod]
         public void MethodAsync_GetAllQueries()
@@ -453,7 +419,7 @@ namespace UnitTestRealCQG
             StartUp();
 
             // act
-            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name);
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name, string.Empty);
             Task.Run(async () =>
             {
                 await queryHelper.PushQueryAsync(query);
@@ -494,7 +460,7 @@ namespace UnitTestRealCQG
             StartUp();
 
             // act
-            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name);
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name, string.Empty);
             await queryHelper.PushQueryAsync(query);
             isQuery = await QueryHandler.CheckQueryAsync(id);
 
@@ -537,7 +503,7 @@ namespace UnitTestRealCQG
             // act
             for(int i = 0; i < ids.Length; i++)
             {
-                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, names[i]);
+                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, names[i], string.Empty);
                 queries.Add(query);
             }
 
@@ -630,24 +596,12 @@ namespace UnitTestRealCQG
         {
         }
 
-        private void CQG_LogChange_ReadAll(string message)
-        {
-            if (skippedMsgParts.All(skippedMsgPart => !message.Contains(skippedMsgPart)))
-            {
-                loggedInfo.Add(message);
-            }
-        }
-
         private void CQG_GetQueries(List<QueryInfo> queries)
         {
             answers = queries;
         }
 
         private void CQG_LogChange_Mock(string message)
-        {
-        }
-
-        private void CQG_GetQueries_Mock(List<QueryInfo> queries)
         {
         }
 
