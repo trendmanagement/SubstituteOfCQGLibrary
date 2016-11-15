@@ -33,6 +33,7 @@ namespace CodeGenerator
             using (DCEvHndlrFile = new StreamWriter(dcEHOutPath))
             using (DCQProcFile = new StreamWriter(dcQPOutPath))
             {
+                // AutoGen client API part
                 CreateWarningHeader(File);
 
                 File.WriteLine("using System;");
@@ -40,7 +41,10 @@ namespace CodeGenerator
                 File.WriteLine("");
                 File.WriteLine("namespace FakeCQG");
                 File.WriteLine("{");
+                // AutoGen client API part
 
+
+                // Server event handlers part
                 CreateWarningHeader(DCEvHndlrFile);
 
                 DCEvHndlrFile.WriteLine("using System;");
@@ -50,7 +54,10 @@ namespace CodeGenerator
                 DCEvHndlrFile.WriteLine("{");
                 DCEvHndlrFile.WriteLine(Indent1 + "class CQGEventHandlers");
                 DCEvHndlrFile.WriteLine(Indent1 + "{");
+                // Server event handlers part
 
+
+                // AutoGen query processing part
                 CreateWarningHeader(DCQProcFile);
 
                 DCQProcFile.WriteLine("using CQG;");
@@ -64,12 +71,18 @@ namespace CodeGenerator
                 DCQProcFile.WriteLine("{");
                 DCQProcFile.WriteLine(Indent1 + "partial class QueryHandler");
                 DCQProcFile.WriteLine(Indent1 + "{");
+                DCQProcFile.WriteLine(Indent2 + "private object qObj;");
                 DCQProcFile.WriteLine(Indent2 + "private delegate void PropDel(QueryInfo query, object[] args);" + Environment.NewLine);
                 DCQProcFile.WriteLine(Indent2 + "private Dictionary<string, PropDel> hMethods; " + 
                     Environment.NewLine  + Environment.NewLine);
+                // AutoGen query processing part
 
+
+                // Main generator of code corresponding to each type and its members
                 CreateTypes(assm.ExportedTypes);
 
+
+                // AutoGen query processing part
                 DCQProcFile.WriteLine(Indent2 + "public void InitHMethodDict()");
                 DCQProcFile.WriteLine(Indent2 + "{");
                 DCQProcFile.WriteLine(Indent3 + "hMethods = new Dictionary<string, PropDel> " + 
@@ -80,18 +93,25 @@ namespace CodeGenerator
                       
                 DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
                 DCQProcFile.WriteLine(Indent2 + "{");
-                DCQProcFile.WriteLine(Indent3 + "object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
+                DCQProcFile.WriteLine(Indent3 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
                 DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
-                DCQProcFile.WriteLine(Indent3 + "{"); 
+                DCQProcFile.WriteLine(Indent3 + "{");
+                // AutoGen query processing part
 
-                
 
+                // AutoGen client API part
                 File.WriteLine("}");
+                // AutoGen client API part
 
+
+                // Server event handlers part
                 DCEvHndlrFile.WriteLine(Indent1 + "}");
                 DCEvHndlrFile.WriteLine("}");
+                // Server event handlers part
 
+
+                // AutoGen query processing part
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.GetProperty:");
                 DCQProcFile.WriteLine(Indent5 + "string getHndlrName = string.Concat(\"Get\", query.ObjectType, query.MemberName);");
                 DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(getHndlrName)) " + Environment.NewLine + Indent6 +
@@ -106,14 +126,42 @@ namespace CodeGenerator
                     Environment.NewLine + Indent5 + "hMethods[setHndlrName](query, args); ");
                 DCQProcFile.WriteLine(Indent5 + "break;");
 
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.CallMethod:");
+                DCQProcFile.WriteLine(Indent5 + "string mthdHndlrName = string.Concat(\"Method\", query.ObjectType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(mthdHndlrName)) " + Environment.NewLine + Indent6 +
+                    "throw new System.ArgumentException(string.Concat(\"Operation \", mthdHndlrName, \" is invalid\"), \"method name\");" +
+                    Environment.NewLine + Indent5 + "hMethods[mthdHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;");
+
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.SubscribeToEvent:");
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.UnsubscribeFromEvent:");
+                DCQProcFile.WriteLine(Indent5 + "string eventHndlrName = string.Concat(\"Event\", query.ObjectType, query.MemberName);");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(eventHndlrName)) " + Environment.NewLine + Indent6 +
+                    "throw new System.ArgumentException(string.Concat(\"Operation \", eventHndlrName, \" is invalid\"), \"method name\");" +
+                    Environment.NewLine + Indent5 + "if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))" +
+                        Environment.NewLine + Indent5 + "{" + Environment.NewLine +
+                        Indent4 + "EventHandler.EventAppsSubscribersNum[query.MemberName] =" +
+                        Environment.NewLine + Indent6 + "query.QueryType == QueryType.SubscribeToEvent ?" +
+                        Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :" +
+                        Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;" +
+                        Environment.NewLine + Indent5 + "}" + Environment.NewLine + Indent5 + "else" +
+                        Environment.NewLine + Indent5 + "{" +
+                        Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);" +
+                        Environment.NewLine + Indent5 + "}" + Environment.NewLine +
+                    Indent5 + "hMethods[eventHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;");
+
                 DCQProcFile.WriteLine(Indent3 + "}");
                 DCQProcFile.WriteLine(Indent2 + "}" + Environment.NewLine);
 
                 DCQProcFile.Write(getProp.ToString());
                 DCQProcFile.Write(setProp.ToString());
+                DCQProcFile.Write(methodCall.ToString());
+                DCQProcFile.Write(subAndUnsubEvents.ToString());
 
                 DCQProcFile.WriteLine(Indent1 + "}");
                 DCQProcFile.WriteLine("}");
+                // AutoGen query processing part
             }
         }
 

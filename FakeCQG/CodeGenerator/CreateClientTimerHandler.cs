@@ -10,7 +10,7 @@ namespace CodeGenerator
             File.WriteLine(Indent2 + "Internal.Core.SubscriberChecking(\"" + einfo.Name + "\", dcObjKey, " + Environment.NewLine +
                 Indent3 + einfo.Name + " != null && !Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"], "
                 + Environment.NewLine + Indent3 + einfo.Name + " == null && Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + 
-                "\"]);" + Environment.NewLine);
+                "\"], \"" + einfo.DeclaringType.Name + "\");" + Environment.NewLine);
 
             File.WriteLine(Indent2 + "if (Internal.ClientDictionaries.EventCheckingDictionary[dcObjKey][\"" + einfo.Name + "\"])" +
                 Environment.NewLine + Indent2 + "{");

@@ -188,7 +188,7 @@ namespace FakeCQG
                         break;
                     case QueryType.SubscribeToEvent:
                     case QueryType.UnsubscribeFromEvent:
-                        model = new QueryInfo(qType, qKey, objectKey: objKey, memberName: memName);
+                        model = new QueryInfo(qType, qKey, objType, objKey, memName);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -344,16 +344,16 @@ namespace FakeCQG
                 return GetArgsIntoArrayFromTwoDicts(eventInfo.ArgKeys, eventInfo.ArgValues);
             }
 
-            public static void SubscriberChecking(string name, string objKey, bool isSubscriptionRequired, bool isUnsubscriptionRequired)
+            public static void SubscriberChecking(string name, string objKey, bool isSubscriptionRequired, bool isUnsubscriptionRequired, string objType)
             {
                 if (isUnsubscriptionRequired)
                 {
-                    ExecuteTheQuery(QueryType.UnsubscribeFromEvent, dcObjKey: objKey, memName: name);
+                    ExecuteTheQuery(QueryType.UnsubscribeFromEvent, dcObjType: objType, dcObjKey: objKey, memName: name);
                     ClientDictionaries.EventCheckingDictionary[objKey][name] = false;
                 }
                 else if (isSubscriptionRequired)
                 {
-                    ExecuteTheQuery(QueryType.SubscribeToEvent, dcObjKey: objKey, memName: name);
+                    ExecuteTheQuery(QueryType.SubscribeToEvent, dcObjType: objType, dcObjKey: objKey, memName: name);
                     ClientDictionaries.EventCheckingDictionary[objKey][name] = true;
                 }
             }

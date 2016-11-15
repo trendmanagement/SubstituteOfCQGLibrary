@@ -149,29 +149,13 @@ namespace DataCollectionForRealtime
                         try
                         {
                             // Getting of property value
-                            //string piKey = string.Concat(query.ObjectKey, query.MemberName);
-                            //if (ServerDictionaries.pinfoDict.ContainsKey(piKey))
-                            //{
-                            //    var propV = ServerDictionaries.pinfoDict[piKey];
+                            var propV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
 
-                            //    // Checking type of property value and returning value or value key 
-                            //    // (second, if it's not able to be transmitted through the database)
-                            //    answer = Core.IsSerializableType(propV.GetType()) ?
-                            //        CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
-                            //        CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
-                            //}
-                            //else
-                            //{
-                            //    var pin = qObj.GetType().GetProperty(query.MemberName);
-                            //    ServerDictionaries.pinfoDict.Add(piKey, pin);
-                                var propV = /*args == null ? pin :*/ qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
-
-                                // Checking type of property value and returning value or value key 
-                                // (second, if it's not able to be transmitted through the database)
-                                answer = Core.IsSerializableType(propV.GetType()) ?
-                                    CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
-                                    CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
-                            //}
+                            // Checking type of property value and returning value or value key 
+                            // (second, if it's not able to be transmitted through the database)
+                            answer = Core.IsSerializableType(propV.GetType()) ?
+                                CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
+                                CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
                         }
                         catch (Exception ex)
                         {
@@ -371,7 +355,9 @@ namespace DataCollectionForRealtime
             {
                 for(int i = 0; i < QueryList.Count; i++)
                 {
-                    if (QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty)
+                    if (QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty ||
+                        QueryList[i].QueryType == QueryType.CallMethod || QueryList[i].QueryType == QueryType.SubscribeToEvent ||
+                        QueryList[i].QueryType == QueryType.UnsubscribeFromEvent)
                     {
                         AutoGenQueryProcessing(QueryList[i]);
                     }
@@ -559,7 +545,7 @@ namespace DataCollectionForRealtime
 
         internal static Type FindDelegateType(Assembly assm, string eventName)
         {
-            string delegateTypeName = string.Format("_ICQGCELEvents_{0}EventHandler", eventName);
+            string delegateTypeName = string.Concat("_ICQGCELEvents_", eventName, "EventHandler");
             foreach (Type type in assm.ExportedTypes)
             {
                 if (IsDelegate(type))

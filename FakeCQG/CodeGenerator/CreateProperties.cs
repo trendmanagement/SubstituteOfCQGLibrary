@@ -8,8 +8,10 @@ namespace CodeGenerator
 {
     partial class Program
     {
+        // All generated implementations of getters for each property and type
         public static StringBuilder getProp = new StringBuilder();
         public static StringBuilder setProp = new StringBuilder();
+
         public static string propInterfName = default(string);
         public static string propTypeName = default(string);
 
@@ -20,41 +22,7 @@ namespace CodeGenerator
 
             propTypeName = pTypeName;
 
-            //int gettersNum = 0;
-            //int settersNum = 0;          
-
-            //foreach (var pinf in pinfos)
-            //{
-            //    if(pinf.GetGetMethod() != null)
-            //    {
-            //        gettersNum++;
-            //    }
-            //    if (pinf.GetSetMethod() != null)
-            //    {
-            //        settersNum++;
-            //    }
-            //}
-
-            //if (!isInterface)
-            //{
             propInterfName = propTypeName.Substring(0, propTypeName.Length - 5);
-
-            //    if(gettersNum > 0)
-            //    {
-            //        getProp.Append(Indent5 + "case \"CQG." + propTypeName + "\":" +
-            //            Environment.NewLine);
-            //        getProp.Append(Indent6 + "switch (query.MemberName)" +
-            //            Environment.NewLine + Indent6 + "{" + Environment.NewLine);
-            //    }
-
-            //    if (settersNum > 0)
-            //    {
-            //        setProp.Append(Indent5 + "case \"CQG." + propTypeName + "\":" +
-            //            Environment.NewLine);
-            //        setProp.Append(Indent6 + "switch (query.MemberName)" +
-            //            Environment.NewLine + Indent6 + "{" + Environment.NewLine);
-            //    }      
-            //}
 
             foreach (PropertyInfo pinfo in SortProperties(pinfos))
             {
@@ -85,20 +53,6 @@ namespace CodeGenerator
                 }
 
             }
-            //if (!isInterface)
-            //{
-            //    if (gettersNum > 0)
-            //    {
-            //        getProp.Append(Indent6 + "}" + Environment.NewLine);
-            //        getProp.Append(Indent6 + "break;" + Environment.NewLine);
-            //    }
-
-            //    if (settersNum > 0)
-            //    {
-            //        setProp.Append(Indent6 + "}" + Environment.NewLine);
-            //        setProp.Append(Indent6 + "break;" + Environment.NewLine);
-            //    }          
-            //}
         }
 
         static void CreateProperty(PropertyInfo pinfo, bool isInterface)
@@ -209,39 +163,39 @@ namespace CodeGenerator
 
                     if (pinfo.Name == "IsStarted")
                     {
-                        getProp.Append(Indent3 + "System.Boolean IsStartedpropV = CqgDataManagement.IsCQGStarted;" +
+                        getProp.Append(Indent3 + "System.Boolean IsStartedPropV = CqgDataManagement.IsCQGStarted;" +
                             Environment.NewLine);
                     }
                     else if (pinfo.Name == "Configuration")
                     {
                         getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
-                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
-                        getProp.Append(Indent3 + "CQG.CQGCELConfiguration ConfigurationpropV = ConfigurationObj.get_Configuration();" +
+                            ")qObj;" + Environment.NewLine);
+                        getProp.Append(Indent3 + "CQG.CQGCELConfiguration ConfigurationPropV = ConfigurationObj.get_Configuration();" +
                             Environment.NewLine);
                     }
                     else if (pinfo.Name == "Value" && propInterfName == "CQGTradingSystemStatistics")
                     {
                         getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
-                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
-                        getProp.Append(Indent3 + "System.Double ValuepropV = ValueObj[(CQG.eTradingSystemStatistic)args[0]];" +
+                            ")qObj;" + Environment.NewLine);
+                        getProp.Append(Indent3 + "System.Double ValuePropV = ValueObj[(CQG.eTradingSystemStatistic)args[0]];" +
                             Environment.NewLine);
                     }
                     else if (pins.Length < 1 ||
                         pins.Length >= 1 && pins[0].HasDefaultValue)
                     {
                         getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
-                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
-                        getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "propV = " +
+                            ")qObj;" + Environment.NewLine);
+                        getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                         pinfo.Name + "Obj." + pinfo.Name + ";" + Environment.NewLine);
                     }
                     else
                     {
                         getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
-                            ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
+                            ")qObj;" + Environment.NewLine);
 
                         if (pins.Length == 1 && pinfo.Name == "Item" || pinfo.Name == "Item")
                         {
-                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "propV = " +
+                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                                 pinfo.Name + "Obj[");
                             for (int i = 0; i < pins.Length; i++)
                             {
@@ -251,7 +205,7 @@ namespace CodeGenerator
                         }
                         else
                         {
-                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "propV = " +
+                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                                 pinfo.Name + "Obj." + pinfo.Name + "[");
                             for (int i = 0; i < pins.Length; i++)
                             {
@@ -266,14 +220,14 @@ namespace CodeGenerator
                         getProp.Append(Indent3 + "var " + pinfo.Name + "PropKey = \"value\";" + Environment.NewLine);
                         getProp.Append(Indent3 +
                             "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
-                            pinfo.Name + "PropKey, value: " + pinfo.Name + "propV));" +
+                            pinfo.Name + "PropKey, value: " + pinfo.Name + "PropV));" +
                             Environment.NewLine);
                     }
                     else
                     {
                         getProp.Append(Indent3 + "var " + pinfo.Name + "PropKey = Core.CreateUniqueKey();" + Environment.NewLine);
                         getProp.Append(Indent3 + "ServerDictionaries.PutObjectToTheDictionary(" + pinfo.Name + "PropKey, " +
-                            pinfo.Name + "propV);" + Environment.NewLine);
+                            pinfo.Name + "PropV);" + Environment.NewLine);
                         getProp.Append(Indent3 +
                             "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
                             pinfo.Name + "PropKey));" + Environment.NewLine);
@@ -337,7 +291,6 @@ namespace CodeGenerator
                         Environment.NewLine);
 
                     setProp.Append(Indent2 + "}" + Environment.NewLine + Environment.NewLine);
-
                 }
             }
 
