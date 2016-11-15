@@ -491,8 +491,16 @@ namespace UnitTestRealCQG
         public void ProcessedQuery_CheckingQueryAnswerAppropriate()
         {
             // arrange
-            string[] ids = { "key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8", "key9", "key10" };
-            string[] names = { "name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9", "name10" };
+            #region Timer
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.AutoReset = true;
+            timer.Elapsed += TimerElapsed_CheckingQueryAnswerAppropriate;
+            timer.Start();
+            #endregion
+
+            int countQueries = 1000;
+            string[] ids = new string[countQueries];
             var queries = new List<QueryInfo>();
             var answers = new List<AnswerInfo>();
             var queryHelper = new QueryHelper();
@@ -500,33 +508,37 @@ namespace UnitTestRealCQG
             Core.LogChange += CQG_LogChange;
             StartUp();
 
-            // act
-            for(int i = 0; i < ids.Length; i++)
+            //Generate values array
+            for (int i = 0; i < ids.Length; i++)
             {
-                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, names[i], string.Empty);
+                ids[i] = string.Concat("key", i.ToString());
+            }
+
+            // act
+            for (int i = 0; i < ids.Length; i++)
+            {
+                var query = Core.CreateQuery(QueryType.CallCtor, ids[i], string.Empty, string.Empty, string.Empty);
                 queries.Add(query);
             }
 
             foreach (var query in queries)
             {
-
                 Task.Run(async () =>
                 {
                     await queryHelper.PushQueryAsync(query);
                 }).GetAwaiter().GetResult();
-
-                QueryHandler.ProcessQuery(query);
             }
 
-            foreach(var id in ids)
+            foreach (var id in ids)
             {
                 var answer = answerHelper.GetAnswerData(id);
                 answers.Add(answer);
             }
 
             // assert
-            Assert.AreEqual(answers.Count, queries.Count);
-            for(int i = 0; i < answers.Count; i++)
+            Assert.AreEqual(countQueries, queries.Count);
+            Assert.AreEqual(countQueries, answers.Count);
+            for (int i = 0; i < answers.Count; i++)
             {
                 Assert.IsTrue(queries[i].QueryKey == answers[i].AnswerKey);
             }
@@ -608,6 +620,12 @@ namespace UnitTestRealCQG
         private void Cell_DataConnectionStatusChanged(eConnectionStatus new_status)
         {
             status = new_status.ToString();
+        }
+
+        private void TimerElapsed_CheckingQueryAnswerAppropriate(object sender, ElapsedEventArgs e)
+        {
+            QueryHandler.ReadQueries();
+            QueryHandler.ProcessEntireQueryList();
         }
 
         #endregion
