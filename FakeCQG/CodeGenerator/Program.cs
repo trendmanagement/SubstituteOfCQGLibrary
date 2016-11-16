@@ -93,7 +93,6 @@ namespace CodeGenerator
                       
                 DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
                 DCQProcFile.WriteLine(Indent2 + "{");
-                DCQProcFile.WriteLine(Indent3 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
                 DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
                 DCQProcFile.WriteLine(Indent3 + "{");
@@ -112,48 +111,76 @@ namespace CodeGenerator
 
 
                 // AutoGen query processing part
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.CallCtor:");
+                DCQProcFile.WriteLine(Indent5 + "string ctorHndlrName = string.Concat(\"Ctor\", query.ObjectType);");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(ctorHndlrName)) " + Environment.NewLine + 
+                    Indent5 + "{" + Environment.NewLine + 
+                    Indent6 + "throw new System.ArgumentException(string.Concat(\"Operation \", ctorHndlrName, \" is invalid\"), \"ctor name\");" +
+                    Environment.NewLine + Indent5 + "}" + Environment.NewLine + 
+                    Indent5 + "hMethods[ctorHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
+
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.CallDtor:");
+                DCQProcFile.WriteLine(Indent5 + "if (query.ObjectKey != CqgDataManagement.CEL_key) " + Environment.NewLine + Indent5 +
+                    "{" + Environment.NewLine + Indent6 + "ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);" +
+                        Environment.NewLine + Indent5 + "}");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
+
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.GetProperty:");
+                DCQProcFile.WriteLine(Indent5 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent5 + "string getHndlrName = string.Concat(\"Get\", query.ObjectType, query.MemberName);");
-                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(getHndlrName)) " + Environment.NewLine + Indent6 +
-                    "throw new System.ArgumentException(string.Concat(\"Operation \", getHndlrName, \" is invalid\"), \"getter name\");" + 
-                    Environment.NewLine + Indent5 + "hMethods[getHndlrName](query, args); ");
-                DCQProcFile.WriteLine(Indent5 + "break;");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(getHndlrName)) " + Environment.NewLine +
+                    Indent5 + "{" + Environment.NewLine +
+                    Indent6 + "throw new System.ArgumentException(string.Concat(\"Operation \", getHndlrName, \" is invalid\"), \"getter name\");" +
+                    Environment.NewLine + Indent5 + "}" + Environment.NewLine +
+                    Indent5 + "hMethods[getHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
                 
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.SetProperty:");
+                DCQProcFile.WriteLine(Indent5 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent5 + "string setHndlrName = string.Concat(\"Set\", query.ObjectType, query.MemberName);");
-                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(setHndlrName)) " + Environment.NewLine + Indent6 +
-                    "throw new System.ArgumentException(string.Concat(\"Operation \", setHndlrName, \" is invalid\"), \"setter name\");" + 
-                    Environment.NewLine + Indent5 + "hMethods[setHndlrName](query, args); ");
-                DCQProcFile.WriteLine(Indent5 + "break;");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(setHndlrName)) " + Environment.NewLine + 
+                    Indent5 + "{" + Environment.NewLine +
+                    Indent6 + "throw new System.ArgumentException(string.Concat(\"Operation \", setHndlrName, \" is invalid\"), \"setter name\");" +
+                    Environment.NewLine + Indent5 + "}" + Environment.NewLine +
+                    Indent5 + "hMethods[setHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
 
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.CallMethod:");
+                DCQProcFile.WriteLine(Indent5 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent5 + "string mthdHndlrName = string.Concat(\"Method\", query.ObjectType, query.MemberName);");
-                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(mthdHndlrName)) " + Environment.NewLine + Indent6 +
-                    "throw new System.ArgumentException(string.Concat(\"Operation \", mthdHndlrName, \" is invalid\"), \"method name\");" +
-                    Environment.NewLine + Indent5 + "hMethods[mthdHndlrName](query, args); ");
-                DCQProcFile.WriteLine(Indent5 + "break;");
+                DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(mthdHndlrName)) " + Environment.NewLine +
+                    Indent5 + "{" + Environment.NewLine +
+                    Indent6 + "throw new System.ArgumentException(string.Concat(\"Operation \", mthdHndlrName, \" is invalid\"), \"method name\");" +
+                    Environment.NewLine + Indent5 + "}" + Environment.NewLine +
+                    Indent5 + "hMethods[mthdHndlrName](query, args); ");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
 
-                DCQProcFile.WriteLine(Indent4 + "case QueryType.SubscribeToEvent:");
+                DCQProcFile.WriteLine(Indent4 + "case QueryType.SubscribeToEvent:");   
                 DCQProcFile.WriteLine(Indent4 + "case QueryType.UnsubscribeFromEvent:");
+                DCQProcFile.WriteLine(Indent5 + "qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);");
                 DCQProcFile.WriteLine(Indent5 + "string eventHndlrName = string.Concat(\"Event\", query.ObjectType, query.MemberName);");
                 DCQProcFile.WriteLine(Indent5 + "if (!hMethods.ContainsKey(eventHndlrName)) " + Environment.NewLine + Indent6 +
-                    "throw new System.ArgumentException(string.Concat(\"Operation \", eventHndlrName, \" is invalid\"), \"method name\");" +
-                    Environment.NewLine + Indent5 + "if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))" +
+                    Indent5 + "{" + Environment.NewLine +
+                    Indent6 + "throw new System.ArgumentException(string.Concat(\"Operation \", eventHndlrName, \" is invalid\"), \"event name\");" +
+                    Environment.NewLine + Indent5 + "}" + Environment.NewLine +
+                    Indent5 + "if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))" +
                         Environment.NewLine + Indent5 + "{" + Environment.NewLine +
-                        Indent4 + "EventHandler.EventAppsSubscribersNum[query.MemberName] =" +
-                        Environment.NewLine + Indent6 + "query.QueryType == QueryType.SubscribeToEvent ?" +
-                        Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :" +
-                        Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;" +
+                        Indent6 + "EventHandler.EventAppsSubscribersNum[query.MemberName] =" +
+                        Environment.NewLine + Indent7 + "query.QueryType == QueryType.SubscribeToEvent ?" +
+                        Environment.NewLine + Indent7 + "EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :" +
+                        Environment.NewLine + Indent7 + "EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;" +
                         Environment.NewLine + Indent5 + "}" + Environment.NewLine + Indent5 + "else" +
                         Environment.NewLine + Indent5 + "{" +
                         Environment.NewLine + Indent6 + "EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);" +
                         Environment.NewLine + Indent5 + "}" + Environment.NewLine +
                     Indent5 + "hMethods[eventHndlrName](query, args); ");
-                DCQProcFile.WriteLine(Indent5 + "break;");
+                DCQProcFile.WriteLine(Indent5 + "break;" + Environment.NewLine);
 
                 DCQProcFile.WriteLine(Indent3 + "}");
                 DCQProcFile.WriteLine(Indent2 + "}" + Environment.NewLine);
 
+                DCQProcFile.Write(ctorCall.ToString());
                 DCQProcFile.Write(getProp.ToString());
                 DCQProcFile.Write(setProp.ToString());
                 DCQProcFile.Write(methodCall.ToString());

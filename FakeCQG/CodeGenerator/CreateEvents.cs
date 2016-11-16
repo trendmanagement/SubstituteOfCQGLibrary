@@ -78,26 +78,49 @@ namespace CodeGenerator
                         Environment.NewLine + Indent3 + "{" +
                         Environment.NewLine + Indent4 + "EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);" +
                         Environment.NewLine + Indent3 + "}" + Environment.NewLine);
-            
+
 
             subAndUnsubEvents.Append(Indent3 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
-                        Environment.NewLine + Indent3 + "{" + Environment.NewLine +
-                        Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
+                        Environment.NewLine + Indent3 + "{" + Environment.NewLine);
+            if (einfo.Name == "DataConnectionStatusChanged" && (type.Name == "_ICQGCELEvents" || type.Name == "CQGCELClass"))
+            {
+                subAndUnsubEvents.Append(Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
-                        Environment.NewLine + Indent3 + "}" + Environment.NewLine + Indent3 + "else" +
+                        Environment.NewLine);
+
+                subAndUnsubEvents.Append(Indent4 + 
+                    "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" + 
+                    Environment.NewLine + Environment.NewLine);
+
+                subAndUnsubEvents.Append(Indent4 + 
+                    "// Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore" +
+                        Environment.NewLine + Indent4 +
+                        "CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);" +
+                        Environment.NewLine);
+            }
+            else
+            {
+                subAndUnsubEvents.Append(Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
+                        "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
+                        Environment.NewLine);
+                subAndUnsubEvents.Append(Indent4 +
+                    "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" +
+                    Environment.NewLine);
+            }   
+            subAndUnsubEvents.Append(Indent3 + "}" + Environment.NewLine + Indent3 + "else" +
                         Environment.NewLine + Indent3 + "{" +
                         Environment.NewLine + Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
                         Indent3 + "}" + Environment.NewLine);
 
-            if (einfo.Name == "DataConnectionStatusChanged")
-            {
-                subAndUnsubEvents.Append(Indent3 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
-                        Environment.NewLine + Indent3 + "{" + Environment.NewLine +
-                        Indent4 + "// Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore" +
-                        Environment.NewLine + Indent4 + "CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);" +
-                        Environment.NewLine + Indent3 + "}" + Environment.NewLine);
-            }
+            //if (einfo.Name == "DataConnectionStatusChanged")
+            //{
+            //    subAndUnsubEvents.Append(Indent3 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
+            //            Environment.NewLine + Indent3 + "{" + Environment.NewLine +
+            //            Indent4 + "// Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore" +
+            //            Environment.NewLine + Indent4 + "CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);" +
+            //            Environment.NewLine + Indent3 + "}" + Environment.NewLine);
+            //}
 
             subAndUnsubEvents.Append(Indent2 + "}" + Environment.NewLine);
         }

@@ -355,16 +355,16 @@ namespace DataCollectionForRealtime
             {
                 for(int i = 0; i < QueryList.Count; i++)
                 {
-                    if (QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty ||
-                        QueryList[i].QueryType == QueryType.CallMethod || QueryList[i].QueryType == QueryType.SubscribeToEvent ||
-                        QueryList[i].QueryType == QueryType.UnsubscribeFromEvent)
-                    {
+                    //if (QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty ||
+                    //    QueryList[i].QueryType == QueryType.CallMethod || QueryList[i].QueryType == QueryType.SubscribeToEvent ||
+                    //    QueryList[i].QueryType == QueryType.UnsubscribeFromEvent)
+                    //{
                         AutoGenQueryProcessing(QueryList[i]);
-                    }
-                    else
-                    {
-                        ProcessQuery(QueryList[i]);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    ProcessQuery(QueryList[i]);
+                    //}
 
                 }
                 QueryList.Clear();

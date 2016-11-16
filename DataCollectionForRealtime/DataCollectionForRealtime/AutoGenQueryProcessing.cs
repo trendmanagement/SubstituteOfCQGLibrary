@@ -534,6 +534,7 @@ namespace DataCollectionForRealtime
                     { "MethodCQGBarsTimestampsClassGetEnumerator", this.MethodCQGBarsTimestampsClassGetEnumerator},
                     { "MethodCQGBarsTimestampsClassGetHashCode", this.MethodCQGBarsTimestampsClassGetHashCode},
                     { "MethodCQGBarsTimestampsClassToString", this.MethodCQGBarsTimestampsClassToString},
+                    { "CtorCQGCELClass", this.CtorCQGCELClass},
                     { "GetCQGCELClassAccounts", this.GetCQGCELClassAccounts},
                     { "GetCQGCELClassAccountSubscriptionLevel", this.GetCQGCELClassAccountSubscriptionLevel},
                     { "SetCQGCELClassAccountSubscriptionLevel", this.SetCQGCELClassAccountSubscriptionLevel},
@@ -2443,39 +2444,69 @@ namespace DataCollectionForRealtime
         }
         public void AutoGenQueryProcessing(QueryInfo query)
         {
-            qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
             object[] args = Core.ParseInputArgsFromQueryInfo(query);
             switch (query.QueryType)
             {
+                case QueryType.CallCtor:
+                    string ctorHndlrName = string.Concat("Ctor", query.ObjectType);
+                    if (!hMethods.ContainsKey(ctorHndlrName)) 
+                    {
+                        throw new System.ArgumentException(string.Concat("Operation ", ctorHndlrName, " is invalid"), "ctor name");
+                    }
+                    hMethods[ctorHndlrName](query, args); 
+                    break;
+
+                case QueryType.CallDtor:
+                    if (query.ObjectKey != CqgDataManagement.CEL_key) 
+                    {
+                        ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
+                    }
+                    break;
+
                 case QueryType.GetProperty:
+                    qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     string getHndlrName = string.Concat("Get", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(getHndlrName)) 
+                    {
                         throw new System.ArgumentException(string.Concat("Operation ", getHndlrName, " is invalid"), "getter name");
+                    }
                     hMethods[getHndlrName](query, args); 
                     break;
+
                 case QueryType.SetProperty:
+                    qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     string setHndlrName = string.Concat("Set", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(setHndlrName)) 
+                    {
                         throw new System.ArgumentException(string.Concat("Operation ", setHndlrName, " is invalid"), "setter name");
+                    }
                     hMethods[setHndlrName](query, args); 
                     break;
+
                 case QueryType.CallMethod:
+                    qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     string mthdHndlrName = string.Concat("Method", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(mthdHndlrName)) 
+                    {
                         throw new System.ArgumentException(string.Concat("Operation ", mthdHndlrName, " is invalid"), "method name");
+                    }
                     hMethods[mthdHndlrName](query, args); 
                     break;
+
                 case QueryType.SubscribeToEvent:
                 case QueryType.UnsubscribeFromEvent:
+                    qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                     string eventHndlrName = string.Concat("Event", query.ObjectType, query.MemberName);
                     if (!hMethods.ContainsKey(eventHndlrName)) 
-                        throw new System.ArgumentException(string.Concat("Operation ", eventHndlrName, " is invalid"), "method name");
+                                            {
+                        throw new System.ArgumentException(string.Concat("Operation ", eventHndlrName, " is invalid"), "event name");
+                    }
                     if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))
                     {
-                EventHandler.EventAppsSubscribersNum[query.MemberName] =
-                        query.QueryType == QueryType.SubscribeToEvent ?
-                        EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :
-                        EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;
+                        EventHandler.EventAppsSubscribersNum[query.MemberName] =
+                            query.QueryType == QueryType.SubscribeToEvent ?
+                            EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :
+                            EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;
                     }
                     else
                     {
@@ -2483,8 +2514,15 @@ namespace DataCollectionForRealtime
                     }
                     hMethods[eventHndlrName](query, args); 
                     break;
+
             }
         }
+
+            private void CtorCQGCELClass(QueryInfo query, object[] args)
+            {
+                string key = CqgDataManagement.CEL_key;
+                PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key));
+            }
 
             private void GetCQGAccountClassAccountMarginDetailing(QueryInfo query, object[] args)
             {
@@ -20105,6 +20143,7 @@ namespace DataCollectionForRealtime
                 {
                     AccountChangedObj.AccountChanged += new CQG._ICQGCELEvents_AccountChangedEventHandler(CQGEventHandlers._ICQGCELEvents_AccountChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20129,6 +20168,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyAddedObj.AdvancedStudyAdded += new CQG._ICQGCELEvents_AdvancedStudyAddedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20153,6 +20193,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyDefinitionsResolvedObj.AdvancedStudyDefinitionsResolved += new CQG._ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20177,6 +20218,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyInsertedObj.AdvancedStudyInserted += new CQG._ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20201,6 +20243,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyRemovedObj.AdvancedStudyRemoved += new CQG._ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20225,6 +20268,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyResolvedObj.AdvancedStudyResolved += new CQG._ICQGCELEvents_AdvancedStudyResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20249,6 +20293,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyUpdatedObj.AdvancedStudyUpdated += new CQG._ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20273,6 +20318,7 @@ namespace DataCollectionForRealtime
                 {
                     AlgorithmicOrderPlacedObj.AlgorithmicOrderPlaced += new CQG._ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(CQGEventHandlers._ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20297,6 +20343,7 @@ namespace DataCollectionForRealtime
                 {
                     AlgorithmicOrderRegistrationCompleteObj.AlgorithmicOrderRegistrationComplete += new CQG._ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(CQGEventHandlers._ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20321,6 +20368,7 @@ namespace DataCollectionForRealtime
                 {
                     AllOrdersCanceledObj.AllOrdersCanceled += new CQG._ICQGCELEvents_AllOrdersCanceledEventHandler(CQGEventHandlers._ICQGCELEvents_AllOrdersCanceledEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20345,6 +20393,7 @@ namespace DataCollectionForRealtime
                 {
                     AuthenticationStatusChangedObj.AuthenticationStatusChanged += new CQG._ICQGCELEvents_AuthenticationStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20369,6 +20418,7 @@ namespace DataCollectionForRealtime
                 {
                     BarsTimestampsResolvedObj.BarsTimestampsResolved += new CQG._ICQGCELEvents_BarsTimestampsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20393,6 +20443,7 @@ namespace DataCollectionForRealtime
                 {
                     CELStartedObj.CELStarted += new CQG._ICQGCELEvents_CELStartedEventHandler(CQGEventHandlers._ICQGCELEvents_CELStartedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20417,6 +20468,7 @@ namespace DataCollectionForRealtime
                 {
                     CommodityInstrumentsResolvedObj.CommodityInstrumentsResolved += new CQG._ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20441,6 +20493,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionAddedObj.ConditionAdded += new CQG._ICQGCELEvents_ConditionAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20465,6 +20518,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionDefinitionsResolvedObj.ConditionDefinitionsResolved += new CQG._ICQGCELEvents_ConditionDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20489,6 +20543,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionInsertedObj.ConditionInserted += new CQG._ICQGCELEvents_ConditionInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20513,6 +20568,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionRemovedObj.ConditionRemoved += new CQG._ICQGCELEvents_ConditionRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20537,6 +20593,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionResolvedObj.ConditionResolved += new CQG._ICQGCELEvents_ConditionResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20561,6 +20618,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionUpdatedObj.ConditionUpdated += new CQG._ICQGCELEvents_ConditionUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20585,6 +20643,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsAddedObj.ConstantVolumeBarsAdded += new CQG._ICQGCELEvents_ConstantVolumeBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20609,6 +20668,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsInsertedObj.ConstantVolumeBarsInserted += new CQG._ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20633,6 +20693,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsRemovedObj.ConstantVolumeBarsRemoved += new CQG._ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20657,6 +20718,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsResolvedObj.ConstantVolumeBarsResolved += new CQG._ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20681,6 +20743,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsUpdatedObj.ConstantVolumeBarsUpdated += new CQG._ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20705,6 +20768,7 @@ namespace DataCollectionForRealtime
                 {
                     CurrencyRatesChangedObj.CurrencyRatesChanged += new CQG._ICQGCELEvents_CurrencyRatesChangedEventHandler(CQGEventHandlers._ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20729,6 +20793,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomSessionsResolvedObj.CustomSessionsResolved += new CQG._ICQGCELEvents_CustomSessionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20753,6 +20818,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyAddedObj.CustomStudyAdded += new CQG._ICQGCELEvents_CustomStudyAddedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20777,6 +20843,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyDefinitionsResolvedObj.CustomStudyDefinitionsResolved += new CQG._ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20801,6 +20868,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyInsertedObj.CustomStudyInserted += new CQG._ICQGCELEvents_CustomStudyInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20825,6 +20893,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyRemovedObj.CustomStudyRemoved += new CQG._ICQGCELEvents_CustomStudyRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20849,6 +20918,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyResolvedObj.CustomStudyResolved += new CQG._ICQGCELEvents_CustomStudyResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20873,6 +20943,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyUpdatedObj.CustomStudyUpdated += new CQG._ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20897,15 +20968,11 @@ namespace DataCollectionForRealtime
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl);
-                }
-                if (query.QueryType == QueryType.SubscribeToEvent)
-                {
-                    // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                    CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
                 }
             }
             private void Event_ICQGCELEvents_EventDataError(QueryInfo query, object[] args)
@@ -20926,6 +20993,7 @@ namespace DataCollectionForRealtime
                 {
                     DataErrorObj.DataError += new CQG._ICQGCELEvents_DataErrorEventHandler(CQGEventHandlers._ICQGCELEvents_DataErrorEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20950,6 +21018,7 @@ namespace DataCollectionForRealtime
                 {
                     DataSourcesResolvedObj.DataSourcesResolved += new CQG._ICQGCELEvents_DataSourcesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_DataSourcesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20974,6 +21043,7 @@ namespace DataCollectionForRealtime
                 {
                     DataSourceSymbolsResolvedObj.DataSourceSymbolsResolved += new CQG._ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -20998,6 +21068,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionAddedObj.ExpressionAdded += new CQG._ICQGCELEvents_ExpressionAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21022,6 +21093,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionInsertedObj.ExpressionInserted += new CQG._ICQGCELEvents_ExpressionInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21046,6 +21118,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionRemovedObj.ExpressionRemoved += new CQG._ICQGCELEvents_ExpressionRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21070,6 +21143,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionResolvedObj.ExpressionResolved += new CQG._ICQGCELEvents_ExpressionResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21094,6 +21168,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionUpdatedObj.ExpressionUpdated += new CQG._ICQGCELEvents_ExpressionUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21118,6 +21193,7 @@ namespace DataCollectionForRealtime
                 {
                     GWConnectionStatusChangedObj.GWConnectionStatusChanged += new CQG._ICQGCELEvents_GWConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_GWConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21142,6 +21218,7 @@ namespace DataCollectionForRealtime
                 {
                     GWEnvironmentChangedObj.GWEnvironmentChanged += new CQG._ICQGCELEvents_GWEnvironmentChangedEventHandler(CQGEventHandlers._ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21166,6 +21243,7 @@ namespace DataCollectionForRealtime
                 {
                     HistoricalSessionsResolvedObj.HistoricalSessionsResolved += new CQG._ICQGCELEvents_HistoricalSessionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21190,6 +21268,7 @@ namespace DataCollectionForRealtime
                 {
                     ICConnectionStatusChangedObj.ICConnectionStatusChanged += new CQG._ICQGCELEvents_ICConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_ICConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21214,6 +21293,7 @@ namespace DataCollectionForRealtime
                 {
                     IncorrectSymbolObj.IncorrectSymbol += new CQG._ICQGCELEvents_IncorrectSymbolEventHandler(CQGEventHandlers._ICQGCELEvents_IncorrectSymbolEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21238,6 +21318,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentChangedObj.InstrumentChanged += new CQG._ICQGCELEvents_InstrumentChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21262,6 +21343,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentDOMChangedObj.InstrumentDOMChanged += new CQG._ICQGCELEvents_InstrumentDOMChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21286,6 +21368,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupChangedObj.InstrumentsGroupChanged += new CQG._ICQGCELEvents_InstrumentsGroupChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21310,6 +21393,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupResolvedObj.InstrumentsGroupResolved += new CQG._ICQGCELEvents_InstrumentsGroupResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21334,6 +21418,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentSubscribedObj.InstrumentSubscribed += new CQG._ICQGCELEvents_InstrumentSubscribedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentSubscribedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21358,6 +21443,7 @@ namespace DataCollectionForRealtime
                 {
                     LineTimeChangedObj.LineTimeChanged += new CQG._ICQGCELEvents_LineTimeChangedEventHandler(CQGEventHandlers._ICQGCELEvents_LineTimeChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21382,6 +21468,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillChangedObj.ManualFillChanged += new CQG._ICQGCELEvents_ManualFillChangedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21406,6 +21493,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillsResolvedObj.ManualFillsResolved += new CQG._ICQGCELEvents_ManualFillsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21430,6 +21518,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillUpdateResolvedObj.ManualFillUpdateResolved += new CQG._ICQGCELEvents_ManualFillUpdateResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21454,6 +21543,7 @@ namespace DataCollectionForRealtime
                 {
                     OnIdleObj.OnIdle += new CQG._ICQGCELEvents_OnIdleEventHandler(CQGEventHandlers._ICQGCELEvents_OnIdleEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21478,6 +21568,7 @@ namespace DataCollectionForRealtime
                 {
                     OnQueryProgressObj.OnQueryProgress += new CQG._ICQGCELEvents_OnQueryProgressEventHandler(CQGEventHandlers._ICQGCELEvents_OnQueryProgressEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21502,6 +21593,7 @@ namespace DataCollectionForRealtime
                 {
                     OrderChangedObj.OrderChanged += new CQG._ICQGCELEvents_OrderChangedEventHandler(CQGEventHandlers._ICQGCELEvents_OrderChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21526,6 +21618,7 @@ namespace DataCollectionForRealtime
                 {
                     PasswordChangedObj.PasswordChanged += new CQG._ICQGCELEvents_PasswordChangedEventHandler(CQGEventHandlers._ICQGCELEvents_PasswordChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21550,6 +21643,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsAddedObj.PointAndFigureBarsAdded += new CQG._ICQGCELEvents_PointAndFigureBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21574,6 +21668,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsInsertedObj.PointAndFigureBarsInserted += new CQG._ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21598,6 +21693,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsRemovedObj.PointAndFigureBarsRemoved += new CQG._ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21622,6 +21718,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsResolvedObj.PointAndFigureBarsResolved += new CQG._ICQGCELEvents_PointAndFigureBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21646,6 +21743,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsUpdatedObj.PointAndFigureBarsUpdated += new CQG._ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21670,6 +21768,7 @@ namespace DataCollectionForRealtime
                 {
                     PositionsStatementResolvedObj.PositionsStatementResolved += new CQG._ICQGCELEvents_PositionsStatementResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21694,6 +21793,7 @@ namespace DataCollectionForRealtime
                 {
                     QFormulaDefinitionsResolvedObj.QFormulaDefinitionsResolved += new CQG._ICQGCELEvents_QFormulaDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21718,6 +21818,7 @@ namespace DataCollectionForRealtime
                 {
                     StrategyDefinitionProgressObj.StrategyDefinitionProgress += new CQG._ICQGCELEvents_StrategyDefinitionProgressEventHandler(CQGEventHandlers._ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21742,6 +21843,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsAddedObj.SubMinuteBarsAdded += new CQG._ICQGCELEvents_SubMinuteBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21766,6 +21868,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsInsertedObj.SubMinuteBarsInserted += new CQG._ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21790,6 +21893,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsRemovedObj.SubMinuteBarsRemoved += new CQG._ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21814,6 +21918,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsResolvedObj.SubMinuteBarsResolved += new CQG._ICQGCELEvents_SubMinuteBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21838,6 +21943,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsUpdatedObj.SubMinuteBarsUpdated += new CQG._ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21862,6 +21968,7 @@ namespace DataCollectionForRealtime
                 {
                     SummariesStatementResolvedObj.SummariesStatementResolved += new CQG._ICQGCELEvents_SummariesStatementResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21886,6 +21993,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsAddedObj.TFlowBarsAdded += new CQG._ICQGCELEvents_TFlowBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21910,6 +22018,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsInsertedObj.TFlowBarsInserted += new CQG._ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21934,6 +22043,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsRemovedObj.TFlowBarsRemoved += new CQG._ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21958,6 +22068,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsResolvedObj.TFlowBarsResolved += new CQG._ICQGCELEvents_TFlowBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -21982,6 +22093,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsUpdatedObj.TFlowBarsUpdated += new CQG._ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22006,6 +22118,7 @@ namespace DataCollectionForRealtime
                 {
                     TicksAddedObj.TicksAdded += new CQG._ICQGCELEvents_TicksAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TicksAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22030,6 +22143,7 @@ namespace DataCollectionForRealtime
                 {
                     TicksResolvedObj.TicksResolved += new CQG._ICQGCELEvents_TicksResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TicksResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22054,6 +22168,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsAddedObj.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22078,6 +22193,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsInsertedObj.TimedBarsInserted += new CQG._ICQGCELEvents_TimedBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22102,6 +22218,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsRemovedObj.TimedBarsRemoved += new CQG._ICQGCELEvents_TimedBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22126,6 +22243,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsResolvedObj.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22150,6 +22268,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsUpdatedObj.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22174,6 +22293,7 @@ namespace DataCollectionForRealtime
                 {
                     TradableCommoditiesResolvedObj.TradableCommoditiesResolved += new CQG._ICQGCELEvents_TradableCommoditiesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22198,6 +22318,7 @@ namespace DataCollectionForRealtime
                 {
                     TradableExchangesResolvedObj.TradableExchangesResolved += new CQG._ICQGCELEvents_TradableExchangesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22222,6 +22343,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemAddNotificationObj.TradingSystemAddNotification += new CQG._ICQGCELEvents_TradingSystemAddNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22246,6 +22368,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemDefinitionsResolvedObj.TradingSystemDefinitionsResolved += new CQG._ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22270,6 +22393,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemInsertNotificationObj.TradingSystemInsertNotification += new CQG._ICQGCELEvents_TradingSystemInsertNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22294,6 +22418,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemRemoveNotificationObj.TradingSystemRemoveNotification += new CQG._ICQGCELEvents_TradingSystemRemoveNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22318,6 +22443,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemResolvedObj.TradingSystemResolved += new CQG._ICQGCELEvents_TradingSystemResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22342,6 +22468,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemTradeRelationAddNotificationObj.TradingSystemTradeRelationAddNotification += new CQG._ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22366,6 +22493,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemUpdateNotificationObj.TradingSystemUpdateNotification += new CQG._ICQGCELEvents_TradingSystemUpdateNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22390,6 +22518,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsAddedObj.YieldsAdded += new CQG._ICQGCELEvents_YieldsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22414,6 +22543,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsInsertedObj.YieldsInserted += new CQG._ICQGCELEvents_YieldsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22438,6 +22568,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsRemovedObj.YieldsRemoved += new CQG._ICQGCELEvents_YieldsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22462,6 +22593,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsResolvedObj.YieldsResolved += new CQG._ICQGCELEvents_YieldsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22486,6 +22618,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsUpdatedObj.YieldsUpdated += new CQG._ICQGCELEvents_YieldsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22510,6 +22643,7 @@ namespace DataCollectionForRealtime
                 {
                     CELStartedObj.CELStarted += new CQG._ICQGCELGeneralEvents_CELStartedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_CELStartedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22534,6 +22668,7 @@ namespace DataCollectionForRealtime
                 {
                     CurrencyRatesChangedObj.CurrencyRatesChanged += new CQG._ICQGCELGeneralEvents_CurrencyRatesChangedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_CurrencyRatesChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22558,15 +22693,11 @@ namespace DataCollectionForRealtime
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_DataConnectionStatusChangedEventHandlerImpl);
-                }
-                if (query.QueryType == QueryType.SubscribeToEvent)
-                {
-                    // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                    CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
                 }
             }
             private void Event_ICQGCELGeneralEvents_EventDataError(QueryInfo query, object[] args)
@@ -22587,6 +22718,7 @@ namespace DataCollectionForRealtime
                 {
                     DataErrorObj.DataError += new CQG._ICQGCELGeneralEvents_DataErrorEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_DataErrorEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22611,6 +22743,7 @@ namespace DataCollectionForRealtime
                 {
                     GWConnectionStatusChangedObj.GWConnectionStatusChanged += new CQG._ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_GWConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22635,6 +22768,7 @@ namespace DataCollectionForRealtime
                 {
                     LineTimeChangedObj.LineTimeChanged += new CQG._ICQGCELGeneralEvents_LineTimeChangedEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_LineTimeChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22659,6 +22793,7 @@ namespace DataCollectionForRealtime
                 {
                     OnIdleObj.OnIdle += new CQG._ICQGCELGeneralEvents_OnIdleEventHandler(CQGEventHandlers._ICQGCELGeneralEvents_OnIdleEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22683,6 +22818,7 @@ namespace DataCollectionForRealtime
                 {
                     CommodityInstrumentsResolvedObj.CommodityInstrumentsResolved += new CQG._ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22707,6 +22843,7 @@ namespace DataCollectionForRealtime
                 {
                     IncorrectSymbolObj.IncorrectSymbol += new CQG._ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22731,6 +22868,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentChangedObj.InstrumentChanged += new CQG._ICQGCELInstrumentEvents_InstrumentChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22755,6 +22893,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentDOMChangedObj.InstrumentDOMChanged += new CQG._ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22779,6 +22918,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupChangedObj.InstrumentsGroupChanged += new CQG._ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22803,6 +22943,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupResolvedObj.InstrumentsGroupResolved += new CQG._ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22827,6 +22968,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentSubscribedObj.InstrumentSubscribed += new CQG._ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22851,6 +22993,7 @@ namespace DataCollectionForRealtime
                 {
                     AccountChangedObj.AccountChanged += new CQG._ICQGCELEvents_AccountChangedEventHandler(CQGEventHandlers._ICQGCELEvents_AccountChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22875,6 +23018,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyAddedObj.AdvancedStudyAdded += new CQG._ICQGCELEvents_AdvancedStudyAddedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22899,6 +23043,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyDefinitionsResolvedObj.AdvancedStudyDefinitionsResolved += new CQG._ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22923,6 +23068,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyInsertedObj.AdvancedStudyInserted += new CQG._ICQGCELEvents_AdvancedStudyInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22947,6 +23093,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyRemovedObj.AdvancedStudyRemoved += new CQG._ICQGCELEvents_AdvancedStudyRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22971,6 +23118,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyResolvedObj.AdvancedStudyResolved += new CQG._ICQGCELEvents_AdvancedStudyResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -22995,6 +23143,7 @@ namespace DataCollectionForRealtime
                 {
                     AdvancedStudyUpdatedObj.AdvancedStudyUpdated += new CQG._ICQGCELEvents_AdvancedStudyUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_AdvancedStudyUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23019,6 +23168,7 @@ namespace DataCollectionForRealtime
                 {
                     AlgorithmicOrderPlacedObj.AlgorithmicOrderPlaced += new CQG._ICQGCELEvents_AlgorithmicOrderPlacedEventHandler(CQGEventHandlers._ICQGCELEvents_AlgorithmicOrderPlacedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23043,6 +23193,7 @@ namespace DataCollectionForRealtime
                 {
                     AlgorithmicOrderRegistrationCompleteObj.AlgorithmicOrderRegistrationComplete += new CQG._ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandler(CQGEventHandlers._ICQGCELEvents_AlgorithmicOrderRegistrationCompleteEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23067,6 +23218,7 @@ namespace DataCollectionForRealtime
                 {
                     AllOrdersCanceledObj.AllOrdersCanceled += new CQG._ICQGCELEvents_AllOrdersCanceledEventHandler(CQGEventHandlers._ICQGCELEvents_AllOrdersCanceledEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23091,6 +23243,7 @@ namespace DataCollectionForRealtime
                 {
                     AuthenticationStatusChangedObj.AuthenticationStatusChanged += new CQG._ICQGCELEvents_AuthenticationStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_AuthenticationStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23115,6 +23268,7 @@ namespace DataCollectionForRealtime
                 {
                     BarsTimestampsResolvedObj.BarsTimestampsResolved += new CQG._ICQGCELEvents_BarsTimestampsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_BarsTimestampsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23139,6 +23293,7 @@ namespace DataCollectionForRealtime
                 {
                     CELStartedObj.CELStarted += new CQG._ICQGCELEvents_CELStartedEventHandler(CQGEventHandlers._ICQGCELEvents_CELStartedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23163,6 +23318,7 @@ namespace DataCollectionForRealtime
                 {
                     CommodityInstrumentsResolvedObj.CommodityInstrumentsResolved += new CQG._ICQGCELEvents_CommodityInstrumentsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CommodityInstrumentsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23187,6 +23343,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionAddedObj.ConditionAdded += new CQG._ICQGCELEvents_ConditionAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23211,6 +23368,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionDefinitionsResolvedObj.ConditionDefinitionsResolved += new CQG._ICQGCELEvents_ConditionDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23235,6 +23393,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionInsertedObj.ConditionInserted += new CQG._ICQGCELEvents_ConditionInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23259,6 +23418,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionRemovedObj.ConditionRemoved += new CQG._ICQGCELEvents_ConditionRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23283,6 +23443,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionResolvedObj.ConditionResolved += new CQG._ICQGCELEvents_ConditionResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23307,6 +23468,7 @@ namespace DataCollectionForRealtime
                 {
                     ConditionUpdatedObj.ConditionUpdated += new CQG._ICQGCELEvents_ConditionUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ConditionUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23331,6 +23493,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsAddedObj.ConstantVolumeBarsAdded += new CQG._ICQGCELEvents_ConstantVolumeBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23355,6 +23518,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsInsertedObj.ConstantVolumeBarsInserted += new CQG._ICQGCELEvents_ConstantVolumeBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23379,6 +23543,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsRemovedObj.ConstantVolumeBarsRemoved += new CQG._ICQGCELEvents_ConstantVolumeBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23403,6 +23568,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsResolvedObj.ConstantVolumeBarsResolved += new CQG._ICQGCELEvents_ConstantVolumeBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23427,6 +23593,7 @@ namespace DataCollectionForRealtime
                 {
                     ConstantVolumeBarsUpdatedObj.ConstantVolumeBarsUpdated += new CQG._ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ConstantVolumeBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23451,6 +23618,7 @@ namespace DataCollectionForRealtime
                 {
                     CurrencyRatesChangedObj.CurrencyRatesChanged += new CQG._ICQGCELEvents_CurrencyRatesChangedEventHandler(CQGEventHandlers._ICQGCELEvents_CurrencyRatesChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23475,6 +23643,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomSessionsResolvedObj.CustomSessionsResolved += new CQG._ICQGCELEvents_CustomSessionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomSessionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23499,6 +23668,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyAddedObj.CustomStudyAdded += new CQG._ICQGCELEvents_CustomStudyAddedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23523,6 +23693,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyDefinitionsResolvedObj.CustomStudyDefinitionsResolved += new CQG._ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23547,6 +23718,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyInsertedObj.CustomStudyInserted += new CQG._ICQGCELEvents_CustomStudyInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23571,6 +23743,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyRemovedObj.CustomStudyRemoved += new CQG._ICQGCELEvents_CustomStudyRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23595,6 +23768,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyResolvedObj.CustomStudyResolved += new CQG._ICQGCELEvents_CustomStudyResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23619,6 +23793,7 @@ namespace DataCollectionForRealtime
                 {
                     CustomStudyUpdatedObj.CustomStudyUpdated += new CQG._ICQGCELEvents_CustomStudyUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_CustomStudyUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23643,15 +23818,14 @@ namespace DataCollectionForRealtime
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
+
+                    // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
+                    CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
                 }
                 else
                 {
                     DataConnectionStatusChangedObj.DataConnectionStatusChanged += new CQG._ICQGCELEvents_DataConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl);
-                }
-                if (query.QueryType == QueryType.SubscribeToEvent)
-                {
-                    // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
-                    CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
                 }
             }
             private void EventCQGCELClassDataError(QueryInfo query, object[] args)
@@ -23672,6 +23846,7 @@ namespace DataCollectionForRealtime
                 {
                     DataErrorObj.DataError += new CQG._ICQGCELEvents_DataErrorEventHandler(CQGEventHandlers._ICQGCELEvents_DataErrorEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23696,6 +23871,7 @@ namespace DataCollectionForRealtime
                 {
                     DataSourcesResolvedObj.DataSourcesResolved += new CQG._ICQGCELEvents_DataSourcesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_DataSourcesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23720,6 +23896,7 @@ namespace DataCollectionForRealtime
                 {
                     DataSourceSymbolsResolvedObj.DataSourceSymbolsResolved += new CQG._ICQGCELEvents_DataSourceSymbolsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_DataSourceSymbolsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23744,6 +23921,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionAddedObj.ExpressionAdded += new CQG._ICQGCELEvents_ExpressionAddedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23768,6 +23946,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionInsertedObj.ExpressionInserted += new CQG._ICQGCELEvents_ExpressionInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23792,6 +23971,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionRemovedObj.ExpressionRemoved += new CQG._ICQGCELEvents_ExpressionRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23816,6 +23996,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionResolvedObj.ExpressionResolved += new CQG._ICQGCELEvents_ExpressionResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23840,6 +24021,7 @@ namespace DataCollectionForRealtime
                 {
                     ExpressionUpdatedObj.ExpressionUpdated += new CQG._ICQGCELEvents_ExpressionUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_ExpressionUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23864,6 +24046,7 @@ namespace DataCollectionForRealtime
                 {
                     GWConnectionStatusChangedObj.GWConnectionStatusChanged += new CQG._ICQGCELEvents_GWConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_GWConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23888,6 +24071,7 @@ namespace DataCollectionForRealtime
                 {
                     GWEnvironmentChangedObj.GWEnvironmentChanged += new CQG._ICQGCELEvents_GWEnvironmentChangedEventHandler(CQGEventHandlers._ICQGCELEvents_GWEnvironmentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23912,6 +24096,7 @@ namespace DataCollectionForRealtime
                 {
                     HistoricalSessionsResolvedObj.HistoricalSessionsResolved += new CQG._ICQGCELEvents_HistoricalSessionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_HistoricalSessionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23936,6 +24121,7 @@ namespace DataCollectionForRealtime
                 {
                     ICConnectionStatusChangedObj.ICConnectionStatusChanged += new CQG._ICQGCELEvents_ICConnectionStatusChangedEventHandler(CQGEventHandlers._ICQGCELEvents_ICConnectionStatusChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23960,6 +24146,7 @@ namespace DataCollectionForRealtime
                 {
                     IncorrectSymbolObj.IncorrectSymbol += new CQG._ICQGCELEvents_IncorrectSymbolEventHandler(CQGEventHandlers._ICQGCELEvents_IncorrectSymbolEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -23984,6 +24171,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentChangedObj.InstrumentChanged += new CQG._ICQGCELEvents_InstrumentChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24008,6 +24196,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentDOMChangedObj.InstrumentDOMChanged += new CQG._ICQGCELEvents_InstrumentDOMChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentDOMChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24032,6 +24221,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupChangedObj.InstrumentsGroupChanged += new CQG._ICQGCELEvents_InstrumentsGroupChangedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentsGroupChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24056,6 +24246,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupResolvedObj.InstrumentsGroupResolved += new CQG._ICQGCELEvents_InstrumentsGroupResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentsGroupResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24080,6 +24271,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentSubscribedObj.InstrumentSubscribed += new CQG._ICQGCELEvents_InstrumentSubscribedEventHandler(CQGEventHandlers._ICQGCELEvents_InstrumentSubscribedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24104,6 +24296,7 @@ namespace DataCollectionForRealtime
                 {
                     LineTimeChangedObj.LineTimeChanged += new CQG._ICQGCELEvents_LineTimeChangedEventHandler(CQGEventHandlers._ICQGCELEvents_LineTimeChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24128,6 +24321,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillChangedObj.ManualFillChanged += new CQG._ICQGCELEvents_ManualFillChangedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24152,6 +24346,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillsResolvedObj.ManualFillsResolved += new CQG._ICQGCELEvents_ManualFillsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24176,6 +24371,7 @@ namespace DataCollectionForRealtime
                 {
                     ManualFillUpdateResolvedObj.ManualFillUpdateResolved += new CQG._ICQGCELEvents_ManualFillUpdateResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_ManualFillUpdateResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24200,6 +24396,7 @@ namespace DataCollectionForRealtime
                 {
                     OnIdleObj.OnIdle += new CQG._ICQGCELEvents_OnIdleEventHandler(CQGEventHandlers._ICQGCELEvents_OnIdleEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24224,6 +24421,7 @@ namespace DataCollectionForRealtime
                 {
                     OnQueryProgressObj.OnQueryProgress += new CQG._ICQGCELEvents_OnQueryProgressEventHandler(CQGEventHandlers._ICQGCELEvents_OnQueryProgressEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24248,6 +24446,7 @@ namespace DataCollectionForRealtime
                 {
                     OrderChangedObj.OrderChanged += new CQG._ICQGCELEvents_OrderChangedEventHandler(CQGEventHandlers._ICQGCELEvents_OrderChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24272,6 +24471,7 @@ namespace DataCollectionForRealtime
                 {
                     PasswordChangedObj.PasswordChanged += new CQG._ICQGCELEvents_PasswordChangedEventHandler(CQGEventHandlers._ICQGCELEvents_PasswordChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24296,6 +24496,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsAddedObj.PointAndFigureBarsAdded += new CQG._ICQGCELEvents_PointAndFigureBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24320,6 +24521,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsInsertedObj.PointAndFigureBarsInserted += new CQG._ICQGCELEvents_PointAndFigureBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24344,6 +24546,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsRemovedObj.PointAndFigureBarsRemoved += new CQG._ICQGCELEvents_PointAndFigureBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24368,6 +24571,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsResolvedObj.PointAndFigureBarsResolved += new CQG._ICQGCELEvents_PointAndFigureBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24392,6 +24596,7 @@ namespace DataCollectionForRealtime
                 {
                     PointAndFigureBarsUpdatedObj.PointAndFigureBarsUpdated += new CQG._ICQGCELEvents_PointAndFigureBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_PointAndFigureBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24416,6 +24621,7 @@ namespace DataCollectionForRealtime
                 {
                     PositionsStatementResolvedObj.PositionsStatementResolved += new CQG._ICQGCELEvents_PositionsStatementResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_PositionsStatementResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24440,6 +24646,7 @@ namespace DataCollectionForRealtime
                 {
                     QFormulaDefinitionsResolvedObj.QFormulaDefinitionsResolved += new CQG._ICQGCELEvents_QFormulaDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_QFormulaDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24464,6 +24671,7 @@ namespace DataCollectionForRealtime
                 {
                     StrategyDefinitionProgressObj.StrategyDefinitionProgress += new CQG._ICQGCELEvents_StrategyDefinitionProgressEventHandler(CQGEventHandlers._ICQGCELEvents_StrategyDefinitionProgressEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24488,6 +24696,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsAddedObj.SubMinuteBarsAdded += new CQG._ICQGCELEvents_SubMinuteBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24512,6 +24721,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsInsertedObj.SubMinuteBarsInserted += new CQG._ICQGCELEvents_SubMinuteBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24536,6 +24746,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsRemovedObj.SubMinuteBarsRemoved += new CQG._ICQGCELEvents_SubMinuteBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24560,6 +24771,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsResolvedObj.SubMinuteBarsResolved += new CQG._ICQGCELEvents_SubMinuteBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24584,6 +24796,7 @@ namespace DataCollectionForRealtime
                 {
                     SubMinuteBarsUpdatedObj.SubMinuteBarsUpdated += new CQG._ICQGCELEvents_SubMinuteBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_SubMinuteBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24608,6 +24821,7 @@ namespace DataCollectionForRealtime
                 {
                     SummariesStatementResolvedObj.SummariesStatementResolved += new CQG._ICQGCELEvents_SummariesStatementResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_SummariesStatementResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24632,6 +24846,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsAddedObj.TFlowBarsAdded += new CQG._ICQGCELEvents_TFlowBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24656,6 +24871,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsInsertedObj.TFlowBarsInserted += new CQG._ICQGCELEvents_TFlowBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24680,6 +24896,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsRemovedObj.TFlowBarsRemoved += new CQG._ICQGCELEvents_TFlowBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24704,6 +24921,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsResolvedObj.TFlowBarsResolved += new CQG._ICQGCELEvents_TFlowBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24728,6 +24946,7 @@ namespace DataCollectionForRealtime
                 {
                     TFlowBarsUpdatedObj.TFlowBarsUpdated += new CQG._ICQGCELEvents_TFlowBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_TFlowBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24752,6 +24971,7 @@ namespace DataCollectionForRealtime
                 {
                     TicksAddedObj.TicksAdded += new CQG._ICQGCELEvents_TicksAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TicksAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24776,6 +24996,7 @@ namespace DataCollectionForRealtime
                 {
                     TicksResolvedObj.TicksResolved += new CQG._ICQGCELEvents_TicksResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TicksResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24800,6 +25021,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsAddedObj.TimedBarsAdded += new CQG._ICQGCELEvents_TimedBarsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24824,6 +25046,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsInsertedObj.TimedBarsInserted += new CQG._ICQGCELEvents_TimedBarsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24848,6 +25071,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsRemovedObj.TimedBarsRemoved += new CQG._ICQGCELEvents_TimedBarsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24872,6 +25096,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsResolvedObj.TimedBarsResolved += new CQG._ICQGCELEvents_TimedBarsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24896,6 +25121,7 @@ namespace DataCollectionForRealtime
                 {
                     TimedBarsUpdatedObj.TimedBarsUpdated += new CQG._ICQGCELEvents_TimedBarsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_TimedBarsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24920,6 +25146,7 @@ namespace DataCollectionForRealtime
                 {
                     TradableCommoditiesResolvedObj.TradableCommoditiesResolved += new CQG._ICQGCELEvents_TradableCommoditiesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradableCommoditiesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24944,6 +25171,7 @@ namespace DataCollectionForRealtime
                 {
                     TradableExchangesResolvedObj.TradableExchangesResolved += new CQG._ICQGCELEvents_TradableExchangesResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradableExchangesResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24968,6 +25196,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemAddNotificationObj.TradingSystemAddNotification += new CQG._ICQGCELEvents_TradingSystemAddNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemAddNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -24992,6 +25221,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemDefinitionsResolvedObj.TradingSystemDefinitionsResolved += new CQG._ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemDefinitionsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25016,6 +25246,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemInsertNotificationObj.TradingSystemInsertNotification += new CQG._ICQGCELEvents_TradingSystemInsertNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemInsertNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25040,6 +25271,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemRemoveNotificationObj.TradingSystemRemoveNotification += new CQG._ICQGCELEvents_TradingSystemRemoveNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemRemoveNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25064,6 +25296,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemResolvedObj.TradingSystemResolved += new CQG._ICQGCELEvents_TradingSystemResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25088,6 +25321,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemTradeRelationAddNotificationObj.TradingSystemTradeRelationAddNotification += new CQG._ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemTradeRelationAddNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25112,6 +25346,7 @@ namespace DataCollectionForRealtime
                 {
                     TradingSystemUpdateNotificationObj.TradingSystemUpdateNotification += new CQG._ICQGCELEvents_TradingSystemUpdateNotificationEventHandler(CQGEventHandlers._ICQGCELEvents_TradingSystemUpdateNotificationEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25136,6 +25371,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsAddedObj.YieldsAdded += new CQG._ICQGCELEvents_YieldsAddedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsAddedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25160,6 +25396,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsInsertedObj.YieldsInserted += new CQG._ICQGCELEvents_YieldsInsertedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsInsertedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25184,6 +25421,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsRemovedObj.YieldsRemoved += new CQG._ICQGCELEvents_YieldsRemovedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsRemovedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25208,6 +25446,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsResolvedObj.YieldsResolved += new CQG._ICQGCELEvents_YieldsResolvedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25232,6 +25471,7 @@ namespace DataCollectionForRealtime
                 {
                     YieldsUpdatedObj.YieldsUpdated += new CQG._ICQGCELEvents_YieldsUpdatedEventHandler(CQGEventHandlers._ICQGCELEvents_YieldsUpdatedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25256,6 +25496,7 @@ namespace DataCollectionForRealtime
                 {
                     CommodityInstrumentsResolvedObj.CommodityInstrumentsResolved += new CQG._ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_CommodityInstrumentsResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25280,6 +25521,7 @@ namespace DataCollectionForRealtime
                 {
                     IncorrectSymbolObj.IncorrectSymbol += new CQG._ICQGCELInstrumentEvents_IncorrectSymbolEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_IncorrectSymbolEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25304,6 +25546,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentChangedObj.InstrumentChanged += new CQG._ICQGCELInstrumentEvents_InstrumentChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25328,6 +25571,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentDOMChangedObj.InstrumentDOMChanged += new CQG._ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentDOMChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25352,6 +25596,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupChangedObj.InstrumentsGroupChanged += new CQG._ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentsGroupChangedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25376,6 +25621,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentsGroupResolvedObj.InstrumentsGroupResolved += new CQG._ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentsGroupResolvedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
@@ -25400,6 +25646,7 @@ namespace DataCollectionForRealtime
                 {
                     InstrumentSubscribedObj.InstrumentSubscribed += new CQG._ICQGCELInstrumentEvents_InstrumentSubscribedEventHandler(CQGEventHandlers._ICQGCELInstrumentEvents_InstrumentSubscribedEventHandlerImpl);
 
+                    PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));
                 }
                 else
                 {
