@@ -55,6 +55,7 @@ namespace UnitTestFakeCQG
             // arrange
             var queryType = QueryType.SetProperty;
             string[] keys = { "key1", "key2", "key3", "key4" };
+            string objectType = default(string);
             string objectKey = default(string);
             string memberName = "name";
             var argumentKeys = new Dictionary<int, string>() { { 0, "argumentKey" } };
@@ -62,10 +63,10 @@ namespace UnitTestFakeCQG
             var queryList = new List<QueryInfo>();
 
             // act
-            queryList.Add(Core.CreateQuery(queryType, keys[0], objectKey, memberName, argumentKeys, argumentValues));
-            queryList.Add(Core.CreateQuery(queryType, keys[1], objectKey, memberName, argumentKeys, null));
-            queryList.Add(Core.CreateQuery(queryType, keys[2], objectKey, memberName, null, argumentValues));
-            queryList.Add(Core.CreateQuery(queryType, keys[3], objectKey, memberName, null, null));
+            queryList.Add(Core.CreateQuery(queryType, keys[0], objectType, objectKey, memberName, argumentKeys, argumentValues));
+            queryList.Add(Core.CreateQuery(queryType, keys[1], objectType, objectKey, memberName, argumentKeys, null));
+            queryList.Add(Core.CreateQuery(queryType, keys[2], objectType, objectKey, memberName, null, argumentValues));
+            queryList.Add(Core.CreateQuery(queryType, keys[3], objectType, objectKey, memberName, null, null));
 
             // assert
             Assert.AreEqual(keys[0], queryList[0].QueryKey);
