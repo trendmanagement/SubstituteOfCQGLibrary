@@ -21,7 +21,7 @@ namespace CodeGenerator
             bool stringFound = false;
 
             propTypeName = pTypeName;
-
+            
             propInterfName = propTypeName.Substring(0, propTypeName.Length - 5);
 
             foreach (PropertyInfo pinfo in SortProperties(pinfos))
@@ -158,7 +158,7 @@ namespace CodeGenerator
                     getProp.Append(Indent2 + "private void Get" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" + 
                         Environment.NewLine + Indent2 + "{" + Environment.NewLine);
 
-                    hMethodsDict.Append(Indent4 + "{ \"Get" + propTypeName + pinfo.Name + "\", this.Get" + propTypeName + pinfo.Name + "}," +
+                    hQPOfGettersDict.Append(Indent4 + "{ \"Get" + propTypeName + pinfo.Name + "\", this.Get" + propTypeName + pinfo.Name + "}," +
                         Environment.NewLine);
 
                     if (pinfo.Name == "IsStarted")
@@ -258,7 +258,7 @@ namespace CodeGenerator
                     setProp.Append(Indent2 + "private void Set" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" +
                         Environment.NewLine + Indent2 + "{" + Environment.NewLine);
 
-                    hMethodsDict.Append(Indent4 + "{ \"Set" + propTypeName + pinfo.Name + "\", this.Set" + propTypeName + pinfo.Name + "}," + 
+                    hQPOfSettersDict.Append(Indent4 + "{ \"Set" + propTypeName + pinfo.Name + "\", this.Set" + propTypeName + pinfo.Name + "}," + 
                         Environment.NewLine);
 
                     setProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +

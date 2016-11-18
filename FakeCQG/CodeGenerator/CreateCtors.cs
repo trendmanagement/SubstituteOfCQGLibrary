@@ -47,7 +47,7 @@ namespace CodeGenerator
             ctorCall.Append(Indent2 + "private void Ctor" + cinfo.DeclaringType.Name + "(QueryInfo query, object[] args)" +
                 Environment.NewLine + Indent2 + "{" + Environment.NewLine);
 
-            hMethodsDict.Append(Indent4 + "{ \"Ctor" + cinfo.DeclaringType.Name + "\", this.Ctor" + cinfo.DeclaringType.Name + "}," +
+            hQPOfCtrosDict.Append(Indent4 + "{ \"Ctor" + cinfo.DeclaringType.Name + "\", this.Ctor" + cinfo.DeclaringType.Name + "}," +
                 Environment.NewLine);
 
             if (cinfo.DeclaringType.Name == "CQGCELClass")

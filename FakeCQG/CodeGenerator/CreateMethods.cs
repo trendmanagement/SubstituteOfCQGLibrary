@@ -40,6 +40,7 @@ namespace CodeGenerator
             {
                 CreateMethod(minfo, type.IsInterface, type.IsValueType);
             }
+            
         }
 
         static void CreateMethod(MethodInfo minfo, bool isInterface, bool isStruct)
@@ -136,7 +137,7 @@ namespace CodeGenerator
                 methodCall.Append(Indent2 + "private void Method" + methodTypeName + minfo.Name + "(QueryInfo query, object[] args)" +
                 Environment.NewLine + Indent2 + "{" + Environment.NewLine);
 
-                hMethodsDict.Append(Indent4 + "{ \"Method" + methodTypeName + minfo.Name + "\", this.Method" + methodTypeName + minfo.Name + "}," +
+                hQPOfMethodsDict.Append(Indent4 + "{ \"Method" + methodTypeName + minfo.Name + "\", this.Method" + methodTypeName + minfo.Name + "}," +
                     Environment.NewLine);
 
                 if (methodTypeName.StartsWith("_ICQGCELGeneralEvents"))

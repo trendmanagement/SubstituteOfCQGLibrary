@@ -174,7 +174,7 @@ namespace FakeCQG
                 switch (qType)
                 {
                     case QueryType.CallCtor:
-                        model = new QueryInfo(qType, qKey, memberName: memName, argKeys: argKeys, argValues: argVals);
+                        model = new QueryInfo(qType, qKey, objectType: objType, memberName: memName, argKeys: argKeys, argValues: argVals);
                         ClientDictionaries.ObjectNames.Add(objKey);
                         break;
                     case QueryType.CallDtor:

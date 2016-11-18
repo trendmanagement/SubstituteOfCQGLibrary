@@ -14558,8 +14558,8 @@ namespace FakeCQG
         public CQGCELClass()
         {
             string name = "CQG.CQGCELClass";
-            dcObjKey = Internal.Core.CallCtor(name);
             this.dcObjType = "CQGCELClass";
+            dcObjKey = Internal.Core.CallCtor(name, this.dcObjType);
             eventCheckingTimer = new System.Timers.Timer();
             eventCheckingTimer.Interval = 30;
             eventCheckingTimer.Elapsed += eventCheckingTimer_Tick;

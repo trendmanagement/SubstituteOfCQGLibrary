@@ -4,9 +4,9 @@ namespace FakeCQG.Internal
 {
     public static partial class Core
     {
-        public static string CallCtor(string typeName)
+        public static string CallCtor(string fullTypeName, string typeName)
         {
-            string dcObjKey = (string)ExecuteTheQuery(QueryType.CallCtor, memName: typeName);
+            string dcObjKey = (string)ExecuteTheQuery(QueryType.CallCtor, dcObjType: typeName, memName: fullTypeName);
             return dcObjKey;
         }
 

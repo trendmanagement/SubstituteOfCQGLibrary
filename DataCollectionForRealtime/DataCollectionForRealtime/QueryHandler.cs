@@ -95,13 +95,20 @@ namespace DataCollectionForRealtime
                             }
 
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key);
+                            PushAnswerAndDeleteQuery(answer);
                         }
-                        catch (Exception ex)
+                        catch 
                         {
-                            answer = CreateExceptionAnswer(ex, query);
-                        }
-
-                        PushAnswerAndDeleteQuery(answer);
+                            try
+                            {
+                                AutoGenQueryProcessing(query);
+                            }
+                            catch (Exception ex)
+                            {
+                                answer = CreateExceptionAnswer(ex, query);
+                                PushAnswerAndDeleteQuery(answer);
+                            }                           
+                        }   
                     }
                     break;
 
@@ -156,13 +163,21 @@ namespace DataCollectionForRealtime
                             answer = Core.IsSerializableType(propV.GetType()) ?
                                 CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
                                 CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
-                        }
-                        catch (Exception ex)
-                        {
-                            answer = CreateExceptionAnswer(ex, query);
-                        }
 
-                        PushAnswerAndDeleteQuery(answer);
+                            PushAnswerAndDeleteQuery(answer);
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                AutoGenQueryProcessing(query);
+                            }
+                            catch (Exception ex)
+                            {
+                                answer = CreateExceptionAnswer(ex, query);
+                                PushAnswerAndDeleteQuery(answer);
+                            }
+                        }                       
                     }
                     break;
 
@@ -183,13 +198,21 @@ namespace DataCollectionForRealtime
                             // Setting of property value
                             qObj.GetType().InvokeMember(query.MemberName, BindingFlags.SetProperty, null, qObj, args);
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
-                        }
-                        catch (Exception ex)
-                        {
-                            answer = CreateExceptionAnswer(ex, query);
-                        }
 
-                        PushAnswerAndDeleteQuery(answer);
+                            PushAnswerAndDeleteQuery(answer);
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                AutoGenQueryProcessing(query);
+                            }
+                            catch (Exception ex)
+                            {
+                                answer = CreateExceptionAnswer(ex, query);
+                                PushAnswerAndDeleteQuery(answer);
+                            }
+                        }     
                     }
                     break;
 
@@ -239,13 +262,21 @@ namespace DataCollectionForRealtime
                                 var returnKey = "true";
                                 answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            answer = CreateExceptionAnswer(ex, query);
-                        }
 
-                        PushAnswerAndDeleteQuery(answer);
+                            PushAnswerAndDeleteQuery(answer);
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                AutoGenQueryProcessing(query);
+                            }
+                            catch (Exception ex)
+                            {
+                                answer = CreateExceptionAnswer(ex, query);
+                                PushAnswerAndDeleteQuery(answer);
+                            }
+                        }   
                     }
                     break;
 
@@ -299,13 +330,21 @@ namespace DataCollectionForRealtime
                             }
 
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
-                        }
-                        catch (Exception ex)
-                        {
-                            answer = CreateExceptionAnswer(ex, query);
-                        }
 
-                        PushAnswerAndDeleteQuery(answer);
+                            PushAnswerAndDeleteQuery(answer);
+                        }
+                        catch
+                        {
+                            try
+                            {
+                                AutoGenQueryProcessing(query);
+                            }
+                            catch (Exception ex)
+                            {
+                                answer = CreateExceptionAnswer(ex, query);
+                                PushAnswerAndDeleteQuery(answer);
+                            }
+                        }  
                         
                         if (query.QueryType == QueryType.SubscribeToEvent &&
                             query.MemberName == "DataConnectionStatusChanged" )
@@ -355,17 +394,7 @@ namespace DataCollectionForRealtime
             {
                 for(int i = 0; i < QueryList.Count; i++)
                 {
-                    //if (QueryList[i].QueryType == QueryType.GetProperty || QueryList[i].QueryType == QueryType.SetProperty ||
-                    //    QueryList[i].QueryType == QueryType.CallMethod || QueryList[i].QueryType == QueryType.SubscribeToEvent ||
-                    //    QueryList[i].QueryType == QueryType.UnsubscribeFromEvent)
-                    //{
-                        AutoGenQueryProcessing(QueryList[i]);
-                    //}
-                    //else
-                    //{
-                    //    ProcessQuery(QueryList[i]);
-                    //}
-
+                    ProcessQuery(QueryList[i]);
                 }
                 QueryList.Clear();
             }

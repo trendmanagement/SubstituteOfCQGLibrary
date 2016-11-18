@@ -62,7 +62,7 @@ namespace CodeGenerator
             subAndUnsubEvents.Append(Indent2 + "private void Event" + type.Name + einfo.Name + "(QueryInfo query, object[] args)" +
                         Environment.NewLine + Indent2 + "{" + Environment.NewLine);
 
-            hMethodsDict.Append(Indent4 + "{ \"Event" + type.Name + einfo.Name + "\", this.Event" + type.Name + einfo.Name + "}," +
+            hQPOfEventsDict.Append(Indent4 + "{ \"Event" + type.Name + einfo.Name + "\", this.Event" + type.Name + einfo.Name + "}," +
                         Environment.NewLine);
 
             subAndUnsubEvents.Append(Indent3 + iTypeName + " " + einfo.Name + "Obj = (" + iTypeName +
@@ -112,15 +112,6 @@ namespace CodeGenerator
                         Environment.NewLine + Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
                         Indent3 + "}" + Environment.NewLine);
-
-            //if (einfo.Name == "DataConnectionStatusChanged")
-            //{
-            //    subAndUnsubEvents.Append(Indent3 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
-            //            Environment.NewLine + Indent3 + "{" + Environment.NewLine +
-            //            Indent4 + "// Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore" +
-            //            Environment.NewLine + Indent4 + "CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);" +
-            //            Environment.NewLine + Indent3 + "}" + Environment.NewLine);
-            //}
 
             subAndUnsubEvents.Append(Indent2 + "}" + Environment.NewLine);
         }
