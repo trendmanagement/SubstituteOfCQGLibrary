@@ -41,6 +41,7 @@ namespace UnitTestRealCQG
         public void FakeCQG_TimedBarsRequest()
         {
             // arrange
+            UnitTestHelper.StartUp();
             #region Timer
             Timer timer = new Timer();
             timer.Interval = 30;
@@ -48,45 +49,49 @@ namespace UnitTestRealCQG
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
             #endregion
-            UnitTestHelper.StartUp();
             CQGCEL fakeCQGCel = new CQGCELClass();
             Core.LogChange += CQG_LogChange;
-            CQGTimedBarsRequest m_TimedBarsRequest = default(CQGTimedBarsRequest);
-            eHistoricalPeriod historicalPeriod = default(eHistoricalPeriod);
-            CQGTimedBars CQGTimedBars = default(CQGTimedBars);
+            CQGTimedBarsRequest m_TimedBarsRequest;
+            CQGTimedBars CQGTimedBars;
             var startTime = new DateTime(2016, 06, 06);
-            List<int> TimedBarsRequestOutputs = new List<int>() { 0, 1, 2 };
+            List<eTimedBarsRequestOutputs> TimedBarsRequestOutputs = new List<eTimedBarsRequestOutputs>();
+            TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrActualVolume);
+            TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrTickVolume);
+            TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrAskVolume);
+            TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrBidVolume);
+            TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrOpenInterest);
+            int recurrenceСount = 10;
+
             // act
-
-            m_TimedBarsRequest.Symbol = "h";
-
+            while (recurrenceСount > 0)
+            {
+                m_TimedBarsRequest = fakeCQGCel.CreateTimedBarsRequest();
+                m_TimedBarsRequest.Symbol = "h";
+                m_TimedBarsRequest.IncludeEnd = false;
                 m_TimedBarsRequest.RangeStart = startTime;
                 m_TimedBarsRequest.RangeEnd = DateTime.Now;
-
-
-            historicalPeriod = (eHistoricalPeriod)1;
-
-            m_TimedBarsRequest.HistoricalPeriod = historicalPeriod;
-
-            m_TimedBarsRequest.TickFilter = (eTickFilter)1;
-
-            m_TimedBarsRequest.Continuation = (eTimeSeriesContinuationType)1;
-
-            m_TimedBarsRequest.IgnoreEventsOnHistoricalBars = true;
-
-
+                m_TimedBarsRequest.HistoricalPeriod = eHistoricalPeriod.hpWeekly;
+                m_TimedBarsRequest.TickFilter = eTickFilter.tfDefault;
+                m_TimedBarsRequest.Continuation = eTimeSeriesContinuationType.tsctNoContinuation;
+                m_TimedBarsRequest.EqualizeCloses = true;
+                m_TimedBarsRequest.DaysBeforeExpiration = 0;
+                m_TimedBarsRequest.UpdatesEnabled = false;
+                m_TimedBarsRequest.IgnoreEventsOnHistoricalBars = false;
+                m_TimedBarsRequest.SessionsFilter = 0;
                 m_TimedBarsRequest.SessionFlags = eSessionFlag.sfUndefined;
+                m_TimedBarsRequest.ExcludeAllOutputs();
+                foreach (eTimedBarsRequestOutputs selectedOutput in TimedBarsRequestOutputs)
+                {
+                    m_TimedBarsRequest.IncludeOutput(selectedOutput, true);
+                }
+                CQGTimedBars TimedBars = fakeCQGCel.RequestTimedBars(m_TimedBarsRequest);
+                CQGTimedBars = fakeCQGCel.AllTimedBars.get_ItemById(TimedBars.Id);
 
-            m_TimedBarsRequest.ExcludeAllOutputs();
-
-            foreach (eTimedBarsRequestOutputs selectedOutput in TimedBarsRequestOutputs)
-            {
-                m_TimedBarsRequest.IncludeOutput(selectedOutput, true);
+                // assert
+                Assert.IsNotNull(CQGTimedBars);
+                Assert.AreEqual(25, CQGTimedBars.Count);
+                recurrenceСount--;
             }
-
-            CQGTimedBars = fakeCQGCel.AllTimedBars.get_ItemById("h");
-            // assert
-            Assert.IsNotNull(CQGTimedBars);
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
