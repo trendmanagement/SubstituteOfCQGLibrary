@@ -540,6 +540,79 @@ namespace UnitTestRealCQG
             }
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void AutoGenQueryProcessing_TrowArgumentException()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            // assert 2
+            Assert.Fail("");
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_CreateCtor()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            string objType = "CQGCELClass";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
         #endregion
 
         #region Helpers
