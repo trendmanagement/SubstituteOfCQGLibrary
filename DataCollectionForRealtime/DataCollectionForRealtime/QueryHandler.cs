@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -20,6 +21,8 @@ namespace DataCollectionForRealtime
 
         object QueriesProcessingLock = new object();
 
+        public static Hashtable UsedObjs;
+
         public List<QueryInfo> QueryList;
 
         public delegate void NewQueriesReadyHandler(List<QueryInfo> queries);
@@ -37,6 +40,7 @@ namespace DataCollectionForRealtime
         public QueryHandler(CQGDataManagement cqgDM)
         {
             CqgDataManagement = cqgDM;
+            UsedObjs = new Hashtable();
             QueryList = new List<QueryInfo>();
             CQGAssm = cqgDM.CQGAssm;
         }
@@ -44,6 +48,7 @@ namespace DataCollectionForRealtime
         internal QueryHandler(CQGDataManagement cqgDM, IList<QueryInfo> ql)
         {
             CqgDataManagement = cqgDM;
+            UsedObjs = new Hashtable();
             QueryList = new List<QueryInfo>(ql);
             CQGAssm = cqgDM.CQGAssm;
         }
@@ -75,7 +80,7 @@ namespace DataCollectionForRealtime
 
                                 // Common case
                                 default:
-                                    object[] args = Core.ParseInputArgsFromQueryInfo(query);
+                                    object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);
                                     object qObj = CQGAssm.CreateInstance(query.MemberName, false,
                                         BindingFlags.CreateInstance, null, args, null, null);
                                     key = Core.CreateUniqueKey();
@@ -91,6 +96,7 @@ namespace DataCollectionForRealtime
                                     }
 
                                     ServerDictionaries.PutObjectToTheDictionary(key, qObj);
+                                    UsedObjs.Add(key, qObj);
                                     break;
                             }
 
@@ -116,6 +122,7 @@ namespace DataCollectionForRealtime
                     {
                         if (query.ObjectKey != CqgDataManagement.CEL_key)
                         {
+                            UsedObjs.Remove(query.ObjectKey);
                             ServerDictionaries.RemoveObjectFromTheDictionary(query.ObjectKey);
                         }
 
@@ -149,9 +156,9 @@ namespace DataCollectionForRealtime
 
                 case QueryType.GetProperty:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                        object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);
 
                         try
                         {
@@ -183,9 +190,9 @@ namespace DataCollectionForRealtime
 
                 case QueryType.SetProperty:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                        object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);
 
                         if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
                         {
@@ -227,9 +234,9 @@ namespace DataCollectionForRealtime
                             break;
                         }
 
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                        object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
-                        object[] args = Core.ParseInputArgsFromQueryInfo(query);
+                        object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);
 
                         try
                         {
@@ -283,7 +290,7 @@ namespace DataCollectionForRealtime
                 case QueryType.SubscribeToEvent:
                 case QueryType.UnsubscribeFromEvent:
                     {
-                        object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                        object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
 
                         try
                         {

@@ -134,10 +134,10 @@ namespace CodeGenerator
             // Methods call query processing
             if (!methodTypeName.StartsWith("CQGAlgoSupplier"))
             {
-                methodCall.Append(Indent2 + "private void Method" + methodTypeName + minfo.Name + "(QueryInfo query, object[] args)" +
-                Environment.NewLine + Indent2 + "{" + Environment.NewLine);
+                methodCall.Append(Indent1 + "private void Method" + methodTypeName + minfo.Name + "(QueryInfo query, object[] args)" +
+                Environment.NewLine + Indent1 + "{" + Environment.NewLine);
 
-                hQPOfMethodsDict.Append(Indent4 + "{ \"Method" + methodTypeName + minfo.Name + "\", this.Method" + methodTypeName + minfo.Name + "}," +
+                hQPOfMethodsDict.Append(Indent3 + "{ \"Method" + methodTypeName + minfo.Name + "\", this.Method" + methodTypeName + minfo.Name + "}," +
                     Environment.NewLine);
 
                 if (methodTypeName.StartsWith("_ICQGCELGeneralEvents"))
@@ -155,7 +155,7 @@ namespace CodeGenerator
 
                 if (minfo.Name == "Shutdown")
                 {
-                    methodCall.Append(Indent3 + "var returnKey = \"true\";" + Environment.NewLine + Indent3 +
+                    methodCall.Append(Indent2 + "var returnKey = \"true\";" + Environment.NewLine + Indent2 +
                         "var answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);" +
                         "PushAnswerAndDeleteQuery(answer);" + Environment.NewLine);
                 }
@@ -167,15 +167,15 @@ namespace CodeGenerator
                         {
                             if (argins[i].ParameterType.FullName.EndsWith("&"))
                             {
-                                methodCall.Append(Indent3 + "var arg" + i + " = (" +
+                                methodCall.Append(Indent2 + "var arg" + i + " = (" +
                                     argins[i].ParameterType.FullName.Substring(0, argins[i].ParameterType.FullName.Length - 1) +
                                     ")args[" + i + "];" + Environment.NewLine);
                             }
                         }
                     }
 
-                    methodCall.Append(Indent3 + methodInterfName + " " + minfo.Name + "Obj = (" + methodInterfName +
-                                ")qObj;" + Environment.NewLine + Indent3);
+                    methodCall.Append(Indent2 + methodInterfName + " " + minfo.Name + "Obj = (" + methodInterfName +
+                                ")qObj;" + Environment.NewLine + Indent2);
 
                     if (string.Concat(minfo.ReturnType.Name) != "void" &&
                         string.Concat(minfo.ReturnType.Name) != "Void")
@@ -222,31 +222,31 @@ namespace CodeGenerator
                     {
                         if (IsSerializableType(minfo.ReturnType))
                         {
-                            methodCall.Append(Indent3 + "var " + minfo.Name + "ValKey = \"value\";" + Environment.NewLine);
-                            methodCall.Append(Indent3 +
+                            methodCall.Append(Indent2 + "var " + minfo.Name + "ValKey = \"value\";" + Environment.NewLine);
+                            methodCall.Append(Indent2 +
                                 "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
                                 minfo.Name + "ValKey, value: " + minfo.Name + "ReturnV));" +
                                 Environment.NewLine);
                         }
                         else
                         {
-                            methodCall.Append(Indent3 + "var " + minfo.Name + "ValKey = Core.CreateUniqueKey();" + Environment.NewLine);
-                            methodCall.Append(Indent3 + "ServerDictionaries.PutObjectToTheDictionary(" + minfo.Name + "ValKey, " +
+                            methodCall.Append(Indent2 + "var " + minfo.Name + "ValKey = Core.CreateUniqueKey();" + Environment.NewLine);
+                            methodCall.Append(Indent2 + "ServerDictionaries.PutObjectToTheDictionary(" + minfo.Name + "ValKey, " +
                                 minfo.Name + "ReturnV);" + Environment.NewLine);
-                            methodCall.Append(Indent3 +
+                            methodCall.Append(Indent2 +
                                 "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
                                 minfo.Name + "ValKey));" + Environment.NewLine);
                         }
                     }
                     else
                     {
-                        methodCall.Append(Indent3 +
+                        methodCall.Append(Indent2 +
                             "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" +
                             Environment.NewLine);
                     }
                 }
 
-                methodCall.Append(Indent2 + "}" + Environment.NewLine + Environment.NewLine);
+                methodCall.Append(Indent1 + "}" + Environment.NewLine + Environment.NewLine);
             }
             MemberEnd();
         }

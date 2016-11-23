@@ -155,47 +155,47 @@ namespace CodeGenerator
 
 
                     // Getters query processing
-                    getProp.Append(Indent2 + "private void Get" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" + 
-                        Environment.NewLine + Indent2 + "{" + Environment.NewLine);
+                    getProp.Append(Indent1 + "private void Get" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" + 
+                        Environment.NewLine + Indent1 + "{" + Environment.NewLine);
 
-                    hQPOfGettersDict.Append(Indent4 + "{ \"Get" + propTypeName + pinfo.Name + "\", this.Get" + propTypeName + pinfo.Name + "}," +
+                    hQPOfGettersDict.Append(Indent3 + "{ \"Get" + propTypeName + pinfo.Name + "\", this.Get" + propTypeName + pinfo.Name + "}," +
                         Environment.NewLine);
 
                     if (pinfo.Name == "IsStarted")
                     {
-                        getProp.Append(Indent3 + "System.Boolean IsStartedPropV = CqgDataManagement.IsCQGStarted;" +
+                        getProp.Append(Indent2 + "System.Boolean IsStartedPropV = CqgDataManagement.IsCQGStarted;" +
                             Environment.NewLine);
                     }
                     else if (pinfo.Name == "Configuration")
                     {
-                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                        getProp.Append(Indent2 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
                             ")qObj;" + Environment.NewLine);
-                        getProp.Append(Indent3 + "CQG.CQGCELConfiguration ConfigurationPropV = ConfigurationObj.get_Configuration();" +
+                        getProp.Append(Indent2 + "CQG.CQGCELConfiguration ConfigurationPropV = ConfigurationObj.get_Configuration();" +
                             Environment.NewLine);
                     }
                     else if (pinfo.Name == "Value" && propInterfName == "CQGTradingSystemStatistics")
                     {
-                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                        getProp.Append(Indent2 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
                             ")qObj;" + Environment.NewLine);
-                        getProp.Append(Indent3 + "System.Double ValuePropV = ValueObj[(CQG.eTradingSystemStatistic)args[0]];" +
+                        getProp.Append(Indent2 + "System.Double ValuePropV = ValueObj[(CQG.eTradingSystemStatistic)args[0]];" +
                             Environment.NewLine);
                     }
                     else if (pins.Length < 1 ||
                         pins.Length >= 1 && pins[0].HasDefaultValue)
                     {
-                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                        getProp.Append(Indent2 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
                             ")qObj;" + Environment.NewLine);
-                        getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
+                        getProp.Append(Indent2 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                         pinfo.Name + "Obj." + pinfo.Name + ";" + Environment.NewLine);
                     }
                     else
                     {
-                        getProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                        getProp.Append(Indent2 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
                             ")qObj;" + Environment.NewLine);
 
                         if (pins.Length == 1 && pinfo.Name == "Item" || pinfo.Name == "Item")
                         {
-                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
+                            getProp.Append(Indent2 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                                 pinfo.Name + "Obj[");
                             for (int i = 0; i < pins.Length; i++)
                             {
@@ -205,7 +205,7 @@ namespace CodeGenerator
                         }
                         else
                         {
-                            getProp.Append(Indent3 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
+                            getProp.Append(Indent2 + pinfo.PropertyType + " " + pinfo.Name + "PropV = " +
                                 pinfo.Name + "Obj." + pinfo.Name + "[");
                             for (int i = 0; i < pins.Length; i++)
                             {
@@ -217,23 +217,23 @@ namespace CodeGenerator
 
                     if (IsSerializableType(pinfo.PropertyType))
                     {
-                        getProp.Append(Indent3 + "var " + pinfo.Name + "PropKey = \"value\";" + Environment.NewLine);
-                        getProp.Append(Indent3 +
+                        getProp.Append(Indent2 + "var " + pinfo.Name + "PropKey = \"value\";" + Environment.NewLine);
+                        getProp.Append(Indent2 +
                             "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
                             pinfo.Name + "PropKey, value: " + pinfo.Name + "PropV));" +
                             Environment.NewLine);
                     }
                     else
                     {
-                        getProp.Append(Indent3 + "var " + pinfo.Name + "PropKey = Core.CreateUniqueKey();" + Environment.NewLine);
-                        getProp.Append(Indent3 + "ServerDictionaries.PutObjectToTheDictionary(" + pinfo.Name + "PropKey, " +
+                        getProp.Append(Indent2 + "var " + pinfo.Name + "PropKey = Core.CreateUniqueKey();" + Environment.NewLine);
+                        getProp.Append(Indent2 + "ServerDictionaries.PutObjectToTheDictionary(" + pinfo.Name + "PropKey, " +
                             pinfo.Name + "PropV);" + Environment.NewLine);
-                        getProp.Append(Indent3 +
+                        getProp.Append(Indent2 +
                             "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: " +
                             pinfo.Name + "PropKey));" + Environment.NewLine);
                     }
 
-                    getProp.Append(Indent2 + "}" + Environment.NewLine + Environment.NewLine);
+                    getProp.Append(Indent1 + "}" + Environment.NewLine + Environment.NewLine);
                 }
             }
 
@@ -255,30 +255,30 @@ namespace CodeGenerator
 
 
                     // Setter query processing
-                    setProp.Append(Indent2 + "private void Set" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" +
-                        Environment.NewLine + Indent2 + "{" + Environment.NewLine);
+                    setProp.Append(Indent1 + "private void Set" + propTypeName + pinfo.Name + "(QueryInfo query, object[] args)" +
+                        Environment.NewLine + Indent1 + "{" + Environment.NewLine);
 
-                    hQPOfSettersDict.Append(Indent4 + "{ \"Set" + propTypeName + pinfo.Name + "\", this.Set" + propTypeName + pinfo.Name + "}," + 
+                    hQPOfSettersDict.Append(Indent3 + "{ \"Set" + propTypeName + pinfo.Name + "\", this.Set" + propTypeName + pinfo.Name + "}," + 
                         Environment.NewLine);
 
-                    setProp.Append(Indent3 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
+                    setProp.Append(Indent2 + propInterfName + " " + pinfo.Name + "Obj = (" + propInterfName +
                         ")ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);" + Environment.NewLine);
-                    setProp.Append(Indent3 + "var " + pinfo.Name + "val = (" + pinfo.PropertyType +
-                        ")(Core.ParseInputArgsFromQueryInfo(query)[0]);" + Environment.NewLine);
+                    setProp.Append(Indent2 + "var " + pinfo.Name + "val = (" + pinfo.PropertyType +
+                        ")(Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues)[0]);" + Environment.NewLine);
 
                     if (pinfo.Name == "Configuration")
                     {
-                        setProp.Append(Indent3 + "ConfigurationObj.set_Configuration(ref Configurationval);" +
+                        setProp.Append(Indent2 + "ConfigurationObj.set_Configuration(ref Configurationval);" +
                             Environment.NewLine);
                     }
                     else if (pins.Length < 1 ||
                         pins.Length >= 1 && pins[0].HasDefaultValue)
                     {
-                        setProp.Append(Indent3 + pinfo.Name + "Obj." + pinfo.Name + " = " + pinfo.Name + "val;" + Environment.NewLine);
+                        setProp.Append(Indent2 + pinfo.Name + "Obj." + pinfo.Name + " = " + pinfo.Name + "val;" + Environment.NewLine);
                     }
                     else
                     {
-                        setProp.Append(Indent3 + pinfo.Name + "Obj." + pinfo.Name + "[");
+                        setProp.Append(Indent2 + pinfo.Name + "Obj." + pinfo.Name + "[");
                         for (int i = 0; i < pins.Length; i++)
                         {
                             setProp.Append("(" + pins[i].ParameterType + ")args[" + i + "]");
@@ -286,11 +286,11 @@ namespace CodeGenerator
                         }
                     }
 
-                    setProp.Append(Indent3 +
+                    setProp.Append(Indent2 +
                         "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" +
                         Environment.NewLine);
 
-                    setProp.Append(Indent2 + "}" + Environment.NewLine + Environment.NewLine);
+                    setProp.Append(Indent1 + "}" + Environment.NewLine + Environment.NewLine);
                 }
             }
 

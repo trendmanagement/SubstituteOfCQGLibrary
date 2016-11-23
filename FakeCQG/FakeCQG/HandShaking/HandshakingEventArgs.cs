@@ -20,9 +20,9 @@ namespace FakeCQG.Internal.Handshaking
         public HandshakingEventArgs(List<HandshakingInfo> subscribers)
         {
             Ids = new List<Guid>();
-            foreach (var item in subscribers)
+            for (int i = 0; i < subscribers.Count; i++)
             {
-                Ids.Add(item.ID);
+                Ids.Add(subscribers[i].ID);
             }
             NoSubscribers = false;
             _subscribers = subscribers;

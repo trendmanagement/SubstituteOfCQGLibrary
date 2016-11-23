@@ -6,11 +6,12 @@ using System.Reflection;
 
 namespace FakeCQG.Internal
 {
+    // Here placed dictionaries and methods for its managing that are used on the client's side
     public class ClientDictionaries
     {
-        static Dictionary<string, bool> isAnswer = new Dictionary<string, bool>();
+        static Dictionary<string, bool> isAnswer = new Dictionary<string, bool>(StringComparer.Ordinal);
 
-        static Dictionary<string, Dictionary<string, bool>> eventCheckingDictionary = new Dictionary<string, Dictionary<string, bool>>();
+        static Dictionary<string, Dictionary<string, bool>> eventCheckingDictionary = new Dictionary<string, Dictionary<string, bool>>(StringComparer.Ordinal);
 
         public static HashSet<string> ObjectNames = new HashSet<string>(); 
         public static Dictionary<string, bool> IsAnswer
@@ -47,7 +48,7 @@ namespace FakeCQG.Internal
 #if DEBUG
                 einfos = einfos.OrderBy(einfo => einfo.EventHandlerType.Name);
 #endif
-                Dictionary<string, bool> objEventCheckingDictionary = new Dictionary<string, bool>();
+                Dictionary<string, bool> objEventCheckingDictionary = new Dictionary<string, bool>(StringComparer.Ordinal);
                 foreach (EventInfo einfo in einfos)
                 {
                     objEventCheckingDictionary.Add(einfo.Name, false);

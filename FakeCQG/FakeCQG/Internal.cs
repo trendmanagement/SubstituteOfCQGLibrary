@@ -127,30 +127,7 @@ namespace FakeCQG
                 }
             }
 
-            public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
-            {
-                AnswerInfo answer = null;
-                answer = AnswerHelper.GetAnswerData(queryKey);
-
-                if (answer != null)
-                {
-                    ClientDictionaries.IsAnswer.Remove(queryKey);
-
-                    // If query type of successfully extracted non empty answer tells about creation of new object,
-                    // then own dictionary of event checking must be created, filled for that object and added 
-                    // to the common dictionary of current application
-                    if (queryType == QueryType.CallCtor)
-                    {
-                        ClientDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.MemberName);
-                    }
-                }
-                else
-                {
-                    OnLogChange(NoAnswerMessage);
-                }
-                return answer;
-            }
-
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static QueryInfo CreateQuery(
                 QueryType qType,
                 string qKey,
@@ -199,6 +176,31 @@ namespace FakeCQG
                 ClientDictionaries.IsAnswer.Add(qKey, false);
 
                 return model;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static AnswerInfo WaitingForAnAnswer(string queryKey, QueryType queryType)
+            {
+                AnswerInfo answer = null;
+                answer = AnswerHelper.GetAnswerData(queryKey);
+
+                if (answer != null)
+                {
+                    ClientDictionaries.IsAnswer.Remove(queryKey);
+
+                    // If query type of successfully extracted non empty answer tells about creation of new object,
+                    // then own dictionary of event checking must be created, filled for that object and added 
+                    // to the common dictionary of current application
+                    if (queryType == QueryType.CallCtor)
+                    {
+                        ClientDictionaries.FillEventCheckingDictionary(answer.ValueKey, answer.MemberName);
+                    }
+                }
+                else
+                {
+                    OnLogChange(NoAnswerMessage);
+                }
+                return answer;
             }
 
             #endregion
@@ -281,7 +283,7 @@ namespace FakeCQG
                         }
                         else
                         {
-                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));                         
+                            argKeys.Add(i, isClientOrServer ? GetObjKeyForArgKeysList(arg, argType) : SetNewObjKeyForArgKeysList(arg));
                         }
                     }
                 }
@@ -303,7 +305,7 @@ namespace FakeCQG
                 return argKey;
             }
 
-            private static object[] GetArgsIntoArrayFromTwoDicts(
+            public static object[] GetArgsIntoArrayFromTwoDicts(
                 Dictionary<int, string> argKeys = null,
                 Dictionary<int, object> argValues = null)
             {
@@ -330,18 +332,6 @@ namespace FakeCQG
                 }
 
                 return args;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public static object[] ParseInputArgsFromQueryInfo(QueryInfo queryInfo)
-            {
-                return GetArgsIntoArrayFromTwoDicts(queryInfo.ArgKeys, queryInfo.ArgValues);
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public static object[] ParseInputArgsFromEventInfo(Models.EventInfo eventInfo)
-            {
-                return GetArgsIntoArrayFromTwoDicts(eventInfo.ArgKeys, eventInfo.ArgValues);
             }
 
             public static void SubscriberChecking(string name, string objKey, bool isSubscriptionRequired, bool isUnsubscriptionRequired, string objType)
