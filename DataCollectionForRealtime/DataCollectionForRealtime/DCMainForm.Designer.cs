@@ -87,7 +87,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -106,7 +106,7 @@
             this.dataStatus.Size = new System.Drawing.Size(62, 17);
             this.dataStatus.Text = "dataStatus";
             // 
-            // mainRealtimeMenuStrip
+            // menuStripMainRealtime
             // 
             this.menuStripMainRealtime.BackColor = System.Drawing.SystemColors.Control;
             this.menuStripMainRealtime.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -114,7 +114,7 @@
             this.toolStripMenuItemMinimizeWindow,
             this.toolStripMenuItemChangeMongoDbUrl});
             this.menuStripMainRealtime.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMainRealtime.Name = "mainRealtimeMenuStrip";
+            this.menuStripMainRealtime.Name = "menuStripMainRealtime";
             this.menuStripMainRealtime.Size = new System.Drawing.Size(795, 24);
             this.menuStripMainRealtime.TabIndex = 8;
             this.menuStripMainRealtime.Text = "menuStrip1";
@@ -126,14 +126,14 @@
             // 
             // toolStripMenuItemMinimizeWindow
             // 
-            this.toolStripMenuItemMinimizeWindow.Name = "minimizeWindowToolStripMenuItem";
+            this.toolStripMenuItemMinimizeWindow.Name = "toolStripMenuItemMinimizeWindow";
             this.toolStripMenuItemMinimizeWindow.Size = new System.Drawing.Size(89, 20);
             this.toolStripMenuItemMinimizeWindow.Text = "Mini Monitor";
             this.toolStripMenuItemMinimizeWindow.Click += new System.EventHandler(this.MinimizeWindowToolStripMenuItem_Click);
             // 
             // toolStripMenuItemChangeMongoDbUrl
             // 
-            this.toolStripMenuItemChangeMongoDbUrl.Name = "changeURLOfMongoDBToolStripMenuItem";
+            this.toolStripMenuItemChangeMongoDbUrl.Name = "toolStripMenuItemChangeMongoDbUrl";
             this.toolStripMenuItemChangeMongoDbUrl.Size = new System.Drawing.Size(155, 20);
             this.toolStripMenuItemChangeMongoDbUrl.Text = "Change URL of MongoDB";
             this.toolStripMenuItemChangeMongoDbUrl.Click += new System.EventHandler(this.ChangeURLOfMongoDBToolStripMenuItem_Click);
@@ -141,7 +141,7 @@
             // splitContainer
             // 
             this.splitContainer.Location = new System.Drawing.Point(12, 48);
-            this.splitContainer.Name = "splitContainer1";
+            this.splitContainer.Name = "splitContainer";
             // 
             // splitContainer.Panel2
             // 
@@ -167,7 +167,7 @@
             this.tabPageMongoDbUrl.Controls.Add(this.buttonRespond);
             this.tabPageMongoDbUrl.Controls.Add(this.buttonCheck);
             this.tabPageMongoDbUrl.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMongoDbUrl.Name = "tabPageMongo";
+            this.tabPageMongoDbUrl.Name = "tabPageMongoDbUrl";
             this.tabPageMongoDbUrl.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageMongoDbUrl.Size = new System.Drawing.Size(551, 278);
             this.tabPageMongoDbUrl.TabIndex = 2;
@@ -217,7 +217,7 @@
             // 
             this.labelMongoDbUrl.AutoSize = true;
             this.labelMongoDbUrl.Location = new System.Drawing.Point(9, 24);
-            this.labelMongoDbUrl.Name = "MongoDBURLLabel";
+            this.labelMongoDbUrl.Name = "labelMongoDbUrl";
             this.labelMongoDbUrl.Size = new System.Drawing.Size(83, 13);
             this.labelMongoDbUrl.TabIndex = 11;
             this.labelMongoDbUrl.Text = "MongoDB URL:";
@@ -226,7 +226,7 @@
             // textBoxMongoDbUrl
             // 
             this.textBoxMongoDbUrl.Location = new System.Drawing.Point(101, 21);
-            this.textBoxMongoDbUrl.Name = "MongoDBURL";
+            this.textBoxMongoDbUrl.Name = "textBoxMongoDbUrl";
             this.textBoxMongoDbUrl.Size = new System.Drawing.Size(274, 20);
             this.textBoxMongoDbUrl.TabIndex = 12;
             this.textBoxMongoDbUrl.Visible = false;
@@ -234,7 +234,7 @@
             // buttonChangeMongoDbUrl
             // 
             this.buttonChangeMongoDbUrl.Location = new System.Drawing.Point(381, 20);
-            this.buttonChangeMongoDbUrl.Name = "ChangeDBURLBtn";
+            this.buttonChangeMongoDbUrl.Name = "buttonChangeMongoDbUrl";
             this.buttonChangeMongoDbUrl.Size = new System.Drawing.Size(75, 21);
             this.buttonChangeMongoDbUrl.TabIndex = 13;
             this.buttonChangeMongoDbUrl.Text = "Apply";
@@ -246,8 +246,8 @@
             // 
             this.labelLogMode.AutoSize = true;
             this.labelLogMode.Location = new System.Drawing.Point(228, 359);
-            this.labelLogMode.Name = "logSettingsLabel";
-            this.labelLogMode.Size = new System.Drawing.Size(64, 13);
+            this.labelLogMode.Name = "labelLogMode";
+            this.labelLogMode.Size = new System.Drawing.Size(55, 13);
             this.labelLogMode.TabIndex = 14;
             this.labelLogMode.Text = "Log Mode";
             // 
@@ -255,7 +255,7 @@
             // 
             this.comboBoxLogMode.FormattingEnabled = true;
             this.comboBoxLogMode.Location = new System.Drawing.Point(298, 356);
-            this.comboBoxLogMode.Name = "logSettingsComboBox";
+            this.comboBoxLogMode.Name = "comboBoxLogMode";
             this.comboBoxLogMode.Size = new System.Drawing.Size(87, 21);
             this.comboBoxLogMode.TabIndex = 15;
             // 
@@ -275,7 +275,6 @@
             this.Name = "DCMainForm";
             this.Text = "Data Collector for Realtime";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DCMainForm_FormClosing);
-            this.FormClosed += DCMainForm_FormClosed;
             this.Load += new System.EventHandler(this.RealtimeDataManagement_Load);
             this.statusStripOptionMonitor.ResumeLayout(false);
             this.statusStripOptionMonitor.PerformLayout();

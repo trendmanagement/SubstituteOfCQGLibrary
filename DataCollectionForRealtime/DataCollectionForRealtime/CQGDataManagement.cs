@@ -67,6 +67,7 @@ namespace DataCollectionForRealtime
 
                 m_CEL_key = FakeCQG.Internal.Core.CreateUniqueKey();
                 FakeCQG.Internal.ServerDictionaries.PutObjectToTheDictionary(m_CEL_key, m_CEL);
+                QueryHandler.UsedObjs.Add(m_CEL_key, m_CEL);
 
                 m_CEL_CELDataConnectionChg(eConnectionStatus.csConnectionDown);
 

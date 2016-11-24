@@ -59,61 +59,61 @@ namespace CodeGenerator
         // Events subscribe and unsubscribe queries processing
         static void AddOrRemoveEventHandler(EventInfo einfo, Type type, string iTypeName)
         {
-            subAndUnsubEvents.Append(Indent2 + "private void Event" + type.Name + einfo.Name + "(QueryInfo query, object[] args)" +
-                        Environment.NewLine + Indent2 + "{" + Environment.NewLine);
+            subAndUnsubEvents.Append(Indent1 + "private void Event" + type.Name + einfo.Name + "(QueryInfo query, object[] args)" +
+                        Environment.NewLine + Indent1 + "{" + Environment.NewLine);
 
-            hQPOfEventsDict.Append(Indent4 + "{ \"Event" + type.Name + einfo.Name + "\", this.Event" + type.Name + einfo.Name + "}," +
+            hQPOfEventsDict.Append(Indent3 + "{ \"Event" + type.Name + einfo.Name + "\", this.Event" + type.Name + einfo.Name + "}," +
                         Environment.NewLine);
 
-            subAndUnsubEvents.Append(Indent3 + iTypeName + " " + einfo.Name + "Obj = (" + iTypeName +
+            subAndUnsubEvents.Append(Indent2 + iTypeName + " " + einfo.Name + "Obj = (" + iTypeName +
                             ")qObj;" + Environment.NewLine);
             
-            subAndUnsubEvents.Append(Indent3 + "if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))" +
-                        Environment.NewLine + Indent3 + "{" + Environment.NewLine +
-                        Indent4 + "EventHandler.EventAppsSubscribersNum[query.MemberName] =" +
+            subAndUnsubEvents.Append(Indent2 + "if (EventHandler.EventAppsSubscribersNum.ContainsKey(query.MemberName))" +
+                        Environment.NewLine + Indent2 + "{" + Environment.NewLine +
+                        Indent3 + "EventHandler.EventAppsSubscribersNum[query.MemberName] =" +
                         Environment.NewLine + Indent4 + "query.QueryType == QueryType.SubscribeToEvent ?" +
                         Environment.NewLine + Indent4 + "EventHandler.EventAppsSubscribersNum[query.MemberName] + 1 :" +
                         Environment.NewLine + Indent4 + "EventHandler.EventAppsSubscribersNum[query.MemberName] - 1;" +
-                        Environment.NewLine + Indent3 + "}" + Environment.NewLine + Indent3 + "else" +
-                        Environment.NewLine + Indent3 + "{" +
-                        Environment.NewLine + Indent4 + "EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);" +
-                        Environment.NewLine + Indent3 + "}" + Environment.NewLine);
+                        Environment.NewLine + Indent2 + "}" + Environment.NewLine + Indent2 + "else" +
+                        Environment.NewLine + Indent2 + "{" +
+                        Environment.NewLine + Indent3 + "EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);" +
+                        Environment.NewLine + Indent2 + "}" + Environment.NewLine);
 
 
-            subAndUnsubEvents.Append(Indent3 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
-                        Environment.NewLine + Indent3 + "{" + Environment.NewLine);
+            subAndUnsubEvents.Append(Indent2 + "if (query.QueryType == QueryType.SubscribeToEvent)" +
+                        Environment.NewLine + Indent2 + "{" + Environment.NewLine);
             if (einfo.Name == "DataConnectionStatusChanged" && (type.Name == "_ICQGCELEvents" || type.Name == "CQGCELClass"))
             {
-                subAndUnsubEvents.Append(Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
+                subAndUnsubEvents.Append(Indent3 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
                         Environment.NewLine);
 
-                subAndUnsubEvents.Append(Indent4 + 
+                subAndUnsubEvents.Append(Indent3 + 
                     "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" + 
                     Environment.NewLine + Environment.NewLine);
 
-                subAndUnsubEvents.Append(Indent4 + 
+                subAndUnsubEvents.Append(Indent3 + 
                     "// Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore" +
-                        Environment.NewLine + Indent4 +
+                        Environment.NewLine + Indent3 +
                         "CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);" +
                         Environment.NewLine);
             }
             else
             {
-                subAndUnsubEvents.Append(Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
+                subAndUnsubEvents.Append(Indent3 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
                         Environment.NewLine);
-                subAndUnsubEvents.Append(Indent4 +
+                subAndUnsubEvents.Append(Indent3 +
                     "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true));" +
                     Environment.NewLine);
             }   
-            subAndUnsubEvents.Append(Indent3 + "}" + Environment.NewLine + Indent3 + "else" +
-                        Environment.NewLine + Indent3 + "{" +
-                        Environment.NewLine + Indent4 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
+            subAndUnsubEvents.Append(Indent2 + "}" + Environment.NewLine + Indent2 + "else" +
+                        Environment.NewLine + Indent2 + "{" +
+                        Environment.NewLine + Indent3 + einfo.Name + "Obj." + einfo.Name + " += new " + einfo.EventHandlerType +
                         "(CQGEventHandlers." + einfo.EventHandlerType.Name + "Impl);" + Environment.NewLine +
-                        Indent3 + "}" + Environment.NewLine);
+                        Indent2 + "}" + Environment.NewLine);
 
-            subAndUnsubEvents.Append(Indent2 + "}" + Environment.NewLine);
+            subAndUnsubEvents.Append(Indent1 + "}" + Environment.NewLine);
         }
     }
 }

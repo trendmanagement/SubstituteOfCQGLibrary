@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FakeCQG.Internal.Models;
 
 namespace FakeCQG.Internal
 {
-    // Here placed all dictionaries with data that transferred by the key and methods for its managing
+    // Here placed dictionaries and methods for its managing that are used on the data collector's side
     public class ServerDictionaries
     {
-        static Dictionary<string, object> objDictionary = new Dictionary<string, object>();
+        static Dictionary<string, object> objDictionary = new Dictionary<string, object>(StringComparer.Ordinal);
 
         public static List<HandshakingInfo> RealtimeIds = new List<HandshakingInfo>();
 

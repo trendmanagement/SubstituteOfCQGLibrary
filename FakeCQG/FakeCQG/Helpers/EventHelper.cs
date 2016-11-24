@@ -63,7 +63,7 @@ namespace FakeCQG.Internal.Helpers
                 if (fluent.Any())
                 {
                     EventInfo eventInfo = fluent.First();
-                    args = Core.ParseInputArgsFromEventInfo(eventInfo);
+                    args = Core.GetArgsIntoArrayFromTwoDicts(eventInfo.ArgKeys, eventInfo.ArgValues);
 
                     eventInfo.NumOfSubscribers -= 1;
 

@@ -44,15 +44,15 @@ namespace CodeGenerator
 
             var argins = cinfo.GetParameters();
 
-            ctorCall.Append(Indent2 + "private void Ctor" + cinfo.DeclaringType.Name + "(QueryInfo query, object[] args)" +
-                Environment.NewLine + Indent2 + "{" + Environment.NewLine);
+            ctorCall.Append(Indent1 + "private void Ctor" + cinfo.DeclaringType.Name + "(QueryInfo query, object[] args)" +
+                Environment.NewLine + Indent1 + "{" + Environment.NewLine);
 
-            hQPOfCtrosDict.Append(Indent4 + "{ \"Ctor" + cinfo.DeclaringType.Name + "\", this.Ctor" + cinfo.DeclaringType.Name + "}," +
+            hQPOfCtrosDict.Append(Indent3 + "{ \"Ctor" + cinfo.DeclaringType.Name + "\", this.Ctor" + cinfo.DeclaringType.Name + "}," +
                 Environment.NewLine);
 
             if (cinfo.DeclaringType.Name == "CQGCELClass")
             {
-                ctorCall.Append(Indent3 + "string key = CqgDataManagement.CEL_key;" + Environment.NewLine);
+                ctorCall.Append(Indent2 + "string key = CqgDataManagement.CEL_key;" + Environment.NewLine);
             }
             else
             {
@@ -62,14 +62,14 @@ namespace CodeGenerator
                     {
                         if (argins[i].ParameterType.FullName.EndsWith("&"))
                         {
-                            ctorCall.Append(Indent3 + "var arg" + i + " = (" +
+                            ctorCall.Append(Indent2 + "var arg" + i + " = (" +
                                 argins[i].ParameterType.FullName.Substring(0, argins[i].ParameterType.FullName.Length - 1) +
                                 ")args[" + i + "];" + Environment.NewLine);
                         }
                     }
                 }
 
-                ctorCall.Append(Indent3 + cinfo.DeclaringType.Name + " " + cinfo.DeclaringType.Name + "Obj = new " + cinfo.DeclaringType.Name + "(");
+                ctorCall.Append(Indent2 + cinfo.DeclaringType.Name + " " + cinfo.DeclaringType.Name + "Obj = new " + cinfo.DeclaringType.Name + "(");
 
                 if (argins.Length > 0)
                 {
@@ -92,25 +92,25 @@ namespace CodeGenerator
                     ctorCall.Append(");" + Environment.NewLine);
                 }
 
-                ctorCall.Append(Indent3 + "string key = Core.CreateUniqueKey();");
+                ctorCall.Append(Indent2 + "string key = Core.CreateUniqueKey();");
 
                 // Get name of an instrument if it's CQG.CQGInstrument object creation
                 // and show it in MiniMonitor form
                 if (cinfo.DeclaringType.Name == "CQGInstrument")
                 {
-                    ctorCall.Append(Indent3 + "string instrName = " + cinfo.DeclaringType.Name + "Obj.FullName;" + Environment.NewLine +
-                    Indent3 + "DCMiniMonitor.instrumentsList.Add(instrName);" + Environment.NewLine +
-                    Indent3 + "Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();");
+                    ctorCall.Append(Indent2 + "string instrName = " + cinfo.DeclaringType.Name + "Obj.FullName;" + Environment.NewLine +
+                    Indent2 + "DCMiniMonitor.instrumentsList.Add(instrName);" + Environment.NewLine +
+                    Indent2 + "Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();");
                 }
 
-                ctorCall.Append(Indent3 + "ServerDictionaries.PutObjectToTheDictionary(key, qObj);" + Environment.NewLine);   
+                ctorCall.Append(Indent2 + "ServerDictionaries.PutObjectToTheDictionary(key, qObj);" + Environment.NewLine);   
             }
 
-            ctorCall.Append(Indent3 +
+            ctorCall.Append(Indent2 +
                         "PushAnswerAndDeleteQuery(new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key));" +
                         Environment.NewLine);
 
-            ctorCall.Append(Indent2 + "}" + Environment.NewLine + Environment.NewLine);
+            ctorCall.Append(Indent1 + "}" + Environment.NewLine + Environment.NewLine);
         }
 
         static void CreateInternalCtor(string typeName, bool eventsChecking)

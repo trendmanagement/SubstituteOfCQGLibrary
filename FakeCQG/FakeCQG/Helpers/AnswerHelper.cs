@@ -130,10 +130,6 @@ namespace FakeCQG.Internal.Helpers
                     {
                         break;
                     }
-                    else if (Connect())
-                    {
-                        return GetAnswerData(id);
-                    }
                 }
             }
 

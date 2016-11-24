@@ -132,6 +132,7 @@ namespace CodeGenerator
             DCQProcFile.WriteLine("using FakeCQG.Internal;");
             DCQProcFile.WriteLine("using FakeCQG.Internal.Models;");
             DCQProcFile.WriteLine("using MongoDB.Driver;");
+            DCQProcFile.WriteLine("using System;");
             DCQProcFile.WriteLine("using System.Collections.Generic;");
             DCQProcFile.WriteLine("using System.Reflection;");
             DCQProcFile.WriteLine("");
@@ -156,31 +157,31 @@ namespace CodeGenerator
             DCQProcFile.WriteLine(Indent2 + "{");
 
             // Filling a dictionary by methods that are processing a ctors call queries
-            DCQProcFile.WriteLine(Indent3 + "hQPOfCtros = new Dictionary<string, MPDel> " +
+            DCQProcFile.WriteLine(Indent3 + "hQPOfCtros = new Dictionary<string, MPDel> (StringComparer.Ordinal)" +
                 Environment.NewLine + Indent3 + "{" + Environment.NewLine);
             hQPOfCtrosDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
             DCQProcFile.WriteLine(hQPOfCtrosDict.ToString());
 
             // Filling a dictionary by methods that are processing a getters call queries
-            DCQProcFile.WriteLine(Indent3 + "hQPOfGetters = new Dictionary<string, MPDel> " +
+            DCQProcFile.WriteLine(Indent3 + "hQPOfGetters = new Dictionary<string, MPDel> (StringComparer.Ordinal)" +
                 Environment.NewLine + Indent3 + "{" + Environment.NewLine);
             hQPOfGettersDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
             DCQProcFile.WriteLine(hQPOfGettersDict.ToString());
 
             // Filling a dictionary by methods that are processing a setters call queries
-            DCQProcFile.WriteLine(Indent3 + "hQPOfSetters = new Dictionary<string, MPDel> " +
+            DCQProcFile.WriteLine(Indent3 + "hQPOfSetters = new Dictionary<string, MPDel> (StringComparer.Ordinal)" +
                 Environment.NewLine + Indent3 + "{" + Environment.NewLine);
             hQPOfSettersDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
             DCQProcFile.WriteLine(hQPOfSettersDict.ToString());
 
             // Filling a dictionary by methods that are processing a methods call queries
-            DCQProcFile.WriteLine(Indent3 + "hQPOfMethods = new Dictionary<string, MPDel> " +
+            DCQProcFile.WriteLine(Indent3 + "hQPOfMethods = new Dictionary<string, MPDel> (StringComparer.Ordinal)" +
                 Environment.NewLine + Indent3 + "{" + Environment.NewLine);
             hQPOfMethodsDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
             DCQProcFile.WriteLine(hQPOfMethodsDict.ToString());
 
             // Filling a dictionary by methods that are processing an event subscribing and unsubscribing queries
-            DCQProcFile.WriteLine(Indent3 + "hQPOfEvents = new Dictionary<string, MPDel> " +
+            DCQProcFile.WriteLine(Indent3 + "hQPOfEvents = new Dictionary<string, MPDel> (StringComparer.Ordinal)" +
                 Environment.NewLine + Indent3 + "{" + Environment.NewLine);
             hQPOfEventsDict.Append(Indent3 + "};" + Environment.NewLine + Environment.NewLine);
             DCQProcFile.Write(hQPOfEventsDict.ToString());
@@ -190,7 +191,7 @@ namespace CodeGenerator
             // Main query processing switch
             DCQProcFile.WriteLine(Indent2 + "public void AutoGenQueryProcessing(QueryInfo query)");
             DCQProcFile.WriteLine(Indent2 + "{");
-            DCQProcFile.WriteLine(Indent3 + "object[] args = Core.ParseInputArgsFromQueryInfo(query);");
+            DCQProcFile.WriteLine(Indent3 + "object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);");
             DCQProcFile.WriteLine(Indent3 + "switch (query.QueryType)");
             DCQProcFile.WriteLine(Indent3 + "{");
 
