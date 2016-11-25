@@ -15,10 +15,12 @@ namespace DataCollectionForRealtime
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);            
             MainForm = new DCMainForm();
             MiniMonitor = new DCMiniMonitor();
-            Application.Run(MainForm);
+
+            // Set data collector mini monitor form as an initial one
+            Application.Run(MiniMonitor);
         }
     }
 }

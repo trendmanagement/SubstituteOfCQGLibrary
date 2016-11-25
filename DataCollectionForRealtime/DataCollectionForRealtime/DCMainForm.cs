@@ -20,6 +20,8 @@ namespace DataCollectionForRealtime
         private const int DictionaryClearingInterval = 30000;
 
         private bool enteringMongoDBURL = false;
+        private bool initActionsDone = false;
+        private bool loadActionsDone = false;
 
         private System.Timers.Timer AutoWorkTimer;
         private System.Timers.Timer HandshakingTimer = new System.Timers.Timer();
@@ -27,12 +29,24 @@ namespace DataCollectionForRealtime
         private CQGDataManagement CqgDataManagement;
 
         private QueryHandler QueryHandler;
-
         #endregion
 
         #region Constructors
 
         public DCMainForm()
+        {
+            if (!initActionsDone)
+            {
+                InitActions();
+                initActionsDone = true;
+            }
+        }
+
+        #endregion
+
+        #region CQG helper methods
+
+        private void InitActions()
         {
             InitializeComponent();
             CenterToScreen();
@@ -57,9 +71,42 @@ namespace DataCollectionForRealtime
             EventHandler.EventAppsSubscribersNum = new Dictionary<string, int>();
         }
 
-        #endregion
+        private void LoadingActions()
+        {
+            Core.LogChange += CQG_LogChange;
 
-        #region CQG helper methods
+            QueryHandler.HelpersInit();
+
+            AutoWorkTimer = new System.Timers.Timer();
+            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
+            AutoWorkTimer.Interval = AutoWorkTimerInterval;
+            AutoWorkTimer.AutoReset = false;
+            AutoWorkTimer.Start();
+
+            var names = Enum.GetNames(typeof(LogModeEnum));
+
+            for (int i = 0; i < names.Length; i++)
+            {
+                comboBoxLogMode.Items.Add(names[i]);
+            }
+            comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
+            comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
+        }
+
+        public void MainFormInitAndLoadActions()
+        {
+            if (!initActionsDone)
+            {
+                InitActions();
+                initActionsDone = true;
+            }
+
+            if (!loadActionsDone)
+            {
+                LoadingActions();
+                loadActionsDone = true;
+            }
+        }
 
         internal void UpdateConnectionStatus(string connectionStatusLabel, Color connColor)
         {
@@ -201,9 +248,9 @@ namespace DataCollectionForRealtime
                 {
                     if (!string.IsNullOrWhiteSpace(message))
                     {
-                        richTextBoxLog.Text += message + "\n";
-                        richTextBoxLog.Select(richTextBoxLog.Text.Length, richTextBoxLog.Text.Length);
-                        richTextBoxLog.ScrollToCaret();
+                        LogRTBox.Text += message + "\n";
+                        LogRTBox.Select(LogRTBox.Text.Length, LogRTBox.Text.Length);
+                        LogRTBox.ScrollToCaret();
                     }
                 });
 
@@ -240,7 +287,7 @@ namespace DataCollectionForRealtime
             }
             finally
             {
-                if (checkBoxAuto.Checked)
+                if (AutomaticProcCheckBox.Checked)
                 {
                     AutoWorkTimer.Start();
                 }
@@ -266,23 +313,11 @@ namespace DataCollectionForRealtime
 
         private void RealtimeDataManagement_Load(object sender, EventArgs e)
         {
-            Core.LogChange += CQG_LogChange;
-
-            QueryHandler.HelpersInit();
-
-            AutoWorkTimer = new System.Timers.Timer();
-            AutoWorkTimer.Elapsed += AutoWorkTimer_Elapsed;
-            AutoWorkTimer.Interval = AutoWorkTimerInterval;
-            AutoWorkTimer.AutoReset = false;
-
-            var names = Enum.GetNames(typeof(LogModeEnum));
-
-            for (int i = 0; i < names.Length; i++)
+            if (!loadActionsDone)
             {
-                comboBoxLogMode.Items.Add(names[i]);
+                LoadingActions();
+                loadActionsDone = true;
             }
-            comboBoxLogMode.SelectedIndexChanged += LogModeComboBox_SelectedIndexChanged;
-            comboBoxLogMode.SelectedIndex = (int)LogModeEnum.Filtered;
         }
 
         private void LogModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -290,17 +325,17 @@ namespace DataCollectionForRealtime
             Core.LogMode = (LogModeEnum)Enum.GetValues(typeof(LogModeEnum)).GetValue(comboBoxLogMode.SelectedIndex);
         }
 
-        private void ButtonCheck_Click(object sender, EventArgs e)
+        private void CheckQueriesBtn_Click(object sender, EventArgs e)
         {
             QueryHandler.ReadQueries();
         }
 
-        private void ButtonRespond_Click(object sender, EventArgs e)
+        private void ProcessAndSendAnswerBtn_Click(object sender, EventArgs e)
         {
             QueryHandler.ProcessEntireQueryList();
         }
 
-        private void CheckBoxAuto_CheckedChanged(object sender, EventArgs e)
+        private void AutomaticProcCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = sender as CheckBox;
             if (cb.Checked)
@@ -313,46 +348,46 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void MinimizeWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MiniMonitorCallTSMI_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.MiniMonitor.Show();
         }
 
-        private void ChangeURLOfMongoDBToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangeMongoDbUrlTSMI_Click(object sender, EventArgs e)
         {
             enteringMongoDBURL = enteringMongoDBURL ? false : true;
-            textBoxMongoDbUrl.Visible = enteringMongoDBURL;
-            labelMongoDbUrl.Visible = enteringMongoDBURL;
-            buttonChangeMongoDbUrl.Visible = enteringMongoDBURL;
-            textBoxMongoDbUrl.Text = ConnectionSettings.ConnectionString;
+            MongoDbUrlTBox.Visible = enteringMongoDBURL;
+            MongoDbUrlLbl.Visible = enteringMongoDBURL;
+            ChangeMongoDbUrlBtn.Visible = enteringMongoDBURL;
+            MongoDbUrlTBox.Text = ConnectionSettings.ConnectionString;
         }
 
         private void ChangeDBURLBtn_Click(object sender, EventArgs e)
         {
-            if (ConnectionSettings.ConnectionString != textBoxMongoDbUrl.Text && textBoxMongoDbUrl.Text != "")
+            if (ConnectionSettings.ConnectionString != MongoDbUrlTBox.Text && MongoDbUrlTBox.Text != "")
             {
-                ConnectionSettings.ConnectionString = textBoxMongoDbUrl.Text;
+                ConnectionSettings.ConnectionString = MongoDbUrlTBox.Text;
                 QueryHandler.HelpersInit();
             }
 
-            textBoxMongoDbUrl.Visible = false;
-            labelMongoDbUrl.Visible = false;
-            buttonChangeMongoDbUrl.Visible = false;
+            MongoDbUrlTBox.Visible = false;
+            MongoDbUrlLbl.Visible = false;
+            ChangeMongoDbUrlBtn.Visible = false;
             enteringMongoDBURL = false;
         }
 
         private void DCMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!Program.MiniMonitor.Visible && ServerDictionaries.RealtimeIds.Count > 0)
+            if (ServerDictionaries.RealtimeIds.Count > 0)
             {
-                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ", 
+                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ",
                     ServerDictionaries.RealtimeIds.Count, " client(s) is/are connected to it.");
                 string caption = "Data collector";
                 if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    this.WindowState = FormWindowState.Minimized;
                     CqgDataManagement.shutDownCQGConn();
+                    Program.MiniMonitor.Close();
                     e.Cancel = false;
                 }
                 else
@@ -363,6 +398,7 @@ namespace DataCollectionForRealtime
             else
             {
                 CqgDataManagement.shutDownCQGConn();
+                Program.MiniMonitor.Close();
             }
         }
 

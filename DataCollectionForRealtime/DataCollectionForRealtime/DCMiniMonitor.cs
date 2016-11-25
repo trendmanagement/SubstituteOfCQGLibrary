@@ -8,13 +8,11 @@ namespace DataCollectionForRealtime
 {
     public partial class DCMiniMonitor : Form
     {
-        public static List<string> instrumentsList;
         public static List<string> symbolsList;
 
         public DCMiniMonitor()
         {
             InitializeComponent();
-            instrumentsList = new List<string>();
             symbolsList = new List<string>();
         }
 
@@ -33,82 +31,19 @@ namespace DataCollectionForRealtime
             }
         }
 
-        private void DCMiniMonitor_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (ServerDictionaries.RealtimeIds.Count > 0)
-            {
-                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ", 
-                    ServerDictionaries.RealtimeIds.Count, " client(s) is/are connected to it.");
-                string caption = "Data collector";
-                if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    Program.MainForm.Close();
-                    e.Cancel = false;
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
-            else
-            {
-                Program.MainForm.Close();
-            }
-            
-        }
-
-        private void MainFormCall_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Program.MainForm.Show();
-        }
-
-        public void SetNumberOfQueriesInLine(int num)
-        {
-            try
-            {
-                if (this.InvokeRequired)
-                {
-                    this.BeginInvoke((MethodInvoker)delegate ()
-                    {
-                        queriesNumDsplLbl.Text = num.ToString();
-                    });
-                }
-                else
-                {
-                    queriesNumDsplLbl.Text = num.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                SetNumberOfQueriesInLine(num);
-            }
-            queriesNumDsplLbl.Text = num.ToString();
-        }
-
-        internal void SymbolsAndInstrumentsListsUpdate()
+        internal void SymbolsListsUpdate()
         {
             Action action = new Action(
                 () =>
                 {
-                    instrumentsListTextBox.Clear();
-                    symbolsListTextBox.Clear();
+                    SymbolsListTBox.Clear();
 
                     for (int i = 0; i < symbolsList.Count; i++)
                     {
                         if (!string.IsNullOrWhiteSpace(symbolsList[i]))
                         {
-                            symbolsListTextBox.Text += symbolsList[i] + "\n";
-                            symbolsListTextBox.Select(symbolsListTextBox.Text.Length, symbolsListTextBox.Text.Length);
-                        }
-                    }
-
-                    for (int i = 0; i < instrumentsList.Count; i++)
-                    {
-                        if (!string.IsNullOrWhiteSpace(instrumentsList[i]))
-                        {
-                            instrumentsListTextBox.Text += instrumentsList[i] + "\n";
-                            instrumentsListTextBox.Select(instrumentsListTextBox.Text.Length, instrumentsListTextBox.Text.Length);
+                            SymbolsListTBox.Text += symbolsList[i] + "\n";
+                            SymbolsListTBox.Select(SymbolsListTBox.Text.Length, SymbolsListTBox.Text.Length);
                         }
                     }
 
@@ -124,6 +59,42 @@ namespace DataCollectionForRealtime
             catch (ObjectDisposedException)
             {
                 // User closed the form
+            }
+        }
+
+        private void DCMiniMonitor_Load(object sender, EventArgs e)
+        {
+            Program.MainForm.MainFormInitAndLoadActions();
+        }
+
+        private void MainFormCallBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.MainForm.Show();
+        }
+
+        private void ClearSymbolsListBtn_Click(object sender, EventArgs e)
+        {
+            symbolsList = new List<string>();
+            SymbolsListTBox.Clear();
+        }
+
+        private void DCMiniMonitor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!Program.MainForm.Visible && ServerDictionaries.RealtimeIds.Count > 0)
+            {
+                string message = string.Concat("Are you sure that you want to stop fake CQG server? \nCurrently ",
+                    ServerDictionaries.RealtimeIds.Count, " client(s) is/are connected to it.");
+                string caption = "Data collector";
+                if (MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

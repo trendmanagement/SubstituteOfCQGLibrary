@@ -61,6 +61,20 @@ namespace DataCollectionForRealtime
             // This object will be sent to the DB
             AnswerInfo answer;
 
+            // Get a name of a symbol if it's CQGTimedBarsRequestClass object's request
+            // and show it in MiniMonitor form
+            if (query.ObjectType == "CQGTimedBarsRequestClass")
+            {
+                object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                string instrName = (string)qObj.GetType().InvokeMember("Symbol",
+                    BindingFlags.GetProperty, null, qObj, null);
+                if (!DCMiniMonitor.symbolsList.Contains(instrName))
+                {
+                    DCMiniMonitor.symbolsList.Add(instrName);
+                    Program.MiniMonitor.SymbolsListsUpdate();
+                }        
+            }
+
             // Handling of the request depending on its kind
             switch (query.QueryType)
             {
@@ -84,16 +98,6 @@ namespace DataCollectionForRealtime
                                     object qObj = CQGAssm.CreateInstance(query.MemberName, false,
                                         BindingFlags.CreateInstance, null, args, null, null);
                                     key = Core.CreateUniqueKey();
-
-                                    // Get name of an instrument if it's CQG.CQGInstrument object creation
-                                    // and show it in MiniMonitor form
-                                    if (query.MemberName == "CQG.CQGInstrument")
-                                    {
-                                        string instrName = (string)qObj.GetType().InvokeMember("FullName", 
-                                            BindingFlags.GetProperty, null, qObj, null);
-                                        DCMiniMonitor.instrumentsList.Add(instrName);
-                                        Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
-                                    }
 
                                     ServerDictionaries.PutObjectToTheDictionary(key, qObj);
                                     UsedObjs.Add(key, qObj);
@@ -130,22 +134,11 @@ namespace DataCollectionForRealtime
                         // from MiniMonitor form
                         if (query.MemberName == "CQG.CQGTimedBarsRequest")
                         {
-                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
+                            object qObj = UsedObjs.Contains(query.ObjectKey) ? UsedObjs[query.ObjectKey] : ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
                             string symbName = (string)qObj.GetType().InvokeMember("Symbol",
                                 BindingFlags.GetProperty, null, qObj, null);
                             DCMiniMonitor.symbolsList.Remove(symbName);
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
-                        }
-
-                        // Remove name of an instrument if it's CQG.CQGInstrument object deleting
-                        // from MiniMonitor form
-                        if (query.MemberName == "CQG.CQGInstrument")
-                        {
-                            object qObj = ServerDictionaries.GetObjectFromTheDictionary(query.ObjectKey);
-                            string instrName = (string)qObj.GetType().InvokeMember("FullName",
-                                BindingFlags.GetProperty, null, qObj, null);
-                            DCMiniMonitor.instrumentsList.Remove(instrName);
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            Program.MiniMonitor.SymbolsListsUpdate();
                         }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
@@ -197,7 +190,7 @@ namespace DataCollectionForRealtime
                         if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
                         {
                             DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            Program.MiniMonitor.SymbolsListsUpdate();
                         }
 
                         try
@@ -421,14 +414,6 @@ namespace DataCollectionForRealtime
 
                 if (queries.Count != 0)
                 {
-                    if (Program.MiniMonitor != null)
-                    {
-                        Task.Run(() =>
-                        {
-                            Program.MiniMonitor.SetNumberOfQueriesInLine(queries.Count);
-                        });                       
-                    }
-
                     // Process the queries (fire event of this class)
                     NewQueriesReady(queries);
                 }

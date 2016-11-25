@@ -36,18 +36,18 @@
             this.dataStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStripMainRealtime = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemListern = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemMinimizeWindow = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemChangeMongoDbUrl = new System.Windows.Forms.ToolStripMenuItem();
+            this.MiniMonitorCallTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChangeMongoDbUrlTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
-            this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.MainTabControl = new System.Windows.Forms.TabControl();
             this.tabPageMongoDbUrl = new System.Windows.Forms.TabPage();
-            this.checkBoxAuto = new System.Windows.Forms.CheckBox();
-            this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
-            this.buttonRespond = new System.Windows.Forms.Button();
-            this.buttonCheck = new System.Windows.Forms.Button();
-            this.labelMongoDbUrl = new System.Windows.Forms.Label();
-            this.textBoxMongoDbUrl = new System.Windows.Forms.TextBox();
-            this.buttonChangeMongoDbUrl = new System.Windows.Forms.Button();
+            this.AutomaticProcCheckBox = new System.Windows.Forms.CheckBox();
+            this.LogRTBox = new System.Windows.Forms.RichTextBox();
+            this.ProcessAndSendAnswerBtn = new System.Windows.Forms.Button();
+            this.CheckQueriesBtn = new System.Windows.Forms.Button();
+            this.MongoDbUrlLbl = new System.Windows.Forms.Label();
+            this.MongoDbUrlTBox = new System.Windows.Forms.TextBox();
+            this.ChangeMongoDbUrlBtn = new System.Windows.Forms.Button();
             this.labelLogMode = new System.Windows.Forms.Label();
             this.comboBoxLogMode = new System.Windows.Forms.ComboBox();
             this.statusStripOptionMonitor.SuspendLayout();
@@ -55,7 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
-            this.tabControlMain.SuspendLayout();
+            this.MainTabControl.SuspendLayout();
             this.tabPageMongoDbUrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,8 +111,8 @@
             this.menuStripMainRealtime.BackColor = System.Drawing.SystemColors.Control;
             this.menuStripMainRealtime.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemListern,
-            this.toolStripMenuItemMinimizeWindow,
-            this.toolStripMenuItemChangeMongoDbUrl});
+            this.MiniMonitorCallTSMI,
+            this.ChangeMongoDbUrlTSMI});
             this.menuStripMainRealtime.Location = new System.Drawing.Point(0, 0);
             this.menuStripMainRealtime.Name = "menuStripMainRealtime";
             this.menuStripMainRealtime.Size = new System.Drawing.Size(795, 24);
@@ -124,19 +124,19 @@
             this.toolStripMenuItemListern.Name = "toolStripMenuItemListern";
             this.toolStripMenuItemListern.Size = new System.Drawing.Size(12, 20);
             // 
-            // toolStripMenuItemMinimizeWindow
+            // MiniMonitorCallTSMI
             // 
-            this.toolStripMenuItemMinimizeWindow.Name = "toolStripMenuItemMinimizeWindow";
-            this.toolStripMenuItemMinimizeWindow.Size = new System.Drawing.Size(89, 20);
-            this.toolStripMenuItemMinimizeWindow.Text = "Mini Monitor";
-            this.toolStripMenuItemMinimizeWindow.Click += new System.EventHandler(this.MinimizeWindowToolStripMenuItem_Click);
+            this.MiniMonitorCallTSMI.Name = "MiniMonitorCallTSMI";
+            this.MiniMonitorCallTSMI.Size = new System.Drawing.Size(89, 20);
+            this.MiniMonitorCallTSMI.Text = "Mini Monitor";
+            this.MiniMonitorCallTSMI.Click += new System.EventHandler(this.MiniMonitorCallTSMI_Click);
             // 
-            // toolStripMenuItemChangeMongoDbUrl
+            // ChangeMongoDbUrlTSMI
             // 
-            this.toolStripMenuItemChangeMongoDbUrl.Name = "toolStripMenuItemChangeMongoDbUrl";
-            this.toolStripMenuItemChangeMongoDbUrl.Size = new System.Drawing.Size(155, 20);
-            this.toolStripMenuItemChangeMongoDbUrl.Text = "Change URL of MongoDB";
-            this.toolStripMenuItemChangeMongoDbUrl.Click += new System.EventHandler(this.ChangeURLOfMongoDBToolStripMenuItem_Click);
+            this.ChangeMongoDbUrlTSMI.Name = "ChangeMongoDbUrlTSMI";
+            this.ChangeMongoDbUrlTSMI.Size = new System.Drawing.Size(155, 20);
+            this.ChangeMongoDbUrlTSMI.Text = "Change URL of MongoDB";
+            this.ChangeMongoDbUrlTSMI.Click += new System.EventHandler(this.ChangeMongoDbUrlTSMI_Click);
             // 
             // splitContainer
             // 
@@ -145,27 +145,27 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.tabControlMain);
+            this.splitContainer.Panel2.Controls.Add(this.MainTabControl);
             this.splitContainer.Size = new System.Drawing.Size(771, 304);
             this.splitContainer.SplitterDistance = 208;
             this.splitContainer.TabIndex = 10;
             // 
-            // tabControlMain
+            // MainTabControl
             // 
-            this.tabControlMain.Controls.Add(this.tabPageMongoDbUrl);
-            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(559, 304);
-            this.tabControlMain.TabIndex = 7;
+            this.MainTabControl.Controls.Add(this.tabPageMongoDbUrl);
+            this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTabControl.Location = new System.Drawing.Point(0, 0);
+            this.MainTabControl.Name = "MainTabControl";
+            this.MainTabControl.SelectedIndex = 0;
+            this.MainTabControl.Size = new System.Drawing.Size(559, 304);
+            this.MainTabControl.TabIndex = 7;
             // 
             // tabPageMongoDbUrl
             // 
-            this.tabPageMongoDbUrl.Controls.Add(this.checkBoxAuto);
-            this.tabPageMongoDbUrl.Controls.Add(this.richTextBoxLog);
-            this.tabPageMongoDbUrl.Controls.Add(this.buttonRespond);
-            this.tabPageMongoDbUrl.Controls.Add(this.buttonCheck);
+            this.tabPageMongoDbUrl.Controls.Add(this.AutomaticProcCheckBox);
+            this.tabPageMongoDbUrl.Controls.Add(this.LogRTBox);
+            this.tabPageMongoDbUrl.Controls.Add(this.ProcessAndSendAnswerBtn);
+            this.tabPageMongoDbUrl.Controls.Add(this.CheckQueriesBtn);
             this.tabPageMongoDbUrl.Location = new System.Drawing.Point(4, 22);
             this.tabPageMongoDbUrl.Name = "tabPageMongoDbUrl";
             this.tabPageMongoDbUrl.Padding = new System.Windows.Forms.Padding(3);
@@ -174,73 +174,75 @@
             this.tabPageMongoDbUrl.Text = "Mongo-CQG";
             this.tabPageMongoDbUrl.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAuto
+            // AutomaticProcCheckBox
             // 
-            this.checkBoxAuto.AutoSize = true;
-            this.checkBoxAuto.Location = new System.Drawing.Point(444, 12);
-            this.checkBoxAuto.Name = "checkBoxAuto";
-            this.checkBoxAuto.Size = new System.Drawing.Size(99, 17);
-            this.checkBoxAuto.TabIndex = 3;
-            this.checkBoxAuto.Text = "Automatic work";
-            this.checkBoxAuto.UseVisualStyleBackColor = true;
-            this.checkBoxAuto.CheckedChanged += new System.EventHandler(this.CheckBoxAuto_CheckedChanged);
+            this.AutomaticProcCheckBox.AutoSize = true;
+            this.AutomaticProcCheckBox.Checked = true;
+            this.AutomaticProcCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AutomaticProcCheckBox.Location = new System.Drawing.Point(444, 12);
+            this.AutomaticProcCheckBox.Name = "AutomaticProcCheckBox";
+            this.AutomaticProcCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.AutomaticProcCheckBox.TabIndex = 3;
+            this.AutomaticProcCheckBox.Text = "Autoprocessing";
+            this.AutomaticProcCheckBox.UseVisualStyleBackColor = true;
+            this.AutomaticProcCheckBox.CheckedChanged += new System.EventHandler(this.AutomaticProcCheckBox_CheckedChanged);
             // 
-            // richTextBoxLog
+            // LogRTBox
             // 
-            this.richTextBoxLog.Location = new System.Drawing.Point(7, 37);
-            this.richTextBoxLog.Name = "richTextBoxLog";
-            this.richTextBoxLog.Size = new System.Drawing.Size(538, 235);
-            this.richTextBoxLog.TabIndex = 2;
-            this.richTextBoxLog.Text = "";
+            this.LogRTBox.Location = new System.Drawing.Point(7, 37);
+            this.LogRTBox.Name = "LogRTBox";
+            this.LogRTBox.Size = new System.Drawing.Size(538, 235);
+            this.LogRTBox.TabIndex = 2;
+            this.LogRTBox.Text = "";
             // 
-            // buttonRespond
+            // ProcessAndSendAnswerBtn
             // 
-            this.buttonRespond.Location = new System.Drawing.Point(163, 7);
-            this.buttonRespond.Name = "buttonRespond";
-            this.buttonRespond.Size = new System.Drawing.Size(271, 23);
-            this.buttonRespond.TabIndex = 1;
-            this.buttonRespond.Text = "Process the request and send a response to the DB";
-            this.buttonRespond.UseVisualStyleBackColor = true;
-            this.buttonRespond.Click += new System.EventHandler(this.ButtonRespond_Click);
+            this.ProcessAndSendAnswerBtn.Location = new System.Drawing.Point(163, 7);
+            this.ProcessAndSendAnswerBtn.Name = "ProcessAndSendAnswerBtn";
+            this.ProcessAndSendAnswerBtn.Size = new System.Drawing.Size(271, 23);
+            this.ProcessAndSendAnswerBtn.TabIndex = 1;
+            this.ProcessAndSendAnswerBtn.Text = "Process the request and send a response to the DB";
+            this.ProcessAndSendAnswerBtn.UseVisualStyleBackColor = true;
+            this.ProcessAndSendAnswerBtn.Click += new System.EventHandler(this.ProcessAndSendAnswerBtn_Click);
             // 
-            // buttonCheck
+            // CheckQueriesBtn
             // 
-            this.buttonCheck.Location = new System.Drawing.Point(7, 7);
-            this.buttonCheck.Name = "buttonCheck";
-            this.buttonCheck.Size = new System.Drawing.Size(150, 23);
-            this.buttonCheck.TabIndex = 0;
-            this.buttonCheck.Text = "Check queries in MongoDB";
-            this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Click += new System.EventHandler(this.ButtonCheck_Click);
+            this.CheckQueriesBtn.Location = new System.Drawing.Point(7, 7);
+            this.CheckQueriesBtn.Name = "CheckQueriesBtn";
+            this.CheckQueriesBtn.Size = new System.Drawing.Size(150, 23);
+            this.CheckQueriesBtn.TabIndex = 0;
+            this.CheckQueriesBtn.Text = "Check queries in MongoDB";
+            this.CheckQueriesBtn.UseVisualStyleBackColor = true;
+            this.CheckQueriesBtn.Click += new System.EventHandler(this.CheckQueriesBtn_Click);
             // 
-            // labelMongoDbUrl
+            // MongoDbUrlLbl
             // 
-            this.labelMongoDbUrl.AutoSize = true;
-            this.labelMongoDbUrl.Location = new System.Drawing.Point(9, 24);
-            this.labelMongoDbUrl.Name = "labelMongoDbUrl";
-            this.labelMongoDbUrl.Size = new System.Drawing.Size(83, 13);
-            this.labelMongoDbUrl.TabIndex = 11;
-            this.labelMongoDbUrl.Text = "MongoDB URL:";
-            this.labelMongoDbUrl.Visible = false;
+            this.MongoDbUrlLbl.AutoSize = true;
+            this.MongoDbUrlLbl.Location = new System.Drawing.Point(9, 24);
+            this.MongoDbUrlLbl.Name = "MongoDbUrlLbl";
+            this.MongoDbUrlLbl.Size = new System.Drawing.Size(83, 13);
+            this.MongoDbUrlLbl.TabIndex = 11;
+            this.MongoDbUrlLbl.Text = "MongoDB URL:";
+            this.MongoDbUrlLbl.Visible = false;
             // 
-            // textBoxMongoDbUrl
+            // MongoDbUrlTBox
             // 
-            this.textBoxMongoDbUrl.Location = new System.Drawing.Point(101, 21);
-            this.textBoxMongoDbUrl.Name = "textBoxMongoDbUrl";
-            this.textBoxMongoDbUrl.Size = new System.Drawing.Size(274, 20);
-            this.textBoxMongoDbUrl.TabIndex = 12;
-            this.textBoxMongoDbUrl.Visible = false;
+            this.MongoDbUrlTBox.Location = new System.Drawing.Point(101, 21);
+            this.MongoDbUrlTBox.Name = "MongoDbUrlTBox";
+            this.MongoDbUrlTBox.Size = new System.Drawing.Size(274, 20);
+            this.MongoDbUrlTBox.TabIndex = 12;
+            this.MongoDbUrlTBox.Visible = false;
             // 
-            // buttonChangeMongoDbUrl
+            // ChangeMongoDbUrlBtn
             // 
-            this.buttonChangeMongoDbUrl.Location = new System.Drawing.Point(381, 20);
-            this.buttonChangeMongoDbUrl.Name = "buttonChangeMongoDbUrl";
-            this.buttonChangeMongoDbUrl.Size = new System.Drawing.Size(75, 21);
-            this.buttonChangeMongoDbUrl.TabIndex = 13;
-            this.buttonChangeMongoDbUrl.Text = "Apply";
-            this.buttonChangeMongoDbUrl.UseVisualStyleBackColor = true;
-            this.buttonChangeMongoDbUrl.Visible = false;
-            this.buttonChangeMongoDbUrl.Click += new System.EventHandler(this.ChangeDBURLBtn_Click);
+            this.ChangeMongoDbUrlBtn.Location = new System.Drawing.Point(381, 20);
+            this.ChangeMongoDbUrlBtn.Name = "ChangeMongoDbUrlBtn";
+            this.ChangeMongoDbUrlBtn.Size = new System.Drawing.Size(75, 21);
+            this.ChangeMongoDbUrlBtn.TabIndex = 13;
+            this.ChangeMongoDbUrlBtn.Text = "Apply";
+            this.ChangeMongoDbUrlBtn.UseVisualStyleBackColor = true;
+            this.ChangeMongoDbUrlBtn.Visible = false;
+            this.ChangeMongoDbUrlBtn.Click += new System.EventHandler(this.ChangeDBURLBtn_Click);
             // 
             // labelLogMode
             // 
@@ -266,13 +268,14 @@
             this.ClientSize = new System.Drawing.Size(795, 413);
             this.Controls.Add(this.comboBoxLogMode);
             this.Controls.Add(this.labelLogMode);
-            this.Controls.Add(this.buttonChangeMongoDbUrl);
-            this.Controls.Add(this.textBoxMongoDbUrl);
-            this.Controls.Add(this.labelMongoDbUrl);
+            this.Controls.Add(this.ChangeMongoDbUrlBtn);
+            this.Controls.Add(this.MongoDbUrlTBox);
+            this.Controls.Add(this.MongoDbUrlLbl);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.menuStripMainRealtime);
             this.Controls.Add(this.statusStripOptionMonitor);
             this.Name = "DCMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Collector for Realtime";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DCMainForm_FormClosing);
             this.Load += new System.EventHandler(this.RealtimeDataManagement_Load);
@@ -283,7 +286,7 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
-            this.tabControlMain.ResumeLayout(false);
+            this.MainTabControl.ResumeLayout(false);
             this.tabPageMongoDbUrl.ResumeLayout(false);
             this.tabPageMongoDbUrl.PerformLayout();
             this.ResumeLayout(false);
@@ -302,17 +305,17 @@
         private System.Windows.Forms.MenuStrip menuStripMainRealtime;
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemListern;
-        private System.Windows.Forms.TabControl tabControlMain;
+        private System.Windows.Forms.TabControl MainTabControl;
         private System.Windows.Forms.TabPage tabPageMongoDbUrl;
-        private System.Windows.Forms.CheckBox checkBoxAuto;
-        private System.Windows.Forms.RichTextBox richTextBoxLog;
-        private System.Windows.Forms.Button buttonRespond;
-        private System.Windows.Forms.Button buttonCheck;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemMinimizeWindow;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemChangeMongoDbUrl;
-        private System.Windows.Forms.Label labelMongoDbUrl;
-        private System.Windows.Forms.TextBox textBoxMongoDbUrl;
-        private System.Windows.Forms.Button buttonChangeMongoDbUrl;
+        private System.Windows.Forms.CheckBox AutomaticProcCheckBox;
+        private System.Windows.Forms.RichTextBox LogRTBox;
+        private System.Windows.Forms.Button ProcessAndSendAnswerBtn;
+        private System.Windows.Forms.Button CheckQueriesBtn;
+        private System.Windows.Forms.ToolStripMenuItem MiniMonitorCallTSMI;
+        private System.Windows.Forms.ToolStripMenuItem ChangeMongoDbUrlTSMI;
+        private System.Windows.Forms.Label MongoDbUrlLbl;
+        private System.Windows.Forms.TextBox MongoDbUrlTBox;
+        private System.Windows.Forms.Button ChangeMongoDbUrlBtn;
         private System.Windows.Forms.Label labelLogMode;
         private System.Windows.Forms.ComboBox comboBoxLogMode;
     }
