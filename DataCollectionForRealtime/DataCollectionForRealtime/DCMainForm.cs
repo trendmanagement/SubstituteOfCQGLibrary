@@ -253,18 +253,20 @@ namespace DataCollectionForRealtime
                         LogRTBox.ScrollToCaret();
                     }
                 });
-
-            try
+            Task.Run(() => 
             {
-                if (Program.MainForm.IsHandleCreated)
+                try
                 {
-                    Invoke(action);
+                    if (Program.MainForm.IsHandleCreated)
+                    {
+                        Invoke(action);
+                    }
                 }
-            }
-            catch (ObjectDisposedException)
-            {
-                // User closed the form
-            }
+                catch (ObjectDisposedException)
+                {
+                    // User closed the form
+                }
+            });
         }
 
         private void CQG_LogChange(string message)
