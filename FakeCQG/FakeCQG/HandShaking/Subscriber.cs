@@ -30,6 +30,7 @@ namespace FakeCQG.Internal.Handshaking
                 {
                     try
                     {
+                        //Checking if query and answer already in MongoDB
                         bool isHandshakingQuery = (collection.Find(filter).FirstOrDefault() != null);
                         bool isAnswer = (collection.Find(filterId).FirstOrDefault() != null);
 

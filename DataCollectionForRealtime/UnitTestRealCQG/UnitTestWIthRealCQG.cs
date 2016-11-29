@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Timers;
 using FakeCQG;
 using FakeCQG.Internal;
+using FakeCQG.Internal.Helpers;
+using FakeCQG.Internal.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestRealCQG
@@ -93,6 +95,220 @@ namespace UnitTestRealCQG
                 recurrenceСount--;
             }
         }
+
+        #region AutoGenQueryProcessing
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_GetProperty()
+        {
+            // arrange
+            string id = "GetProperty";
+            string name = "GetProperty";
+            string objType = "CQGAccountClassAccountMarginDetailing";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.GetProperty, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_SetProperty()
+        {
+            // arrange
+            string id = "SetProperty";
+            string name = "SetProperty";
+            string objType = "CQGAccountClassAccountMarginDetailing";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.SetProperty, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_CallMethod()
+        {
+            // arrange
+            string id = "CallMethod";
+            string name = "CallMethod";
+            string objType = "_ICQGCELEvents_SinkHelperAccountChanged";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallMethod, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_SubscribeToEvent()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            string objType = "_ICQGCELEvents_EventAccountChanged";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.SubscribeToEvent, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_UnsubscribeFromEvent()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            string objType = "_ICQGCELEvents_EventAccountChanged";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.UnsubscribeFromEvent, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        #endregion
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {

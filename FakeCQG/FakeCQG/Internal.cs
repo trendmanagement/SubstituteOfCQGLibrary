@@ -224,6 +224,12 @@ namespace FakeCQG
                 }
             }
 
+            /// <summary>
+            /// Messages handler for model
+            /// </summary>
+            /// <param name="key">Model key</param>
+            /// <param name="value">Model value</param>
+            /// <param name="isQuery">Checking if is it query</param>
             internal static void OnLogChange(string key, string value, bool isQuery)
             {
                 Log = isQuery ?
@@ -233,6 +239,10 @@ namespace FakeCQG
                 LogChange?.Invoke(Log);
             }
 
+            /// <summary>
+            /// Default messages handler  
+            /// </summary>
+            /// <param name="message">String message for log</param>
             internal static void OnLogChange(string message)
             {
                 Log = message;

@@ -9,6 +9,7 @@ using FakeCQG.Internal;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MongoDB.Driver;
 
 namespace UnitTestRealCQG
 {
@@ -70,7 +71,7 @@ namespace UnitTestRealCQG
         {
             // arrange
             var queryType = QueryType.SetProperty;
-            string[] keys = { "key1", "key2", "key3" };
+            string[] keys = { "SetQueryList1", "SetQueryList2", "SetQueryList3" };
             var list = new List<QueryInfo>()
             {
                 new QueryInfo(queryType, keys[0], string.Empty, string.Empty, null, null),
@@ -155,8 +156,8 @@ namespace UnitTestRealCQG
         public void Method_DeleteProcessedQuery()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "DeleteProcessedQuery";
+            string name = "DeleteProcessedQuery";
             bool isQueryTrue = default(bool);
             bool isQueryFalse = default(bool);
             Core.LogChange += CQG_LogChange;
@@ -186,8 +187,8 @@ namespace UnitTestRealCQG
         public void Method_PushAnswer()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "PushAnswer";
+            string name = "PushAnswer";
             bool isQueryTrue = default(bool);
             bool isQueryFalse = default(bool);
             var query = new QueryInfo(QueryType.SetProperty, id, string.Empty, name, null, null);
@@ -257,9 +258,9 @@ namespace UnitTestRealCQG
         {
             // arrange
             var qType = QueryType.CallMethod;
-            string id = "key";
+            string id = "RemoveOneQueryItem";
             bool isQuery = default(bool);
-            string name = "name";
+            string name = "RemoveOneQueryItem";
             Core.LogChange += CQG_LogChange_Mock;
             var queryHelper = new QueryHelper();
             UnitTestHelper.StartUp();
@@ -314,9 +315,9 @@ namespace UnitTestRealCQG
         public void MethodAsync_RemoveOneAnswerItem()
         {
             // arrange
-            string id = "key";
+            string id = "RemoveOneAnswerItem";
             bool isAnswer = default(bool);
-            string name = "name";
+            string name = "RemoveOneAnswerItem";
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
             UnitTestHelper.StartUp();
@@ -344,9 +345,9 @@ namespace UnitTestRealCQG
         {
             // arrange
             AnswerInfo answer = default(AnswerInfo);
-            string id = "key";
+            string id = "GetAnswerData";
             bool isAnswer = default(bool);
-            string name = "name";
+            string name = "GetAnswerData";
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
             UnitTestHelper.StartUp();
@@ -373,7 +374,7 @@ namespace UnitTestRealCQG
             // arrange
             string id = "keyDCEventHandler";
             bool isAnswer = default(bool);
-            string name = "name";
+            string name = "DCEventHandler";
             var argValues = new Dictionary<int, object>() { { 0, "value1" }, { 1, "value2" } };
             Core.LogChange += CQG_LogChange_Mock;
             var answerHelper = new AnswerHelper();
@@ -406,8 +407,8 @@ namespace UnitTestRealCQG
         public void ProcessedQuery_WithFastAct()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "FastAct";
+            string name = "FastAct";
             bool isQuery;
             var queryHelper = new QueryHelper();
             var answerHelper = new AnswerHelper();
@@ -442,13 +443,13 @@ namespace UnitTestRealCQG
             Assert.AreEqual(id, answer.AnswerKey);
         }
 
-        [TestMethod]
         //10 sec act test 
+        [TestMethod]
         public async void ProcessedQuery_WithLongAct()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "LongAct";
+            string name = "LongAct";
             bool isQuery;
             var queryHelper = new QueryHelper();
             var answerHelper = new AnswerHelper();
@@ -538,6 +539,161 @@ namespace UnitTestRealCQG
             {
                 Assert.IsTrue(queries[i].QueryKey == answers[i].AnswerKey);
             }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void AutoGenQueryProcessing_TrowArgumentException()
+        {
+            // arrange
+            string id = "TrowArgumentException";
+            string name = "TrowArgumentException";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, string.Empty, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            // assert 2
+            Assert.Fail("");
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_CreateCtor()
+        {
+            // arrange
+            string id = "CreateCtor";
+            string name = "CreateCtor";
+            string objType = "CQGCELClass";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+
+            var answer = answerHelper.GetAnswerData(id);
+
+            // assert 3
+            Assert.IsNotNull(answer);
+            Assert.AreEqual(id, answer.AnswerKey);
+        }
+
+        [TestMethod]
+        public void AutoGenQueryProcessing_CreateDctor()
+        {
+            // arrange
+            string id = "CreateDctor";
+            string name = "CreateDctor";
+            string objType = "CQGCELClass";
+            bool isQuery;
+            var queryHelper = new QueryHelper();
+            var answerHelper = new AnswerHelper();
+            Core.LogChange += CQG_LogChange;
+            UnitTestHelper.StartUp();
+            UnitTestHelper.QueryHandler.InitHMethodDict();
+
+            // act
+            var query = Core.CreateQuery(QueryType.CallCtor, id, objType, name, string.Empty);
+            Task.Run(async () =>
+            {
+                await queryHelper.PushQueryAsync(query);
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 1
+                Assert.IsTrue(isQuery);
+            }).GetAwaiter().GetResult();
+
+            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+
+            Task.Run(async () =>
+            {
+                isQuery = await UnitTestHelper.QueryHandler.CheckQueryAsync(id);
+
+                // assert 2
+                Assert.IsFalse(isQuery);
+            }).GetAwaiter().GetResult();
+        }
+
+        [TestMethod]
+        public void SimultaneouslyPush2ListsOfAnswers()
+        {
+            // arrange
+            string id = "key";
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            List<AnswerInfo> answerList = new List<AnswerInfo>();
+            int countQueries = 100;
+            UnitTestHelper.StartUp();
+
+            for (int i = 0; i < countQueries; i++)
+            {
+                answerList.Add(new AnswerInfo($"{id}{i.ToString()}", string.Empty, name, null, null));
+            }
+
+            // act
+            Task.Run(() =>
+            {
+                //Simulation of simultaneous pushing answers by two client applications
+                Task.Run(async () =>
+                {
+                    for (int i = 0; i < countQueries / 2; i++)
+                    {
+                        await AnswerHandler.PushAnswerAsync(answerList[i]);
+                    } 
+                });
+
+                Task.Run(async () =>
+                {
+                    for (int i = countQueries / 2; i < countQueries; i++)
+                    {
+                        await AnswerHandler.PushAnswerAsync(answerList[i]);
+                    }
+                });
+
+                Task.Delay(1000).GetAwaiter().GetResult();
+            }).GetAwaiter().GetResult();
+
+            var filter = Builders<AnswerInfo>.Filter.Empty;
+            var collection = Core.AnswerHelper.GetCollection.Find(filter).ToList();
+
+            // assert
+            Assert.AreEqual(countQueries, collection.Count);
         }
 
         #endregion

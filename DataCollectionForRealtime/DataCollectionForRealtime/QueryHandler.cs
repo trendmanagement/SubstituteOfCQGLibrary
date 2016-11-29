@@ -440,6 +440,11 @@ namespace DataCollectionForRealtime
             }
         }
 
+        /// <summary>
+        /// Task for checking queries by id
+        /// </summary>
+        /// <param name="Id">Queries id </param>
+        /// <returns>Returns success of operation</returns>
         public Task<bool> CheckQueryAsync(string Id)
         {
             return Task.Run(() =>
@@ -587,6 +592,12 @@ namespace DataCollectionForRealtime
             return type.BaseType == typeof(MulticastDelegate);
         }
 
+        /// <summary>
+        /// Creating answer method with exception info
+        /// </summary>
+        /// <param name="ex">CQG exception</param>
+        /// <param name="query">Query with data which threw exception</param>
+        /// <returns>Answer with exception info</returns>
         AnswerInfo CreateExceptionAnswer(Exception ex, QueryInfo query)
         {
             var tiex = ex as TargetInvocationException;

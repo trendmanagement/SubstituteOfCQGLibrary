@@ -14,6 +14,7 @@ namespace FakeCQG.Internal.Handshaking
 
         public HandshakingEventArgs()
         {
+            //Default ctor does not have subscribers
             NoSubscribers = true;
         }
 

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Timers;
 using FakeCQG.Internal;
 using FakeCQG.Internal.Helpers;
 using FakeCQG.Internal.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MongoDB.Driver;
 
 namespace UnitTestFakeCQG
 {
@@ -84,6 +84,55 @@ namespace UnitTestFakeCQG
             Assert.AreEqual(keys[3], queryList[3].QueryKey);
             Assert.AreEqual(null, queryList[3].ArgKeys);
             Assert.AreEqual(null, queryList[3].ArgValues);
+        }
+
+        [TestMethod]
+        public void SimultaneouslyPush2ListsOfQueries()
+        {
+            // arrange
+            var qType = QueryType.SetProperty;
+            string id = "key";
+            string name = "name";
+            Core.LogChange += CQG_LogChange_Mock;
+            var queryHelper = new QueryHelper();
+            List<QueryInfo> queryList = new List<QueryInfo>();
+            int countQueries = 100;
+            queryHelper.GetCollection.DeleteMany(Builders<QueryInfo>.Filter.Empty);
+
+
+            for (int i = 0; i < countQueries; i++)
+            {
+                queryList.Add(new QueryInfo(qType, $"{id}{i.ToString()}", string.Empty, name, null, null));
+            }
+
+            // act
+            Task.Run(() =>
+            {
+                //Simulation of simultaneous pushing queries by two client applications
+                Task.Run(async () => 
+                {
+                    for (int i = 0; i < countQueries / 2; i++)
+                    {
+                        await queryHelper.PushQueryAsync(queryList[i]);
+                    }
+                });
+
+                Task.Run(async () =>
+                {
+                    for (int i = countQueries / 2; i < countQueries; i++)
+                    {
+                        await queryHelper.PushQueryAsync(queryList[i]);
+                    }
+                });
+
+                Task.Delay(1000).GetAwaiter().GetResult();
+            }).GetAwaiter().GetResult();
+
+            var filter = Builders<QueryInfo>.Filter.Empty;
+            var collection = queryHelper.GetCollection.Find(filter).ToList();
+
+            // assert
+            Assert.AreEqual(countQueries, collection.Count);
         }
 
         private void CQG_LogChange_Mock(string message)
