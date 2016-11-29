@@ -194,14 +194,13 @@ namespace DataCollectionForRealtime
 
                         object[] args = Core.GetArgsIntoArrayFromTwoDicts(query.ArgKeys, query.ArgValues);
 
-                        if(string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
-                        {
-                            DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
-                            Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
-                        }
-
                         try
                         {
+                            if (string.Concat(qObj.GetType()) == "CQG.CQGTimedBarsRequest" && query.MemberName == "Symbol")
+                            {
+                                DCMiniMonitor.symbolsList.Add(string.Concat(args[0]));
+                                Program.MiniMonitor.SymbolsAndInstrumentsListsUpdate();
+                            }
                             // Setting of property value
                             qObj.GetType().InvokeMember(query.MemberName, BindingFlags.SetProperty, null, qObj, args);
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);

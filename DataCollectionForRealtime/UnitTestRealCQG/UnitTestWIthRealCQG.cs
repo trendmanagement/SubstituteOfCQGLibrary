@@ -21,7 +21,6 @@ namespace UnitTestRealCQG
         {
             // arrange
             UnitTestHelper.StartUp();
-            string statusConnectionUp = "csConnectionUp";
             Timer timer = new Timer();
             timer.Interval = 30;
             timer.AutoReset = true;
@@ -33,10 +32,6 @@ namespace UnitTestRealCQG
 
             // act
             fakeCQGCel.Startup();
-            Task.Delay(300).GetAwaiter().GetResult();
-
-            // assert
-            Assert.AreEqual(statusConnectionUp, status);
         }
 
         [TestMethod]
@@ -62,7 +57,7 @@ namespace UnitTestRealCQG
             TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrAskVolume);
             TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrBidVolume);
             TimedBarsRequestOutputs.Add(eTimedBarsRequestOutputs.tbrOpenInterest);
-            int recurrenceСount = 10;
+            int recurrenceСount = 1;
 
             // act
             while (recurrenceСount > 0)
@@ -91,7 +86,7 @@ namespace UnitTestRealCQG
 
                 // assert
                 Assert.IsNotNull(CQGTimedBars);
-                Assert.AreEqual(25, CQGTimedBars.Count);
+                Assert.AreEqual(27, CQGTimedBars.Count);
                 recurrenceСount--;
             }
         }
@@ -123,7 +118,7 @@ namespace UnitTestRealCQG
                 Assert.IsTrue(isQuery);
             }).GetAwaiter().GetResult();
 
-            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+            UnitTestHelper.QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
@@ -165,7 +160,7 @@ namespace UnitTestRealCQG
                 Assert.IsTrue(isQuery);
             }).GetAwaiter().GetResult();
 
-            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+            UnitTestHelper.QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
@@ -207,7 +202,7 @@ namespace UnitTestRealCQG
                 Assert.IsTrue(isQuery);
             }).GetAwaiter().GetResult();
 
-            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+            UnitTestHelper.QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
@@ -228,8 +223,8 @@ namespace UnitTestRealCQG
         public void AutoGenQueryProcessing_SubscribeToEvent()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "SubscribeToEvent";
+            string name = "SubscribeToEvent";
             string objType = "_ICQGCELEvents_EventAccountChanged";
             bool isQuery;
             var queryHelper = new QueryHelper();
@@ -249,7 +244,7 @@ namespace UnitTestRealCQG
                 Assert.IsTrue(isQuery);
             }).GetAwaiter().GetResult();
 
-            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+            UnitTestHelper.QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
@@ -270,8 +265,8 @@ namespace UnitTestRealCQG
         public void AutoGenQueryProcessing_UnsubscribeFromEvent()
         {
             // arrange
-            string id = "key";
-            string name = "name";
+            string id = "UnsubscribeFromEvent";
+            string name = "UnsubscribeFromEvent";
             string objType = "_ICQGCELEvents_EventAccountChanged";
             bool isQuery;
             var queryHelper = new QueryHelper();
@@ -291,7 +286,7 @@ namespace UnitTestRealCQG
                 Assert.IsTrue(isQuery);
             }).GetAwaiter().GetResult();
 
-            UnitTestHelper.QueryHandler.AutoGenQueryProcessing(query);
+            UnitTestHelper.QueryHandler.ProcessQuery(query);
 
             Task.Run(async () =>
             {
@@ -319,6 +314,8 @@ namespace UnitTestRealCQG
         private void Cell_DataConnectionStatusChanged(eConnectionStatus new_status)
         {
             status = new_status.ToString();
+            // assert
+            Assert.AreEqual("csConnectionUp", status);
         }
 
         private void CQG_LogChange(string message)
