@@ -2482,7 +2482,8 @@ namespace DataCollectionForRealtime
                     {
                         throw new System.ArgumentException(string.Concat("Operation ", ctorHndlrName, " is invalid"), "ctor name");
                     }
-                    hQPOfCtros[ctorHndlrName](query, args); 
+                    hQPOfCtros[ctorHndlrName](query, args);
+                    AsyncTaskListener.LogMessage("There was a request to real library");
                     break;
 
                 case QueryType.CallDtor:
@@ -2499,7 +2500,8 @@ namespace DataCollectionForRealtime
                     {
                         throw new System.ArgumentException(string.Concat("Operation ", getHndlrName, " is invalid"), "getter name");
                     }
-                    hQPOfGetters[getHndlrName](query, args); 
+                    hQPOfGetters[getHndlrName](query, args);
+                    AsyncTaskListener.LogMessage("There was a request to real library");
                     break;
 
                 case QueryType.SetProperty:
@@ -2509,7 +2511,8 @@ namespace DataCollectionForRealtime
                     {
                         throw new System.ArgumentException(string.Concat("Operation ", setHndlrName, " is invalid"), "setter name");
                     }
-                    hQPOfSetters[setHndlrName](query, args); 
+                    hQPOfSetters[setHndlrName](query, args);
+                    AsyncTaskListener.LogMessage("There was a request to real library");
                     break;
 
                 case QueryType.CallMethod:
@@ -2519,7 +2522,8 @@ namespace DataCollectionForRealtime
                     {
                         throw new System.ArgumentException(string.Concat("Operation ", mthdHndlrName, " is invalid"), "method name");
                     }
-                    hQPOfMethods[mthdHndlrName](query, args); 
+                    hQPOfMethods[mthdHndlrName](query, args);
+                    AsyncTaskListener.LogMessage("There was a request to real library");
                     break;
 
                 case QueryType.SubscribeToEvent:
@@ -2541,7 +2545,8 @@ namespace DataCollectionForRealtime
                     {
                         EventHandler.EventAppsSubscribersNum.Add(query.MemberName, 1);
                     }
-                    hQPOfEvents[eventHndlrName](query, args); 
+                    hQPOfEvents[eventHndlrName](query, args);
+                    AsyncTaskListener.LogMessage("There was a request to real library");
                     break;
 
             }

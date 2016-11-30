@@ -14,6 +14,8 @@ namespace FakeCQG.Internal
         public static void PutObjectToTheDictionary(string key, object obj)
         {
             objDictionary[key] = obj;
+            //Data was wrote down to the dictionary;
+            Core.OnLogChange($"Data with key {key} was wrote down to the dictionary");
         }
 
         public static object GetObjectFromTheDictionary(string key)
@@ -23,6 +25,11 @@ namespace FakeCQG.Internal
             if(!objDictionary.TryGetValue(key, out objectValue))
             {
                 Core.OnLogChange(string.Concat("Key not found with key: ", key));
+            }
+            else
+            {
+                //Data was taken from the dictionary;
+                Core.OnLogChange($"Data with key {key} was taken from the dictionary");
             }
 
             return objectValue;

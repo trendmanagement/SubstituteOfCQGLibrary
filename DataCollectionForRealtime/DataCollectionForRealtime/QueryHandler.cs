@@ -105,6 +105,7 @@ namespace DataCollectionForRealtime
                             }
 
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: key);
+                            AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
                             PushAnswerAndDeleteQuery(answer);
                         }
                         catch 
@@ -142,6 +143,7 @@ namespace DataCollectionForRealtime
                         }
 
                         answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
+                        AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
 
                         PushAnswerAndDeleteQuery(answer);
                     }
@@ -157,12 +159,15 @@ namespace DataCollectionForRealtime
                         {
                             // Getting of property value
                             var propV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.GetProperty, null, qObj, args);
-
+                            AsyncTaskListener.LogMessage("There was a request to real library");
+                            AsyncTaskListener.LogMessage("There was a data, got from real library");
+                            
                             // Checking type of property value and returning value or value key 
                             // (second, if it's not able to be transmitted through the database)
-                            answer = Core.IsSerializableType(propV.GetType()) ?
+                           answer = Core.IsSerializableType(propV.GetType()) ?
                                 CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV) :
                                 CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, propV);
+                            AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
 
                             PushAnswerAndDeleteQuery(answer);
                         }
@@ -197,7 +202,9 @@ namespace DataCollectionForRealtime
                         {
                             // Setting of property value
                             qObj.GetType().InvokeMember(query.MemberName, BindingFlags.SetProperty, null, qObj, args);
+                            AsyncTaskListener.LogMessage("There was a request to real library");
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
+                            AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
 
                             PushAnswerAndDeleteQuery(answer);
                         }
@@ -223,6 +230,8 @@ namespace DataCollectionForRealtime
                         {
                             var returnKey = "true";
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
+                            AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
+
                             PushAnswerAndDeleteQuery(answer);
                             break;
                         }
@@ -243,10 +252,13 @@ namespace DataCollectionForRealtime
                                 string propName = query.MemberName.Substring(4);
                                 BindingFlags invokeAttr = isGetter ? BindingFlags.GetProperty : BindingFlags.SetProperty;
                                 returnV = qObj.GetType().InvokeMember(propName, invokeAttr, null, qObj, args);
+                                AsyncTaskListener.LogMessage("There was a request to real library");
+                                AsyncTaskListener.LogMessage("There was a data, got from real library");
                             }
                             else
                             {
                                 returnV = qObj.GetType().InvokeMember(query.MemberName, BindingFlags.InvokeMethod, null, qObj, args);
+                                AsyncTaskListener.LogMessage("There was a request to real library");
                             }
 
                             if (!object.ReferenceEquals(returnV, null))
@@ -255,12 +267,14 @@ namespace DataCollectionForRealtime
                                 answer = Core.IsSerializableType(returnV.GetType()) ? 
                                     CreateValAnswer(query.QueryKey, query.ObjectKey, query.MemberName, returnV) :
                                     CreateKeyAnswer(query.QueryKey, query.ObjectKey, query.MemberName, returnV);
+                                AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
                             }
                             else
                             {
                                 // Handling void method call
                                 var returnKey = "true";
                                 answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, valueKey: returnKey);
+                                AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
                             }
 
                             PushAnswerAndDeleteQuery(answer);
@@ -330,6 +344,7 @@ namespace DataCollectionForRealtime
                             }
 
                             answer = new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName, value: true);
+                            AsyncTaskListener.LogMessage($"Answer with key {answer.AnswerKey} was created");
 
                             PushAnswerAndDeleteQuery(answer);
                         }
@@ -351,6 +366,7 @@ namespace DataCollectionForRealtime
                         {
                             // Fire this event explicitly, because data collector connects to real CQG beforehand and does not fire it anymore
                             CQGEventHandlers._ICQGCELEvents_DataConnectionStatusChangedEventHandlerImpl(CqgDataManagement.currConnStat);
+                            AsyncTaskListener.LogMessage("Event was happened");
                         }
                     }
                     break;
@@ -367,6 +383,8 @@ namespace DataCollectionForRealtime
         public void SetQueryList(List<QueryInfo> queries)
         {
             QueryList = queries;
+            //Queries was taken from the DB;
+            AsyncTaskListener.LogMessage($"{QueryList.Count} queries was taken from the DB");
         }
 
         // Initialization of databases access helpers
@@ -395,6 +413,8 @@ namespace DataCollectionForRealtime
                 for(int i = 0; i < QueryList.Count; i++)
                 {
                     ProcessQuery(QueryList[i]);
+                    //Query was processed;
+                    AsyncTaskListener.LogMessage($"Query with key {QueryList[i].QueryKey}  was processed");
                 }
                 QueryList.Clear();
             }
@@ -592,8 +612,11 @@ namespace DataCollectionForRealtime
             var tiex = ex as TargetInvocationException;
             if (tiex != null)
             {
+
                 ex = tiex.InnerException;
             }
+
+            AsyncTaskListener.LogMessage($"Exception answer with key {query.QueryKey} was created");
 
             return new AnswerInfo(query.QueryKey, query.ObjectKey, query.MemberName)
             {

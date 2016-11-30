@@ -50,6 +50,7 @@
             this.ChangeMongoDbUrlBtn = new System.Windows.Forms.Button();
             this.labelLogMode = new System.Windows.Forms.Label();
             this.comboBoxLogMode = new System.Windows.Forms.ComboBox();
+            this.labelDayNight = new System.Windows.Forms.Label();
             this.statusStripOptionMonitor.SuspendLayout();
             this.menuStripMainRealtime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -87,7 +88,7 @@
             this.connectionStatus.Image = ((System.Drawing.Image)(resources.GetObject("connectionStatus.Image")));
             this.connectionStatus.Name = "connectionStatus";
             this.connectionStatus.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.connectionStatus.Size = new System.Drawing.Size(115, 17);
+            this.connectionStatus.Size = new System.Drawing.Size(114, 17);
             this.connectionStatus.Text = "CQG:WAITING";
             // 
             // statusSubscribeData
@@ -189,6 +190,8 @@
             // 
             // LogRTBox
             // 
+            this.LogRTBox.BackColor = System.Drawing.SystemColors.MenuText;
+            this.LogRTBox.ForeColor = System.Drawing.SystemColors.Info;
             this.LogRTBox.Location = new System.Drawing.Point(7, 37);
             this.LogRTBox.Name = "LogRTBox";
             this.LogRTBox.Size = new System.Drawing.Size(538, 235);
@@ -261,11 +264,24 @@
             this.comboBoxLogMode.Size = new System.Drawing.Size(87, 21);
             this.comboBoxLogMode.TabIndex = 15;
             // 
+            // labelDayNight
+            // 
+            this.labelDayNight.AutoSize = true;
+            this.labelDayNight.BackColor = System.Drawing.Color.White;
+            this.labelDayNight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDayNight.Location = new System.Drawing.Point(391, 359);
+            this.labelDayNight.Name = "labelDayNight";
+            this.labelDayNight.Size = new System.Drawing.Size(29, 13);
+            this.labelDayNight.TabIndex = 16;
+            this.labelDayNight.Text = "Day";
+            this.labelDayNight.Click += new System.EventHandler(this.labelDayNight_Click);
+            // 
             // DCMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 413);
+            this.Controls.Add(this.labelDayNight);
             this.Controls.Add(this.comboBoxLogMode);
             this.Controls.Add(this.labelLogMode);
             this.Controls.Add(this.ChangeMongoDbUrlBtn);
@@ -318,6 +334,7 @@
         private System.Windows.Forms.Button ChangeMongoDbUrlBtn;
         private System.Windows.Forms.Label labelLogMode;
         private System.Windows.Forms.ComboBox comboBoxLogMode;
+        private System.Windows.Forms.Label labelDayNight;
     }
 }
 

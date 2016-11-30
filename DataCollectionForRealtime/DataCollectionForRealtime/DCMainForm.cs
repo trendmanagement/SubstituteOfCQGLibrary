@@ -29,6 +29,8 @@ namespace DataCollectionForRealtime
         private CQGDataManagement CqgDataManagement;
 
         private QueryHandler QueryHandler;
+
+        bool isNight = true;
         #endregion
 
         #region Constructors
@@ -432,8 +434,27 @@ namespace DataCollectionForRealtime
                 CqgDataManagement.shutDownCQGConn();
             }
         }
-
+        private void labelDayNight_Click(object sender, EventArgs e)
+        {
+            if (!isNight)
+            {
+                LogRTBox.ForeColor = Color.White;
+                LogRTBox.BackColor = Color.Black;
+                labelDayNight.BackColor = Color.White;
+                labelDayNight.ForeColor = Color.Black;
+                labelDayNight.Text = "Day";
+                isNight = true;
+            }
+            else
+            {
+                LogRTBox.ForeColor = Color.Black;
+                LogRTBox.BackColor = Color.White;
+                labelDayNight.BackColor = Color.Black;
+                labelDayNight.ForeColor = Color.White;
+                labelDayNight.Text = "Night";
+                isNight = false;
+            }
+        }
         #endregion
-
     }
 }
